@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: post
 title: holiday blues, low grade stress
 ---
 
