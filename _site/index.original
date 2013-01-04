@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Your Name" />
+    <title>Jekyll Base</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Jekyll Base</a></h1>
+    </header>
+    <section>
+      <div class="content">
+  <div class="related">
+    <ul>
+      
+      <li>
+	<span>December 28, 2012</span> <a href="/the-task-list">blog</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 27, 2012</span> <a href="/long-fuse">long fuse</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 26, 2012</span> <a href="/holiday-blues-low-grade-stress">holiday blues, low grade stress</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 24, 2012</span> <a href="/whats-keeping-you">what's keeping you</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 24, 2012</span> <a href="/move-forward-or-sideways">move forward or sideways</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 23, 2012</span> <a href="/thought-snowball">Thought Snowball</a>
+	<p>
+		
+      </li>
+      
+      <li>
+	<span>December 23, 2012</span> <a href="/challenges-first-glance">challenges, at first glance</a>
+	<p>
+		
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </section>
+  </body>
+</html>

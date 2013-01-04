@@ -1,0 +1,12 @@
+---
+layout: layout
+title: blog
+---
+
+<div class="content">
+	{% for post in site.posts %}   
+	<a href="{{ post.url }}">{{ post.title }}</a>
+	<p> 
+	{{ post.content }}
+	{% endfor %}
+</div>
