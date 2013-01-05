@@ -1,10 +1,10 @@
-## Jekyll Base ##
-This is a base that will ge you started with jekyll create by Daniel McGraw (@danielmcgraw).
+## Ted's blog ##
 
-### Usage ###
-Check out my [post series](http://danielmcgraw.com/2011/04/14/The-Ultimate-Guide-To-Getting-Started-With-Jekyll-Part-1/) on how to use Jekyll Base to create your own Jekyll powered blog.
+
+
 
 ### Structure ###
+
 <pre>
 .  
 |-- .gitignore  
@@ -14,7 +14,7 @@ Check out my [post series](http://danielmcgraw.com/2011/04/14/The-Ultimate-Guide
 |   |-- layout.html  
 |   `-- post.html  
 |-- _posts  
-|   `-- 1985-10-26-Test-Post.md  
+|   `-- YYY-MM-DD-name-of-your-post.md  
 `-- index.html  
 </pre>
 

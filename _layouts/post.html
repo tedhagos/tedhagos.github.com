@@ -1,16 +1,11 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-		<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
+		{% include head.html %}
 		<link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="Ted Hagos" content="Ted Hagos" />
-    <title>{{ page.title }}</title>
   </head>
   <body>
-    <header>
-      <h1><a href="/">ted's blog</a></h1>
-    </header>
+    <header>{% include header.html %}</header>
     <article>
 		  <div id="post">
 		    <h1>{{ page.title }}</h1>
@@ -23,7 +18,7 @@
 				</div>
 				
 		  </div>
-
 		</article>
+		<footer>{% include footer.html%}</footer>
   </body>
 </html>
