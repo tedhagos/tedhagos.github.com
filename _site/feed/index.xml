@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Ted's blog'</title>
+ <link href="http://tedhagos.github.com/feed/" rel="self"/>
+ <link href="http://tedhagos.github.com/"/>
+ <updated>2013-01-05T09:31:41+08:00</updated>
+ <id>http://tedhagos.github.com/</id>
+ <author>
+   <name>Ted Hagos</name>
+   <email>ted@thelogbox.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>the task list</title>
+   <link href="http://tedhagos.github.com/the-task-list"/>
+   <updated>2012-12-28T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/the-task-list</id>
+   <content type="html">&lt;p&gt;As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more often than not, a task does have an artefact, even if it is just a single page containing your notes, and how you clarified your thoughts on it.&lt;/p&gt;
+
+&lt;p&gt;It is important to ask what is the victory condition for the task, when do you stop working on it. If the victory condition is unclear, then maybe the task is bigger than what you originally thought it was—tactical or long term goal, perhaps.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>long fuse</title>
+   <link href="http://tedhagos.github.com/long-fuse"/>
+   <updated>2012-12-27T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/long-fuse</id>
+   <content type="html">&lt;ol&gt;
+&lt;li&gt;a device in a bomb that controls the timing of an explosion&lt;/li&gt;
+&lt;li&gt;a book by Dr. Eric Haseltine (Long Fuse, Big Bang …)&lt;/li&gt;
+&lt;li&gt;long term goals. not the same as task list items, but each item on the task list should keep the spark going&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>holiday blues, low grade stress</title>
+   <link href="http://tedhagos.github.com/holiday-blues-low-grade-stress"/>
+   <updated>2012-12-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/holiday-blues-low-grade-stress</id>
+   <content type="html">&lt;p&gt;The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails -–| holiday breaks can do that to you.&lt;/p&gt;
+
+&lt;p&gt;After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence — and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again.&lt;/p&gt;
+
+&lt;p&gt;That sinking feeling is a stressor, it’s low intensity but it lingers. It’s a lot like the flickering light on your work area or the slow march of traffic you go through everyday. Adrenaline is not going to solve it. You cannot simply explode into action, beat it to a pulp or run away from it.&lt;/p&gt;
+
+&lt;p&gt;Luckily, you already wrote down your list of long fuses — you have written them down, haven’t you? — and you keep a journal pretty regularly -–| you do keep a journal, don’t you? -–| A list of long fuses keeps your eyes on the far horizon and your journal records some minutiae of the tactical challenges you were trying to solve before you drifted into the path of aimless-ness. Get back on those, let your mind get on the groove of your task list. You can’t swallow an elephant, you got to slice it up in bite-sized pieces.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>what's keeping you</title>
+   <link href="http://tedhagos.github.com/whats-keeping-you"/>
+   <updated>2012-12-24T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/whats-keeping-you</id>
+   <content type="html">&lt;p&gt;What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.&lt;/p&gt;
+
+&lt;p&gt;What conditions are you waiting for. A perfect sunny day wasn’t part of your assumptions, you were gonna do these things regardless — it’s just lethargy isn’t it? or you don’t think you deserve it. You think it’s not  ”you”,  not within your elements — or its’ too deep for you.&lt;/p&gt;
+
+&lt;p&gt;You need to practice more writing. Articulate exactly what are the things that need to happen first, before the big things on your list start happening.&lt;/p&gt;
+
+&lt;p&gt;Big things on your list mostly falls under the category of multi-step problem. You can’t skip the intervening solutions and jump right to the last problem — maybe that is what’s keeping you, because you think you can&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>move forward or sideways</title>
+   <link href="http://tedhagos.github.com/move-forward-or-sideways"/>
+   <updated>2012-12-24T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/move-forward-or-sideways</id>
+   <content type="html">&lt;p&gt;For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are stomped, the logical approach maybe of limited use. Another way to proceed could be to think sideways, the process of generation. The goal is not to eliminate options, rather to generate them.&lt;/p&gt;
+
+&lt;p&gt;The rub is to know when to move forward and when to move sideways. This is probably why the thinking process is an art form.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>thought snowball</title>
+   <link href="http://tedhagos.github.com/thought-snowball"/>
+   <updated>2012-12-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/thought-snowball</id>
+   <content type="html">&lt;p&gt;Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.&lt;/p&gt;
+
+&lt;p&gt;Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short -–| such a waste to spend it in paranoia&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>challenges, at first glance</title>
+   <link href="http://tedhagos.github.com/challenges-first-glance"/>
+   <updated>2012-12-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.github.com/challenges-first-glance</id>
+   <content type="html">&lt;p&gt;Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.&lt;/p&gt;
+
+&lt;p&gt;This is why you need to always catch your self when you are in an agitated state. Going from thought to speech in 10 seconds is a dangerous thing. Absorb, relax, collect your thoughts, ask the 5 whys, then formulate a response&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
