@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Ted's blog'</title>
- <link href="http://tedhagos.github.com/feed/" rel="self"/>
- <link href="http://tedhagos.github.com/"/>
- <updated>2013-01-07T20:29:26+08:00</updated>
- <id>http://tedhagos.github.com/</id>
+ <link href="http://tedhagos.com/feed/" rel="self"/>
+ <link href="http://tedhagos.com/"/>
+ <updated>2013-01-07T20:46:31+08:00</updated>
+ <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>ted@thelogbox.com</email>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>The first two hours</title>
-   <link href="http://tedhagos.github.com/two-hours"/>
+   <link href="http://tedhagos.com/two-hours"/>
    <updated>2013-01-07T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/two-hours</id>
    <content type="html">&lt;p&gt;Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't look at cell phone --- stay disconnected for the first two hours. Use the time to;&lt;/p&gt;
@@ -32,7 +32,7 @@
  
  <entry>
    <title>the task list</title>
-   <link href="http://tedhagos.github.com/the-task-list"/>
+   <link href="http://tedhagos.com/the-task-list"/>
    <updated>2012-12-28T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/the-task-list</id>
    <content type="html">&lt;p&gt;As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more often than not, a task does have an artefact, even if it is just a single page containing your notes, and how you clarified your thoughts on it.&lt;/p&gt;
@@ -43,7 +43,7 @@
  
  <entry>
    <title>long fuse</title>
-   <link href="http://tedhagos.github.com/long-fuse"/>
+   <link href="http://tedhagos.com/long-fuse"/>
    <updated>2012-12-27T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/long-fuse</id>
    <content type="html">&lt;ol&gt;
@@ -57,7 +57,7 @@
  
  <entry>
    <title>holiday blues, low grade stress</title>
-   <link href="http://tedhagos.github.com/holiday-blues-low-grade-stress"/>
+   <link href="http://tedhagos.com/holiday-blues-low-grade-stress"/>
    <updated>2012-12-26T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/holiday-blues-low-grade-stress</id>
    <content type="html">&lt;p&gt;The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails -–| holiday breaks can do that to you.&lt;/p&gt;
@@ -72,7 +72,7 @@
  
  <entry>
    <title>what's keeping you</title>
-   <link href="http://tedhagos.github.com/whats-keeping-you"/>
+   <link href="http://tedhagos.com/whats-keeping-you"/>
    <updated>2012-12-24T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/whats-keeping-you</id>
    <content type="html">&lt;p&gt;What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.&lt;/p&gt;
@@ -87,7 +87,7 @@
  
  <entry>
    <title>move forward or sideways</title>
-   <link href="http://tedhagos.github.com/move-forward-or-sideways"/>
+   <link href="http://tedhagos.com/move-forward-or-sideways"/>
    <updated>2012-12-24T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/move-forward-or-sideways</id>
    <content type="html">&lt;p&gt;For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are stomped, the logical approach maybe of limited use. Another way to proceed could be to think sideways, the process of generation. The goal is not to eliminate options, rather to generate them.&lt;/p&gt;
@@ -98,7 +98,7 @@
  
  <entry>
    <title>thought snowball</title>
-   <link href="http://tedhagos.github.com/thought-snowball"/>
+   <link href="http://tedhagos.com/thought-snowball"/>
    <updated>2012-12-23T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/thought-snowball</id>
    <content type="html">&lt;p&gt;Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.&lt;/p&gt;
@@ -109,7 +109,7 @@
  
  <entry>
    <title>challenges, at first glance</title>
-   <link href="http://tedhagos.github.com/challenges-first-glance"/>
+   <link href="http://tedhagos.com/challenges-first-glance"/>
    <updated>2012-12-23T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/challenges-first-glance</id>
    <content type="html">&lt;p&gt;Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.&lt;/p&gt;
