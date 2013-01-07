@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tedhagos.github.com/two-hours</loc>
+    <lastmod>2013-01-07T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.github.com/the-task-list</loc>
     <lastmod>2012-12-28T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
