@@ -1,3 +1,7 @@
 User-agent: *
 Disallow:
 Sitemap: http://tedhagos.com/sitemap.xml
+Sitemap: http://tedhagos.com/android/sitemap.xml
+Sitemap: http://tedhagos.com/misc/sitemap.xml
+Sitemap: http://tedhagos.com/python/sitemap.xml
+Sitemap: http://tedhagos.com/php/sitemap.xml
