@@ -1,6 +1,7 @@
 ---
 layout: post
 title: holiday blues, low grade stress
+
 ---
 
 The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails&mdash;holiday breaks can do that to you.

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: thought snowball
+
+description: do not spiral into paranoia
+
 ---
 
 Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.

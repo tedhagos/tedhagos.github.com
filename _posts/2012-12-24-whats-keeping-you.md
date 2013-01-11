@@ -1,6 +1,9 @@
 ---
 layout: post
 title: what's keeping you
+
+description: procastination is a state of mind, achieving is state of mind
+
 ---
 
 What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.
