@@ -1,3 +1,15 @@
 * {
   float: none;
 }
+
+#navmenu-right {
+  display:none;
+}
+
+h1 {font-size:160%;}
+h2 {font-size:140%;}
+
+body {
+  background: #DEDEDE;
+  font-size: 110%;
+}
