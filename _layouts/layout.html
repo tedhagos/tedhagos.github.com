@@ -2,15 +2,18 @@
 <html>
   <head>				
 		{% include head.html %}
+    {% include nostyle.html%}
+    
+    <!--
 		<link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"/>	
     <link rel="stylesheet" href="css/mobile.min.css"  type="text/css" media="handheld"/>
     <link rel="stylesheet" href="css/style.min.css"  type="text/css" media="Screen" />
-	
+	 -->
   </head>
 	
   <body>
     <header>
-			{% include header.html %}
+			{% include header-nostyle.html %}
     </header>
     <section>
       {{ content }}

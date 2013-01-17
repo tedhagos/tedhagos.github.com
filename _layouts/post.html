@@ -2,12 +2,17 @@
 <html>
   <head>
     {% include head.html %}
+    {% include nostyle.html %}
+
+    <!--
     <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
     <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
     <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
+    -->
+
   </head>
   <body>
-    <header>{% include header.html %}</header>
+    <header>{% include header-nostyle.html %}</header>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <h1>{{ page.title }}</h1>
