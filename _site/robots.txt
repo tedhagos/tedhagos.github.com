@@ -6,3 +6,5 @@ Sitemap: http://tedhagos.com/misc/sitemap.xml
 Sitemap: http://tedhagos.com/python/sitemap.xml
 Sitemap: http://tedhagos.com/php/sitemap.xml
 Sitemap: http://tedhagos.com/.net/sitemap.xml
+Sitemap: http://tedhagos.com/wordpress/sitemap.xml
+
