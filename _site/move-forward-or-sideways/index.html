@@ -8,6 +8,8 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 -->
 
+<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
+
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content="lateral thinking vs. logical thinking"/>
 <meta charset="utf-8"/>
@@ -17,12 +19,15 @@
 <meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
     <style>
 
-h1, h2, h3, h4, h5 {
+
+
+h1, h2, h3, h4, h5, #blogtitle, #header-right {
 	font-family: 'arial', 'helvetica', sans-serif;
 	letter-spacing: -.80px;
+	color: #520010;
 }
 
-h1 {font-size: 200%;margin-bottom:.3em;}
+h1 {font-size: 200%;margin-bottom:.3em; }
 
 body {
 	width:93%;
@@ -30,21 +35,16 @@ body {
 	padding-top: 1em;
 }
 
-
-
 footer {
-	font-style:italic;
+	font-style:normal;
 	margin-top:1em;
 	margin-bottom: 1em;
-	padding-top: 1em;
-
-	border-top: 2px dotted #CACACA;
+	padding-top: 2em;
 }
 
 #header-right {
 	line-height: 1.5em;
-	font-family: 'arial', 'helvetica', 'sans-serif';
-	font-size: 68%;
+	font-size: 80%;
 	font-style: normal;
 	position:relative;
 	float:right;
@@ -52,7 +52,6 @@ footer {
 	border: 2px solid #DEDEDE;
 	margin-bottom:1em;
 	margin-left:1em;
-	width: 14em;
 }
 
 .content-meta {
@@ -76,6 +75,16 @@ pre {
 	font-size: 71%;
 	padding: 1.2em;
 	border: 3px solid #DEDEDE;
+}
+
+a:link, a:visited {
+	color: #380010;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #6b0100;
+	border-bottom: 1px dotted #6b0100;
 }
 
 
@@ -153,7 +162,15 @@ pre {
 
   </head>
   <body>
+    <div id="blogtitle">
+    <a href="/">tedhagos.com</a>
+    </div>
     <header><h1>move forward or sideways</h1></header>
+    <div class='content-meta'> 
+      by: 
+      <a href='https://plus.google.com/107317535953221277825?rel=author'>Ted
+      </a>. December 24 , 2012
+    </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
@@ -163,10 +180,7 @@ pre {
 
         </div>                
       </div>
-      <div class='content-meta'> 
-        posted by : 
-        <a href='https://plus.google.com/107317535953221277825?rel=author'>Ted</a>. December 24 , 2012
-      </div>
+
     </article>
 
     <!-- Start of StatCounter Code for Default Guide -->
@@ -199,5 +213,12 @@ alt="website statistics"></a></div></noscript>
   })();
 
 </script>
+    <footer>
+    <div id='footer-inner'>
+&copy; 2012-2013 <a href="/">Ted Hagos</a> 
+<a href="mailto:ted@thelogbox.com">{ted[at]thelogbox[dot]com}</a>
+<a href='/feed/'>{RSS}</a> 
+</div>
+  </footer>
   </body>
 </html>
