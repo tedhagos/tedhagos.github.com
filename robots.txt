@@ -8,4 +8,4 @@ Sitemap: http://tedhagos.com/php/sitemap.xml
 Sitemap: http://tedhagos.com/.net/sitemap.xml
 Sitemap: http://tedhagos.com/wordpress/sitemap.xml
 Sitemap: http://tedhagos.com/html5/sitemap.xml
-
+Sitemap: http://tedhagos.com/java/sitemap.xml
