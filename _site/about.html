@@ -8,7 +8,7 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content=""/>
@@ -19,43 +19,91 @@
 <meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
     <style>
 
-
-
-h1, h2, h3, h4, h5, #blogtitle, #header-right {
-	font-family: 'arial', 'helvetica', sans-serif;
-	letter-spacing: -.80px;
-	color: #520010;
+p, ol, li , .content-meta {
+	font-family: 'Open Sans';
+	/* font-size: 108%; */
+	font-size: 86%;
+	line-height: 170%;
+	letter-spacing: -.95px;	
 }
 
-h1 {font-size: 200%;margin-bottom:.3em; }
+/*ol, li { font-size: 104%;}*/
+ol, li { font-size: 95%;}
+
+
+
+#articletitle {
+	font-family: 'open Sans', 'arial', 'helvetica', sans-serif;
+	letter-spacing: -1px;
+	font-size: 210%;
+	font-weight: bold;
+	margin-top:0;
+	margin-bottom:0;
+	/*color: #002346;*/
+	/*color: #6F0000;*/
+	color: #000000;
+}
+
+#blogtitle {
+	margin-bottom:2em;
+}
+
+#blogtitle a:link, #blogtitle a:visited {
+	font-family: 'Open Sans', 'arial', 'helvetica', sans-serif;
+	text-decoration: none;
+	color: #545454;
+}
+
+#blogtitle a:hover {
+	border-bottom: 1px solid #CACACA;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Open Sans', 'arial', 'helvetica', sans-serif;
+	letter-spacing: -.80px;
+	color: #545454;
+}
+
+h1 {font-size: 200%; letter-spacing: -1px;}
+h2 {font-size: 150%; margin-bottom:0;}
 
 body {
+	background: #F1F1F1;	
 	width:93%;
 	margin: 0 auto;
 	padding-top: 1em;
 }
 
+
 footer {
+	font-family: 'Open Sans';
+	font-size:90%;
 	font-style:normal;
 	margin-top:1em;
 	margin-bottom: 1em;
 	padding-top: 2em;
+
+	border-top: 0px dotted #CACACA;
 }
 
 #header-right {
 	line-height: 1.5em;
+	font-family: 'Open Sans','arial', 'helvetica', 'sans-serif';
 	font-size: 80%;
 	font-style: normal;
 	position:relative;
 	float:right;
 	padding: 1em;
-	border: 2px solid #DEDEDE;
+	border: 2px solid #CACACA;
 	margin-bottom:1em;
 	margin-left:1em;
+	/*width: 14em;*/
 }
 
 .content-meta {
-	font-style: italic;
+	letter-spacing: -1.5px;
+	font-style: normal;
+	margin-top:0;
 	margin-bottom:2em;
 }
 
@@ -74,19 +122,31 @@ pre {
 	font-family: 'Source Code Pro';
 	font-size: 71%;
 	padding: 1.2em;
-	border: 3px solid #DEDEDE;
+	border: 2px solid #DEDEDE;
+	margin-bottom:0px;
+}
+
+#lst {
+	font-family: 'Open Sans';
+	font-style:italic;
+	font-size:80%;
+	background:#DEDEDE;
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+
 }
 
 a:link, a:visited {
-	color: #380010;
-	text-decoration:none;
+	color: #545454;
+	text-decoration: none;
+
 }
 
 a:hover {
-	color: #6b0100;
-	border-bottom: 1px dotted #6b0100;
+	border-bottom: 1px solid #CACACA;
 }
-
 
 /* Pygments stylesheets */
 
