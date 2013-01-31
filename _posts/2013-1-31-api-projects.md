@@ -5,7 +5,7 @@ description:
 
 ---
 
-You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them was API development, you will be painfully reminded that *there is always a first time for everything*.  
+You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that *there is always a first time for everything*.  
 
 API projects are not exactly the same as a web app, or mobile app or a desktop app. They should not be estimated as such. You will spend more effort on development and unit testing on API projects.  
 
