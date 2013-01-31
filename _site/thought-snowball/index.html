@@ -2,41 +2,151 @@
 <html>
   <head>
     
+<!--
 <link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+-->
 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content="do not spiral into paranoia"/>
 <meta charset="utf-8"/>
 
-<title>blog - thought snowball | tedhagos.com</title>
+<title>thought snowball | tedhagos.com</title>
 
 <meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
     <style>
 
-h1, h2, h3, h4, h5 {font-family: 'arial', 'helvetica', sans-serif}
-h1 {font-size: 200%;}
+p, ol, li , .content-meta {
+	font-family: 'Open Sans';
+	/* font-size: 108%; */
+	font-size: 86%;
+	line-height: 170%;
+	letter-spacing: -.95px;	
+}
+
+/*ol, li { font-size: 104%;}*/
+ol, li { font-size: 95%;}
+
+
+
+#articletitle {
+	font-family: 'open Sans', 'arial', 'helvetica', sans-serif;
+	letter-spacing: -1px;
+	font-size: 210%;
+	font-weight: bold;
+	margin-top:0;
+	margin-bottom:0;
+	/*color: #002346;*/
+	/*color: #6F0000;*/
+	color: #000000;
+}
+
+#blogtitle {
+	margin-bottom:2em;
+}
+
+#blogtitle a:link, #blogtitle a:visited {
+	font-family: 'Open Sans', 'arial', 'helvetica', sans-serif;
+	text-decoration: none;
+	color: #545454;
+}
+
+#blogtitle a:hover {
+	border-bottom: 1px solid #CACACA;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Open Sans', 'arial', 'helvetica', sans-serif;
+	letter-spacing: -.80px;
+	color: #545454;
+}
+
+h1 {font-size: 200%; letter-spacing: -1px;}
+h2 {font-size: 150%; margin-bottom:0;}
 
 body {
+	background: #F1F1F1;	
 	width:93%;
 	margin: 0 auto;
 	padding-top: 1em;
 }
 
+
+footer {
+	font-family: 'Open Sans';
+	font-size:90%;
+	font-style:normal;
+	margin-top:1em;
+	margin-bottom: 1em;
+	padding-top: 2em;
+
+	border-top: 0px dotted #CACACA;
+}
+
 #header-right {
+	line-height: 1.5em;
+	font-family: 'Open Sans','arial', 'helvetica', 'sans-serif';
+	font-size: 80%;
+	font-style: normal;
 	position:relative;
 	float:right;
 	padding: 1em;
-	border: 2px solid #DEDEDE;
+	border: 2px solid #CACACA;
 	margin-bottom:1em;
 	margin-left:1em;
+	/*width: 14em;*/
+}
+
+.content-meta {
+	letter-spacing: -1.5px;
+	font-style: normal;
+	margin-top:0;
+	margin-bottom:2em;
+}
+
+hr {
+	border:0;
+	color: #CACACA;
+	background: #CACACA;
+	height: 1px;
+}
+
+code {
+	font-family: 'Source Code Pro';
 }
 
 pre {
-	padding: 1.5em;
-	border: 5px solid #DEDEDE;
+	font-family: 'Source Code Pro';
+	font-size: 71%;
+	padding: 1.2em;
+	border: 2px solid #DEDEDE;
+	margin-bottom:0px;
 }
 
+#lst {
+	font-family: 'Open Sans';
+	font-style:italic;
+	font-size:80%;
+	background:#DEDEDE;
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+
+}
+
+a:link, a:visited {
+	color: #545454;
+	text-decoration: none;
+
+}
+
+a:hover {
+	border-bottom: 1px solid #CACACA;
+}
 
 /* Pygments stylesheets */
 
@@ -112,48 +222,30 @@ pre {
 
   </head>
   <body>
+    <div id="blogtitle">
+    <a href="/">tedhagos.com</a>
+    </div>
     <header>
-<div id='header-inner'>
-	<a href='/'>main</a> |
-	<a href='#'>rss</a> |
-	<a href='mailto:ted@thelogbox.com'>email</a> | 
-	<a href='/about.html'>about</a>
-
-	<div id='header-right'>
-		notes navigation <br><hr/>
-		<a href='/html5/'>html5</a> ,
-		<a href='/python/'>python</a> ,
-		<a href='/misc/'>misc</a> , <br/>
-		<a href='/'>main page</a>	
-</div>
-
-</div>
-
-
-</header>
+      <div id="articletitle">thought snowball
+      </div>
+      <!--
+      <h1>thought snowball</h1></header>
+    -->
+    <div class='content-meta'> 
+      December 23 , 2012
+    </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
-        <h1>thought snowball</h1>
         <div itemprop='articleBody'>
         <p>Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.</p>
 
 <p>Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short&mdash;such a waste to spend it in paranoia</p>
 
-        </div>        
-        <div class='content-meta'>
-          posted by 
-          <a href='https://plus.google.com/107317535953221277825?rel=author'>Ted</a>
-          on &nbsp; 23 December 2012
-        </div>
-        
+        </div>                
       </div>
+
     </article>
-    <footer>
-<div id='footer-inner'>
 
-
-
-</div></footer>
     <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=8602905; 
@@ -184,5 +276,12 @@ alt="website statistics"></a></div></noscript>
   })();
 
 </script>
+    <footer>
+    <div id='footer-inner'>
+&copy; 2012-2013 <a href='https://plus.google.com/107317535953221277825?rel=author'>Ted Hagos</a> 
+<a href="mailto:ted@thelogbox.com">{ted[at]thelogbox[dot]com}</a>
+<a href='/feed/'>{RSS}</a> 
+</div>
+  </footer>
   </body>
 </html>
