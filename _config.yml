@@ -3,4 +3,4 @@ markdown: rdiscount
 permalink: /:title
 rdiscount extensions: [smart]
 pygments: true
-lsi: true
+lsi: false
