@@ -11,3 +11,4 @@ Sitemap: http://tedhagos.com/html5/sitemap.xml
 Sitemap: http://tedhagos.com/java/sitemap.xml
 Sitemap: http://tedhagos.com/mactips/sitemap.xml
 Sitemap: http://tedhagos.com/csbis/sitemap.xml
+Sitemap: http://tedhagos.com/latex/sitemap.xml
