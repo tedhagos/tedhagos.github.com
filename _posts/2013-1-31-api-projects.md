@@ -11,3 +11,4 @@ API projects are not exactly the same as a web app, or mobile app or a desktop a
 
 Once you have built the API, you will spend time testing it. The way to test it is to build an application that will use the API. &mdash; shouldn't you actually build a unit test also for that app that will use your API? If you won't, how will you get an insight on how the APIs will be used by others. You need to get into the heads of your users if the API is to be robust. 
 
+[test amazon s3](http://android-thelogbox.s3-website-us-east-1.amazonaws.com/thelogbox-pic.jpg)
