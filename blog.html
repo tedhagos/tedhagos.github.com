@@ -1,0 +1,30 @@
+---
+layout: layout
+title: Blog
+---
+
+<!--
+<div id="blogtitle">
+  <a href="/">tedhagos.com</a>
+</div>
+-->
+<div class="content">
+  
+  <h1>Blog</h1>
+  
+	{% for post in site.posts %}   
+    <a href="{{ post.url }}">
+    	<span class='content-meta'>
+    		{{ post.date | date: "%d %b %y" }}
+      </span>
+      {{ post.title }}
+    </a>
+    <br/>
+
+	{% endfor %}
+	
+</div>
+<footer>
+	{% include footer.html %}
+ </footer>
+

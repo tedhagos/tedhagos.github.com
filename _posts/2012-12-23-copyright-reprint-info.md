@@ -7,14 +7,11 @@ description:
 
 All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved.
 
+**Linking.** Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out. 
 
-## Linking
+**Electronic and Online reproduction.** ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &mdash; if you do however, really really need to reproduce anything you find in here, just [drop me note at ted {at} thelogbox {dot} com](mailto:ted@thelogbox.com). Let's talk about it
 
-Link to as many URLs as you want. That is most welcome. Links are the foundation of the web, so I am all for it. 
 
-## Electronic and Online reproduction
-
-Copying any article is not allowed. If you are interested in reproducing any article, [drop me a note](mailto:ted@thelogbox.com) and I will give you a quote so I can license the article to you. If you are interested in referring your readers to one or more of my articles, simply use a hypertext link to the original article on tedhagos.com.
 
 
   

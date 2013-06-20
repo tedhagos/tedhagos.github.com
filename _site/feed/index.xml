@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-06-15T22:13:32+08:00</updated>
+ <updated>2013-06-20T14:53:11+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -17,13 +17,11 @@
    <link href="http://tedhagos.com/api-projects"/>
    <updated>2013-01-31T00:00:00+08:00</updated>
    <id>http://tedhagos.github.com/api-projects</id>
-   <content type="html">&lt;p&gt;You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that &lt;em&gt;there is always a first time for everything&lt;/em&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that &lt;strong&gt;there is always a first time for everything&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;API projects are not exactly the same as a web app, or mobile app or a desktop app. They should not be estimated as such. You will spend more effort on development and unit testing on API projects.&lt;/p&gt;
 
 &lt;p&gt;Once you have built the API, you will spend time testing it. The way to test it is to build an application that will use the API. &amp;mdash; shouldn't you actually build a unit test also for that app that will use your API? If you won't, how will you get an insight on how the APIs will be used by others. You need to get into the heads of your users if the API is to be robust.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://s3.amazonaws.com/android-thelogbox/thelogbox-pic.jpg&quot;&gt;test amazon s3&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -193,13 +191,9 @@ get filled with &lt;em&gt;little things&lt;/em&gt; &amp;mdash; remember what Ste
    <id>http://tedhagos.github.com/copyright-reprint-info</id>
    <content type="html">&lt;p&gt;All articles and writings appearing on this website is copyright &amp;copy; by Ted Hagos. All Rights Reserved.&lt;/p&gt;
 
-&lt;h2&gt;Linking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Linking.&lt;/strong&gt; Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out.&lt;/p&gt;
 
-&lt;p&gt;Link to as many URLs as you want. That is most welcome. Links are the foundation of the web, so I am all for it.&lt;/p&gt;
-
-&lt;h2&gt;Electronic and Online reproduction&lt;/h2&gt;
-
-&lt;p&gt;Copying any article is not allowed. If you are interested in reproducing any article, &lt;a href=&quot;mailto:ted@thelogbox.com&quot;&gt;drop me a note&lt;/a&gt; and I will give you a quote so I can license the article to you. If you are interested in referring your readers to one or more of my articles, simply use a hypertext link to the original article on tedhagos.com.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Electronic and Online reproduction.&lt;/strong&gt; ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &amp;mdash; if you do however, really really need to reproduce anything you find in here, just &lt;a href=&quot;mailto:ted@thelogbox.com&quot;&gt;drop me note at ted {at} thelogbox {dot} com&lt;/a&gt;. Let's talk about it&lt;/p&gt;
 </content>
  </entry>
  
