@@ -21,7 +21,7 @@
 <meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>It' Just a Task List &nbsp; Ted Hagos</title>
+<title>It's (not) Just a Task List &nbsp; Ted Hagos</title>
 
 <meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
 <meta name="google-site-verification" content="5_SB_qpC90xz6CnRfann88sz6G8WyIsgxYVnNJQfYQI" />
@@ -43,15 +43,17 @@ p, ol, li , .content-meta {
 ol, li { font-size: 18px;}
 
 strong {
+  font-weight:normal;
   color: #000000;
 }
 
 #articletitle {
 	font-family: 'Droid Serif', serif;
-	font-size: 75px;
+	font-size: 50px;
 	font-weight: normal;
-	margin-top:.5em;
+	margin-top:.8em;
 	margin-bottom:0;
+  letter-spacing: -.5px;
 	/*color: #002346;*/
 	/*color: #6F0000;*/
 	/*color: #435e36;*/
@@ -59,7 +61,16 @@ strong {
 
 #blogtitle {
   font-family:  'Droid Serif';
-  padding-left: 1em;
+  
+}
+
+.light {
+  font-size: 85%;
+  color: #5a8080;
+}
+
+#postmeta {
+  margin-bottom: 1em;
 }
 
 /*
@@ -83,8 +94,8 @@ h1, h2, h3, h4, h5 {
   color: #2D2D2D;
 }
 
-h1 {font-size: 200%; letter-spacing: -1px;}
-h2 {font-size: 150%; margin-bottom:0;}
+h1 {font-size: 170%; letter-spacing: -1px;}
+h2 {font-size: 130%; margin-bottom:0;}
 
 body {
 	width:750px;
@@ -94,8 +105,8 @@ body {
 }
 
 footer {
-	font-family: 'Open Sans';
-	font-size:90%;
+  color: orange;
+	font-size:15px;
 	font-style:normal;
 	margin-top:1em;
 	margin-bottom: 1em;
@@ -124,10 +135,10 @@ footer {
   color: #686868;
   /*color: #681a1a;*/
 	margin-top:0;
-  font-size:21px;
+  font-size:18px;
 	margin-bottom:2em;
   padding-right:10px;
-  padding-left:10px;
+  padding-left:8px;
 }
 
 hr {
@@ -162,15 +173,15 @@ pre {
 }
 
 a:link, a:visited {
-	/* color: #435e36;*/
-  color: #a52a2a;
+	color: #694a54;
+  /*color: #a52a2a;*/
   /*color: #694a54;*/
 	text-decoration: none;
 }
 
 a:hover {
 	/*border-bottom: 1px solid #79a663;*/
-  color: #FF0000;
+  color: #FFA500;
   border-bottom: 0px solid #d14a4a;
 }
 
@@ -268,7 +279,7 @@ a:hover {
     </div>
     
     <header>
-      <div id="articletitle">It' Just a Task List
+      <div id="articletitle">It's (not) Just a Task List
       </div>
     </header>
     <div class='content-meta'>
@@ -283,8 +294,9 @@ a:hover {
 
         </div>                
       </div>
-      <p/><p/>
-      <a href="/">Go back to HOME page</a>
+      <div id="postmeta" class='light'>
+        #focus
+      </div>
     </article>
 
     <!-- Start of StatCounter Code for Default Guide -->

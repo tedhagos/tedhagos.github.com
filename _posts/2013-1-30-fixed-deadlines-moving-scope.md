@@ -2,6 +2,9 @@
 layout: post
 title: Of fixed Deadlines and Moving Scopes 
 description: What will you do if the scope of a software project  cannot be pinned down and yet the deadline won't move
+categories:
+- project_management
+- thoughts
 ---
 
 A common tale on software projects &mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving.

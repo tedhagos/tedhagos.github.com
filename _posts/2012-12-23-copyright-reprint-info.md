@@ -2,7 +2,8 @@
 layout: post
 title: Copyright and Reprint Info 
 description: 
-
+categories:
+- ip
 ---
 
 All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved.

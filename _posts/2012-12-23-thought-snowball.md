@@ -3,6 +3,8 @@ layout: post
 title: Snowballing thoughts
 
 description: do not spiral into paranoia
+categories:
+- thoughts
 
 ---
 

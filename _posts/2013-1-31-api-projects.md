@@ -3,6 +3,8 @@ layout: post
 title: Working on API Projects
 description: 
 categories: 
+  - software_engineering 
+  - estimation
 ---
 
 You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that **there is always a first time for everything**.  

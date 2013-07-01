@@ -31,8 +31,9 @@
         {{ content }}
         </div>                
       </div>
-      <p/><p/>
-      <a href="/">Go back to HOME page</a>
+      <div id="postmeta" class='light'>
+        #{{ page.categories | join: '  #' }}
+      </div>
     </article>
 
     {% include statcounter.html %}

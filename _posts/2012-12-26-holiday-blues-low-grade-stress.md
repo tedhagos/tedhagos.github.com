@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Low Grade Stress
+categories:
+- thoughts
 
 ---
 

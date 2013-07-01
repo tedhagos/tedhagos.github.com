@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 480 minutes of focus
+categories:
+- focus
 ---
 
 That's 8 hours. It's a stretch to increase it, no matter how badly you want to.

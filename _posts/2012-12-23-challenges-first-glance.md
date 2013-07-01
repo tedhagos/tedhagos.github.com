@@ -4,6 +4,9 @@ title: Slowing down helps
 
 description: slowdown your thoughts, it's not a race. It's better to be right than to be early; it's okay if you can be both, if not, choose to be right
 
+categories:
+  - thoughts
+
 ---
 
 Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.
