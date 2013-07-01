@@ -1,6 +1,6 @@
 ---
 layout: post
-title: move forward or sideways
+title: To the front or to the side?
 
 description: lateral thinking vs. logical thinking
 

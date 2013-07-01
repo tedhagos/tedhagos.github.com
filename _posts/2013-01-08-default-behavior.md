@@ -1,6 +1,6 @@
 ---
 layout: post
-title: default behaviour, default play book
+title: The Brain's Playbook
 ---
 
 I know what I have to do, I've written (and rewritten) them down in the notebook, in the goal papers; yet I don't want to do them. There's a tug-of-war happening inside and the lazy guys seems to be winning. 

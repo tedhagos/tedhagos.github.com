@@ -1,6 +1,6 @@
 ---
 layout: post
-title: challenges, at first glance
+title: Slowing down helps
 
 description: slowdown your thoughts, it's not a race. It's better to be right than to be early; it's okay if you can be both, if not, choose to be right
 

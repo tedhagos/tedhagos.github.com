@@ -1,6 +1,6 @@
 ---
 layout: post
-title: what's keeping you
+title: Lazy bones, Lazy mind
 
 description: procastination is a state of mind, achieving is state of mind
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: the task list
+title: It' Just a Task List
 ---
 
 As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more often than not, a task does have an artefact, even if it is just a single page containing your notes, and how you clarified your thoughts on it.

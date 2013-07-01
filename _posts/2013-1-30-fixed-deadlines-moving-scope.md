@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Of fixed deadlines and moving scopes 
+title: Of fixed Deadlines and Moving Scopes 
 description: What will you do if the scope of a software project  cannot be pinned down and yet the deadline won't move
 ---
 

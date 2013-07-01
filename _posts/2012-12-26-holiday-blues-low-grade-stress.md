@@ -1,6 +1,6 @@
 ---
 layout: post
-title: holiday blues, low grade stress
+title: Low Grade Stress
 
 ---
 

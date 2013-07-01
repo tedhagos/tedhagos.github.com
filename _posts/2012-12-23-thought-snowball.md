@@ -1,6 +1,6 @@
 ---
 layout: post
-title: thought snowball
+title: Snowballing thoughts
 
 description: do not spiral into paranoia
 
