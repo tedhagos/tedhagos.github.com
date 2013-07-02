@@ -15,7 +15,7 @@
     
     
     <div id="blogtitle">
-    <a href="/">HOME</a>
+    <a href="/">Ted Hagos</a>
     </div>
     
     <header>
@@ -23,7 +23,7 @@
       </div>
     </header>
     <div class='content-meta'>
-      {{ page.date | date: "%B %d , %Y" }}
+      {{ page.date | date: " %A , %B %d , %Y" }}
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
@@ -32,12 +32,14 @@
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        #{{ page.categories | join: '  #' }}
+        file: #{{ page.categories | join: '  #' }}
       </div>
     </article>
 
     {% include statcounter.html %}
     {% include ga.html %}
+    {% include disqus.html %}
+        
     <footer>
     {% include footer.html %}
   </footer>

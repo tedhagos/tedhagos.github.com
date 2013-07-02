@@ -19,20 +19,13 @@ title: Front Page
     </a>
   </div>
   -->
-  <div id="articletitle">Ted's blog</div>
-  
-  <div class='content-meta'>
-    by: 
-    <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>
-      Ted Hagos</a>
+  <div id="articletitle">Ted Hagos</div>  
+    <div class='vertical-space'>
     </div>
-  
-  
-  
 	{% for post in site.posts %}   
     <a href="{{ post.url }}">
     	<span class='content-meta'>
-    		{{ post.date | date: "%d %b %y" }}
+    		{{ post.date | date: "%D " }}
       </span>
       {{ post.title }} 
     </a>

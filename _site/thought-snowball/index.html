@@ -15,7 +15,8 @@
 -->
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content="do not spiral into paranoia"/>
@@ -28,21 +29,24 @@
     <style>
 
 * {
-  font-family: 'Droid Serif', serif;
-  font-size: 21px;
+  font-family: 'Droid Sans', serif;
+  font-size: 18px;
   color: #414141;
   background: #F8F5F6;
 }
 
 p, ol, li , .content-meta {
+  font-family: 'Droid Sans';
   font-size: 18px;
 	line-height: 170%;
+  line-height: 160%;
 }
 
 /*ol, li { font-size: 104%;}*/
 ol, li { font-size: 18px;}
 
 strong {
+  font-family: 'Droid Sans';
   font-weight:normal;
   color: #000000;
 }
@@ -51,21 +55,17 @@ strong {
 	font-family: 'Droid Serif', serif;
 	font-size: 50px;
 	font-weight: normal;
-	margin-top:.8em;
+	margin-top: 0px;
 	margin-bottom:0;
   letter-spacing: -.5px;
+  text-align: center;
 	/*color: #002346;*/
 	/*color: #6F0000;*/
 	/*color: #435e36;*/
 }
 
-#blogtitle {
-  font-family:  'Droid Serif';
-  
-}
-
 .light {
-  font-size: 85%;
+  font-family: 'Inconsolata';
   color: #5a8080;
 }
 
@@ -73,12 +73,17 @@ strong {
   margin-bottom: 1em;
 }
 
-/*
-#blogtitle a:link, #blogtitle a:visited {
-	text-decoration: none;
-  color: black;
+#blogtitle {
+  font-family:  'Droid Serif'; 
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
-*/
+#blogtitle a:link, #blogtitle a:visited {
+  font-size: 20px;
+	text-decoration: none;
+  border-bottom: 1px solid #694a54;
+}
 
 /*
 #blogtitle a:hover {
@@ -105,13 +110,14 @@ body {
 }
 
 footer {
-  color: orange;
+  font-family: 'Droid Sans';
 	font-size:15px;
 	font-style:normal;
 	margin-top:1em;
 	margin-bottom: 1em;
 	padding-top: 2em;
-	border-top: 0px dotted #CACACA;
+	border-top: 1px solid #DEDEDE;
+  text-align: center;
 }
 
 
@@ -130,15 +136,15 @@ footer {
 }
 
 .content-meta {
-  font-family: 'Droid Serif';
-	font-style: oblique;
+  font-family: 'Droid Sans';
+	font-style: normal;
   color: #686868;
   /*color: #681a1a;*/
 	margin-top:0;
   font-size:18px;
 	margin-bottom:2em;
-  padding-right:10px;
-  padding-left:8px;
+  margin-right: 30px;
+  text-align: center;
 }
 
 hr {
@@ -148,29 +154,7 @@ hr {
 	height: 1px;
 }
 
-code {
-	font-family: 'Source Code Pro';
-}
 
-pre {
-	font-family: 'Source Code Pro';
-	font-size: 71%;
-	padding: 1.5em;
-	border: 1px solid #DEDEDE;
-	margin-bottom:0px;
-}
-
-#lst {
-	font-family: 'Open Sans';
-	font-style:italic;
-	font-size:80%;
-	background:#DEDEDE;
-	margin-top:0px;
-	padding-top:10px;
-	padding-bottom:10px;
-	padding-left:10px;
-
-}
 
 a:link, a:visited {
 	color: #694a54;
@@ -181,8 +165,8 @@ a:link, a:visited {
 
 a:hover {
 	/*border-bottom: 1px solid #79a663;*/
-  color: #FFA500;
-  border-bottom: 0px solid #d14a4a;
+  color: #B30000;
+  border-bottom: 0px solid #B30000;
 }
 
 #news {
@@ -195,6 +179,36 @@ a:hover {
   margin-bottom:50px;
   margin-top: 70px;
   text-align: center;
+}
+
+.vertical-space {
+  display: block;
+  height: 50px;
+}
+
+
+code {
+	font-family: 'Inconsolata';
+  font-size: 90%;
+}
+
+pre {
+	font-family: 'Inconsolata';
+  font-size: 90%;
+	padding: 1.5em;
+	border: 1px solid #DEDEDE;
+	margin-bottom:0px;
+}
+
+#lst {
+	font-family: 'Droid Sans';
+	font-style:normal;
+	background:#DEDEDE;
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+
 }
 
 
@@ -275,7 +289,7 @@ a:hover {
     
     
     <div id="blogtitle">
-    <a href="/">HOME</a>
+    <a href="/">Ted Hagos</a>
     </div>
     
     <header>
@@ -283,7 +297,7 @@ a:hover {
       </div>
     </header>
     <div class='content-meta'>
-      December 23 , 2012
+       Sunday , December 23 , 2012
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
@@ -295,7 +309,7 @@ a:hover {
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        #thoughts
+        file: #thoughts
       </div>
     </article>
 
@@ -329,6 +343,22 @@ alt="website statistics"></a></div></noscript>
   })();
 
 </script>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tedhagos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
     <footer>
     <div id='footer-inner'>
   <a href='/copyright.html'>Copyright</a>&nbsp;
