@@ -22,6 +22,8 @@ title: Front Page
   <div id="articletitle">Ted Hagos</div>  
     <div class='vertical-space'>
     </div>
+  
+  <div id="articlelist">  
 	{% for post in site.posts %}   
     <a href="{{ post.url }}">
     	<span class='content-meta'>
@@ -32,7 +34,8 @@ title: Front Page
     <br/>
 
 	{% endfor %}
-	
+  </div>
+
 </div>
 <footer>
 	{% include footer.html %}
