@@ -22,7 +22,7 @@
 <meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>Low Grade Stress &nbsp; Ted Hagos</title>
+<title>Two Factor Authentication for Web Apps &nbsp; Ted Hagos</title>
 
 <meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
 <meta name="google-site-verification" content="5_SB_qpC90xz6CnRfann88sz6G8WyIsgxYVnNJQfYQI" />
@@ -265,27 +265,63 @@ pre {
     </div>
     
     <header>
-      <div id="articletitle">Low Grade Stress
+      <div id="articletitle">Two Factor Authentication for Web Apps
       </div>
     </header>
     <div class='content-meta'>
-       Wednesday , December 26 , 2012
+       Thursday , July 04 , 2013
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
-        <p>The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails&mdash;holiday breaks can do that to you.</p>
+        <p>One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge.  The OTP will serve as the “what you have” part for our 2 factor authentication.</p>
 
-<p>After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence&mdash;and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again.</p>
+<p>This is a poor man's approach to Two Factor authentication. If you are strapped for cash and cannot afford the fancy gadgets that has random number generators (the one that changes every five minutes), then this solution might be good enough in the meantime.</p>
 
-<p>That sinking feeling is a stressor, it’s low intensity but it lingers. It’s a lot like the flickering light on your work area or the slow march of traffic you go through everyday. Adrenaline is not going to solve it. You cannot simply explode into action, beat it to a pulp or run away from it.</p>
+<p><img src="/img/2factor-auth-sms.png" /></p>
 
-<p>Luckily, you already wrote down your list of long fuses — you have written them down, haven’t you? — and you keep a journal pretty regularly&mdash;you do keep a journal, don’t you?&mdash;A list of long fuses keeps your eyes on the far horizon and your journal records some minutiae of the tactical challenges you were trying to solve before you drifted into the path of aimless-ness. Get back on those, let your mind get on the groove of your task list. You can’t swallow an elephant, you got to slice it up in bite-sized pieces.</p>
+<div id="cap">
+  Fig 1: Sequence/Workflow of Two Factor Auth
+</div>
+
+
+<p>It is best (and recommended) to seek third party integration to handle the SMS messaging aspect. A fully functioning SMS gateway is non-trivial to build and develop from scratch. There are lots of SMS gateway providers {TODO: Compile some options for third party SMS gateway providers}</p>
+
+<hr/>
+
+
+<p><strong>THINGS TO CONSIDER</strong></p>
+
+<p><strong>Session Management</strong> will not be very simple. You will need to account the coupling of a randomly generated number (a one time pin, like what most banking sites use). Associate it with the current browser session. The basic idea is to expire that PIN after the browser session has ended. You will need to carefully think about simpistic state management now.</p>
+
+<p><strong>A Messaging component</strong> will have to be written. Surely you won't write the SMS-specific codes intermingled with your primary business logic? would you? Depending on what SMS gateway solution you will choose, this messaging component maybe as simple as making a RESTful call or integrating a complicated client-side library. You must consider complexity of integration when choosing a third party solution for th SMS gateway.</p>
+
+<p><strong>Cost</strong> of sending or receiving 1 SMS message. Some services are free, most are not. You need to do some cost analysis here.</p>
+
+<hr/>
+
+
+<p><strong>HOME GROWN SMS SOLUTION</strong></p>
+
+<p>If you are quite handy on Linux, you can build an SMS gateway of your own. You can try to use <a href="http://kannel.org">kannel</a> or concoct your own using <a href="http://thelogbox.com/send-receive-sms-messages-usb-modem-linux/">gnokii, smsd and a USB modem</a>.</p>
+
+<p>For the hardcore, if you can still remember your RS-232 programming and you can lay your hands on an old copy of the Hayes AT&amp;T GSM modem commands, you can go down that route too.</p>
+
+<hr/>
+
+
+<p><strong>ANOTHER SOLUTION FOR 2 FACTOR AUTH</strong></p>
+
+<p>Use the MAC address of the device. That will satisfy the “what you have” requirement. The device itself is the security token. This is simpler and more transparent to the user because of the reduced steps on the workflow.</p>
+
+<p>This cannot be easily or eleagantly done if the user is on a Desktop machine and accessing the application via a browser. There is no way (yet) to get the MAC address of the machine without resorting to trickeries like ActiveX. The MAC information is not on the TCP packet, it is on the Ether. The Ether information does not make it to the HTTP headers (which is what you have on the server side of the web app)</p>
+
+<p>And so, the MAC solution might be a better fit for mobile devices. I would suspect that a standard API exists for extracting MAC on IOS or Android.</p>
 
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        file: #thoughts
+        file: #solution  #project  #security  #web_app
       </div>
     </article>
 

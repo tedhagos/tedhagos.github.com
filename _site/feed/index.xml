@@ -4,13 +4,64 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-03T16:26:22+08:00</updated>
+ <updated>2013-07-04T16:12:27+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>ted@thelogbox.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Two Factor Authentication for Web Apps</title>
+   <link href="http://tedhagos.com /two-factor-auth-using-sms"/>
+   <updated>2013-07-04T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /two-factor-auth-using-sms</id>
+   <content type="html">&lt;p&gt;One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge.  The OTP will serve as the “what you have” part for our 2 factor authentication.&lt;/p&gt;
+
+&lt;p&gt;This is a poor man's approach to Two Factor authentication. If you are strapped for cash and cannot afford the fancy gadgets that has random number generators (the one that changes every five minutes), then this solution might be good enough in the meantime.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2factor-auth-sms.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;
+  Fig 1: Sequence/Workflow of Two Factor Auth
+&lt;/div&gt;
+
+
+&lt;p&gt;It is best (and recommended) to seek third party integration to handle the SMS messaging aspect. A fully functioning SMS gateway is non-trivial to build and develop from scratch. There are lots of SMS gateway providers {TODO: Compile some options for third party SMS gateway providers}&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;THINGS TO CONSIDER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session Management&lt;/strong&gt; will not be very simple. You will need to account the coupling of a randomly generated number (a one time pin, like what most banking sites use). Associate it with the current browser session. The basic idea is to expire that PIN after the browser session has ended. You will need to carefully think about simpistic state management now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Messaging component&lt;/strong&gt; will have to be written. Surely you won't write the SMS-specific codes intermingled with your primary business logic? would you? Depending on what SMS gateway solution you will choose, this messaging component maybe as simple as making a RESTful call or integrating a complicated client-side library. You must consider complexity of integration when choosing a third party solution for th SMS gateway.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cost&lt;/strong&gt; of sending or receiving 1 SMS message. Some services are free, most are not. You need to do some cost analysis here.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;HOME GROWN SMS SOLUTION&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are quite handy on Linux, you can build an SMS gateway of your own. You can try to use &lt;a href=&quot;http://kannel.org&quot;&gt;kannel&lt;/a&gt; or concoct your own using &lt;a href=&quot;http://thelogbox.com/send-receive-sms-messages-usb-modem-linux/&quot;&gt;gnokii, smsd and a USB modem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the hardcore, if you can still remember your RS-232 programming and you can lay your hands on an old copy of the Hayes AT&amp;amp;T GSM modem commands, you can go down that route too.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;ANOTHER SOLUTION FOR 2 FACTOR AUTH&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use the MAC address of the device. That will satisfy the “what you have” requirement. The device itself is the security token. This is simpler and more transparent to the user because of the reduced steps on the workflow.&lt;/p&gt;
+
+&lt;p&gt;This cannot be easily or eleagantly done if the user is on a Desktop machine and accessing the application via a browser. There is no way (yet) to get the MAC address of the machine without resorting to trickeries like ActiveX. The MAC information is not on the TCP packet, it is on the Ether. The Ether information does not make it to the HTTP headers (which is what you have on the server side of the web app)&lt;/p&gt;
+
+&lt;p&gt;And so, the MAC solution might be a better fit for mobile devices. I would suspect that a standard API exists for extracting MAC on IOS or Android.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Working on API Projects</title>
