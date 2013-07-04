@@ -15,7 +15,7 @@ One way to achieve a two factor authentication is to couple a simple website log
 
 This is a poor man's approach to Two Factor authentication. If you are strapped for cash and cannot afford the fancy gadgets that has random number generators (the one that changes every five minutes), then this solution might be good enough in the meantime.
 
-<img src="{{ site.baseurl }}/img/2factor-auth-sms.png" />
+<img src="/img/2factor-auth-sms.png" />
 <div id="cap">
   Fig 1: Sequence/Workflow of Two Factor Auth
 </div>
