@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-04T16:12:27+08:00</updated>
+ <updated>2013-07-05T00:46:26+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -30,8 +30,7 @@
 
 &lt;p&gt;It is best (and recommended) to seek third party integration to handle the SMS messaging aspect. A fully functioning SMS gateway is non-trivial to build and develop from scratch. There are lots of SMS gateway providers {TODO: Compile some options for third party SMS gateway providers}&lt;/p&gt;
 
-&lt;hr/&gt;
-
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;THINGS TO CONSIDER&lt;/strong&gt;&lt;/p&gt;
 
@@ -41,8 +40,7 @@
 
 &lt;p&gt;&lt;strong&gt;Cost&lt;/strong&gt; of sending or receiving 1 SMS message. Some services are free, most are not. You need to do some cost analysis here.&lt;/p&gt;
 
-&lt;hr/&gt;
-
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;HOME GROWN SMS SOLUTION&lt;/strong&gt;&lt;/p&gt;
 
@@ -50,8 +48,7 @@
 
 &lt;p&gt;For the hardcore, if you can still remember your RS-232 programming and you can lay your hands on an old copy of the Hayes AT&amp;amp;T GSM modem commands, you can go down that route too.&lt;/p&gt;
 
-&lt;hr/&gt;
-
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;ANOTHER SOLUTION FOR 2 FACTOR AUTH&lt;/strong&gt;&lt;/p&gt;
 

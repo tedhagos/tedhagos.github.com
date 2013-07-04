@@ -20,11 +20,9 @@ This is a poor man's approach to Two Factor authentication. If you are strapped 
   Fig 1: Sequence/Workflow of Two Factor Auth
 </div>
   
-
 It is best (and recommended) to seek third party integration to handle the SMS messaging aspect. A fully functioning SMS gateway is non-trivial to build and develop from scratch. There are lots of SMS gateway providers {TODO: Compile some options for third party SMS gateway providers}
 
-
-<hr/>
+***
 
 **THINGS TO CONSIDER**
 
@@ -34,7 +32,7 @@ It is best (and recommended) to seek third party integration to handle the SMS m
 
 **Cost** of sending or receiving 1 SMS message. Some services are free, most are not. You need to do some cost analysis here.
 
-<hr/>
+***
 
 **HOME GROWN SMS SOLUTION**
 
@@ -42,7 +40,7 @@ If you are quite handy on Linux, you can build an SMS gateway of your own. You c
 
 For the hardcore, if you can still remember your RS-232 programming and you can lay your hands on an old copy of the Hayes AT&T GSM modem commands, you can go down that route too. 
 
-<hr/>
+***
 
 **ANOTHER SOLUTION FOR 2 FACTOR AUTH**
 
