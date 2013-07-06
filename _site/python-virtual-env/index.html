@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-  <head>				
-		
+  <head>
+    
 <!--
 <link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -27,7 +27,7 @@
 <meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>Copyright and reprint info &mdash; Ted Hagos</title>
+<title>Python Env &mdash; Ted Hagos</title>
 
     <style>
 
@@ -301,31 +301,92 @@ pre {
 
 
 </style>
-    
+
     <!--
-		<link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"/>	
-    <link rel="stylesheet" href="css/mobile.min.css"  type="text/css" media="handheld"/>
-    <link rel="stylesheet" href="css/style.min.css"  type="text/css" media="Screen" />
-	 -->
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
+    -->
+
   </head>
-	
   <body>
+    
+    
+    <div id="blogtitle">
+    <a href="/">TED'S NOTEBOOK</a>
+    </div>
+    
+    <div class='vertical-space'>
+    </div>
+    
+    <header>
+      <div id="articletitle">Python Env
+      </div>
+    </header>
+    <div class='content-meta'>
+       Friday , November 23 , 2012
+    </div>
+    <article itemscope itemtype="http://schema.org/Article">
+      <div id="post">
+        <div itemprop='articleBody'>
+        <p>Get your Python development setup right, from the get-go. Last thing you need is a broken development environment because of a broken site (wide) Python package you just installed. A virtual environment keeps packages separate, not touching each other (which is a good thing). If a broken python package trips you up, you can avoid the hassle of wiping out your entire Python dev setup just to start with fresh plate.</p>
 
-    <section>
-      <h1>COPYRIGHT & REPRINT</h1>
+<p>You already know how to get Python in your system, don’t you? Okay, next, get the [python-setuptools],  easy_install is part of that. On a terminal window, do the following;</p>
 
-<p/>
-All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved.
-<p/>
-
-<strong>Linking.</strong> Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out. 
-
-<p/>
-
-<strong>Electronic and Online reproduction.</strong> Ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &mdash; if you do however, really really need to reproduce anything you find in here, just <a href="mailto:ted@thelogbox.com">drop me note at ted {at} thelogbox {dot} com</a>. 
+<ol>
+<li>sudo easy_install pip</li>
+<li>sudo pip install virtualenv</li>
+<li>sudo pip install virtualenvwrapper</li>
+<li>create a folder somewhere your home directory or where ever you have write permissions. For my setup, I will use <em>~/pythonenvs</em></li>
+<li>edit <em>~/.bashrc or  ~/.bash_profile</em> (for linux and osx, respectively), type the entries below</li>
+</ol>
 
 
-    </section>
+<pre>
+WORKON_HOME=~/pythonenvs
+source /usr/local/virtualenvwrapper.sh
+</pre>
+
+
+<p>You will need to restart the terminal window (actually, the shell) to let the changes take effect</p>
+
+<h2>sample usage</h2>
+
+<ol>
+<li>mkvirtualenv gae</li>
+<li>mkvirtualenv standard</li>
+<li>workon gae</li>
+<li>workon standard</li>
+</ol>
+
+
+<h2>working on a specific project</h2>
+
+<ol>
+<li>mkdir ~/workarea/notes-gae (if you are working on a Python Google App Engine project, for example)</li>
+<li>cd to it</li>
+<li>mkvirtualenv notes-gae</li>
+<li>work on notes-gae, install some new eggs, site packages</li>
+<li>write the software to install inside requirements.txt, Ian Bicking wrote something about this</li>
+<li>then pip -r requirements.txt</li>
+<li>you can use yolk -l to see what packages are installed in the env</li>
+<li>then use pip freeze > stable-requirements.txtto freeze the software versions</li>
+<li>Use deactivate command to get out of virtual environments</li>
+<li>version the project, git init (gotta use git for source control)</li>
+<li>add some files to the project, then git add .</li>
+<li>do some commits, git commit -m “comments”</li>
+<li>and push the commits to a remote repo, git push -u origin master</li>
+<li>When you pick the project up another day, remember to git pull, before doing anything else</li>
+</ol>
+
+
+        </div>                
+      </div>
+      <div id="postmeta" class='light'>
+        file: #python  #osx  #linux
+      </div>
+    </article>
+
     <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=8602905; 
@@ -343,6 +404,42 @@ target="_blank"><img class="statcounter"
 src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
 alt="website statistics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
-  </body>
+    <script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37635397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tedhagos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+    <footer>
+    <div id='footer-inner'>
+  <a href='/copyright.html'>Copyright</a>&nbsp;
+&copy; 2012-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
+</div>
+
+
+  </footer>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: Front Page
+title: INDEX
 ---
 
 <!--
@@ -19,20 +19,34 @@ title: Front Page
     </a>
   </div>
   -->
-  <div id="articletitle">Ted Hagos</div>  
+  <div id="blogtitle">TED'S NOTEBOOK</div>  
+  
     <div class='vertical-space'>
     </div>
   
   <div id="articlelist">  
-	{% for post in site.posts %}   
-    <a href="{{ post.url }}">
-    	<span class='content-meta'>
-    		{{ post.date | date: "%D " }}
-      </span>
-      {{ post.title }} 
-    </a>
-    <br/>
-
+	{% for post in site.posts %}
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">{{ post.date | date: "%b %d " }}</div>
+        <div id="yeardiv">{{ post.date | date: "%Y " }}</div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="{{ post.url }}">
+        {{post.title}}
+      </a>
+      </h2>
+      <p>
+      {{ post.content | strip_html | truncatewords: 40}} <p>
+      <a href="{{ post.url }}">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
 	{% endfor %}
   </div>
 

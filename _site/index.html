@@ -13,20 +13,22 @@
 <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+
+
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>Front Page &mdash; Ted Hagos</title>
+<title>INDEX &mdash; Ted Hagos</title>
 
-<meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
-<meta name="google-site-verification" content="5_SB_qpC90xz6CnRfann88sz6G8WyIsgxYVnNJQfYQI" />
     <style>
 
 * {
@@ -60,7 +62,7 @@ strong {
 }
 
 #articletitle {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Tauri', Arial;
 	font-size: 50px;
   color: #7C7C7C;
 	font-weight: normal;
@@ -73,15 +75,6 @@ strong {
 	/*color: #435e36;*/
 }
 
-#articlelist {
-  
-  width:500px;
-  position: relative;
-  left: 50%;
-  margin-left: -225px;   
-
-}
-
 .light {
   font-family:'Muli', sans-serif;
   color: #5a8080;
@@ -92,22 +85,24 @@ strong {
 }
 
 #blogtitle {
-  font-family:  'Droid Serif'; 
-  font-size: 20px;
+  font-family: 'Tauri';
+  font-size: 50px;
+  color: #8C0000;
   text-align: center;
   margin-bottom: 10px;
 }
-#blogtitle a:link, #blogtitle a:visited {
-  font-size: 20px;
-	text-decoration: none;
-  border-bottom: 1px solid #694a54;
-}
+  #blogtitle a:link, #blogtitle a:visited {
+    font-family: 'Tauri';
+    font-size:50px;
+    text-decoration:none;
+    color: #8C0000;
+    border-bottom: 1px solid #8C0000;
+  }
+    #blogtitle a:hover {
+      color: #FF0000;
+      border-bottom: 0px
+    }
 
-/*
-#blogtitle a:hover {
-  border-bottom: 1px solid #CACACA;
-}
-*/
 
 blockquote {
   padding: 5px;
@@ -143,6 +138,7 @@ body {
 }
 
 footer {
+  clear:both;
   font-family: Arial;
 	font-size:15px;
 	font-style:normal;
@@ -193,18 +189,9 @@ hr {
 	height: 5px;
 }
 
-a:link, a:visited {
-	/*color: #694a54;*/
-  color: #B10000;
-  /*color: #694a54;*/
-	
-}
-
-a:hover {
-	/*border-bottom: 1px solid #79a663;*/
-  color: #B30000;
-  border-bottom: 0px solid #B30000;
-}
+a:link, a:visited { color: #B10000; }
+  a:visited { color: #414141;}
+    a:hover { color: #FF0000; text-decoration:none;}
 
 #news {
   clear:both;
@@ -217,6 +204,55 @@ a:hover {
   margin-top: 70px;
   text-align: center;
 }
+
+#articlelist {
+  width:700px;
+  position: relative;
+  left: 50%;
+  margin-left: -350px;   
+}
+
+#postentry {
+  overflow:hidden;
+  clear:both;
+  padding: 5px;
+  border-top: 1px dashed #D8C7CC;
+  height: auto;
+  padding: 20px;
+}
+
+#postdate {
+  padding-top:10px;
+  float:left;
+  text-align:right;
+}
+  #postdate #datediv {
+    font-size: 24px;
+    color: #686868;
+    text-align:right;
+  }
+  #postdate #yeardiv {
+    font-size: 30px;
+    color: #CACACA;
+  }
+
+#postcontent {
+  position:relative;
+  top: -8px;
+  float:right;
+  width:550px;
+}
+  #postcontent h2 a:link, #postcontent h2 a:visited {
+    font-family: 'Tauri';
+    font-size: 25px;
+    /*color: #003D82;*/
+    color: #7c7c7c;
+    font-weight:normal;
+    text-decoration: none;
+  }
+  #postcontent h2 a:hover {
+    color: #B10000;
+  } 
 
 .vertical-space {
   display: block;
@@ -292,137 +328,408 @@ pre {
     </a>
   </div>
   -->
-  <div id="articletitle">Ted Hagos</div>  
+  <div id="blogtitle">TED'S NOTEBOOK</div>  
+  
     <div class='vertical-space'>
     </div>
   
   <div id="articlelist">  
-	   
-    <a href="/two-factor-auth-using-sms">
-    	<span class='content-meta'>
-    		07/04/13 
-      </span>
-      Two Factor Authentication for Web Apps 
-    </a>
-    <br/>
-
-	   
-    <a href="/api-projects">
-    	<span class='content-meta'>
-    		01/31/13 
-      </span>
-      Working on API Projects 
-    </a>
-    <br/>
-
-	   
-    <a href="/fixed-deadlines-moving-scope">
-    	<span class='content-meta'>
-    		01/30/13 
-      </span>
-      Of fixed Deadlines and Moving Scopes 
-    </a>
-    <br/>
-
-	   
-    <a href="/480-minutes-of-focus">
-    	<span class='content-meta'>
-    		01/15/13 
-      </span>
-      480 minutes of focus 
-    </a>
-    <br/>
-
-	   
-    <a href="/default-behavior">
-    	<span class='content-meta'>
-    		01/08/13 
-      </span>
-      The Brain's Playbook 
-    </a>
-    <br/>
-
-	   
-    <a href="/two-hours">
-    	<span class='content-meta'>
-    		01/07/13 
-      </span>
-      The First Two Hours 
-    </a>
-    <br/>
-
-	   
-    <a href="/the-task-list">
-    	<span class='content-meta'>
-    		12/28/12 
-      </span>
-      It's (not) Just a Task List 
-    </a>
-    <br/>
-
-	   
-    <a href="/long-fuse">
-    	<span class='content-meta'>
-    		12/27/12 
-      </span>
-      Long Fuse 
-    </a>
-    <br/>
-
-	   
-    <a href="/holiday-blues-low-grade-stress">
-    	<span class='content-meta'>
-    		12/26/12 
-      </span>
-      Low Grade Stress 
-    </a>
-    <br/>
-
-	   
-    <a href="/whats-keeping-you">
-    	<span class='content-meta'>
-    		12/24/12 
-      </span>
-      Lazy bones, Lazy mind 
-    </a>
-    <br/>
-
-	   
-    <a href="/move-forward-or-sideways">
-    	<span class='content-meta'>
-    		12/24/12 
-      </span>
-      To the front or to the side? 
-    </a>
-    <br/>
-
-	   
-    <a href="/thought-snowball">
-    	<span class='content-meta'>
-    		12/23/12 
-      </span>
-      Snowballing thoughts 
-    </a>
-    <br/>
-
-	   
-    <a href="/copyright-reprint-info">
-    	<span class='content-meta'>
-    		12/23/12 
-      </span>
-      Copyright and Reprint Info 
-    </a>
-    <br/>
-
-	   
-    <a href="/challenges-first-glance">
-    	<span class='content-meta'>
-    		12/23/12 
-      </span>
-      Slowing down helps 
-    </a>
-    <br/>
-
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jul 04 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/two-factor-auth-using-sms">
+        Two Factor Authentication for Web Apps
+      </a>
+      </h2>
+      <p>
+      One way to achieve a two factor authentication is to couple a simple website login with an SMS One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random... <p>
+      <a href="/two-factor-auth-using-sms">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jul 02 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/java8-notes">
+        Getting into grips with Java 8
+      </a>
+      </h2>
+      <p>
+      You can get Java 8 by way of Oracle Early Access. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do... <p>
+      <a href="/java8-notes">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Feb 13 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/latex-slides">
+        Presentation & Slides with Beamer class
+      </a>
+      </h2>
+      <p>
+      1. BASIC STRUCTURE OF A PRESENTATION FILE The whole presentation is inside \begin{document} .. \end{document} .Each slide is enclosed in \begin{frame} \end{frame}. Sample document is shown below % % sampledoc.latex % \documentclass{beamer} \begin{document} \begin{frame} \frametitle{First} \framesubtitle{the subtitle} % content \end{frame}... <p>
+      <a href="/latex-slides">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Feb 12 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/osx-cheatsheet">
+        OSX Cheatsheet
+      </a>
+      </h2>
+      <p>
+      1. SHOW THE ROUTING TABLE. route print won't work, try netstat -nr 2. HIDE OR SHOW HIDDEN FILES IN FINDER. If you are always working on the command line, don't even bother with this, a simple ls -a should do... <p>
+      <a href="/osx-cheatsheet">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jan 31 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/api-projects">
+        Working on API Projects
+      </a>
+      </h2>
+      <p>
+      You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that... <p>
+      <a href="/api-projects">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jan 30 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/fixed-deadlines-moving-scope">
+        Of fixed Deadlines and Moving Scopes
+      </a>
+      </h2>
+      <p>
+      A common tale on software projects &mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving. In a perfect world, before a single... <p>
+      <a href="/fixed-deadlines-moving-scope">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jan 15 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/480-minutes-of-focus">
+        480 minutes of focus
+      </a>
+      </h2>
+      <p>
+      That's 8 hours. It's a stretch to increase it, no matter how badly you want to. Every morning you've got 24 potential-filled hours, sounds like a lot, but after; waiting on elevators (.25 hours, cumulatively) getting to work (1 hour)... <p>
+      <a href="/480-minutes-of-focus">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jan 08 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/default-behavior">
+        The Brain's Playbook
+      </a>
+      </h2>
+      <p>
+      I know what I have to do, I've written (and rewritten) them down in the notebook, in the goal papers; yet I don't want to do them. There's a tug-of-war happening inside and the lazy guys seems to be winning.... <p>
+      <a href="/default-behavior">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Jan 07 </div>
+        <div id="yeardiv">2013 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/two-hours">
+        The First Two Hours
+      </a>
+      </h2>
+      <p>
+      Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't check messages on your phone lest your mind will wander around, will fleet from thought to... <p>
+      <a href="/two-hours">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 28 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/the-task-list">
+        It's (not) Just a Task List
+      </a>
+      </h2>
+      <p>
+      As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more... <p>
+      <a href="/the-task-list">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 27 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/long-fuse">
+        Long Fuse
+      </a>
+      </h2>
+      <p>
+      a device in a bomb that controls the timing of an explosion a book by Dr. Eric Haseltine (Long Fuse, Big Bang …) long term goals. not the same as task list items, but each item on the task list... <p>
+      <a href="/long-fuse">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 26 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/holiday-blues-low-grade-stress">
+        Low Grade Stress
+      </a>
+      </h2>
+      <p>
+      The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies,... <p>
+      <a href="/holiday-blues-low-grade-stress">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 24 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/whats-keeping-you">
+        Lazy bones, Lazy mind
+      </a>
+      </h2>
+      <p>
+      What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.... <p>
+      <a href="/whats-keeping-you">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 24 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/move-forward-or-sideways">
+        To the front or to the side?
+      </a>
+      </h2>
+      <p>
+      For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are... <p>
+      <a href="/move-forward-or-sideways">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 23 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/thought-snowball">
+        Snowballing thoughts
+      </a>
+      </h2>
+      <p>
+      Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel... <p>
+      <a href="/thought-snowball">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 23 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/copyright-reprint-info">
+        Copyright and Reprint Info
+      </a>
+      </h2>
+      <p>
+      All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved. Linking. Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out.... <p>
+      <a href="/copyright-reprint-info">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Dec 23 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/challenges-first-glance">
+        Slowing down helps
+      </a>
+      </h2>
+      <p>
+      Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see; Remember Pareto? 8 parts of the problem... <p>
+      <a href="/challenges-first-glance">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Nov 23 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/python-virtual-env">
+        Python Env
+      </a>
+      </h2>
+      <p>
+      Get your Python development setup right, from the get-go. Last thing you need is a broken development environment because of a broken site (wide) Python package you just installed. A virtual environment keeps packages separate, not touching each other (which... <p>
+      <a href="/python-virtual-env">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
 	
   </div>
 

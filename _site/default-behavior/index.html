@@ -13,11 +13,15 @@
 <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+
+
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content=""/>
@@ -25,8 +29,6 @@
 
 <title>The Brain's Playbook &mdash; Ted Hagos</title>
 
-<meta name="google-site-verification" content="HaOYYZ9-c7dFoZyD9h7L0B0aQcxa7bKesvAX3TlCNdw" />
-<meta name="google-site-verification" content="5_SB_qpC90xz6CnRfann88sz6G8WyIsgxYVnNJQfYQI" />
     <style>
 
 * {
@@ -60,7 +62,7 @@ strong {
 }
 
 #articletitle {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Tauri', Arial;
 	font-size: 50px;
   color: #7C7C7C;
 	font-weight: normal;
@@ -73,15 +75,6 @@ strong {
 	/*color: #435e36;*/
 }
 
-#articlelist {
-  
-  width:500px;
-  position: relative;
-  left: 50%;
-  margin-left: -225px;   
-
-}
-
 .light {
   font-family:'Muli', sans-serif;
   color: #5a8080;
@@ -92,22 +85,24 @@ strong {
 }
 
 #blogtitle {
-  font-family:  'Droid Serif'; 
-  font-size: 20px;
+  font-family: 'Tauri';
+  font-size: 50px;
+  color: #8C0000;
   text-align: center;
   margin-bottom: 10px;
 }
-#blogtitle a:link, #blogtitle a:visited {
-  font-size: 20px;
-	text-decoration: none;
-  border-bottom: 1px solid #694a54;
-}
+  #blogtitle a:link, #blogtitle a:visited {
+    font-family: 'Tauri';
+    font-size:50px;
+    text-decoration:none;
+    color: #8C0000;
+    border-bottom: 1px solid #8C0000;
+  }
+    #blogtitle a:hover {
+      color: #FF0000;
+      border-bottom: 0px
+    }
 
-/*
-#blogtitle a:hover {
-  border-bottom: 1px solid #CACACA;
-}
-*/
 
 blockquote {
   padding: 5px;
@@ -143,6 +138,7 @@ body {
 }
 
 footer {
+  clear:both;
   font-family: Arial;
 	font-size:15px;
 	font-style:normal;
@@ -193,18 +189,9 @@ hr {
 	height: 5px;
 }
 
-a:link, a:visited {
-	/*color: #694a54;*/
-  color: #B10000;
-  /*color: #694a54;*/
-	
-}
-
-a:hover {
-	/*border-bottom: 1px solid #79a663;*/
-  color: #B30000;
-  border-bottom: 0px solid #B30000;
-}
+a:link, a:visited { color: #B10000; }
+  a:visited { color: #414141;}
+    a:hover { color: #FF0000; text-decoration:none;}
 
 #news {
   clear:both;
@@ -217,6 +204,55 @@ a:hover {
   margin-top: 70px;
   text-align: center;
 }
+
+#articlelist {
+  width:700px;
+  position: relative;
+  left: 50%;
+  margin-left: -350px;   
+}
+
+#postentry {
+  overflow:hidden;
+  clear:both;
+  padding: 5px;
+  border-top: 1px dashed #D8C7CC;
+  height: auto;
+  padding: 20px;
+}
+
+#postdate {
+  padding-top:10px;
+  float:left;
+  text-align:right;
+}
+  #postdate #datediv {
+    font-size: 24px;
+    color: #686868;
+    text-align:right;
+  }
+  #postdate #yeardiv {
+    font-size: 30px;
+    color: #CACACA;
+  }
+
+#postcontent {
+  position:relative;
+  top: -8px;
+  float:right;
+  width:550px;
+}
+  #postcontent h2 a:link, #postcontent h2 a:visited {
+    font-family: 'Tauri';
+    font-size: 25px;
+    /*color: #003D82;*/
+    color: #7c7c7c;
+    font-weight:normal;
+    text-decoration: none;
+  }
+  #postcontent h2 a:hover {
+    color: #B10000;
+  } 
 
 .vertical-space {
   display: block;
@@ -277,7 +313,10 @@ pre {
     
     
     <div id="blogtitle">
-    <a href="/">Ted Hagos</a>
+    <a href="/">TED'S NOTEBOOK</a>
+    </div>
+    
+    <div class='vertical-space'>
     </div>
     
     <header>

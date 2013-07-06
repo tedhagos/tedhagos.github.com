@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-  <head>				
-		
+  <head>
+    
 <!--
 <link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -24,10 +24,10 @@
 
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
-<meta name="description" content=""/>
+<meta name="description" content="Learn how to install Java 8 Eary Access without messing around your stable dev environment"/>
 <meta charset="utf-8"/>
 
-<title>Copyright and reprint info &mdash; Ted Hagos</title>
+<title>Getting into grips with Java 8 &mdash; Ted Hagos</title>
 
     <style>
 
@@ -301,31 +301,69 @@ pre {
 
 
 </style>
-    
+
     <!--
-		<link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"/>	
-    <link rel="stylesheet" href="css/mobile.min.css"  type="text/css" media="handheld"/>
-    <link rel="stylesheet" href="css/style.min.css"  type="text/css" media="Screen" />
-	 -->
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
+    -->
+
   </head>
-	
   <body>
+    
+    
+    <div id="blogtitle">
+    <a href="/">TED'S NOTEBOOK</a>
+    </div>
+    
+    <div class='vertical-space'>
+    </div>
+    
+    <header>
+      <div id="articletitle">Getting into grips with Java 8
+      </div>
+    </header>
+    <div class='content-meta'>
+       Tuesday , July 02 , 2013
+    </div>
+    <article itemscope itemtype="http://schema.org/Article">
+      <div id="post">
+        <div itemprop='articleBody'>
+        <p>You can get Java 8 by way of <a href="http://www.oracle.com/technetwork/java/javase/downloads/ea-jsp-142245.html">Oracle Early Access</a>. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do that! Not to your workhorse and go-to machine. Do it a VM, it is safer and prudent that way.</p>
 
-    <section>
-      <h1>COPYRIGHT & REPRINT</h1>
+<p>On a Debian VM or Debian-ish machines, it can be pulled from the repos</p>
 
-<p/>
-All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved.
-<p/>
-
-<strong>Linking.</strong> Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out. 
-
-<p/>
-
-<strong>Electronic and Online reproduction.</strong> Ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &mdash; if you do however, really really need to reproduce anything you find in here, just <a href="mailto:ted@thelogbox.com">drop me note at ted {at} thelogbox {dot} com</a>. 
+<div class="highlight"><pre><code class="bash">sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+</code></pre></div>
 
 
-    </section>
+<p>The Windows installation should be easy to figure out, there is no need to write it here.</p>
+
+<p><strong>If you cannot go the VM route</strong> you can still try out Java 8. There is a downloadable version of Java 8 Development Kit at <a href="http://java8.jdk.net/download.html">java8.jdk.net/download</a>that does not require installation. You may need to figure out how to use side-by-side with your other installation of the JDK though. For my Mac setup, this is what I did</p>
+
+<ol>
+<li>Download the installer from <a href="http://java8.jdk.net/download.html">java8.jdk.net/download</a> or <a href="http://java8.jdk.net/download.html">java8.jdk.net/lambda</a>, the second one is larger and has lambda support</li>
+<li>Extract the contents and tuck it away somewhere</li>
+<li>Create softlinks to the java8 executables, might be a good idea not to override your usual <strong>java</strong> and <strong>javac</strong>. I named mine <strong>java8</strong> and <strong>javac8</strong></li>
+</ol>
+
+
+<div class="highlight"><pre><code class="bash">sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
+sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
+</code></pre></div>
+
+
+<p>I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9</p>
+
+        </div>                
+      </div>
+      <div id="postmeta" class='light'>
+        file: #java8  #jdk8  #early_access
+      </div>
+    </article>
+
     <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=8602905; 
@@ -343,6 +381,42 @@ target="_blank"><img class="statcounter"
 src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
 alt="website statistics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
-  </body>
+    <script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37635397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tedhagos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+    <footer>
+    <div id='footer-inner'>
+  <a href='/copyright.html'>Copyright</a>&nbsp;
+&copy; 2012-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
+</div>
+
+
+  </footer>
+  </body>
 </html>

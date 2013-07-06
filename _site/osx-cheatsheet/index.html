@@ -1,0 +1,710 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    
+<!--
+<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+-->
+
+
+<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+<meta name="description" content="php setup on mac. ripping audio and video. dev environment. shell hacks. terminal hacks. mac admin."/>
+<meta charset="utf-8"/>
+
+<title>OSX Cheatsheet &mdash; Ted Hagos</title>
+
+    <style>
+
+* {
+  font-family: Arial, serif;
+  font-size: 16px;
+  color: #414141;
+  background: #F8F5F6;
+}
+
+p, ol, li , .content-meta {
+  font-family: Arial;
+  font-size: 16px;
+	line-height: 170%;
+  line-height: 160%;
+  letter-spacing: 110%;
+}
+em {
+  font-style:oblique;
+  font-family: Georgia;
+  color: #003D82;
+}
+
+/*ol, li { font-size: 104%;}*/
+ol, li { font-size: 16px;}
+
+strong {
+  font-family: Arial;
+  font-size:110%;
+  font-weight:normal;
+  color: #000000;
+}
+
+#articletitle {
+	font-family: 'Tauri', Arial;
+	font-size: 50px;
+  color: #7C7C7C;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom:0;
+  letter-spacing: -.5px;
+  text-align: center;
+	/*color: #002346;*/
+	/*color: #6F0000;*/
+	/*color: #435e36;*/
+}
+
+.light {
+  font-family:'Muli', sans-serif;
+  color: #5a8080;
+}
+
+#postmeta {
+  margin-bottom: 1em;
+}
+
+#blogtitle {
+  font-family: 'Tauri';
+  font-size: 50px;
+  color: #8C0000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+  #blogtitle a:link, #blogtitle a:visited {
+    font-family: 'Tauri';
+    font-size:50px;
+    text-decoration:none;
+    color: #8C0000;
+    border-bottom: 1px solid #8C0000;
+  }
+    #blogtitle a:hover {
+      color: #FF0000;
+      border-bottom: 0px
+    }
+
+
+blockquote {
+  padding: 5px;
+  margin-left: auto;
+  margin-right:auto;
+  width: 90%;
+}
+
+  blockquote p {
+    font-family: Georgia;
+    font-style: oblique;
+    color: #545454;
+    text-align: right;
+  }
+
+
+h1, h2, h3, h4, h5 {
+	font-family: Arial;
+
+	/*color: #545454;*/
+  font-weight:normal;
+  color: #2D2D2D;
+}
+
+h1 {font-size: 170%; letter-spacing: -1px;}
+h2 {font-size: 130%; margin-bottom:0;}
+
+body {
+	width:90%;
+	margin: 0 auto;
+  margin-top:1em;
+	padding-top: 1em;
+}
+
+footer {
+  clear:both;
+  font-family: Arial;
+	font-size:15px;
+	font-style:normal;
+	margin-top:1em;
+	margin-bottom: 1em;
+	padding-top: 2em;
+	border-top: 1px solid #DEDEDE;
+  text-align: center;
+}
+
+.content-meta {
+  font-family: Arial;
+	font-style: normal;
+  color: #686868;
+  /*color: #681a1a;*/
+	margin-top:0;
+	margin-bottom:2em;
+  margin-right: 30px;
+  text-align: center;
+}
+
+img {
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+
+  #cap {
+    padding: 10px;
+    font-family: Georgia;
+    font-size:90%;
+    color: #000000;
+    text-align:center;
+    width: 500px;
+    margin-right:auto;
+    margin-left:auto;
+    
+  }
+
+hr {
+	border:0;
+  /*
+	color: #E8E8B5;
+	background: #E8E8B5;
+  */
+	color: #d8c7cc;
+	background: #d8c7cc;
+	height: 5px;
+}
+
+a:link, a:visited { color: #B10000; }
+  a:visited { color: #414141;}
+    a:hover { color: #FF0000; text-decoration:none;}
+
+#news {
+  clear:both;
+  width: 200px;
+  float:right;
+  padding: 20px;
+  border:2px solid #61768a;
+  overflow: hidden;
+  margin-bottom:50px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+#articlelist {
+  width:700px;
+  position: relative;
+  left: 50%;
+  margin-left: -350px;   
+}
+
+#postentry {
+  overflow:hidden;
+  clear:both;
+  padding: 5px;
+  border-top: 1px dashed #D8C7CC;
+  height: auto;
+  padding: 20px;
+}
+
+#postdate {
+  padding-top:10px;
+  float:left;
+  text-align:right;
+}
+  #postdate #datediv {
+    font-size: 24px;
+    color: #686868;
+    text-align:right;
+  }
+  #postdate #yeardiv {
+    font-size: 30px;
+    color: #CACACA;
+  }
+
+#postcontent {
+  position:relative;
+  top: -8px;
+  float:right;
+  width:550px;
+}
+  #postcontent h2 a:link, #postcontent h2 a:visited {
+    font-family: 'Tauri';
+    font-size: 25px;
+    /*color: #003D82;*/
+    color: #7c7c7c;
+    font-weight:normal;
+    text-decoration: none;
+  }
+  #postcontent h2 a:hover {
+    color: #B10000;
+  } 
+
+.vertical-space {
+  display: block;
+  height: 50px;
+}
+
+code  {
+	font-family: 'Muli';
+  font-size: 15px;
+  background-color: #FFFFEB;
+  border: 0;
+}
+  .codeblock {
+	  font-family: 'Muli';
+    font-size: 15px;
+    /*color: #1A8DFF;*/
+    color: #003D82;
+    font-weight: normal; 
+    border: 0;
+    background: #F8F5F6;
+  }
+
+pre {
+	font-family: 'Muli';
+  font-size: 15px;
+  color: #000000;
+  background: #FFFFEB;
+	padding: 10px;
+	border: 1px solid #B6B6B6;
+	margin-bottom:0px;
+  line-height: 160%;
+}
+
+#lst {
+	font-family: 'Inconsolata';
+	font-style:normal;
+	background:#DEDEDE;
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+
+}
+
+
+
+
+</style>
+
+    <!--
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
+    -->
+
+  </head>
+  <body>
+    
+    
+    <div id="blogtitle">
+    <a href="/">TED'S NOTEBOOK</a>
+    </div>
+    
+    <div class='vertical-space'>
+    </div>
+    
+    <header>
+      <div id="articletitle">OSX Cheatsheet
+      </div>
+    </header>
+    <div class='content-meta'>
+       Tuesday , February 12 , 2013
+    </div>
+    <article itemscope itemtype="http://schema.org/Article">
+      <div id="post">
+        <div itemprop='articleBody'>
+        <p><strong>1. SHOW THE ROUTING TABLE</strong>. <span class="codeblock">route print</span> won't work, try <code class="codeblock">netstat -nr</code></p>
+
+<hr/>
+
+
+<p><strong>2. HIDE OR SHOW HIDDEN FILES IN FINDER</strong>.</p>
+
+<p>If you are always working on the command line, don't even bother with this, a simple <strong>ls -a</strong> should do the trick. If however, you really do need to display hidden stuff in Finder, here's how to do it.</p>
+
+<p><code class="codeblock">
+  $ defaults write com.apple.finder AppleShowAllFiles -bool YES <br/>
+  $ defaults write com.apple.finder AppleShowAllFiles -bool NO
+</code></p>
+
+<p>The first one obviously shows hidden files and the other hides it. You need kill the Finder app each time you change this setting.</p>
+
+<p><code class="codeblock">
+  $ killall Finder
+</code></p>
+
+<hr/>
+
+
+<p><strong>3. HOW TO SET THE HOSTNAME</strong></p>
+
+<p><code class="codeblock">
+  $ sudo scutil --set HostName anyname_you_want
+</code></p>
+
+<hr/>
+
+
+<p><strong>4. JAVA</strong></p>
+
+<p>The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type <span class="codeblock">java</span>, it should launch a window asking you if you want to install Java.</p>
+
+<p><strong>JAVA 8</strong></p>
+
+<p>Don't install the EA release from Oracle, not on your workhorse machine. If you just want to play around with JDK8, get it at <a href="http://java8.jdk.net/download">java8.jdk.net/download</a> or <a href="http://java8.jdk.net/lambda">java8.jdk.net/lambda</a>. Untar the downloaded files, then set softlinks to executables.</p>
+
+<p><code class="codeblock">
+  $ sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8 <br/>
+  $ sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
+</code></p>
+
+<hr/>
+
+
+<p><strong>5. CONTROL ANTI-ALIASING</strong></p>
+
+<p><code class="codeblock">
+  $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
+</code></p>
+
+<p>WHERE:</p>
+
+<ul>
+<li>1: Light anti aliasing</li>
+<li>2: Medium</li>
+<li>3: Strong</li>
+</ul>
+
+
+<hr/>
+
+
+<p><strong>6. GET A BETTER PACKAGE MANAGER</strong></p>
+
+<p><a href="http://mxcl.github.com/homebrew/">Get BREW first</a>, follow the instruction on the web site of brew, after that it's all good</p>
+
+<p><code class="codeblock">
+  $ brew install git <br/>
+  $ brew install wget <br/>
+  $ brew install curl <br/>
+</code></p>
+
+<hr/>
+
+
+<p><strong>Color the Terminal.app</strong> for ls</p>
+
+<p><code class="codeblock">
+  $ vi ~/.bash_profile <br/>
+  $ echo "alias ls="ls -G"" >> ~./bash_profile
+</code></p>
+
+<hr/>
+
+
+<p><strong>7. MYSQL</strong> client can't be found after OSX 10.8 upgrade, it did not disappear  but for some reason, the PATH was messed up, it is still on <em>/usr/ocal/mysql/bin</em>, just add it the SYSTEM PATH</p>
+
+<p><code class="codeblock">
+  $ vi ~/.bash_profile <br/>
+  $ echo "export PATH=$PATH:/usr/local/mysql/bin:." >> ~./bash_profile
+</code></p>
+
+<hr/>
+
+
+<p><strong>8. PICTURES TAKEN IN PHOTOBOOTH</strong> are in <em>~/Pictures/Photo Booth Library/Pictures</em></p>
+
+<hr/>
+
+
+<p><strong>9. PANDOC</strong> If you want to write in <strong>Markdown</strong> then publish in HTML, PDF, Latex etc, you will need <strong>pandoc</strong>.</p>
+
+<p>First, you need to <a href="http://www.haskell.org/haskellwiki/Mac_OS_X">GET Haskell</a>, you could try Fink or MacPort but the binaries worked best when I was doodling with this. There is a download link on <a href="http://www.haskell.org/haskellwiki/Mac_OS_X">HasKell Wiki</a>.</p>
+
+<p>The Haskell installer would have installed the <em>cabal</em> binaries at <em>~/.cabal/bin</em>, add it to SYSTEM PATH then install pandoc</p>
+
+<p><code class="codeblock">
+$ sudo cabal update
+$ sudo cabal install pandoc
+</code></p>
+
+<hr/>
+
+
+<p><strong>10. USE A BETTER TERMINAL CLIENT</strong> Get <a href="http://www.iterm2.com/">Iterm2</a></p>
+
+<hr/>
+
+
+<p><strong>11. PHP PEAR</strong>. This is no longer included in 10.8, maybe it did not even make it in Leopard, I'm not sure. Just <strong>curl</strong> it</p>
+
+<p><code class="codeblock">
+$ curl http://pear.php.net/go-pear.phar > go-pear.phar <br/>
+$ sudo php -q go-pear.phar
+</code></p>
+
+<p>PEAR installation will be at <span class="codeblock">~/pear/</span>, bin, etc and all. Next, update your startup script</p>
+
+<p><code class="codeblock">
+$ echo "export PATH=$PATH:~/pear/bin:." >> ~/.bash_profile
+</code></p>
+
+<hr/>
+
+
+<p><strong>12. PHAR &amp; PHP COMPOSER</strong></p>
+
+<p>Create a php.ini file first. OSX does have it at /private/etc. Don't copy the ini file somewhere else, it needs to be at <em>/private/etc/</em>. Make sure that php.ini is actually in that directory</p>
+
+<p><code class="codeblock">
+$ cd /private/etc <br/>
+$ sudo cp php.ini.default php.ini
+</code></p>
+
+<p>Add the following to <em>php.ini</em>, it's okay to add it at the very beginning, it
+didn't give me problems that way</p>
+
+<pre>
+detect_unicode = Off
+date.timezone = YourCountry/YourCity
+</pre>
+
+
+<p>After saving the update php.ini,</p>
+
+<p><code class="codeblock">
+$ cd /path/to/your/workarea <br/>
+$ curl -s http://getcomposer.org/installer | php
+</code></p>
+
+<p>composer.phar should be downloaded to <code class="codeblock">/path/to/your/workarea</code>. Test it. <span class="codeblock"> $ php composer.phar</span></p>
+
+<hr/>
+
+
+<p><strong>13. EDITOR</strong></p>
+
+<pre>
+$ brew install vim 
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+$ lynx https://gist.github.com/tedhagos/5916935 (say yes to the download)
+$ tar -xzvf gistXXXXXX.tar.gz 
+$ cp gistXXXX/.vimrc ~/.vimrc 
+$ vim +BundleInstall +qall
+</pre>
+
+
+<p>More details at <a href="https://github.com/gmarik/vundle">gmarik/vundle</a></p>
+
+<hr/>
+
+
+<p><strong>14. GET A BETTER SCREEN MULTIPLEXER</strong>.</p>
+
+<p><code class="codeblock">
+$ brew install tmux
+</code></p>
+
+<p>There is a bit of a setup. You need to create ~/tmux.conf and create a script (the one that handles the shortcuts). The <a href="https://gist.github.com/tedhagos/5917003">tmux.conf and tdev.sh are here</a></p>
+
+<hr>
+
+
+<p><strong>15. COPY/PASTE ON THE CLI</strong></p>
+
+<p><code class="codeblock">
+$ cat somefile | pbcopy <br/>
+$ echo pbpaste
+</code></p>
+
+<hr/>
+
+
+<p><strong>16. USING A WINDOWS KEYBOARD ON MAC MINI</strong></p>
+
+<p>Remap the keyboard for Mac Oriented use. Get the <a href="http://doublecommand.sourceforge.net/">Double Command Kernel Extension</a>. Original instructions from <a href="http://www.macworld.com/article/42446/2005/01/doublecommand.html">MacWorld is found here</a>.</p>
+
+<p><em>NOTE</em>: F12 on the Win Keyboard is the eject button</p>
+
+<hr/>
+
+
+<p><strong>17. RIP AUDIO CDS (FLAC)</strong></p>
+
+<p>I don't want to hear any "But you can use iTunes to rip CDs". I know that. iTunes is very opinionated on how it wants to rip CDs and where to put them. I don't agree with it. Hence, the hacks.</p>
+
+<p><code class="codeblock">
+  $ brew install cdparanoia <br/>
+  $ brew install abcde <br/>
+  $ touch ~/.abcde.conf
+</code></p>
+
+<pre>
+  CDROM=/dev/disk1
+  OUTPUTTYPE=flac
+  INTERACTIVE=n
+  PADTRACKS=y
+  OUTPUTDIR=~/Music/abcde
+  OUTPUTFORMAT='${ARTISTFILE}/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  VAOUTPUTFORMAT='Various/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  mungefilename ()
+  {
+    echo "$@" | sed s,:, -,g | tr /* _+ | tr -d '"?[:cntrl:]
+  }
+</pre>
+
+
+<p>dev/disk1 is where my CD is mounted, find out where yours is mounted. A simple <code class="codeblock">df</code> command should give you some clue where the CD drive is mounted. After that, ripping can start.</p>
+
+<p><code class="codeblock">
+  $ diskutil unmount /dev/disk1 <br/>
+  $ abcde <br/>
+  $ diskutil eject /dev/disk1<br/>
+</code></p>
+
+<p>The unmounting is necessary because abcde works with raw block devices and cannot function when the CD is mounted.</p>
+
+<p>I shamlessly ripped most of this guide from <a href="http://hints.macworld.com/article.php?story=2005101620055677">MacWorld contributed by extempore</a></p>
+
+<hr/>
+
+
+<p><strong>17.1 RIP AUDIO CDS (MP3)</strong></p>
+
+<p>Get <a href="http://sbooth.org/Max/">MAX from SBooth</a>. Work on the archive files and put in <code class="codeblock">/Applications</code> folder or where you want. It's a GUI tool, so it's easy to work with.</p>
+
+<p>MAX uses musicbrainz.org for the CD metadata, the service is not good enough. GraceNotes, which is used by iTunes is more capable. The problem is, I couldn't find a direct way to connect MAX to GraceNotes. You need a bit of AppleScripting, this solution was the from the SBooth forums as well, the <a href="http://forums.sbooth.org/viewtopic.php?f=4&amp;t=1930">link to the original discussion is here</a></p>
+
+<ol>
+<li>Create a Script in AppleScript, Save it anywhere you can find it easily. The script can be found on the link above (the sbooth forum), but I saved it in gist.github.com, here's the link https://gist.github.com/tedhagos/5845190</li>
+<li>When you insert the CD, iTunes will launch as well (you need this)</li>
+<li>Run the script you created. That will get the meta data of iTunes</li>
+<li>Rip Away</li>
+</ol>
+
+
+<p>This solution needs both iTunes and MAX running at the same time. When iTunes grabs the metadata from Gracenotes, the script grabs the metadata from iTunes</p>
+
+<hr/>
+
+
+<p><strong>18. RIP DVDs</strong></p>
+
+<p>Just get <a href="http://handbrake.fr/downloads.php">Handbrake here</a> you can figure out the rest</p>
+
+<hr/>
+
+
+<p><strong>19. RIP YOUTUBE VIDEOS</strong></p>
+
+<p><code class="codeblock">
+  $ brew install youtube-dl <br/>
+  $ brew install ffmpeg <br/>
+  $ brew install lame <br/>
+  $ youtube-dl http://youtube-video-url
+</code></p>
+
+<p>There's a dedicated note for this <a href="http://thelogbox.com/rip-youtube-videos-linux-osx/">somewhere on thelogBox.com</a></p>
+
+<hr/>
+
+
+<p><strong>20. ACCELERATE DOWNLOADING</strong></p>
+
+<p><code class="codeblock">
+  $ brew install axel <br/>
+  $ axel -n 5 protocol://resource-uri
+</code></p>
+
+<p><strong>-n 5</strong> means you want to use 5 simulateneous threads of download. Sample usage;</p>
+
+<p><code class="codeblock">
+  $ axel -n 10 http://wordpress.org/latest.zip
+</code></p>
+
+<hr/>
+
+
+<p><strong>20. SQUEAKY CLEAN HARD DRIVE</strong></p>
+
+<p>Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about "how to clean up your Mac", swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get <strong>Clean My Mac</strong> or anything paid that catches your fancy. The Mac Store is a good place to start.</p>
+
+        </div>                
+      </div>
+      <div id="postmeta" class='light'>
+        file: #osx  #cheatsheet  #mac  #rip  #hack
+      </div>
+    </article>
+
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8602905; 
+var sc_invisible=0; 
+var sc_security="77bbc86e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37635397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tedhagos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+    <footer>
+    <div id='footer-inner'>
+  <a href='/copyright.html'>Copyright</a>&nbsp;
+&copy; 2012-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
+</div>
+
+
+  </footer>
+  </body>
+</html>

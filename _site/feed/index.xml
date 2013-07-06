@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-05T00:46:26+08:00</updated>
+ <updated>2013-07-06T23:03:09+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -57,6 +57,648 @@
 &lt;p&gt;This cannot be easily or eleagantly done if the user is on a Desktop machine and accessing the application via a browser. There is no way (yet) to get the MAC address of the machine without resorting to trickeries like ActiveX. The MAC information is not on the TCP packet, it is on the Ether. The Ether information does not make it to the HTTP headers (which is what you have on the server side of the web app)&lt;/p&gt;
 
 &lt;p&gt;And so, the MAC solution might be a better fit for mobile devices. I would suspect that a standard API exists for extracting MAC on IOS or Android.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting into grips with Java 8</title>
+   <link href="http://tedhagos.com /java8-notes"/>
+   <updated>2013-07-02T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java8-notes</id>
+   <content type="html">&lt;p&gt;You can get Java 8 by way of &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/ea-jsp-142245.html&quot;&gt;Oracle Early Access&lt;/a&gt;. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do that! Not to your workhorse and go-to machine. Do it a VM, it is safer and prudent that way.&lt;/p&gt;
+
+&lt;p&gt;On a Debian VM or Debian-ish machines, it can be pulled from the repos&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The Windows installation should be easy to figure out, there is no need to write it here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If you cannot go the VM route&lt;/strong&gt; you can still try out Java 8. There is a downloadable version of Java 8 Development Kit at &lt;a href=&quot;http://java8.jdk.net/download.html&quot;&gt;java8.jdk.net/download&lt;/a&gt;that does not require installation. You may need to figure out how to use side-by-side with your other installation of the JDK though. For my Mac setup, this is what I did&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the installer from &lt;a href=&quot;http://java8.jdk.net/download.html&quot;&gt;java8.jdk.net/download&lt;/a&gt; or &lt;a href=&quot;http://java8.jdk.net/download.html&quot;&gt;java8.jdk.net/lambda&lt;/a&gt;, the second one is larger and has lambda support&lt;/li&gt;
+&lt;li&gt;Extract the contents and tuck it away somewhere&lt;/li&gt;
+&lt;li&gt;Create softlinks to the java8 executables, might be a good idea not to override your usual &lt;strong&gt;java&lt;/strong&gt; and &lt;strong&gt;javac&lt;/strong&gt;. I named mine &lt;strong&gt;java8&lt;/strong&gt; and &lt;strong&gt;javac8&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
+sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Presentation & Slides with Beamer class</title>
+   <link href="http://tedhagos.com /latex-slides"/>
+   <updated>2013-02-13T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /latex-slides</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;1. BASIC STRUCTURE OF A PRESENTATION FILE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The whole presentation is inside &lt;code class=&quot;codeblock&quot;&gt;\begin{document} .. \end{document}&lt;/code&gt; .Each slide is enclosed in &lt;code class=&quot;codeblock&quot;&gt;\begin{frame} \end{frame}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sample document is shown below&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+%
+% sampledoc.latex
+%
+\documentclass{beamer}
+\begin{document}
+
+\begin{frame}
+\frametitle{First}
+\framesubtitle{the subtitle}
+% content
+\end{frame}
+ 
+\begin{frame}
+\frametitle{Second}
+\framesubtitle{another subtitle}
+% content
+\end{frame}
+
+\end{document}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Compile the latex source. &lt;code class=&quot;codeblock&quot;&gt;xelatex &amp;lt;filename.tex&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;2. TITLE PAGES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+\documentclass{beamer}
+ \title[Title of Presentation]{Presentation title}
+ \author{Ted Hagos}
+ \institute[theLogBox]{theLogBox.com \\
+ \medskip {\emph{ted@thelogbox.com}}}
+\date{\today}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{First}
+\framesubtitle{the subtitle}
+% content
+\end{frame}
+ 
+\begin{frame}
+\frametitle{Second}
+\framesubtitle{another subtitle}
+% content
+\end{frame}
+
+\end{document}
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Build the title information before &lt;code class=&quot;codeblock&quot;&gt;\begin{document}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make the first frame as the title page by calling &lt;code class=&quot;codeblock&quot;&gt;\titlepage&lt;/code&gt; on the first frame&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;3. INSERTING SOURCE CODES INTO SLIDES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+\documentclass{beamer}
+\setbeamercovered{transparent}
+\usepackage{pxfonts}
+\usepackage{listings}
+\begin{document}
+ 
+\lstset{language=java,
+        numbers=left,
+        numberstyle=\tiny,
+        showstringspaces=false,
+        frame=leftline,
+        tabs=2,
+        keywordstyle=\color{red}
+        }
+ 
+\begin{frame}[fragile]
+\frametitle{\texttt{Hello.java}}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+  
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Second frame}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+    System.out.println(&quot;Hello Java&quot;);
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\end{document}
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Use the &lt;em&gt;listings&lt;/em&gt; package&lt;/li&gt;
+&lt;li&gt;Use the [fragile] option when defining the frame&lt;/li&gt;
+&lt;li&gt;Enclose the source code inside &lt;em&gt;listings&lt;/em&gt; environment nested inside a &lt;em&gt;semiverbatim&lt;/em&gt; environment&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;4. HOW TO SKIP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;codeblock&quot;&gt;\bigskip&lt;/code&gt; to produce vertical whitespace. You can also use &lt;code class=&quot;codeblock&quot;&gt;\medskip&lt;/code&gt;, it's like &lt;code class=&quot;codeblock&quot;&gt;\bigskip&lt;/code&gt;, only, well, less&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;5. INCLUDING BIBLIOGRAPHIES AND REFERENCES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+\documentclass{beamer}
+\setbeamercovered{transparent}
+\usepackage{pxfonts}
+\usepackage{listings}
+\begin{document}
+\lstset{language=java,
+        numbers=left,
+        numberstyle=\tiny,
+        showstringspaces=false,
+        frame=leftline,
+        tabs=8,
+        keywordstyle=\color{red}
+        }
+ 
+\begin{frame}[fragile]
+\frametitle{\texttt{Hello.java}}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+  
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A basic Java program}
+\framesubtitle{class and method structure}
+\bigskip
+
+The following code is the simplest java program you can 
+code and run. In the tradition of Hello World program of Kernighan 
+and Ritchie, here is the Hello World in Java. 
+
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+    System.out.println(&quot;Hello Java&quot;);
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\begin{enumerate}
+  \item start with a class
+  \item define methods inside a class
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Citations}
+\bigskip
+If you need to cite somebody, like this \cite {cite1} or quote somebody, use 
+the \\cite command, you need to define a bibliography somewhere. Also, you 
+will need to compile twice (use xelatex 2x) to produce the bibtex entries  
+\end{frame}
+
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99}
+ \bibitem[The Java Programming Language, 1995]{cite1} James Gosling (1995)
+ \newblock The Oak Programming Language.
+ \newblock \emph{Sun Micro Papers} 
+\end{thebibliography}
+}
+\end{frame}
+
+\end{document}
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;The bibliography is usually the last frame&lt;/li&gt;
+&lt;li&gt;Remember to run &lt;code class=&quot;codeblock&quot;&gt;xelatex&lt;/code&gt; twice when you use &lt;strong&gt;bibitems&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;HOW TO USE PANDOC WITH THE BEAMER CLASS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can create beamer slides also using &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;&lt;strong&gt;Pandoc&lt;/strong&gt;&lt;/a&gt;. Say that the following text is written on the file &lt;em&gt;sample-markdown.md&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+% A simple, no-nonsense presentation
+% Ted Hagos
+% February 13, 2013 
+
+# Part 1
+
+## Title of frame 1
+- One is
+- followed by 2
+
+## and frame 2
+- then three
+- after three is four
+
+# In the evening
+
+## this is frame 3
+- five, and
+- finally six
+
+# Part 2
+
+## frame 4
+  - you know
+  - the drill
+
+## frame 5
+&lt;/pre&gt;
+
+
+&lt;p&gt;Compile the the markdown file &lt;code class=&quot;codeblock&quot;&gt;pandoc -t beamer sample-markdown.md -o sample-markdown.pdf &lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;REFERENCES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc.html&quot;&gt;John Mcfarlane&lt;/a&gt; - Using pandoc with the beamer class&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tex.ac.uk/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf&quot;&gt;The beamer class&lt;/a&gt; - PDF resources&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>OSX Cheatsheet</title>
+   <link href="http://tedhagos.com /osx-cheatsheet"/>
+   <updated>2013-02-12T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /osx-cheatsheet</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;1. SHOW THE ROUTING TABLE&lt;/strong&gt;. &lt;span class=&quot;codeblock&quot;&gt;route print&lt;/span&gt; won't work, try &lt;code class=&quot;codeblock&quot;&gt;netstat -nr&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;2. HIDE OR SHOW HIDDEN FILES IN FINDER&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are always working on the command line, don't even bother with this, a simple &lt;strong&gt;ls -a&lt;/strong&gt; should do the trick. If however, you really do need to display hidden stuff in Finder, here's how to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ defaults write com.apple.finder AppleShowAllFiles -bool YES &lt;br/&gt;
+  $ defaults write com.apple.finder AppleShowAllFiles -bool NO
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The first one obviously shows hidden files and the other hides it. You need kill the Finder app each time you change this setting.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ killall Finder
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;3. HOW TO SET THE HOSTNAME&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ sudo scutil --set HostName anyname_you_want
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;4. JAVA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type &lt;span class=&quot;codeblock&quot;&gt;java&lt;/span&gt;, it should launch a window asking you if you want to install Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVA 8&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Don't install the EA release from Oracle, not on your workhorse machine. If you just want to play around with JDK8, get it at &lt;a href=&quot;http://java8.jdk.net/download&quot;&gt;java8.jdk.net/download&lt;/a&gt; or &lt;a href=&quot;http://java8.jdk.net/lambda&quot;&gt;java8.jdk.net/lambda&lt;/a&gt;. Untar the downloaded files, then set softlinks to executables.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8 &lt;br/&gt;
+  $ sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;5. CONTROL ANTI-ALIASING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;WHERE:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1: Light anti aliasing&lt;/li&gt;
+&lt;li&gt;2: Medium&lt;/li&gt;
+&lt;li&gt;3: Strong&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;6. GET A BETTER PACKAGE MANAGER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Get BREW first&lt;/a&gt;, follow the instruction on the web site of brew, after that it's all good&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install git &lt;br/&gt;
+  $ brew install wget &lt;br/&gt;
+  $ brew install curl &lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Color the Terminal.app&lt;/strong&gt; for ls&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ vi ~/.bash_profile &lt;br/&gt;
+  $ echo &quot;alias ls=&quot;ls -G&quot;&quot; &gt;&gt; ~./bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;7. MYSQL&lt;/strong&gt; client can't be found after OSX 10.8 upgrade, it did not disappear  but for some reason, the PATH was messed up, it is still on &lt;em&gt;/usr/ocal/mysql/bin&lt;/em&gt;, just add it the SYSTEM PATH&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ vi ~/.bash_profile &lt;br/&gt;
+  $ echo &quot;export PATH=$PATH:/usr/local/mysql/bin:.&quot; &gt;&gt; ~./bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;8. PICTURES TAKEN IN PHOTOBOOTH&lt;/strong&gt; are in &lt;em&gt;~/Pictures/Photo Booth Library/Pictures&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;9. PANDOC&lt;/strong&gt; If you want to write in &lt;strong&gt;Markdown&lt;/strong&gt; then publish in HTML, PDF, Latex etc, you will need &lt;strong&gt;pandoc&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, you need to &lt;a href=&quot;http://www.haskell.org/haskellwiki/Mac_OS_X&quot;&gt;GET Haskell&lt;/a&gt;, you could try Fink or MacPort but the binaries worked best when I was doodling with this. There is a download link on &lt;a href=&quot;http://www.haskell.org/haskellwiki/Mac_OS_X&quot;&gt;HasKell Wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Haskell installer would have installed the &lt;em&gt;cabal&lt;/em&gt; binaries at &lt;em&gt;~/.cabal/bin&lt;/em&gt;, add it to SYSTEM PATH then install pandoc&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ sudo cabal update
+$ sudo cabal install pandoc
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;10. USE A BETTER TERMINAL CLIENT&lt;/strong&gt; Get &lt;a href=&quot;http://www.iterm2.com/&quot;&gt;Iterm2&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;11. PHP PEAR&lt;/strong&gt;. This is no longer included in 10.8, maybe it did not even make it in Leopard, I'm not sure. Just &lt;strong&gt;curl&lt;/strong&gt; it&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ curl http://pear.php.net/go-pear.phar &gt; go-pear.phar &lt;br/&gt;
+$ sudo php -q go-pear.phar
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;PEAR installation will be at &lt;span class=&quot;codeblock&quot;&gt;~/pear/&lt;/span&gt;, bin, etc and all. Next, update your startup script&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ echo &quot;export PATH=$PATH:~/pear/bin:.&quot; &gt;&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;12. PHAR &amp;amp; PHP COMPOSER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a php.ini file first. OSX does have it at /private/etc. Don't copy the ini file somewhere else, it needs to be at &lt;em&gt;/private/etc/&lt;/em&gt;. Make sure that php.ini is actually in that directory&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cd /private/etc &lt;br/&gt;
+$ sudo cp php.ini.default php.ini
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the following to &lt;em&gt;php.ini&lt;/em&gt;, it's okay to add it at the very beginning, it
+didn't give me problems that way&lt;/p&gt;
+
+&lt;pre&gt;
+detect_unicode = Off
+date.timezone = YourCountry/YourCity
+&lt;/pre&gt;
+
+
+&lt;p&gt;After saving the update php.ini,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cd /path/to/your/workarea &lt;br/&gt;
+$ curl -s http://getcomposer.org/installer | php
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;composer.phar should be downloaded to &lt;code class=&quot;codeblock&quot;&gt;/path/to/your/workarea&lt;/code&gt;. Test it. &lt;span class=&quot;codeblock&quot;&gt; $ php composer.phar&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;13. EDITOR&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+$ brew install vim 
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+$ lynx https://gist.github.com/tedhagos/5916935 (say yes to the download)
+$ tar -xzvf gistXXXXXX.tar.gz 
+$ cp gistXXXX/.vimrc ~/.vimrc 
+$ vim +BundleInstall +qall
+&lt;/pre&gt;
+
+
+&lt;p&gt;More details at &lt;a href=&quot;https://github.com/gmarik/vundle&quot;&gt;gmarik/vundle&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;14. GET A BETTER SCREEN MULTIPLEXER&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ brew install tmux
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a bit of a setup. You need to create ~/tmux.conf and create a script (the one that handles the shortcuts). The &lt;a href=&quot;https://gist.github.com/tedhagos/5917003&quot;&gt;tmux.conf and tdev.sh are here&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+
+&lt;p&gt;&lt;strong&gt;15. COPY/PASTE ON THE CLI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cat somefile | pbcopy &lt;br/&gt;
+$ echo pbpaste
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;16. USING A WINDOWS KEYBOARD ON MAC MINI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Remap the keyboard for Mac Oriented use. Get the &lt;a href=&quot;http://doublecommand.sourceforge.net/&quot;&gt;Double Command Kernel Extension&lt;/a&gt;. Original instructions from &lt;a href=&quot;http://www.macworld.com/article/42446/2005/01/doublecommand.html&quot;&gt;MacWorld is found here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: F12 on the Win Keyboard is the eject button&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;17. RIP AUDIO CDS (FLAC)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I don't want to hear any &quot;But you can use iTunes to rip CDs&quot;. I know that. iTunes is very opinionated on how it wants to rip CDs and where to put them. I don't agree with it. Hence, the hacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install cdparanoia &lt;br/&gt;
+  $ brew install abcde &lt;br/&gt;
+  $ touch ~/.abcde.conf
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  CDROM=/dev/disk1
+  OUTPUTTYPE=flac
+  INTERACTIVE=n
+  PADTRACKS=y
+  OUTPUTDIR=~/Music/abcde
+  OUTPUTFORMAT='${ARTISTFILE}/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  VAOUTPUTFORMAT='Various/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  mungefilename ()
+  {
+    echo &quot;$@&quot; | sed s,:, -,g | tr /* _+ | tr -d '&quot;?[:cntrl:]
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;dev/disk1 is where my CD is mounted, find out where yours is mounted. A simple &lt;code class=&quot;codeblock&quot;&gt;df&lt;/code&gt; command should give you some clue where the CD drive is mounted. After that, ripping can start.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ diskutil unmount /dev/disk1 &lt;br/&gt;
+  $ abcde &lt;br/&gt;
+  $ diskutil eject /dev/disk1&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The unmounting is necessary because abcde works with raw block devices and cannot function when the CD is mounted.&lt;/p&gt;
+
+&lt;p&gt;I shamlessly ripped most of this guide from &lt;a href=&quot;http://hints.macworld.com/article.php?story=2005101620055677&quot;&gt;MacWorld contributed by extempore&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;17.1 RIP AUDIO CDS (MP3)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Get &lt;a href=&quot;http://sbooth.org/Max/&quot;&gt;MAX from SBooth&lt;/a&gt;. Work on the archive files and put in &lt;code class=&quot;codeblock&quot;&gt;/Applications&lt;/code&gt; folder or where you want. It's a GUI tool, so it's easy to work with.&lt;/p&gt;
+
+&lt;p&gt;MAX uses musicbrainz.org for the CD metadata, the service is not good enough. GraceNotes, which is used by iTunes is more capable. The problem is, I couldn't find a direct way to connect MAX to GraceNotes. You need a bit of AppleScripting, this solution was the from the SBooth forums as well, the &lt;a href=&quot;http://forums.sbooth.org/viewtopic.php?f=4&amp;amp;t=1930&quot;&gt;link to the original discussion is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a Script in AppleScript, Save it anywhere you can find it easily. The script can be found on the link above (the sbooth forum), but I saved it in gist.github.com, here's the link https://gist.github.com/tedhagos/5845190&lt;/li&gt;
+&lt;li&gt;When you insert the CD, iTunes will launch as well (you need this)&lt;/li&gt;
+&lt;li&gt;Run the script you created. That will get the meta data of iTunes&lt;/li&gt;
+&lt;li&gt;Rip Away&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;This solution needs both iTunes and MAX running at the same time. When iTunes grabs the metadata from Gracenotes, the script grabs the metadata from iTunes&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;18. RIP DVDs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Just get &lt;a href=&quot;http://handbrake.fr/downloads.php&quot;&gt;Handbrake here&lt;/a&gt; you can figure out the rest&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;19. RIP YOUTUBE VIDEOS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install youtube-dl &lt;br/&gt;
+  $ brew install ffmpeg &lt;br/&gt;
+  $ brew install lame &lt;br/&gt;
+  $ youtube-dl http://youtube-video-url
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There's a dedicated note for this &lt;a href=&quot;http://thelogbox.com/rip-youtube-videos-linux-osx/&quot;&gt;somewhere on thelogBox.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;20. ACCELERATE DOWNLOADING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install axel &lt;br/&gt;
+  $ axel -n 5 protocol://resource-uri
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-n 5&lt;/strong&gt; means you want to use 5 simulateneous threads of download. Sample usage;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ axel -n 10 http://wordpress.org/latest.zip
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;20. SQUEAKY CLEAN HARD DRIVE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about &quot;how to clean up your Mac&quot;, swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get &lt;strong&gt;Clean My Mac&lt;/strong&gt; or anything paid that catches your fancy. The Mac Store is a good place to start.&lt;/p&gt;
 </content>
  </entry>
  
@@ -269,6 +911,64 @@ get filled with &lt;em&gt;little things&lt;/em&gt; &amp;mdash; remember what Ste
    <content type="html">&lt;p&gt;Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.&lt;/p&gt;
 
 &lt;p&gt;This is why you need to always catch your self when you are in an agitated state. Going from thought to speech in 10 seconds is a dangerous thing. Absorb, relax, collect your thoughts, ask the 5 whys, then formulate a response&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Python Env</title>
+   <link href="http://tedhagos.com /python-virtual-env"/>
+   <updated>2012-11-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /python-virtual-env</id>
+   <content type="html">&lt;p&gt;Get your Python development setup right, from the get-go. Last thing you need is a broken development environment because of a broken site (wide) Python package you just installed. A virtual environment keeps packages separate, not touching each other (which is a good thing). If a broken python package trips you up, you can avoid the hassle of wiping out your entire Python dev setup just to start with fresh plate.&lt;/p&gt;
+
+&lt;p&gt;You already know how to get Python in your system, don’t you? Okay, next, get the [python-setuptools],  easy_install is part of that. On a terminal window, do the following;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;sudo easy_install pip&lt;/li&gt;
+&lt;li&gt;sudo pip install virtualenv&lt;/li&gt;
+&lt;li&gt;sudo pip install virtualenvwrapper&lt;/li&gt;
+&lt;li&gt;create a folder somewhere your home directory or where ever you have write permissions. For my setup, I will use &lt;em&gt;~/pythonenvs&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;edit &lt;em&gt;~/.bashrc or  ~/.bash_profile&lt;/em&gt; (for linux and osx, respectively), type the entries below&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;pre&gt;
+WORKON_HOME=~/pythonenvs
+source /usr/local/virtualenvwrapper.sh
+&lt;/pre&gt;
+
+
+&lt;p&gt;You will need to restart the terminal window (actually, the shell) to let the changes take effect&lt;/p&gt;
+
+&lt;h2&gt;sample usage&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;mkvirtualenv gae&lt;/li&gt;
+&lt;li&gt;mkvirtualenv standard&lt;/li&gt;
+&lt;li&gt;workon gae&lt;/li&gt;
+&lt;li&gt;workon standard&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;working on a specific project&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;mkdir ~/workarea/notes-gae (if you are working on a Python Google App Engine project, for example)&lt;/li&gt;
+&lt;li&gt;cd to it&lt;/li&gt;
+&lt;li&gt;mkvirtualenv notes-gae&lt;/li&gt;
+&lt;li&gt;work on notes-gae, install some new eggs, site packages&lt;/li&gt;
+&lt;li&gt;write the software to install inside requirements.txt, Ian Bicking wrote something about this&lt;/li&gt;
+&lt;li&gt;then pip -r requirements.txt&lt;/li&gt;
+&lt;li&gt;you can use yolk -l to see what packages are installed in the env&lt;/li&gt;
+&lt;li&gt;then use pip freeze &gt; stable-requirements.txtto freeze the software versions&lt;/li&gt;
+&lt;li&gt;Use deactivate command to get out of virtual environments&lt;/li&gt;
+&lt;li&gt;version the project, git init (gotta use git for source control)&lt;/li&gt;
+&lt;li&gt;add some files to the project, then git add .&lt;/li&gt;
+&lt;li&gt;do some commits, git commit -m “comments”&lt;/li&gt;
+&lt;li&gt;and push the commits to a remote repo, git push -u origin master&lt;/li&gt;
+&lt;li&gt;When you pick the project up another day, remember to git pull, before doing anything else&lt;/li&gt;
+&lt;/ol&gt;
+
 </content>
  </entry>
  

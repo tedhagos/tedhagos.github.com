@@ -24,10 +24,10 @@
 
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
-<meta name="description" content="What will you do if the scope of a software project  cannot be pinned down and yet the deadline won't move"/>
+<meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>Of fixed Deadlines and Moving Scopes &mdash; Ted Hagos</title>
+<title>Presentation & Slides with Beamer class &mdash; Ted Hagos</title>
 
     <style>
 
@@ -320,35 +320,296 @@ pre {
     </div>
     
     <header>
-      <div id="articletitle">Of fixed Deadlines and Moving Scopes
+      <div id="articletitle">Presentation & Slides with Beamer class
       </div>
     </header>
     <div class='content-meta'>
-       Wednesday , January 30 , 2013
+       Wednesday , February 13 , 2013
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
-        <p>A common tale on software projects &mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving.</p>
+        <p><strong>1. BASIC STRUCTURE OF A PRESENTATION FILE</strong></p>
 
-<p>In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &mdash; in a perfect world.</p>
+<p>The whole presentation is inside <code class="codeblock">\begin{document} .. \end{document}</code> .Each slide is enclosed in <code class="codeblock">\begin{frame} \end{frame}</code>.</p>
 
-<p>It isn't perfect. It isn't smooth. It isn't always peaceful. It isn't always cool. There are lots of people involved, lots of people have stakes, not everybody is aware of what's going on, and not everybody is on time. While Agile methods have taught a lot of people not to do things serially and and not to put things in the critical path, the software development phase is not the be-all and end-all of projects. There are other people involved in the value chain of projects, and some (a lot, actually) are way up on this chain &mdash; these are people waiting to pay for the software (more often than not, they have already paid for the software), people who promised some other people a delivery date for the software, people who manage some people who promise some other people a delivery date for the software, so on and so forth. Like it or not, they can exert a lot of influence on when that software should be out of your door.</p>
+<p>Sample document is shown below</p>
 
-<p>If you have been doing this long enough, you have an overdeveloped thick skin for the vicissitudes of the SDLC (Software Development Life Cycle). If you are new at this, prepare for temper swings (yours and other people), but keep your cool. Flaring up, yelling matches and snide emails are not useful &mdash; contemplation is.</p>
+<pre class="codeblock">
+%
+% sampledoc.latex
+%
+\documentclass{beamer}
+\begin{document}
 
-<p>There are 3 things you need to be acutely aware of in a project. First, how much work is there (features), how many people do you have to work on them (resource) and how much time do you have (deadline) &mdash; that's the basics. If one of these three things move, you need to start taking notes of how it will impact the other two &mdash; and there is always impact.</p>
+\begin{frame}
+\frametitle{First}
+\framesubtitle{the subtitle}
+% content
+\end{frame}
+ 
+\begin{frame}
+\frametitle{Second}
+\framesubtitle{another subtitle}
+% content
+\end{frame}
 
-<p>If the scope of the project keeps moving, either the deadline or the resources will stretch. Stretching the resources can mean either extending their hours (beyond 8) or adding warm bodies to the project. Neither has desirable effects. When you stretch people's working hours, their focus is thinly spread, the brain needs a healthy dose of sleep. People who are tired makes more mistakes. You might be able to ship that software after all, but it might not behave like you expect it to. Adding warm bodies is  a pipe dream also, at least on short projects &mdash; the ones you measure in months, not in multi-years. You are throwing new comers to the deep-end, they will need to familiarise and absorb what your other guys have been working on in the past couple of months. They will ask questions and clarify things &mdash; you will spend time with them; and its time you don't have. Familiarise your self with the law of diminishing returns.</p>
+\end{document}
+</pre>
 
-<p>So, the only thing left to manage is the deadline &mdash; and this is a very sensitive area to a lot of people, this is the one that causes tempers to flare. When tempers flare, just check your own, there is nothing you can do with other people's temper and demeanour. A discussion on moving the deadline will always be a difficult one; accept it, prepare for it, discuss it calmly and intelligently. Don't get sucked into the blame-storming frenzy that ensues. Focus on problem solving.</p>
 
-<p>The tricky part about running out of time is that it's not always easy to tell when you are. Projects are never late one week or one month. Projects are late one day at a time, it won't seem so bad on the first day you find out you are behind. It might not seem so bad even during the second day &mdash; and there is the rub. How do you tell when it's bad enough? How can you be certain that 4 more hours of delay will negatively impact your team's ability to deliver the software, as agreed and as expected? Where is the point when recovery and salvage are no longer possibilities? Sadly, it's an acquired skill, every project is different &mdash; some or all of the people in your team might be different, a different client, slightly different set of features, different version of libraries you are using  etc. &mdash; You just need to do it long enough and plenty enough to get better at it.</p>
+<p>Compile the latex source. <code class="codeblock">xelatex &lt;filename.tex></code></p>
+
+<hr/>
+
+
+<p><strong>2. TITLE PAGES</strong></p>
+
+<pre class="codeblock">
+\documentclass{beamer}
+ \title[Title of Presentation]{Presentation title}
+ \author{Ted Hagos}
+ \institute[theLogBox]{theLogBox.com \\
+ \medskip {\emph{ted@thelogbox.com}}}
+\date{\today}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{First}
+\framesubtitle{the subtitle}
+% content
+\end{frame}
+ 
+\begin{frame}
+\frametitle{Second}
+\framesubtitle{another subtitle}
+% content
+\end{frame}
+
+\end{document}
+</pre>
+
+
+<ol>
+<li>Build the title information before <code class="codeblock">\begin{document}</code></li>
+<li>Make the first frame as the title page by calling <code class="codeblock">\titlepage</code> on the first frame</li>
+</ol>
+
+
+<hr/>
+
+
+<p><strong>3. INSERTING SOURCE CODES INTO SLIDES</strong></p>
+
+<pre class="codeblock">
+\documentclass{beamer}
+\setbeamercovered{transparent}
+\usepackage{pxfonts}
+\usepackage{listings}
+\begin{document}
+ 
+\lstset{language=java,
+        numbers=left,
+        numberstyle=\tiny,
+        showstringspaces=false,
+        frame=leftline,
+        tabs=2,
+        keywordstyle=\color{red}
+        }
+ 
+\begin{frame}[fragile]
+\frametitle{\texttt{Hello.java}}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+  
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Second frame}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+    System.out.println("Hello Java");
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\end{document}
+</pre>
+
+
+<ol>
+<li>Use the <em>listings</em> package</li>
+<li>Use the [fragile] option when defining the frame</li>
+<li>Enclose the source code inside <em>listings</em> environment nested inside a <em>semiverbatim</em> environment</li>
+</ol>
+
+
+<hr/>
+
+
+<p><strong>4. HOW TO SKIP</strong></p>
+
+<p>Use <code class="codeblock">\bigskip</code> to produce vertical whitespace. You can also use <code class="codeblock">\medskip</code>, it's like <code class="codeblock">\bigskip</code>, only, well, less</p>
+
+<hr/>
+
+
+<p><strong>5. INCLUDING BIBLIOGRAPHIES AND REFERENCES</strong></p>
+
+<pre class="codeblock">
+\documentclass{beamer}
+\setbeamercovered{transparent}
+\usepackage{pxfonts}
+\usepackage{listings}
+\begin{document}
+\lstset{language=java,
+        numbers=left,
+        numberstyle=\tiny,
+        showstringspaces=false,
+        frame=leftline,
+        tabs=8,
+        keywordstyle=\color{red}
+        }
+ 
+\begin{frame}[fragile]
+\frametitle{\texttt{Hello.java}}
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+  
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A basic Java program}
+\framesubtitle{class and method structure}
+\bigskip
+
+The following code is the simplest java program you can 
+code and run. In the tradition of Hello World program of Kernighan 
+and Ritchie, here is the Hello World in Java. 
+
+\begin{semiverbatim}
+  
+\begin{lstlisting}
+class Hello {
+  public static void main(String args[]) {
+    System.out.println("Hello Java");
+  }
+}
+\end{lstlisting}
+\end{semiverbatim}
+\begin{enumerate}
+  \item start with a class
+  \item define methods inside a class
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Citations}
+\bigskip
+If you need to cite somebody, like this \cite {cite1} or quote somebody, use 
+the \\cite command, you need to define a bibliography somewhere. Also, you 
+will need to compile twice (use xelatex 2x) to produce the bibtex entries  
+\end{frame}
+
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99}
+ \bibitem[The Java Programming Language, 1995]{cite1} James Gosling (1995)
+ \newblock The Oak Programming Language.
+ \newblock \emph{Sun Micro Papers} 
+\end{thebibliography}
+}
+\end{frame}
+
+\end{document}
+</pre>
+
+
+<ol>
+<li>The bibliography is usually the last frame</li>
+<li>Remember to run <code class="codeblock">xelatex</code> twice when you use <strong>bibitems</strong></li>
+</ol>
+
+
+<hr/>
+
+
+<p><strong>HOW TO USE PANDOC WITH THE BEAMER CLASS</strong></p>
+
+<p>You can create beamer slides also using <a href="http://daringfireball.net/projects/markdown/"><strong>Markdown</strong></a> and <a href="http://johnmacfarlane.net/pandoc/"><strong>Pandoc</strong></a>. Say that the following text is written on the file <em>sample-markdown.md</em></p>
+
+<pre class="codeblock">
+% A simple, no-nonsense presentation
+% Ted Hagos
+% February 13, 2013 
+
+# Part 1
+
+## Title of frame 1
+- One is
+- followed by 2
+
+## and frame 2
+- then three
+- after three is four
+
+# In the evening
+
+## this is frame 3
+- five, and
+- finally six
+
+# Part 2
+
+## frame 4
+  - you know
+  - the drill
+
+## frame 5
+</pre>
+
+
+<p>Compile the the markdown file <code class="codeblock">pandoc -t beamer sample-markdown.md -o sample-markdown.pdf </code></p>
+
+<hr/>
+
+
+<p><strong>REFERENCES</strong></p>
+
+<ol>
+<li><a href="http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc.html">John Mcfarlane</a> - Using pandoc with the beamer class</li>
+<li><a href="http://www.tex.ac.uk/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf">The beamer class</a> - PDF resources</li>
+</ol>
+
 
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        file: #project_management  #thoughts
+        file: #latex  #slides  #beamer
       </div>
     </article>
 

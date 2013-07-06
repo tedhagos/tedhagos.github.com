@@ -9,6 +9,24 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/java8-notes</loc>
+    <lastmod>2013-07-02T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/latex-slides</loc>
+    <lastmod>2013-02-13T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx-cheatsheet</loc>
+    <lastmod>2013-02-12T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/api-projects</loc>
     <lastmod>2013-01-31T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -83,6 +101,12 @@
   <url>
     <loc>http://tedhagos.com/challenges-first-glance</loc>
     <lastmod>2012-12-23T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/python-virtual-env</loc>
+    <lastmod>2012-11-23T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
