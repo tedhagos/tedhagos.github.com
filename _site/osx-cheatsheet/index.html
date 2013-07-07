@@ -128,8 +128,11 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {font-size: 170%; letter-spacing: -1px;}
-h2 {font-size: 130%; margin-bottom:0;}
-
+  h1.chapter {
+    font-family: 'Tauri';
+  }
+h2 {font-size: 150%; margin-bottom:0;}
+h3 {font-size: 130%; margin-bottom:0; color: #000000; }
 body {
 	width:90%;
 	margin: 0 auto;
@@ -180,14 +183,16 @@ img {
 
 hr {
 	border:0;
-  /*
-	color: #E8E8B5;
-	background: #E8E8B5;
-  */
 	color: #d8c7cc;
 	background: #d8c7cc;
 	height: 5px;
 }
+  hr.chapterbreak {
+    color: #2d2d2d;
+    background: #2d2d2d;
+    height: 10px;
+    margin-top: 40px;
+  }
 
 a:link, a:visited { color: #B10000; }
   a:visited { color: #414141;}
@@ -206,10 +211,10 @@ a:link, a:visited { color: #B10000; }
 }
 
 #articlelist {
-  width:700px;
+  width:800px;
   position: relative;
   left: 50%;
-  margin-left: -350px;   
+  margin-left: -400px;   
 }
 
 #postentry {
@@ -240,7 +245,7 @@ a:link, a:visited { color: #B10000; }
   position:relative;
   top: -8px;
   float:right;
-  width:550px;
+  width:675px;
 }
   #postcontent h2 a:link, #postcontent h2 a:visited {
     font-family: 'Tauri';
@@ -295,12 +300,45 @@ pre {
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-left:10px;
-
 }
 
+table {
+  border: 1px solid #DEDEDE;
+  padding: 10px;
+  border-spacing:0;
+  border-collapse:collapse;
+  width: 100%; 
+  color: #7c7c7c;
+  font-size: 14px; 
+  margin-bottom: 40px;
+}
+  table th, table td {font-family: 'Muli'; font-size: 14px;}
+  table th {
+    width: 100%;
+    text-align: left;
+  }
+  table td {
+    color: #7c7c7c;
+    border-bottom: 1px dashed #f1f1f1;
+    font-size: 90%;
+    overflow:hidden;
+    table-layout:fixed;
+    min-width:20px;
+    word-wrap:break-word;
+  }
 
-
-
+aside {
+  
+  display: block;
+  float: right;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  background: #F1F1F1;
+  color: #000000;
+}
+  
 </style>
 
     <!--
@@ -325,7 +363,7 @@ pre {
       </div>
     </header>
     <div class='content-meta'>
-       Tuesday , February 12 , 2013
+       Tuesday , February 12 , 2008
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
@@ -702,7 +740,7 @@ alt="website statistics"></a></div></noscript>
     <footer>
     <div id='footer-inner'>
   <a href='/copyright.html'>Copyright</a>&nbsp;
-&copy; 2012-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
+&copy; 2004-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
 </div>
 
 

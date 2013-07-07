@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-06T23:07:54+08:00</updated>
+ <updated>2013-07-07T23:16:02+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -380,9 +380,279 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
  </entry>
  
  <entry>
+   <title>Working on API Projects</title>
+   <link href="http://tedhagos.com /api-projects"/>
+   <updated>2013-01-31T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /api-projects</id>
+   <content type="html">&lt;p&gt;You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that &lt;strong&gt;there is always a first time for everything&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;API projects are not exactly the same as a web app, or mobile app or a desktop app. They should not be estimated as such. You will spend more effort on development and unit testing on API projects.&lt;/p&gt;
+
+&lt;p&gt;Once you have built the API, you will spend time testing it. The way to test it is to build an application that will use the API. &amp;mdash; shouldn't you actually build a unit test also for that app that will use your API? If you won't, how will you get an insight on how the APIs will be used by others. You need to get into the heads of your users if the API is to be robust.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Of fixed Deadlines and Moving Scopes</title>
+   <link href="http://tedhagos.com /fixed-deadlines-moving-scope"/>
+   <updated>2013-01-30T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /fixed-deadlines-moving-scope</id>
+   <content type="html">&lt;p&gt;A common tale on software projects &amp;mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving.&lt;/p&gt;
+
+&lt;p&gt;In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &amp;mdash; in a perfect world.&lt;/p&gt;
+
+&lt;p&gt;It isn't perfect. It isn't smooth. It isn't always peaceful. It isn't always cool. There are lots of people involved, lots of people have stakes, not everybody is aware of what's going on, and not everybody is on time. While Agile methods have taught a lot of people not to do things serially and and not to put things in the critical path, the software development phase is not the be-all and end-all of projects. There are other people involved in the value chain of projects, and some (a lot, actually) are way up on this chain &amp;mdash; these are people waiting to pay for the software (more often than not, they have already paid for the software), people who promised some other people a delivery date for the software, people who manage some people who promise some other people a delivery date for the software, so on and so forth. Like it or not, they can exert a lot of influence on when that software should be out of your door.&lt;/p&gt;
+
+&lt;p&gt;If you have been doing this long enough, you have an overdeveloped thick skin for the vicissitudes of the SDLC (Software Development Life Cycle). If you are new at this, prepare for temper swings (yours and other people), but keep your cool. Flaring up, yelling matches and snide emails are not useful &amp;mdash; contemplation is.&lt;/p&gt;
+
+&lt;p&gt;There are 3 things you need to be acutely aware of in a project. First, how much work is there (features), how many people do you have to work on them (resource) and how much time do you have (deadline) &amp;mdash; that's the basics. If one of these three things move, you need to start taking notes of how it will impact the other two &amp;mdash; and there is always impact.&lt;/p&gt;
+
+&lt;p&gt;If the scope of the project keeps moving, either the deadline or the resources will stretch. Stretching the resources can mean either extending their hours (beyond 8) or adding warm bodies to the project. Neither has desirable effects. When you stretch people's working hours, their focus is thinly spread, the brain needs a healthy dose of sleep. People who are tired makes more mistakes. You might be able to ship that software after all, but it might not behave like you expect it to. Adding warm bodies is  a pipe dream also, at least on short projects &amp;mdash; the ones you measure in months, not in multi-years. You are throwing new comers to the deep-end, they will need to familiarise and absorb what your other guys have been working on in the past couple of months. They will ask questions and clarify things &amp;mdash; you will spend time with them; and its time you don't have. Familiarise your self with the law of diminishing returns.&lt;/p&gt;
+
+&lt;p&gt;So, the only thing left to manage is the deadline &amp;mdash; and this is a very sensitive area to a lot of people, this is the one that causes tempers to flare. When tempers flare, just check your own, there is nothing you can do with other people's temper and demeanour. A discussion on moving the deadline will always be a difficult one; accept it, prepare for it, discuss it calmly and intelligently. Don't get sucked into the blame-storming frenzy that ensues. Focus on problem solving.&lt;/p&gt;
+
+&lt;p&gt;The tricky part about running out of time is that it's not always easy to tell when you are. Projects are never late one week or one month. Projects are late one day at a time, it won't seem so bad on the first day you find out you are behind. It might not seem so bad even during the second day &amp;mdash; and there is the rub. How do you tell when it's bad enough? How can you be certain that 4 more hours of delay will negatively impact your team's ability to deliver the software, as agreed and as expected? Where is the point when recovery and salvage are no longer possibilities? Sadly, it's an acquired skill, every project is different &amp;mdash; some or all of the people in your team might be different, a different client, slightly different set of features, different version of libraries you are using  etc. &amp;mdash; You just need to do it long enough and plenty enough to get better at it.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>480 minutes of focus</title>
+   <link href="http://tedhagos.com /480-minutes-of-focus"/>
+   <updated>2013-01-15T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /480-minutes-of-focus</id>
+   <content type="html">&lt;p&gt;That's 8 hours. It's a stretch to increase it, no matter how badly you want to.&lt;/p&gt;
+
+&lt;p&gt;Every morning you've got 24 potential-filled hours, sounds like a lot, but after;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;waiting on elevators (.25 hours, cumulatively)&lt;/li&gt;
+&lt;li&gt;getting to work (1 hour)&lt;/li&gt;
+&lt;li&gt;(actually) working (8 hours)&lt;/li&gt;
+&lt;li&gt;light social activity, water cooler talk (.25 hours)&lt;/li&gt;
+&lt;li&gt;lunch (1 hour)&lt;/li&gt;
+&lt;li&gt;getting home (1 hour)&lt;/li&gt;
+&lt;li&gt;dinner (1 hour)&lt;/li&gt;
+&lt;li&gt;hygiene and other physical necessities (1.5 hours)&lt;/li&gt;
+&lt;li&gt;get appraised on current events (1 hour)&lt;/li&gt;
+&lt;li&gt;sleep (8 hours)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;the day is finished.&lt;/p&gt;
+
+&lt;p&gt;A non-trivial subject could require 120 minutes of blocked time, these are the kinds of task that (hopefully) will have big pay offs. Hopefully again, you could get at least 2 of these big chunks each day &amp;mdash; but that is constantly threatened by telephone rings, people walking into your workspace, noisy cubicle neighbors and many others. So, do you really need to get interrupted by Twitter, Facebook and that annoying sound your email app makes when something arrives.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The Brain's Playbook</title>
+   <link href="http://tedhagos.com /default-behavior"/>
+   <updated>2013-01-08T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /default-behavior</id>
+   <content type="html">&lt;p&gt;I know what I have to do, I've written (and rewritten) them down in the notebook, in the goal papers; yet I don't want to do them. There's a tug-of-war happening inside and the lazy guys seems to be winning.&lt;/p&gt;
+
+&lt;p&gt;My primitive brain is taking over, it's telling me to do nothing, conserve energy (that means sleep) and eat (fast and plenty)&amp;mdash;I know that if I take my eyes off the focus for the day, the lazy guy is gonna win. I have to shake this monkey off my back, I've got lots of things to do today&amp;mdash;maybe a 15 minute cardio should perk me up again; or coffee, that can do the trick too; just don't put sugar in it because the lazy guy loves sugar.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The First Two Hours</title>
+   <link href="http://tedhagos.com /two-hours"/>
+   <updated>2013-01-07T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /two-hours</id>
+   <content type="html">&lt;p&gt;Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't check messages on your phone lest your mind will wander around, will fleet from thought to thought and
+get filled with &lt;em&gt;little things&lt;/em&gt; &amp;mdash; remember what Stephen Covey said on &lt;em&gt;First things First&lt;/em&gt;, rocks first, then stones, then pebbles then sand. Look at the rocks first, attend to the rocks first. Stay disconnected for the first two hours. Use the time to;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Look at your todo list for the week&lt;/li&gt;
+&lt;li&gt;Look at your todo list yesterday, if some items fell in the crack, add them to the list for the day. Can't steal time&lt;/li&gt;
+&lt;li&gt;Write (rewrite) the todo list for the day. See which ones in the list can be done in 2 hours, but can potentially contribute the most to results of the day (80/20). Be brutal about the selection. Those task that will not make the cut are probably less important anyway&amp;mdash;either delay them, queue them, delete them altogether.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;The first two hours is important, it sets the tone of the day. If you don't set the tone, the hours will pass by and you will wander aimlessly; sure you will respond to emails, answer your phone, engage in conversations&amp;mdash;but those are probably the 80% of your activity that gives rise to only 20% of your results (maybe even a lot less than 20%)&amp;mdash;do the important stuff first; the important ones for you, that is.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>It's (not) Just a Task List</title>
+   <link href="http://tedhagos.com /the-task-list"/>
+   <updated>2012-12-28T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /the-task-list</id>
+   <content type="html">&lt;p&gt;As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more often than not, a task does have an artefact, even if it is just a single page containing your notes, and how you clarified your thoughts on it.&lt;/p&gt;
+
+&lt;p&gt;It is important to ask what is the victory condition for the task, when do you stop working on it. If the victory condition is unclear, then maybe the task is bigger than what you originally thought it was—tactical or long term goal, perhaps.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Long Fuse</title>
+   <link href="http://tedhagos.com /long-fuse"/>
+   <updated>2012-12-27T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /long-fuse</id>
+   <content type="html">&lt;ol&gt;
+&lt;li&gt;a device in a bomb that controls the timing of an explosion&lt;/li&gt;
+&lt;li&gt;a book by Dr. Eric Haseltine (Long Fuse, Big Bang …)&lt;/li&gt;
+&lt;li&gt;long term goals. not the same as task list items, but each item on the task list should keep the spark going. It's the big picture, the balls you don't drop. It's your marshmallow test. They will not be immediately satisfied. It's not the &lt;em&gt;here and now&lt;/em&gt;, so you need to be very patient and very cool about it&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h1&gt;On clients and projects&lt;/h1&gt;
+
+&lt;p&gt;Getting jobs at freelancer, elance odesk or something similar is short fuse. A quick buck. Writing a 500 word article for a measley sum is also short fuse. On the other hand, working on specific expertise, building authoritative credentials on specific subjects, building a brand is long fuse. Working on long fuse projects is disheartening, especially if you are the type that needs constant revalidation and assurances of your efforts. It is easy to dismiss long fuses as risky and fruitless exercise&lt;/p&gt;
+
+&lt;p&gt;Worthwhile results have very long gestation periods. It is hard to believe the claims of success stories that an idea came to them while showering. It is more believable that those ideas came to them a long time ago. Marinading at the back of their minds for months, years, maybe decades &amp;mdash; then maybe, just maybe, the last piece of the puzzle came to them one day while they were showering. That I can believe.&lt;/p&gt;
+
+&lt;p&gt;Back on the subject of client acquisition vs. project acquisition, having a litany of projects on the portfolio might seem the way to go for a startup effort. I will probably submit that it is one way to bootrap a brand. Having a thousand entries of short projects on the portfolio after 5 years does raise some flags. It gives the impression that the projects you have worked on are low-hanging fruits, can be done in lickety-split and lacks depth. Depth &amp;mdash; 10 miles wide, 2 inch deep, as the saying goes.&lt;/p&gt;
+
+&lt;h1&gt;On building a technical career&lt;/h1&gt;
+
+&lt;p&gt;Some CVs are 10+ page long and peppered with a dizzying litany of projects &amp;mdash; I have personally seen examples of these CVs &amp;mdash; no, they are not senior developes. I have seen people who had 4 years of experience and have listed more than 50 projects on the CV, spanning 5 or more companies. The details of reasons for the short stints are only mildly interesting. Not worth the discussion. The pattern which explains the short length of stay coupled with the incredible array of projects is more interesting.&lt;/p&gt;
+
+&lt;p&gt;To some, working on a ground up project is a badge of honor. It is. The same cannot be said for working on a startup project then leaving for another project or another company as soon as the project goes on post-production phase. Post-production or support work is ripe with learning opportunities. It is harder and more difficult than the development phase. Time allocation for tasks  are compressed. You don't have a two-week sprint to solve a problem, you have days if not hours. If you made good decisions upstream, then the project has a fighting chance of surviving real-world test. If you did not make excellent decisions, you are in for a bag of hurt. It will be the good kind of hurt. You have to get past bruised egos to appreciate the lessons, but you need to stay with the project past the go-live date to see the lessons.&lt;/p&gt;
+
+&lt;p&gt;Wham-bam short projects may get you a thick CV. It may get you some referrals, to the next short gig. It is one way of building a career. It is however, short-fuse. Would you really hire a tech lead or an architect because he has done a gazillion projects? No. If he (ever) gets hired, it is not because of the number of projects in his belt, but because of how deep he has dived into those projects.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Low Grade Stress</title>
+   <link href="http://tedhagos.com /holiday-blues-low-grade-stress"/>
+   <updated>2012-12-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /holiday-blues-low-grade-stress</id>
+   <content type="html">&lt;p&gt;The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails&amp;mdash;holiday breaks can do that to you.&lt;/p&gt;
+
+&lt;p&gt;After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence&amp;mdash;and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again.&lt;/p&gt;
+
+&lt;p&gt;That sinking feeling is a stressor, it’s low intensity but it lingers. It’s a lot like the flickering light on your work area or the slow march of traffic you go through everyday. Adrenaline is not going to solve it. You cannot simply explode into action, beat it to a pulp or run away from it.&lt;/p&gt;
+
+&lt;p&gt;Luckily, you already wrote down your list of long fuses — you have written them down, haven’t you? — and you keep a journal pretty regularly&amp;mdash;you do keep a journal, don’t you?&amp;mdash;A list of long fuses keeps your eyes on the far horizon and your journal records some minutiae of the tactical challenges you were trying to solve before you drifted into the path of aimless-ness. Get back on those, let your mind get on the groove of your task list. You can’t swallow an elephant, you got to slice it up in bite-sized pieces.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Lazy bones, Lazy mind</title>
+   <link href="http://tedhagos.com /whats-keeping-you"/>
+   <updated>2012-12-24T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /whats-keeping-you</id>
+   <content type="html">&lt;p&gt;What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.&lt;/p&gt;
+
+&lt;p&gt;What conditions are you waiting for. A perfect sunny day wasn’t part of your assumptions, you were gonna do these things regardless — it’s just lethargy isn’t it? or you don’t think you deserve it. You think it’s not  ”you”,  not within your elements — or its’ too deep for you.&lt;/p&gt;
+
+&lt;p&gt;You need to practice more writing. Articulate exactly what are the things that need to happen first, before the big things on your list start happening.&lt;/p&gt;
+
+&lt;p&gt;Big things on your list mostly falls under the category of multi-step problem. You can’t skip the intervening solutions and jump right to the last problem — maybe that is what’s keeping you, because you think you can&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>To the front or to the side?</title>
+   <link href="http://tedhagos.com /move-forward-or-sideways"/>
+   <updated>2012-12-24T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /move-forward-or-sideways</id>
+   <content type="html">&lt;p&gt;For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are stomped, the logical approach maybe of limited use. Another way to proceed could be to think sideways, the process of generation. The goal is not to eliminate options, rather to generate them.&lt;/p&gt;
+
+&lt;p&gt;The rub is to know when to move forward and when to move sideways. This is probably why the thinking process is an art form.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Snowballing thoughts</title>
+   <link href="http://tedhagos.com /thought-snowball"/>
+   <updated>2012-12-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /thought-snowball</id>
+   <content type="html">&lt;p&gt;Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.&lt;/p&gt;
+
+&lt;p&gt;Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short&amp;mdash;such a waste to spend it in paranoia&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Copyright and Reprint Info</title>
+   <link href="http://tedhagos.com /copyright-reprint-info"/>
+   <updated>2012-12-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /copyright-reprint-info</id>
+   <content type="html">&lt;p&gt;All articles and writings appearing on this website is copyright &amp;copy; by Ted Hagos. All Rights Reserved.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Linking.&lt;/strong&gt; Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Electronic and Online reproduction.&lt;/strong&gt; ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &amp;mdash; if you do however, really really need to reproduce anything you find in here, just &lt;a href=&quot;mailto:ted@thelogbox.com&quot;&gt;drop me note at ted {at} thelogbox {dot} com&lt;/a&gt;. Let's talk about it&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Slowing down helps</title>
+   <link href="http://tedhagos.com /challenges-first-glance"/>
+   <updated>2012-12-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /challenges-first-glance</id>
+   <content type="html">&lt;p&gt;Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.&lt;/p&gt;
+
+&lt;p&gt;This is why you need to always catch your self when you are in an agitated state. Going from thought to speech in 10 seconds is a dangerous thing. Absorb, relax, collect your thoughts, ask the 5 whys, then formulate a response&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Python Env</title>
+   <link href="http://tedhagos.com /python-virtual-env"/>
+   <updated>2009-11-23T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /python-virtual-env</id>
+   <content type="html">&lt;p&gt;Get your Python development setup right, from the get-go. Last thing you need is a broken development environment because of a broken site (wide) Python package you just installed. A virtual environment keeps packages separate, not touching each other (which is a good thing). If a broken python package trips you up, you can avoid the hassle of wiping out your entire Python dev setup just to start with fresh plate.&lt;/p&gt;
+
+&lt;p&gt;You already know how to get Python in your system, don’t you? Okay, next, get the [python-setuptools],  easy_install is part of that. On a terminal window, do the following;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;sudo easy_install pip&lt;/li&gt;
+&lt;li&gt;sudo pip install virtualenv&lt;/li&gt;
+&lt;li&gt;sudo pip install virtualenvwrapper&lt;/li&gt;
+&lt;li&gt;create a folder somewhere your home directory or where ever you have write permissions. For my setup, I will use &lt;em&gt;~/pythonenvs&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;edit &lt;em&gt;~/.bashrc or  ~/.bash_profile&lt;/em&gt; (for linux and osx, respectively), type the entries below&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;pre&gt;
+WORKON_HOME=~/pythonenvs
+source /usr/local/virtualenvwrapper.sh
+&lt;/pre&gt;
+
+
+&lt;p&gt;You will need to restart the terminal window (actually, the shell) to let the changes take effect&lt;/p&gt;
+
+&lt;h2&gt;sample usage&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;mkvirtualenv gae&lt;/li&gt;
+&lt;li&gt;mkvirtualenv standard&lt;/li&gt;
+&lt;li&gt;workon gae&lt;/li&gt;
+&lt;li&gt;workon standard&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;working on a specific project&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;mkdir ~/workarea/notes-gae (if you are working on a Python Google App Engine project, for example)&lt;/li&gt;
+&lt;li&gt;cd to it&lt;/li&gt;
+&lt;li&gt;mkvirtualenv notes-gae&lt;/li&gt;
+&lt;li&gt;work on notes-gae, install some new eggs, site packages&lt;/li&gt;
+&lt;li&gt;write the software to install inside requirements.txt, Ian Bicking wrote something about this&lt;/li&gt;
+&lt;li&gt;then pip -r requirements.txt&lt;/li&gt;
+&lt;li&gt;you can use yolk -l to see what packages are installed in the env&lt;/li&gt;
+&lt;li&gt;then use pip freeze &gt; stable-requirements.txtto freeze the software versions&lt;/li&gt;
+&lt;li&gt;Use deactivate command to get out of virtual environments&lt;/li&gt;
+&lt;li&gt;version the project, git init (gotta use git for source control)&lt;/li&gt;
+&lt;li&gt;add some files to the project, then git add .&lt;/li&gt;
+&lt;li&gt;do some commits, git commit -m “comments”&lt;/li&gt;
+&lt;li&gt;and push the commits to a remote repo, git push -u origin master&lt;/li&gt;
+&lt;li&gt;When you pick the project up another day, remember to git pull, before doing anything else&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>OSX Cheatsheet</title>
    <link href="http://tedhagos.com /osx-cheatsheet"/>
-   <updated>2013-02-12T00:00:00+08:00</updated>
+   <updated>2008-02-12T00:00:00+08:00</updated>
    <id>http://tedhagos.com /osx-cheatsheet</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;1. SHOW THE ROUTING TABLE&lt;/strong&gt;. &lt;span class=&quot;codeblock&quot;&gt;route print&lt;/span&gt; won't work, try &lt;code class=&quot;codeblock&quot;&gt;netstat -nr&lt;/code&gt;&lt;/p&gt;
 
@@ -703,272 +973,1370 @@ $ echo pbpaste
  </entry>
  
  <entry>
-   <title>Working on API Projects</title>
-   <link href="http://tedhagos.com /api-projects"/>
-   <updated>2013-01-31T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /api-projects</id>
-   <content type="html">&lt;p&gt;You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that &lt;strong&gt;there is always a first time for everything&lt;/strong&gt;.&lt;/p&gt;
+   <title>Java Programming</title>
+   <link href="http://tedhagos.com /java-programming"/>
+   <updated>2004-02-18T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java-programming</id>
+   <content type="html">&lt;table border=&quot;0&quot; cellspacing=&quot;5&quot; cellpadding=&quot;5&quot;&gt;
+  &lt;tr&gt;&lt;th colspan=3&gt;
+    Revision History
+  &lt;/th&gt;&lt;/tr&gt;
+  &lt;/tr&gt;
+    &lt;td&gt;
+      Rev 0.1
+    &lt;/td&gt;
+    &lt;td&gt;February 18, 2004&lt;/td&gt;
+    &lt;td width=&quot;260px&quot;&gt;Created&lt;/td&gt;
+  &lt;/tr&gt;
+  
+&lt;/tr&gt;
+  &lt;td&gt;
+    Rev 0.2
+  &lt;/td&gt;
+  &lt;td&gt;October 21, 2007&lt;/td&gt;
+  &lt;td&gt;XXXX&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;API projects are not exactly the same as a web app, or mobile app or a desktop app. They should not be estimated as such. You will spend more effort on development and unit testing on API projects.&lt;/p&gt;
-
-&lt;p&gt;Once you have built the API, you will spend time testing it. The way to test it is to build an application that will use the API. &amp;mdash; shouldn't you actually build a unit test also for that app that will use your API? If you won't, how will you get an insight on how the APIs will be used by others. You need to get into the heads of your users if the API is to be robust.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Of fixed Deadlines and Moving Scopes</title>
-   <link href="http://tedhagos.com /fixed-deadlines-moving-scope"/>
-   <updated>2013-01-30T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /fixed-deadlines-moving-scope</id>
-   <content type="html">&lt;p&gt;A common tale on software projects &amp;mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving.&lt;/p&gt;
-
-&lt;p&gt;In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &amp;mdash; in a perfect world.&lt;/p&gt;
-
-&lt;p&gt;It isn't perfect. It isn't smooth. It isn't always peaceful. It isn't always cool. There are lots of people involved, lots of people have stakes, not everybody is aware of what's going on, and not everybody is on time. While Agile methods have taught a lot of people not to do things serially and and not to put things in the critical path, the software development phase is not the be-all and end-all of projects. There are other people involved in the value chain of projects, and some (a lot, actually) are way up on this chain &amp;mdash; these are people waiting to pay for the software (more often than not, they have already paid for the software), people who promised some other people a delivery date for the software, people who manage some people who promise some other people a delivery date for the software, so on and so forth. Like it or not, they can exert a lot of influence on when that software should be out of your door.&lt;/p&gt;
-
-&lt;p&gt;If you have been doing this long enough, you have an overdeveloped thick skin for the vicissitudes of the SDLC (Software Development Life Cycle). If you are new at this, prepare for temper swings (yours and other people), but keep your cool. Flaring up, yelling matches and snide emails are not useful &amp;mdash; contemplation is.&lt;/p&gt;
-
-&lt;p&gt;There are 3 things you need to be acutely aware of in a project. First, how much work is there (features), how many people do you have to work on them (resource) and how much time do you have (deadline) &amp;mdash; that's the basics. If one of these three things move, you need to start taking notes of how it will impact the other two &amp;mdash; and there is always impact.&lt;/p&gt;
-
-&lt;p&gt;If the scope of the project keeps moving, either the deadline or the resources will stretch. Stretching the resources can mean either extending their hours (beyond 8) or adding warm bodies to the project. Neither has desirable effects. When you stretch people's working hours, their focus is thinly spread, the brain needs a healthy dose of sleep. People who are tired makes more mistakes. You might be able to ship that software after all, but it might not behave like you expect it to. Adding warm bodies is  a pipe dream also, at least on short projects &amp;mdash; the ones you measure in months, not in multi-years. You are throwing new comers to the deep-end, they will need to familiarise and absorb what your other guys have been working on in the past couple of months. They will ask questions and clarify things &amp;mdash; you will spend time with them; and its time you don't have. Familiarise your self with the law of diminishing returns.&lt;/p&gt;
-
-&lt;p&gt;So, the only thing left to manage is the deadline &amp;mdash; and this is a very sensitive area to a lot of people, this is the one that causes tempers to flare. When tempers flare, just check your own, there is nothing you can do with other people's temper and demeanour. A discussion on moving the deadline will always be a difficult one; accept it, prepare for it, discuss it calmly and intelligently. Don't get sucked into the blame-storming frenzy that ensues. Focus on problem solving.&lt;/p&gt;
-
-&lt;p&gt;The tricky part about running out of time is that it's not always easy to tell when you are. Projects are never late one week or one month. Projects are late one day at a time, it won't seem so bad on the first day you find out you are behind. It might not seem so bad even during the second day &amp;mdash; and there is the rub. How do you tell when it's bad enough? How can you be certain that 4 more hours of delay will negatively impact your team's ability to deliver the software, as agreed and as expected? Where is the point when recovery and salvage are no longer possibilities? Sadly, it's an acquired skill, every project is different &amp;mdash; some or all of the people in your team might be different, a different client, slightly different set of features, different version of libraries you are using  etc. &amp;mdash; You just need to do it long enough and plenty enough to get better at it.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>480 minutes of focus</title>
-   <link href="http://tedhagos.com /480-minutes-of-focus"/>
-   <updated>2013-01-15T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /480-minutes-of-focus</id>
-   <content type="html">&lt;p&gt;That's 8 hours. It's a stretch to increase it, no matter how badly you want to.&lt;/p&gt;
-
-&lt;p&gt;Every morning you've got 24 potential-filled hours, sounds like a lot, but after;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;waiting on elevators (.25 hours, cumulatively)&lt;/li&gt;
-&lt;li&gt;getting to work (1 hour)&lt;/li&gt;
-&lt;li&gt;(actually) working (8 hours)&lt;/li&gt;
-&lt;li&gt;light social activity, water cooler talk (.25 hours)&lt;/li&gt;
-&lt;li&gt;lunch (1 hour)&lt;/li&gt;
-&lt;li&gt;getting home (1 hour)&lt;/li&gt;
-&lt;li&gt;dinner (1 hour)&lt;/li&gt;
-&lt;li&gt;hygiene and other physical necessities (1.5 hours)&lt;/li&gt;
-&lt;li&gt;get appraised on current events (1 hour)&lt;/li&gt;
-&lt;li&gt;sleep (8 hours)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/tr&gt;
+  &lt;td&gt;
+    Rev 0.3
+  &lt;/td&gt;
+  &lt;td&gt;June 12, 2012&lt;/td&gt;
+  &lt;td&gt;XXXX&lt;/td&gt;
+&lt;/tr&gt;
+  
+&lt;/table&gt;
 
 
-&lt;p&gt;the day is finished.&lt;/p&gt;
-
-&lt;p&gt;A non-trivial subject could require 120 minutes of blocked time, these are the kinds of task that (hopefully) will have big pay offs. Hopefully again, you could get at least 2 of these big chunks each day &amp;mdash; but that is constantly threatened by telephone rings, people walking into your workspace, noisy cubicle neighbors and many others. So, do you really need to get interrupted by Twitter, Facebook and that annoying sound your email app makes when something arrives.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>The Brain's Playbook</title>
-   <link href="http://tedhagos.com /default-behavior"/>
-   <updated>2013-01-08T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /default-behavior</id>
-   <content type="html">&lt;p&gt;I know what I have to do, I've written (and rewritten) them down in the notebook, in the goal papers; yet I don't want to do them. There's a tug-of-war happening inside and the lazy guys seems to be winning.&lt;/p&gt;
-
-&lt;p&gt;My primitive brain is taking over, it's telling me to do nothing, conserve energy (that means sleep) and eat (fast and plenty)&amp;mdash;I know that if I take my eyes off the focus for the day, the lazy guy is gonna win. I have to shake this monkey off my back, I've got lots of things to do today&amp;mdash;maybe a 15 minute cardio should perk me up again; or coffee, that can do the trick too; just don't put sugar in it because the lazy guy loves sugar.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>The First Two Hours</title>
-   <link href="http://tedhagos.com /two-hours"/>
-   <updated>2013-01-07T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /two-hours</id>
-   <content type="html">&lt;p&gt;Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't check messages on your phone lest your mind will wander around, will fleet from thought to thought and
-get filled with &lt;em&gt;little things&lt;/em&gt; &amp;mdash; remember what Stephen Covey said on &lt;em&gt;First things First&lt;/em&gt;, rocks first, then stones, then pebbles then sand. Look at the rocks first, attend to the rocks first. Stay disconnected for the first two hours. Use the time to;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Look at your todo list for the week&lt;/li&gt;
-&lt;li&gt;Look at your todo list yesterday, if some items fell in the crack, add them to the list for the day. Can't steal time&lt;/li&gt;
-&lt;li&gt;Write (rewrite) the todo list for the day. See which ones in the list can be done in 2 hours, but can potentially contribute the most to results of the day (80/20). Be brutal about the selection. Those task that will not make the cut are probably less important anyway&amp;mdash;either delay them, queue them, delete them altogether.&lt;/li&gt;
-&lt;/ol&gt;
 
 
-&lt;p&gt;The first two hours is important, it sets the tone of the day. If you don't set the tone, the hours will pass by and you will wander aimlessly; sure you will respond to emails, answer your phone, engage in conversations&amp;mdash;but those are probably the 80% of your activity that gives rise to only 20% of your results (maybe even a lot less than 20%)&amp;mdash;do the important stuff first; the important ones for you, that is.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>It's (not) Just a Task List</title>
-   <link href="http://tedhagos.com /the-task-list"/>
-   <updated>2012-12-28T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /the-task-list</id>
-   <content type="html">&lt;p&gt;As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more often than not, a task does have an artefact, even if it is just a single page containing your notes, and how you clarified your thoughts on it.&lt;/p&gt;
-
-&lt;p&gt;It is important to ask what is the victory condition for the task, when do you stop working on it. If the victory condition is unclear, then maybe the task is bigger than what you originally thought it was—tactical or long term goal, perhaps.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Long Fuse</title>
-   <link href="http://tedhagos.com /long-fuse"/>
-   <updated>2012-12-27T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /long-fuse</id>
-   <content type="html">&lt;ol&gt;
-&lt;li&gt;a device in a bomb that controls the timing of an explosion&lt;/li&gt;
-&lt;li&gt;a book by Dr. Eric Haseltine (Long Fuse, Big Bang …)&lt;/li&gt;
-&lt;li&gt;long term goals. not the same as task list items, but each item on the task list should keep the spark going. It's the big picture, the balls you don't drop. It's your marshmallow test. They will not be immediately satisfied. It's not the &lt;em&gt;here and now&lt;/em&gt;, so you need to be very patient and very cool about it&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h1 class=&quot;chapter&quot;&gt;INTRODUCTION&lt;/h1&gt;
 
 
-&lt;h1&gt;On clients and projects&lt;/h1&gt;
+&lt;p&gt;These are my notes for the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.&lt;/p&gt;
 
-&lt;p&gt;Getting jobs at freelancer, elance odesk or something similar is short fuse. A quick buck. Writing a 500 word article for a measley sum is also short fuse. On the other hand, working on specific expertise, building authoritative credentials on specific subjects, building a brand is long fuse. Working on long fuse projects is disheartening, especially if you are the type that needs constant revalidation and assurances of your efforts. It is easy to dismiss long fuses as risky and fruitless exercise&lt;/p&gt;
+&lt;p&gt;Having said that, what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.&lt;/p&gt;
 
-&lt;p&gt;Worthwhile results have very long gestation periods. It is hard to believe the claims of success stories that an idea came to them while showering. It is more believable that those ideas came to them a long time ago. Marinading at the back of their minds for months, years, maybe decades &amp;mdash; then maybe, just maybe, the last piece of the puzzle came to them one day while they were showering. That I can believe.&lt;/p&gt;
+&lt;p&gt;The code samples and exercises in this material were built using plain editors and the Java Development Kit. The use of simple tools is ideal for learning because there are no magic tricks and convenience facilities (like the case if you use an IDE). As a result, your brain will work harder because you are forced to use primitive tools. In a production environment or consulting environment, this reasoning might not be suitable and hence, the decision for tool selection will be influenced by other factors such as programmer productivity, time schedules and other constraints.&lt;/p&gt;
 
-&lt;p&gt;Back on the subject of client acquisition vs. project acquisition, having a litany of projects on the portfolio might seem the way to go for a startup effort. I will probably submit that it is one way to bootrap a brand. Having a thousand entries of short projects on the portfolio after 5 years does raise some flags. It gives the impression that the projects you have worked on are low-hanging fruits, can be done in lickety-split and lacks depth. Depth &amp;mdash; 10 miles wide, 2 inch deep, as the saying goes.&lt;/p&gt;
+&lt;p&gt;For the purpose of learning programming in Java &amp;mdash; which is the goal of this material &amp;mdash; we need our brains and faculties to work harder than usual to maximize learning and understanding.&lt;/p&gt;
 
-&lt;h1&gt;On building a technical career&lt;/h1&gt;
+&lt;p&gt;Here we go.&lt;/p&gt;
 
-&lt;p&gt;Some CVs are 10+ page long and peppered with a dizzying litany of projects &amp;mdash; I have personally seen examples of these CVs &amp;mdash; no, they are not senior developes. I have seen people who had 4 years of experience and have listed more than 50 projects on the CV, spanning 5 or more companies. The details of reasons for the short stints are only mildly interesting. Not worth the discussion. The pattern which explains the short length of stay coupled with the incredible array of projects is more interesting.&lt;/p&gt;
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
 
-&lt;p&gt;To some, working on a ground up project is a badge of honor. It is. The same cannot be said for working on a startup project then leaving for another project or another company as soon as the project goes on post-production phase. Post-production or support work is ripe with learning opportunities. It is harder and more difficult than the development phase. Time allocation for tasks  are compressed. You don't have a two-week sprint to solve a problem, you have days if not hours. If you made good decisions upstream, then the project has a fighting chance of surviving real-world test. If you did not make excellent decisions, you are in for a bag of hurt. It will be the good kind of hurt. You have to get past bruised egos to appreciate the lessons, but you need to stay with the project past the go-live date to see the lessons.&lt;/p&gt;
 
-&lt;p&gt;Wham-bam short projects may get you a thick CV. It may get you some referrals, to the next short gig. It is one way of building a career. It is however, short-fuse. Would you really hire a tech lead or an architect because he has done a gazillion projects? No. If he (ever) gets hired, it is not because of the number of projects in his belt, but because of how deep he has dived into those projects.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Low Grade Stress</title>
-   <link href="http://tedhagos.com /holiday-blues-low-grade-stress"/>
-   <updated>2012-12-26T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /holiday-blues-low-grade-stress</id>
-   <content type="html">&lt;p&gt;The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies, checking on your website and scanning through emails&amp;mdash;holiday breaks can do that to you.&lt;/p&gt;
 
-&lt;p&gt;After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence&amp;mdash;and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again.&lt;/p&gt;
 
-&lt;p&gt;That sinking feeling is a stressor, it’s low intensity but it lingers. It’s a lot like the flickering light on your work area or the slow march of traffic you go through everyday. Adrenaline is not going to solve it. You cannot simply explode into action, beat it to a pulp or run away from it.&lt;/p&gt;
+&lt;h1 class=&quot;chapter&quot;&gt;BEGINING TO PROGRAM&lt;/h1&gt;
 
-&lt;p&gt;Luckily, you already wrote down your list of long fuses — you have written them down, haven’t you? — and you keep a journal pretty regularly&amp;mdash;you do keep a journal, don’t you?&amp;mdash;A list of long fuses keeps your eyes on the far horizon and your journal records some minutiae of the tactical challenges you were trying to solve before you drifted into the path of aimless-ness. Get back on those, let your mind get on the groove of your task list. You can’t swallow an elephant, you got to slice it up in bite-sized pieces.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Lazy bones, Lazy mind</title>
-   <link href="http://tedhagos.com /whats-keeping-you"/>
-   <updated>2012-12-24T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /whats-keeping-you</id>
-   <content type="html">&lt;p&gt;What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.&lt;/p&gt;
 
-&lt;p&gt;What conditions are you waiting for. A perfect sunny day wasn’t part of your assumptions, you were gonna do these things regardless — it’s just lethargy isn’t it? or you don’t think you deserve it. You think it’s not  ”you”,  not within your elements — or its’ too deep for you.&lt;/p&gt;
+&lt;p&gt;Before we ran, we learned to walk first. Before we walked, we needed to learn how to get up on our feet &amp;mdash; and way before that, we crawled.&lt;/p&gt;
 
-&lt;p&gt;You need to practice more writing. Articulate exactly what are the things that need to happen first, before the big things on your list start happening.&lt;/p&gt;
+&lt;p&gt;Before we build highly scalable web-endpoints or a flashy Android application, we need to do the crawling analog in Java. We need to learn how to write a basic program using the Java language. We need to discover the mechanics of compilation and runtime, what legal statements can we declare and their effects. We need to know how Java statements are organized, what kinds of control structures are available, what kinds of things we can create and manipulate.&lt;/p&gt;
 
-&lt;p&gt;Big things on your list mostly falls under the category of multi-step problem. You can’t skip the intervening solutions and jump right to the last problem — maybe that is what’s keeping you, because you think you can&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>To the front or to the side?</title>
-   <link href="http://tedhagos.com /move-forward-or-sideways"/>
-   <updated>2012-12-24T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /move-forward-or-sideways</id>
-   <content type="html">&lt;p&gt;For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are stomped, the logical approach maybe of limited use. Another way to proceed could be to think sideways, the process of generation. The goal is not to eliminate options, rather to generate them.&lt;/p&gt;
+&lt;p&gt;The goal for now is take a first step towards a very long road of programming. We need to learn how programs are constructed, what tools and with what materials should we construct them and finally, how should we run them.&lt;/p&gt;
 
-&lt;p&gt;The rub is to know when to move forward and when to move sideways. This is probably why the thinking process is an art form.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Snowballing thoughts</title>
-   <link href="http://tedhagos.com /thought-snowball"/>
-   <updated>2012-12-23T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /thought-snowball</id>
-   <content type="html">&lt;p&gt;Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel agitated.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short&amp;mdash;such a waste to spend it in paranoia&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Copyright and Reprint Info</title>
-   <link href="http://tedhagos.com /copyright-reprint-info"/>
-   <updated>2012-12-23T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /copyright-reprint-info</id>
-   <content type="html">&lt;p&gt;All articles and writings appearing on this website is copyright &amp;copy; by Ted Hagos. All Rights Reserved.&lt;/p&gt;
+&lt;h2&gt;KEY CONCEPTS&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Linking.&lt;/strong&gt; Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Java is a compiled language.&lt;/strong&gt; You need to write the programming statements in a source file, compile them to produce an executable format or object code and finally run the executable file. If you did not make syntactical mistakes the source code will compile without problems. If you did commit syntactical errors then the compiler will not let you through, you will not be able to produce an executable format of your source program.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Electronic and Online reproduction.&lt;/strong&gt; ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &amp;mdash; if you do however, really really need to reproduce anything you find in here, just &lt;a href=&quot;mailto:ted@thelogbox.com&quot;&gt;drop me note at ted {at} thelogbox {dot} com&lt;/a&gt;. Let's talk about it&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Slowing down helps</title>
-   <link href="http://tedhagos.com /challenges-first-glance"/>
-   <updated>2012-12-23T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /challenges-first-glance</id>
-   <content type="html">&lt;p&gt;Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see;  Remember Pareto? 8 parts of the problem is submerged and unseen. You need to uncover them first before you can solve the 2 parts of it which are visible and are in your face.&lt;/p&gt;
+&lt;p&gt;A Java source file (also called a compilation unit) is a simple text file. You can use basic text editors to create and edit a source file. The choice for program editor is at best, a matter of preference. The only requirement for the text editor is it can write in ASCII format &amp;mdash; better yet if it can handle UNICODE. So pick any that catches your fancy.&lt;/p&gt;
 
-&lt;p&gt;This is why you need to always catch your self when you are in an agitated state. Going from thought to speech in 10 seconds is a dangerous thing. Absorb, relax, collect your thoughts, ask the 5 whys, then formulate a response&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Python Env</title>
-   <link href="http://tedhagos.com /python-virtual-env"/>
-   <updated>2012-11-23T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /python-virtual-env</id>
-   <content type="html">&lt;p&gt;Get your Python development setup right, from the get-go. Last thing you need is a broken development environment because of a broken site (wide) Python package you just installed. A virtual environment keeps packages separate, not touching each other (which is a good thing). If a broken python package trips you up, you can avoid the hassle of wiping out your entire Python dev setup just to start with fresh plate.&lt;/p&gt;
+&lt;p&gt;A Java source file will bear the extension .java, no matter which platform you are using. Don't worry that the extension doesn't follow the usual three letter format, the popular OS platforms can handle that kind of file.&lt;/p&gt;
 
-&lt;p&gt;You already know how to get Python in your system, don’t you? Okay, next, get the [python-setuptools],  easy_install is part of that. On a terminal window, do the following;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Java is an Object Oriented language.&lt;/strong&gt; This has many consequences that affects you as a programmer, but right now, it affects what we can write inside our very first source file. You can write only classes and interfaces inside a source file. For our first example, we will write a class and not an interface &amp;mdash; interfaces are advanced constructs in Java, we will leave that for later. Inside classes, you can write variables, methods and program statements.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;sudo easy_install pip&lt;/li&gt;
-&lt;li&gt;sudo pip install virtualenv&lt;/li&gt;
-&lt;li&gt;sudo pip install virtualenvwrapper&lt;/li&gt;
-&lt;li&gt;create a folder somewhere your home directory or where ever you have write permissions. For my setup, I will use &lt;em&gt;~/pythonenvs&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;edit &lt;em&gt;~/.bashrc or  ~/.bash_profile&lt;/em&gt; (for linux and osx, respectively), type the entries below&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The source file cannot be ran directly on your platform.&lt;/strong&gt; It needs to be compiled. If you have installed the JDK (Java Development Kit) properly on your platform, you can already use the java compiler. The compiler takes on a source file (or source files) as an argument and turns them into executable files. These files do not have .com or .exe extensions, they have .class extensions instead.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;You cannot run .class files directly on top of your OS.&lt;/strong&gt; Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — &lt;code class=&quot;codeblock&quot;&gt;$ java executable_file&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There are many kinds of Java programs. Some run on webservers (servlet &amp;amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &amp;mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.&lt;/p&gt;
+
+&lt;p&gt;Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this book. It is best to name the folder without special characters or whitespace.&lt;/p&gt;
+
+&lt;p&gt;Create a file named Hello.java. For now, just copy the contents from the sample code below&lt;/p&gt;
 
 &lt;pre&gt;
-WORKON_HOME=~/pythonenvs
-source /usr/local/virtualenvwrapper.sh
+  /**
+   *
+   * Our first program
+   *
+   * This is a block comment
+   *
+   * */
+   
+  class Hello {
+     public static void main (String [] args) {
+        System.out.println(&quot;Hello World\n&quot;);
+     }
+  }
 &lt;/pre&gt;
 
 
-&lt;p&gt;You will need to restart the terminal window (actually, the shell) to let the changes take effect&lt;/p&gt;
+&lt;div id=&quot;cap&quot;&gt;Fig 1: Hello.java&lt;/div&gt;
 
-&lt;h2&gt;sample usage&lt;/h2&gt;
+
+&lt;p&gt;Compile the source file using &lt;code class=&quot;codeblock&quot;&gt;javac Hello.java&lt;/code&gt;. You will have a file named &lt;em&gt;Hello.class&lt;/em&gt; as a result of the compilation. Use the command &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;. Do not include the extension &lt;em&gt;.class&lt;/em&gt; when running Java programs, only the file name portion of the resulting &lt;em&gt;.class&lt;/em&gt; file is required.&lt;/p&gt;
+
+&lt;p&gt;If you typed your program exactly as it appeared in Fig 1.1 the program should compile without problems. If you encountered any compilation error, to back to the program editor and check the  spelling of each and every word. Make sure you did not miss a curly brace or perhaps spelt &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; as &lt;code class=&quot;codeblock&quot;&gt;Main()&lt;/code&gt;. Java is case sensitive &amp;mdash; &lt;em&gt;main&lt;/em&gt; is different from &lt;em&gt;Main&lt;/em&gt;. When you are sure that the program is free from syntactical errors, compile it again, then run.&lt;/p&gt;
+
+&lt;p&gt;The output of Fig 1 is a very uninteresting &quot;Hello World&quot;. True to tradition of every beginning programmer since Kernighan and Ritchie first started it on the first edition of the C Programming Language in 1969.&lt;/p&gt;
+
+&lt;p&gt;Unexciting as the output maybe, it is simple yet rich enough to get our feet wet in Java programming. You need to get used to the structure of the Hello program because a lot of the codes you will write starts out this way.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;WHAT HAVE WE JUST DONE&lt;/h2&gt;
+
+&lt;p&gt;The first seven lines of the Hello program are &lt;em&gt;comments&lt;/em&gt;. These are non-executable statements and you can put them anywhere &amp;mdash; inside or outside a class. You can write comments in three ways.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;mkvirtualenv gae&lt;/li&gt;
-&lt;li&gt;mkvirtualenv standard&lt;/li&gt;
-&lt;li&gt;workon gae&lt;/li&gt;
-&lt;li&gt;workon standard&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;//&lt;/code&gt;  &amp;mdash; This is an in-line comment, effective only on the current line. Anything to the right of this comment is ignored. This is suitable for commenting individual lines of code&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;/*   */&lt;/code&gt; &amp;mdash; This is a block comment, anything in between the inner asterisks will be ignored by the compiler. These can span multiple lines&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;/**   */&lt;/code&gt; &amp;mdash; Another block comment that is used by JavaDoc, don't worry about this right now. Just experiment with these three for the time being&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
-&lt;h2&gt;working on a specific project&lt;/h2&gt;
+&lt;p&gt;After the comments is a class block. Everything inside the outermost pair of curly braces is the class block. Java is an OO language, and a strict one at that. You cannot write anything meaningul outside a class or interface. Even a simple output to the screen has to be within the context of a class. This is the reason why you need to be very comfortable with the structure of the Hello program as early as now or you will not go very far otherwise.&lt;/p&gt;
+
+&lt;p&gt;A Java class is constructed using the keyword &lt;code class=&quot;codeblock&quot;&gt;class&lt;/code&gt; followed a &lt;em&gt;class name&lt;/em&gt;. The class name is something that you will define, in our example, the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The class name is followed by a pair of curly braces. Anything inside the curly braces constitutes the body of the class.&lt;/p&gt;
+
+&lt;pre&gt;
+  
+  // cannot write methods and variables here
+  // only import, package statements and 
+  // comments are allowed outside
+  // the class 
+  
+  class Hello {
+    // methods and variables goes here
+  }
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 2: Basic Java class structure&lt;/div&gt;
+
+
+&lt;p&gt;You might have noticed that our example class name is &lt;em&gt;Hello&lt;/em&gt; and that is stored in a file named &lt;em&gt;Hello.java&lt;/em&gt;. That is incidental and not a requirement at all. It would have been a requirement if we made the class &lt;em&gt;public&lt;/em&gt;. &amp;mdash; the &lt;em&gt;public&lt;/em&gt; keyword is an access modifier, but don't bother with that for the moment, you will have a chance to study its effects on coding later on.&lt;/p&gt;
+
+&lt;p&gt;If we changed our construction to declare a public class, like in this&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  public class Hello {
+    public static void main(String args[]) {
+
+    }
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;then it becomes mandatory that the name of class be consistent with the name of the source file. There is a rule in Java programming that a source file can only contain, at most, one public class and if a class is defined as public in a source file, then name of the source file must be consistent with the name of the public class &amp;mdash; this is one of the many rules you need to be acquainted with Java.&lt;/p&gt;
+
+&lt;p&gt;The name of the generated object file was &lt;em&gt;Hello.class&lt;/em&gt; not because the name of source file is &lt;em&gt;Hello.java&lt;/em&gt; but because the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The name of class affects the name of the object file.&lt;/p&gt;
+
+&lt;p&gt;Like most programming languages, a Java program needs an entry point. In this case, that is the &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; method &amp;mdash; a method and a function are technically the same. The semantic difference has got something to do with OOP philosophies. We won't bother with that right now, but you need to get used to the term method, rather than function.&lt;/p&gt;
+
+&lt;p&gt;Having a &lt;em&gt;main&lt;/em&gt; method is not a requisite for compilation. It is a runtime requirement. Any class that you will pass on the JRE requires a main function. Not all classes will require this function, only those classes that you will use as a starting point of your program. In our example, class Hello is a program starting point.&lt;/p&gt;
+
+&lt;p&gt;Java has a very specific format for a main function. The function needs to be &lt;em&gt;public&lt;/em&gt;, &lt;em&gt;static&lt;/em&gt; and &lt;em&gt;void&lt;/em&gt; &amp;mdash; these are reserved words in Java. Each have a specific action but we will defer their discussion for later.&lt;/p&gt;
+
+&lt;p&gt;Inside the main function is &lt;em&gt;System.out.println()&lt;/em&gt; statement. This is a very common command in Java. You can practically put anything inside the parentheses and it will be printed to the screen. The string literal &quot;Hello World&quot; was placed inside the function &lt;em&gt;println()&lt;/em&gt;. String literals are defined be enclosing words using a pair of double quotation marks. You cannot define a string literal using single quotes &amp;mdash; that results into a different action.&lt;/p&gt;
+
+&lt;p&gt;Lastly, all statements in a Java program are terminated by a semicolon. The white space in Java has no meaning. Indentations in Java also have no meaning, hence, you need to use the semicolon to intstruct the compiler that you are done with what you want to say. Best to keep this rule in mind, a lot of the first few rookie mistake you will make is because of the semicolon &amp;mdash; more precisely, the lack of it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;EXERCISE TIME&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;mkdir ~/workarea/notes-gae (if you are working on a Python Google App Engine project, for example)&lt;/li&gt;
-&lt;li&gt;cd to it&lt;/li&gt;
-&lt;li&gt;mkvirtualenv notes-gae&lt;/li&gt;
-&lt;li&gt;work on notes-gae, install some new eggs, site packages&lt;/li&gt;
-&lt;li&gt;write the software to install inside requirements.txt, Ian Bicking wrote something about this&lt;/li&gt;
-&lt;li&gt;then pip -r requirements.txt&lt;/li&gt;
-&lt;li&gt;you can use yolk -l to see what packages are installed in the env&lt;/li&gt;
-&lt;li&gt;then use pip freeze &gt; stable-requirements.txtto freeze the software versions&lt;/li&gt;
-&lt;li&gt;Use deactivate command to get out of virtual environments&lt;/li&gt;
-&lt;li&gt;version the project, git init (gotta use git for source control)&lt;/li&gt;
-&lt;li&gt;add some files to the project, then git add .&lt;/li&gt;
-&lt;li&gt;do some commits, git commit -m “comments”&lt;/li&gt;
-&lt;li&gt;and push the commits to a remote repo, git push -u origin master&lt;/li&gt;
-&lt;li&gt;When you pick the project up another day, remember to git pull, before doing anything else&lt;/li&gt;
+&lt;li&gt;Create a Java program that prints out your name and email address on two separate lines.&lt;/li&gt;
+&lt;li&gt;Create a Java program that prints outo your name and email address on two separate lines, but you can only use a single &lt;em&gt;println()&lt;/em&gt; statement.&lt;/li&gt;
+&lt;li&gt;Play around with the source code of the Hello program. Try to compile and run. Record the results of the compilation and execution each time you make a change.&lt;/li&gt;
+&lt;li&gt;Change the spelling of function main to Main&lt;/li&gt;
+&lt;li&gt;Remove the opening curly brace immediately right after &lt;em&gt;main(String []args)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Change &quot;Hello World&quot; to &lt;em&gt;Hello\n.World&lt;/em&gt;. What's changed? Try to find out what the &lt;em&gt;\n&lt;/em&gt; means&lt;/li&gt;
 &lt;/ol&gt;
 
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;RESERVED WORDS&lt;/h1&gt;
+
+
+&lt;p&gt;You will be defining a lot of things in Java. You will name your classes, variables and methods. There are only a few rules you need to observe when creating these names, one of these rules is to steer clear from reserved words or keywords.&lt;/p&gt;
+
+&lt;p&gt;There are 50+ keywords in the Java language but not all of them are in use. The &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;goto&lt;/em&gt; keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language.&lt;/p&gt;
+
+&lt;p&gt;In the past, the words &lt;em&gt;true, false&lt;/em&gt; and &lt;em&gt;null&lt;/em&gt; appeared as keywords . Sometime in the past, &lt;em&gt;null, true&lt;/em&gt; and &lt;em&gt;false&lt;/em&gt; have stopped being keywords and became known as literal values (From the Java Lang Spec). These are semantics and are probably of interest only to the language lawyers of Java. If your pursuits are more of the practical nature, I suggest not to bother with the semantic difference. The point is you cannot use keywords and literals as variable names or identifiers in your own code lest you will have a problem during compilation. This is the most important reason why you need to be familiar with them.&lt;/p&gt;
+
+&lt;p&gt;It is always best to consult the most recent version of the Java Language Specification when it comes to these things because they are a matter of specification. The keywords are printed here only for ease of reference.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  abstract  continue    for             new           switch
+  assert        default     goto            package     synchronized
+  boolean       do            if                private     this
+  break       double        implements  protected   throw
+  byte        else        import          public        throws
+  case        enum        instanceof    return      transient
+  catch       extends       int short     try
+  char        final       interface   static        void
+  class       finally       long            strictfp    volatile
+  const       float       native          super       while
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 3: Java KeyWords&lt;/div&gt;
+
+
+&lt;p&gt;You do not need to memorize all the keywords now, but I think in time you will know them by heart as your practice grows.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;RULES ON WRITING IDENTIFIERS&lt;/h2&gt;
+
+&lt;p&gt;Any programming construct that is programmer-defined is referred to as an &lt;em&gt;identifier&lt;/em&gt;. These are the things that you will need to name yourself.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;class name&lt;/li&gt;
+&lt;li&gt;interface name&lt;/li&gt;
+&lt;li&gt;method name&lt;/li&gt;
+&lt;li&gt;name of a variable, name of parameters you pass to methods&lt;/li&gt;
+&lt;li&gt;package name&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;To create an identifier, there are certain rules that you must remember.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It must consist of alphanumeric characters&lt;/li&gt;
+&lt;li&gt;It must not start with a number, but it can start with an underscore or a dollar sign&lt;/li&gt;
+&lt;li&gt;It must not have any special characters inside it&lt;/li&gt;
+&lt;li&gt;It must not be same as java keyword or literal&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;EXERCISE TIME&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;small number&lt;/li&gt;
+&lt;li&gt;bignumber&lt;/li&gt;
+&lt;li&gt;this-is-a-very-long-identifier_is-it-legal&lt;/li&gt;
+&lt;li&gt;IsThisLegal?&lt;/li&gt;
+&lt;li&gt;_IsThisLegal&lt;/li&gt;
+&lt;li&gt;class_name&lt;/li&gt;
+&lt;li&gt;import-no1&lt;/li&gt;
+&lt;li&gt;transient&lt;/li&gt;
+&lt;li&gt;volatile&lt;/li&gt;
+&lt;li&gt;careful-this-is-volatile&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;DATA TYPES&lt;/h1&gt;
+
+
+&lt;p&gt;Programmers create things (data). We manipulate them by adding, substracting, dividing or multiplying. Sometimes we mash them up together (concatenation), then we create more things. Sometimes, we store these things for later use, and other times we don't, we simply discard them. Sometimes we dig up things that we have stored in the past (retrieval) and other times we show the things we've tucked away to other people (reports). This is an oversimplification of what programmers do, but I would guess that it is not very far from it.&lt;/p&gt;
+
+&lt;p&gt;In order to create things, we need to know what kinds of things you can create. Will you be counting these things (whole numbers) or will you measure them (real numbers)? If we need to compare one thing to another thing, how will we  remember the result of that comparisson? Can we store the result of that comparisson inside another kind of thing, one that is aware of truth and falsity?&lt;/p&gt;
+
+&lt;p&gt;If we were using a language that is pretty close to the metal, like assembly or C, you may need to know quite a bit about how things are stored and organized in a very low-level fashion before you can get very far.  We are, however, using Java and it will not require us to work close to the metal.&lt;/p&gt;
+
+&lt;p&gt;You will work with &lt;em&gt;types&lt;/em&gt; rather than bits (zeroes and ones). Java has defined some useful abstractions for us already. These abstractions allow us to work with ease because we can represent familiar concepts with ready-made &lt;em&gt;types&lt;/em&gt;. For example, if you need to work with real numbers, Java has defined the &lt;em&gt;float&lt;/em&gt; and &lt;em&gt;double&lt;/em&gt;  data types. If you need to work with words and letters, Java has defined for us the &lt;em&gt;java.lang.String&lt;/em&gt; type.  These abstractions are high enough that we don't get bogged down by the details of how they are stored and structured on the disk, we can worry about other things like the logic of our application.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;byte&lt;/em&gt;  &amp;mdash; signed 8-bit integer (-128 to 127)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;short&lt;/em&gt; &amp;mdash;  signed 16-bit integer (-32,768 to 32,767)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;int&lt;/em&gt;   &amp;mdash; signed 32-bit integer (-2,147,483,648 to 2,147,483,647)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;long&lt;/em&gt;  &amp;mdash; signed 64-bit integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,807)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;float&lt;/em&gt; &amp;mdash; signed 32-bit floating point (32 bit IEEE 754 floating point)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;double&lt;/em&gt; &amp;mdash; signed 64-bit floating point (64 bit IEEE 754 floating point)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;char&lt;/em&gt;  &amp;mdash; 16-bit Unicode character (0 to 65535 or \u0000 to \uFFFF)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;boolean&lt;/em&gt; &amp;mdash; either &lt;em&gt;true&lt;/em&gt; or &lt;em&gt;false&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;HOW TO CREATE THINGS&lt;/h2&gt;
+
+&lt;p&gt;Variables are created by declaring them, then defining them. For example,&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  int i;
+&lt;/pre&gt;
+
+
+&lt;p&gt;is a statement that DECLARES the variable named &lt;em&gt;i&lt;/em&gt;  that is of type &lt;em&gt;int&lt;/em&gt;, it does not define it however. To declare and define a variable, it done like this&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  int i;
+  i = 0;
+&lt;/pre&gt;
+
+
+&lt;p&gt;In the preceding code, the variable &lt;em&gt;i&lt;/em&gt; was DECLARED on one line and then DEFINED on the following line. You can create your variables like this, or like this;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  int i = 0;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Where the variable &lt;em&gt;i&lt;/em&gt; has been both declared and defined on the same line.&lt;/p&gt;
+
+&lt;p&gt;Why are we specifying that &lt;em&gt;i&lt;/em&gt; is an int? That is because Java is a statically typed language. The compiler will not guess what kind of data you are creating, you have to tell it explicitly before it gets compiled.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;SOME TYPE RULES&lt;/h2&gt;
+
+&lt;p&gt;The numerical types of Java follows a certain hierarchy &amp;mdash; &lt;em&gt;double&lt;/em&gt; is bigger than a &lt;em&gt;float&lt;/em&gt; which is bigger than a &lt;em&gt;long&lt;/em&gt; which is bigger than an &lt;em&gt;int&lt;/em&gt; which is bigger than a &lt;em&gt;short&lt;/em&gt; which is bigger than a &lt;em&gt;byte&lt;/em&gt;. You must be aware of this hierarchy because you will not always work with just one data type, exclusively &amp;mdash; you will work with a combination of them.&lt;/p&gt;
+
+&lt;p&gt;For the most part, you can add variables of different types e.g. add an int to a double, a byte to an int etc, but you can only assign the value to a variable if the type of the value is;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the same as the type of the variable&lt;/li&gt;
+&lt;li&gt;bigger than the type of the variable&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;For example&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  int a = 10;
+  int b = a;
+  long c = b;
+  double d = c;
+&lt;/pre&gt;
+
+
+&lt;p&gt;You can assign &lt;em&gt;b to a&lt;/em&gt; because they are both int; assign &lt;em&gt;b to c&lt;/em&gt; because a long is bigger than an int; &lt;em&gt;c to d&lt;/em&gt; because a double is bigger than a long. Makes sense right? When you assign a smaller type to a larger type, that is what programmer's call a &lt;em&gt;upcast&lt;/em&gt;. Upcasting is automatically performed for you when you do operations like the above (assigning a smaller type to a larger type).&lt;/p&gt;
+
+&lt;p&gt;Let's look at another example.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  byte a = 1;
+  byte b = 2;
+  byte c = a + b;
+&lt;/pre&gt;
+
+
+&lt;p&gt;It looks innocent and deceitfully accurate, but it will result to an error. While you may reason that  because we added 2 byte values (a + b), it stands that we should be able assign the arithmetic result to &lt;em&gt;c&lt;/em&gt; which is declared as a byte &amp;mdash; You would have been correct if the resulting type of adding two &lt;em&gt;byte&lt;/em&gt; values is also a byte, but that is not the case. One apple added to another another apple doesn't make two apples in this case. It looks counter-intrutive and scaringly frustrating to a beginner. I know. Don't panic. We just to understand the arithmetic rules of Java for this to make sense.&lt;/p&gt;
+
+&lt;p&gt;Remember the hierarchy of types from a discussion a while ago &amp;mdash; &lt;em&gt;double&lt;/em&gt; is bigger than a &lt;em&gt;float&lt;/em&gt; which is bigger than a &lt;em&gt;long&lt;/em&gt; which is bigger than an &lt;em&gt;int&lt;/em&gt; which is bigger than a &lt;em&gt;short&lt;/em&gt; which is bigger than a &lt;em&gt;byte&lt;/em&gt; &amp;mdash; that one? It has a related rule.&lt;/p&gt;
+
+&lt;p&gt;When a &lt;em&gt;double&lt;/em&gt; is added to something else, the resulting type is a double. When a &lt;em&gt;float&lt;/em&gt; is added to something else, the result is float. A &lt;em&gt;long&lt;/em&gt; added to something else, the result is a long. For everything else the result is an &lt;em&gt;int&lt;/em&gt;. Oh and by the way, I just used arithmetic &lt;em&gt;add&lt;/em&gt; operation for the explanation because it's a lot easier to say, but the truth is, that rule holds up for all arithmetic operation (+ - * / and %) &amp;mdash; that means no arithmetic operation will ever result into &lt;em&gt;short&lt;/em&gt; or a &lt;em&gt;byte&lt;/em&gt;. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on &quot;how Java does arithmetic internally&quot;.&lt;/p&gt;
+
+&lt;p&gt;Let's continue to work on our small byte addition example earlier, let's fix that.&lt;/p&gt;
+
+&lt;pre&gt;
+  class ByteAdd {
+    public static void main(String args[]) {
+      byte a = 1;
+      byte b = 2;
+      int c = a + b;
+    }
+  }
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 4: Adding two bytes&lt;/div&gt;
+
+
+&lt;p&gt;And now, all is well.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;CASTING&lt;/h2&gt;
+
+&lt;p&gt;You already know what &lt;em&gt;upcasting&lt;/em&gt; is, we discussed that not too long ago. Upcasting happens when you assign a narrow type to a wider type e.g. an &lt;em&gt;int&lt;/em&gt; value assigned to a &lt;em&gt;long&lt;/em&gt;. Java does for you automatically, no intervention needed. The opposite of &lt;em&gt;upcasting&lt;/em&gt; is of course, well, &lt;em&gt;downcasting&lt;/em&gt; &amp;mdash; not very creative, I know, but it makes the two terms easier to remember.&lt;/p&gt;
+
+&lt;p&gt;Downcasting happens when you force a wider type into a narrow type e.g. try to assign an &lt;em&gt;int&lt;/em&gt; to a &lt;em&gt;byte&lt;/em&gt;, the compiler won't let you. Unlike upcasting, downcasting is an explicit activity. It needs action from the programmer.&lt;/p&gt;
+
+&lt;p&gt;Let's go back to the byte arithmetic example of Fig 4. We solved that by making variable &lt;em&gt;c&lt;/em&gt; a int. We also could have solved that problem using downcasting.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  class ByteAdd {
+    public static void main(String args[]) {
+      byte a = 1;
+      byte b = 2;
+      byte c = (byte)(a + b);
+    }
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The cast operator is the pair of parentheses. We are forcing the value to the right of the cast operator, in this case &lt;code class=&quot;codeblock&quot;&gt;(a + b)&lt;/code&gt; which is a &lt;em&gt;int&lt;/em&gt; to become a &lt;em&gt;byte&lt;/em&gt;. You have to group expression &lt;em&gt;a + b&lt;/em&gt; because if you did not, only the value &lt;em&gt;a&lt;/em&gt; would have been casted to a byte, then the addition operation would be performed (which results to an int) then it will be assigned to &lt;em&gt;c&lt;/em&gt; &amp;mdash; the cast operator has a higher precedence than the addition operation, that is why you need to group.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;REFERENCE TYPE&lt;/h2&gt;
+
+&lt;p&gt;By far and thus far, the data types you have seen are called &lt;em&gt;primitive types&lt;/em&gt;. The Java Type System has another kind of type. It is called &lt;em&gt;reference types&lt;/em&gt;. Let's defer the discussion for reference types at least until after we've gone through the OOP topic.&lt;/p&gt;
+
+&lt;p&gt;For now, what we need to remember is that, if it's not primitive &amp;mdash; not a double, float, long, int, short, byte, char or boolean, then it must be a reference type. It' not all scary, some reference types are actually pretty to use e.g. the &lt;em&gt;String&lt;/em&gt; type, let's see some examples&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  String a = &quot;Hello&quot;;
+  String b = &quot;World&quot;;
+  String c = a + b;
+  int d = 10;
+  String e = a + d; // attention here
+&lt;/pre&gt;
+
+
+&lt;p&gt;I called your attention to the last line because I thought this might be a good opportunity to explain why the addition operator works for a String type, what happened to our rule before &amp;mdash; when a &lt;em&gt;double&lt;/em&gt; is added to something else it becomes a double.&lt;/p&gt;
+
+&lt;p&gt;First, let's put an addendum to our rule. &lt;strong&gt;When something is added to a String&lt;/strong&gt; the whole expression becomes a String**. The String type rules them all.&lt;/p&gt;
+
+&lt;p&gt;By the way, it's only the addition operator that is valid to a String type. You cannot substract a string from another string (not like numbers at least) nor can you divide or multiply Strings. The action of the &lt;em&gt;+&lt;/em&gt; operator on Strings is simply for concatenation.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1&gt;OPERATORS&lt;/h1&gt;
+
+
+&lt;p&gt;This should not not be a long section. If you have programmed before using another language, chances are these operators are exactly the same thing in that other language that you used. So it's a not a big deal. There is not much to see here and to be honest, quite boring. So in this section, we will simply list the operators that you can use in Java. No gotcha's nor clever examples, just a list.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ARITHMETIC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;+ - * / and %&lt;/em&gt; functions as you might expect. They work on numbers, both real and integral &amp;mdash; with the exception of the &lt;em&gt;+&lt;/em&gt; which also works on &lt;em&gt;Strings&lt;/em&gt; as you've seen earlier.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;COMPARISSON&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;&gt; &gt;=  &amp;lt; &amp;lt;= and ==&lt;/em&gt; are read, more than, more than or equal to,less than and less than or equal to, respectively. You know how to use them, you don't need me to explain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LOGICAL&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&amp;amp;&lt;/em&gt; a logical &lt;em&gt;and&lt;/em&gt;. The expression will only be true if both operands are true&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;amp;&amp;amp;&lt;/em&gt; a short circuit &lt;em&gt;and&lt;/em&gt;, more or less the same as the logical &lt;em&gt;and&lt;/em&gt; but it's short circuit. If the first operand is already false, it will not even bother testing the second operand, it will immediately return &lt;em&gt;false&lt;/em&gt;, hence it's name, short-circuit.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;|&lt;/em&gt; a logical &lt;em&gt;or&lt;/em&gt;. The expression will return true as long as one of the operand is &lt;em&gt;true&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;||&lt;/em&gt; a short-circuit or. It follows the same prinnciple as &lt;em&gt;&amp;amp;&amp;amp;&lt;/em&gt; only it performs it on an &lt;em&gt;or&lt;/em&gt; condition &amp;mdash; can you figure it out? That's your homework.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;There are other operators in Java, but we won't list them here. It makes sense to tackle them when there is more context. So we will leave the discussions of these other operators like &lt;em&gt;++ and --&lt;/em&gt; for later.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1&gt;FLOW OF CONTROL&lt;/h1&gt;
+
+
+&lt;p&gt;Your ability to direct and command the flow of control in your program is one of the defining skills for a programmer. There are basically 3 ways that you can arrange the commands in your program code. You can execute commands one after another, &lt;em&gt;sequencing&lt;/em&gt;.
+You can execute certain commands when certain conditions are met, &lt;em&gt;branching&lt;/em&gt;; and you can keep on repeating certain commands while certain conditions are still true, &lt;em&gt;looping or iteration&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;if statement&lt;/h2&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  if(condition) {
+    statement 1;
+    statement 2;
+    statement n;
+  }  
+&lt;/pre&gt;
+
+
+&lt;p&gt;The &lt;em&gt;if&lt;/em&gt; statement allows you to conditionally perform some commands. It allows you side-step the main flow of your code. If you remember your flowcharting concepts or logic formumation. When you see the diamond shape, it means you have a fork in the road. When a condition is met, you either go left or right. That is what the &lt;em&gt;if&lt;/em&gt; statement does. It allows you to test for conditions. When the condition is true, you go to the beginning of the if block (the opening curly brace) and begin executing all the statements there until all the statements are exhausted. When you have reached the end of the block (the closing curly brace), then there are no more commands to execute. The flow of control will resume immediately after the end of the curly brace.&lt;/p&gt;
+
+&lt;p&gt;The condition in the &lt;em&gt;if&lt;/em&gt; statement can be written as expressions that will evaluate to either true or false. This is the most common use you will have of the if statement. On some occassions, you may see the condition written as the literals &lt;em&gt;true&lt;/em&gt; or &lt;em&gt;false&lt;/em&gt; -- this is rare, but it will still be a legal code. Looks easy, right.&lt;/p&gt;
+
+&lt;p&gt;Okay, a little ice-breaker. Can you spot what's wrong in the next code. Try not to read the explanation and figure it out yourself first.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  int i = 0;
+  if(i = 1) {
+    System.out.println(&quot;but i is equal to one&quot;);
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;Did you catch it? If you did not, the Java compiler will. That's a good thing. People with programming experience in &lt;em&gt;C Language&lt;/em&gt; would be familiar with this, because the expression &lt;code class=&quot;codeblock&quot;&gt;if (i = 1)&lt;/code&gt; would have been valid in &lt;em&gt;C&lt;/em&gt;. Thankfully not in Java, the compiler would have warned you of &quot;Incompatible type error&quot;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;if&lt;/strong&gt; statement requires a boolean expession in the argument. The expression &lt;code class=&quot;codeblock&quot;&gt;(i = 1)&lt;/code&gt; will not result to a boolean expression, rather it will yield a integer expression; zero if the operation succeeds and non-zero if it fails.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;NESTING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can put an if statement inside another if statement. You can in fact nest them up pretty deeply. While there is no set limit on how deep you can nest if statements, practical considerations and code readability should knock some sense into your code.&lt;/p&gt;
+
+&lt;p&gt;From my experience, whenever I am treading dangerously deep into a web of if-else-if-else, that is usually a signal to take a step back and look if there are other ways of going about controlling program logic. It could be a design or analysis problem already and that using the if-else statement is not the right tool to solve the problem at hand.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;switch statement&lt;/h2&gt;
+
+&lt;p&gt;When the nature of the decision you need to make is a bit on the fuzzy side, it could be impractical to use the if-statement, for those kinds of decisions, you will use the switch-statement.&lt;/p&gt;
+
+&lt;p&gt;The syntax of the switch statement is;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  switch(expression) {
+    case CONSTANTEXPR:
+    case ENUMCONSTANTNAME:
+    default:
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;Where expression can either be a &lt;em&gt;char, byte, short, int&lt;/em&gt;. It can also be &lt;em&gt;Character, Byte, Short, Integer&lt;/em&gt; OR an &lt;em&gt;enum&lt;/em&gt; type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 8 (which at the time of writing is in Eary Access), you can now use String expressions on the &lt;em&gt;switch&lt;/em&gt; statement&lt;/p&gt;
+
+&lt;p&gt;The following code sample  extracts the day-of-week value from a &lt;em&gt;Calendar&lt;/em&gt; object. The day-of-week is returned as integer, which makes it perfect to filter using a &lt;em&gt;switch&lt;/em&gt; statement rather than nested &lt;em&gt;if&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  import java.util.Calendar;
+
+  class SwitchSample {
+
+    public static void main(String args[]){
+
+        Calendar now = Calendar.getInstance();
+        int dow = now.get(Calendar.DAY_OF_WEEK);
+
+        switch(dow) {
+            case 0:
+                System.out.println(&quot;Sunday&quot;);
+                break;
+            case 1:
+                System.out.println(&quot;Monday&quot;);
+                break;
+            case 2:
+                System.out.println(&quot;Tuesday&quot;);
+                break;
+            case 3:
+                System.out.println(&quot;Wednesday&quot;);
+                break;
+            case 4:
+                System.out.println(&quot;Thursday&quot;);
+                break;
+            case 5:
+                System.out.println(&quot;Friday&quot;);
+                break;
+            case 6:
+                System.out.println(&quot;Saturday&quot;);
+                break;
+            default:
+                System.out.println(&quot;What the value really is = &quot; + dow);
+            }
+        }
+  }
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 5: switch statement sample&lt;/div&gt;
+
+
+&lt;p&gt;The switch is really simple to use, just put the expression which you'd like to test as an argument to the switch statement, then have a series of case statements inside the switch body.&lt;/p&gt;
+
+&lt;p&gt;Each case statement corresponds to a value, if the value of the expression is equivalent to a case value, then instructions immediately right after the colon of the case statement will be executed/evaluated, in fact the rest of the statements will be evaluated, all the way down, until it gets to the last instruction at the bottom of the switch statement; that's not what your intention might be; that is the reason why I put a break statement. Once a case statement evaluates to true, Java blindly executes all the statements after that case, it won't even bother checking the other cases -- so note this, and be careful.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;while statement&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;while&lt;/em&gt; statement is used when you would like to perform some commands repeatedly, like in a loop. There is another statement in Java that does looping, that is the &lt;em&gt;for&lt;/em&gt; statement.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;while&lt;/em&gt; and &lt;em&gt;for&lt;/em&gt; loop may overlap at times because they have a similar function. For a beginner, it may not be quite obvious when to use one and not the other. The basic difference of the two statements though is that;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use the &lt;em&gt;while&lt;/em&gt; loop if you do not know how many times you need to loop&lt;/li&gt;
+&lt;li&gt;Use the &lt;em&gt;for&lt;/em&gt; loop if you actually know how many times you will need to go through the loop&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;A &lt;em&gt;while&lt;/em&gt; loop looks like the following&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  while(condition) {
+    statement 1;
+    statement 2;
+    statement n;
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The &lt;em&gt;condition&lt;/em&gt; is either a literal (the keywords true or false) or an expression that will evaluate to either true or false (boolean values).&lt;/p&gt;
+
+&lt;p&gt;The basic idea in a &lt;em&gt;while&lt;/em&gt; loop is this&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The condition is evaluated for the first time, if the condition is true or resolves to true, then;&lt;/li&gt;
+&lt;li&gt;Perform statement 1, then;&lt;/li&gt;
+&lt;li&gt;Perform statement 2, then;&lt;/li&gt;
+&lt;li&gt;Perform statement n, then;&lt;/li&gt;
+&lt;li&gt;The program detects that we are at the end of while block (the closing curly brace is the end of the while block)&lt;/li&gt;
+&lt;li&gt;The program will loop back to the condition and re-evaluate it again, if it still true, then;&lt;/li&gt;
+&lt;li&gt;Perform statement (again)&lt;/li&gt;
+&lt;li&gt;rinse repeat until you get the end of the end of the block again and until you get to re-evaluate the condition (again).&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;You will only drop off end of the while block if and when the condition evaluates to false. This is the reason it is best to remember that you need write code inside the while block that will make the condition false at some point in time, lest you end up in a perpetual loop.&lt;/p&gt;
+
+&lt;pre&gt;
+  import static java.lang.System.out;
+
+  class While {
+
+      public static void main (String [] args){
+  
+          boolean condition = true;
+          int counter = 0;
+
+          while(condition) {
+              out.println(counter);
+              counter = counter + 1;
+              if(counter &gt;10) {
+                  condition = false;
+              }
+          }
+      }
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The sample code above shows the use of a while statement. Always remember to put something inside your while loop that will make the conditon false at some point in time. A perpetual loop can be very difficult for a beginning programmer to spot.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;for statement&lt;/h2&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  for(beginning value; ending value; step) {
+      statement 1;
+      statement 2;
+      statement 3;
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The &lt;em&gt;for loop&lt;/em&gt; like the &lt;em&gt;while&lt;/em&gt; allows you to iterate and perform a group of statements over and over again. The for loop though, allows for more control.&lt;/p&gt;
+
+&lt;p&gt;A key concept in using the for loop is the automatic counter, the &lt;em&gt;step&lt;/em&gt;. The code will perform all the statements inside the block for a finite and determined number of times.&lt;/p&gt;
+
+&lt;p&gt;Each time that the whole block is evaluated, the &lt;em&gt;step&lt;/em&gt; value is incremented. The incremented step value is then compared to the &lt;em&gt;ending value&lt;/em&gt;, and when the ending value is reached, the for loop will then terminate. The program control will fall over to first statement immediately after the for loop block.&lt;/p&gt;
+
+&lt;pre&gt;
+  class for_sample {
+
+      public static void main (String [] args) {
+          for(int i=0; i&lt;=10;i++) {
+              System.out.println(i);
+          }
+      }
+  }
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 6: Sample use of the for loop&lt;/div&gt;
+
+
+&lt;p&gt;In the preceding example, we print some numeric values from zero (0) to ten (10). This is the exact thing that our &lt;em&gt;while&lt;/em&gt; example was doing earlier.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;break and continue&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;break&lt;/em&gt; and &lt;em&gt;continue&lt;/em&gt; keywords disrupts program flow inside loops, whether the for-loop or while-loop.&lt;/p&gt;
+
+&lt;pre&gt;
+  while(condition) {
+    statement 1;
+    statement 2;
+    break;
+    statement 3;
+    statement 4;
+  }
+
+  statement 5;
+  statement n;
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 7: break inside a while loop&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;em&gt;break&lt;/em&gt; statement caused the program flow inside a block to forcibly exit. In the sample code (Fig 7), as soon as the &lt;em&gt;break&lt;/em&gt; statement is encountered, the program control ignored statements 3 and 4. The while loop will go out of scope and program control will be transferred to the first executable statement immediately after the while block -- in this case, statement 5.&lt;/p&gt;
+
+&lt;p&gt;You normally will not use the &lt;strong&gt;break&lt;/strong&gt; statement in this fashion because it doesn't make sense. This statement is usually deployed with more logical finesse.&lt;/p&gt;
+
+&lt;pre&gt;
+  while(condition) {
+    statement 1;
+    statement 2;
+    
+    if(someCondition) {
+        break;
+    }   
+
+    statement 3;
+    statement 4;
+  }
+
+  statement 5;
+  statement n;
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Fig 8: Another sample of break statement&lt;/div&gt;
+
+
+&lt;p&gt;This is a more likely use of the &lt;em&gt;break&lt;/em&gt; statement. I should warn you though that this is a frowned upon practice. A truly structured programming should have only one entry point and one exit point. Because of the introduction the &lt;em&gt;break&lt;/em&gt; statement, our control structure now has one entry point and two exit points.&lt;/p&gt;
+
+&lt;p&gt;While this code is innocent enough right now, it could get very hairy and complicated. You will appreciate following the 1-entry-1-exit rule when you have had your fair share of debugging someone else's code and you are wading through a maze of nested structures with lots of breaks peppered into the source code &amp;mdash; and by then you will understand why nobody wants to work on a code they did not write themselves.&lt;/p&gt;
+
+&lt;p&gt;Next is the &lt;strong&gt;continue&lt;/strong&gt; keyword. Here is how it behaves.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  while(condition) {
+    statement 1;
+    statement 2;
+    continue;
+    statement 3;
+    statement 4;
+  }
+
+  statement 5;
+  statement n;
+&lt;/pre&gt;
+
+
+&lt;p&gt;When the &lt;em&gt;continue&lt;/em&gt; statement is encountered, statements 3 and 4 will be ignored, just like how it was with the break. Unlike the case in &lt;strong&gt;break&lt;/strong&gt; though, the loop will not go out of scope and will not be immediately terminated.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;continue&lt;/em&gt; statement will go back to the beginning of the loop and forcibly re-evaluate condition. If the condition is still true, then the loop continues normally.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;ARRAYS&lt;/h1&gt;
+
+
+
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;THE SIMPLEST PROGRAMS&lt;/h1&gt;
+
+
+&lt;p&gt;Before going any further with dry definitions of program structure and rules, let's pause for a while. Take the time to exercise your new found knowledge of programming. Let's do some &lt;a href=&quot;http://c2.com/cgi/wiki?FizzBuzzTest&quot;&gt;fizzbuzz&lt;/a&gt; exercises&lt;/p&gt;
+
+&lt;p&gt;A slight variation of the 'Hello World' program in Java. Take the time to read it. Try to see what is different about it.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+import static java.lang.System.*;
+
+class Hello {
+
+  public static void main (String[] args) {
+    out.println(&quot;Another Hello&quot;);
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;The above code sample is different in two points:&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;import&lt;/em&gt; statement &amp;mdash; in most &lt;em&gt;Hello&lt;/em&gt; codes, the import statement is not needed. The package &lt;em&gt;java.lang.&lt;/em&gt; is imported by default, that is why you don't need it. The Simplest.java source code needed the &lt;em&gt;import&lt;/em&gt; statement because it is not a simple import. It is a &lt;em&gt;static import&lt;/em&gt;, it allows you to make unqualified calls to static members of a class &amp;mdash; &lt;em&gt;out&lt;/em&gt; is a static member of the &lt;em&gt;System&lt;/em&gt; class, it means we can simply say &lt;em&gt;out.println&lt;/em&gt; instead of fully qualifying the call like System.out.println. Okay, this may not be the simplest code because it involves static members which are discussed on the OOP lessons, but it doesn't mean we shouldn't take advantage of the short hand call&lt;/p&gt;
+
+&lt;p&gt;The name of the source file is &lt;em&gt;Simplest.java&lt;/em&gt; but the name of the class is &lt;em&gt;Hello&lt;/em&gt;. There is no requirement for the name of the name of the class to be consistent with the name of the containing source file unless, the class defined has a &lt;em&gt;public&lt;/em&gt; scope.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;COMMAND LINE ARGUMENT&lt;/h2&gt;
+
+&lt;p&gt;You can pass command line argument to java programs. Command line arguments allows a java program to get information from the session environment (cmd or SHELL), for example, try to invoke the &lt;em&gt;Hello&lt;/em&gt; class using this call &lt;code class=&quot;codeblock&quot;&gt;$ java Hello World&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It did not result into any error, but it did not do anything new as well. That is because our code is not yet equipped of dealing with command line parameters. To deal with command line parameters, you need to access the &lt;em&gt;String&lt;/em&gt; array inside the &lt;em&gt;main()&lt;/em&gt; function&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+import static java.lang.System.*;
+
+class Hello {
+
+  public static void main (String[] args) {
+    out.println(args[0]);
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Run the program again with the command line parameters &lt;code class=&quot;codeblock&quot;&gt;$ java Hello World&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This code works now because &lt;em&gt;main&lt;/em&gt; function of Java accepts a parameter, an array of &lt;em&gt;Strings&lt;/em&gt; and because all words (tokens) immediately after the name of Java executable is converted into an array of String. During runtime, you may access the contents of this array. Let's make one more change on the source code&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+import static java.lang.System.*;
+
+class Hello {
+
+  public static void main (String[] args) {
+    out.println(&quot;Hello &quot; + args[0]);
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Run the code one more time, but this time around, pass your name as the argument.&lt;/p&gt;
+
+&lt;p&gt;You can concatenate Strings inside the &lt;em&gt;println()&lt;/em&gt; method, this helps out a bit when you are formatting the output a little bit. The arithmetic operator for addition works on Strings too, it adds the strings &amp;mdash; but it doesn't mean you can substract strings using the minus sign or divide or multiply. Only the + sign works on Strings&lt;/p&gt;
+
+&lt;p&gt;Our code, while prints prettier than its previous versions, is still very fragile. It can break easily. Try to invoke it without any command line parameter and see what happens &amp;mdash; if you tried it, you probably have seen the &lt;em&gt;ArrayIndexOutOfBounds&lt;/em&gt; exception message. The reason for that is because our program blindly assumes that the user will always pass one command line parameter. It always assumes that the &lt;em&gt;args[0]&lt;/em&gt; will contain a valid data. That is why when you did not pass anything on the command line, args[0] does not contain anything, hence the error. To address that error, Let's make the code a bit defensive&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+import static java.lang.System.*;
+
+class Hello {
+
+  public static void main (String[] args) {
+
+    if(args.length &gt; 0){
+      out.println(&quot;Hello &quot; + args[0]);
+    }
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;An array, like most things in Java is an object, which means it has methods and properties. It happens the &lt;strong&gt;length&lt;/strong&gt; property tells us the length of the array (how many elements it has). By doing a simple check if it the length of the array is more than zero, we can avoid the &lt;em&gt;ArrayIndexOutOfBounds&lt;/em&gt; error.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;ITERATING THROUGH COMMAND LINE PARAMETERS&lt;/h2&gt;
+
+&lt;p&gt;The current version of our code is bit more sturdy than its previous versions, it won't break easily if you forgot to pass an argument on the command line. It can deal already with zero command line arguments, but what it cannot do is deal with more than one argument. If you pass more than one argument to the program, it simply echoes only the first argument. It does not know how to deal with more than one argument &amp;mdash; lets fix that.&lt;/p&gt;
+
+&lt;pre&gt;
+import static java.lang.System.*;
+
+class Hello {
+
+  public static void main (String[] args) {
+    int length = args.length;
+    for(int i=0; i &lt; length; i++){
+      out.println(args[i]);
+    }
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;div id='cap'&gt;Simplest.java&lt;/div&gt;
+
+
+&lt;p&gt;We've completely replaced the &lt;em&gt;if&lt;/em&gt; structure with a looping structure, the for loop. By using and iteration mechanism, it is unecessary to maintain the &lt;em&gt;if&lt;/em&gt; statement because the for-loop can also deal with zero argument.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;OBJECT ORIENTED PROGRAMMING&lt;/h1&gt;
+
+
+&lt;p&gt;If you set out to truly understand how an automobile works, down to tiniest detail of how each nut and bolt performs, you could be in over your head &amp;mdash; especially if do not have a degree in mechanical engineering. On the other hand, if the goal is a simpler one such as &quot;to drive a car&quot;, it would seem to be a more achievable goal, by order of magnitudes. The mechanics of vehicle control such as steering, braking and accelerating are more manageable to keep in our heads as compared to principles of hydraulics or the inner workings of the internal combustion engine.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;COMPLEXITY&lt;/h2&gt;
+
+&lt;p&gt;We are surrounded by complex systems in our daily lives, and a career in programming will not shield you from that &amp;mdash; au contraire. Our saving grace is that we have gotten pretty good at dealing with complexities. Take for example the plants that you have at home, you don't need to know the gory details of its biological structure in order to know that you need to give it some sun and water lest it will die. Another example is the light switch, you don't need a degree in electrical engineering to know that you if you flip the switch one way, its lights out &amp;mdash; flip it another way and its lights on.&lt;/p&gt;
+
+&lt;p&gt;Computer scientist have grappled with complexities through the ages and have managed to develop tools to manage software complexities. One of the goals of complexity management is to engineer the illusion of simplicity &amp;mdash; to hide the working details of a complex system in order for it to be usable.&lt;/p&gt;
+
+&lt;p&gt;There appears to be an inherent limit in the capabilities of our brain to deal with a swarm of information, we just can't deal with all of it &amp;mdash; at once. The silver lining, like I mentioned earlier is that we have gotten pretty good at dealing with an avalanche of information. We have developed a coping mechanism called &quot;abstraction&quot;&lt;/p&gt;
+
+&lt;p&gt;A new employee on a large organization cannot and will not be able to comprehend all operational tasks that happens in the organization. He cannot possibly know the tiniest work details of each and every employee in the company. If you will just but give him a little time in the company, not only will be able to re-orient himself, he can also do something really productive that adds value to the company. So what happened between then and now? What makes us capable of navigating complex systems now but not then? The answer is, our minds oriented itself and adapted to its new environment.&lt;/p&gt;
+
+&lt;p&gt;Our minds focused on just a few items while ignoring the other inessential details of the others. It then moved on to other parts of the complex system forming hierarchies of concepts that builds on top of one and then another. The information bottleneck was broken by dealing with it in chunks. When we focus on specific chunks, we are choosing to deal with idealized and generalized model of the object right in front of us \cite{ooad} thus increasing its semantic content. This abstraction process is responsible why we are capable of understanding very complex systems.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;KEY CONCEPTS&lt;/h2&gt;
+
+&lt;p&gt;There are a couple of criteria that a programming language needs to meet before it can be considered a OOP language. It needs provide a facility to effectively implement the process of &lt;em&gt;abstraction&lt;/em&gt;. It needs to provide a way to reuse functionality by means of extension &amp;mdash; &lt;em&gt;inheritance&lt;/em&gt;. It needs to have a mechanism to protect data and type from inadvertent and unintentional state changes &amp;mdash; &lt;em&gt;encapsulation&lt;/em&gt;. It needs to have a mechanism to effect &lt;em&gt;polymorphism&lt;/em&gt; and it needs to have a mechanism for grouping some programming constructs such as methods and classes &amp;mdash; &lt;em&gt;encapsulation&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3&gt;ABSTRACTION&lt;/h3&gt;
+
+&lt;p&gt;Abstraction is an activity where the essential characteristics of &lt;em&gt;something&lt;/em&gt; is distilled. It makes that something different from other somethings. For example, if you think hard about an elevator and try to list down the characteristics, what would they be? How is an elevator different from other modes of transport such as an escalator or a conveyor?&lt;/p&gt;
+
+&lt;p&gt;We cannot simply list &lt;em&gt;move up&lt;/em&gt; and &lt;em&gt;move down&lt;/em&gt;, while these set of behaviors differentiate the elevator from the conveyor (which simply moves to the left and to the right), it does not differentiate it effectively from an escalator. Even if we incorporate the idea that an elevator stops in between floors, it still does not differentiate it because the escalator also takes us from floor to floor. We can incorporate the behavior of &lt;em&gt;skipping floors&lt;/em&gt; and that will be an effective differentiator because an escalator cannot skip floors.&lt;/p&gt;
+
+&lt;p&gt;If we summarize the &lt;em&gt;behavior&lt;/em&gt; of the elevator, we can come up with two,  &lt;em&gt;moveDownToFloor()&lt;/em&gt; and &lt;em&gt;moveUpToFloor()&lt;/em&gt;. That is the essence of an elevator object. The tricky part is how to know when to stop adding or removing behavior from an object. Unfortunately, abstraction is an acquired skill, and you can only get better at it overtime if you do it lots of times.&lt;/p&gt;
+
+&lt;p&gt;I can tell you from practice that abstraction is not so much as identifying a thousand (unimportant) behavior for an object. On the contrary, abstraction is more an exercise on reduction. Try to remove behavior from an object until you are down to a bare minimum. Let's take a shoe object for an example. You can remove the heels of a shoe and it still will be a shoe. You can remove the laces and it still (barely) is a shoe &amp;mdash; but you cannot remove its sole.&lt;/p&gt;
+
+&lt;p&gt;The abstracted list of behavior of an object is known as a &lt;em&gt;Type&lt;/em&gt; &amp;mdash; this is an important terminology in OOP and Java, that is why I am emphasizing it in this section. All objects in Java &lt;strong&gt;must have at least one type&lt;/strong&gt; &amp;mdash; it can have more, but not less.&lt;/p&gt;
+
+&lt;h3&gt;TYPE SYSTEM&lt;/h3&gt;
+
+&lt;p&gt;It might help if you think of a &lt;em&gt;Type&lt;/em&gt; as some sort of a contract or a promise from an object. The object is making a committment that it will respond to any other object or program who calls anyone of the methods within this type. Going back to the elevator example, it means that any Java object or program can call &lt;em&gt;elevator.moveDownTo()&lt;/em&gt; or &lt;em&gt;elevatorMoveUpTo()&lt;/em&gt; and they are guaranteed to get a response.&lt;/p&gt;
+
+&lt;p&gt;There are three ways to define a Type in Java, the &lt;em&gt;class&lt;/em&gt;, &lt;em&gt;abstract class&lt;/em&gt; and &lt;em&gt;interface&lt;/em&gt;. Each has its own strengths and inconveniences.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;OBJECTS, CLASSES AND TYPES&lt;/h2&gt;
+
+&lt;p&gt;An object is an abstraction of something useful to you (the programmer). An object represents an idealized and generalized model of something of interest. Take for example a Phone object, its protocols could be abstracted as &lt;em&gt;answerCall()&lt;/em&gt; and &lt;em&gt;dialNumber()&lt;/em&gt;. If we skip all the programming details of type creation, we can start using the object in a Java program , like in the following code.&lt;/p&gt;
+
+&lt;pre&gt;
+    Phone phone = new Phone();
+    phone.answerCall();
+    phone.dialNumber(&quot;6321234567&quot;);
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;Phone&lt;/em&gt; with an uppercase first letter is a type declaration and &lt;em&gt;phone&lt;/em&gt; all lowercase letter is variable of type &lt;em&gt;Phone&lt;/em&gt;. In the statement &lt;code class=&quot;codeblock&quot;&gt;int i=1;&lt;/code&gt; &lt;em&gt;int&lt;/em&gt; is the type and &lt;em&gt;i&lt;/em&gt; is a variable of type integer. The &lt;em&gt;new&lt;/em&gt; keyword is responsible for creating the Phone object and &lt;em&gt;Phone()&lt;/em&gt; is a special method called a &lt;em&gt;constructor&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;To invoke the behavior of an object, you simply need to call its method using the dot notation. That is what we did in the statements &lt;em&gt;phone.answerCall()&lt;/em&gt; and &lt;em&gt;phone.dialNumber()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Objects are made by instantiating &lt;em&gt;Classes&lt;/em&gt;, they our primary we will use to achieve abstraction. If we were to codify the Phone program in our example, it could look like the following:&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+class Phone {
+  String phonenumber=&quot;6321234567&quot;;
+    
+  void answerCall() {}
+  void dialNumber(String args) {}
+    }  
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;Phone.java&lt;/em&gt; is a Java class. It is constructed by using &lt;em&gt;class&lt;/em&gt; keyword followed by a name of the class .The open and close curly brace is the body of the class.&lt;/p&gt;
+
+&lt;p&gt;You can define methods and variables inside the class body. The collection of methods inside the class body constitutes the protocols of the object. They are the set of behavior that the Phone object guarantees to respond to.&lt;/p&gt;
+
+&lt;p&gt;Java classes are written on source files. Ideally one class definition per source file but you can define more than one class in a file. Classes are compiled using &lt;code class=&quot;codeblock&quot;&gt;javac sourcefile.java&lt;/code&gt; command, in our case, &lt;code class=&quot;codeblock&quot;&gt;java Phone.java&lt;/code&gt;. This will produce a file named &lt;em&gt;Phone.class&lt;/em&gt;, it is the compiled version of Phone.java. A compiled class is a requirement before you can instantiate objects.&lt;/p&gt;
+
+&lt;p&gt;Let's summarize in code what we've discussed so far.&lt;/p&gt;
+
+&lt;pre&gt;
+    import static java.lang.System.out;
+
+    class Phone {
+    String phonenumber=&quot;6321234567&quot;;
+   
+    void answerCall() {
+        out.println(&quot;Answering call...&quot;);
+    }
+    void dialNumber(String args) {
+        out.println(&quot;Calling &quot; + args);
+    }
+    void setPhoneNumber(String args) {
+        phonenumber = args;
+    }
+    }
+
+    class PhoneTest {
+
+    public static void main (String [] args) {
+        Phone p1 = new Phone();
+        p1.answerCall();
+        p1.dialNumber(&quot;6329876543&quot;);
+      
+        Phone p2 = new Phone();
+        p2.answerCall();
+        p2.dialNumber(&quot;6327778888&quot;);
+    }
+    }
+  
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Phone.java&lt;/div&gt;
+
+
+&lt;p&gt;The PhoneTest program shows a more complete example of how you might use the Phone object. The PhoneTest class is not necessary because the &lt;em&gt;main()&lt;/em&gt; function could have been easily written inside Phone class, but the verbosity of two classes was chosen to make the example more readable and less confusing for beginner programmers.&lt;/p&gt;
+
+&lt;h3&gt;INSTANTIATION&lt;/h3&gt;
+
+&lt;p&gt;To create an object, you need to instantiate a class. The resulting object now has the protocols or the &lt;em&gt;Type&lt;/em&gt; of that class. You can begin using the object according to the protocols that was defined by its class. The protocols needs to be followed strictly, if the method defined is &lt;em&gt;dialNumber(String args)&lt;/em&gt;, you need to call the method exactly as it was defined. The spelling needs to be right, the casing of the letters needs to be right and if the method expects an argument or parameter to be passed, you need to pass the expected parameter, in the case of the &lt;em&gt;dialNumber&lt;/em&gt; method, it expects a String parameter.&lt;/p&gt;
+
+&lt;p&gt;The PhoneTest program defines the &lt;em&gt;setPhoneNumber()&lt;/em&gt; method and the &lt;em&gt;phonenumber&lt;/em&gt; variable. The class initially defines its own phone number via the phonenumber variable, but it also offers a way to change this phone number. The &lt;em&gt;setPhoneNumber&lt;/em&gt; method was declared to facilitate a way to change an internal detail of the class. If the &lt;em&gt;setPhoneNumber&lt;/em&gt; method is called passing a new phone number, the object's state will change. It will have a new phone number.&lt;/p&gt;
+
+&lt;h3&gt;ENCAPSULATION&lt;/h3&gt;
+
+&lt;p&gt;Classes provides a way to package data and behavior in a single construction. The &lt;em&gt;phonenumber&lt;/em&gt; variable is not foreign or external to &lt;em&gt;Phone Type&lt;/em&gt;, it is an instrinsic property of the Phone. The &lt;em&gt;setPhoneNumber&lt;/em&gt; method is also intrinsic to the Phone. If you invoke the &lt;em&gt;setPhoneNumber&lt;/em&gt; method, it will act on a data that belongs to the Phone object, not something alien to the Phone. Java enforces this kind of encapsulation in a strict fashion. There is no way to define a stand-alone method or a stand-alone variable, every method and every variable needs to be associated with a &lt;em&gt;Type&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The concept of objects, classes and types are intertwined. Understanding these concepts individually and collectively forms one of the basis of effective Java programming.&lt;/p&gt;
+
+&lt;p&gt;Objects are created from classes. You cannot create an object without a class definition. When you create an object, the process is known as &lt;em&gt;instantiation&lt;/em&gt;. An instantiated class &amp;mdash; an object &amp;mdash; can respond to messages or methods as long as the methods are within the defined protocols of the class.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;Type&lt;/em&gt; is a collection of methods. One way to define a &lt;em&gt;Type&lt;/em&gt; is to define a class &amp;mdash; there are two other ways but they will be deferred for later discussion. It is not correct to say that a class has a type. It is correct to say that a class is a Type, just as it is correct to say that an object has a Type &amp;mdash; the Type that was defined by the class.&lt;/p&gt;
+
+&lt;p&gt;To illustrate the relationship between a class and an object, try imagining a house plan, a blueprint if you may &amp;mdash; the kinds of drawings that architects produce before building a house. If we build one house out of an architect's blueprint, we can say that the physical house that was built is an instance of the blueprint.&lt;/p&gt;
+
+&lt;p&gt;If we build another house using the same architect's blueprint, we can say that the second house is another instance of the architect's blueprint. Now there are two houses built from the same blueprint. Even if the two houses will be identical because of their structural similarities, they are actually two distinct houses, they are not one and the same. They will be inhabited by different people, they may differ in roof colors or interior paints etc. That is exactly what's going on as well between &lt;em&gt;classes&lt;/em&gt; and &lt;em&gt;bjects&lt;/em&gt;. Classes are the blueprints from whence objects come from.&lt;/p&gt;
+
+&lt;p&gt;Going back to the Phone example, if we wanted to create other Phone objects, we simply need to instantiate the Phone class again.&lt;/p&gt;
+
+&lt;pre&gt;
+    import static java.lang.System.out;
+
+    class Phone {
+    String phonenumber=&quot;6321234567&quot;;
+    void answerCall() {
+        out.println(&quot;Answering call...&quot;);
+    }
+    void dialNumber(String args) {
+        out.println(&quot;Calling &quot; + args);
+    }
+        void setPhoneNumber(String args) {
+        phonenumber = args;
+    }
+    }
+
+    class PhoneTest {
+
+      public static void main (String [] args){
+      Phone p1 = new Phone();
+      p1.answerCall();
+      p1.dialNumber(&quot;6329876543&quot;);
+      
+      Phone p2 = new Phone();
+            p2.setPhoneNumber(&quot;6329995555&quot;);
+      p2.answerCall();
+      p2.dialNumber(&quot;6327778888&quot;);
+    }
+    }
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Phone.java&lt;/div&gt;
+
+
+&lt;h3&gt;STATE ENCAPSULATION&lt;/h3&gt;
+
+&lt;p&gt;The variables &lt;em&gt;p1&lt;/em&gt; and &lt;em&gt;p2&lt;/em&gt; are both of type Phone but they are two distinct objects. They have two different states (phone numbers). You can manipulate one phone object without impacting the state of the other. This characteristic of objects allows for a more sane and rational programming environment.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;CONSTRUCTORS&lt;/h2&gt;
+
+&lt;p&gt;Object creation requires four things, the type of object to be created, a variable to store the reference of the created object, the &lt;em&gt;new&lt;/em&gt; keyword to effect the actual creation and a &lt;em&gt;constructor&lt;/em&gt;. You have seen and used all these things with the exception of the last one, the constructor. In the statement &lt;code class=&quot;codeblock&quot;&gt;Phone p1 = new Phone()&lt;/code&gt;, &lt;em&gt;Phone&lt;/em&gt; is the type and &lt;em&gt;Phone()&lt;/em&gt; is the constructor.&lt;/p&gt;
+
+&lt;p&gt;A constructor call is a method, first and foremost but it is not an ordinary method. It is special because it bears the same name as that of the class where it is declared and unlike ordinary methods, it is not written with a &lt;em&gt;return type&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Constructors are important, you cannot create objects without them. They are of extreme importance that Java will actually supply a default constructor in case you do not provide one explicitly.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+    class Phone {
+
+        public static void main(String []args) {
+            Phone p1 = new Phone();
+        }
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;In the preceding code sample, we did not define an explicit constructor but we were still able to call &lt;code class=&quot;codeblock&quot;&gt;new Phone()&lt;/code&gt;. The reason for this is because Java supplied our code with a default &lt;em&gt;no-arg constructor&lt;/em&gt; (no argument constructor). As if we had written something like&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+    class Phone {
+
+        Phone() {
+        }
+
+        public static void main(String []args) {
+            Phone p1 = new Phone();
+        }
+    }  
+&lt;/pre&gt;
+
+
+&lt;p&gt;There is also no &lt;em&gt;return&lt;/em&gt; statement within the body of the constructor. When the constructor returns, it will create an object of type Phone, the variable &lt;em&gt;p1&lt;/em&gt; will hold a reference (an address) to actual Phone object.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;INHERITANCE POLYMORPHISM&lt;/h2&gt;
+
+&lt;p&gt;A class can re-use all the codes and functionalities of another class by means of extension. The class being extended is typically called the &lt;em&gt;parent class&lt;/em&gt; (sometimes also called super class or base class) and the extending class is called a &lt;em&gt;child class&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Class extension grants the child class all the inheritable methods and variables of the super class. The instant functionality gained from class extension impacts the productivity of the programmer in a positive way. If the abstractions are done carefully and rationally, it becomes possible to write a piece of code that can be used in other applications.&lt;/p&gt;
+
+&lt;pre&gt;
+    import static java.lang.System.out;
+
+    class Telephone {
+        String phonenumber;
+    
+        void init() {
+            out.println(&quot;connecting to carrier via land line&quot;);
+        }
+        void dialNumber(String args) {
+            out.println(&quot;Dialling &quot; + args);
+        }
+        void answerCall() {
+            out.println(&quot;Answering call...&quot;);
+        }   
+    }
+
+    class MobilePhone extends Telephone {}
+
+    class TelephoneTest {
+
+        public static void main(String[] args) {
+
+            MobilePhone mp = new MobilePhone();
+
+            mp.init();
+            mp.dialNumber(&quot;6327775566&quot;);
+            mp.answerCall();
+
+        }
+    }
+&lt;/pre&gt;
+
+
+&lt;h3&gt;EXTENDS&lt;/h3&gt;
+
+&lt;p&gt;In the sample code, the &lt;em&gt;MobilePhone&lt;/em&gt; type was created by defining a class. The class block does not contain any definition and yet we were able to call the &lt;em&gt;init&lt;/em&gt;, &lt;em&gt;dialNumber&lt;/em&gt; and &lt;em&gt;answerCall&lt;/em&gt; methods against it &amp;mdash; these methods, though not explicitly defined inside the &lt;em&gt;MobilePhone&lt;/em&gt; class has been inherited from the &lt;em&gt;Telephone&lt;/em&gt; class. The &lt;em&gt;extends&lt;/em&gt; keyword is used to denote that one class is inheriting from another class.&lt;/p&gt;
+
+&lt;h3&gt;JAVA'S ROOT CLASS&lt;/h3&gt;
+
+&lt;p&gt;Class extension is not an optional activity in Java programming. A Java class needs to extend &lt;em&gt;at least and at most&lt;/em&gt; one other class. All newly defined classes, by default, extends the &lt;em&gt;java.lang.Object&lt;/em&gt; class, unless otherwise overriden by an explicit &lt;em&gt;extends&lt;/em&gt; declaration. In Listing 4.5, class Telephone is not explicitly extending any class, hence it is a child class of &lt;em&gt;Object&lt;/em&gt;--it is as if we had written;&lt;/p&gt;
+
+&lt;pre&gt;
+    class Telephone extends Object {
+
+    }
+    class MobilePhone extends Telephone {
+
+    }  
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;MobilePhone&lt;/em&gt; does not extend &lt;em&gt;Object&lt;/em&gt; because we declared explicitly that it extends Telephone. You will realize soon enough that every class in Java descends either directly or indirectly from &lt;em&gt;java.lang.Object&lt;/em&gt;. It is the root class of all objects in Java&lt;/p&gt;
+
+&lt;h3&gt;SINGLE ROOTED INHERITANCE&lt;/h3&gt;
+
+&lt;p&gt;I would not advise that you explicitly declare all your classes to extend from Object. Firstly because Java will do that for you implicitly and secondly because you can only extend one class. There is no way to achieve multiple class inheritance. Java follows a single-rooted class inheritance, once you have extended a class, you cannot inherit from another one. That is not to say multiple inheritance cannot be achieved in Java, it can be, using &lt;em&gt;interfaces&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3&gt;INTERFACES&lt;/h3&gt;
+
+&lt;p&gt;Creating a class is one of three ways to define a &lt;em&gt;Type&lt;/em&gt;. The second way is to create an &lt;em&gt;interface&lt;/em&gt;. An interface is the purest form of a type because it only contains the protocols but not the implementing details of the object. The class on the otherhand contains both the protocol (the Type) and the implementing details (body of the functions).&lt;/p&gt;
+
+&lt;pre&gt;
+    interface Phone {
+        void answerCall();
+        void dialNumber(String args);
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;An interface is declared using the &lt;em&gt;interface&lt;/em&gt; keyword followed by a name ^[The name of interfaces are programmer defined, like the class]. The opening and closing curly braces comprises the body of the interface.&lt;/p&gt;
+
+&lt;p&gt;Methods are variables can be declared in an interface, but they are not the kind of variables and methods that you would declare insie the class. Interfaces can only contain &lt;em&gt;abstract methods&lt;/em&gt;, which makes sense because interfaces are supposed to contain only the Type information and not the implementation detail. An abstract method declares only the method signature ^[Method signature is the return type, name of the method and parameters that it accepts] and has a semi-colon immediately right after, in place of the usual method body. If you declare variables inside the interfaces, they will be automatically &lt;em&gt;final, static&lt;/em&gt; and &lt;em&gt;public&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+    interface IPhone {
+        void answerCall();
+        void dialNumber(String args);
+    }
+
+    class Phone implements IPhone {
+        public void answerCall() {
+            System.out.println(&quot;Answering call&quot;);
+        }
+        public void dialNumber(String args){
+            System.out.println(&quot;Calling &quot; + args);
+        }
+
+        public static void main(String[] args) {
+            Phone p = new Phone();
+            p.dialNumber(&quot;632444888&quot;);
+            p.answerCall();
+        }
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;Interfaces are not meant to be instantiated, they are meant for type extensions (inheritance). To use interfaces, they must be &lt;em&gt;implemented&lt;/em&gt; by a class. The code sample of listing 4.7 shows a Phone class inheriting the type &lt;em&gt;IPhone&lt;/em&gt; using the &lt;em&gt;implements&lt;/em&gt; keyword.&lt;/p&gt;
+
+&lt;h3&gt;INHERITING FROM AN INTERFACE BINDS YOU TO A CONTRACT&lt;/h3&gt;
+
+&lt;p&gt;When you implement an interface, you are entering into a contract, that you will &lt;em&gt;implement&lt;/em&gt; whatever methods you have inherited. Implementing a method means that you will provide the details of the function. You will supply the function body.&lt;/p&gt;
+
+&lt;p&gt;At first glance, it looks like more work for the programmer because you are duplicating code. First you will write the interface but the methods doesn't have details, then you will implement in a class then supply the details of the method. This argument maybe true for trivial applications ^[I would define a trivial application as something that you don't intend to maintain or improve in the course of years. A disposable application], but for non-trivial applications, coding against an interface rather than a concrete class is good way to use the Java typing system to achieve maintainability of code. Another reason to use interfaces is when you truly need multiple inheritance. Let us expand the Phone program.&lt;/p&gt;
+
+&lt;pre&gt;
+
+    import static java.lang.System.out;
+
+    interface Printer {
+        void print();
+    }
+
+    interface Phone {
+        void answerCall();
+        void dialNumber(String args);
+    }
+  
+    interface Copier {
+        void copy();
+    }
+
+    class MultiFunction implements Printer, Phone, Copier {
+        public void print() {
+            out.println(&quot;Printing&quot;);
+        }
+        public void answerCall() {
+            out.println(&quot;Answering call&quot;);
+        }
+        public void dialNumber(String args) {
+            out.println(&quot;Dialling &quot; + args);
+        }
+        public void copy() {
+            out.println(&quot;Copying&quot;);
+        }   
+    }
+
+    class TestMultiFunction {
+
+        public static void main(String[] args) {
+            Printer printer = new MultiFunction();
+            Phone phone = new MultiFunction();
+            Copier copier = new MultiFunction();
+        
+            printer.print();
+            phone.answerCall();
+            copier.copy();
+        
+            System.out.println(copier.toString());
+            copier.print();
+        }
+    }
+  
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;MultiFunction.java&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;em&gt;Multifunction.java&lt;/em&gt; code defines three interfaces, the &lt;em&gt;Phone&lt;/em&gt;, &lt;em&gt;Printer&lt;/em&gt; and the &lt;em&gt;Copier&lt;/em&gt;. The class &lt;em&gt;MultiFunction&lt;/em&gt; implements all three interfaces.&lt;/p&gt;
+
+&lt;p&gt;This code is saying that &amp;mdash; MultiFunction &lt;em&gt;is a&lt;/em&gt; Printer, it &lt;em&gt;is also a Copier&lt;/em&gt; and a &lt;em&gt;Phone&lt;/em&gt;. As such, a MultiFunction object should behave as a Phone, a Printer or Copier will behave. That is the object contract between these three interfaces and the class.&lt;/p&gt;
+
+&lt;p&gt;If you review the codes inside &lt;em&gt;TestMultiFunction&lt;/em&gt;, we  did not use the MultiFunction type when the object was created, we used the Type name as specified on the &lt;em&gt;interface&lt;/em&gt; definitions. Let's recap that portion of the code&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+    Printer printer = new MultiFunction();
+    Phone phone = new MultiFunction();
+    Copier copier = new MultiFunction();
+        
+    printer.print();
+    phone.answerCall();
+    copier.copy();
+&lt;/pre&gt;
+
+
+&lt;p&gt;Had we use the code &lt;code class=&quot;codeblock&quot;&gt;&lt;/code&gt;MultiFunction printer = new MultiFunction()&lt;/code&gt; , it would have been fine. The code will still compile and run perfectly. So why didn't we do that? Because I only need a &lt;em&gt;Printer&lt;/em&gt;, I chose a more general type because I am not sure that I will not change the implementation details of the &lt;em&gt;print()&lt;/em&gt; method in the future.&lt;/p&gt;
+
+&lt;p&gt;It can be argued that if I need to change some details of the &lt;em&gt;print()&lt;/em&gt; function, I should just go inside the MultiFunction class and change it, but I would rather not do that for a host of reasons. The most important one being that at some point, some of my codes maybe depending on how I actually implemented the print function inside the MultiFunction class. If I change that, some parts of the application could break.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, using the &lt;em&gt;Printer&lt;/em&gt; interface as a type allows me to achieve loose coupling between the type and its actual implementation. If I need to change some of the details of print() function, I could simply create another class that implements the &lt;em&gt;Printer&lt;/em&gt; type and make that adjustments on the new class. This approach has some level of encapsulation because I am containing the possible (negative) impact of code change.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+    //If I need to change something on the print function()
+    class ColorPrinter implements Printer {
+        public void print() {
+            ...
+        }
+    }
+
+    Printer printer = new ColorPrinter();
+&lt;/pre&gt;
+
+
+&lt;p&gt;The above code shows a possible approach if I really need to make adjustments to the print() function in the future.&lt;/p&gt;
+
+&lt;p&gt;All Java objects will have at least one type, but usually it has more than one. The MultiFunction object we have created actually has five. It is a &lt;em&gt;Copier, Printer, Phone, MultiFunction&lt;/em&gt; and a &lt;em&gt;java.lang.Object&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Copier, Printer and Phone types are easy to see, they were explicitly implemented by MultiFunction, so that's three. The fourth one (MultiFunction) is not very obvious, but whenever you create a new class, you are creating a new Type. Whatever object you will create out of that class will also bear its type. Our object's fifth type is &lt;em&gt;java.lang.Object&lt;/em&gt;. That is because no matter what you do, at some point, your class will extend the &lt;em&gt;Object&lt;/em&gt; class, either directly or indirectly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/object-type.png&quot;&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;Types&lt;/div&gt;
+
+
+&lt;h3&gt;POLYMORPHISM&lt;/h3&gt;
+
+&lt;p&gt;Did you notice that he &lt;em&gt;MultiFunction&lt;/em&gt; object needed to re-define all the methods it has inherited from the three interfaces? We had to re-define &lt;em&gt;print(), copy, answerCall() and dialNumber()&lt;/em&gt;. Re-defining a method in a subtype is called &lt;em&gt;method overriding&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Overriding a method is done in order for the inheriting class to have a chance to define a unique behavior for the method. For example, the MultiFunction object inherited the &lt;em&gt;copy()&lt;/em&gt; from the &lt;em&gt;Copier&lt;/em&gt; interface. What it effectively means is that MultiFunction is making a promise that because it is now a &lt;em&gt;Copier&lt;/em&gt; object, it will respond to the &lt;em&gt;copy()&lt;/em&gt; message if invoked. The Copier interface did not specify any behavior for the method, it is up to the implementing class (MultiFunction) to provide the behavior. The provision of behavior for an inherited method can be done using method overriding.&lt;/p&gt;
+
+&lt;pre&gt;
+    interface Shape {
+        void draw();
+    }
+
+    class Square implements Shape {
+        public void draw() {
+            System.out.println(&quot;Drawing a square&quot;);
+        }
+    }
+
+    class Circle implements Shape {
+        public void draw() {
+            System.out.println(&quot;Drawing a circle&quot;);
+        }
+    }
+
+    class TestShape {
+
+        public static void main(String[] args) {
+            Shape square = new Square();
+            Shape circle = new Circle();
+            square.draw();
+            circle.draw();
+        }
+    }
+
+&lt;/pre&gt;
+
+
+
+
+&lt;div id=&quot;cap&quot;&gt;Shape.java&lt;/div&gt;
+
+
+&lt;p&gt;The Shape program is a very trivial and non-realistic example, but the simplicity should aid our understanding of why we use overriding.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;Shape&lt;/em&gt; type could have been written as a class. The &lt;em&gt;Square&lt;/em&gt; and &lt;em&gt;Circle&lt;/em&gt; classes could have &lt;strong&gt;extended&lt;/strong&gt; a Shape class instead of implemented a Shape interface. Why didn't we do that? Here are the reasons&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Shape is not a real object (even in the real world). Shape is a name we give to describe the contour of something, the state of something. It is not &lt;em&gt;something&lt;/em&gt;. Just like animal is the classification we give to cats and dogs. A cat is a real thing, a dog is a real thing, an animal is not. Animal is a &lt;em&gt;type&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;If you think about it hard enough, can &lt;em&gt;Shape&lt;/em&gt; really draw something, will it make sense?&lt;/li&gt;
+&lt;li&gt;It makes sense that Circle and Square descend from a common type, after all Circle and Square are, well, shapes.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;The &lt;em&gt;draw()&lt;/em&gt; method are both available in Circle and Square, but they have different implementations or behavior (method body). This was possible because we have overriden the draw() method where it makes sense. It makes the &lt;code class=&quot;codeblock&quot;&gt;draw()&lt;/code&gt; method polymorphic, it changes its behavior depending on which object you are calling it against.&lt;/p&gt;
 </content>
  </entry>
  
