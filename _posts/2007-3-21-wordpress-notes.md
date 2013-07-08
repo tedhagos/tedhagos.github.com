@@ -473,7 +473,7 @@ This template looks a lot like the index template, but there are minor differenc
 
 1. [CODEX.WordPress](http://codex.wordpress.org/Theme_Development) 
 1. [CODEX/WordPress](http://codex.wordpress.org/Function_Reference/) - WordPress Function Reference
-3. [Parameters]: http://codex.wordpress.org/Function_Reference/the_time "Codex.Wordpress, the_time function reference"
+3. [Parameters](http://codex.wordpress.org/Function_Reference/the_time) "Codex.Wordpress, the_time function reference"
 
 
 
