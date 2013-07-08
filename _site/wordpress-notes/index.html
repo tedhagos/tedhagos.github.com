@@ -45,6 +45,7 @@ p, ol, li , .content-meta {
   line-height: 160%;
   letter-spacing: 110%;
 }
+
 em {
   font-style:oblique;
   font-family: Georgia;
@@ -266,91 +267,36 @@ a:link, a:visited { color: #B10000; }
 }
 
 pre {
+
 	font-family: 'Muli';
   font-size: 15px;
   color: #000000;
   background: #f0e9ec;
 	padding: 10px;
 	margin-bottom:0px;
-  line-height: 160%;  
+  line-height: 160%; 
+
 }
 
   pre.codeblock, code.codeblock {
+    
     font-family: 'Muli';
     font-size: 15px;
     color: #003D82;
     font-weight: normal;
     background: #F8F5F6; 
     border: 0;
+
   }
 
-code  {  
-  font-family: 'Muli';
-  background: #f0e9ec;
-}
-
-.hll { background-color: #f0e9ec;  }
-.c { color: #408080; font-style: normal } /* Comment */
-.err { border: 0px solid #FF0000 } /* Error */
-.k { color: #008000; font-weight: normal} /* Keyword */
-.o { color: #666666 } /* Operator */
-.cm { color: #408080; font-style: normal } /* Comment.Multiline */
-.cp { color: #BC7A00 } /* Comment.Preproc */
-.c1 { color: #408080; font-style: normal } /* Comment.Single */
-.cs { color: #408080; font-style: normal } /* Comment.Special */
-.gd { color: #A00000 } /* Generic.Deleted */
-.ge { font-style: normal } /* Generic.Emph */
-.gr { color: #FF0000 } /* Generic.Error */
-.gh { color: #000080; font-weight: normal } /* Generic.Heading */
-.gi { color: #00A000 } /* Generic.Inserted */
-.go { color: #808080 } /* Generic.Output */
-.gp { color: #000080; font-weight: normal } /* Generic.Prompt */
-.gs { font-weight: normal } /* Generic.Strong */
-.gu { color: #800080; font-weight: normal } /* Generic.Subheading */
-.gt { color: #0040D0 } /* Generic.Traceback */
-.kc { color: #008000; font-weight: normal } /* Keyword.Constant */
-.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.kp { color: #008000 } /* Keyword.Pseudo */
-.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.kt { color: #B00040 } /* Keyword.Type */
-.m { color: #666666 } /* Literal.Number */
-.s { color: #BA2121 } /* Literal.String */
-.na { color: #7D9029 } /* Name.Attribute */
-.nb { color: #008000 } /* Name.Builtin */
-.nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.no { color: #880000 } /* Name.Constant */
-.nd { color: #AA22FF } /* Name.Decorator */
-.ni { color: #999999; font-weight: bold } /* Name.Entity */
-.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.nf { color: #0000FF } /* Name.Function */
-.nl { color: #A0A000 } /* Name.Label */
-.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.nt { color: #008000; font-weight: bold } /* Name.Tag */
-.nv { color: #19177C } /* Name.Variable */
-.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.w { color: #bbbbbb } /* Text.Whitespace */
-.mf { color: #666666 } /* Literal.Number.Float */
-.mh { color: #666666 } /* Literal.Number.Hex */
-.mi { color: #666666 } /* Literal.Number.Integer */
-.mo { color: #666666 } /* Literal.Number.Oct */
-.sb { color: #BA2121 } /* Literal.String.Backtick */
-.sc { color: #BA2121 } /* Literal.String.Char */
-.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.s2 { color: #BA2121 } /* Literal.String.Double */
-.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.sh { color: #BA2121 } /* Literal.String.Heredoc */
-.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.sx { color: #008000 } /* Literal.String.Other */
-.sr { color: #BB6688 } /* Literal.String.Regex */
-.s1 { color: #BA2121 } /* Literal.String.Single */
-.ss { color: #19177C } /* Literal.String.Symbol */
-.bp { color: #008000 } /* Name.Builtin.Pseudo */
-.vc { color: #19177C } /* Name.Variable.Class */
-.vg { color: #19177C } /* Name.Variable.Global */
-.vi { color: #19177C } /* Name.Variable.Instance */
-.il { color: #666666 } /* Literal.Number.Integer.Long */
+  code * {
+    font-family: 'Muli';
+    color: #000000;
+    background: #f0e9ec;
+  }
   
+  .hll {background: #f0e9ec;}
+
 </style>
 
     <!--
@@ -380,7 +326,15 @@ code  {
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
-        <h1 class="chapter">PRE-REQUISITE SKILLS</h1>
+        <h1>DOCUMENT HISTORY</h1>
+
+<ul>
+<li>21 Mar 2007 &mdash; created</li>
+<li>05 Jun 2010 &mdash; revised to reflect tools on OSX</li>
+</ul>
+
+
+<h1 class="chapter">PRE-REQUISITE SKILLS</h1>
 
 
 <p>The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP.</p>
@@ -613,25 +567,24 @@ define('DB_COLLATE', '');
 
 <p>You should start with a very spartan index template, like this</p>
 
-<div>
-  <pre><code class='php'>&lt;html&gt;
-&lt;body&gt;
-&lt;?php if(have_posts()) : ?&gt;
-    &lt;?php while (have_posts()) : the_post();?&gt;
-        
-    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
-  &lt;?php the_excerpt();?&gt;
+<div class="highlight"><pre><code class="php"><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">while</span> <span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="nx">the_post</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span>
+<span class="x">    &lt;a href=&#39;</span><span class="cp">&lt;?php</span> <span class="nx">the_permalink</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x">&#39;&gt;&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="nx">the_title</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;&lt;/a&gt;</span>
+<span class="x">  </span><span class="cp">&lt;?php</span> <span class="nx">the_excerpt</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
 
-    &lt;?php endwhile;?&gt;
-  
-    &lt;?php else :?&gt;
-        &lt;h1&gt;Yikes!&lt;/h1&gt;
-    No post!
-&lt;?php endif;?&gt;    
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">  </span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">else</span> <span class="o">:?&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Yikes</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+    <span class="nx">No</span> <span class="nx">post</span><span class="o">!</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">endif</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">   </span>
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
 
 
 <p>The outermost control structure is an <em>if</em> construct. The <em>have_post()</em> function queries if there are any post in the <em>wp_post</em> table, if at least one is found, we can proceed to loop, otherwise, the "Yikes" message will be seen the user.</p>
@@ -659,47 +612,44 @@ define('DB_COLLATE', '');
 
 <p>If you create the files <em>header.php</em> and <em>footer.php</em> in your theme template files, their content will be pulled when you invoke the <em>get_header</em> and <em>get_footer</em> functions. Let's revise the <em>index.php</em> template we coded earlier</p>
 
-<div>
-  <pre><code class='php'>&lt;html&gt;
-&lt;body&gt;
-&lt;?php get_header(); ?&gt;
-&lt;?php if(have_posts()) : ?&gt;
-    &lt;?php while (have_posts()) : the_post();?&gt;
-        
-    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
-  &lt;?php the_excerpt();?&gt;
+<div class="highlight"><pre><code class="php"><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">while</span> <span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="nx">the_post</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span>
+<span class="x">    &lt;a href=&#39;</span><span class="cp">&lt;?php</span> <span class="nx">the_permalink</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x">&#39;&gt;&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="nx">the_title</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;&lt;/a&gt;</span>
+<span class="x">  </span><span class="cp">&lt;?php</span> <span class="nx">the_excerpt</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
 
-    &lt;?php endwhile;?&gt;
-  
-    &lt;?php else :?&gt;
-        &lt;h1&gt;Yikes!&lt;/h1&gt;
-    No post!
-&lt;?php endif;?&gt;    
-&lt;?php get_footer(); ?&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">  </span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">else</span> <span class="o">:?&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Yikes</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+    <span class="nx">No</span> <span class="nx">post</span><span class="o">!</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">endif</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">   </span>
+<span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
 
 
 <p>Create the files <em>header.php</em> and <em>footer.php</em> on your theme folder. Start simple so it's easier to troubleshoot, put some basic content first.</p>
 
 <h3>header.php</h3>
 
-<div>
-  <pre><code class='php'>&lt;!-- HEADER.php --&gt;
-Home  | email | about</code></pre>
-</div>
+<div class="highlight"><pre><code class="php"><span class="x">&lt;!-- HEADER.php --&gt;</span>
+<span class="x">Home  | email | about</span>
+</code></pre></div>
 
 
 <p>A basic navigation, but without the hyperlinks yet</p>
 
 <h3>footer.php</h3>
 
-<div>
-  <pre><code class='php'>&lt;!-- FOOTER.php --&gt;
-&lt;hr/&gt;
-Copyright &amp;copy; 2013, theLogBox</code></pre>
-</div>
+<div class="highlight"><pre><code class="php"><span class="x">&lt;!-- FOOTER.php --&gt;</span>
+<span class="x">&lt;hr/&gt;</span>
+<span class="x">Copyright &amp;copy; 2013, theLogBox</span>
+</code></pre></div>
 
 
 <p>A basic copyright notice</p>
@@ -712,34 +662,33 @@ Copyright &amp;copy; 2013, theLogBox</code></pre>
 
 <p>We will revise the <em>index.php</em> again, this time, we will separate the regions of our resulting HTML files so that we can select each region and apply the appropriate styling instructions on them.</p>
 
-<div>
-  <pre><code class='php'>&lt;html&gt;
-&lt;body&gt;
-&lt;header&gt;
-    &lt;?php get_header(); ?&gt;
-&lt;/header&gt;
+<div class="highlight"><pre><code class="php"><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;header&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/header&gt;</span>
 
-&lt;content&gt;
-&lt;?php if(have_posts()) : ?&gt;
-    &lt;?php while (have_posts()) : the_post();?&gt;
-        
-    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
-  &lt;?php the_excerpt();?&gt;
+<span class="x">&lt;content&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">while</span> <span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="nx">the_post</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span>
+<span class="x">    &lt;a href=&#39;</span><span class="cp">&lt;?php</span> <span class="nx">the_permalink</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x">&#39;&gt;&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="nx">the_title</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;&lt;/a&gt;</span>
+<span class="x">  </span><span class="cp">&lt;?php</span> <span class="nx">the_excerpt</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
 
-    &lt;?php endwhile;?&gt;
-  
-    &lt;?php else :?&gt;
-        &lt;h1&gt;Yikes!&lt;/h1&gt;
-    No post!
-&lt;?php endif;?&gt;    
-&lt;/content&gt;
-&lt;footer&gt;
-    &lt;?php get_footer(); ?&gt;
-&lt;/footer&gt;
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">  </span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">else</span> <span class="o">:?&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Yikes</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+    <span class="nx">No</span> <span class="nx">post</span><span class="o">!</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">endif</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">   </span>
+<span class="x">&lt;/content&gt;</span>
+<span class="x">&lt;footer&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/footer&gt;</span>
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
 
 
 <p><strong>GOOD TO KNOW</strong>: the <em>header</em> tag in our index.php is not referring to the <strong>head</strong> tag of our resulting HTML. This header tag is inside (a child of) of the HTML <em>body</em> tag, this is the header that is visible when displayed by the browser.</p>
@@ -762,48 +711,47 @@ h1 {font-size: 110%;}
 
 <p>We need to tell our HTML (our resulting HTML) to use the instructions inside the file <strong>style.css</strong> for style instructions. We need to add a <strong>link</strong> tag to our index.php</p>
 
-<div>
-  <pre><code class='php'>&lt;html&gt;
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;html&gt;</span>
 
-&lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('stylesheet_url'); ?&gt;&quot; /&gt;
-&lt;/head&gt;
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;&lt;?php bloginfo(&#39;stylesheet_url&#39;); ?&gt;&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 
-&lt;body&gt;
-&lt;header&gt;
-    &lt;?php get_header(); ?&gt;
-&lt;/header&gt;
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+    <span class="cp">&lt;?php get_header(); ?&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
 
-&lt;content&gt;
-&lt;?php if(have_posts()) : ?&gt;
-    &lt;?php while (have_posts()) : the_post();?&gt;
+<span class="nt">&lt;content&gt;</span>
+<span class="cp">&lt;?php if(have_posts()) : ?&gt;</span>
+    <span class="cp">&lt;?php while (have_posts()) : the_post();?&gt;</span>
         
-    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
-  &lt;?php the_content();?&gt;
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;&lt;?php the_permalink();?&gt;&#39;</span><span class="nt">&gt;&lt;h1&gt;</span><span class="cp">&lt;?php the_title(); ?&gt;</span><span class="nt">&lt;/h1&gt;&lt;/a&gt;</span>
+  <span class="cp">&lt;?php the_content();?&gt;</span>
 
-    &lt;?php endwhile;?&gt;
+    <span class="cp">&lt;?php endwhile;?&gt;</span>
   
-    &lt;?php else :?&gt;
-        &lt;h1&gt;Yikes!&lt;/h1&gt;
+    <span class="cp">&lt;?php else :?&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Yikes!<span class="nt">&lt;/h1&gt;</span>
     No post!
-&lt;?php endif;?&gt;    
-&lt;/content&gt;
-&lt;footer&gt;
-    &lt;?php get_footer(); ?&gt;
-&lt;/footer&gt;
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
+<span class="cp">&lt;?php endif;?&gt;</span>    
+<span class="nt">&lt;/content&gt;</span>
+<span class="nt">&lt;footer&gt;</span>
+    <span class="cp">&lt;?php get_footer(); ?&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
 
 
 <p><strong>NOTE</strong>: The filename <em>style.css</em> is known to WordPress, if you name your stylesheet file differently e.g. stylesheet.css or custom.css or ie.css, you need a different <em>link</em> instructions on the head tag.</p>
 
 <p>For example, if you named your stylesheet custom.css, the link tag on the head needs to read like</p>
 
-<div>
-  <pre><code class='html'>&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('template_url'); ?&gt;/custom.css&quot; /&gt;</code></pre>
-</div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_url&#39;); ?&gt;/custom.css&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
 
 
 
@@ -816,11 +764,83 @@ h1 {font-size: 110%;}
 <h1 class="chapter">SINGLE POST TEMPLATE</h1>
 
 
-<h1>BIBLIOGRAPHY</h1>
+<p>The <em>single.php</em> template will be used by WordPress if the permalink to a post is clicked (queried). It's code structure is not that much different from the <em>index.php</em> template, but there are some things you might put in the single template that you won't put on the index.</p>
+
+<p>A single view of blog post could include the date it was posted, the category it belongs to and some keywords which might be attached to the blog post. Here is a simple reference code on how a <em>single.php</em> template file might look like.</p>
+
+<div class="highlight"><pre><code class="php"><span class="x">&lt;html&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;link rel=&quot;stylesheet&quot; href=&quot;</span><span class="cp">&lt;?php</span> <span class="nx">bloginfo</span><span class="p">(</span><span class="s1">&#39;stylesheet_url&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&quot; /&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;header&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/header&gt;</span>
+
+<span class="x">&lt;article&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">while</span> <span class="p">(</span><span class="nx">have_posts</span><span class="p">())</span> <span class="o">:</span> <span class="nx">the_post</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span>
+<span class="x">    &lt;a href=&#39;</span><span class="cp">&lt;?php</span> <span class="nx">the_permalink</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x">&#39;&gt;</span>
+<span class="x">      &lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="nx">the_title</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<span class="x">    &lt;/a&gt;</span>
+<span class="x">    </span>
+<span class="x">    &lt;div id=&quot;post-info&quot;&gt;</span>
+<span class="x">    date: </span><span class="cp">&lt;?php</span> <span class="nx">the_time</span><span class="p">(</span><span class="s1">&#39;n - j - Y&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"> &lt;br/&gt;</span>
+<span class="x">    category: </span><span class="cp">&lt;?php</span> <span class="nx">the_category</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"> &lt;br/&gt;</span>
+<span class="x">    tags: </span><span class="cp">&lt;?php</span> <span class="nx">the_tags</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39; | &#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"> &lt;br/&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">      </span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">the_content</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">  </span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">else</span> <span class="o">:?&gt;</span>
+
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Yikes</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+    <span class="nx">No</span> <span class="nx">post</span><span class="o">!</span>
+
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">endif</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">   </span>
+
+<span class="x">&lt;/article&gt;</span>
+
+<span class="x">&lt;footer&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/footer&gt;</span>
+
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+
+
+
+
+<div id="cap">single.php</div>
+
+
+<p>This template looks a lot like the index template, but there are minor differences. The differences are;</p>
+
+<ol>
+<li>instead of calling <strong>the_excerpt</strong>, we used the function <strong>the_content</strong> because we need to display the full content of the blog post</li>
+<li>we pulled the published date of the blog post using <strong>the_time</strong> function. This function takes on some [parameters][] which can use to alter the way the date is displayed</li>
+<li>we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using <strong>the_category</strong> function. Similarly, the keywords are displayed as URL links using the <strong>the_tags</strong> function</li>
+</ol>
+
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">BIBLIOGRAPHY</h1>
+
 
 <ol>
 <li><a href="http://codex.wordpress.org/Theme_Development">CODEX.WordPress</a></li>
 <li><a href="http://codex.wordpress.org/Function_Reference/">CODEX/WordPress</a> - WordPress Function Reference</li>
+<li>[Parameters]: http://codex.wordpress.org/Function_Reference/the_time "Codex.Wordpress, the_time function reference"</li>
 </ol>
 
 

@@ -8,6 +8,11 @@ categories:
 - cms
 ---
 
+# DOCUMENT HISTORY
+
+- 21 Mar 2007 &mdash; created
+- 05 Jun 2010 &mdash; revised to reflect tools on OSX
+
 <h1 class="chapter">PRE-REQUISITE SKILLS</h1>
 
 The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP. 
@@ -353,11 +358,11 @@ h1 {font-size: 110%;}
 
 We need to tell our HTML (our resulting HTML) to use the instructions inside the file **style.css** for style instructions. We need to add a **link** tag to our index.php
 
-{% highlight php %}
+{% highlight html %}
 <html>
 
 <head>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
 </head>
 
 <body>
@@ -375,8 +380,9 @@ We need to tell our HTML (our resulting HTML) to use the instructions inside the
 	<?php endwhile;?>
   
 	<?php else :?>
-		<h1>Yikes!</h1>
+    <h1>Yikes!</h1>
     No post!
+
 <?php endif;?>	
 </content>
 <footer>
@@ -399,15 +405,75 @@ For example, if you named your stylesheet custom.css, the link tag on the head n
 
 <h1 class="chapter">SINGLE POST TEMPLATE</h1>
 
+The *single.php* template will be used by WordPress if the permalink to a post is clicked (queried). It's code structure is not that much different from the *index.php* template, but there are some things you might put in the single template that you won't put on the index. 
+
+A single view of blog post could include the date it was posted, the category it belongs to and some keywords which might be attached to the blog post. Here is a simple reference code on how a *single.php* template file might look like.
 
 
+{% highlight php %}
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+</head>
+
+<body>
+<header>
+	<?php get_header(); ?>
+</header>
+
+<article>
+<?php if(have_posts()) : ?>
+	<?php while (have_posts()) : the_post();?>
+		
+ 	<a href='<?php the_permalink();?>'>
+ 	  <h1><?php the_title(); ?></h1>
+ 	</a>
+ 	
+ 	<div id="post-info">
+ 	date: <?php the_time('n - j - Y'); ?> <br/>
+ 	category: <?php the_category(', ')); ?> <br/>
+ 	tags: <?php the_tags('',' | ',''); ?> <br/>
+ 	</div>
+ 	  
+	<?php the_content();?>
+
+	<?php endwhile;?>
+  
+	<?php else :?>
+
+		<h1>Yikes!</h1>
+    No post!
+
+<?php endif;?>	
+
+</article>
+
+<footer>
+	<?php get_footer(); ?>
+</footer>
+
+</body>
+</html>
+
+{% endhighlight%}
+<div id="cap">single.php</div>
+
+This template looks a lot like the index template, but there are minor differences. The differences are;
+
+1. instead of calling **the_excerpt**, we used the function **the_content** because we need to display the full content of the blog post
+2. we pulled the published date of the blog post using **the_time** function. This function takes on some [parameters][] which can use to alter the way the date is displayed
+3. we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using **the_category** function. Similarly, the keywords are displayed as URL links using the **the_tags** function
 
 
+<hr class="chapterbreak"/>
 
-# BIBLIOGRAPHY
+<h1 class="chapter">BIBLIOGRAPHY</h1>
 
 1. [CODEX.WordPress](http://codex.wordpress.org/Theme_Development) 
 1. [CODEX/WordPress](http://codex.wordpress.org/Function_Reference/) - WordPress Function Reference
+3. [Parameters]: http://codex.wordpress.org/Function_Reference/the_time "Codex.Wordpress, the_time function reference"
 
 
 
