@@ -17,7 +17,7 @@ categories:
 
 <h1 class="chapter">INTRODUCTION</h1>
 
-These are my notes for the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.
+These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.
 
 Having said that, what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.
 
@@ -56,7 +56,7 @@ A Java source file will bear the extension .java, no matter which platform you a
 
 There are many kinds of Java programs. Some run on webservers (servlet & JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.
 
-Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this book. It is best to name the folder without special characters or whitespace.
+Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.
 
 Create a file named Hello.java. For now, just copy the contents from the sample code below
 
