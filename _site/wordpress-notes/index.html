@@ -1,0 +1,889 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    
+<!--
+<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+-->
+
+
+<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+<meta name="description" content="my notes on how to build wordpress sites. use it as a cms. how to build themes. what skills you need for wordpress applications"/>
+<meta charset="utf-8"/>
+
+<title>Wordpress notes &mdash; Ted Hagos</title>
+
+    <style>
+
+* {
+  font-family: Arial, serif;
+  font-size: 16px;
+  color: #414141;
+  background: #F8F5F6;
+}
+
+p, ol, li , .content-meta {
+  font-family: Arial;
+  font-size: 16px;
+	line-height: 170%;
+  line-height: 160%;
+  letter-spacing: 110%;
+}
+em {
+  font-style:oblique;
+  font-family: Georgia;
+  color: #003D82;
+}
+
+/*ol, li { font-size: 104%;}*/
+ol, li { font-size: 16px;}
+
+strong {
+  font-family: Arial;
+  font-size:110%;
+  font-weight:normal;
+  color: #000000;
+}
+
+#articletitle {
+	font-family: 'Tauri', Arial;
+	font-size: 50px;
+  color: #7C7C7C;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom:0;
+  letter-spacing: -.5px;
+  text-align: center;
+	/*color: #002346;*/
+	/*color: #6F0000;*/
+	/*color: #435e36;*/
+}
+
+.light {
+  font-family:'Muli', sans-serif;
+  color: #5a8080;
+}
+
+#postmeta {
+  margin-bottom: 1em;
+}
+
+#blogtitle {
+  font-family: 'Tauri';
+  font-size: 50px;
+  color: #8C0000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+  #blogtitle a:link, #blogtitle a:visited {
+    font-family: 'Tauri';
+    font-size:50px;
+    text-decoration:none;
+    color: #8C0000;
+    border-bottom: 1px solid #8C0000;
+  }
+    #blogtitle a:hover {
+      color: #FF0000;
+      border-bottom: 0px
+    }
+
+
+blockquote {
+  padding: 5px;
+  margin-left: auto;
+  margin-right:auto;
+  width: 90%;
+}
+
+  blockquote p {
+    font-family: Georgia;
+    font-style: oblique;
+    color: #545454;
+    text-align: right;
+  }
+
+
+h1, h2, h3, h4, h5 {
+	font-family: Arial;
+
+	/*color: #545454;*/
+  font-weight:normal;
+  color: #2D2D2D;
+}
+
+h1 {font-size: 170%; letter-spacing: -1px;}
+  h1.chapter {
+    font-family: 'Tauri';
+  }
+h2 {font-size: 150%; margin-bottom:0;}
+h3 {font-size: 130%; margin-bottom:0; color: #000000; }
+body {
+	width:90%;
+	margin: 0 auto;
+  margin-top:1em;
+	padding-top: 1em;
+}
+
+footer {
+  clear:both;
+  font-family: Arial;
+	font-size:15px;
+	font-style:normal;
+	margin-top:1em;
+	margin-bottom: 1em;
+	padding-top: 2em;
+	border-top: 1px solid #DEDEDE;
+  text-align: center;
+}
+
+.content-meta {
+  font-family: Arial;
+	font-style: normal;
+  color: #686868;
+  /*color: #681a1a;*/
+	margin-top:0;
+	margin-bottom:2em;
+  margin-right: 30px;
+  text-align: center;
+}
+
+img {
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+
+  #cap {
+    padding: 10px;
+    font-family: Georgia;
+    font-size:97%;
+    color: #000000;
+    text-align:center;
+    width: 500px;
+    margin-right:auto;
+    margin-left:auto;
+    
+  }
+
+hr {
+	border:0;
+	color: #d8c7cc;
+	background: #d8c7cc;
+	height: 5px;
+}
+  hr.chapterbreak {
+    color: #2d2d2d;
+    background: #2d2d2d;
+    height: 10px;
+    margin-top: 40px;
+  }
+
+a:link, a:visited { color: #B10000; }
+  a:visited { color: #414141;}
+    a:hover { color: #FF0000; text-decoration:none;}
+
+#news {
+  clear:both;
+  width: 200px;
+  float:right;
+  padding: 20px;
+  border:2px solid #61768a;
+  overflow: hidden;
+  margin-bottom:50px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+#articlelist {
+  width:800px;
+  position: relative;
+  left: 50%;
+  margin-left: -400px;   
+}
+
+#postentry {
+  overflow:hidden;
+  clear:both;
+  padding: 5px;
+  border-top: 1px dashed #D8C7CC;
+  height: auto;
+  padding: 20px;
+}
+
+#postdate {
+  padding-top:10px;
+  float:left;
+  text-align:right;
+}
+  #postdate #datediv {
+    font-size: 24px;
+    color: #686868;
+    text-align:right;
+  }
+  #postdate #yeardiv {
+    font-size: 30px;
+    color: #CACACA;
+  }
+
+#postcontent {
+  position:relative;
+  top: -11px;
+  float:right;
+  width:675px;
+}
+  #postcontent h2 a:link, #postcontent h2 a:visited {
+    font-family: 'Tauri';
+    font-size: 25px;
+    letter-spacing: -0.90px;
+    /*color: #003D82;*/
+    color: #7c7c7c;
+    font-weight:normal;
+    text-decoration: none;
+  }
+  #postcontent h2 a:hover {
+    color: #B10000;
+  } 
+
+.vertical-space {
+  display: block;
+  height: 50px;
+}
+
+pre {
+	font-family: 'Muli';
+  font-size: 15px;
+  color: #000000;
+  background: #f0e9ec;
+	padding: 10px;
+	margin-bottom:0px;
+  line-height: 160%;  
+}
+
+  pre.codeblock, code.codeblock {
+    font-family: 'Muli';
+    font-size: 15px;
+    color: #003D82;
+    font-weight: normal;
+    background: #F8F5F6; 
+    border: 0;
+  }
+
+code  {  
+  font-family: 'Muli';
+  background: #f0e9ec;
+}
+
+.hll { background-color: #f0e9ec;  }
+.c { color: #408080; font-style: normal } /* Comment */
+.err { border: 0px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: normal} /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: normal } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: normal } /* Comment.Single */
+.cs { color: #408080; font-style: normal } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: normal } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: normal } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: normal } /* Generic.Prompt */
+.gs { font-weight: normal } /* Generic.Strong */
+.gu { color: #800080; font-weight: normal } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: normal } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+  
+</style>
+
+    <!--
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
+    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
+    -->
+
+  </head>
+  <body>
+    
+    
+    <div id="blogtitle">
+    <a href="/">TED'S NOTEBOOK</a>
+    </div>
+    
+    <div class='vertical-space'>
+    </div>
+    
+    <header>
+      <div id="articletitle">Wordpress notes
+      </div>
+    </header>
+    <div class='content-meta'>
+       Wednesday , March 21 , 2007
+    </div>
+    <article itemscope itemtype="http://schema.org/Article">
+      <div id="post">
+        <div itemprop='articleBody'>
+        <h1 class="chapter">PRE-REQUISITE SKILLS</h1>
+
+
+<p>The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP.</p>
+
+<p>PHP and HTML are really the bare essentials of building a WordPress site. Unless you are going for a retro-look, circa 1992, you would probably want to include CSS (Cascading Style Sheet) to the list of bare essentials.</p>
+
+<p>There's the trifecta, PHP, HTML &amp; CSS. Once you've got these three covered, you can start building WordPress sites.</p>
+
+<p>I've listed a couple more technologies and skill sets below. You will need them once you get out in the wild doing some consulting gigs for WordPress apps.</p>
+
+<p><strong>JAVASCRIPT</strong>. Some interactions with the user could occur after the HTML page has been completely rendered by the browser.  Such interactions can be facilitated by JavaScript</p>
+
+<p><strong>AJAX</strong>. if you will use some widgets like calendars or accordion controls etc, AJAX libraries can help you out with that. AJAX can do so much more than just widgets, it is actually a technology that was meant to facilitate asynchronous data transfers between a client and a server &mdash; but that is beyond the scope of the current discussion</p>
+
+<p><strong>JQUERY</strong>. This is a rich JavaScript library which can aid in adding smooth and nice-looking transformations on a web page.</p>
+
+<p><strong>SITE ADMINISTRATION KNOWLEDGE</strong>. At some point, you will need to deploy your WordPress theme. Most likely it will be a remote server, most likely again, it will be a UNIX/Linux machine. A passing knowledge of UNIX and some TCP/IP Applications like SSH, HTTP and FTP can't hurt you, in fact, it will go a long way.</p>
+
+<p><strong>SQL</strong>. On the rare occasions when you need to see the naked structure of MySQL behind the WordPress site, you might need some working experience on SQL &mdash; If you are a PHP programmer, this should be part of your skill set anyway</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">GETTING STARTED</h1>
+
+
+<h2>INSTALLATION</h2>
+
+<p>WordPress uses PHP and MySQL, as such, you will need these software installed prior to installing WordPress. There are many  ways to get PHP and MySQL, each method with varying degree of difficulty and complexity.</p>
+
+<p> If you are so inclined, you can manually install Apache, PHP and MySQL separately and configure them for WordPress use &mdash; if not, you can install the full stack using one-click installers; WAMP (Windows Apache MySQL PHP) or MAMP (Mac Apache MySQL PHP). If you are working on a Linux machine, surely you already know how to get LAMP working (Linux Apache MySQL PHP).</p>
+
+<hr />
+
+<h3>MAC OSX (MAMP)</h3>
+
+<ol>
+<li>Download the installer from <a href="http://www.mamp.info/en/downloads/index.html" title="MAMP website">http://www.mamp.info</a>, you don't need the PRO, the free MAMP will suffice for your purpose</li>
+<li>Install the dmg file (double click to launch the installer)</li>
+<li>Launch MAMP. It should be on your "Applications" folder &mdash; or just press cmd+spacebar for spotlight and type "MAMP"</li>
+<li>Click <em>Preferences</em> on the MAMP admin dialog screen</li>
+<li>Go to <em>Apache</em>, specify the folder where you would like your DocumentRoot to be</li>
+<li>Go to <em>Ports</em>, the default HTTP port for MAMP is <em>8888</em>. You can change it here to the standard port which is <em>80</em> but I wouldn't advise that because the built Apache server of OSX might interfere with your MAMP, just leave it be</li>
+<li>Click <em>OK</em></li>
+</ol>
+
+
+<p>Test your installation by launching a browser session, go to <em>http://localhost:8888</em></p>
+
+<h3>WINDOWS (WAMP)</h3>
+
+<ol>
+<li>Download the installer from <a href="http://www.mamp.info/en/downloads/index.html">wampserver.com</a></li>
+<li>Launch the installer (double click). The installer is straightforward and intuitive, it will be mostly automatic</li>
+<li>The installer must have created a <strong>www</strong> folder, usually in <strong>C:\WAMP\www</strong>, this is the DocumentRoot &mdash; unless you tweaked the location of the DocumentRoot during install, in which I would assume that you know what you are doing and you should be able to find your customised DocumentRoot</li>
+</ol>
+
+
+<p>Test your installation by launching a browser session, go to <em>http://localhost</em></p>
+
+<h2>LINUX, SPECIFICALLY DEBIAN AND DERIVATIVES</h2>
+
+<p>You can install the LAMP stack in one bundle</p>
+
+<pre>
+$ sudo apt-get update
+$ sudo apt-get tasksel
+$ sudo tasksel lamp-server
+</pre>
+
+
+<p>Or you can install the individual software stack</p>
+
+<pre>
+$ sudo apt-get update
+$ sudo apt-get mysql-server mysql-client
+$ sudo apt-get apache2
+$ sudo apt-get install php5 libapache2-mod-php5
+</pre>
+
+
+<p>The DocumentRoot is usually at <strong>/var/www</strong>, if you want to customise the location of the DocumentRoot, you need to configure <strong>/etc/apache2/sites-available/default</strong> and then use the <strong>a2ensite</strong> command in Debian; you may also have to do additional configuration on Apache configuration files to allow remote HTTP access to the Linux box &mdash; unfortunately, configuring Apache2 on Debian Linux is beyond the scope of this document.</p>
+
+<p>Test your installation by launching a browser session, go to <em>http://&lt;ip address of your linux box></em></p>
+
+<hr />
+
+<h2>GET THE INSTALLER</h2>
+
+<p>WordPress can be downloaded from <a href="http://wordpress.org/download/">http://wordpress.org/download</a>. It will usually be a zipped file or targz'd  file. You will need to extract this to a DocumentRoot directory of your web server. A DocumentRoot is designated folder where the web server will start looking for files to serve as web pages &mdash; more on this later.</p>
+
+<p>You need to unzip the content of the WordPress files to your DocumentRoot. Assuming that your DocumentRoot is a folder named <em>www</em> somewhere in your filesystem, the file and folder structure should look something like the dir below
+.</p>
+
+<pre class="codeblock">
+├── www
+│   ├── index.php
+│   ├── license.txt
+│   ├── readme.html
+│   ├── wp-activate.php
+│   ├── wp-admin
+│   ├── wp-app.php
+│   ├── wp-blog-header.php
+│   ├── wp-comments-post.php
+│   ├── wp-config-sample.php
+│   ├── wp-config.php
+│   ├── wp-content
+│   ├── wp-cron.php
+│   ├── wp-includes
+│   ├── wp-links-opml.php
+│   ├── wp-load.php
+│   ├── wp-login.php
+│   ├── wp-mail.php
+│   ├── wp-settings.php
+│   ├── wp-signup.php
+│   ├── wp-trackback.php
+│   └── xmlrpc.php
+</pre>
+
+
+<hr />
+
+<h2>CONFIGURATION</h2>
+
+<p>You need to setup a database for WordPress, this is the reason why MySQL was part of the software stack requirement. There are lots of ways to talk to a MySQL database, some of you might use the CLI (Command Line Interface) mysql client, some might use the MySQL WorkBench GUI client, SQLYog or the <strong>PHPMyAdmin</strong> included in both MAMP and WAMP.</p>
+
+<p>If you were to use MAMP (assuming it is running on port 888);</p>
+
+<ol>
+<li>Launch a browser session and type <em>http://localhost:888/MAMP/</em></li>
+<li>You should see the <em>PHPMyAdmin</em> link, go there.</li>
+<li>Click the <strong>SQL</strong> tab</li>
+</ol>
+
+
+<p>Now you are ready to issue some SQL commands to create the WordPress database and grant access to a user of that database.</p>
+
+<pre>
+
+CREATE DATABASE wordpress;
+GRANT ALL PRIVILEGES ON wordpress.* TO
+    yourame@'localhost' IDENTIFIED BY 'yourpassword';
+FLUSH PRIVILEGES;
+
+</pre>
+
+
+<p>Click the <strong>Go</strong> button on the SQL screen to execute your commands.</p>
+
+<p><strong>NOTE</strong>: if you use another method to connect to the mysql-server, say the default <strong>mysql</strong> client, you will need to know the hostname, the username and the password of the root user of mysql &mdash; you would remember these things if you were the one who installed mysql. On the other hand, if you are accessing a shared MySQL server somewhere on a development server, you will need to ask the guy in-charge of the administration of that MySQL database to give you access.</p>
+
+<h2>wp-config.php</h2>
+
+<p>The WordPress installer includes a file called <em>wp-config-sample.php</em>, copy that file and name the copy <em>wp-config.php</em>. You will need to edit some configuration entries</p>
+
+<pre>
+
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'yourname');
+define('DB_PASSWORD', 'yourpassword');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+</pre>
+
+
+<div id="cap">wp-config.php</div>
+
+
+<p><em>yourname</em> and <em>yourpassword</em> are the username and password that you used when you created the database file (Refer to the SQL script you used in the earlier sections)</p>
+
+<h2>THE 5 MINUTE INSTALLATION</h2>
+
+<p>Test your installation by launching a browser session, go to <em>http://localhost</em> or <em>http://localhost:8888</em> if you used port 8888 (or substitute whatever port number you did use). There is a series of questions that WordPress installer will ask you, just fill them up, this is the easy part now.</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">TEMPLATE FILES</h1>
+
+
+<p>Wordpress comes complete with all plumbing that is needed to create a post, read a post, delete it and modify it.  Over the years, it has become a very modular CMS system.</p>
+
+<p>The system files (a bunch of PHP files) are separated cleanly from the presentation files. The presentation files are the stuff you need modify in order to create your own look, feel and behavior of a Wordpress site. The presentation files are also called "TEMPLATE FILES".</p>
+
+<p>When building a WordPress system, you will not need to  deal with SQL, linking and other system level programming routines &mdash; you will deal with a little bit of PHP though. WordPress exposes the functionalities of the CMS via PHP functions, these functions are higher level abstractions of a CMS system, you will call these PHP functions on one or more of your template files.</p>
+
+<hr />
+
+<h2>THE TEMPLATE FILES</h2>
+
+<ol>
+<li><em>index.php</em> - This is the main blog template. This file contains the main <em>loop</em> which iterates over all the blog entries on the database and displays it for the user</li>
+<li><em>single.php</em> - The single post template. If a user clicks on a link for a blog post, the contents of the queried post is displayed using this template</li>
+<li><em>page.php</em> - When a page is requested e.g. about-page or any other page that you defined in <em>wp-admin</em>, this template will be used</li>
+<li><em>comments.php</em> - for the comments</li>
+<li><em>archive.php</em> - when a category, date or author is queried this will be used to display the results. If on the other hand, you did write author.php, category.php and date.php, then those templates will be used instead</li>
+<li><em>search.php</em> - when a search is performed, this template is used to display the results, if this template is not present, index.php is used instead</li>
+<li><em>tag.php</em> - used when a specific tag is queried. If this template is not present, index.php is used instead</li>
+<li><em>category.php</em> - used when a specific category is queried. If this is not present, index.php is used instead</li>
+<li><em>header.php</em></li>
+<li><em>footer.php</em></li>
+<li><em>style.css</em></li>
+<li><em>home.php</em></li>
+<li><em>author.php</em></li>
+<li><em>404.php</em> - during those times when WordPress cannot find a post, this will be template file used to display a 404 error</li>
+</ol>
+
+
+<p>There are other template files but these, I think are the most common in theme development. For a more complete list, refer to codex.wordpress.org (given on the References section).</p>
+
+<p>You do not need all these files to build WordPress site, you can use only a couple of them, depending on what functionality you want to achieve on your development. WordPress is pretty robust, it doesn't fail miserably when it needs a template file and does not find one; e.g. if you forgot to build <em>search.php</em>, WordPress will simply use <em>index.php</em>  as the template to use to display search results. Same is true if if you did not provide a <em>tag.php</em> file, when a tag link is activated, it will simply use <em>index.php</em> to present the result of the tag selection.</p>
+
+<p>You can get started by building only <em>index.php</em> in your theme, but unless your site is very spartan and barebones, you might want to use the other template files.</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">INDEX TEMPLATE</h1>
+
+
+<p>The <em>index.php</em> is absolutely mandatory when you build a custom theme in WordPress. You can do without the other template files, but this one is a must. If you don't build this template file, you are not going to see much; in fact, you won't see anything at all. This template file usually contains <strong>the loop</strong> which goes through all <em>post</em> entries on WordPress database, specifically from the <em>wp_post</em> table.</p>
+
+<p>You should start with a very spartan index template, like this</p>
+
+<div>
+  <pre><code class='php'>&lt;html&gt;
+&lt;body&gt;
+&lt;?php if(have_posts()) : ?&gt;
+    &lt;?php while (have_posts()) : the_post();?&gt;
+        
+    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
+  &lt;?php the_excerpt();?&gt;
+
+    &lt;?php endwhile;?&gt;
+  
+    &lt;?php else :?&gt;
+        &lt;h1&gt;Yikes!&lt;/h1&gt;
+    No post!
+&lt;?php endif;?&gt;    
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The outermost control structure is an <em>if</em> construct. The <em>have_post()</em> function queries if there are any post in the <em>wp_post</em> table, if at least one is found, we can proceed to loop, otherwise, the "Yikes" message will be seen the user.</p>
+
+<p>Inside the <em>if</em> construct is <em>the loop</em>. The <em>have_post()</em> function checks the <em>wp_post</em> table if there is any post to query or iterate at, if not it exits the loop. The <em>the_post</em> function is actually the one that fetches the post entry from the database. It does one more thing, it looks ahead database cursor query if there is another post to fetch. If there is a next post, it returns true, other wise it returns false and <em>the loop</em> terminates.</p>
+
+<p>Once you are inside the loop, you can now start displaying some important parts of the blog post, namely, the link to the post, the name of the post and the post itself. All these three things are accessible and exposed by WordPress via functions.</p>
+
+<ul>
+<li><em>the_title</em> - retrieves the title of the blog post from the database</li>
+<li><em>the_except</em> - retrieves the excerpts of the blog post from the database, if there is one. If it does not find an excerpt entry it will extract the first few words of the post</li>
+<li><em>the_permalink</em> - displays the URL for the permalink to the post which is currently being processed in the loop. This is not fetched from the database. This data item is constructed at runtime. The reason is because permalinks are configurable, they are not static data which can be stored directly in the database</li>
+</ul>
+
+
+<p>The 3 functions discussed above are almost always, exclusively used from within <strong>the loop</strong>, there are setup routines that are happening before these data items can be made available, and the loop performs that setup.</p>
+
+<p>If you want to know more about the nitty-gritty implementations of these WordPress functions, they are in <em>wp-includes/query.php, wp-includes/link-template.php, wp-includes/post-template.php</em></p>
+
+<hr />
+
+<h2>HEADERS AND FOOTERS</h2>
+
+<p>Web pages typically includes headers and footers. They can be used to display copyrights, navigations and other information important to the design of the site. It is a good idea to separate their syntactical structure and content from the main content. WordPress templating makes this exercise easier and maintainable by exposing the <em>get_header</em> and <em>get_footer</em> functions.</p>
+
+<p>If you create the files <em>header.php</em> and <em>footer.php</em> in your theme template files, their content will be pulled when you invoke the <em>get_header</em> and <em>get_footer</em> functions. Let's revise the <em>index.php</em> template we coded earlier</p>
+
+<div>
+  <pre><code class='php'>&lt;html&gt;
+&lt;body&gt;
+&lt;?php get_header(); ?&gt;
+&lt;?php if(have_posts()) : ?&gt;
+    &lt;?php while (have_posts()) : the_post();?&gt;
+        
+    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
+  &lt;?php the_excerpt();?&gt;
+
+    &lt;?php endwhile;?&gt;
+  
+    &lt;?php else :?&gt;
+        &lt;h1&gt;Yikes!&lt;/h1&gt;
+    No post!
+&lt;?php endif;?&gt;    
+&lt;?php get_footer(); ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>Create the files <em>header.php</em> and <em>footer.php</em> on your theme folder. Start simple so it's easier to troubleshoot, put some basic content first.</p>
+
+<h3>header.php</h3>
+
+<div>
+  <pre><code class='php'>&lt;!-- HEADER.php --&gt;
+Home  | email | about</code></pre>
+</div>
+
+
+<p>A basic navigation, but without the hyperlinks yet</p>
+
+<h3>footer.php</h3>
+
+<div>
+  <pre><code class='php'>&lt;!-- FOOTER.php --&gt;
+&lt;hr/&gt;
+Copyright &amp;copy; 2013, theLogBox</code></pre>
+</div>
+
+
+<p>A basic copyright notice</p>
+
+<hr />
+
+<h2>Styling</h2>
+
+<p>Lastly, apply some styling to your index page. We could inline the styles and code it directly into the HTML portions of index.php, but that will clutter our codes and can get out of hand (quickly) as add more elements to the index page. Instead, we will put all the styling instructions into CSS (Cascading Style Sheets).</p>
+
+<p>We will revise the <em>index.php</em> again, this time, we will separate the regions of our resulting HTML files so that we can select each region and apply the appropriate styling instructions on them.</p>
+
+<div>
+  <pre><code class='php'>&lt;html&gt;
+&lt;body&gt;
+&lt;header&gt;
+    &lt;?php get_header(); ?&gt;
+&lt;/header&gt;
+
+&lt;content&gt;
+&lt;?php if(have_posts()) : ?&gt;
+    &lt;?php while (have_posts()) : the_post();?&gt;
+        
+    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
+  &lt;?php the_excerpt();?&gt;
+
+    &lt;?php endwhile;?&gt;
+  
+    &lt;?php else :?&gt;
+        &lt;h1&gt;Yikes!&lt;/h1&gt;
+    No post!
+&lt;?php endif;?&gt;    
+&lt;/content&gt;
+&lt;footer&gt;
+    &lt;?php get_footer(); ?&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p><strong>GOOD TO KNOW</strong>: the <em>header</em> tag in our index.php is not referring to the <strong>head</strong> tag of our resulting HTML. This header tag is inside (a child of) of the HTML <em>body</em> tag, this is the header that is visible when displayed by the browser.</p>
+
+<p>Create a <em>style.css</em> file inside the template folder, we are creating this file because we will externalise all the styling instructions to separate it from the HTML content.</p>
+
+<pre>
+/* STYLE.CSS */
+
+header, footer {padding: 1em; border: 1px solid gray;}
+h1, h2, h3 {
+    font-family: 'arial', 'helvetica', sans-serif;
+}
+h1 {font-size: 150%;}
+h2 {font-size: 120%;}
+h1 {font-size: 110%;}
+
+</pre>
+
+
+<p>We need to tell our HTML (our resulting HTML) to use the instructions inside the file <strong>style.css</strong> for style instructions. We need to add a <strong>link</strong> tag to our index.php</p>
+
+<div>
+  <pre><code class='php'>&lt;html&gt;
+
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('stylesheet_url'); ?&gt;&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;header&gt;
+    &lt;?php get_header(); ?&gt;
+&lt;/header&gt;
+
+&lt;content&gt;
+&lt;?php if(have_posts()) : ?&gt;
+    &lt;?php while (have_posts()) : the_post();?&gt;
+        
+    &lt;a href='&lt;?php the_permalink();?&gt;'&gt;&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;&lt;/a&gt;
+  &lt;?php the_content();?&gt;
+
+    &lt;?php endwhile;?&gt;
+  
+    &lt;?php else :?&gt;
+        &lt;h1&gt;Yikes!&lt;/h1&gt;
+    No post!
+&lt;?php endif;?&gt;    
+&lt;/content&gt;
+&lt;footer&gt;
+    &lt;?php get_footer(); ?&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p><strong>NOTE</strong>: The filename <em>style.css</em> is known to WordPress, if you name your stylesheet file differently e.g. stylesheet.css or custom.css or ie.css, you need a different <em>link</em> instructions on the head tag.</p>
+
+<p>For example, if you named your stylesheet custom.css, the link tag on the head needs to read like</p>
+
+<div>
+  <pre><code class='html'>&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('template_url'); ?&gt;/custom.css&quot; /&gt;</code></pre>
+</div>
+
+
+
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">SINGLE POST TEMPLATE</h1>
+
+
+<h1>BIBLIOGRAPHY</h1>
+
+<ol>
+<li><a href="http://codex.wordpress.org/Theme_Development">CODEX.WordPress</a></li>
+<li><a href="http://codex.wordpress.org/Function_Reference/">CODEX/WordPress</a> - WordPress Function Reference</li>
+</ol>
+
+
+        </div>                
+      </div>
+      <div id="postmeta" class='light'>
+        file: #php  #wordpress  #cms
+      </div>
+    </article>
+
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8602905; 
+var sc_invisible=0; 
+var sc_security="77bbc86e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37635397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tedhagos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+    <footer>
+    <div id='footer-inner'>
+  <a href='/copyright.html'>Copyright</a>&nbsp;
+&copy; 2004-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
+</div>
+
+
+  </footer>
+  </body>
+</html>

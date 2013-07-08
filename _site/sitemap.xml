@@ -111,6 +111,12 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/wordpress-notes</loc>
+    <lastmod>2007-03-21T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/java-programming</loc>
     <lastmod>2004-02-18T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>

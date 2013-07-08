@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-08T12:46:46+08:00</updated>
+ <updated>2013-07-08T17:32:48+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -69,10 +69,11 @@
 
 &lt;p&gt;On a Debian VM or Debian-ish machines, it can be pulled from the repos&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo add-apt-repository ppa:webupd8team/java
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='bash'&gt;sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java8-installer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+sudo apt-get install oracle-java8-installer&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 
 &lt;p&gt;The Windows installation should be easy to figure out, there is no need to write it here.&lt;/p&gt;
@@ -86,9 +87,10 @@ sudo apt-get install oracle-java8-installer
 &lt;/ol&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
-sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='bash'&gt;sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
+sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 
 &lt;p&gt;I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9&lt;/p&gt;
@@ -1234,6 +1236,457 @@ $ echo pbpaste
 &lt;p&gt;&lt;strong&gt;20. SQUEAKY CLEAN HARD DRIVE&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about &quot;how to clean up your Mac&quot;, swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get &lt;strong&gt;Clean My Mac&lt;/strong&gt; or anything paid that catches your fancy. The Mac Store is a good place to start.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Wordpress notes</title>
+   <link href="http://tedhagos.com /wordpress-notes"/>
+   <updated>2007-03-21T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /wordpress-notes</id>
+   <content type="html">&lt;h1 class=&quot;chapter&quot;&gt;PRE-REQUISITE SKILLS&lt;/h1&gt;
+
+
+&lt;p&gt;The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP.&lt;/p&gt;
+
+&lt;p&gt;PHP and HTML are really the bare essentials of building a WordPress site. Unless you are going for a retro-look, circa 1992, you would probably want to include CSS (Cascading Style Sheet) to the list of bare essentials.&lt;/p&gt;
+
+&lt;p&gt;There's the trifecta, PHP, HTML &amp;amp; CSS. Once you've got these three covered, you can start building WordPress sites.&lt;/p&gt;
+
+&lt;p&gt;I've listed a couple more technologies and skill sets below. You will need them once you get out in the wild doing some consulting gigs for WordPress apps.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVASCRIPT&lt;/strong&gt;. Some interactions with the user could occur after the HTML page has been completely rendered by the browser.  Such interactions can be facilitated by JavaScript&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;AJAX&lt;/strong&gt;. if you will use some widgets like calendars or accordion controls etc, AJAX libraries can help you out with that. AJAX can do so much more than just widgets, it is actually a technology that was meant to facilitate asynchronous data transfers between a client and a server &amp;mdash; but that is beyond the scope of the current discussion&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JQUERY&lt;/strong&gt;. This is a rich JavaScript library which can aid in adding smooth and nice-looking transformations on a web page.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE ADMINISTRATION KNOWLEDGE&lt;/strong&gt;. At some point, you will need to deploy your WordPress theme. Most likely it will be a remote server, most likely again, it will be a UNIX/Linux machine. A passing knowledge of UNIX and some TCP/IP Applications like SSH, HTTP and FTP can't hurt you, in fact, it will go a long way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;. On the rare occasions when you need to see the naked structure of MySQL behind the WordPress site, you might need some working experience on SQL &amp;mdash; If you are a PHP programmer, this should be part of your skill set anyway&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;GETTING STARTED&lt;/h1&gt;
+
+
+&lt;h2&gt;INSTALLATION&lt;/h2&gt;
+
+&lt;p&gt;WordPress uses PHP and MySQL, as such, you will need these software installed prior to installing WordPress. There are many  ways to get PHP and MySQL, each method with varying degree of difficulty and complexity.&lt;/p&gt;
+
+&lt;p&gt; If you are so inclined, you can manually install Apache, PHP and MySQL separately and configure them for WordPress use &amp;mdash; if not, you can install the full stack using one-click installers; WAMP (Windows Apache MySQL PHP) or MAMP (Mac Apache MySQL PHP). If you are working on a Linux machine, surely you already know how to get LAMP working (Linux Apache MySQL PHP).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;MAC OSX (MAMP)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the installer from &lt;a href=&quot;http://www.mamp.info/en/downloads/index.html&quot; title=&quot;MAMP website&quot;&gt;http://www.mamp.info&lt;/a&gt;, you don't need the PRO, the free MAMP will suffice for your purpose&lt;/li&gt;
+&lt;li&gt;Install the dmg file (double click to launch the installer)&lt;/li&gt;
+&lt;li&gt;Launch MAMP. It should be on your &quot;Applications&quot; folder &amp;mdash; or just press cmd+spacebar for spotlight and type &quot;MAMP&quot;&lt;/li&gt;
+&lt;li&gt;Click &lt;em&gt;Preferences&lt;/em&gt; on the MAMP admin dialog screen&lt;/li&gt;
+&lt;li&gt;Go to &lt;em&gt;Apache&lt;/em&gt;, specify the folder where you would like your DocumentRoot to be&lt;/li&gt;
+&lt;li&gt;Go to &lt;em&gt;Ports&lt;/em&gt;, the default HTTP port for MAMP is &lt;em&gt;8888&lt;/em&gt;. You can change it here to the standard port which is &lt;em&gt;80&lt;/em&gt; but I wouldn't advise that because the built Apache server of OSX might interfere with your MAMP, just leave it be&lt;/li&gt;
+&lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Test your installation by launching a browser session, go to &lt;em&gt;http://localhost:8888&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;WINDOWS (WAMP)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the installer from &lt;a href=&quot;http://www.mamp.info/en/downloads/index.html&quot;&gt;wampserver.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Launch the installer (double click). The installer is straightforward and intuitive, it will be mostly automatic&lt;/li&gt;
+&lt;li&gt;The installer must have created a &lt;strong&gt;www&lt;/strong&gt; folder, usually in &lt;strong&gt;C:\WAMP\www&lt;/strong&gt;, this is the DocumentRoot &amp;mdash; unless you tweaked the location of the DocumentRoot during install, in which I would assume that you know what you are doing and you should be able to find your customised DocumentRoot&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Test your installation by launching a browser session, go to &lt;em&gt;http://localhost&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;LINUX, SPECIFICALLY DEBIAN AND DERIVATIVES&lt;/h2&gt;
+
+&lt;p&gt;You can install the LAMP stack in one bundle&lt;/p&gt;
+
+&lt;pre&gt;
+$ sudo apt-get update
+$ sudo apt-get tasksel
+$ sudo tasksel lamp-server
+&lt;/pre&gt;
+
+
+&lt;p&gt;Or you can install the individual software stack&lt;/p&gt;
+
+&lt;pre&gt;
+$ sudo apt-get update
+$ sudo apt-get mysql-server mysql-client
+$ sudo apt-get apache2
+$ sudo apt-get install php5 libapache2-mod-php5
+&lt;/pre&gt;
+
+
+&lt;p&gt;The DocumentRoot is usually at &lt;strong&gt;/var/www&lt;/strong&gt;, if you want to customise the location of the DocumentRoot, you need to configure &lt;strong&gt;/etc/apache2/sites-available/default&lt;/strong&gt; and then use the &lt;strong&gt;a2ensite&lt;/strong&gt; command in Debian; you may also have to do additional configuration on Apache configuration files to allow remote HTTP access to the Linux box &amp;mdash; unfortunately, configuring Apache2 on Debian Linux is beyond the scope of this document.&lt;/p&gt;
+
+&lt;p&gt;Test your installation by launching a browser session, go to &lt;em&gt;http://&amp;lt;ip address of your linux box&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;GET THE INSTALLER&lt;/h2&gt;
+
+&lt;p&gt;WordPress can be downloaded from &lt;a href=&quot;http://wordpress.org/download/&quot;&gt;http://wordpress.org/download&lt;/a&gt;. It will usually be a zipped file or targz'd  file. You will need to extract this to a DocumentRoot directory of your web server. A DocumentRoot is designated folder where the web server will start looking for files to serve as web pages &amp;mdash; more on this later.&lt;/p&gt;
+
+&lt;p&gt;You need to unzip the content of the WordPress files to your DocumentRoot. Assuming that your DocumentRoot is a folder named &lt;em&gt;www&lt;/em&gt; somewhere in your filesystem, the file and folder structure should look something like the dir below
+.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+├── www
+│   ├── index.php
+│   ├── license.txt
+│   ├── readme.html
+│   ├── wp-activate.php
+│   ├── wp-admin
+│   ├── wp-app.php
+│   ├── wp-blog-header.php
+│   ├── wp-comments-post.php
+│   ├── wp-config-sample.php
+│   ├── wp-config.php
+│   ├── wp-content
+│   ├── wp-cron.php
+│   ├── wp-includes
+│   ├── wp-links-opml.php
+│   ├── wp-load.php
+│   ├── wp-login.php
+│   ├── wp-mail.php
+│   ├── wp-settings.php
+│   ├── wp-signup.php
+│   ├── wp-trackback.php
+│   └── xmlrpc.php
+&lt;/pre&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;CONFIGURATION&lt;/h2&gt;
+
+&lt;p&gt;You need to setup a database for WordPress, this is the reason why MySQL was part of the software stack requirement. There are lots of ways to talk to a MySQL database, some of you might use the CLI (Command Line Interface) mysql client, some might use the MySQL WorkBench GUI client, SQLYog or the &lt;strong&gt;PHPMyAdmin&lt;/strong&gt; included in both MAMP and WAMP.&lt;/p&gt;
+
+&lt;p&gt;If you were to use MAMP (assuming it is running on port 888);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Launch a browser session and type &lt;em&gt;http://localhost:888/MAMP/&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;You should see the &lt;em&gt;PHPMyAdmin&lt;/em&gt; link, go there.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;SQL&lt;/strong&gt; tab&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Now you are ready to issue some SQL commands to create the WordPress database and grant access to a user of that database.&lt;/p&gt;
+
+&lt;pre&gt;
+
+CREATE DATABASE wordpress;
+GRANT ALL PRIVILEGES ON wordpress.* TO
+    yourame@'localhost' IDENTIFIED BY 'yourpassword';
+FLUSH PRIVILEGES;
+
+&lt;/pre&gt;
+
+
+&lt;p&gt;Click the &lt;strong&gt;Go&lt;/strong&gt; button on the SQL screen to execute your commands.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: if you use another method to connect to the mysql-server, say the default &lt;strong&gt;mysql&lt;/strong&gt; client, you will need to know the hostname, the username and the password of the root user of mysql &amp;mdash; you would remember these things if you were the one who installed mysql. On the other hand, if you are accessing a shared MySQL server somewhere on a development server, you will need to ask the guy in-charge of the administration of that MySQL database to give you access.&lt;/p&gt;
+
+&lt;h2&gt;wp-config.php&lt;/h2&gt;
+
+&lt;p&gt;The WordPress installer includes a file called &lt;em&gt;wp-config-sample.php&lt;/em&gt;, copy that file and name the copy &lt;em&gt;wp-config.php&lt;/em&gt;. You will need to edit some configuration entries&lt;/p&gt;
+
+&lt;pre&gt;
+
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'yourname');
+define('DB_PASSWORD', 'yourpassword');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;wp-config.php&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;yourname&lt;/em&gt; and &lt;em&gt;yourpassword&lt;/em&gt; are the username and password that you used when you created the database file (Refer to the SQL script you used in the earlier sections)&lt;/p&gt;
+
+&lt;h2&gt;THE 5 MINUTE INSTALLATION&lt;/h2&gt;
+
+&lt;p&gt;Test your installation by launching a browser session, go to &lt;em&gt;http://localhost&lt;/em&gt; or &lt;em&gt;http://localhost:8888&lt;/em&gt; if you used port 8888 (or substitute whatever port number you did use). There is a series of questions that WordPress installer will ask you, just fill them up, this is the easy part now.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;TEMPLATE FILES&lt;/h1&gt;
+
+
+&lt;p&gt;Wordpress comes complete with all plumbing that is needed to create a post, read a post, delete it and modify it.  Over the years, it has become a very modular CMS system.&lt;/p&gt;
+
+&lt;p&gt;The system files (a bunch of PHP files) are separated cleanly from the presentation files. The presentation files are the stuff you need modify in order to create your own look, feel and behavior of a Wordpress site. The presentation files are also called &quot;TEMPLATE FILES&quot;.&lt;/p&gt;
+
+&lt;p&gt;When building a WordPress system, you will not need to  deal with SQL, linking and other system level programming routines &amp;mdash; you will deal with a little bit of PHP though. WordPress exposes the functionalities of the CMS via PHP functions, these functions are higher level abstractions of a CMS system, you will call these PHP functions on one or more of your template files.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;THE TEMPLATE FILES&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;index.php&lt;/em&gt; - This is the main blog template. This file contains the main &lt;em&gt;loop&lt;/em&gt; which iterates over all the blog entries on the database and displays it for the user&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;single.php&lt;/em&gt; - The single post template. If a user clicks on a link for a blog post, the contents of the queried post is displayed using this template&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;page.php&lt;/em&gt; - When a page is requested e.g. about-page or any other page that you defined in &lt;em&gt;wp-admin&lt;/em&gt;, this template will be used&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;comments.php&lt;/em&gt; - for the comments&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;archive.php&lt;/em&gt; - when a category, date or author is queried this will be used to display the results. If on the other hand, you did write author.php, category.php and date.php, then those templates will be used instead&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;search.php&lt;/em&gt; - when a search is performed, this template is used to display the results, if this template is not present, index.php is used instead&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;tag.php&lt;/em&gt; - used when a specific tag is queried. If this template is not present, index.php is used instead&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;category.php&lt;/em&gt; - used when a specific category is queried. If this is not present, index.php is used instead&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;header.php&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;footer.php&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;style.css&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;home.php&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;author.php&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;404.php&lt;/em&gt; - during those times when WordPress cannot find a post, this will be template file used to display a 404 error&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;There are other template files but these, I think are the most common in theme development. For a more complete list, refer to codex.wordpress.org (given on the References section).&lt;/p&gt;
+
+&lt;p&gt;You do not need all these files to build WordPress site, you can use only a couple of them, depending on what functionality you want to achieve on your development. WordPress is pretty robust, it doesn't fail miserably when it needs a template file and does not find one; e.g. if you forgot to build &lt;em&gt;search.php&lt;/em&gt;, WordPress will simply use &lt;em&gt;index.php&lt;/em&gt;  as the template to use to display search results. Same is true if if you did not provide a &lt;em&gt;tag.php&lt;/em&gt; file, when a tag link is activated, it will simply use &lt;em&gt;index.php&lt;/em&gt; to present the result of the tag selection.&lt;/p&gt;
+
+&lt;p&gt;You can get started by building only &lt;em&gt;index.php&lt;/em&gt; in your theme, but unless your site is very spartan and barebones, you might want to use the other template files.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;INDEX TEMPLATE&lt;/h1&gt;
+
+
+&lt;p&gt;The &lt;em&gt;index.php&lt;/em&gt; is absolutely mandatory when you build a custom theme in WordPress. You can do without the other template files, but this one is a must. If you don't build this template file, you are not going to see much; in fact, you won't see anything at all. This template file usually contains &lt;strong&gt;the loop&lt;/strong&gt; which goes through all &lt;em&gt;post&lt;/em&gt; entries on WordPress database, specifically from the &lt;em&gt;wp_post&lt;/em&gt; table.&lt;/p&gt;
+
+&lt;p&gt;You should start with a very spartan index template, like this&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;?php if(have_posts()) : ?&amp;gt;
+    &amp;lt;?php while (have_posts()) : the_post();?&amp;gt;
+        
+    &amp;lt;a href='&amp;lt;?php the_permalink();?&amp;gt;'&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;?php the_title(); ?&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;?php the_excerpt();?&amp;gt;
+
+    &amp;lt;?php endwhile;?&amp;gt;
+  
+    &amp;lt;?php else :?&amp;gt;
+        &amp;lt;h1&amp;gt;Yikes!&amp;lt;/h1&amp;gt;
+    No post!
+&amp;lt;?php endif;?&amp;gt;    
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The outermost control structure is an &lt;em&gt;if&lt;/em&gt; construct. The &lt;em&gt;have_post()&lt;/em&gt; function queries if there are any post in the &lt;em&gt;wp_post&lt;/em&gt; table, if at least one is found, we can proceed to loop, otherwise, the &quot;Yikes&quot; message will be seen the user.&lt;/p&gt;
+
+&lt;p&gt;Inside the &lt;em&gt;if&lt;/em&gt; construct is &lt;em&gt;the loop&lt;/em&gt;. The &lt;em&gt;have_post()&lt;/em&gt; function checks the &lt;em&gt;wp_post&lt;/em&gt; table if there is any post to query or iterate at, if not it exits the loop. The &lt;em&gt;the_post&lt;/em&gt; function is actually the one that fetches the post entry from the database. It does one more thing, it looks ahead database cursor query if there is another post to fetch. If there is a next post, it returns true, other wise it returns false and &lt;em&gt;the loop&lt;/em&gt; terminates.&lt;/p&gt;
+
+&lt;p&gt;Once you are inside the loop, you can now start displaying some important parts of the blog post, namely, the link to the post, the name of the post and the post itself. All these three things are accessible and exposed by WordPress via functions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;the_title&lt;/em&gt; - retrieves the title of the blog post from the database&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;the_except&lt;/em&gt; - retrieves the excerpts of the blog post from the database, if there is one. If it does not find an excerpt entry it will extract the first few words of the post&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;the_permalink&lt;/em&gt; - displays the URL for the permalink to the post which is currently being processed in the loop. This is not fetched from the database. This data item is constructed at runtime. The reason is because permalinks are configurable, they are not static data which can be stored directly in the database&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;The 3 functions discussed above are almost always, exclusively used from within &lt;strong&gt;the loop&lt;/strong&gt;, there are setup routines that are happening before these data items can be made available, and the loop performs that setup.&lt;/p&gt;
+
+&lt;p&gt;If you want to know more about the nitty-gritty implementations of these WordPress functions, they are in &lt;em&gt;wp-includes/query.php, wp-includes/link-template.php, wp-includes/post-template.php&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;HEADERS AND FOOTERS&lt;/h2&gt;
+
+&lt;p&gt;Web pages typically includes headers and footers. They can be used to display copyrights, navigations and other information important to the design of the site. It is a good idea to separate their syntactical structure and content from the main content. WordPress templating makes this exercise easier and maintainable by exposing the &lt;em&gt;get_header&lt;/em&gt; and &lt;em&gt;get_footer&lt;/em&gt; functions.&lt;/p&gt;
+
+&lt;p&gt;If you create the files &lt;em&gt;header.php&lt;/em&gt; and &lt;em&gt;footer.php&lt;/em&gt; in your theme template files, their content will be pulled when you invoke the &lt;em&gt;get_header&lt;/em&gt; and &lt;em&gt;get_footer&lt;/em&gt; functions. Let's revise the &lt;em&gt;index.php&lt;/em&gt; template we coded earlier&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;?php get_header(); ?&amp;gt;
+&amp;lt;?php if(have_posts()) : ?&amp;gt;
+    &amp;lt;?php while (have_posts()) : the_post();?&amp;gt;
+        
+    &amp;lt;a href='&amp;lt;?php the_permalink();?&amp;gt;'&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;?php the_title(); ?&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;?php the_excerpt();?&amp;gt;
+
+    &amp;lt;?php endwhile;?&amp;gt;
+  
+    &amp;lt;?php else :?&amp;gt;
+        &amp;lt;h1&amp;gt;Yikes!&amp;lt;/h1&amp;gt;
+    No post!
+&amp;lt;?php endif;?&amp;gt;    
+&amp;lt;?php get_footer(); ?&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Create the files &lt;em&gt;header.php&lt;/em&gt; and &lt;em&gt;footer.php&lt;/em&gt; on your theme folder. Start simple so it's easier to troubleshoot, put some basic content first.&lt;/p&gt;
+
+&lt;h3&gt;header.php&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;!-- HEADER.php --&amp;gt;
+Home  | email | about&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;A basic navigation, but without the hyperlinks yet&lt;/p&gt;
+
+&lt;h3&gt;footer.php&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;!-- FOOTER.php --&amp;gt;
+&amp;lt;hr/&amp;gt;
+Copyright &amp;amp;copy; 2013, theLogBox&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;A basic copyright notice&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Styling&lt;/h2&gt;
+
+&lt;p&gt;Lastly, apply some styling to your index page. We could inline the styles and code it directly into the HTML portions of index.php, but that will clutter our codes and can get out of hand (quickly) as add more elements to the index page. Instead, we will put all the styling instructions into CSS (Cascading Style Sheets).&lt;/p&gt;
+
+&lt;p&gt;We will revise the &lt;em&gt;index.php&lt;/em&gt; again, this time, we will separate the regions of our resulting HTML files so that we can select each region and apply the appropriate styling instructions on them.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;header&amp;gt;
+    &amp;lt;?php get_header(); ?&amp;gt;
+&amp;lt;/header&amp;gt;
+
+&amp;lt;content&amp;gt;
+&amp;lt;?php if(have_posts()) : ?&amp;gt;
+    &amp;lt;?php while (have_posts()) : the_post();?&amp;gt;
+        
+    &amp;lt;a href='&amp;lt;?php the_permalink();?&amp;gt;'&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;?php the_title(); ?&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;?php the_excerpt();?&amp;gt;
+
+    &amp;lt;?php endwhile;?&amp;gt;
+  
+    &amp;lt;?php else :?&amp;gt;
+        &amp;lt;h1&amp;gt;Yikes!&amp;lt;/h1&amp;gt;
+    No post!
+&amp;lt;?php endif;?&amp;gt;    
+&amp;lt;/content&amp;gt;
+&amp;lt;footer&amp;gt;
+    &amp;lt;?php get_footer(); ?&amp;gt;
+&amp;lt;/footer&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;GOOD TO KNOW&lt;/strong&gt;: the &lt;em&gt;header&lt;/em&gt; tag in our index.php is not referring to the &lt;strong&gt;head&lt;/strong&gt; tag of our resulting HTML. This header tag is inside (a child of) of the HTML &lt;em&gt;body&lt;/em&gt; tag, this is the header that is visible when displayed by the browser.&lt;/p&gt;
+
+&lt;p&gt;Create a &lt;em&gt;style.css&lt;/em&gt; file inside the template folder, we are creating this file because we will externalise all the styling instructions to separate it from the HTML content.&lt;/p&gt;
+
+&lt;pre&gt;
+/* STYLE.CSS */
+
+header, footer {padding: 1em; border: 1px solid gray;}
+h1, h2, h3 {
+    font-family: 'arial', 'helvetica', sans-serif;
+}
+h1 {font-size: 150%;}
+h2 {font-size: 120%;}
+h1 {font-size: 110%;}
+
+&lt;/pre&gt;
+
+
+&lt;p&gt;We need to tell our HTML (our resulting HTML) to use the instructions inside the file &lt;strong&gt;style.css&lt;/strong&gt; for style instructions. We need to add a &lt;strong&gt;link&lt;/strong&gt; tag to our index.php&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='php'&gt;&amp;lt;html&amp;gt;
+
+&amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;&amp;lt;?php bloginfo('stylesheet_url'); ?&amp;gt;&amp;quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+&amp;lt;header&amp;gt;
+    &amp;lt;?php get_header(); ?&amp;gt;
+&amp;lt;/header&amp;gt;
+
+&amp;lt;content&amp;gt;
+&amp;lt;?php if(have_posts()) : ?&amp;gt;
+    &amp;lt;?php while (have_posts()) : the_post();?&amp;gt;
+        
+    &amp;lt;a href='&amp;lt;?php the_permalink();?&amp;gt;'&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;?php the_title(); ?&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;?php the_content();?&amp;gt;
+
+    &amp;lt;?php endwhile;?&amp;gt;
+  
+    &amp;lt;?php else :?&amp;gt;
+        &amp;lt;h1&amp;gt;Yikes!&amp;lt;/h1&amp;gt;
+    No post!
+&amp;lt;?php endif;?&amp;gt;    
+&amp;lt;/content&amp;gt;
+&amp;lt;footer&amp;gt;
+    &amp;lt;?php get_footer(); ?&amp;gt;
+&amp;lt;/footer&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The filename &lt;em&gt;style.css&lt;/em&gt; is known to WordPress, if you name your stylesheet file differently e.g. stylesheet.css or custom.css or ie.css, you need a different &lt;em&gt;link&lt;/em&gt; instructions on the head tag.&lt;/p&gt;
+
+&lt;p&gt;For example, if you named your stylesheet custom.css, the link tag on the head needs to read like&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class='html'&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;&amp;lt;?php bloginfo('template_url'); ?&amp;gt;/custom.css&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;SINGLE POST TEMPLATE&lt;/h1&gt;
+
+
+&lt;h1&gt;BIBLIOGRAPHY&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org/Theme_Development&quot;&gt;CODEX.WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org/Function_Reference/&quot;&gt;CODEX/WordPress&lt;/a&gt; - WordPress Function Reference&lt;/li&gt;
+&lt;/ol&gt;
+
 </content>
  </entry>
  
