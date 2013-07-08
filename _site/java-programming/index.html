@@ -172,7 +172,7 @@ img {
   #cap {
     padding: 10px;
     font-family: Georgia;
-    font-size:90%;
+    font-size:97%;
     color: #000000;
     text-align:center;
     width: 500px;
@@ -243,7 +243,7 @@ a:link, a:visited { color: #B10000; }
 
 #postcontent {
   position:relative;
-  top: -8px;
+  top: -11px;
   float:right;
   width:675px;
 }
@@ -285,11 +285,18 @@ pre {
 	font-family: 'Muli';
   font-size: 15px;
   color: #000000;
-  background: #FFFFEB;
+  
+  /*background: #FFFFEB; ANOTHER IS 333333*/
 	padding: 10px;
-	border: 1px solid #B6B6B6;
+	border: 3px solid #B6B6B6;
 	margin-bottom:0px;
   line-height: 160%;
+  /*
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+  */
 }
 
 #lst {
@@ -326,18 +333,6 @@ table {
     min-width:20px;
     word-wrap:break-word;
   }
-
-aside {
-  
-  display: block;
-  float: right;
-  width: 200px;
-  padding: 10px;
-  margin: 10px;
-  font-size: 12px;
-  background: #F1F1F1;
-  color: #000000;
-}
   
 </style>
 
@@ -368,35 +363,16 @@ aside {
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
-        <table border="0" cellspacing="5" cellpadding="5">
-  <tr><th colspan=3>
-    Revision History
-  </th></tr>
-  </tr>
-    <td>
-      Rev 0.1
-    </td>
-    <td>February 18, 2004</td>
-    <td width="260px">Created</td>
-  </tr>
-  
-</tr>
-  <td>
-    Rev 0.2
-  </td>
-  <td>October 21, 2007</td>
-  <td>XXXX</td>
-</tr>
+        <h1>DOCUMENT HISTORY</h1>
 
-</tr>
-  <td>
-    Rev 0.3
-  </td>
-  <td>June 12, 2012</td>
-  <td>XXXX</td>
-</tr>
-  
-</table>
+<ul>
+<li>Feb 18 2004 &mdash; created</li>
+<li>Oct 21 2007 &mdash; Added section on Generics</li>
+<li>Jun 12 2013 &mdash; re-written some examples to reflect Java 7 changes</li>
+</ul>
+
+
+<hr class="chapterbreak"/>
 
 
 
@@ -1728,6 +1704,16 @@ class Phone {
 
 
 <p>The <em>draw()</em> method are both available in Circle and Square, but they have different implementations or behavior (method body). This was possible because we have overriden the draw() method where it makes sense. It makes the <code class="codeblock">draw()</code> method polymorphic, it changes its behavior depending on which object you are calling it against.</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">BIBLIOGRPAHY</h1>
+
+
+
 
         </div>                
       </div>

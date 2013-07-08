@@ -7,35 +7,13 @@ categories:
 - core_programming
 ---
 
-<table border="0" cellspacing="5" cellpadding="5">
-  <tr><th colspan=3>
-    Revision History
-  </th></tr>
-  </tr>
-    <td>
-      Rev 0.1
-    </td>
-    <td>February 18, 2004</td>
-    <td width="260px">Created</td>
-  </tr>
-  
-</tr>
-  <td>
-    Rev 0.2
-  </td>
-  <td>October 21, 2007</td>
-  <td>XXXX</td>
-</tr>
+# DOCUMENT HISTORY
 
-</tr>
-  <td>
-    Rev 0.3
-  </td>
-  <td>June 12, 2012</td>
-  <td>XXXX</td>
-</tr>
-  
-</table>
+- Feb 18 2004 &mdash; created
+- Oct 21 2007 &mdash; Added section on Generics
+- Jun 12 2013 &mdash; re-written some examples to reflect Java 7 changes
+
+<hr class="chapterbreak"/>
 
 <h1 class="chapter">INTRODUCTION</h1>
 
@@ -1248,11 +1226,11 @@ The *Shape* type could have been written as a class. The *Square* and *Circle* c
 
 The *draw()* method are both available in Circle and Square, but they have different implementations or behavior (method body). This was possible because we have overriden the draw() method where it makes sense. It makes the <code class="codeblock">draw()</code> method polymorphic, it changes its behavior depending on which object you are calling it against. 
 
+<hr class="chapterbreak"/>
+
+<h1 class="chapter">BIBLIOGRPAHY</h1>
 
 
-
-
- 
 
 
 
