@@ -4,5 +4,5 @@ permalink: /:title
 
 rdiscount extensions: [smart]
 
-pygments: false
+# pygments: false
 lsi: false
