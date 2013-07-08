@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-08T20:59:11+08:00</updated>
+ <updated>2013-07-08T22:17:09+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -376,6 +376,329 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
 &lt;li&gt;&lt;a href=&quot;http://www.tex.ac.uk/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf&quot;&gt;The beamer class&lt;/a&gt; - PDF resources&lt;/li&gt;
 &lt;/ol&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>OSX Cheatsheet</title>
+   <link href="http://tedhagos.com /osx-cheatsheet"/>
+   <updated>2013-02-12T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /osx-cheatsheet</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;1. SHOW THE ROUTING TABLE&lt;/strong&gt;. &lt;span class=&quot;codeblock&quot;&gt;route print&lt;/span&gt; won't work, try &lt;code class=&quot;codeblock&quot;&gt;netstat -nr&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;2. HIDE OR SHOW HIDDEN FILES IN FINDER&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are always working on the command line, don't even bother with this, a simple &lt;strong&gt;ls -a&lt;/strong&gt; should do the trick. If however, you really do need to display hidden stuff in Finder, here's how to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ defaults write com.apple.finder AppleShowAllFiles -bool YES &lt;br/&gt;
+  $ defaults write com.apple.finder AppleShowAllFiles -bool NO
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The first one obviously shows hidden files and the other hides it. You need kill the Finder app each time you change this setting.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ killall Finder
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;3. HOW TO SET THE HOSTNAME&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ sudo scutil --set HostName anyname_you_want
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;4. JAVA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type &lt;span class=&quot;codeblock&quot;&gt;java&lt;/span&gt;, it should launch a window asking you if you want to install Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAVA 8&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Don't install the EA release from Oracle, not on your workhorse machine. If you just want to play around with JDK8, get it at &lt;a href=&quot;http://java8.jdk.net/download&quot;&gt;java8.jdk.net/download&lt;/a&gt; or &lt;a href=&quot;http://java8.jdk.net/lambda&quot;&gt;java8.jdk.net/lambda&lt;/a&gt;. Untar the downloaded files, then set softlinks to executables.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8 &lt;br/&gt;
+  $ sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;5. CONTROL ANTI-ALIASING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;WHERE:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1: Light anti aliasing&lt;/li&gt;
+&lt;li&gt;2: Medium&lt;/li&gt;
+&lt;li&gt;3: Strong&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;6. GET A BETTER PACKAGE MANAGER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Get BREW first&lt;/a&gt;, follow the instruction on the web site of brew, after that it's all good&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install git &lt;br/&gt;
+  $ brew install wget &lt;br/&gt;
+  $ brew install curl &lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Color the Terminal.app&lt;/strong&gt; for ls&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ vi ~/.bash_profile &lt;br/&gt;
+  $ echo &quot;alias ls=&quot;ls -G&quot;&quot; &gt;&gt; ~./bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;7. MYSQL&lt;/strong&gt; client can't be found after OSX 10.8 upgrade, it did not disappear  but for some reason, the PATH was messed up, it is still on &lt;em&gt;/usr/ocal/mysql/bin&lt;/em&gt;, just add it the SYSTEM PATH&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ vi ~/.bash_profile &lt;br/&gt;
+  $ echo &quot;export PATH=$PATH:/usr/local/mysql/bin:.&quot; &gt;&gt; ~./bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;8. PICTURES TAKEN IN PHOTOBOOTH&lt;/strong&gt; are in &lt;em&gt;~/Pictures/Photo Booth Library/Pictures&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;9. PANDOC&lt;/strong&gt; If you want to write in &lt;strong&gt;Markdown&lt;/strong&gt; then publish in HTML, PDF, Latex etc, you will need &lt;strong&gt;pandoc&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, you need to &lt;a href=&quot;http://www.haskell.org/haskellwiki/Mac_OS_X&quot;&gt;GET Haskell&lt;/a&gt;, you could try Fink or MacPort but the binaries worked best when I was doodling with this. There is a download link on &lt;a href=&quot;http://www.haskell.org/haskellwiki/Mac_OS_X&quot;&gt;HasKell Wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Haskell installer would have installed the &lt;em&gt;cabal&lt;/em&gt; binaries at &lt;em&gt;~/.cabal/bin&lt;/em&gt;, add it to SYSTEM PATH then install pandoc&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ sudo cabal update
+$ sudo cabal install pandoc
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;10. USE A BETTER TERMINAL CLIENT&lt;/strong&gt; Get &lt;a href=&quot;http://www.iterm2.com/&quot;&gt;Iterm2&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;11. PHP PEAR&lt;/strong&gt;. This is no longer included in 10.8, maybe it did not even make it in Leopard, I'm not sure. Just &lt;strong&gt;curl&lt;/strong&gt; it&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ curl http://pear.php.net/go-pear.phar &gt; go-pear.phar &lt;br/&gt;
+$ sudo php -q go-pear.phar
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;PEAR installation will be at &lt;span class=&quot;codeblock&quot;&gt;~/pear/&lt;/span&gt;, bin, etc and all. Next, update your startup script&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ echo &quot;export PATH=$PATH:~/pear/bin:.&quot; &gt;&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;12. PHAR &amp;amp; PHP COMPOSER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a php.ini file first. OSX does have it at /private/etc. Don't copy the ini file somewhere else, it needs to be at &lt;em&gt;/private/etc/&lt;/em&gt;. Make sure that php.ini is actually in that directory&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cd /private/etc &lt;br/&gt;
+$ sudo cp php.ini.default php.ini
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the following to &lt;em&gt;php.ini&lt;/em&gt;, it's okay to add it at the very beginning, it
+didn't give me problems that way&lt;/p&gt;
+
+&lt;pre&gt;
+detect_unicode = Off
+date.timezone = YourCountry/YourCity
+&lt;/pre&gt;
+
+
+&lt;p&gt;After saving the update php.ini,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cd /path/to/your/workarea &lt;br/&gt;
+$ curl -s http://getcomposer.org/installer | php
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;composer.phar should be downloaded to &lt;code class=&quot;codeblock&quot;&gt;/path/to/your/workarea&lt;/code&gt;. Test it. &lt;span class=&quot;codeblock&quot;&gt; $ php composer.phar&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;13. EDITOR&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+$ brew install vim 
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+$ lynx https://gist.github.com/tedhagos/5916935 (say yes to the download)
+$ tar -xzvf gistXXXXXX.tar.gz 
+$ cp gistXXXX/.vimrc ~/.vimrc 
+$ vim +BundleInstall +qall
+&lt;/pre&gt;
+
+
+&lt;p&gt;More details at &lt;a href=&quot;https://github.com/gmarik/vundle&quot;&gt;gmarik/vundle&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;14. GET A BETTER SCREEN MULTIPLEXER&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ brew install tmux
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a bit of a setup. You need to create ~/tmux.conf and create a script (the one that handles the shortcuts). The &lt;a href=&quot;https://gist.github.com/tedhagos/5917003&quot;&gt;tmux.conf and tdev.sh are here&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+
+&lt;p&gt;&lt;strong&gt;15. COPY/PASTE ON THE CLI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+$ cat somefile | pbcopy &lt;br/&gt;
+$ echo pbpaste
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;16. USING A WINDOWS KEYBOARD ON MAC MINI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Remap the keyboard for Mac Oriented use. Get the &lt;a href=&quot;http://doublecommand.sourceforge.net/&quot;&gt;Double Command Kernel Extension&lt;/a&gt;. Original instructions from &lt;a href=&quot;http://www.macworld.com/article/42446/2005/01/doublecommand.html&quot;&gt;MacWorld is found here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: F12 on the Win Keyboard is the eject button&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;17. RIP AUDIO CDS (FLAC)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I don't want to hear any &quot;But you can use iTunes to rip CDs&quot;. I know that. iTunes is very opinionated on how it wants to rip CDs and where to put them. I don't agree with it. Hence, the hacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install cdparanoia &lt;br/&gt;
+  $ brew install abcde &lt;br/&gt;
+  $ touch ~/.abcde.conf
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  CDROM=/dev/disk1
+  OUTPUTTYPE=flac
+  INTERACTIVE=n
+  PADTRACKS=y
+  OUTPUTDIR=~/Music/abcde
+  OUTPUTFORMAT='${ARTISTFILE}/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  VAOUTPUTFORMAT='Various/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+  mungefilename ()
+  {
+    echo &quot;$@&quot; | sed s,:, -,g | tr /* _+ | tr -d '&quot;?[:cntrl:]
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;dev/disk1 is where my CD is mounted, find out where yours is mounted. A simple &lt;code class=&quot;codeblock&quot;&gt;df&lt;/code&gt; command should give you some clue where the CD drive is mounted. After that, ripping can start.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ diskutil unmount /dev/disk1 &lt;br/&gt;
+  $ abcde &lt;br/&gt;
+  $ diskutil eject /dev/disk1&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The unmounting is necessary because abcde works with raw block devices and cannot function when the CD is mounted.&lt;/p&gt;
+
+&lt;p&gt;I shamlessly ripped most of this guide from &lt;a href=&quot;http://hints.macworld.com/article.php?story=2005101620055677&quot;&gt;MacWorld contributed by extempore&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;17.1 RIP AUDIO CDS (MP3)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Get &lt;a href=&quot;http://sbooth.org/Max/&quot;&gt;MAX from SBooth&lt;/a&gt;. Work on the archive files and put in &lt;code class=&quot;codeblock&quot;&gt;/Applications&lt;/code&gt; folder or where you want. It's a GUI tool, so it's easy to work with.&lt;/p&gt;
+
+&lt;p&gt;MAX uses musicbrainz.org for the CD metadata, the service is not good enough. GraceNotes, which is used by iTunes is more capable. The problem is, I couldn't find a direct way to connect MAX to GraceNotes. You need a bit of AppleScripting, this solution was the from the SBooth forums as well, the &lt;a href=&quot;http://forums.sbooth.org/viewtopic.php?f=4&amp;amp;t=1930&quot;&gt;link to the original discussion is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a Script in AppleScript, Save it anywhere you can find it easily. The script can be found on the link above (the sbooth forum), but I saved it in gist.github.com, here's the link https://gist.github.com/tedhagos/5845190&lt;/li&gt;
+&lt;li&gt;When you insert the CD, iTunes will launch as well (you need this)&lt;/li&gt;
+&lt;li&gt;Run the script you created. That will get the meta data of iTunes&lt;/li&gt;
+&lt;li&gt;Rip Away&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;This solution needs both iTunes and MAX running at the same time. When iTunes grabs the metadata from Gracenotes, the script grabs the metadata from iTunes&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;18. RIP DVDs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Just get &lt;a href=&quot;http://handbrake.fr/downloads.php&quot;&gt;Handbrake here&lt;/a&gt; you can figure out the rest&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;19. RIP YOUTUBE VIDEOS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install youtube-dl &lt;br/&gt;
+  $ brew install ffmpeg &lt;br/&gt;
+  $ brew install lame &lt;br/&gt;
+  $ youtube-dl http://youtube-video-url
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There's a dedicated note for this &lt;a href=&quot;http://thelogbox.com/rip-youtube-videos-linux-osx/&quot;&gt;somewhere on thelogBox.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;20. ACCELERATE DOWNLOADING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ brew install axel &lt;br/&gt;
+  $ axel -n 5 protocol://resource-uri
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-n 5&lt;/strong&gt; means you want to use 5 simulateneous threads of download. Sample usage;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;
+  $ axel -n 10 http://wordpress.org/latest.zip
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;&lt;strong&gt;20. SQUEAKY CLEAN HARD DRIVE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about &quot;how to clean up your Mac&quot;, swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get &lt;strong&gt;Clean My Mac&lt;/strong&gt; or anything paid that catches your fancy. The Mac Store is a good place to start.&lt;/p&gt;
 </content>
  </entry>
  
@@ -2791,7 +3114,277 @@ class Phone {
 
 
 
-&lt;h1 class=&quot;chapter&quot;&gt;BIBLIOGRPAHY&lt;/h1&gt;
+&lt;h1 class=&quot;chapter&quot;&gt;EXCEPTIONS&lt;/h1&gt;
+
+
+&lt;p&gt;When you start using code libraries written by other people, it is no longer enough to simply know the name of the method and the parameters that you need pass. You also need to know if the methods you will be calling are &lt;em&gt;throwing Exceptions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;An Exception is an error, an abnormal condition, a disruption of normal program flow.&lt;/p&gt;
+
+&lt;p&gt;Programmer's throw Exceptions from their their codes if they think something has gone awry. As a (responsible and defensive) programmer, you will make sure that your code will be able to respond to non-fatal conditions. Surely you will not allow your program to crash because the user has inputted wrong data. The code must be robust enough to recover from and even rectify abnormal conditions.&lt;/p&gt;
+
+&lt;p&gt;A common routine for applications is opening a file. The workflow is straightforward. User selects a file from a list, your code is supposed craft some sort of display window to display the contents of file, after opening it &amp;mdash; sounds straightforward doesn't it.&lt;/p&gt;
+
+&lt;p&gt;If we tried to code this using the control structures (thus far) available for us, it might look something like&lt;/p&gt;
+
+&lt;pre&gt;
+class SampleFileCheck {
+
+    public static void main(String []args)) {
+
+        String filename = askUserToInputFile();
+        boolean test_the_file = checkFileExistence();
+
+        if(test_the_file == true) {
+            //we know it is safe to open the file
+            ...
+        }
+        else {
+            //some codes here to inform
+            //the user the file does not exist
+            ...
+        }   
+    }
+
+    static String askuserToInputFile(){
+        ...
+    }
+    
+    static boolean checkFileExistence() {
+        ...    
+    }
+
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;From this trivial example I hope it is clear why we need to bother making our code robust. We need to anticipate error conditions because we cannot predict the kind of environment our codes will be subjected to.&lt;/p&gt;
+
+&lt;p&gt;End users are prone to commit errors and misspell things. Network connections go down, databases get corrupted, the list can go on. These are some of the many reasons why we need to bother with abnormal conditions.&lt;/p&gt;
+
+&lt;p&gt;It begs the question now &quot;How can we know if a method can throw Exceptions?&quot; The unfortunate answer is &quot;Read the API documentation&quot;. The documentation of Java is readily available in a variety of format, so there is no excuse not to read it.&lt;/p&gt;
+
+&lt;p&gt;If you need only to peek quickly at the method signatures of specific classes, the &lt;em&gt;javap&lt;/em&gt; utility allows you to print a summary of class methods. You can do that from the command line. Try it now &amp;mdash; &lt;code class=&quot;codeblock&quot;&gt;javap java.lang.String&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This command will output to the console all the methods and constructors that are found inside java.lang.String. Remember that you need to use the fully qualified name of the class.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;TRY-CATCH&lt;/h2&gt;
+
+&lt;p&gt;Going back to our pseudo code sample of reading a file, if we were to code this in Java, it would look like this&lt;/p&gt;
+
+&lt;pre&gt;
+    String filename = &quot;something.txt&quot;;
+        
+    try {
+        FileReader reader = new FileReader(filename);
+    }
+    catch(FileNotFoundException fe) {
+            
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;Notice that there is no &lt;em&gt;if-else&lt;/em&gt; block as written in the pseudo code? A &lt;em&gt;try-catch&lt;/em&gt; mechanism was used for routing program flow instead.&lt;/p&gt;
+
+&lt;p&gt;The try-catch block is Java's prescribed way of handling codes that may encounter abnormal conditions. It is somewhat similar to the if-else conditions in so far as it branches the program flow depending on whether there is an Exception encountered or not.&lt;/p&gt;
+
+&lt;p&gt;to recap&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Q:&lt;/strong&gt; What should I write inside the try block&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; statements that may throw Exceptions. There is no point writing a try block around a statements that do not declare Exceptions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; What should I put inside the catch block&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; statements that you need in order to cope with the abnormal conditions. It could be as simple as logging the error. Sometimes you may need to write code in order to recover from the error.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; How do I know which Exceptions to catch&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Read the API of the method you intend to call. In our FileReader example, I actually ran the command &lt;code class=&quot;codeblock&quot;&gt;$ javap java.io.FileReader&lt;/code&gt; from a console, that's how I knew that the constructor of the &lt;em&gt;FileReader&lt;/em&gt; class throws the FileNotFoundException&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; What if I need to call another method, and it throws a different Exception&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Well, just add another &lt;em&gt;catch&lt;/em&gt; block to your try-catch mechanism. You can have multiple catch blocks anyway.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Do I always need to use the try-block&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; No, if the method you are invoking is not throwing any Exception, then there is no need to try-catch it. See the answer above.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;TRY-CATCH-FINALLY&lt;/h2&gt;
+
+&lt;p&gt;The finally block has a special purpose. Whatever you write inside the finally block gets executed, no matter if an Exception was raised or not.  This behaviour makes it ideal for writing clean up codes, such as closing database connections or closing file connections&lt;/p&gt;
+
+&lt;pre&gt;
+    try {
+        Statement 1;
+        Statement 2;
+        Statement 3;
+        Statement 4;
+    }
+
+    catch(Exception e) {
+        Statement 5;
+        Statement 6;
+    }
+
+    finally{
+        Statement 7;
+        Statement 8;
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;Let's do some scenario analysis&lt;/p&gt;
+
+&lt;h3&gt;IF EVERYTHING WENT OKAY&lt;/h3&gt;
+
+&lt;p&gt;Every statement inside the try block will be executed, then every statement inside the finally block will be executed as well. None of the statements within the catch block will be executed.&lt;/p&gt;
+
+&lt;h3&gt;SOMETHING WENT WRONG, STATEMENT 2 WENT BONKERS&lt;/h3&gt;
+
+&lt;p&gt;In this case, statement Nos. 3 &amp;amp; 4 will be skipped. Program flow will be transferred immediately to the catch block. All the statements inside the catch block will be executed. Then all the statements in the finally block will be executed&lt;/p&gt;
+
+&lt;p&gt;As a matter of flow of control, you cannot circumvent the finally block, it will be executed, no matter what &amp;mdash; actually, that's not true, there is a statement that can force the &lt;em&gt;finally&lt;/em&gt; clause to be skipped, that is &lt;code class=&quot;codeblock&quot;&gt;System.exit(1)&lt;/code&gt;. That code is guaranteed to halt anything, but you know what I mean, you really wouldn't use this statement irresponsibly now, would you?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;THROWS CLAUSE&lt;/h2&gt;
+
+&lt;p&gt;When you invoke a method and it throws an &lt;em&gt;Exception&lt;/em&gt;, you can somewhat ignore it.How do you do that? The answer can be a bit long-winded, but bear with me.&lt;/p&gt;
+
+&lt;p&gt;Remember our code for reading a file? We had to use a library from &lt;em&gt;java.io&lt;/em&gt;, the FileReader class. The FileReader is a standard library for Java. If you read the API doc for that class, you will find something like this&lt;/p&gt;
+
+&lt;pre&gt;
+public FileReader {
+
+    public FileReader(String filename) throws FileNotFoundException {
+
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;There is &lt;em&gt;throws&lt;/em&gt; clause in the constructor of the FileReader. What does it mean for us? It means that we need to take some caution using this class. We need to take extra steps even at the point of instantiation. The &lt;em&gt;throws&lt;/em&gt; clause is warning us that it can potentially throw an error and it needs to be handled appropriately.&lt;/p&gt;
+
+&lt;p&gt;There are two ways we can call methods that have &lt;em&gt;throws&lt;/em&gt; clause. We have already done the first one a while back (the try-catch-finally). The other way to handle such methods is to kick the Exception upwards &amp;mdash; let me explain that by starting with a code example.&lt;/p&gt;
+
+&lt;pre&gt;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+class FileSample {
+    
+    public static void main(String[] args) throws FileNotFoundException {
+        
+        String filename = &quot;something.txt&quot;;
+        FileReader reader = new FileReader(filename);
+        
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;In the code construction above, we did not enclose the &lt;em&gt;FileReader&lt;/em&gt; constructor inside a &lt;em&gt;try-catch&lt;/em&gt; block. We declared a throws clause as part of the &lt;em&gt;main()&lt;/em&gt; method.&lt;/p&gt;
+
+&lt;p&gt;If something does happen inside the body of the &lt;em&gt;main()&lt;/em&gt; method, say the FileReader constructor encounters an error because the file wasn't there, I will not handle inside the &lt;em&gt;main()&lt;/em&gt; method.&lt;/p&gt;
+
+&lt;p&gt;The thrown Exception will first look if there is any &lt;em&gt;try-catch&lt;/em&gt; block where the error can be handled. It won't find any, because we did not write one. The Exception will then look at the signature of the method where the Exception has happened &amp;mdash; in this case, inside &lt;em&gt;main()&lt;/em&gt;. The error will be passed to a higher level in the call stack (who ever called method &lt;em&gt;main&lt;/em&gt;). Of course, the one who will call the main() method is already the JVM, so in case something abnormal does happen to our code while executing the FileReader constructor, the JVM will simply halt and throw us a bunch error printouts.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;BUBBLE THE EXCEPTION UP THE CALL STACK&lt;/h2&gt;
+
+&lt;p&gt;Let's work with another example. This is not different from the previous example, just more elaborate. In this construction, the main method calls &lt;em&gt;doo&lt;/em&gt; which in turn calls &lt;em&gt;foo&lt;/em&gt; which in turn calls &lt;em&gt;goo&lt;/em&gt;. Method &lt;em&gt;goo&lt;/em&gt; throws the &lt;em&gt;FileNotFoundExcpetion&lt;/em&gt;, so does &lt;em&gt;foo&lt;/em&gt; and so does &lt;em&gt;doo&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+import java.io.FileNotFoundException;
+
+class ThrowSample {
+
+    public static void main (String [] args) {
+        
+        ThrowSample ts = new ThrowSample();
+        
+        try {
+            ts.doo();
+        }
+        catch(FileNotFoundException fe) {
+            //error handling
+            //code here
+        }
+    }
+
+    void doo() throws FileNotFoundException {
+        foo();
+    }
+
+    void foo() throws FileNotFoundException{
+        goo();
+    }
+
+    void goo() throws FileNotFoundException {
+        //Open a file here
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Notice that inside &lt;em&gt;goo&lt;/em&gt;, there is no try-catch block? That should not be a surprise anymore. We know the reason why we don't have to try-catch inside &lt;em&gt;goo&lt;/em&gt;, that is because, in the method signature, we said that it &lt;em&gt;throws FileNoutFoundException&lt;/em&gt;. If anything happens inside method &lt;em&gt;goo&lt;/em&gt;, we will simply throw upwards to whoever called method &lt;em&gt;goo&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/exception-bubble.png&quot;&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;How Exceptions are propagated&lt;/div&gt;
+
+
+&lt;p&gt;Method foo invoked &lt;em&gt;goo&lt;/em&gt;, &lt;em&gt;foo&lt;/em&gt; also did not use a try-catch block to handle the FileNotFoundException, instead, it also passed the buck upwards.&lt;/p&gt;
+
+&lt;p&gt;The buck stopped at method &lt;em&gt;main&lt;/em&gt;, we did not declare a throws clause on the signature of &lt;em&gt;main&lt;/em&gt; and hence, we are obliged to handle the Exception using a &lt;em&gt;try-catch&lt;/em&gt; block.&lt;/p&gt;
+
+&lt;p&gt;Whenever you are using a method, always check the signature. If the signature declares that it is throwing Exceptions, you need to handle that exception your code either by re-throwing it up the call stack, or by enclosing it in a try-catch block. You do this for &lt;strong&gt;CHECKED EXCEPTIONS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are errors and &lt;em&gt;Exceptions&lt;/em&gt; that may still be thrown during runtime, but you will not find them on the declaration of method signatures. These are called &lt;strong&gt;UNCHECKED EXCEPTIONS&lt;/strong&gt;, for example, say you tried to divide some integer value with zero, that will result to an &lt;em&gt;ArithmeticException&lt;/em&gt; &amp;mdash; but you don't guard against arithmetic exceptions during compile time though.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;WRITING YOUR OWN EXCEPTIONS&lt;/h2&gt;
+
+&lt;p&gt;You can write your own Exceptions if you want to, For whatever reason you may have. Some people write Exceptions to closely model the business domain they are working on, for example, when balance of a SavingsAccount object goes down below a set threshold, some programmers might throw an Exception like &quot;InsufficientBalanceException&quot;.&lt;/p&gt;
+
+&lt;p&gt;To create your own Exception, the simplest way is to extend &lt;em&gt;java.lang.Exception&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+class A extends Exception  {
+    
+    public String getMessage() {
+        return &quot;You got an error on ...&quot;;
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Custom Exception&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;Class A&lt;/em&gt; is now a bonafide Exception object. You can &lt;em&gt;throw, try and catch&lt;/em&gt; type A objects just as would throw, try and catch any other built-in Exception objects in Java.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;codeblock&quot;&gt;getMessage()&lt;/code&gt; method was overridden so we can provide a friendly error message when the Exception is triggered. Whatever you write inside the body of &lt;em&gt;getMessage()&lt;/em&gt; will be spewed to the screen, in case the Exception is triggered.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;REMEMBER THE FOLLOWING&lt;/h2&gt;
+
+&lt;p&gt;When calling java method that have been coded by other people (or even coded by you), you need to be aware whether or not they are throwing Exceptions.&lt;/p&gt;
+
+&lt;p&gt;If the methods are declared to throw Exceptions, you need to choose how you will handle it. You can a) handle it using try-catch-finally or you can b) let other methods bother with the Exception by simply putting a &lt;em&gt;throws clause&lt;/em&gt; on your own methods.&lt;/p&gt;
+
+&lt;p&gt;If you do decide to handle the Exception using try-catch-finally mechanism, remember that you can declare as many &lt;em&gt;catch&lt;/em&gt; blocks as you need.&lt;/p&gt;
+
+&lt;p&gt;If you do write a &lt;em&gt;finally&lt;/em&gt; clause, remember that all the codes inside that block will get executed no matter what.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;BIBLIOGRAPHY&lt;/h1&gt;
 
 
 

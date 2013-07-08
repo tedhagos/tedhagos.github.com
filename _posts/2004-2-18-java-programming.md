@@ -1228,7 +1228,263 @@ The *draw()* method are both available in Circle and Square, but they have diffe
 
 <hr class="chapterbreak"/>
 
-<h1 class="chapter">BIBLIOGRPAHY</h1>
+<h1 class="chapter">EXCEPTIONS</h1>
+
+
+
+When you start using code libraries written by other people, it is no longer enough to simply know the name of the method and the parameters that you need pass. You also need to know if the methods you will be calling are *throwing Exceptions*.
+
+An Exception is an error, an abnormal condition, a disruption of normal program flow. 
+
+Programmer's throw Exceptions from their their codes if they think something has gone awry. As a (responsible and defensive) programmer, you will make sure that your code will be able to respond to non-fatal conditions. Surely you will not allow your program to crash because the user has inputted wrong data. The code must be robust enough to recover from and even rectify abnormal conditions. 
+
+A common routine for applications is opening a file. The workflow is straightforward. User selects a file from a list, your code is supposed craft some sort of display window to display the contents of file, after opening it &mdash; sounds straightforward doesn't it. 
+
+If we tried to code this using the control structures (thus far) available for us, it might look something like 
+
+<pre>
+class SampleFileCheck {
+
+    public static void main(String []args)) {
+
+        String filename = askUserToInputFile();
+        boolean test_the_file = checkFileExistence();
+
+        if(test_the_file == true) {
+            //we know it is safe to open the file
+            ...
+        }
+        else {
+            //some codes here to inform
+            //the user the file does not exist
+            ...
+        }   
+    }
+
+    static String askuserToInputFile(){
+        ...
+    }
+    
+    static boolean checkFileExistence() {
+        ...    
+    }
+
+}
+</pre>
+
+
+From this trivial example I hope it is clear why we need to bother making our code robust. We need to anticipate error conditions because we cannot predict the kind of environment our codes will be subjected to. 
+
+End users are prone to commit errors and misspell things. Network connections go down, databases get corrupted, the list can go on. These are some of the many reasons why we need to bother with abnormal conditions.
+
+It begs the question now "How can we know if a method can throw Exceptions?" The unfortunate answer is "Read the API documentation". The documentation of Java is readily available in a variety of format, so there is no excuse not to read it.
+
+If you need only to peek quickly at the method signatures of specific classes, the *javap* utility allows you to print a summary of class methods. You can do that from the command line. Try it now &mdash; <code class="codeblock">javap java.lang.String</code>
+
+This command will output to the console all the methods and constructors that are found inside java.lang.String. Remember that you need to use the fully qualified name of the class. 
+
+***
+
+## TRY-CATCH
+
+Going back to our pseudo code sample of reading a file, if we were to code this in Java, it would look like this
+
+<pre>
+	String filename = "something.txt";
+		
+	try {
+		FileReader reader = new FileReader(filename);
+	}
+	catch(FileNotFoundException fe) {
+			
+	}
+</pre>
+
+Notice that there is no *if-else* block as written in the pseudo code? A *try-catch* mechanism was used for routing program flow instead.
+
+The try-catch block is Java's prescribed way of handling codes that may encounter abnormal conditions. It is somewhat similar to the if-else conditions in so far as it branches the program flow depending on whether there is an Exception encountered or not. 
+
+to recap
+
+- **Q:** What should I write inside the try block
+- **A:** statements that may throw Exceptions. There is no point writing a try block around a statements that do not declare Exceptions 
+
+- **Q:** What should I put inside the catch block
+- **A:** statements that you need in order to cope with the abnormal conditions. It could be as simple as logging the error. Sometimes you may need to write code in order to recover from the error.
+
+- **Q:** How do I know which Exceptions to catch
+- **A:** Read the API of the method you intend to call. In our FileReader example, I actually ran the command <code class="codeblock">$ javap java.io.FileReader</code> from a console, that's how I knew that the constructor of the *FileReader* class throws the FileNotFoundException
+
+- **Q:** What if I need to call another method, and it throws a different Exception
+- **A:** Well, just add another *catch* block to your try-catch mechanism. You can have multiple catch blocks anyway.
+
+- **Q:** Do I always need to use the try-block
+- **A:** No, if the method you are invoking is not throwing any Exception, then there is no need to try-catch it. See the answer above. 
+
+***
+## TRY-CATCH-FINALLY
+
+The finally block has a special purpose. Whatever you write inside the finally block gets executed, no matter if an Exception was raised or not.  This behaviour makes it ideal for writing clean up codes, such as closing database connections or closing file connections
+
+<pre>
+	try {
+		Statement 1;
+		Statement 2;
+		Statement 3;
+		Statement 4;
+	}
+
+	catch(Exception e) {
+		Statement 5;
+		Statement 6;
+	}
+
+	finally{
+		Statement 7;
+		Statement 8;
+	}
+</pre>
+
+Let's do some scenario analysis
+
+### IF EVERYTHING WENT OKAY
+Every statement inside the try block will be executed, then every statement inside the finally block will be executed as well. None of the statements within the catch block will be executed.
+
+### SOMETHING WENT WRONG, STATEMENT 2 WENT BONKERS
+
+In this case, statement Nos. 3 & 4 will be skipped. Program flow will be transferred immediately to the catch block. All the statements inside the catch block will be executed. Then all the statements in the finally block will be executed 
+
+As a matter of flow of control, you cannot circumvent the finally block, it will be executed, no matter what &mdash; actually, that's not true, there is a statement that can force the *finally* clause to be skipped, that is <code class="codeblock">System.exit(1)</code>. That code is guaranteed to halt anything, but you know what I mean, you really wouldn't use this statement irresponsibly now, would you?
+
+***
+
+## THROWS CLAUSE 
+
+When you invoke a method and it throws an *Exception*, you can somewhat ignore it.How do you do that? The answer can be a bit long-winded, but bear with me. 
+
+Remember our code for reading a file? We had to use a library from *java.io*, the FileReader class. The FileReader is a standard library for Java. If you read the API doc for that class, you will find something like this
+
+<pre>
+public FileReader {
+
+	public FileReader(String filename) throws FileNotFoundException {
+
+	}
+}
+</pre>
+
+There is *throws* clause in the constructor of the FileReader. What does it mean for us? It means that we need to take some caution using this class. We need to take extra steps even at the point of instantiation. The *throws* clause is warning us that it can potentially throw an error and it needs to be handled appropriately.
+
+There are two ways we can call methods that have *throws* clause. We have already done the first one a while back (the try-catch-finally). The other way to handle such methods is to kick the Exception upwards &mdash; let me explain that by starting with a code example.
+
+<pre>
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+class FileSample {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		String filename = "something.txt";
+		FileReader reader = new FileReader(filename);
+		
+	}
+}
+</pre>
+
+In the code construction above, we did not enclose the *FileReader* constructor inside a *try-catch* block. We declared a throws clause as part of the *main()* method. 
+
+If something does happen inside the body of the *main()* method, say the FileReader constructor encounters an error because the file wasn't there, I will not handle inside the *main()* method.
+
+The thrown Exception will first look if there is any *try-catch* block where the error can be handled. It won't find any, because we did not write one. The Exception will then look at the signature of the method where the Exception has happened &mdash; in this case, inside *main()*. The error will be passed to a higher level in the call stack (who ever called method *main*). Of course, the one who will call the main() method is already the JVM, so in case something abnormal does happen to our code while executing the FileReader constructor, the JVM will simply halt and throw us a bunch error printouts.
+
+***
+## BUBBLE THE EXCEPTION UP THE CALL STACK
+
+Let's work with another example. This is not different from the previous example, just more elaborate. In this construction, the main method calls *doo* which in turn calls *foo* which in turn calls *goo*. Method *goo* throws the *FileNotFoundExcpetion*, so does *foo* and so does *doo*. 
+
+<pre>
+import java.io.FileNotFoundException;
+
+class ThrowSample {
+
+    public static void main (String [] args) {
+        
+        ThrowSample ts = new ThrowSample();
+        
+        try {
+            ts.doo();
+        }
+        catch(FileNotFoundException fe) {
+            //error handling
+            //code here
+        }
+    }
+
+    void doo() throws FileNotFoundException {
+        foo();
+    }
+
+    void foo() throws FileNotFoundException{
+        goo();
+    }
+
+    void goo() throws FileNotFoundException {
+        //Open a file here
+    }
+}
+</pre>
+
+Notice that inside *goo*, there is no try-catch block? That should not be a surprise anymore. We know the reason why we don't have to try-catch inside *goo*, that is because, in the method signature, we said that it *throws FileNoutFoundException*. If anything happens inside method *goo*, we will simply throw upwards to whoever called method *goo*. 
+
+<img src="/img/exception-bubble.png">
+<div id="cap">How Exceptions are propagated</div>
+
+Method foo invoked *goo*, *foo* also did not use a try-catch block to handle the FileNotFoundException, instead, it also passed the buck upwards. 
+
+The buck stopped at method *main*, we did not declare a throws clause on the signature of *main* and hence, we are obliged to handle the Exception using a *try-catch* block. 
+
+Whenever you are using a method, always check the signature. If the signature declares that it is throwing Exceptions, you need to handle that exception your code either by re-throwing it up the call stack, or by enclosing it in a try-catch block. You do this for **CHECKED EXCEPTIONS**
+
+There are errors and *Exceptions* that may still be thrown during runtime, but you will not find them on the declaration of method signatures. These are called **UNCHECKED EXCEPTIONS**, for example, say you tried to divide some integer value with zero, that will result to an *ArithmeticException* &mdash; but you don't guard against arithmetic exceptions during compile time though.
+
+***
+
+## WRITING YOUR OWN EXCEPTIONS
+
+You can write your own Exceptions if you want to, For whatever reason you may have. Some people write Exceptions to closely model the business domain they are working on, for example, when balance of a SavingsAccount object goes down below a set threshold, some programmers might throw an Exception like "InsufficientBalanceException".
+
+To create your own Exception, the simplest way is to extend *java.lang.Exception*.
+
+<pre>
+class A extends Exception  {
+	
+	public String getMessage() {
+		return "You got an error on ...";
+	}
+}
+</pre>
+<div id="cap">Custom Exception</div>
+
+*Class A* is now a bonafide Exception object. You can *throw, try and catch* type A objects just as would throw, try and catch any other built-in Exception objects in Java.  
+
+The <code class="codeblock">getMessage()</code> method was overridden so we can provide a friendly error message when the Exception is triggered. Whatever you write inside the body of *getMessage()* will be spewed to the screen, in case the Exception is triggered.  
+
+***
+
+## REMEMBER THE FOLLOWING
+
+When calling java method that have been coded by other people (or even coded by you), you need to be aware whether or not they are throwing Exceptions. 
+
+If the methods are declared to throw Exceptions, you need to choose how you will handle it. You can a) handle it using try-catch-finally or you can b) let other methods bother with the Exception by simply putting a *throws clause* on your own methods.
+
+If you do decide to handle the Exception using try-catch-finally mechanism, remember that you can declare as many *catch* blocks as you need. 
+
+If you do write a *finally* clause, remember that all the codes inside that block will get executed no matter what.
+
+<hr class="chapterbreak"/>
+
+<h1 class="chapter">BIBLIOGRAPHY</h1>
 
 
 
