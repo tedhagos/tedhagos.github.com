@@ -462,9 +462,9 @@ A single view of blog post could include the date it was posted, the category it
 
 This template looks a lot like the index template, but there are minor differences. The differences are;
 
-1. instead of calling **the_excerpt**, we used the function **the_content** because we need to display the full content of the blog post
-2. we pulled the published date of the blog post using **the_time** function. This function takes on some [parameters][] which can use to alter the way the date is displayed
-3. we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using **the_category** function. Similarly, the keywords are displayed as URL links using the **the_tags** function
+1. instead of calling <code class="codeblock">the_excerpt</code>, we used the function <code class="codeblock">the_content</code> because we need to display the full content of the blog post
+2. we pulled the published date of the blog post using <code class="codeblock">the_time</code> function. This function takes on some [parameters][] which can use to alter the way the date is displayed
+3. we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using <code class="codeblock">the_category</code> function. Similarly, the keywords are displayed as URL links using the <code class="codeblock">the_tags</code> function
 
 
 <hr class="chapterbreak"/>

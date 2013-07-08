@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-08T20:53:50+08:00</updated>
+ <updated>2013-07-08T20:58:20+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -1416,9 +1416,9 @@ h1 {font-size: 110%;}
 &lt;p&gt;This template looks a lot like the index template, but there are minor differences. The differences are;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;instead of calling &lt;strong&gt;the_excerpt&lt;/strong&gt;, we used the function &lt;strong&gt;the_content&lt;/strong&gt; because we need to display the full content of the blog post&lt;/li&gt;
-&lt;li&gt;we pulled the published date of the blog post using &lt;strong&gt;the_time&lt;/strong&gt; function. This function takes on some [parameters][] which can use to alter the way the date is displayed&lt;/li&gt;
-&lt;li&gt;we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using &lt;strong&gt;the_category&lt;/strong&gt; function. Similarly, the keywords are displayed as URL links using the &lt;strong&gt;the_tags&lt;/strong&gt; function&lt;/li&gt;
+&lt;li&gt;instead of calling &lt;code class=&quot;codeblock&quot;&gt;the_excerpt&lt;/code&gt;, we used the function &lt;code class=&quot;codeblock&quot;&gt;the_content&lt;/code&gt; because we need to display the full content of the blog post&lt;/li&gt;
+&lt;li&gt;we pulled the published date of the blog post using &lt;code class=&quot;codeblock&quot;&gt;the_time&lt;/code&gt; function. This function takes on some [parameters][] which can use to alter the way the date is displayed&lt;/li&gt;
+&lt;li&gt;we pulled the category information to which the post belongs to. If you assign a post entry to a specific category, that will be shown as URL link using &lt;code class=&quot;codeblock&quot;&gt;the_category&lt;/code&gt; function. Similarly, the keywords are displayed as URL links using the &lt;code class=&quot;codeblock&quot;&gt;the_tags&lt;/code&gt; function&lt;/li&gt;
 &lt;/ol&gt;
 
 
