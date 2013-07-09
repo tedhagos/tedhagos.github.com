@@ -444,7 +444,7 @@ The syntax of the switch statement is;
   }
 </pre>
 
-Where expression can either be a *char, byte, short, int*. It can also be *Character, Byte, Short, Integer* OR an *enum* type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 8 (which at the time of writing is in Eary Access), you can now use String expressions on the *switch* statement
+Where expression can either be a *char, byte, short, int*. It can also be *Character, Byte, Short, Integer* OR an *enum* type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 7, you can now use String expressions on the *switch* statement
 
 The following code sample  extracts the day-of-week value from a *Calendar* object. The day-of-week is returned as integer, which makes it perfect to filter using a *switch* statement rather than nested *if*
 
