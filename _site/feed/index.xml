@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-09T17:21:42+08:00</updated>
+ <updated>2013-07-09T23:41:59+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -3154,6 +3154,302 @@ class A extends Exception  {
 &lt;p&gt;If you do decide to handle the Exception using try-catch-finally mechanism, remember that you can declare as many &lt;em&gt;catch&lt;/em&gt; blocks as you need.&lt;/p&gt;
 
 &lt;p&gt;If you do write a &lt;em&gt;finally&lt;/em&gt; clause, remember that all the codes inside that block will get executed no matter what.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;METHODS&lt;/h1&gt;
+
+
+&lt;p&gt;First order of business is start calling functions as &lt;em&gt;methods&lt;/em&gt;. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &amp;mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.&lt;/p&gt;
+
+&lt;p&gt;Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an &lt;em&gt;object&lt;/em&gt; and there are those that belong to a &lt;em&gt;class&lt;/em&gt;. The former are called &lt;em&gt;instance methods&lt;/em&gt; or &lt;em&gt;non-static&lt;/em&gt; methods and the latter we refer to as &lt;em&gt;class methods&lt;/em&gt; or &lt;em&gt;static methods&lt;/em&gt;. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &amp;mdash; from where they are reachable and where they aren't. So buckle up.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;BASICS&lt;/h2&gt;
+
+&lt;p&gt;You define methods they way you define regular functions. The difference is that, in Java, method are written always inside a class structure. There are no stand alone methods. Methods cannot exist without the context of either an object or a class.&lt;/p&gt;
+
+&lt;pre&gt;
+
+void main() {} // this is not allowed
+
+class SomeClass {
+    void main(){} // this is allowed
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Where to define a method&lt;/div&gt;
+
+
+&lt;p&gt;You can define as many methods as you like inside a class, just fire away. The coherence and granularity of your methods is a matter of &lt;em&gt;analysis &amp;amp; design&lt;/em&gt; &amp;mdash; that is outside the scope of this material.&lt;/p&gt;
+
+&lt;pre&gt;
+class SomeClass {
+    void one(){}
+    void two(){}
+    void three(){} 
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;A class with many methods&lt;/div&gt;
+
+
+&lt;p&gt;It is important to point out that the order of definition does not affect the order of execution of these methods. These are not statements where the order of definition dictates the order of execution. The methods can be invoked in any order during runtime.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;METHOD NAMING&lt;/h3&gt;
+
+&lt;p&gt;You will decide the name of the method, their names follow the same rules as names of other &lt;em&gt;identifiers&lt;/em&gt;. You follow the same rules when naming a method as you would name a variable &amp;mdash; not a reserved word, no special characters, can't start with a number. These are the hard rules.&lt;/p&gt;
+
+&lt;p&gt;There are soft rules. They are  called &lt;em&gt;soft rules&lt;/em&gt; because they are not enforced by the compiler &amp;mdash; they should have been &amp;mdash; but they are important to remember nevertheless. These soft rules are actually referred to as &lt;em&gt;best practices&lt;/em&gt;. There is no shortage of best practices in Java, just Google it up and you will see what I mean. Anyway, I have just one more to add to our rules. Make the method name descriptive of what it is actually doing.&lt;/p&gt;
+
+&lt;h3&gt;RETURN TYPES&lt;/h3&gt;
+
+&lt;p&gt;A method can return any valid type in Java. They can return any of eight the primitive types and any valid reference type. It can even return nothing if you choose to.&lt;/p&gt;
+
+&lt;pre&gt;
+class Example {
+    public static void main() {
+        int res = add(2,3)
+    }
+    
+    static int add(int i, int j) {
+        return i + j;
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Method sample&lt;/div&gt;
+
+
+&lt;p&gt;In our example code the method &lt;em&gt;add()&lt;/em&gt; is defined as returning an int. Don't get distracted by the &lt;em&gt;static&lt;/em&gt; keyword right now, I had to put that in so that the code will properly compile and run, but you are not ready yet to deal with static. We will come around to &lt;em&gt;static&lt;/em&gt; in a little while. Our &lt;em&gt;add&lt;/em&gt; method is defined to return an &lt;em&gt;int&lt;/em&gt; type, that is why there is a &lt;em&gt;return&lt;/em&gt;  statement inside it. Specifically, the &lt;em&gt;return&lt;/em&gt; statement is the last executable line within the method body. It has to be. Any other statement right after &lt;em&gt;return&lt;/em&gt; will be unreachable.&lt;/p&gt;
+
+&lt;p&gt;This is an example of a &lt;strong&gt;productive&lt;/strong&gt; method, one that actually returns something or &lt;em&gt;produces&lt;/em&gt; something.&lt;/p&gt;
+
+&lt;p&gt;There are methods that don't (have to) return anything. Non-productive methods are constructed to return the &lt;em&gt;void&lt;/em&gt; type &amp;mdash; yes void is a type. It means to return &lt;em&gt;nothing&lt;/em&gt;. There are lots of debate on this one but you can look it up yourself in the Java Lang Spec on your own, when you have more programming muscles in Java. What is important to remember now is the mechanics of how to craft a &lt;em&gt;void method&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+class Example {
+    public static void main() {
+        talkBack(&quot;Hello there&quot;);
+    }
+    
+    static void talkBack(String arg) {
+        System.out.println(&quot;arg&quot;);
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;A void method&lt;/div&gt;
+
+
+&lt;p&gt;When a method is defined as &lt;em&gt;void&lt;/em&gt; you don't need to write a &lt;em&gt;return&lt;/em&gt; statement. In fact, you cannot lest you will have a compile time error.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;WHAT TO PUT INSIDE METHODS&lt;/h2&gt;
+
+&lt;p&gt;To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block.&lt;/p&gt;
+
+&lt;p&gt;The two things you will write inside method are &lt;em&gt;statements&lt;/em&gt; and &lt;em&gt;control structures&lt;/em&gt; &amp;mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.&lt;/p&gt;
+
+&lt;pre&gt;
+class Table {
+  
+  public static void main(String[] args) {
+    System.out.println(generateTable(5));
+  }
+  
+  static String generateTable(int size) {
+    String returnVal = &quot;&quot;;
+    for (int i = 1; i &lt;= size ; i++ ) {
+      for (int j = 1; j &lt;= size; j++ ) {
+        returnVal += (i * j) + &quot;\t&quot;;
+      }
+      returnVal += &quot;\n&quot;;
+    }
+    return returnVal;
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Multiplication table&lt;/div&gt;
+
+
+&lt;p&gt;At this point, you should have enough moxy to walk through the sample code above. It generates the multiplication table.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;generateTable&lt;/em&gt; method takes an integer argument because I would the size of the table to be changeable or parameterised. I did not want to method to produce the side effect itself, that is why the printing is done on the &lt;em&gt;main()&lt;/em&gt; method. I only intended for the method to return a &lt;em&gt;String&lt;/em&gt; representation of the generated table, hence the &lt;em&gt;String return type&lt;/em&gt;. The &lt;em&gt;\t&lt;/em&gt; is just to separate the values with a tab character.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;WHAT STATIC MEANS&lt;/h1&gt;
+
+
+&lt;p&gt;During the &lt;strong&gt;OOP&lt;/strong&gt; discussion, we talked about &lt;em&gt;classes &amp;amp; objects&lt;/em&gt;. We said that an object is an instance of class. We used the analogy of blueprints and houses &amp;mdash; a class is to a blue print as a house is to an object.&lt;/p&gt;
+
+&lt;p&gt;The house and blueprint analogy was good enough to visualise the structural relationship between objects and classes. Now we must   stretch our understanding of &lt;em&gt;objects&lt;/em&gt; and &lt;em&gt;classes&lt;/em&gt; to include how they affect storage.&lt;/p&gt;
+
+&lt;p&gt;First, some definition. When we say &lt;em&gt;member&lt;/em&gt;, it can mean either a variable or a method. By the way, all variables and methods are members of something. Remember that you cannot define anything outside a class. So when I say &lt;em&gt;a variable&lt;/em&gt; I mean a member variable &amp;mdash; same goes for the method. I will not make any distinction between a simple variable and a member variable, they both mean the same in Java. Alright, that is out of the way now.&lt;/p&gt;
+
+&lt;p&gt;There are two kinds of members. A &lt;em&gt;instance member&lt;/em&gt; means it belongs to an &lt;em&gt;object&lt;/em&gt; (an instance of a class) and a &lt;em&gt;class member&lt;/em&gt; which means it belong to the class and not the object. Why is this distinction important? Because it affects the way you invoke methods and it affects the way variables are kept.&lt;/p&gt;
+
+&lt;p&gt;An object is enclosed thing, it's encapsulated &amp;mdash; variables, methods and all. If you want an object to do something, you first must create it and then call one of its method. An instance method is always invoked from the context of a created object.&lt;/p&gt;
+
+&lt;pre&gt;
+class Sample {
+    public static void main(String []args) {
+        bark();
+    }
+}
+
+class Dog {
+    void bark() {
+        System.out.println(&quot;Bow wow!&quot;);
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Dog Sample&lt;/div&gt;
+
+
+&lt;p&gt;This code won't work because when &lt;em&gt;main&lt;/em&gt; called &lt;em&gt;bark&lt;/em&gt;, it doesn't know where the method &lt;em&gt;bark&lt;/em&gt; is. You have to tell it where to find that method.&lt;/p&gt;
+
+&lt;pre&gt;
+class Sample {
+    public static void main(String []args) {
+        Dog objdog = new Dog();
+        objdog.bark();
+    }
+}
+
+class Dog {
+    void bark() {
+        System.out.println(&quot;Bow wow!&quot;);
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Dog Sample&lt;/div&gt;
+
+
+&lt;p&gt;This example works because before invoking &lt;em&gt;bark&lt;/em&gt;, we first created an instance of a &lt;em&gt;Dog&lt;/em&gt;, saved the object in &lt;em&gt;objdog&lt;/em&gt; then invoked &lt;em&gt;bark&lt;/em&gt;. Our main method actually does know who owns the &lt;em&gt;bark&lt;/em&gt; behaviour.&lt;/p&gt;
+
+&lt;p&gt;The method &lt;em&gt;bark&lt;/em&gt; is owned by an instance of a &lt;em&gt;Dog&lt;/em&gt; class (you need to create it, which means you need to call &lt;em&gt;bark&lt;/em&gt; from within the context of &lt;em&gt;Dog&lt;/em&gt; instance and not a &lt;em&gt;Dog&lt;/em&gt; class.&lt;/p&gt;
+
+&lt;p&gt;How can we tell if a method is belongs to an instance and not its class then? Easy. By default, all members automatically belong to an object and not its class. More specifically all members that DOES NOT HAVE THE &lt;em&gt;static&lt;/em&gt; keyword before it belongs to an object &amp;mdash; not its class.&lt;/p&gt;
+
+&lt;p&gt;If we wanted to the &lt;em&gt;bark&lt;/em&gt; method to belong to its class and not its instance, we would put the &lt;em&gt;static&lt;/em&gt; keyword before the method, like this.&lt;/p&gt;
+
+&lt;pre&gt;
+class Sample {
+    public static void main(String []args) {
+        Dog.bark();
+    }
+}
+
+class Dog {
+    static void bark() {
+        System.out.println(&quot;Bow wow!&quot;);
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Dog Sample, static version&lt;/div&gt;
+
+
+&lt;p&gt;See the difference. You didn't have to create an instance of the &lt;em&gt;Dog&lt;/em&gt; before you invoked &lt;em&gt;bark&lt;/em&gt;. You just called it flat out. Now why you would choose a member to either static or non-static is a matter of design and analysis. We are not going to discuss that here. That is an entirely different (and interesting) discussion on its own.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;STATIC VARIABLES VS INSTANCE VARIABLES&lt;/h2&gt;
+
+&lt;p&gt;An &lt;em&gt;instance variable&lt;/em&gt; is owned by the object. Each instance have their own copies, protected and encapsulated copies of those variables. Whatever you do to a variable on one instance does not affect the copies of the variables on other instances.&lt;/p&gt;
+
+&lt;pre&gt;
+class World {
+    public static void main(String args[]){
+        Person p1 = new Person(&quot;John&quot;);
+        Person p2 = new Person(&quot;Jane&quot;);
+        
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+        
+        p1.setName(&quot;Guido&quot;);
+
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+    }
+}
+
+class Person{
+    String name;
+    Person(String arg) {
+        name = arg;
+    }
+    void setName(String arg){name = arg;}
+    String getName() {return name;}
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;This logic sits well with conventional wisdom. I created two &lt;em&gt;Person&lt;/em&gt; objects p1 and p2, named &quot;John&quot; and &quot;Jane&quot; respectively. I changed the name of p1 to &quot;Guido&quot;. Only p1 should be affected by the change and not p2. If instance members were not encapsulated and if they did not own copies of the &lt;em&gt;name&lt;/em&gt; variable, our results would have been weird.&lt;/p&gt;
+
+&lt;pre&gt;
+class World {
+    public static void main(String args[]){
+        Person p1 = new Person(&quot;John&quot;);
+        Person p2 = new Person(&quot;Jane&quot;);
+        
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+        
+        p1.setName(&quot;Guido&quot;);
+
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+    }
+}
+
+class Person{
+    static String name; // this will make it weird
+    Person(String arg) {
+        name = arg;
+    }
+    void setName(String arg){name = arg;}
+    String getName() {return name;}
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Changing the storage specification of the &lt;em&gt;name&lt;/em&gt; member from instance to class (static) changes the behaviour. Now all instances of the &lt;em&gt;Person&lt;/em&gt; class will share only one copy of the &lt;em&gt;name&lt;/em&gt; variable. This means whatever change and wherever you make that change from, it will affect all &lt;em&gt;Person&lt;/em&gt; objects. Run it for yourself and see, both &lt;em&gt;p1&lt;/em&gt; and &lt;em&gt;p2&lt;/em&gt; will print the name &quot;Guido&quot;. This happens because &lt;em&gt;name&lt;/em&gt; is now a shared variable across all instances of the &lt;em&gt;Person&lt;/em&gt; class. A static member is not an exclusive copy. Objects do not own copies of static members.&lt;/p&gt;
+
+&lt;p&gt;Think about it this way. You can have many instances of a class, that means you can have x-number of objects floating around created from the same class. Each object is autonomous and independent from one another. So it makes that each object will really have their own unique copies of their data. When you put that data inside the class, there is only one class, hence any of its instances can see the data and can change the data. The data is shared.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;REMEMBER&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A static member, either a variable or method are stored on the class, not the its instance&lt;/li&gt;
+&lt;li&gt;A static member will always have the &lt;em&gt;static&lt;/em&gt; keyword before it, otherwise it is non-static&lt;/li&gt;
+&lt;li&gt;A non-static member cannot be accessed directly by a static method. You need to create an object first, then access the member via the reference variable&lt;/li&gt;
+&lt;li&gt;A static member on the other hand, can be accessed by a non-static method. It's not fair right, but best remember this&lt;/li&gt;
+&lt;/ol&gt;
+
 
 &lt;hr class=&quot;chapterbreak&quot;/&gt;
 

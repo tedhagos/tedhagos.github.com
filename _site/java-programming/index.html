@@ -1944,6 +1944,302 @@ class A extends Exception  {
 
 
 
+<h1 class="chapter">METHODS</h1>
+
+
+<p>First order of business is start calling functions as <em>methods</em>. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.</p>
+
+<p>Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an <em>object</em> and there are those that belong to a <em>class</em>. The former are called <em>instance methods</em> or <em>non-static</em> methods and the latter we refer to as <em>class methods</em> or <em>static methods</em>. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &mdash; from where they are reachable and where they aren't. So buckle up.</p>
+
+<hr />
+
+<h2>BASICS</h2>
+
+<p>You define methods they way you define regular functions. The difference is that, in Java, method are written always inside a class structure. There are no stand alone methods. Methods cannot exist without the context of either an object or a class.</p>
+
+<pre>
+
+void main() {} // this is not allowed
+
+class SomeClass {
+    void main(){} // this is allowed
+}
+</pre>
+
+
+<div id="cap">Where to define a method</div>
+
+
+<p>You can define as many methods as you like inside a class, just fire away. The coherence and granularity of your methods is a matter of <em>analysis &amp; design</em> &mdash; that is outside the scope of this material.</p>
+
+<pre>
+class SomeClass {
+    void one(){}
+    void two(){}
+    void three(){} 
+}
+</pre>
+
+
+<div id="cap">A class with many methods</div>
+
+
+<p>It is important to point out that the order of definition does not affect the order of execution of these methods. These are not statements where the order of definition dictates the order of execution. The methods can be invoked in any order during runtime.</p>
+
+<hr />
+
+<h3>METHOD NAMING</h3>
+
+<p>You will decide the name of the method, their names follow the same rules as names of other <em>identifiers</em>. You follow the same rules when naming a method as you would name a variable &mdash; not a reserved word, no special characters, can't start with a number. These are the hard rules.</p>
+
+<p>There are soft rules. They are  called <em>soft rules</em> because they are not enforced by the compiler &mdash; they should have been &mdash; but they are important to remember nevertheless. These soft rules are actually referred to as <em>best practices</em>. There is no shortage of best practices in Java, just Google it up and you will see what I mean. Anyway, I have just one more to add to our rules. Make the method name descriptive of what it is actually doing.</p>
+
+<h3>RETURN TYPES</h3>
+
+<p>A method can return any valid type in Java. They can return any of eight the primitive types and any valid reference type. It can even return nothing if you choose to.</p>
+
+<pre>
+class Example {
+    public static void main() {
+        int res = add(2,3)
+    }
+    
+    static int add(int i, int j) {
+        return i + j;
+    }
+}
+</pre>
+
+
+<div id="cap">Method sample</div>
+
+
+<p>In our example code the method <em>add()</em> is defined as returning an int. Don't get distracted by the <em>static</em> keyword right now, I had to put that in so that the code will properly compile and run, but you are not ready yet to deal with static. We will come around to <em>static</em> in a little while. Our <em>add</em> method is defined to return an <em>int</em> type, that is why there is a <em>return</em>  statement inside it. Specifically, the <em>return</em> statement is the last executable line within the method body. It has to be. Any other statement right after <em>return</em> will be unreachable.</p>
+
+<p>This is an example of a <strong>productive</strong> method, one that actually returns something or <em>produces</em> something.</p>
+
+<p>There are methods that don't (have to) return anything. Non-productive methods are constructed to return the <em>void</em> type &mdash; yes void is a type. It means to return <em>nothing</em>. There are lots of debate on this one but you can look it up yourself in the Java Lang Spec on your own, when you have more programming muscles in Java. What is important to remember now is the mechanics of how to craft a <em>void method</em></p>
+
+<pre>
+class Example {
+    public static void main() {
+        talkBack("Hello there");
+    }
+    
+    static void talkBack(String arg) {
+        System.out.println("arg");
+    }
+}
+</pre>
+
+
+<div id="cap">A void method</div>
+
+
+<p>When a method is defined as <em>void</em> you don't need to write a <em>return</em> statement. In fact, you cannot lest you will have a compile time error.</p>
+
+<hr />
+
+<h2>WHAT TO PUT INSIDE METHODS</h2>
+
+<p>To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block.</p>
+
+<p>The two things you will write inside method are <em>statements</em> and <em>control structures</em> &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.</p>
+
+<pre>
+class Table {
+  
+  public static void main(String[] args) {
+    System.out.println(generateTable(5));
+  }
+  
+  static String generateTable(int size) {
+    String returnVal = "";
+    for (int i = 1; i <= size ; i++ ) {
+      for (int j = 1; j <= size; j++ ) {
+        returnVal += (i * j) + "\t";
+      }
+      returnVal += "\n";
+    }
+    return returnVal;
+  }
+}
+</pre>
+
+
+<div id="cap">Multiplication table</div>
+
+
+<p>At this point, you should have enough moxy to walk through the sample code above. It generates the multiplication table.</p>
+
+<p>The <em>generateTable</em> method takes an integer argument because I would the size of the table to be changeable or parameterised. I did not want to method to produce the side effect itself, that is why the printing is done on the <em>main()</em> method. I only intended for the method to return a <em>String</em> representation of the generated table, hence the <em>String return type</em>. The <em>\t</em> is just to separate the values with a tab character.</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">WHAT STATIC MEANS</h1>
+
+
+<p>During the <strong>OOP</strong> discussion, we talked about <em>classes &amp; objects</em>. We said that an object is an instance of class. We used the analogy of blueprints and houses &mdash; a class is to a blue print as a house is to an object.</p>
+
+<p>The house and blueprint analogy was good enough to visualise the structural relationship between objects and classes. Now we must   stretch our understanding of <em>objects</em> and <em>classes</em> to include how they affect storage.</p>
+
+<p>First, some definition. When we say <em>member</em>, it can mean either a variable or a method. By the way, all variables and methods are members of something. Remember that you cannot define anything outside a class. So when I say <em>a variable</em> I mean a member variable &mdash; same goes for the method. I will not make any distinction between a simple variable and a member variable, they both mean the same in Java. Alright, that is out of the way now.</p>
+
+<p>There are two kinds of members. A <em>instance member</em> means it belongs to an <em>object</em> (an instance of a class) and a <em>class member</em> which means it belong to the class and not the object. Why is this distinction important? Because it affects the way you invoke methods and it affects the way variables are kept.</p>
+
+<p>An object is enclosed thing, it's encapsulated &mdash; variables, methods and all. If you want an object to do something, you first must create it and then call one of its method. An instance method is always invoked from the context of a created object.</p>
+
+<pre>
+class Sample {
+    public static void main(String []args) {
+        bark();
+    }
+}
+
+class Dog {
+    void bark() {
+        System.out.println("Bow wow!");
+    }
+}
+</pre>
+
+
+<div id="cap">Dog Sample</div>
+
+
+<p>This code won't work because when <em>main</em> called <em>bark</em>, it doesn't know where the method <em>bark</em> is. You have to tell it where to find that method.</p>
+
+<pre>
+class Sample {
+    public static void main(String []args) {
+        Dog objdog = new Dog();
+        objdog.bark();
+    }
+}
+
+class Dog {
+    void bark() {
+        System.out.println("Bow wow!");
+    }
+}
+</pre>
+
+
+<div id="cap">Dog Sample</div>
+
+
+<p>This example works because before invoking <em>bark</em>, we first created an instance of a <em>Dog</em>, saved the object in <em>objdog</em> then invoked <em>bark</em>. Our main method actually does know who owns the <em>bark</em> behaviour.</p>
+
+<p>The method <em>bark</em> is owned by an instance of a <em>Dog</em> class (you need to create it, which means you need to call <em>bark</em> from within the context of <em>Dog</em> instance and not a <em>Dog</em> class.</p>
+
+<p>How can we tell if a method is belongs to an instance and not its class then? Easy. By default, all members automatically belong to an object and not its class. More specifically all members that DOES NOT HAVE THE <em>static</em> keyword before it belongs to an object &mdash; not its class.</p>
+
+<p>If we wanted to the <em>bark</em> method to belong to its class and not its instance, we would put the <em>static</em> keyword before the method, like this.</p>
+
+<pre>
+class Sample {
+    public static void main(String []args) {
+        Dog.bark();
+    }
+}
+
+class Dog {
+    static void bark() {
+        System.out.println("Bow wow!");
+    }
+}
+</pre>
+
+
+<div id="cap">Dog Sample, static version</div>
+
+
+<p>See the difference. You didn't have to create an instance of the <em>Dog</em> before you invoked <em>bark</em>. You just called it flat out. Now why you would choose a member to either static or non-static is a matter of design and analysis. We are not going to discuss that here. That is an entirely different (and interesting) discussion on its own.</p>
+
+<hr />
+
+<h2>STATIC VARIABLES VS INSTANCE VARIABLES</h2>
+
+<p>An <em>instance variable</em> is owned by the object. Each instance have their own copies, protected and encapsulated copies of those variables. Whatever you do to a variable on one instance does not affect the copies of the variables on other instances.</p>
+
+<pre>
+class World {
+    public static void main(String args[]){
+        Person p1 = new Person("John");
+        Person p2 = new Person("Jane");
+        
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+        
+        p1.setName("Guido");
+
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+    }
+}
+
+class Person{
+    String name;
+    Person(String arg) {
+        name = arg;
+    }
+    void setName(String arg){name = arg;}
+    String getName() {return name;}
+}
+</pre>
+
+
+<p>This logic sits well with conventional wisdom. I created two <em>Person</em> objects p1 and p2, named "John" and "Jane" respectively. I changed the name of p1 to "Guido". Only p1 should be affected by the change and not p2. If instance members were not encapsulated and if they did not own copies of the <em>name</em> variable, our results would have been weird.</p>
+
+<pre>
+class World {
+    public static void main(String args[]){
+        Person p1 = new Person("John");
+        Person p2 = new Person("Jane");
+        
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+        
+        p1.setName("Guido");
+
+        System.out.println(p1.getName());   
+        System.out.println(p2.getName());
+    }
+}
+
+class Person{
+    static String name; // this will make it weird
+    Person(String arg) {
+        name = arg;
+    }
+    void setName(String arg){name = arg;}
+    String getName() {return name;}
+}
+</pre>
+
+
+<p>Changing the storage specification of the <em>name</em> member from instance to class (static) changes the behaviour. Now all instances of the <em>Person</em> class will share only one copy of the <em>name</em> variable. This means whatever change and wherever you make that change from, it will affect all <em>Person</em> objects. Run it for yourself and see, both <em>p1</em> and <em>p2</em> will print the name "Guido". This happens because <em>name</em> is now a shared variable across all instances of the <em>Person</em> class. A static member is not an exclusive copy. Objects do not own copies of static members.</p>
+
+<p>Think about it this way. You can have many instances of a class, that means you can have x-number of objects floating around created from the same class. Each object is autonomous and independent from one another. So it makes that each object will really have their own unique copies of their data. When you put that data inside the class, there is only one class, hence any of its instances can see the data and can change the data. The data is shared.</p>
+
+<p><strong>REMEMBER</strong></p>
+
+<ol>
+<li>A static member, either a variable or method are stored on the class, not the its instance</li>
+<li>A static member will always have the <em>static</em> keyword before it, otherwise it is non-static</li>
+<li>A non-static member cannot be accessed directly by a static method. You need to create an object first, then access the member via the reference variable</li>
+<li>A static member on the other hand, can be accessed by a non-static method. It's not fair right, but best remember this</li>
+</ol>
+
+
+<hr class="chapterbreak"/>
+
+
+
+
 <h1 class="chapter">BIBLIOGRAPHY</h1>
 
 

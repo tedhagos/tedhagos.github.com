@@ -1488,6 +1488,265 @@ If you do write a *finally* clause, remember that all the codes inside that bloc
 
 <hr class="chapterbreak"/>
 
+
+<h1 class="chapter">METHODS</h1>
+
+First order of business is start calling functions as *methods*. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.
+
+Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an *object* and there are those that belong to a *class*. The former are called *instance methods* or *non-static* methods and the latter we refer to as *class methods* or *static methods*. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &mdash; from where they are reachable and where they aren't. So buckle up.
+
+***
+## BASICS
+
+You define methods they way you define regular functions. The difference is that, in Java, method are written always inside a class structure. There are no stand alone methods. Methods cannot exist without the context of either an object or a class.
+
+<pre>
+
+void main() {} // this is not allowed
+
+class SomeClass {
+	void main(){} // this is allowed
+}
+</pre>
+<div id="cap">Where to define a method</div>
+
+You can define as many methods as you like inside a class, just fire away. The coherence and granularity of your methods is a matter of *analysis & design* &mdash; that is outside the scope of this material.
+ 
+
+<pre>
+class SomeClass {
+	void one(){}
+	void two(){}
+	void three(){} 
+}
+</pre>
+<div id="cap">A class with many methods</div>
+
+It is important to point out that the order of definition does not affect the order of execution of these methods. These are not statements where the order of definition dictates the order of execution. The methods can be invoked in any order during runtime.
+
+***
+### METHOD NAMING
+
+You will decide the name of the method, their names follow the same rules as names of other *identifiers*. You follow the same rules when naming a method as you would name a variable &mdash; not a reserved word, no special characters, can't start with a number. These are the hard rules. 
+
+There are soft rules. They are  called *soft rules* because they are not enforced by the compiler &mdash; they should have been &mdash; but they are important to remember nevertheless. These soft rules are actually referred to as *best practices*. There is no shortage of best practices in Java, just Google it up and you will see what I mean. Anyway, I have just one more to add to our rules. Make the method name descriptive of what it is actually doing.
+
+### RETURN TYPES
+
+A method can return any valid type in Java. They can return any of eight the primitive types and any valid reference type. It can even return nothing if you choose to.  
+
+<pre>
+class Example {
+	public static void main() {
+		int res = add(2,3)
+	}
+	
+	static int add(int i, int j) {
+		return i + j;
+	}
+}
+</pre>
+<div id="cap">Method sample</div>
+
+In our example code the method *add()* is defined as returning an int. Don't get distracted by the *static* keyword right now, I had to put that in so that the code will properly compile and run, but you are not ready yet to deal with static. We will come around to *static* in a little while. Our *add* method is defined to return an *int* type, that is why there is a *return*  statement inside it. Specifically, the *return* statement is the last executable line within the method body. It has to be. Any other statement right after *return* will be unreachable. 
+
+This is an example of a **productive** method, one that actually returns something or *produces* something.
+
+There are methods that don't (have to) return anything. Non-productive methods are constructed to return the *void* type &mdash; yes void is a type. It means to return *nothing*. There are lots of debate on this one but you can look it up yourself in the Java Lang Spec on your own, when you have more programming muscles in Java. What is important to remember now is the mechanics of how to craft a *void method* 
+
+<pre>
+class Example {
+	public static void main() {
+		talkBack("Hello there");
+	}
+	
+	static void talkBack(String arg) {
+		System.out.println("arg");
+	}
+}
+</pre>
+<div id="cap">A void method</div>
+
+When a method is defined as *void* you don't need to write a *return* statement. In fact, you cannot lest you will have a compile time error. 
+
+***
+## WHAT TO PUT INSIDE METHODS
+
+To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block. 
+
+The two things you will write inside method are *statements* and *control structures* &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.
+
+<pre>
+class Table {
+  
+  public static void main(String[] args) {
+    System.out.println(generateTable(5));
+  }
+  
+  static String generateTable(int size) {
+    String returnVal = "";
+    for (int i = 1; i <= size ; i++ ) {
+      for (int j = 1; j <= size; j++ ) {
+        returnVal += (i * j) + "\t";
+      }
+      returnVal += "\n";
+    }
+    return returnVal;
+  }
+}
+</pre>
+<div id="cap">Multiplication table</div>
+
+At this point, you should have enough moxy to walk through the sample code above. It generates the multiplication table. 
+
+The *generateTable* method takes an integer argument because I would the size of the table to be changeable or parameterised. I did not want to method to produce the side effect itself, that is why the printing is done on the *main()* method. I only intended for the method to return a *String* representation of the generated table, hence the *String return type*. The *\\t* is just to separate the values with a tab character.
+
+<hr class="chapterbreak"/>
+
+<h1 class="chapter">WHAT STATIC MEANS</h1>
+
+During the **OOP** discussion, we talked about *classes & objects*. We said that an object is an instance of class. We used the analogy of blueprints and houses &mdash; a class is to a blue print as a house is to an object. 
+
+The house and blueprint analogy was good enough to visualise the structural relationship between objects and classes. Now we must   stretch our understanding of *objects* and *classes* to include how they affect storage.
+
+First, some definition. When we say *member*, it can mean either a variable or a method. By the way, all variables and methods are members of something. Remember that you cannot define anything outside a class. So when I say *a variable* I mean a member variable &mdash; same goes for the method. I will not make any distinction between a simple variable and a member variable, they both mean the same in Java. Alright, that is out of the way now.
+
+There are two kinds of members. A *instance member* means it belongs to an *object* (an instance of a class) and a *class member* which means it belong to the class and not the object. Why is this distinction important? Because it affects the way you invoke methods and it affects the way variables are kept.
+
+An object is enclosed thing, it's encapsulated &mdash; variables, methods and all. If you want an object to do something, you first must create it and then call one of its method. An instance method is always invoked from the context of a created object. 
+
+<pre>
+class Sample {
+	public static void main(String []args) {
+		bark();
+	}
+}
+
+class Dog {
+	void bark() {
+		System.out.println("Bow wow!");
+	}
+}
+</pre>
+<div id="cap">Dog Sample</div>
+
+This code won't work because when *main* called *bark*, it doesn't know where the method *bark* is. You have to tell it where to find that method. 
+
+<pre>
+class Sample {
+	public static void main(String []args) {
+		Dog objdog = new Dog();
+		objdog.bark();
+	}
+}
+
+class Dog {
+	void bark() {
+		System.out.println("Bow wow!");
+	}
+}
+</pre>
+<div id="cap">Dog Sample</div>
+
+This example works because before invoking *bark*, we first created an instance of a *Dog*, saved the object in *objdog* then invoked *bark*. Our main method actually does know who owns the *bark* behaviour. 
+
+The method *bark* is owned by an instance of a *Dog* class (you need to create it, which means you need to call *bark* from within the context of *Dog* instance and not a *Dog* class. 
+
+How can we tell if a method is belongs to an instance and not its class then? Easy. By default, all members automatically belong to an object and not its class. More specifically all members that DOES NOT HAVE THE *static* keyword before it belongs to an object &mdash; not its class. 
+
+If we wanted to the *bark* method to belong to its class and not its instance, we would put the *static* keyword before the method, like this.
+
+<pre>
+class Sample {
+	public static void main(String []args) {
+		Dog.bark();
+	}
+}
+
+class Dog {
+	static void bark() {
+		System.out.println("Bow wow!");
+	}
+}
+</pre>
+<div id="cap">Dog Sample, static version</div>
+
+See the difference. You didn't have to create an instance of the *Dog* before you invoked *bark*. You just called it flat out. Now why you would choose a member to either static or non-static is a matter of design and analysis. We are not going to discuss that here. That is an entirely different (and interesting) discussion on its own. 
+
+***
+
+## STATIC VARIABLES VS INSTANCE VARIABLES
+
+An *instance variable* is owned by the object. Each instance have their own copies, protected and encapsulated copies of those variables. Whatever you do to a variable on one instance does not affect the copies of the variables on other instances. 
+
+<pre>
+class World {
+	public static void main(String args[]){
+		Person p1 = new Person("John");
+		Person p2 = new Person("Jane");
+		
+		System.out.println(p1.getName());	
+		System.out.println(p2.getName());
+		
+		p1.setName("Guido");
+
+		System.out.println(p1.getName());	
+		System.out.println(p2.getName());
+	}
+}
+
+class Person{
+	String name;
+	Person(String arg) {
+		name = arg;
+	}
+	void setName(String arg){name = arg;}
+	String getName() {return name;}
+}
+</pre>
+
+This logic sits well with conventional wisdom. I created two *Person* objects p1 and p2, named "John" and "Jane" respectively. I changed the name of p1 to "Guido". Only p1 should be affected by the change and not p2. If instance members were not encapsulated and if they did not own copies of the *name* variable, our results would have been weird. 
+
+<pre>
+class World {
+	public static void main(String args[]){
+		Person p1 = new Person("John");
+		Person p2 = new Person("Jane");
+		
+		System.out.println(p1.getName());	
+		System.out.println(p2.getName());
+		
+		p1.setName("Guido");
+
+		System.out.println(p1.getName());	
+		System.out.println(p2.getName());
+	}
+}
+
+class Person{
+	static String name; // this will make it weird
+	Person(String arg) {
+		name = arg;
+	}
+	void setName(String arg){name = arg;}
+	String getName() {return name;}
+}
+</pre>
+
+Changing the storage specification of the *name* member from instance to class (static) changes the behaviour. Now all instances of the *Person* class will share only one copy of the *name* variable. This means whatever change and wherever you make that change from, it will affect all *Person* objects. Run it for yourself and see, both *p1* and *p2* will print the name "Guido". This happens because *name* is now a shared variable across all instances of the *Person* class. A static member is not an exclusive copy. Objects do not own copies of static members. 
+
+Think about it this way. You can have many instances of a class, that means you can have x-number of objects floating around created from the same class. Each object is autonomous and independent from one another. So it makes that each object will really have their own unique copies of their data. When you put that data inside the class, there is only one class, hence any of its instances can see the data and can change the data. The data is shared.
+
+**REMEMBER**
+
+1. A static member, either a variable or method are stored on the class, not the its instance
+2. A static member will always have the *static* keyword before it, otherwise it is non-static
+3. A non-static member cannot be accessed directly by a static method. You need to create an object first, then access the member via the reference variable
+4. A static member on the other hand, can be accessed by a non-static method. It's not fair right, but best remember this
+
+
+<hr class="chapterbreak"/>
+
 <h1 class="chapter">BIBLIOGRAPHY</h1>
 
 
