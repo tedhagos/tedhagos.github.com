@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Wordpress notes
+
 description: my notes on how to build wordpress sites. use it as a cms. how to build themes. what skills you need for wordpress applications
+
+excerpt: The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP. 
+
 categories:
 - php
 - wordpress

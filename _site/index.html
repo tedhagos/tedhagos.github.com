@@ -57,8 +57,7 @@ ol, li { font-size: 16px;}
 
 strong {
   font-family: Arial;
-  font-size:110%;
-  font-weight:normal;
+  font-weight:bold;
   color: #000000;
 }
 
@@ -222,10 +221,11 @@ a:link, a:visited { color: #B10000; }
   overflow:hidden;
   clear:both;
   padding: 5px;
-  border-top: 1px dashed #D8C7CC;
+  border-bottom: 0px dashed #D8C7CC;
   height: auto;
-  padding: 20px;
+  padding: 10px;
 }
+
 
 #postdate {
   padding-top:10px;
@@ -296,6 +296,7 @@ pre {
   }
   
   .hll {background: #f0e9ec;}
+  
 
 </style>
     
@@ -346,7 +347,7 @@ pre {
       </a>
       </h2>
       <p>
-      One way to achieve a two factor authentication is to couple a simple website login with an SMS One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random... <p>
+      One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge.  The OTP will serve as the “what you have” part for our 2 factor authentication. <p>
       <a href="/two-factor-auth-using-sms">
         Continue reading &raquo;
       </a>
@@ -368,7 +369,7 @@ pre {
       </a>
       </h2>
       <p>
-      You can get Java 8 by way of Oracle Early Access. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do... <p>
+      You can get Java 8 by way of <a href= "http://www.oracle.com/technetwork/java/javase/downloads/ea-jsp-142245.html">Oracle Early Access</a>. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do that! Not to your workhorse and go-to machine. Do it a VM, it is safer and prudent that way. <p>
       <a href="/java8-notes">
         Continue reading &raquo;
       </a>
@@ -390,30 +391,8 @@ pre {
       </a>
       </h2>
       <p>
-      1. BASIC STRUCTURE OF A PRESENTATION FILE The whole presentation is inside \begin{document} .. \end{document} .Each slide is enclosed in \begin{frame} \end{frame}. Sample document is shown below % % sampledoc.latex % \documentclass{beamer} \begin{document} \begin{frame} \frametitle{First} \framesubtitle{the subtitle} % content \end{frame}... <p>
+      My notes on using LATEX to author presentation slides. This note also contains instructions on how to use PANDOC as the main structure then use the beamer class to produce the PDF. Although, admittedly, Google Drive + Google Docs has overtaken this one. I don't use this as much now. <p>
       <a href="/latex-slides">
-        Continue reading &raquo;
-      </a>
-    </div>
-    </div>
-  </div>
-	
-  <div>
-    <div id="postentry">
-	    <div id="postdate">
-        <div id="datediv">Feb 12 </div>
-        <div id="yeardiv">2013 </div>
-      </div>
-     
-      <div id="postcontent">
-      <h2>
-        <a href="/osx-cheatsheet">
-        OSX Cheatsheet
-      </a>
-      </h2>
-      <p>
-      1. SHOW THE ROUTING TABLE. route print won't work, try netstat -nr 2. HIDE OR SHOW HIDDEN FILES IN FINDER. If you are always working on the command line, don't even bother with this, a simple ls -a should do... <p>
-      <a href="/osx-cheatsheet">
         Continue reading &raquo;
       </a>
     </div>
@@ -434,7 +413,7 @@ pre {
       </a>
       </h2>
       <p>
-      You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that... <p>
+      You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that <strong>there is always a first time for everything</strong>. <p>
       <a href="/api-projects">
         Continue reading &raquo;
       </a>
@@ -456,7 +435,7 @@ pre {
       </a>
       </h2>
       <p>
-      A common tale on software projects &mdash; there is hard stop somewhere down the line, a fixed date when to ship the software out of the door, but the scope is still moving. In a perfect world, before a single... <p>
+      In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &mdash; in a perfect world. <p>
       <a href="/fixed-deadlines-moving-scope">
         Continue reading &raquo;
       </a>
@@ -478,7 +457,7 @@ pre {
       </a>
       </h2>
       <p>
-      That's 8 hours. It's a stretch to increase it, no matter how badly you want to. Every morning you've got 24 potential-filled hours, sounds like a lot, but after; waiting on elevators (.25 hours, cumulatively) getting to work (1 hour)... <p>
+      A non-trivial subject could require 120 minutes of blocked time, these are the kinds of task that (hopefully) will have big pay offs. Hopefully again, you could get at least 2 of these big chunks each day &mdash; but that is constantly threatened by telephone rings, people walking into your workspace, noisy cubicle neighbors and many others. So, do you really need to get interrupted by Twitter, Facebook and that annoying sound your email app makes when something arrives. <p>
       <a href="/480-minutes-of-focus">
         Continue reading &raquo;
       </a>
@@ -500,7 +479,7 @@ pre {
       </a>
       </h2>
       <p>
-      I know what I have to do, I've written (and rewritten) them down in the notebook, in the goal papers; yet I don't want to do them. There's a tug-of-war happening inside and the lazy guys seems to be winning.... <p>
+      My primitive brain is taking over, it's telling me to do nothing, conserve energy (that means sleep) and eat (fast and plenty)&mdash;I know that if I take my eyes off the focus for the day, the lazy guy is gonna win. I have to shake this monkey off my back, I've got lots of things to do today&mdash;maybe a 15 minute cardio should perk me up again; or coffee, that can do the trick too; just don't put sugar in it because the lazy guy loves sugar. <p>
       <a href="/default-behavior">
         Continue reading &raquo;
       </a>
@@ -522,7 +501,7 @@ pre {
       </a>
       </h2>
       <p>
-      Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't check messages on your phone lest your mind will wander around, will fleet from thought to... <p>
+      Wake up 2 hours earlier than your usual. After the morning rituals, coffee etc, don't turn on the computer, don't check your email, don't check messages on your phone lest your mind will wander around, will fleet from thought to thought and get filled with little things &mdash; remember what Stephen Covey said on <em>First things First</em>, rocks first, then stones, then pebbles then sand. Look at the rocks first, attend to the rocks first. Stay disconnected for the first two hours. <p>
       <a href="/two-hours">
         Continue reading &raquo;
       </a>
@@ -544,7 +523,7 @@ pre {
       </a>
       </h2>
       <p>
-      As you move through your task list for the day, it doesn’t hurt to include what artefact will it produce. What do you expect to get out of it. Sometimes a task doesn’t have an artefact, and that’s fine—but more... <p>
+      It is important to ask what is the victory condition for the task, when do you stop working on it. If the victory condition is unclear, then maybe the task is bigger than what you originally thought it was—tactical or long term goal, perhaps. <p>
       <a href="/the-task-list">
         Continue reading &raquo;
       </a>
@@ -566,7 +545,7 @@ pre {
       </a>
       </h2>
       <p>
-      a device in a bomb that controls the timing of an explosion a book by Dr. Eric Haseltine (Long Fuse, Big Bang …) long term goals. not the same as task list items, but each item on the task list... <p>
+      Some CVs are 10+ page long and peppered with a dizzying litany of projects &mdash; I have personally seen examples of these CVs &mdash; no, they are not senior developes. I have seen people who had 4 years of experience and have listed more than 50 projects on the CV, spanning 5 or more companies. The details of reasons for the short stints are only mildly interesting. Not worth the discussion. The pattern which explains the short length of stay coupled with the incredible array of projects is more interesting. <p>
       <a href="/long-fuse">
         Continue reading &raquo;
       </a>
@@ -588,7 +567,7 @@ pre {
       </a>
       </h2>
       <p>
-      The sinking feeling you are getting is most likely because you have a lot of thoughts in your mind. Specifically thoughts that make you feel guilty that you haven’t done enough and you wasted way too much time watching movies,... <p>
+      After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence&mdash;and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again. <p>
       <a href="/holiday-blues-low-grade-stress">
         Continue reading &raquo;
       </a>
@@ -610,7 +589,7 @@ pre {
       </a>
       </h2>
       <p>
-      What exactly is that one thing you are waiting to happen before you do the big things on your list. You’ve already done the Guy Kawasaki advise, M-A-T right? So what’s eating you up. Why are you dragging your feet.... <p>
+      Big things on your list mostly falls under the category of multi-step problem. You can’t skip the intervening solutions and jump right to the last problem — maybe that is what’s keeping you, because you think you can <p>
       <a href="/whats-keeping-you">
         Continue reading &raquo;
       </a>
@@ -632,7 +611,7 @@ pre {
       </a>
       </h2>
       <p>
-      For most problems, looking for that one right answer is a natural approach to take. Process of elimination is very ingrained and wired deep into our thinking — it’s not a bad way to solve problems. But when you are... <p>
+      The rub is to know when to move forward and when to move sideways. This is probably why the thinking process is an art form. <p>
       <a href="/move-forward-or-sideways">
         Continue reading &raquo;
       </a>
@@ -654,30 +633,8 @@ pre {
       </a>
       </h2>
       <p>
-      Try to avoid mental snowballing. This one usually occurs when you are so absorbed into a negative detail. You will begin rehearsing one thought after another in your mind, you might even rehearse conversations that will eventually make you feel... <p>
+      Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short&mdash;such a waste to spend it in paranoia <p>
       <a href="/thought-snowball">
-        Continue reading &raquo;
-      </a>
-    </div>
-    </div>
-  </div>
-	
-  <div>
-    <div id="postentry">
-	    <div id="postdate">
-        <div id="datediv">Dec 23 </div>
-        <div id="yeardiv">2012 </div>
-      </div>
-     
-      <div id="postcontent">
-      <h2>
-        <a href="/copyright-reprint-info">
-        Copyright and Reprint Info
-      </a>
-      </h2>
-      <p>
-      All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved. Linking. Link away. That is most welcome. Links are the foundation of the web, so I am all for it, knock yourself out.... <p>
-      <a href="/copyright-reprint-info">
         Continue reading &raquo;
       </a>
     </div>
@@ -698,8 +655,30 @@ pre {
       </a>
       </h2>
       <p>
-      Don’t try to take on the challenges at once. Speed of response is not always a priority. Sticky problems always have lots of things underneath them — the ones that you don’t see; Remember Pareto? 8 parts of the problem... <p>
+      This is why you need to always catch your self when you are in an agitated state. Going from thought to speech in 10 seconds is a dangerous thing. Absorb, relax, collect your thoughts, ask the 5 whys, then formulate a response <p>
       <a href="/challenges-first-glance">
+        Continue reading &raquo;
+      </a>
+    </div>
+    </div>
+  </div>
+	
+  <div>
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Apr 07 </div>
+        <div id="yeardiv">2011 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/html5-canvas">
+        HTML5 Canvas
+      </a>
+      </h2>
+      <p>
+      The canvas is a viewport. The DOM element <code class="codeblock">&lt; canvas height="300" width="300" &gt;</code>, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel. <p>
+      <a href="/html5-canvas">
         Continue reading &raquo;
       </a>
     </div>
@@ -720,7 +699,7 @@ pre {
       </a>
       </h2>
       <p>
-      1. SHOW THE ROUTING TABLE. route print won't work, try netstat -nr 2. HIDE OR SHOW HIDDEN FILES IN FINDER. If you are always working on the command line, don't even bother with this, a simple ls -a should do... <p>
+      This is a growing list of things I do on OSX. They are on the list because I can't memorize them and they are not always easy to find *Googling*. These cheats range from networking to more elaborate setups <p>
       <a href="/osx-cheatsheet">
         Continue reading &raquo;
       </a>
@@ -742,7 +721,7 @@ pre {
       </a>
       </h2>
       <p>
-      DOCUMENT HISTORY 21 Mar 2007 &mdash; created 05 Jun 2010 &mdash; revised to reflect tools on OSX PRE-REQUISITE SKILLS The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need... <p>
+      The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP. <p>
       <a href="/wordpress-notes">
         Continue reading &raquo;
       </a>
@@ -764,7 +743,7 @@ pre {
       </a>
       </h2>
       <p>
-      DOCUMENT HISTORY Feb 18 2004 &mdash; created Oct 21 2007 &mdash; Added section on Generics Jun 12 2013 &mdash; re-written some examples to reflect Java 7 changes INTRODUCTION These are my notes for the Java Programming Language. These notes dates... <p>
+      What follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995. <p>
       <a href="/java-programming">
         Continue reading &raquo;
       </a>

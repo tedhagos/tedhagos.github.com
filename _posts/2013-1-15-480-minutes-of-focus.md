@@ -1,6 +1,10 @@
 ---
 layout: post
+
 title: 480 minutes of focus
+
+excerpt: A non-trivial subject could require 120 minutes of blocked time, these are the kinds of task that (hopefully) will have big pay offs. Hopefully again, you could get at least 2 of these big chunks each day &mdash; but that is constantly threatened by telephone rings, people walking into your workspace, noisy cubicle neighbors and many others. So, do you really need to get interrupted by Twitter, Facebook and that annoying sound your email app makes when something arrives.
+
 categories:
 - focus
 ---

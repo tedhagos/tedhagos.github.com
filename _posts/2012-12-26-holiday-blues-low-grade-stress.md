@@ -1,6 +1,10 @@
 ---
 layout: post
+
 title: Low Grade Stress
+
+excerpt: After a movie marathon, couple of packs of cigarettes, lots of caffeine and serial eating, it’s a bit difficult to go back to a centered state of thought. You will fall out of rhythm. This happens from time to time, your mind is playing tricks because your short term memories are not about work, they are about decadence&mdash;and its a tricky business to catch yourself when you are accelerating towards decadence and lethargy. It usually takes a boss or another authority figure to kick you from behind or give you a whack on the back of your head so you can get buttoned up again.
+
 categories:
 - thoughts
 

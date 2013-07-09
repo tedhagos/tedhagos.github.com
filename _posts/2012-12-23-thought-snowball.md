@@ -2,6 +2,8 @@
 layout: post
 title: Snowballing thoughts
 
+excerpt: Thought rehearsal is good, if it’s a positive thought, if it’s a negative thought, it should be dealt with differently. Out of the 10 (bad) things you think will happen, 1 (or maybe none at all) will happen.  Life is short, time is short&mdash;such a waste to spend it in paranoia
+
 description: do not spiral into paranoia
 categories:
 - thoughts

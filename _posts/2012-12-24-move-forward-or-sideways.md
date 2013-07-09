@@ -2,6 +2,8 @@
 layout: post
 title: To the front or to the side?
 
+excerpt: The rub is to know when to move forward and when to move sideways. This is probably why the thinking process is an art form.
+
 description: lateral thinking vs. logical thinking
 categories:
 - thoughts

@@ -1,6 +1,10 @@
 ---
 layout: post
+
 title: It's (not) Just a Task List
+
+excerpt: It is important to ask what is the victory condition for the task, when do you stop working on it. If the victory condition is unclear, then maybe the task is bigger than what you originally thought it was—tactical or long term goal, perhaps.
+
 categories:
 - focus
 ---

@@ -1,5 +1,8 @@
 ---
 layout: post
+
+excerpt: You can get Java 8 by way of <a href= "http://www.oracle.com/technetwork/java/javase/downloads/ea-jsp-142245.html">Oracle Early Access</a>. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do that! Not to your workhorse and go-to machine. Do it a VM, it is safer and prudent that way.
+
 title: Getting into grips with Java 8 
 description: Learn how to install Java 8 Eary Access without messing around your stable dev environment
 

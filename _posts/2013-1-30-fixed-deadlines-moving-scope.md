@@ -1,7 +1,12 @@
 ---
 layout: post
+
 title: Of fixed Deadlines and Moving Scopes 
+
 description: What will you do if the scope of a software project  cannot be pinned down and yet the deadline won't move
+
+excerpt: In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &mdash; in a perfect world.
+
 categories:
 - project_management
 - thoughts

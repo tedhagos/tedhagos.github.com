@@ -1,6 +1,9 @@
 ---
 layout: post
+
 title: Lazy bones, Lazy mind
+
+excerpt: Big things on your list mostly falls under the category of multi-step problem. You can’t skip the intervening solutions and jump right to the last problem — maybe that is what’s keeping you, because you think you can
 
 description: procastination is a state of mind, achieving is state of mind
 categories:

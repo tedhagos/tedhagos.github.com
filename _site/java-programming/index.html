@@ -24,7 +24,7 @@
 
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
-<meta name="description" content=""/>
+<meta name="description" content="what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995."/>
 <meta charset="utf-8"/>
 
 <title>Java Programming &mdash; Ted Hagos</title>
@@ -57,8 +57,7 @@ ol, li { font-size: 16px;}
 
 strong {
   font-family: Arial;
-  font-size:110%;
-  font-weight:normal;
+  font-weight:bold;
   color: #000000;
 }
 
@@ -222,10 +221,11 @@ a:link, a:visited { color: #B10000; }
   overflow:hidden;
   clear:both;
   padding: 5px;
-  border-top: 1px dashed #D8C7CC;
+  border-bottom: 0px dashed #D8C7CC;
   height: auto;
-  padding: 20px;
+  padding: 10px;
 }
+
 
 #postdate {
   padding-top:10px;
@@ -296,6 +296,7 @@ pre {
   }
   
   .hll {background: #f0e9ec;}
+  
 
 </style>
 
@@ -343,7 +344,7 @@ pre {
 <h1 class="chapter">INTRODUCTION</h1>
 
 
-<p>These are my notes for the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.</p>
+<p>These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.</p>
 
 <p>Having said that, what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.</p>
 
@@ -385,7 +386,7 @@ pre {
 
 <p>There are many kinds of Java programs. Some run on webservers (servlet &amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.</p>
 
-<p>Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this book. It is best to name the folder without special characters or whitespace.</p>
+<p>Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.</p>
 
 <p>Create a file named Hello.java. For now, just copy the contents from the sample code below</p>
 
@@ -829,7 +830,7 @@ You can execute certain commands when certain conditions are met, <em>branching<
 </pre>
 
 
-<p>Where expression can either be a <em>char, byte, short, int</em>. It can also be <em>Character, Byte, Short, Integer</em> OR an <em>enum</em> type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 8 (which at the time of writing is in Eary Access), you can now use String expressions on the <em>switch</em> statement</p>
+<p>Where expression can either be a <em>char, byte, short, int</em>. It can also be <em>Character, Byte, Short, Integer</em> OR an <em>enum</em> type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 7, you can now use String expressions on the <em>switch</em> statement</p>
 
 <p>The following code sample  extracts the day-of-week value from a <em>Calendar</em> object. The day-of-week is returned as integer, which makes it perfect to filter using a <em>switch</em> statement rather than nested <em>if</em></p>
 
