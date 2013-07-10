@@ -130,7 +130,10 @@ h1, h2, h3, h4, h5 {
 h1 {font-size: 170%; letter-spacing: -1px;}
   h1.chapter {
     font-family: 'Tauri';
+    font-size: 34px;
+    letter-spacing: -1px;
   }
+  
 h2 {font-size: 150%; margin-bottom:0;}
 h3 {font-size: 130%; margin-bottom:0; color: #000000; }
 body {
@@ -1947,9 +1950,7 @@ class A extends Exception  {
 <h1 class="chapter">METHODS</h1>
 
 
-<p>First order of business is start calling functions as <em>methods</em>. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.</p>
-
-<p>Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an <em>object</em> and there are those that belong to a <em>class</em>. The former are called <em>instance methods</em> or <em>non-static</em> methods and the latter we refer to as <em>class methods</em> or <em>static methods</em>. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &mdash; from where they are reachable and where they aren't. So buckle up.</p>
+<p>First order of business is start calling functions as <em>methods</em>. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function.</p>
 
 <hr />
 
@@ -2044,7 +2045,7 @@ class Example {
 
 <p>To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block.</p>
 
-<p>The two things you will write inside method are <em>statements</em> and <em>control structures</em> &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.</p>
+<p>The two things you will write inside methods are <em>statements</em> and <em>control structures</em> &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.</p>
 
 <pre>
 class Table {

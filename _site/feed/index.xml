@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-09T23:41:59+08:00</updated>
+ <updated>2013-07-10T17:45:37+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -1010,6 +1010,17 @@ $ echo pbpaste
 &lt;p&gt;&lt;strong&gt;20. SQUEAKY CLEAN HARD DRIVE&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about &quot;how to clean up your Mac&quot;, swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get &lt;strong&gt;Clean My Mac&lt;/strong&gt; or anything paid that catches your fancy. The Mac Store is a good place to start.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;21. BACKUP Mail.App&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  $ mkdir MailBackup
+  $ cd MailBackup
+  $ cp -r ~/Library/Mail/V2/ .
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;strong&gt;22. EXTERNAL DRIVES ARE IN&lt;/strong&gt; &lt;code class=&quot;codeblock&quot;&gt;~/Volumes/&lt;/code&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -3163,9 +3174,7 @@ class A extends Exception  {
 &lt;h1 class=&quot;chapter&quot;&gt;METHODS&lt;/h1&gt;
 
 
-&lt;p&gt;First order of business is start calling functions as &lt;em&gt;methods&lt;/em&gt;. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &amp;mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.&lt;/p&gt;
-
-&lt;p&gt;Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an &lt;em&gt;object&lt;/em&gt; and there are those that belong to a &lt;em&gt;class&lt;/em&gt;. The former are called &lt;em&gt;instance methods&lt;/em&gt; or &lt;em&gt;non-static&lt;/em&gt; methods and the latter we refer to as &lt;em&gt;class methods&lt;/em&gt; or &lt;em&gt;static methods&lt;/em&gt;. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &amp;mdash; from where they are reachable and where they aren't. So buckle up.&lt;/p&gt;
+&lt;p&gt;First order of business is start calling functions as &lt;em&gt;methods&lt;/em&gt;. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &amp;mdash; sounds like semantics, I know, but just start using the term method instead of function.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -3260,7 +3269,7 @@ class Example {
 
 &lt;p&gt;To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block.&lt;/p&gt;
 
-&lt;p&gt;The two things you will write inside method are &lt;em&gt;statements&lt;/em&gt; and &lt;em&gt;control structures&lt;/em&gt; &amp;mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.&lt;/p&gt;
+&lt;p&gt;The two things you will write inside methods are &lt;em&gt;statements&lt;/em&gt; and &lt;em&gt;control structures&lt;/em&gt; &amp;mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.&lt;/p&gt;
 
 &lt;pre&gt;
 class Table {

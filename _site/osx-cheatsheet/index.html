@@ -130,7 +130,10 @@ h1, h2, h3, h4, h5 {
 h1 {font-size: 170%; letter-spacing: -1px;}
   h1.chapter {
     font-family: 'Tauri';
+    font-size: 34px;
+    letter-spacing: -1px;
   }
+  
 h2 {font-size: 150%; margin-bottom:0;}
 h3 {font-size: 130%; margin-bottom:0; color: #000000; }
 body {
@@ -642,6 +645,17 @@ $ echo pbpaste
 <p><strong>20. SQUEAKY CLEAN HARD DRIVE</strong></p>
 
 <p>Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about "how to clean up your Mac", swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get <strong>Clean My Mac</strong> or anything paid that catches your fancy. The Mac Store is a good place to start.</p>
+
+<p><strong>21. BACKUP Mail.App</strong></p>
+
+<pre class="codeblock">
+  $ mkdir MailBackup
+  $ cd MailBackup
+  $ cp -r ~/Library/Mail/V2/ .
+</pre>
+
+
+<p><strong>22. EXTERNAL DRIVES ARE IN</strong> <code class="codeblock">~/Volumes/</code></p>
 
         </div>                
       </div>

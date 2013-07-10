@@ -303,6 +303,15 @@ There's a dedicated note for this [somewhere on thelogBox.com](http://thelogbox.
 Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about "how to clean up your Mac", swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get **Clean My Mac** or anything paid that catches your fancy. The Mac Store is a good place to start.
 
 
+**21. BACKUP Mail.App**
+
+<pre class="codeblock">
+  $ mkdir MailBackup
+  $ cd MailBackup
+  $ cp -r ~/Library/Mail/V2/ .
+</pre>
+
+**22. EXTERNAL DRIVES ARE IN** <code class="codeblock">~/Volumes/</code>
 
 
 
