@@ -1744,7 +1744,7 @@ Think about it this way. You can have many instances of a class, that means you 
 
 <hr class="chapterbreak"/>
 
-<h1 class="chapter"> Access control and Packages</h1>
+<h1 class="chapter">ACCESS CONTROL AND PACKAGES</h1>
 
 Access implies that there is a boundary or a wall that blocks us from entering. It implies enclosure. 
 
