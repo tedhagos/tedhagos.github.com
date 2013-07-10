@@ -1881,7 +1881,7 @@ Constructors are defined as public most of the time. It makes sense to define th
 
 On some rare occasions, a constructor is defined as *private*. This effectively prevents anybody from creating an instance of the class and implicitly, it makes the class a *final* one because it also cannot be extended anymore. 
 
-One of the prevailing reasoning for making a private constructor is to achieve a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern) effect. By preventing *new* keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to *count* the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book [Design Patterns, Elements of Reusable code]. (http://en.wikipedia.org/wiki/Design_Patterns)
+One of the prevailing reasoning for making a private constructor is to achieve a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern) effect. By preventing *new* keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to *count* the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book [Design Patterns, Elements of Reusable code.](http://en.wikipedia.org/wiki/Design_Patterns)
 
 
 <hr class="chapterbreak"/>
