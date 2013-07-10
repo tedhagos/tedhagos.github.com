@@ -1742,6 +1742,147 @@ Think about it this way. You can have many instances of a class, that means you 
 3. A non-static member cannot be accessed directly by a static method. You need to create an object first, then access the member via the reference variable
 4. A static member on the other hand, can be accessed by a non-static method. It's not fair right, but best remember this
 
+<hr class="chapterbreak"/>
+
+<h1 class="chapter"> Access control and Packages</h1>
+
+Access implies that there is a boundary or a wall that blocks us from entering. It implies enclosure. 
+
+In a programming language they are not referred to as enclosures. They are called *scope*. Java constructs have scopes. When you define a variable inside a method, you can only use that variable within that method. When a variable is defined within a class all methods in that class can use that variable &mdash; it is also possible for other classes to use that variable, if the programmer will allow it. Here begins our topics of *accessibility*.
+
+Java organizes certain things according to hierarchy. You may have been increasingly aware of this hierarchy by now. Statements and variables make up methods. Methods and variables make up a class. Classes make up a *package*. 
+
+A package in Java are like folders in your PC. Folders allow you to organize things, segregate stuff and tuck them away easily and tidily for easy retrieval. Folders allow you to give the same name to two different files as long as they are on different folders. Using this analogy, *Java packages* are folders and *Java classes* are files. Classes belong to a package just like a file belong to a folder. 
+
+All the code examples we have used thus far do not specify a particular package. We have never given Java any instruction that the classes we wrote should be placed in a specific "folder". Java however, worked in the background and placed our codes in a default *no-name* package. Consider the next code example. 
+
+<pre>
+import java.util.Date;
+
+class DateSample {
+    public static void main(String []args) {
+        Date date = new Date(); 
+        System.out.println(date);
+    }    
+}
+</pre>
+<div id="cap">DateSample.java</div>
+
+Compile the example source and list the contents of the directory. You will find a file named DateSample.class. There is nothing unusual there. If you run the sample code you are running it from context of the *no-name* package, which is the current working directory. 
+
+Don't sweat about this *no-name* package. Just remember that if you do not define your package explicitly, Java will define it for you &mdash; implicitly. 
+
+Let's write another sample. 
+
+<pre>
+package com.tedhagos;
+
+import static java.lang.System.out;
+
+public class PackageSample {
+    
+    public static void main (String [] args) {
+        out.println("Hello again\n");
+    }
+
+}
+</pre>
+<div id="cap">PackageSample.java</div>
+
+There is something new in this code. There is a *directive*.This directive must be written as the first executable statement in a source file, that is a compilation requirement. The only things that you can write before it are comments.
+
+The package name is programmer defined. You are responsible for choosing the name. In the example code, I used *com.tedhagos*. I used the *reverse-DNS notation*. You are not compelled to follow the convention but I need to tell you that the reverse-dns notation is widely used, not only in Java projects but in others as well. Best to learn to it.
+
+Java programs with package directive are compiled a little bit differently. You need to add some flags to the compilation command &mdash; <code class="codeblock">javac -d . PackageSample.java</code>. The *-d* in javac means we would like to specify where to place the generated class files. 
+
+The dot character after the *-d* flag means that to generate the package (folder) structure relative to the current working directory. If you inspect the output directory after executing the javac command, you will see something like the pic below 
+
+<img src="/img/packagesample.png"/>
+
+You cannot run this sample code using <code class="codeblock">java PackageSample</code>. That will fail because the *PackageSample* class is no longer within the *no-name* default package. 
+
+We explicitly told the Java compiler to put to things inside the  *com.tedhagos* package (folder). The fully qualified name of our program is now *com.tedhagos.PackSample*, so the way to run it is <code class="codeblock">java com.tedhagos.PackageSample</code>
+
+***
+
+## ACCESS MODIFIERS
+
+Access modifiers are reserved words that you put before variables, methods or classes in order to control their visibility or accessibility. There are four of them, *public, protected, package and private*.  
+
+When something is *public*, it can be accessed from anywhere. It's free for all. A public member can be accessed from 1) within the same class 2) another class 3) a class from another package &mdash; in short, everywhere.  
+
+<img src="/img/access.png"/>
+<div id="cap">Accessiblity</div>
+
+A top-level class declared as public can be referenced or used both within its package or outside its package. A public class usually will be defined with a public constructor. 
+
+<pre>
+public class Foo {
+    
+    public String name = "";
+
+    public String getName() {
+        return name;    
+    }
+}
+</pre>
+<div id="cap">A public class, ctor and variable</div>
+
+The extreme opposite of *public* is *private*, it is the most restrictive of all modifiers. A private member can only be used from within the class where it was defined. It is not reachable outside that class &mdash; you also need to remember that when a member is *private* you cannot inherit it, it is hidden even from subclasses.
+
+The *package and protected* are somewhere in the middle. A member having package accessibility can only be used by classes within the same package. It is unreachable outside the package. Unlike the other modifiers, you don't explicitly prefix a member   with the *package* keyword because it is the default accessibility for all members. When a member is defined without any access modifier, its accessibility is *package*.  
+
+The *protected* modifier is somewhat similar to package access. Members with this accessibility are also reachable only within the same package with one notable exception. They can also be reached by other classes outside the package provided that that class is a child class.
+
+<pre>
+package com.tedhagos.one;
+
+public class GoodSingleton {
+
+    protected static int instanceCounter = 0;
+    protected GoodSingleton() {
+        instanceCounter++;
+    }
+
+    public static GoodSingleton getInstance() {
+        
+        GoodSingleton retval = null;
+
+        if (instanceCounter <= 0) {
+            retval = new GoodSingleton();
+        }
+        else {
+            System.out.println("Error in creation");
+        }
+        return retval;
+    }
+}
+</pre>
+<div id="cap">GoodSingleton.java</div>
+
+The code is an example of how to implement a Singleton Design pattern in Java. A Singleton pattern ensures that there is only one or a limited number of times you can instantiate a Java class. That is the reason why the constructor was not defined as public. 
+
+**SUMMARY** 
+
+Declaring everything as public will let you avoid development nuisance because everything is accessible. There won't be any compilation errors due to a variable or method that is inaccessible because everything is visible and reachable. It also does not show programming finesse. Declaring everything as private will not let you go very far either because it is too restrictive. Knowing when to use which modifier is a skill that you will acquire overtime, by reading and studying code of other programmers and your own. 
+
+To recap. Here is the list access modifiers ranked in descending order, from the least restrictive to the most restrictive.
+
+1. public - least restrictive, accessible from anywhere
+2. protected - can be accessed from classes within the same package. Can also be accessed by classes outside the package but the accessing classes needs to be a subclass
+4. package or default - can be accessed only by classes within the same package
+5. private - most restrictive. Can only be accessed from within the class where it is defined
+
+*** 
+
+### THE SPECIAL CASE OF A PRIVATE CTOR
+
+Constructors are defined as public most of the time. It makes sense to define them that way because it means wherever the class is reachable, so is the constructor. The accessibility of the constructor is still limited by the accessibility of the containing class. A public constructor does not necessarily make the containing class public.
+
+On some rare occasions, a constructor is defined as *private*. This effectively prevents anybody from creating an instance of the class and implicitly, it makes the class a *final* one because it also cannot be extended anymore. 
+
+One of the prevailing reasoning for making a private constructor is to achieve a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern) effect. By preventing *new* keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to *count* the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book [Design Patterns, Elements of Reusable code]. (http://en.wikipedia.org/wiki/Design_Patterns)
+
 
 <hr class="chapterbreak"/>
 
