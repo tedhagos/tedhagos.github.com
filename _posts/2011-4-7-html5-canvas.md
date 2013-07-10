@@ -15,7 +15,7 @@ categories:
 ---
 
 
-<h1 class="chapter">THE HTML5 CANVAS</c>
+<h1 class="chapter">THE HTML5 CANVAS</h1>
 
 The canvas is a viewport. The DOM element <code class="codeblock">&lt; canvas height="300" width="300" &gt;</code>, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel. 
 
