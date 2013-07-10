@@ -1491,9 +1491,7 @@ If you do write a *finally* clause, remember that all the codes inside that bloc
 
 <h1 class="chapter">METHODS</h1>
 
-First order of business is start calling functions as *methods*. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function. Okay, now that is out of the way.
-
-Life would have been easier if there was only one kind of method, but that is not the case. There are methods that belong to an *object* and there are those that belong to a *class*. The former are called *instance methods* or *non-static* methods and the latter we refer to as *class methods* or *static methods*. As if two kinds of methods is not enough to deal with, we also need to learn the accessibility of these methods &mdash; from where they are reachable and where they aren't. So buckle up.
+First order of business is start calling functions as *methods*. This will be the last time we will call them functions. They are called methods because they are not simple functions, they are behaviours. They are bound to an object context and they can have privileged access to some data, unlike the simplistic function &mdash; sounds like semantics, I know, but just start using the term method instead of function. 
 
 ***
 ## BASICS
@@ -1574,7 +1572,7 @@ When a method is defined as *void* you don't need to write a *return* statement.
 
 To put it simply, methods are the workhorses of your program. Objects and Classes maybe glorified not only the Java language but in others as well, but when the rubber hits the road, all the side effects and compute engines are written inside the method block. 
 
-The two things you will write inside method are *statements* and *control structures* &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.
+The two things you will write inside methods are *statements* and *control structures* &mdash; the foundations of imperative programming languages. Obviously I cannot tell you right now which statements and structures to exactly to put in your methods. You need to figure that our for yourself. It is upon you, the programmer, to craft the statements and structures that will achieve your goals. I can, however, show you an example of how to write some methods.
 
 <pre>
 class Table {
