@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-10T17:45:37+08:00</updated>
+ <updated>2013-07-10T23:50:18+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -582,7 +582,8 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
    <link href="http://tedhagos.com /html5-canvas"/>
    <updated>2011-04-07T00:00:00+08:00</updated>
    <id>http://tedhagos.com /html5-canvas</id>
-   <content type="html">&lt;h1&gt;CANVAS&lt;/h1&gt;
+   <content type="html">&lt;h1 class=&quot;chapter&quot;&gt;THE HTML5 CANVAS&lt;/h1&gt;
+
 
 &lt;p&gt;The canvas is a viewport. The DOM element &lt;code class=&quot;codeblock&quot;&gt;&amp;lt; canvas height=&quot;300&quot; width=&quot;300&quot; &amp;gt;&lt;/code&gt;, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel.&lt;/p&gt;
 
@@ -593,7 +594,7 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;canv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;cx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/body&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -632,9 +633,13 @@ window.onload = function() {
 
 &lt;p&gt;&lt;strong&gt;TEXT&lt;/strong&gt; &lt;code class=&quot;codeblock&quot;&gt;fillText(string, x, y)&lt;/code&gt; &amp;mdash; this is self explanatory, you know what to do with this&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
 
-&lt;h1&gt;MOTION&lt;/h1&gt;
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;MOTION&lt;/h1&gt;
+
 
 &lt;ol&gt;
 &lt;li&gt;Draw the shape&lt;/li&gt;
@@ -687,6 +692,246 @@ window.onload = function() {
 &lt;p&gt;The key of this example is the &lt;em&gt;update()&lt;/em&gt; function. It calls the &lt;em&gt;setTimeout&lt;/em&gt; which acts as the timer of canvas, it executes the &lt;em&gt;update&lt;/em&gt; function every 50 milliseconds.&lt;/p&gt;
 
 &lt;p&gt;The main things to do in the &lt;em&gt;update&lt;/em&gt; function are; &lt;em&gt;1) Erase the canvas&lt;/em&gt; , the &lt;code class=&quot;codeblock&quot;&gt;clearRect&lt;/code&gt; function took care of that &lt;em&gt;2) Redraw the object&lt;/em&gt; and &lt;em&gt;3) Change the x &amp;amp; y coordinates of the object&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;HANDLING COLLISION&lt;/h1&gt;
+
+
+&lt;p&gt;Once you are comfortable making objects move, you will have another problem. That is how to know when your objects are bumping into other objects. Even if you have just the one object moving about in the canvas, surely at some point it will hit the borders of the canvas. You need to be able to handle that.&lt;/p&gt;
+
+&lt;p&gt;There are no magical or automatic ways to do this. You will need to resort to primitive techniques. That means being aware of coordinates of your &lt;em&gt;fixed-position&lt;/em&gt; objects, in this case, the borders of the canvas and being aware of the current position of your object.&lt;/p&gt;
+
+&lt;p&gt;You will devise a way to keep track of these things. When the updated position of your object coincides with the location of another object, fixed position or otherwise, you have a collision. The next thing left to do is provide programming logic when the collision happens.&lt;/p&gt;
+
+&lt;pre&gt;
+  var c = null;
+  var cx = null;
+  var box = null;
+  
+  window.onload = function() {
+    
+    c = document.getElementById('mycanvas');
+    cx = c.getContext('2d');
+    box = new Box();
+    
+    update();
+    
+    function update() {
+            
+      if((box.y + box.height) &lt; c.height) {
+        cx.clearRect(0,0,c.width, c.height);
+        cx.fillRect(box.x, box.y, box.width, box.height);
+        box.y = box.y + box.speed;
+      }
+      setTimeout(update,50);
+    }
+  }
+
+  function Box() {
+    this.x = 0;
+    this.y = 0;
+    this.width = 50;
+    this.height = 50;
+    this.speed = 5;
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;This code sample basically moves the box object along the &lt;em&gt;y-axis&lt;/em&gt;. Notice that prior to the &lt;em&gt;clear-update-redraw&lt;/em&gt; operation, the bounds of the box is checked against the height of the canvas. If the box's current &lt;em&gt;y-location&lt;/em&gt; plus the height of the box is less than the value of the canvas' height, the animation continues, if not, then no action is taken. This gives the appearance that the box stops at the bottom of the canvas. This approach is probably good enough for a first draft, but it can get messy really quickly once we add more objects to this.&lt;/p&gt;
+
+&lt;p&gt;We can improve the code a little bit if we move the programming logic of the collision away from the drawing logic.&lt;/p&gt;
+
+&lt;pre&gt;   
+  var c = null;
+  var cx = null;
+  var box = null;
+  
+  window.onload = function() {
+    
+    c = document.getElementById('mycanvas');
+    cx = c.getContext('2d');
+    box = new Box();
+    
+    update();
+    
+    function update() {
+      if(!isInCollission(box)) {
+        cx.clearRect(0,0,c.width, c.height);
+        cx.fillRect(box.x, box.y, box.width, box.height);
+        box.y += box.speed;
+        setTimeout(update,50);
+      }
+    }
+  }
+
+  function isInCollission(box) {
+    if((box.x + box.width) &lt; c.width &amp;  
+       (box.y + box.height) &lt; c.height) {
+         return false;
+       }
+    else {
+      return true;
+    }
+  }
+
+  function Box() {
+    this.x = 0;
+    this.y = 0;
+    this.width = 50;
+    this.height = 50;
+    this.speed = 5;
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The  &lt;em&gt;isInCollission()&lt;/em&gt; function takes a &lt;em&gt;box&lt;/em&gt; parameter to check if either the bottom or the right side of the box is already in contact with either the right boundary or the floor of the canvas.&lt;/p&gt;
+
+&lt;p&gt;You can make this code more robust by including codes that checks for collission on ceiling or the left side of the canvas, but that is left to you as an exercise.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;EVENT HANDLING&lt;/h1&gt;
+
+
+&lt;p&gt;The objects you draw on the canvas are not event aware. You won't be able to hook em up to &lt;em&gt;click&lt;/em&gt; events or any other standard events. These objects are not DOM objects, hence, they cannot raise nor sink events.&lt;/p&gt;
+
+&lt;p&gt;Short of using a framework like KineticJS, what you can do is attach the event to the &lt;em&gt;canvas&lt;/em&gt; DOM element, capture the &lt;em&gt;x,y mouse coordinates&lt;/em&gt; and devise a logic if the click happened within the bounds of your object.&lt;/p&gt;
+
+&lt;p&gt;The following code sample traps the click event inside the canvas.&lt;/p&gt;
+
+&lt;pre&gt;
+    window.onload = function(){
+        
+        var c = document.getElementById('mycanvas');
+        var context = c.getContext(&quot;2d&quot;);
+        var watch = document.getElementById('watch');
+        
+        var mousex;
+        var mousey;
+        var mousepos;
+        var mouseoffset = 20;
+        
+        c.onclick = function() {
+            
+            mousex = event.clientX;
+            mousey = event.clientY;
+            
+            mousepos = &quot;X : &quot; + mousex + &quot; | Y :&quot; + mousey;
+            watch.innerHTML = mousepos;
+            draw(mousex,mousey);
+        }
+        
+        function draw(x,y) {
+
+      var R = Math.floor(Math.random() * 255);
+      var G = Math.floor(Math.random() * 255);
+      var B = Math.floor(Math.random() * 255);
+      var color = &quot;rgb(&quot; + R + &quot;,&quot; + G + &quot;,&quot; + B + &quot;)&quot;;
+      
+      var dim = Math.random() * 50;
+      
+      context.fillStyle = color;
+            context.fillRect(x-mouseoffset,y-mouseoffset,dim,dim);
+        }       
+    }
+&lt;/pre&gt;
+
+
+&lt;p&gt;The current location of mouse is given by &lt;em&gt;event.clientX &amp;amp; event.clientY&lt;/em&gt;. The sample code uses the current location of the mouse to draw the &lt;em&gt;X &amp;amp; Y&lt;/em&gt; of the rectangle. The &lt;em&gt;offset&lt;/em&gt; variable was used simply to reposition the top-left of the rectangle in order to coincide with tip of the mouse cursor.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Programming Notes</title>
+   <link href="http://tedhagos.com /android-programming-notes"/>
+   <updated>2010-12-18T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /android-programming-notes</id>
+   <content type="html">&lt;h1&gt;DOCUMENT HISTORY&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dec 18 2010 &amp;mdash; Created&lt;/li&gt;
+&lt;li&gt;Jul 10 2013 &amp;mdash; Reconstituted from my scattered notes&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;INTRODUCTION&lt;/h1&gt;
+
+
+&lt;p&gt;These are my notes for android programming. This is a not a tutorial, altough it may seem to be. They are closer to a cheat sheet rather than a detailed beginner's tutorial. These notes date back to late 2010 but they are updated from time to time. I could have missed some updates and you may still find some references to API level 6 (Eclair) &amp;mdash; I'll get around to fixing those kinds of things when I get the time.&lt;/p&gt;
+
+&lt;p&gt;While Eclipse and Netbeans are excellent IDEs, there will be no reference to either on these notes. Firstly because I don't much use them, I can if I am really forced to, but I'd rather not. These exercises were built using just the android SDK, Apache ANT, JDK and a simple programmer's editor.&lt;/p&gt;
+
+&lt;p&gt;I wrote this for an internal skill building exercise, which never materialised. It doesn't mean I should not compile it as part of my notes.&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;BASICS&lt;/h1&gt;
+
+
+&lt;p&gt;You can create the project structure by hand but I don't know of anybody (personally) who actually does that. Unless you are trying to prove something to yourself, use the SDK tools. There could be other ways to create the android project structure, &lt;em&gt;maven&lt;/em&gt; perhaps, but I did not invest time using that maven route, so &lt;em&gt;android sdk&lt;/em&gt; it is.&lt;/p&gt;
+
+&lt;p&gt;The android SDK includes everything you will need to create, compile, debug and install your projects. To create a project, follow the command below&lt;/p&gt;
+
+&lt;pre&gt;
+android create project 
+                --target 15
+                --activity First
+                --package com.thelogbox
+                --path first
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;target&lt;/em&gt; requires an integer value which corresponds to API level. In our example the integer value 15 corresponds to Ice cream Sandwich. You can find &lt;a href=&quot;http://tedhagos.com/java-programming/&quot;&gt;API levels and platform information  on the developer.android.site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;activity&lt;/em&gt; flag lets you name a default &lt;em&gt;Activity&lt;/em&gt; class that will be created as part of the project.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;package&lt;/em&gt; flag is folder organisation for the source of your project. This is exactly like the &lt;em&gt;package&lt;/em&gt; directive in Core Java Programming. I suggest that you do not skip this and use the conventional reverse DNS notation.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;path&lt;/em&gt; flag becomes the root folder of your project. All the other boiler plate files of android will be relative to this folder.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;The SDK tool will do some basic scaffolding for you and produce  the following files and folders.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/android-project-structure.png&quot;&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;Fig 1: Android Project Structure&lt;/div&gt;
+
+
+&lt;p&gt;You will spend a lot of time on the Activity source file &lt;em&gt;First.java&lt;/em&gt; and &lt;em&gt;main.xml&lt;/em&gt;. These are the two files that affects the user interface and the entry point of your app.&lt;/p&gt;
+
+&lt;p&gt;The files created by the android tool actually does include a &lt;em&gt;Hello World&lt;/em&gt; example. The only thing left to do at this point is to compile your app.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;COMPILING AND BUILDING&lt;/h2&gt;
+
+&lt;p&gt;Android apps are not like desktop apps. While you work with the source files and other project assets on your PC, testing and running them will not be on your PC &amp;mdash; even the AVD is technically not your PC, it is an emulator after all.&lt;/p&gt;
+
+&lt;p&gt;Get your android device and make sure it is properly configured for application development. You need to do the configuration on your device. Make sure that &lt;em&gt;USB debugging&lt;/em&gt; is enabled. When that is done, hook it up to your development machine. Run &lt;code class=&quot;codeblock&quot;&gt;ant debug install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You need to use the &lt;em&gt;debug&lt;/em&gt; target because you haven't generated any developer certificate yet. If you simply ran &lt;code class=&quot;codeblock&quot;&gt;ant install&lt;/code&gt;, the build tool will look for a proper certificate so it can sign the .&lt;em&gt;apk&lt;/em&gt; *(Android Package) &amp;mdash; you don't have that yet, so use the debug target.&lt;/p&gt;
+
+&lt;p&gt;You haven't messed around with the codes yet. All the project assets are still in pristine condition and fresh as a daisy, so there is no reason for the compilation and installation to fail. Wait for a while until ANT finishes its task then inspect the physical android machine. You should see the &lt;em&gt;Hello World&lt;/em&gt; app.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;APPLICATION LIFECYCLE&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/android-lifecycle.png&quot;&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -3459,6 +3704,168 @@ class Person{
 &lt;li&gt;A static member on the other hand, can be accessed by a non-static method. It's not fair right, but best remember this&lt;/li&gt;
 &lt;/ol&gt;
 
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;ACCESS CONTROL AND PACKAGES&lt;/h1&gt;
+
+
+&lt;p&gt;Access implies that there is a boundary or a wall that blocks us from entering. It implies enclosure.&lt;/p&gt;
+
+&lt;p&gt;In a programming language they are not referred to as enclosures. They are called &lt;em&gt;scope&lt;/em&gt;. Java constructs have scopes. When you define a variable inside a method, you can only use that variable within that method. When a variable is defined within a class, all methods in that class can use that variable &amp;mdash; it is also possible for other classes to use that variable, if the programmer will allow it. Here begins our discussion on &lt;em&gt;accessibility&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Java organizes certain things according to hierarchy. You may have been increasingly aware of this hierarchy by now. Statements and variables make up methods. Methods and variables make up a class. Classes make up a &lt;em&gt;package&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A package in Java are like folders in your PC. Folders allow you to organize things, segregate stuff and tuck them away easily and tidily for easy retrieval. Folders allow you to give the same name to two different files as long as they are on different folders. Using this analogy, &lt;em&gt;Java packages&lt;/em&gt; are folders and &lt;em&gt;Java classes&lt;/em&gt; are files. Classes belong to a package just like a file belong to a folder.&lt;/p&gt;
+
+&lt;p&gt;All the code examples we have used thus far do not specify a particular package. We have never given Java any instruction that the classes we wrote should be placed in a specific &quot;folder&quot;. Java however, worked in the background and placed our codes in a default &lt;em&gt;no-name&lt;/em&gt; package. Consider the next code example.&lt;/p&gt;
+
+&lt;pre&gt;
+import java.util.Date;
+
+class DateSample {
+    public static void main(String []args) {
+        Date date = new Date(); 
+        System.out.println(date);
+    }    
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;DateSample.java&lt;/div&gt;
+
+
+&lt;p&gt;Compile the example source and list the contents of the directory. You will find a file named DateSample.class. There is nothing unusual there. If you run the sample code you are running it from context of the &lt;em&gt;no-name&lt;/em&gt; package, which is the current working directory.&lt;/p&gt;
+
+&lt;p&gt;Don't sweat about this &lt;em&gt;no-name&lt;/em&gt; package. Just remember that if you do not define your package explicitly, Java will define it for you &amp;mdash; implicitly.&lt;/p&gt;
+
+&lt;p&gt;Let's write another sample.&lt;/p&gt;
+
+&lt;pre&gt;
+package com.tedhagos;
+
+import static java.lang.System.out;
+
+public class PackageSample {
+    
+    public static void main (String [] args) {
+        out.println(&quot;Hello again\n&quot;);
+    }
+
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;PackageSample.java&lt;/div&gt;
+
+
+&lt;p&gt;There is something new in this code. There is a &lt;em&gt;package directive&lt;/em&gt;.This directive must be written as the first executable statement in a source file, that is a compilation requirement. The only things that you can write before it are comments.&lt;/p&gt;
+
+&lt;p&gt;The package name is programmer defined. You are responsible for choosing the name. In the example code, I used &lt;em&gt;com.tedhagos&lt;/em&gt;. I used the &lt;em&gt;reverse-DNS notation&lt;/em&gt;. You are not compelled to follow the convention but I need to tell you that the reverse-dns notation is widely used, not only in Java projects but in others as well. Best to learn to it.&lt;/p&gt;
+
+&lt;p&gt;Java programs with package directive are compiled a little bit differently. You need to add some flags to the compilation command &amp;mdash; &lt;code class=&quot;codeblock&quot;&gt;javac -d . PackageSample.java&lt;/code&gt;. The &lt;em&gt;-d&lt;/em&gt; in javac means we would like to specify where to place the generated class files.&lt;/p&gt;
+
+&lt;p&gt;The dot character after the &lt;em&gt;-d&lt;/em&gt; flag means that to generate the package (folder) structure relative to the current working directory. If you inspect the output directory after executing the javac command, you will see something like the pic below&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/packagesample.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;You cannot run this sample code using &lt;code class=&quot;codeblock&quot;&gt;java PackageSample&lt;/code&gt;. That will fail because the &lt;em&gt;PackageSample&lt;/em&gt; class is no longer within the &lt;em&gt;no-name&lt;/em&gt; default package.&lt;/p&gt;
+
+&lt;p&gt;We explicitly told the Java compiler to put to things inside the  &lt;em&gt;com.tedhagos&lt;/em&gt; package (folder). The fully qualified name of our program is now &lt;em&gt;com.tedhagos.PackSample&lt;/em&gt;, so the way to run it is &lt;code class=&quot;codeblock&quot;&gt;java com.tedhagos.PackageSample&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;ACCESS MODIFIERS&lt;/h2&gt;
+
+&lt;p&gt;Access modifiers are reserved words that you put before variables, methods or classes in order to control their visibility or accessibility. There are four of them, &lt;em&gt;public, protected, package and private&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;When something is &lt;em&gt;public&lt;/em&gt;, it can be accessed from anywhere. It's free for all. A public member can be accessed from 1) within the same class 2) another class 3) a class from another package &amp;mdash; in short, everywhere.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/access.png&quot;/&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;Accessiblity&lt;/div&gt;
+
+
+&lt;p&gt;A top-level class declared as public can be referenced or used both within its package or outside its package. A public class usually will be defined with a public constructor.&lt;/p&gt;
+
+&lt;pre&gt;
+public class Foo {
+    
+    public String name = &quot;&quot;;
+
+    public String getName() {
+        return name;    
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;A public class, ctor and variable&lt;/div&gt;
+
+
+&lt;p&gt;The extreme opposite of &lt;em&gt;public&lt;/em&gt; is &lt;em&gt;private&lt;/em&gt;, it is the most restrictive of all modifiers. A private member can only be used from within the class where it was defined. It is not reachable outside that class &amp;mdash; you also need to remember that when a member is &lt;em&gt;private&lt;/em&gt; you cannot inherit it, it is hidden even from subclasses.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;package and protected&lt;/em&gt; are somewhere in the middle. A member having package accessibility can only be used by classes within the same package. It is unreachable outside the package. Unlike the other modifiers, you don't explicitly prefix a member   with the &lt;em&gt;package&lt;/em&gt; keyword because it is the default accessibility for all members. When a member is defined without any access modifier, its accessibility is &lt;em&gt;package&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;protected&lt;/em&gt; modifier is somewhat similar to package access. Members with this accessibility are also reachable only within the same package with one notable exception. They can also be reached by other classes outside the package provided that that class is a child class.&lt;/p&gt;
+
+&lt;pre&gt;
+package com.tedhagos.one;
+
+public class GoodSingleton {
+
+    protected static int instanceCounter = 0;
+    protected GoodSingleton() {
+        instanceCounter++;
+    }
+
+    public static GoodSingleton getInstance() {
+        
+        GoodSingleton retval = null;
+
+        if (instanceCounter &lt;= 0) {
+            retval = new GoodSingleton();
+        }
+        else {
+            System.out.println(&quot;Error in creation&quot;);
+        }
+        return retval;
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;GoodSingleton.java&lt;/div&gt;
+
+
+&lt;p&gt;The code is an example of how to implement a Singleton Design pattern in Java. A Singleton pattern ensures that there is only one or a limited number of times you can instantiate a Java class. That is the reason why the constructor was not defined as public.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SUMMARY&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Declaring everything as public will let you avoid development nuisance because everything is accessible. There won't be any compilation errors due to a variable or method that is inaccessible because everything is visible and reachable. It also does not show programming finesse. Declaring everything as private will not let you go very far either because it is too restrictive. Knowing when to use which modifier is a skill that you will acquire overtime, by reading and studying code of other programmers and your own.&lt;/p&gt;
+
+&lt;p&gt;To recap. Here is the list access modifiers ranked in descending order, from the least restrictive to the most restrictive.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;public - least restrictive, accessible from anywhere&lt;/li&gt;
+&lt;li&gt;protected - can be accessed from classes within the same package. Can also be accessed by classes outside the package but the accessing classes needs to be a subclass&lt;/li&gt;
+&lt;li&gt;package or default - can be accessed only by classes within the same package&lt;/li&gt;
+&lt;li&gt;private - most restrictive. Can only be accessed from within the class where it is defined&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3&gt;THE SPECIAL CASE OF A PRIVATE CTOR&lt;/h3&gt;
+
+&lt;p&gt;Constructors are defined as public most of the time. It makes sense to define them that way because it means wherever the class is reachable, so is the constructor. The accessibility of the constructor is still limited by the accessibility of the containing class. A public constructor does not necessarily make the containing class public.&lt;/p&gt;
+
+&lt;p&gt;On some rare occasions, a constructor is defined as &lt;em&gt;private&lt;/em&gt;. This effectively prevents anybody from creating an instance of the class and implicitly, it makes the class a &lt;em&gt;final&lt;/em&gt; one because it also cannot be extended anymore.&lt;/p&gt;
+
+&lt;p&gt;One of the prevailing reasoning for making a private constructor is to achieve a &lt;a href=&quot;http://en.wikipedia.org/wiki/Singleton_pattern&quot;&gt;Singleton&lt;/a&gt; effect. By preventing &lt;em&gt;new&lt;/em&gt; keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to &lt;em&gt;count&lt;/em&gt; the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book &lt;a href=&quot;http://en.wikipedia.org/wiki/Design_Patterns&quot;&gt;Design Patterns, Elements of Reusable code.&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr class=&quot;chapterbreak&quot;/&gt;
 
