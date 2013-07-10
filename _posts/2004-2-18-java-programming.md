@@ -1748,7 +1748,7 @@ Think about it this way. You can have many instances of a class, that means you 
 
 Access implies that there is a boundary or a wall that blocks us from entering. It implies enclosure. 
 
-In a programming language they are not referred to as enclosures. They are called *scope*. Java constructs have scopes. When you define a variable inside a method, you can only use that variable within that method. When a variable is defined within a class all methods in that class can use that variable &mdash; it is also possible for other classes to use that variable, if the programmer will allow it. Here begins our topics of *accessibility*.
+In a programming language they are not referred to as enclosures. They are called *scope*. Java constructs have scopes. When you define a variable inside a method, you can only use that variable within that method. When a variable is defined within a class, all methods in that class can use that variable &mdash; it is also possible for other classes to use that variable, if the programmer will allow it. Here begins our discussion on *accessibility*.
 
 Java organizes certain things according to hierarchy. You may have been increasingly aware of this hierarchy by now. Statements and variables make up methods. Methods and variables make up a class. Classes make up a *package*. 
 
@@ -1789,7 +1789,7 @@ public class PackageSample {
 </pre>
 <div id="cap">PackageSample.java</div>
 
-There is something new in this code. There is a *directive*.This directive must be written as the first executable statement in a source file, that is a compilation requirement. The only things that you can write before it are comments.
+There is something new in this code. There is a *package directive*.This directive must be written as the first executable statement in a source file, that is a compilation requirement. The only things that you can write before it are comments.
 
 The package name is programmer defined. You are responsible for choosing the name. In the example code, I used *com.tedhagos*. I used the *reverse-DNS notation*. You are not compelled to follow the convention but I need to tell you that the reverse-dns notation is widely used, not only in Java projects but in others as well. Best to learn to it.
 
