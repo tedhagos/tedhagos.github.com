@@ -18,13 +18,13 @@ You can get Java 8 by way of [Oracle Early Access](http://www.oracle.com/technet
 
 On a Debian VM or Debian-ish machines, it can be pulled from the repos
 
-{% highlight bash %}
+<pre>
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 
-{% endhighlight%}
+</pre>
 
 The Windows installation should be easy to figure out, there is no need to write it here.  
 
@@ -34,12 +34,12 @@ The Windows installation should be easy to figure out, there is no need to write
 2. Extract the contents and tuck it away somewhere
 3. Create softlinks to the java8 executables, might be a good idea not to override your usual **java** and **javac**. I named mine **java8** and **javac8**
 
-{% highlight bash %}
+<pre>
 
 sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
 sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
 
-{% endhighlight%}
+</pre>
 
 I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9 
 
