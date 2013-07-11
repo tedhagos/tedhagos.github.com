@@ -1883,8 +1883,187 @@ On some rare occasions, a constructor is defined as *private*. This effectively 
 
 One of the prevailing reasoning for making a private constructor is to achieve a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern) effect. By preventing *new* keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to *count* the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book [Design Patterns, Elements of Reusable code.](http://en.wikipedia.org/wiki/Design_Patterns)
 
+<hr class="chapterbreak"/>
+
+<h1 class="chapter">METHOD OVERLOADING</h1>
+
+Overloading means you can define a method more than once. For example, you can write the *add()* method four times within the same class. One to add integers, another for double another for long etc. You do need to make the methods distinguishable from one another &mdash; but how can we distinguish one from another if they are identical? To answer that, we need an example
+
+<pre>
+int add(int i, int j){return i + j;}
+long add(long i, long j){return i + j;}
+float add(float i, float j){return i + j;}
+double add(double i, double j){return i + j;}
+</pre>
+
+The four methods above have exactly the same name, *add* but the method signatures are not identical. The return type, the name of the method and the parameters it accepts constitutes the *method signature*. In the sample code, only their names are identical. This is how you provide distinction for overloaded methods. This is how to make the Java methods *parametrically polymorphic*. Note that this is different from polymorphism where inheritance is involved. 
+
+## EXAMPLE OF A BAD OVERLOAD
+
+<pre class="codeblock">
+void addTwoNumbers(float x,float y) {}
+void addTwoNumbers(float a,float b) {}
+</pre>
+
+The two methods above are identical. Changing the names of parameter does not make them distinct. Had you changed the type of the parameters, that would have been a valid overload.
+
+You can use overloading to deal with situations where the method needs to respond to a variety of inputs, e.g. one method will deal with floats and the other will deal with integers
 
 <hr class="chapterbreak"/>
+
+<h1 class="chapter">OVERRIDING, BEING POLYMORPHIC</h1>
+
+The mechanics of *overriding* is easy enough. We can simply study a code sample and I will point out what is considered valid and not valid in code. Somehow I don't think the code mechanics is the reason why polymorphism is poorly understood. This is a matter of the *why* and not the *how*. But anyway, lets study a code sample. 
+
+<pre>
+class Employee {
+	void work() {
+		System.out.println("I am working");
+	}
+}
+class Programmer extends Employee {
+	void work() {
+		System.out.println("I am programming");
+	}
+}
+class TestEmployee {
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		Programmer p = new Programmer();
+		
+		e.work();
+		p.work();
+	}
+}
+</pre>
+<div id="cap">A polymorphic Employee</div>
+
+The example shows that *Programmer* is a specific kind of *Employee*. There could be other kinds of Employees but this is enough to illustrate the point. 
+
+If a programmer *is a kind of* employee, then we expect the programmer to have the basic behaviour of an employee &mdash; for example, you expect an employee to work, so you can expect a programmer to work as well. The work behaviour of all employees are not identical though. Some employees program (write codes), some of them do recruitment, some do the selling etc. This is the reason why you may need to provide specific behaviour to a specific object. A programmer is a specific kind of employee, therefore its *work* behaviour or work details will be different from that of other employees. 
+
+When you inherit a behaviour and then *reimplement* that behaviour on a sub class, that makes the behaviour *polymorphic*.  
+
+
+***
+
+## POLYMORPHISM AND THE TYPE SYSTEM
+
+If you can remember the idea and mechanics behind the Employee sample code above, you would already be okay and you can already accomplish a lot of things in Java. Lets stretch our understanding of polymorphism and the Java type system a little bit more. Consider the revised version of the Employee program.
+
+\begin{lstlisting}[caption="Revised Employee code"]
+class Employee {
+	
+	void work() {
+		System.out.println("I am working");
+	}
+}
+
+class Programmer extends Employee {
+	
+	@Override
+	void work() {
+		System.out.println("I am programming");
+	}
+}
+
+class TestEmployee {
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		Employee p = new Programmer();
+		
+		e.work();
+		p.work();
+	}
+}
+\end{lstlisting}
+
+Two things have changed in this revised version of the Employee program. The **@Override** annotation was used and the line \highlight{Employee p = new Programmer()}
+
+@Override is an annotation. Annotations are tags that you insert into your source code so that either the Java compiler or any other tool can use it for further processing. The tags can be processed at the source file level or it can be included in the resulting class files. \cite{corejava2}
+
+The *@Override* is optional, our previous code did accomplish the override without the annotation but don't be too quick to dismiss it. That is not just decoration. It gives some extra capabilities to the compiler. 
+
+The @Override annotation enables the compiler to check whether you are actually overriding the *work()* method of the Employee class inside the Programmer class. If there was no *work()* method defined in Employee, you will encounter a compilation error. Using the annotation helps you enforce your intent for a method to be truly polymorphic. If you doubt it, just play around with code and remove the *work()* method on the Employee class, then recompile and see what happens. 
+
+The other change is this is code <code class="codeblock">Employee p = new Programmer()</code>. It might seem weird at first but it gives you hint of the Java Type System was designed.
+
+We declared the object reference *p* to be of type *Employee* but we did not create an instance of Employee, instead we assigned *p* an instance of *Programmer*. 
+
+Java does not require us to fill up an Employee type with an actual Employee object. It only requires that we fill up the Employee type (variable *p*) with an object that is *at least* an Employee type. Of course class Programmer contains an employee type because it extends Employee, it is *a kind of* Employee. You could add more types to the class Programmer via interface inheritance and, still our code will be perfectly legal. 
+
+***
+
+## POLYMORPHISM AND ACCCESSIBILITY
+
+When you override a method, make sure that you don't make the new method more RESTRICTIVE than the one in the super class. 
+
+When you override a *public* method, you have to make your new method public as well because nothing can be less restrictive than public.  
+
+When you override a *protected* method, you can only make it either a *public* or a *protected* method as well. Making the new method *protected* does not make it less restrictive than the one in the superclass, it makes it equally restrictive, not less.
+
+When you override a *package access* method, you have a choice to make the new method either *public, protected or default access*.
+
+Lastly when you override a *private* method you have a choice to make it either public, protected or package access &mdash; did that get pass by you? Didn't I say that private members cannot be inherited. If they can't be inherited, how can they be overriden? Gotcha. You got to pay attention to these things. You  CANNOT override private methods because you cannot inherit them to begin with. 
+
+Now for some samples
+
+<pre>
+class Foo {
+	public void do() {}
+	protected void wah() {}
+	void dee() {}
+	private void dubidam() {}
+}
+class Goo extends Foo {   
+	protected void do() {}
+	public void wah() {}
+	private void dee() {}
+	void dubidam() {}
+}
+</pre>
+<div id="cap">Overriding and Accessibility</div>
+
+In Goo, *protected void do()* will fail because *do()* in Foo is defined as public. Nothing can be less restrictive than public access, so Goo needs to declare *do()* as public.  
+
+The method *public void wah()* in Goo is okay because public is less restrictive than *protected void wah()* in Foo.
+
+The method *private void wah()* in Goo will will fail because private is more restrictive than protected, *wah()* is protected in the Super class Foo.
+
+Method *dee()* in Goo will also fail because it private in Goo. Private is more restrictive than package access, which is how *dee()* is declared in Super class Foo.
+
+The method *void dubidam()* in Goo will not fail because it is not an override at all. A method declared as private cannot be inherited, and hence cannot be overridden. The *dubidam()* method of Goo is simply a declaration of a new method unique to to class Goo, it is NOT a polymorphic method.
+
+***
+
+## POLYMORPHISM AND EXCEPTIONS
+
+When you override methods that *throw* exceptions you need to remember that *Exceptions* are part of the method signature which means that your new method has to throw whatever the super class method was throwing.
+
+<pre>
+import java.io.IOException;
+import java.sql.SQLException;
+
+class Base {
+	void doSomething() throws IOException, 
+			ClassNotFoundException, 
+			SQLException {
+		
+	}
+}
+class Child extends Base {
+	@Override
+	void doSomething() throws IOException, SQLException {
+	}
+}
+</pre>
+
+Your new method can throw less of those exceptions but it cannot throw more.
+
+
+<hr class="chapterbreak"/>
+
+
 
 <h1 class="chapter">BIBLIOGRAPHY</h1>
 
