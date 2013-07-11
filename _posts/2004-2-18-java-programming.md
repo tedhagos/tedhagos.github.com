@@ -1951,7 +1951,7 @@ When you inherit a behaviour and then *reimplement* that behaviour on a sub clas
 
 If you can remember the idea and mechanics behind the Employee sample code above, you would already be okay and you can already accomplish a lot of things in Java. Lets stretch our understanding of polymorphism and the Java type system a little bit more. Consider the revised version of the Employee program.
 
-\begin{lstlisting}[caption="Revised Employee code"]
+<pre>
 class Employee {
 	
 	void work() {
@@ -1976,15 +1976,17 @@ class TestEmployee {
 		p.work();
 	}
 }
-\end{lstlisting}
 
-Two things have changed in this revised version of the Employee program. The **@Override** annotation was used and the line \highlight{Employee p = new Programmer()}
+</pre>
+<div id="cap">Overriding Example</div>
 
-@Override is an annotation. Annotations are tags that you insert into your source code so that either the Java compiler or any other tool can use it for further processing. The tags can be processed at the source file level or it can be included in the resulting class files. \cite{corejava2}
+There are two new things in the sample code above. One is the *@Override* annotation and the other is this code <code class="codeblock">Employee p = new Programmer()</code>. 
 
-The *@Override* is optional, our previous code did accomplish the override without the annotation but don't be too quick to dismiss it. That is not just decoration. It gives some extra capabilities to the compiler. 
+*@Override* is an annotation. They are tags that you insert in you code  so that the Java compiler or any other tool can use it for further processing. These tags can be processed at the source file level or it can be included in the resultant byte code.
 
-The @Override annotation enables the compiler to check whether you are actually overriding the *work()* method of the Employee class inside the Programmer class. If there was no *work()* method defined in Employee, you will encounter a compilation error. Using the annotation helps you enforce your intent for a method to be truly polymorphic. If you doubt it, just play around with code and remove the *work()* method on the Employee class, then recompile and see what happens. 
+The *@Override* is optional though, our previous code did accomplish the override without the annotation but don't be too quick to dismiss it. That is not just decoration. It gives some extra capabilities to the compiler. 
+
+This annotation enables the compiler to check whether you are actually overriding the *work()* method of the Employee class inside the Programmer class. If there was no *work()* method defined in Employee, you will encounter a compilation error. Using the annotation helps you enforce your intent for a method to be truly polymorphic. If you doubt it, just play around with code and remove the *work()* method on the Employee class, then recompile and see what happens. 
 
 The other change is this is code <code class="codeblock">Employee p = new Programmer()</code>. It might seem weird at first but it gives you hint of the Java Type System was designed.
 
