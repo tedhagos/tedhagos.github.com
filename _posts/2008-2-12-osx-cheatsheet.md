@@ -15,7 +15,7 @@ categories:
 
 ---
 
-**1. SHOW THE ROUTING TABLE**. <span class="codeblock">route print</span> won't work, try <code class="codeblock">netstat -nr</code>
+**1. SHOW THE ROUTING TABLE**. <code class="codeblock">route print</code> won't work, try <code class="codeblock">netstat -nr</code>
 
 <hr/>
 
