@@ -62,13 +62,14 @@ strong {
 }
 
 #articletitle {
-	font-family: 'Tauri', Arial;
+	font-family: 'Tauri',Arial;
+  font-size: 40px;
 	font-size: 50px;
   color: #7C7C7C;
 	font-weight: normal;
 	margin-top: 0px;
 	margin-bottom:0;
-  letter-spacing: -.5px;
+  letter-spacing: -2px;
   text-align: center;
 	/*color: #002346;*/
 	/*color: #6F0000;*/
@@ -156,8 +157,8 @@ footer {
 }
 
 .content-meta {
-  font-family: Arial;
-	font-style: normal;
+  font-family: Georgia;
+	font-style: oblique;
   color: #686868;
   /*color: #681a1a;*/
 	margin-top:0;
@@ -334,10 +335,13 @@ pre {
 
 <p>On a Debian VM or Debian-ish machines, it can be pulled from the repos</p>
 
-<div class="highlight"><pre><code class="bash">sudo add-apt-repository ppa:webupd8team/java
+<pre>
+
+sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
-</code></pre></div>
+
+</pre>
 
 
 <p>The Windows installation should be easy to figure out, there is no need to write it here.</p>
@@ -351,9 +355,12 @@ sudo apt-get install oracle-java8-installer
 </ol>
 
 
-<div class="highlight"><pre><code class="bash">sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
+<pre>
+
+sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
 sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
-</code></pre></div>
+
+</pre>
 
 
 <p>I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9</p>

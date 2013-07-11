@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-10T23:50:18+08:00</updated>
+ <updated>2013-07-11T13:08:12+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -69,10 +69,13 @@
 
 &lt;p&gt;On a Debian VM or Debian-ish machines, it can be pulled from the repos&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo add-apt-repository ppa:webupd8team/java
+&lt;pre&gt;
+
+sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/pre&gt;
 
 
 &lt;p&gt;The Windows installation should be easy to figure out, there is no need to write it here.&lt;/p&gt;
@@ -86,9 +89,12 @@ sudo apt-get install oracle-java8-installer
 &lt;/ol&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
+&lt;pre&gt;
+
+sudo ln -s /somewhere/jdk8/bin/java /usr/bin/java8
 sudo ln -s /somewhere/jdk8/bin/javac /usr/bin/javac8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/pre&gt;
 
 
 &lt;p&gt;I hope some people in the community will already invest sometime on something like rvm for Java, so I won't have to do this with Java 9&lt;/p&gt;
@@ -940,7 +946,7 @@ android create project
    <link href="http://tedhagos.com /osx-cheatsheet"/>
    <updated>2008-02-12T00:00:00+08:00</updated>
    <id>http://tedhagos.com /osx-cheatsheet</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;1. SHOW THE ROUTING TABLE&lt;/strong&gt;. &lt;span class=&quot;codeblock&quot;&gt;route print&lt;/span&gt; won't work, try &lt;code class=&quot;codeblock&quot;&gt;netstat -nr&lt;/code&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;strong&gt;1. SHOW THE ROUTING TABLE&lt;/strong&gt;. &lt;code class=&quot;codeblock&quot;&gt;route print&lt;/code&gt; won't work, try &lt;code class=&quot;codeblock&quot;&gt;netstat -nr&lt;/code&gt;&lt;/p&gt;
 
 &lt;hr/&gt;
 

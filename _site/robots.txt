@@ -1,15 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: http://tedhagos.com/sitemap.xml
-Sitemap: http://tedhagos.com/notes/sitemap.xml
-Sitemap: http://tedhagos.com/android/sitemap.xml
-Sitemap: http://tedhagos.com/misc/sitemap.xml
-Sitemap: http://tedhagos.com/python/sitemap.xml
-Sitemap: http://tedhagos.com/php/sitemap.xml
-Sitemap: http://tedhagos.com/.net/sitemap.xml
-Sitemap: http://tedhagos.com/wordpress/sitemap.xml
-Sitemap: http://tedhagos.com/html5/sitemap.xml
-Sitemap: http://tedhagos.com/java/sitemap.xml
-Sitemap: http://tedhagos.com/mactips/sitemap.xml
-Sitemap: http://tedhagos.com/csbis/sitemap.xml
-Sitemap: http://tedhagos.com/latex/sitemap.xml
+Allow: /
