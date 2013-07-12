@@ -27,7 +27,7 @@
 <meta name="description" content=""/>
 <meta charset="utf-8"/>
 
-<title>Presentation & Slides with Beamer class</title>
+<title>Common Java Programming Errors</title>
 
 
     <style>
@@ -323,296 +323,205 @@ pre {
     </div>
     
     <header>
-      <div id="articletitle">Presentation & Slides with Beamer class
+      <div id="articletitle">Common Java Programming Errors
       </div>
     </header>
     <div class='content-meta'>
-       Wednesday , February 13 , 2013
+       Thursday , August 26 , 2004
     </div>
     <article itemscope itemtype="http://schema.org/Article">
       <div id="post">
         <div itemprop='articleBody'>
-        <p><strong>1. BASIC STRUCTURE OF A PRESENTATION FILE</strong></p>
+        <h2>SEMICOLON</h2>
 
-<p>The whole presentation is inside <code class="codeblock">\begin{document} .. \end{document}</code> .Each slide is enclosed in <code class="codeblock">\begin{frame} \end{frame}</code>.</p>
+<p> A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.</p>
 
-<p>Sample document is shown below</p>
+<p>This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon.</p>
 
-<pre class="codeblock">
-%
-% sampledoc.latex
-%
-\documentclass{beamer}
-\begin{document}
+<hr />
 
-\begin{frame}
-\frametitle{First}
-\framesubtitle{the subtitle}
-% content
-\end{frame}
- 
-\begin{frame}
-\frametitle{Second}
-\framesubtitle{another subtitle}
-% content
-\end{frame}
+<h2>RUNNING THE BYTECODE</h2>
 
-\end{document}
+<p><code class="codeblock">java Hello.class</code> is not the proper way to run a byte code. You do not include the <em>.class</em> extension. You simply run it with <code class="codeblock">java Hello</code>.</p>
+
+<p>This error results in a <em>NoDefFoundException</em>. This error is thrown when you try to use a class file that does not exist &mdash; true enough, there is no <em>Hello.class</em> class, there is only the <em>Hello</em> class. Drop the extension of the filename when you want to run your program.</p>
+
+<hr />
+
+<h2>FORGETTING MAIN</h2>
+
+<pre>
+  class Hello {
+    
+  }
 </pre>
 
 
-<p>Compile the latex source. <code class="codeblock">xelatex &lt;filename.tex></code></p>
+<p>This class will compile but it will not run. If you try to run <code class="codeblock">java Hello</code>, you will get a <em>NoSuchMethodError main</em>.</p>
 
-<hr/>
+<p>The <em>main</em> function is not a requirement for compilation but a requirement for runtime. Not all of your classes will need a <em>main</em> but if you will run them on the command line, then they need a <em>main</em>.</p>
 
-
-<p><strong>2. TITLE PAGES</strong></p>
-
-<pre class="codeblock">
-\documentclass{beamer}
- \title[Title of Presentation]{Presentation title}
- \author{Ted Hagos}
- \institute[theLogBox]{theLogBox.com \\
- \medskip {\emph{ted@thelogbox.com}}}
-\date{\today}
-\begin{document}
-
-\begin{frame}
-\titlepage
-\end{frame}
-\begin{frame}
-\frametitle{First}
-\framesubtitle{the subtitle}
-% content
-\end{frame}
- 
-\begin{frame}
-\frametitle{Second}
-\framesubtitle{another subtitle}
-% content
-\end{frame}
-
-\end{document}
+<pre>
+  class Hello {
+    public static void main(String []args){
+    }
+  }
 </pre>
 
 
-<ol>
-<li>Build the title information before <code class="codeblock">\begin{document}</code></li>
-<li>Make the first frame as the title page by calling <code class="codeblock">\titlepage</code> on the first frame</li>
-</ol>
+<p>This code will both compile and run.</p>
 
+<hr />
 
-<hr/>
+<h2>SPELLING AND CASING</h2>
 
-
-<p><strong>3. INSERTING SOURCE CODES INTO SLIDES</strong></p>
+<p>Wrong spelling and type casing of the <em>main function</em>. It should be <code class="codeblock">public static void main(String args[])</code>.   Common variations of this mistake</p>
 
 <pre class="codeblock">
-\documentclass{beamer}
-\setbeamercovered{transparent}
-\usepackage{pxfonts}
-\usepackage{listings}
-\begin{document}
- 
-\lstset{language=java,
-        numbers=left,
-        numberstyle=\tiny,
-        showstringspaces=false,
-        frame=leftline,
-        tabs=2,
-        keywordstyle=\color{red}
-        }
- 
-\begin{frame}[fragile]
-\frametitle{\texttt{Hello.java}}
-\begin{semiverbatim}
+Main(String args[])
+Main()
+main(string args[])
+</pre>
+
+
+<hr />
+
+<h2>CURLY BRACES</h2>
+
+<p>Methods, Classes and Interfaces always will contain <em>blocks</em>, these blocks. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.</p>
+
+<p>This can be solved by practice and convention. If you use the <em>K &amp; R</em> way of french bracketing, then stick to it. Don't mix and match <em>C++ style</em>  with K &amp; R.</p>
+
+<pre>
   
-\begin{lstlisting}
-class Hello {
-  public static void main(String args[]) {
+      class Hello { // opening brace is here
+
+      }
+      
+</pre>
+
+
+<div id="cap">K & R bracket</div>
+
+
+
+
+<pre>
   
+      class Hello 
+      { // opening brace is here
+
+      }
+
+</pre>
+
+
+<div id="cap">C++ style</div>
+
+
+<p>You can also move away from this problem quite easily by using a real programmer's editor. One that has facility to visually inspect paired curly braces and preferably one with <em>code folding</em> abilities.</p>
+
+<p>Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. period.</p>
+
+<hr />
+
+<h2>OBJECT COMPARISSON</h2>
+
+<pre>
+class CompEqual {
+  public static void main (String[] args) {
+    String a = "Hello"; 
+    String b = "World";
+    String c = a + b;
+
+    System.out.println(c == (a + b)); // false
+    System.out.println(c.equals(a + b)); // true
   }
 }
-\end{lstlisting}
-\end{semiverbatim}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Second frame}
-\begin{semiverbatim}
-  
-\begin{lstlisting}
-class Hello {
-  public static void main(String args[]) {
-    System.out.println("Hello Java");
-  }
-}
-\end{lstlisting}
-\end{semiverbatim}
-\end{frame}
-
-\end{document}
 </pre>
 
 
-<ol>
-<li>Use the <em>listings</em> package</li>
-<li>Use the [fragile] option when defining the frame</li>
-<li>Enclose the source code inside <em>listings</em> environment nested inside a <em>semiverbatim</em> environment</li>
-</ol>
+<div id="cap">Object Comparisson</div>
 
 
-<hr/>
+<p>Use <em>==</em> to compare primitive values. These things are stored on the <em>stack</em>.</p>
 
+<p>When things are stored on the <em>heap</em> &mdash; all reference types are stored on the heap &mdash; use the <em>.equals()</em> method.</p>
 
-<p><strong>4. HOW TO SKIP</strong></p>
+<p>Remember that <em>variable a</em> does not really contain "Hello". The string "Hello" is stored somewhere on the heap. What <em>variable a</em> contains is the location of "Hello" in the heap. So when you compare <em>c == (a + b)</em> you are not comparing the string contents, you are comparing memory addresses.</p>
 
-<p>Use <code class="codeblock">\bigskip</code> to produce vertical whitespace. You can also use <code class="codeblock">\medskip</code>, it's like <code class="codeblock">\bigskip</code>, only, well, less</p>
+<hr />
 
-<hr/>
+<h2>ARRAY IS ZERO BASED</h2>
 
-
-<p><strong>5. INCLUDING BIBLIOGRAPHIES AND REFERENCES</strong></p>
-
-<pre class="codeblock">
-\documentclass{beamer}
-\setbeamercovered{transparent}
-\usepackage{pxfonts}
-\usepackage{listings}
-\begin{document}
-\lstset{language=java,
-        numbers=left,
-        numberstyle=\tiny,
-        showstringspaces=false,
-        frame=leftline,
-        tabs=8,
-        keywordstyle=\color{red}
-        }
- 
-\begin{frame}[fragile]
-\frametitle{\texttt{Hello.java}}
-\begin{semiverbatim}
-  
-\begin{lstlisting}
-class Hello {
-  public static void main(String args[]) {
-  
+<pre>
+class Arr {
+  public static void main (String[] args) {
+    String arr[] = {"Apple","Orange","Banana"};
+    for (int i =0; i <= arr.length ; i++ ){
+      System.out.print(arr[i]);
+    } 
   }
 }
-\end{lstlisting}
-\end{semiverbatim}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{A basic Java program}
-\framesubtitle{class and method structure}
-\bigskip
-
-The following code is the simplest java program you can 
-code and run. In the tradition of Hello World program of Kernighan 
-and Ritchie, here is the Hello World in Java. 
-
-\begin{semiverbatim}
-  
-\begin{lstlisting}
-class Hello {
-  public static void main(String args[]) {
-    System.out.println("Hello Java");
-  }
-}
-\end{lstlisting}
-\end{semiverbatim}
-\begin{enumerate}
-  \item start with a class
-  \item define methods inside a class
-
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Citations}
-\bigskip
-If you need to cite somebody, like this \cite {cite1} or quote somebody, use 
-the \\cite command, you need to define a bibliography somewhere. Also, you 
-will need to compile twice (use xelatex 2x) to produce the bibtex entries  
-\end{frame}
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99}
- \bibitem[The Java Programming Language, 1995]{cite1} James Gosling (1995)
- \newblock The Oak Programming Language.
- \newblock \emph{Sun Micro Papers} 
-\end{thebibliography}
-}
-\end{frame}
-
-\end{document}
 </pre>
 
 
-<ol>
-<li>The bibliography is usually the last frame</li>
-<li>Remember to run <code class="codeblock">xelatex</code> twice when you use <strong>bibitems</strong></li>
-</ol>
+<div id="cap">< is not the same as <=</div>
 
 
-<hr/>
+<p><code class="codeblock">arr.length</code> is = 3 but it doesn't mean that the last element's ordinal position is 3. The last element number is 2 because arrays start with 0 &mdash; <em>0 - Apple, 1 - Orange, 2 - Banana</em></p>
 
+<p>This results to an <em>ArrayIndexOutOfBounds</em> exception because the for loop is trying to access element number 3 of <em>arr</em>, which there is none, it is only up to element number 2.</p>
 
-<p><strong>HOW TO USE PANDOC WITH THE BEAMER CLASS</strong></p>
+<p>The for loop above should have been written as <code class="codeblock">for(int i =0; i &lt; arr.length)</code> or <code class="codeblock">for(int i =0; i &lt;= arr.length - 1)</code></p>
 
-<p>You can create beamer slides also using <a href="http://daringfireball.net/projects/markdown/"><strong>Markdown</strong></a> and <a href="http://johnmacfarlane.net/pandoc/"><strong>Pandoc</strong></a>. Say that the following text is written on the file <em>sample-markdown.md</em></p>
+<hr />
 
-<pre class="codeblock">
-% A simple, no-nonsense presentation
-% Ted Hagos
-% February 13, 2013 
+<h2>EMPTY CATCH BLOCKS</h2>
 
-# Part 1
-
-## Title of frame 1
-- One is
-- followed by 2
-
-## and frame 2
-- then three
-- after three is four
-
-# In the evening
-
-## this is frame 3
-- five, and
-- finally six
-
-# Part 2
-
-## frame 4
-  - you know
-  - the drill
-
-## frame 5
+<pre>
+try {
+    DriverManager.getConnection();
+    // some other statements here
+}
+catch(Exception e) {
+    // NOTHING, ZILCH
+}
 </pre>
 
 
-<p>Compile the the markdown file <code class="codeblock">pandoc -t beamer sample-markdown.md -o sample-markdown.pdf </code></p>
+<p>This is just plain laziness. You think you will have time to get around putting an actual handler later on? What happens when you  get so involved and immersed on other parts of the code. When your 50 liner code turns to 500, this will be very difficult to spot.</p>
 
-<hr/>
+<p>When an actual error happens, the <em>catch</em> block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down.</p>
+
+<p>As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.</p>
+
+<hr />
+
+<h2>TOO GENERIC EXCEPTION</h2>
+
+<pre>
+try {
+    Class.forName();
+    DriverManager.getConnection();
+}
+catch(Exception e) {
+    // SOME ERROR HANDLING CODES HERE
+}
+</pre>
 
 
-<p><strong>REFERENCES</strong></p>
+<div id="cap"></div>
 
-<ol>
-<li><a href="http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc.html">John Mcfarlane</a> - Using pandoc with the beamer class</li>
-<li><a href="http://www.tex.ac.uk/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf">The beamer class</a> - PDF resources</li>
-</ol>
 
+<p>Yeah, this would work. <em>Exception</em> is a very general class and all possible exceptions will be trapped by this one. Problem here is that when a SQLException occurs, do you think you can tell from the <em>Error Message</em> that is something related to SQL. You will just get a very generic notification. This is just slightly better than <em>empty catch blocks</em> &mdash; like I said &mdash; make the errors scream and shout. Really loudly.</p>
+
+<p>Use the specific exceptions for the catch blocks. If the code on the try block can throw SQLException and ClassCastException, then catch SQLException and ClassCastException. Not the generic <em>Exception</em> class.</p>
 
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        file: #latex  #slides  #beamer
+        file: #java  #programming  #errors
       </div>
     </article>
 

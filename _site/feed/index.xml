@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-12T12:23:40+08:00</updated>
+ <updated>2013-07-12T17:45:32+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -1801,6 +1801,199 @@ h1 {font-size: 110%;}
  </entry>
  
  <entry>
+   <title>Common Java Programming Errors</title>
+   <link href="http://tedhagos.com /common-errors-java-programming"/>
+   <updated>2004-08-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /common-errors-java-programming</id>
+   <content type="html">&lt;h2&gt;SEMICOLON&lt;/h2&gt;
+
+&lt;p&gt; A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.&lt;/p&gt;
+
+&lt;p&gt;This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;RUNNING THE BYTECODE&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;java Hello.class&lt;/code&gt; is not the proper way to run a byte code. You do not include the &lt;em&gt;.class&lt;/em&gt; extension. You simply run it with &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This error results in a &lt;em&gt;NoDefFoundException&lt;/em&gt;. This error is thrown when you try to use a class file that does not exist &amp;mdash; true enough, there is no &lt;em&gt;Hello.class&lt;/em&gt; class, there is only the &lt;em&gt;Hello&lt;/em&gt; class. Drop the extension of the filename when you want to run your program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;FORGETTING MAIN&lt;/h2&gt;
+
+&lt;pre&gt;
+  class Hello {
+    
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;This class will compile but it will not run. If you try to run &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;, you will get a &lt;em&gt;NoSuchMethodError main&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;main&lt;/em&gt; function is not a requirement for compilation but a requirement for runtime. Not all of your classes will need a &lt;em&gt;main&lt;/em&gt; but if you will run them on the command line, then they need a &lt;em&gt;main&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+  class Hello {
+    public static void main(String []args){
+    }
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;This code will both compile and run.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;SPELLING AND CASING&lt;/h2&gt;
+
+&lt;p&gt;Wrong spelling and type casing of the &lt;em&gt;main function&lt;/em&gt;. It should be &lt;code class=&quot;codeblock&quot;&gt;public static void main(String args[])&lt;/code&gt;.   Common variations of this mistake&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+Main(String args[])
+Main()
+main(string args[])
+&lt;/pre&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;CURLY BRACES&lt;/h2&gt;
+
+&lt;p&gt;Methods, Classes and Interfaces always will contain &lt;em&gt;blocks&lt;/em&gt;, these blocks. Blocks are made up of a pair of curly braces &amp;mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.&lt;/p&gt;
+
+&lt;p&gt;This can be solved by practice and convention. If you use the &lt;em&gt;K &amp;amp; R&lt;/em&gt; way of french bracketing, then stick to it. Don't mix and match &lt;em&gt;C++ style&lt;/em&gt;  with K &amp;amp; R.&lt;/p&gt;
+
+&lt;pre&gt;
+  
+      class Hello { // opening brace is here
+
+      }
+      
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;K &amp; R bracket&lt;/div&gt;
+
+
+
+
+&lt;pre&gt;
+  
+      class Hello 
+      { // opening brace is here
+
+      }
+
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;C++ style&lt;/div&gt;
+
+
+&lt;p&gt;You can also move away from this problem quite easily by using a real programmer's editor. One that has facility to visually inspect paired curly braces and preferably one with &lt;em&gt;code folding&lt;/em&gt; abilities.&lt;/p&gt;
+
+&lt;p&gt;Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. period.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;OBJECT COMPARISSON&lt;/h2&gt;
+
+&lt;pre&gt;
+class CompEqual {
+  public static void main (String[] args) {
+    String a = &quot;Hello&quot;; 
+    String b = &quot;World&quot;;
+    String c = a + b;
+
+    System.out.println(c == (a + b)); // false
+    System.out.println(c.equals(a + b)); // true
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Object Comparisson&lt;/div&gt;
+
+
+&lt;p&gt;Use &lt;em&gt;==&lt;/em&gt; to compare primitive values. These things are stored on the &lt;em&gt;stack&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;When things are stored on the &lt;em&gt;heap&lt;/em&gt; &amp;mdash; all reference types are stored on the heap &amp;mdash; use the &lt;em&gt;.equals()&lt;/em&gt; method.&lt;/p&gt;
+
+&lt;p&gt;Remember that &lt;em&gt;variable a&lt;/em&gt; does not really contain &quot;Hello&quot;. The string &quot;Hello&quot; is stored somewhere on the heap. What &lt;em&gt;variable a&lt;/em&gt; contains is the location of &quot;Hello&quot; in the heap. So when you compare &lt;em&gt;c == (a + b)&lt;/em&gt; you are not comparing the string contents, you are comparing memory addresses.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;ARRAY IS ZERO BASED&lt;/h2&gt;
+
+&lt;pre&gt;
+class Arr {
+  public static void main (String[] args) {
+    String arr[] = {&quot;Apple&quot;,&quot;Orange&quot;,&quot;Banana&quot;};
+    for (int i =0; i &lt;= arr.length ; i++ ){
+      System.out.print(arr[i]);
+    } 
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;&lt; is not the same as &lt;=&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;arr.length&lt;/code&gt; is = 3 but it doesn't mean that the last element's ordinal position is 3. The last element number is 2 because arrays start with 0 &amp;mdash; &lt;em&gt;0 - Apple, 1 - Orange, 2 - Banana&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This results to an &lt;em&gt;ArrayIndexOutOfBounds&lt;/em&gt; exception because the for loop is trying to access element number 3 of &lt;em&gt;arr&lt;/em&gt;, which there is none, it is only up to element number 2.&lt;/p&gt;
+
+&lt;p&gt;The for loop above should have been written as &lt;code class=&quot;codeblock&quot;&gt;for(int i =0; i &amp;lt; arr.length)&lt;/code&gt; or &lt;code class=&quot;codeblock&quot;&gt;for(int i =0; i &amp;lt;= arr.length - 1)&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;EMPTY CATCH BLOCKS&lt;/h2&gt;
+
+&lt;pre&gt;
+try {
+    DriverManager.getConnection();
+    // some other statements here
+}
+catch(Exception e) {
+    // NOTHING, ZILCH
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is just plain laziness. You think you will have time to get around putting an actual handler later on? What happens when you  get so involved and immersed on other parts of the code. When your 50 liner code turns to 500, this will be very difficult to spot.&lt;/p&gt;
+
+&lt;p&gt;When an actual error happens, the &lt;em&gt;catch&lt;/em&gt; block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down.&lt;/p&gt;
+
+&lt;p&gt;As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;TOO GENERIC EXCEPTION&lt;/h2&gt;
+
+&lt;pre&gt;
+try {
+    Class.forName();
+    DriverManager.getConnection();
+}
+catch(Exception e) {
+    // SOME ERROR HANDLING CODES HERE
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Yeah, this would work. &lt;em&gt;Exception&lt;/em&gt; is a very general class and all possible exceptions will be trapped by this one. Problem here is that when a SQLException occurs, do you think you can tell from the &lt;em&gt;Error Message&lt;/em&gt; that is something related to SQL. You will just get a very generic notification. This is just slightly better than &lt;em&gt;empty catch blocks&lt;/em&gt; &amp;mdash; like I said &amp;mdash; make the errors scream and shout. Really loudly.&lt;/p&gt;
+
+&lt;p&gt;Use the specific exceptions for the catch blocks. If the code on the try block can throw SQLException and ClassCastException, then catch SQLException and ClassCastException. Not the generic &lt;em&gt;Exception&lt;/em&gt; class.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Java Programming</title>
    <link href="http://tedhagos.com /java-programming"/>
    <updated>2004-02-18T00:00:00+08:00</updated>
@@ -1863,6 +2056,11 @@ h1 {font-size: 110%;}
 &lt;p&gt;&lt;strong&gt;You cannot run .class files directly on top of your OS.&lt;/strong&gt; Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — &lt;code class=&quot;codeblock&quot;&gt;$ java executable_file&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;There are many kinds of Java programs. Some run on webservers (servlet &amp;amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &amp;mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/coding-process.png&quot;/&gt;&lt;/p&gt;
+
+&lt;div id=&quot;cap&quot;&gt;Coding Process&lt;/div&gt;
+
 
 &lt;p&gt;Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.&lt;/p&gt;
 

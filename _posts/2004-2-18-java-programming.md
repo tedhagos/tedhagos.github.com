@@ -60,6 +60,10 @@ A Java source file will bear the extension .java, no matter which platform you a
 
 There are many kinds of Java programs. Some run on webservers (servlet & JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.
 
+<img src="/img/coding-process.png"/>
+<div id="cap">Coding Process</div>
+
+
 Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.
 
 Create a file named Hello.java. For now, just copy the contents from the sample code below
