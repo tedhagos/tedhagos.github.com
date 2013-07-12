@@ -26,9 +26,6 @@ categories:
   </tr>
 </table>
 
-
-
-
 <h1 class="chapter">PRE-REQUISITE SKILLS</h1>
 
 The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP. 

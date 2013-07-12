@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-12T23:10:40+08:00</updated>
+ <updated>2013-07-12T23:55:34+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -61,7 +61,7 @@
  </entry>
  
  <entry>
-   <title>Getting into grips with Java 8</title>
+   <title>Getting into grips with Java8</title>
    <link href="http://tedhagos.com /java8-notes"/>
    <updated>2013-07-02T00:00:00+08:00</updated>
    <id>http://tedhagos.com /java8-notes</id>
@@ -1907,7 +1907,7 @@ main(string args[])
 
 &lt;p&gt;You can also move away from this problem quite easily by using a real programmer's editor. One that has facility to visually inspect paired curly braces and preferably one with &lt;em&gt;code folding&lt;/em&gt; abilities.&lt;/p&gt;
 
-&lt;p&gt;Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. period.&lt;/p&gt;
+&lt;p&gt;Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1978,7 +1978,7 @@ catch(Exception e) {
 
 &lt;p&gt;This is just plain laziness. You think you will have time to get around putting an actual handler later on? What happens when you  get so involved and immersed on other parts of the code. When your 50 liner code turns to 500, this will be very difficult to spot.&lt;/p&gt;
 
-&lt;p&gt;When an actual error happens, the &lt;em&gt;catch&lt;/em&gt; block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down.&lt;/p&gt;
+&lt;p&gt;When an actual error happens, the &lt;em&gt;catch&lt;/em&gt; block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down. Covered it up. Swept under the rug.&lt;/p&gt;
 
 &lt;p&gt;As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.&lt;/p&gt;
 

@@ -100,7 +100,7 @@ This can be solved by practice and convention. If you use the *K & R* way of fre
 
 You can also move away from this problem quite easily by using a real programmer's editor. One that has facility to visually inspect paired curly braces and preferably one with *code folding* abilities. 
 
-Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. period.
+Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.
 
 ***
 
@@ -165,7 +165,7 @@ catch(Exception e) {
 
 This is just plain laziness. You think you will have time to get around putting an actual handler later on? What happens when you  get so involved and immersed on other parts of the code. When your 50 liner code turns to 500, this will be very difficult to spot. 
 
-When an actual error happens, the *catch* block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down. 
+When an actual error happens, the *catch* block will activate and guess what happens. Nothing. Zilch. The error is suppressed. You sunk it down. Covered it up. Swept under the rug.
 
 As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.
 
