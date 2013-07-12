@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-11T13:08:12+08:00</updated>
+ <updated>2013-07-12T11:21:58+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -3872,6 +3872,204 @@ public class GoodSingleton {
 &lt;p&gt;On some rare occasions, a constructor is defined as &lt;em&gt;private&lt;/em&gt;. This effectively prevents anybody from creating an instance of the class and implicitly, it makes the class a &lt;em&gt;final&lt;/em&gt; one because it also cannot be extended anymore.&lt;/p&gt;
 
 &lt;p&gt;One of the prevailing reasoning for making a private constructor is to achieve a &lt;a href=&quot;http://en.wikipedia.org/wiki/Singleton_pattern&quot;&gt;Singleton&lt;/a&gt; effect. By preventing &lt;em&gt;new&lt;/em&gt; keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to &lt;em&gt;count&lt;/em&gt; the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book &lt;a href=&quot;http://en.wikipedia.org/wiki/Design_Patterns&quot;&gt;Design Patterns, Elements of Reusable code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;METHOD OVERLOADING&lt;/h1&gt;
+
+
+&lt;p&gt;Overloading means you can define a method more than once. For example, you can write the &lt;em&gt;add()&lt;/em&gt; method four times within the same class. One to add integers, another for double another for long etc. You do need to make the methods distinguishable from one another &amp;mdash; but how can we distinguish one from another if they are identical? To answer that, we need an example&lt;/p&gt;
+
+&lt;pre&gt;
+int add(int i, int j){return i + j;}
+long add(long i, long j){return i + j;}
+float add(float i, float j){return i + j;}
+double add(double i, double j){return i + j;}
+&lt;/pre&gt;
+
+
+&lt;p&gt;The four methods above have exactly the same name, &lt;em&gt;add&lt;/em&gt; but the method signatures are not identical. The return type, the name of the method and the parameters it accepts constitutes the &lt;em&gt;method signature&lt;/em&gt;. In the sample code, only their names are identical. This is how you provide distinction for overloaded methods. This is how to make the Java methods &lt;em&gt;parametrically polymorphic&lt;/em&gt;. Note that this is different from polymorphism where inheritance is involved.&lt;/p&gt;
+
+&lt;h2&gt;EXAMPLE OF A BAD OVERLOAD&lt;/h2&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+void addTwoNumbers(float x,float y) {}
+void addTwoNumbers(float a,float b) {}
+&lt;/pre&gt;
+
+
+&lt;p&gt;The two methods above are identical. Changing the names of parameter does not make them distinct. Had you changed the type of the parameters, that would have been a valid overload.&lt;/p&gt;
+
+&lt;p&gt;You can use overloading to deal with situations where the method needs to respond to a variety of inputs, e.g. one method will deal with floats and the other will deal with integers&lt;/p&gt;
+
+&lt;hr class=&quot;chapterbreak&quot;/&gt;
+
+
+
+
+&lt;h1 class=&quot;chapter&quot;&gt;OVERRIDING, BEING POLYMORPHIC&lt;/h1&gt;
+
+
+&lt;p&gt;The mechanics of &lt;em&gt;overriding&lt;/em&gt; is easy enough. We can simply study a code sample and I will point out what is considered valid and not valid in code. Somehow I don't think the code mechanics is the reason why polymorphism is poorly understood. This is a matter of the &lt;em&gt;why&lt;/em&gt; and not the &lt;em&gt;how&lt;/em&gt;. But anyway, lets study a code sample.&lt;/p&gt;
+
+&lt;pre&gt;
+class Employee {
+    void work() {
+        System.out.println(&quot;I am working&quot;);
+    }
+}
+class Programmer extends Employee {
+    void work() {
+        System.out.println(&quot;I am programming&quot;);
+    }
+}
+class TestEmployee {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        Programmer p = new Programmer();
+        
+        e.work();
+        p.work();
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;A polymorphic Employee&lt;/div&gt;
+
+
+&lt;p&gt;The example shows that &lt;em&gt;Programmer&lt;/em&gt; is a specific kind of &lt;em&gt;Employee&lt;/em&gt;. There could be other kinds of Employees but this is enough to illustrate the point.&lt;/p&gt;
+
+&lt;p&gt;If a programmer &lt;em&gt;is a kind of&lt;/em&gt; employee, then we expect the programmer to have the basic behaviour of an employee &amp;mdash; for example, you expect an employee to work, so you can expect a programmer to work as well. The work behaviour of all employees are not identical though. Some employees program (write codes), some of them do recruitment, some do the selling etc. This is the reason why you may need to provide specific behaviour to a specific object. A programmer is a specific kind of employee, therefore its &lt;em&gt;work&lt;/em&gt; behaviour or work details will be different from that of other employees.&lt;/p&gt;
+
+&lt;p&gt;When you inherit a behaviour and then &lt;em&gt;reimplement&lt;/em&gt; that behaviour on a sub class, that makes the behaviour &lt;em&gt;polymorphic&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;POLYMORPHISM AND THE TYPE SYSTEM&lt;/h2&gt;
+
+&lt;p&gt;If you can remember the idea and mechanics behind the Employee sample code above, you would already be okay and you can already accomplish a lot of things in Java. Lets stretch our understanding of polymorphism and the Java type system a little bit more. Consider the revised version of the Employee program.&lt;/p&gt;
+
+&lt;pre&gt;
+class Employee {
+    
+    void work() {
+        System.out.println(&quot;I am working&quot;);
+    }
+}
+
+class Programmer extends Employee {
+    
+    @Override
+    void work() {
+        System.out.println(&quot;I am programming&quot;);
+    }
+}
+
+class TestEmployee {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        Employee p = new Programmer();
+        
+        e.work();
+        p.work();
+    }
+}
+
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Overriding Example&lt;/div&gt;
+
+
+&lt;p&gt;There are two new things in the sample code above. One is the &lt;em&gt;@Override&lt;/em&gt; annotation and the other is this code &lt;code class=&quot;codeblock&quot;&gt;Employee p = new Programmer()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;@Override&lt;/em&gt; is an annotation. They are tags that you insert in you code  so that the Java compiler or any other tool can use it for further processing. These tags can be processed at the source file level or it can be included in the resultant byte code.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;@Override&lt;/em&gt; is optional though, our previous code did accomplish the override without the annotation but don't be too quick to dismiss it. That is not just decoration. It gives some extra capabilities to the compiler.&lt;/p&gt;
+
+&lt;p&gt;This annotation enables the compiler to check whether you are actually overriding the &lt;em&gt;work()&lt;/em&gt; method of the Employee class inside the Programmer class. If there was no &lt;em&gt;work()&lt;/em&gt; method defined in Employee, you will encounter a compilation error. Using the annotation helps you enforce your intent for a method to be truly polymorphic. If you doubt it, just play around with code and remove the &lt;em&gt;work()&lt;/em&gt; method on the Employee class, then recompile and see what happens.&lt;/p&gt;
+
+&lt;p&gt;The other change is this is code &lt;code class=&quot;codeblock&quot;&gt;Employee p = new Programmer()&lt;/code&gt;. It might seem weird at first but it gives you hint of the Java Type System was designed.&lt;/p&gt;
+
+&lt;p&gt;We declared the object reference &lt;em&gt;p&lt;/em&gt; to be of type &lt;em&gt;Employee&lt;/em&gt; but we did not create an instance of Employee, instead we assigned &lt;em&gt;p&lt;/em&gt; an instance of &lt;em&gt;Programmer&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Java does not require us to fill up an Employee type with an actual Employee object. It only requires that we fill up the Employee type (variable &lt;em&gt;p&lt;/em&gt;) with an object that is &lt;em&gt;at least&lt;/em&gt; an Employee type. Of course class Programmer contains an employee type because it extends Employee, it is &lt;em&gt;a kind of&lt;/em&gt; Employee. You could add more types to the class Programmer via interface inheritance and, still our code will be perfectly legal.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;POLYMORPHISM AND ACCCESSIBILITY&lt;/h2&gt;
+
+&lt;p&gt;When you override a method, make sure that you don't make the new method more RESTRICTIVE than the one in the super class.&lt;/p&gt;
+
+&lt;p&gt;When you override a &lt;em&gt;public&lt;/em&gt; method, you have to make your new method public as well because nothing can be less restrictive than public.&lt;/p&gt;
+
+&lt;p&gt;When you override a &lt;em&gt;protected&lt;/em&gt; method, you can only make it either a &lt;em&gt;public&lt;/em&gt; or a &lt;em&gt;protected&lt;/em&gt; method as well. Making the new method &lt;em&gt;protected&lt;/em&gt; does not make it less restrictive than the one in the superclass, it makes it equally restrictive, not less.&lt;/p&gt;
+
+&lt;p&gt;When you override a &lt;em&gt;package access&lt;/em&gt; method, you have a choice to make the new method either &lt;em&gt;public, protected or default access&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lastly when you override a &lt;em&gt;private&lt;/em&gt; method you have a choice to make it either public, protected or package access &amp;mdash; did that get pass by you? Didn't I say that private members cannot be inherited. If they can't be inherited, how can they be overriden? Gotcha. You got to pay attention to these things. You  CANNOT override private methods because you cannot inherit them to begin with.&lt;/p&gt;
+
+&lt;p&gt;Now for some samples&lt;/p&gt;
+
+&lt;pre&gt;
+class Foo {
+    public void do() {}
+    protected void wah() {}
+    void dee() {}
+    private void dubidam() {}
+}
+class Goo extends Foo {   
+    protected void do() {}
+    public void wah() {}
+    private void dee() {}
+    void dubidam() {}
+}
+&lt;/pre&gt;
+
+
+&lt;div id=&quot;cap&quot;&gt;Overriding and Accessibility&lt;/div&gt;
+
+
+&lt;p&gt;In Goo, &lt;em&gt;protected void do()&lt;/em&gt; will fail because &lt;em&gt;do()&lt;/em&gt; in Foo is defined as public. Nothing can be less restrictive than public access, so Goo needs to declare &lt;em&gt;do()&lt;/em&gt; as public.&lt;/p&gt;
+
+&lt;p&gt;The method &lt;em&gt;public void wah()&lt;/em&gt; in Goo is okay because public is less restrictive than &lt;em&gt;protected void wah()&lt;/em&gt; in Foo.&lt;/p&gt;
+
+&lt;p&gt;The method &lt;em&gt;private void wah()&lt;/em&gt; in Goo will will fail because private is more restrictive than protected, &lt;em&gt;wah()&lt;/em&gt; is protected in the Super class Foo.&lt;/p&gt;
+
+&lt;p&gt;Method &lt;em&gt;dee()&lt;/em&gt; in Goo will also fail because it private in Goo. Private is more restrictive than package access, which is how &lt;em&gt;dee()&lt;/em&gt; is declared in Super class Foo.&lt;/p&gt;
+
+&lt;p&gt;The method &lt;em&gt;void dubidam()&lt;/em&gt; in Goo will not fail because it is not an override at all. A method declared as private cannot be inherited, and hence cannot be overridden. The &lt;em&gt;dubidam()&lt;/em&gt; method of Goo is simply a declaration of a new method unique to to class Goo, it is NOT a polymorphic method.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;POLYMORPHISM AND EXCEPTIONS&lt;/h2&gt;
+
+&lt;p&gt;When you override methods that &lt;em&gt;throw&lt;/em&gt; exceptions you need to remember that &lt;em&gt;Exceptions&lt;/em&gt; are part of the method signature which means that your new method has to throw whatever the super class method was throwing.&lt;/p&gt;
+
+&lt;pre&gt;
+import java.io.IOException;
+import java.sql.SQLException;
+
+class Base {
+    void doSomething() throws IOException, 
+            ClassNotFoundException, 
+            SQLException {
+        
+    }
+}
+class Child extends Base {
+    @Override
+    void doSomething() throws IOException, SQLException {
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Your new method can throw less of those exceptions but it cannot throw more.&lt;/p&gt;
 
 &lt;hr class=&quot;chapterbreak&quot;/&gt;
 

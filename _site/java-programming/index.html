@@ -65,7 +65,7 @@ strong {
 	font-family: 'Tauri',Arial;
   font-size: 40px;
 	font-size: 50px;
-  color: #7C7C7C;
+  color: #686868;
 	font-weight: normal;
 	margin-top: 0px;
 	margin-bottom:0;
@@ -158,7 +158,7 @@ footer {
 
 .content-meta {
   font-family: Georgia;
-	font-style: oblique;
+	font-style: normal;
   color: #686868;
   /*color: #681a1a;*/
 	margin-top:0;
@@ -243,7 +243,7 @@ a:link, a:visited { color: #B10000; }
   }
   #postdate #yeardiv {
     font-size: 30px;
-    color: #CACACA;
+    color: #a3a3a3;
   }
 
 #postcontent {
@@ -257,7 +257,7 @@ a:link, a:visited { color: #B10000; }
     font-size: 25px;
     letter-spacing: -0.90px;
     /*color: #003D82;*/
-    color: #7c7c7c;
+    color: #545454;
     font-weight:normal;
     text-decoration: none;
   }
@@ -2398,6 +2398,204 @@ public class GoodSingleton {
 <p>On some rare occasions, a constructor is defined as <em>private</em>. This effectively prevents anybody from creating an instance of the class and implicitly, it makes the class a <em>final</em> one because it also cannot be extended anymore.</p>
 
 <p>One of the prevailing reasoning for making a private constructor is to achieve a <a href="http://en.wikipedia.org/wiki/Singleton_pattern">Singleton</a> effect. By preventing <em>new</em> keyword from creating objects, you need to devise a way to create objects other than calling the constructor. Presumably this other way of creating the object involves a static method call that allows the programmer to <em>count</em> the number of instances of the object. The Singleton pattern has been popularised by GoF (Gang of Four)  in their book <a href="http://en.wikipedia.org/wiki/Design_Patterns">Design Patterns, Elements of Reusable code.</a></p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">METHOD OVERLOADING</h1>
+
+
+<p>Overloading means you can define a method more than once. For example, you can write the <em>add()</em> method four times within the same class. One to add integers, another for double another for long etc. You do need to make the methods distinguishable from one another &mdash; but how can we distinguish one from another if they are identical? To answer that, we need an example</p>
+
+<pre>
+int add(int i, int j){return i + j;}
+long add(long i, long j){return i + j;}
+float add(float i, float j){return i + j;}
+double add(double i, double j){return i + j;}
+</pre>
+
+
+<p>The four methods above have exactly the same name, <em>add</em> but the method signatures are not identical. The return type, the name of the method and the parameters it accepts constitutes the <em>method signature</em>. In the sample code, only their names are identical. This is how you provide distinction for overloaded methods. This is how to make the Java methods <em>parametrically polymorphic</em>. Note that this is different from polymorphism where inheritance is involved.</p>
+
+<h2>EXAMPLE OF A BAD OVERLOAD</h2>
+
+<pre class="codeblock">
+void addTwoNumbers(float x,float y) {}
+void addTwoNumbers(float a,float b) {}
+</pre>
+
+
+<p>The two methods above are identical. Changing the names of parameter does not make them distinct. Had you changed the type of the parameters, that would have been a valid overload.</p>
+
+<p>You can use overloading to deal with situations where the method needs to respond to a variety of inputs, e.g. one method will deal with floats and the other will deal with integers</p>
+
+<hr class="chapterbreak"/>
+
+
+
+
+<h1 class="chapter">OVERRIDING, BEING POLYMORPHIC</h1>
+
+
+<p>The mechanics of <em>overriding</em> is easy enough. We can simply study a code sample and I will point out what is considered valid and not valid in code. Somehow I don't think the code mechanics is the reason why polymorphism is poorly understood. This is a matter of the <em>why</em> and not the <em>how</em>. But anyway, lets study a code sample.</p>
+
+<pre>
+class Employee {
+    void work() {
+        System.out.println("I am working");
+    }
+}
+class Programmer extends Employee {
+    void work() {
+        System.out.println("I am programming");
+    }
+}
+class TestEmployee {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        Programmer p = new Programmer();
+        
+        e.work();
+        p.work();
+    }
+}
+</pre>
+
+
+<div id="cap">A polymorphic Employee</div>
+
+
+<p>The example shows that <em>Programmer</em> is a specific kind of <em>Employee</em>. There could be other kinds of Employees but this is enough to illustrate the point.</p>
+
+<p>If a programmer <em>is a kind of</em> employee, then we expect the programmer to have the basic behaviour of an employee &mdash; for example, you expect an employee to work, so you can expect a programmer to work as well. The work behaviour of all employees are not identical though. Some employees program (write codes), some of them do recruitment, some do the selling etc. This is the reason why you may need to provide specific behaviour to a specific object. A programmer is a specific kind of employee, therefore its <em>work</em> behaviour or work details will be different from that of other employees.</p>
+
+<p>When you inherit a behaviour and then <em>reimplement</em> that behaviour on a sub class, that makes the behaviour <em>polymorphic</em>.</p>
+
+<hr />
+
+<h2>POLYMORPHISM AND THE TYPE SYSTEM</h2>
+
+<p>If you can remember the idea and mechanics behind the Employee sample code above, you would already be okay and you can already accomplish a lot of things in Java. Lets stretch our understanding of polymorphism and the Java type system a little bit more. Consider the revised version of the Employee program.</p>
+
+<pre>
+class Employee {
+    
+    void work() {
+        System.out.println("I am working");
+    }
+}
+
+class Programmer extends Employee {
+    
+    @Override
+    void work() {
+        System.out.println("I am programming");
+    }
+}
+
+class TestEmployee {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        Employee p = new Programmer();
+        
+        e.work();
+        p.work();
+    }
+}
+
+</pre>
+
+
+<div id="cap">Overriding Example</div>
+
+
+<p>There are two new things in the sample code above. One is the <em>@Override</em> annotation and the other is this code <code class="codeblock">Employee p = new Programmer()</code>.</p>
+
+<p><em>@Override</em> is an annotation. They are tags that you insert in you code  so that the Java compiler or any other tool can use it for further processing. These tags can be processed at the source file level or it can be included in the resultant byte code.</p>
+
+<p>The <em>@Override</em> is optional though, our previous code did accomplish the override without the annotation but don't be too quick to dismiss it. That is not just decoration. It gives some extra capabilities to the compiler.</p>
+
+<p>This annotation enables the compiler to check whether you are actually overriding the <em>work()</em> method of the Employee class inside the Programmer class. If there was no <em>work()</em> method defined in Employee, you will encounter a compilation error. Using the annotation helps you enforce your intent for a method to be truly polymorphic. If you doubt it, just play around with code and remove the <em>work()</em> method on the Employee class, then recompile and see what happens.</p>
+
+<p>The other change is this is code <code class="codeblock">Employee p = new Programmer()</code>. It might seem weird at first but it gives you hint of the Java Type System was designed.</p>
+
+<p>We declared the object reference <em>p</em> to be of type <em>Employee</em> but we did not create an instance of Employee, instead we assigned <em>p</em> an instance of <em>Programmer</em>.</p>
+
+<p>Java does not require us to fill up an Employee type with an actual Employee object. It only requires that we fill up the Employee type (variable <em>p</em>) with an object that is <em>at least</em> an Employee type. Of course class Programmer contains an employee type because it extends Employee, it is <em>a kind of</em> Employee. You could add more types to the class Programmer via interface inheritance and, still our code will be perfectly legal.</p>
+
+<hr />
+
+<h2>POLYMORPHISM AND ACCCESSIBILITY</h2>
+
+<p>When you override a method, make sure that you don't make the new method more RESTRICTIVE than the one in the super class.</p>
+
+<p>When you override a <em>public</em> method, you have to make your new method public as well because nothing can be less restrictive than public.</p>
+
+<p>When you override a <em>protected</em> method, you can only make it either a <em>public</em> or a <em>protected</em> method as well. Making the new method <em>protected</em> does not make it less restrictive than the one in the superclass, it makes it equally restrictive, not less.</p>
+
+<p>When you override a <em>package access</em> method, you have a choice to make the new method either <em>public, protected or default access</em>.</p>
+
+<p>Lastly when you override a <em>private</em> method you have a choice to make it either public, protected or package access &mdash; did that get pass by you? Didn't I say that private members cannot be inherited. If they can't be inherited, how can they be overriden? Gotcha. You got to pay attention to these things. You  CANNOT override private methods because you cannot inherit them to begin with.</p>
+
+<p>Now for some samples</p>
+
+<pre>
+class Foo {
+    public void do() {}
+    protected void wah() {}
+    void dee() {}
+    private void dubidam() {}
+}
+class Goo extends Foo {   
+    protected void do() {}
+    public void wah() {}
+    private void dee() {}
+    void dubidam() {}
+}
+</pre>
+
+
+<div id="cap">Overriding and Accessibility</div>
+
+
+<p>In Goo, <em>protected void do()</em> will fail because <em>do()</em> in Foo is defined as public. Nothing can be less restrictive than public access, so Goo needs to declare <em>do()</em> as public.</p>
+
+<p>The method <em>public void wah()</em> in Goo is okay because public is less restrictive than <em>protected void wah()</em> in Foo.</p>
+
+<p>The method <em>private void wah()</em> in Goo will will fail because private is more restrictive than protected, <em>wah()</em> is protected in the Super class Foo.</p>
+
+<p>Method <em>dee()</em> in Goo will also fail because it private in Goo. Private is more restrictive than package access, which is how <em>dee()</em> is declared in Super class Foo.</p>
+
+<p>The method <em>void dubidam()</em> in Goo will not fail because it is not an override at all. A method declared as private cannot be inherited, and hence cannot be overridden. The <em>dubidam()</em> method of Goo is simply a declaration of a new method unique to to class Goo, it is NOT a polymorphic method.</p>
+
+<hr />
+
+<h2>POLYMORPHISM AND EXCEPTIONS</h2>
+
+<p>When you override methods that <em>throw</em> exceptions you need to remember that <em>Exceptions</em> are part of the method signature which means that your new method has to throw whatever the super class method was throwing.</p>
+
+<pre>
+import java.io.IOException;
+import java.sql.SQLException;
+
+class Base {
+    void doSomething() throws IOException, 
+            ClassNotFoundException, 
+            SQLException {
+        
+    }
+}
+class Child extends Base {
+    @Override
+    void doSomething() throws IOException, SQLException {
+    }
+}
+</pre>
+
+
+<p>Your new method can throw less of those exceptions but it cannot throw more.</p>
 
 <hr class="chapterbreak"/>
 
