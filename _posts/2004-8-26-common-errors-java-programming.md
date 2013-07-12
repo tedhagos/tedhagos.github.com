@@ -5,7 +5,7 @@ title: Common Java Programming Errors
 
 description: 
 
-excerpt: This should aide beginning programmers. I've compiled this list because I kept seeing them in my students over and over again. Encountering errors is part of the learning process. In fact, I think it is a critical part of that process. When our brains gets stumped, it seeks other ways of doing things. It tries out different things until it makes a break through &mdash; of course this was all before the forums became popular. Before (some)programmers turned from being creative creatures to freeloaders &mdash; CAN I HAS THE CODES; or can somebody tell me what is wrong with this code. It's a sad story.
+excerpt: This should aide beginning programmers. I've compiled this list because I kept seeing them in my students over and over again. Encountering errors is part of the learning process. In fact, I think it is a critical part of that process. When our brains gets stumped, it seeks other ways of doing things. It tries out different things until it makes a break through &mdash; of course this was all before the forums became popular. Before (some)programmers turned from being creative creatures to freeloaders &mdash; CAN I HAS THE CODES. It's a sad story.
 
 categories:
 - java
