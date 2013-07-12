@@ -20,7 +20,7 @@
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
@@ -63,14 +63,14 @@ strong {
 }
 
 #articletitle {
-	font-family: 'Tauri',Arial;
-  font-size: 40px;
-	font-size: 50px;
+	font-family: 'Droid Serif',Arial;
+  font-size: 65px;
   color: #686868;
 	font-weight: normal;
 	margin-top: 0px;
-	margin-bottom:0;
+	margin-bottom:5px;
   letter-spacing: -2px;
+  line-height: 90%;
   text-align: center;
 	/*color: #002346;*/
 	/*color: #6F0000;*/
@@ -86,23 +86,37 @@ strong {
   margin-bottom: 1em;
 }
 
-#blogtitle {
-  font-family: 'Tauri';
-  font-size: 50px;
-  color: #8C0000;
-  text-align: center;
-  margin-bottom: 10px;
-}
+#blogtitle {float:left;}
+#rightnav {float:right;}
+
   #blogtitle a:link, #blogtitle a:visited {
     font-family: 'Tauri';
-    font-size:50px;
+    font-size: 20px;
     text-decoration:none;
-    color: #8C0000;
-    border-bottom: 1px solid #8C0000;
+    color: #BBBBBB;
+    background: #f6f6f6;
   }
-    #blogtitle a:hover {
-      color: #FF0000;
-      border-bottom: 0px
+    #blogtitle a:hover{color: #b00000;}
+
+  #rightnav a:link, #rightnav a:visited {
+    font-family: 'Tauri';
+    font-size: 20px;
+    text-decoration:none;
+    color: #bbbbbb;
+    background: #f6f6f6;
+  }
+    #rightnav a:hover{color: #b00000;}
+
+    header {
+      display:block;
+      overflow:hidden;
+      opacity: 50%;
+    	border-bottom:1px solid #DEDEDE;
+    	height: 1em;
+    	padding-top:10px;
+    	padding-bottom:15px;
+      margin-bottom: 60px;
+      background: #f6f6f6;
     }
 
 
@@ -138,12 +152,18 @@ h1 {font-size: 170%; letter-spacing: -1px;}
   
 h2 {font-size: 150%; margin-bottom:0;}
 h3 {font-size: 130%; margin-bottom:0; color: #000000; }
+
+
 body {
-	width:90%;
-	margin: 0 auto;
-  margin-top:1em;
-	padding-top: 1em;
+  margin:0;
+  padding:0;
+  border:0;
+  width: 100%;
 }
+  #innerbody {
+	  width:85%;
+	  margin: 0 auto;
+  }
 
 footer {
   clear:both;
@@ -152,10 +172,22 @@ footer {
 	font-style:normal;
 	margin-top:1em;
 	margin-bottom: 1em;
-	padding-top: 2em;
+	padding-top: 1em;
 	border-top: 1px solid #DEDEDE;
   text-align: center;
+  text-decoration: none;
+  color: #bbbbbb;
+  background: #f6f6f6;
 }
+  
+  footer a:link, footer a:visited {
+    font-family: Arial;
+    font-size: 15px;
+    color: #bbbbbb;
+    background: #f6f6f6;
+    text-decoration: none;
+  }
+  footer a:hover {color: #b00000;}
 
 .content-meta {
   font-family: Georgia;
@@ -163,7 +195,7 @@ footer {
   color: #686868;
   /*color: #681a1a;*/
 	margin-top:0;
-	margin-bottom:2em;
+	margin-bottom:3em;
   margin-right: 30px;
   text-align: center;
 }
@@ -195,7 +227,7 @@ hr {
   hr.chapterbreak {
     color: #2d2d2d;
     background: #2d2d2d;
-    height: 10px;
+    height: 6px;
     margin-top: 40px;
   }
 
@@ -215,12 +247,7 @@ a:link, a:visited { color: #B10000; }
   text-align: center;
 }
 
-#articlelist {
-  width:800px;
-  position: relative;
-  left: 50%;
-  margin-left: -400px;   
-}
+
 
 #postentry {
   overflow:hidden;
@@ -229,6 +256,7 @@ a:link, a:visited { color: #B10000; }
   border-bottom: 0px dashed #D8C7CC;
   height: auto;
   padding: 10px;
+  width: 100%;
 }
 
 
@@ -249,9 +277,10 @@ a:link, a:visited { color: #B10000; }
 
 #postcontent {
   position:relative;
+  overflow:hidden;
   top: -11px;
   float:right;
-  width:675px;
+  width:85%;
 }
   #postcontent h2 a:link, #postcontent h2 a:visited {
     font-family: 'Tauri';
@@ -266,10 +295,33 @@ a:link, a:visited { color: #B10000; }
     color: #B10000;
   } 
 
-.vertical-space {
-  display: block;
-  height: 50px;
+table {
+  border: 1px solid #CACACA;
+  width: 100%;
+  border-collapse:collapse;
+  margin-bottom: 50px;
 }
+  table th {
+    font-family: 'Muli';
+    padding: 10px;
+    text-align: left;
+  }
+  table td {
+    min-width: 30px;
+    max-width: 500px;
+    border: 1px solid #CACACA;
+    padding: 10px;
+    font-family: 'Muli';
+    color: gray;
+  }
+  table td:first-child {
+    text-align: right;
+    width: auto;
+  }
+  table td:nth-child(2) {
+    text-align: center;
+  }
+  
 
 pre {
 
@@ -313,9 +365,8 @@ pre {
   </head>
 	
   <body>
-
-    <section>
-      <h1>COPYRIGHT & REPRINT</h1>
+      <section>
+        <h1>COPYRIGHT & REPRINT</h1>
 
 <p/>
 All articles and writings appearing on this website is copyright &copy; by Ted Hagos. All Rights Reserved.
@@ -328,8 +379,8 @@ All articles and writings appearing on this website is copyright &copy; by Ted H
 <strong>Electronic and Online reproduction.</strong> Ummm, I'm not entirely sure about this. I still have an idealistic view of intellectual properties and copyright. I think it's just easier for all of us to just use links &mdash; if you do however, really really need to reproduce anything you find in here, just <a href="mailto:ted@thelogbox.com">drop me note at ted {at} thelogbox {dot} com</a>. 
 
 
-    </section>
-    <!-- Start of StatCounter Code for Default Guide -->
+      </section>
+      <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=8602905; 
 var sc_invisible=0; 

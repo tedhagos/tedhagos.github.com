@@ -16,12 +16,20 @@ categories:
 
 ---
 
-# DOCUMENT HISTORY
 
-- Dec 18 2010 &mdash; Created
-- Jul 10 2013 &mdash; Reconstituted from my scattered notes
-
-<hr class="chapterbreak"/>
+<table>
+  <th colspan="3">DOCUMENT HISTORY</th>
+  <tr>
+    <td>18 Dec 2010</td>
+    <td>0.1</td>
+    <td>CREATED</td>
+  </tr>
+  <tr>
+    <td>10 Jun 2013</td>
+    <td>0.2</td>
+    <td>REVISED. Reconstituted all scattered notes. Updated notes for API level 17 </td>
+  </tr>
+</table>
 
 <h1 class="chapter">INTRODUCTION</h1>
 

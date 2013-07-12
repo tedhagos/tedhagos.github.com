@@ -12,19 +12,14 @@
 
   </head>
   <body>
+        
+    <header>{% include header.html%}</header>
     
-    
-    <div id="blogtitle">
-    <a href="/">TED'S NOTEBOOK</a>
+    <div id="innerbody">
+      
+    <div id="articletitle">{{ page.title }}
     </div>
     
-    <div class='vertical-space'>
-    </div>
-    
-    <header>
-      <div id="articletitle">{{ page.title }}
-      </div>
-    </header>
     <div class='content-meta'>
       {{ page.date | date: " %A , %B %d , %Y" }}
     </div>
@@ -41,11 +36,13 @@
 
     {% include statcounter.html %}
     {% include ga.html %}
-    {% include disqus.html %}
+
+    
+    </div> <!-- INNER BODY -->
         
     <footer>
-    {% include footer.html %}
-  </footer>
-  {% include ga.html %}
+      {% include footer.html %}
+    </footer>
+    {% include ga.html %}
   </body>
 </html>

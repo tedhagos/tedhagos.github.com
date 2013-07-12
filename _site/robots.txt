@@ -1,2 +1,5 @@
 User-agent: *
-DisAllow: /index.html
+Disallow: /index.html
+Disallow: /about.html
+Disallow: /tech-diet-confirmation.html
+Disallow: /tech-diet-thank-you.html

@@ -75,7 +75,7 @@ main(string args[])
 ## CURLY BRACES
 
 
-Methods, Classes and Interfaces always will contain *blocks*, these blocks. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.
+Methods, Classes and Interfaces always will contain *blocks*. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.
 
 This can be solved by practice and convention. If you use the *K & R* way of french bracketing, then stick to it. Don't mix and match *C++ style*  with K & R.
 

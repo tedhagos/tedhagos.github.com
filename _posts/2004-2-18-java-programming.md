@@ -11,13 +11,25 @@ categories:
 - core_programming
 ---
 
-# DOCUMENT HISTORY
+<table>
+  <th colspan="3">DOCUMENT HISTORY</th>
+  <tr>
+    <td>18 Feb 2004</td>
+    <td>0.1</td>
+    <td>CREATED</td>
+  </tr>
+  <tr>
+    <td>21 Oct 2007</td>
+    <td>0.2</td>
+    <td>REVISED. Covered Generics</td>
+  </tr>
+  <tr>
+    <td>12 Jun 2013</td>
+    <td>0.3</td>
+    <td>REVISED. Updated to Java 7</td>
+  </tr>
+</table>
 
-- Feb 18 2004 &mdash; created
-- Oct 21 2007 &mdash; Added section on Generics
-- Jun 12 2013 &mdash; re-written some examples to reflect Java 7 changes
-
-<hr class="chapterbreak"/>
 
 <h1 class="chapter">INTRODUCTION</h1>
 

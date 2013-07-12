@@ -12,10 +12,22 @@ categories:
 - cms
 ---
 
-# DOCUMENT HISTORY
+<table>
+  <th colspan="3">DOCUMENT HISTORY</th>
+  <tr>
+    <td>21 March 2007</td>
+    <td>0.1</td>
+    <td>CREATED</td>
+  </tr>
+  <tr>
+    <td>05 June 2010</td>
+    <td>0.2</td>
+    <td>REVISED. Tools and setup on OSX were included. Updated info for Wordpress 3.0 </td>
+  </tr>
+</table>
 
-- 21 Mar 2007 &mdash; created
-- 05 Jun 2010 &mdash; revised to reflect tools on OSX
+
+
 
 <h1 class="chapter">PRE-REQUISITE SKILLS</h1>
 

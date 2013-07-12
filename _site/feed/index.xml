@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-07-12T17:45:32+08:00</updated>
+ <updated>2013-07-12T23:10:40+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Two Factor Authentication for Web Apps</title>
+   <title>Poor Man's 2 Factor Auth</title>
    <link href="http://tedhagos.com /two-factor-auth-using-sms"/>
    <updated>2013-07-04T00:00:00+08:00</updated>
    <id>http://tedhagos.com /two-factor-auth-using-sms</id>
@@ -588,7 +588,7 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
    <link href="http://tedhagos.com /html5-canvas"/>
    <updated>2011-04-07T00:00:00+08:00</updated>
    <id>http://tedhagos.com /html5-canvas</id>
-   <content type="html">&lt;h1 class=&quot;chapter&quot;&gt;THE HTML5 CANVAS&lt;/h1&gt;
+   <content type="html">&lt;h1 class=&quot;chapter&quot;&gt;INTRODUCTION&lt;/h1&gt;
 
 
 &lt;p&gt;The canvas is a viewport. The DOM element &lt;code class=&quot;codeblock&quot;&gt;&amp;lt; canvas height=&quot;300&quot; width=&quot;300&quot; &amp;gt;&lt;/code&gt;, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel.&lt;/p&gt;
@@ -859,15 +859,19 @@ window.onload = function() {
    <link href="http://tedhagos.com /android-programming-notes"/>
    <updated>2010-12-18T00:00:00+08:00</updated>
    <id>http://tedhagos.com /android-programming-notes</id>
-   <content type="html">&lt;h1&gt;DOCUMENT HISTORY&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dec 18 2010 &amp;mdash; Created&lt;/li&gt;
-&lt;li&gt;Jul 10 2013 &amp;mdash; Reconstituted from my scattered notes&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;hr class=&quot;chapterbreak&quot;/&gt;
+   <content type="html">&lt;table&gt;
+  &lt;th colspan=&quot;3&quot;&gt;DOCUMENT HISTORY&lt;/th&gt;
+  &lt;tr&gt;
+    &lt;td&gt;18 Dec 2010&lt;/td&gt;
+    &lt;td&gt;0.1&lt;/td&gt;
+    &lt;td&gt;CREATED&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;10 Jun 2013&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+    &lt;td&gt;REVISED. Reconstituted all scattered notes. Updated notes for API level 17 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 
 
@@ -1280,12 +1284,21 @@ $ echo pbpaste
    <link href="http://tedhagos.com /wordpress-notes"/>
    <updated>2007-03-21T00:00:00+08:00</updated>
    <id>http://tedhagos.com /wordpress-notes</id>
-   <content type="html">&lt;h1&gt;DOCUMENT HISTORY&lt;/h1&gt;
+   <content type="html">&lt;table&gt;
+  &lt;th colspan=&quot;3&quot;&gt;DOCUMENT HISTORY&lt;/th&gt;
+  &lt;tr&gt;
+    &lt;td&gt;21 March 2007&lt;/td&gt;
+    &lt;td&gt;0.1&lt;/td&gt;
+    &lt;td&gt;CREATED&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;05 June 2010&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+    &lt;td&gt;REVISED. Tools and setup on OSX were included. Updated info for Wordpress 3.0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
-&lt;ul&gt;
-&lt;li&gt;21 Mar 2007 &amp;mdash; created&lt;/li&gt;
-&lt;li&gt;05 Jun 2010 &amp;mdash; revised to reflect tools on OSX&lt;/li&gt;
-&lt;/ul&gt;
+
 
 
 &lt;h1 class=&quot;chapter&quot;&gt;PRE-REQUISITE SKILLS&lt;/h1&gt;
@@ -1861,7 +1874,7 @@ main(string args[])
 
 &lt;h2&gt;CURLY BRACES&lt;/h2&gt;
 
-&lt;p&gt;Methods, Classes and Interfaces always will contain &lt;em&gt;blocks&lt;/em&gt;, these blocks. Blocks are made up of a pair of curly braces &amp;mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.&lt;/p&gt;
+&lt;p&gt;Methods, Classes and Interfaces always will contain &lt;em&gt;blocks&lt;/em&gt;. Blocks are made up of a pair of curly braces &amp;mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.&lt;/p&gt;
 
 &lt;p&gt;This can be solved by practice and convention. If you use the &lt;em&gt;K &amp;amp; R&lt;/em&gt; way of french bracketing, then stick to it. Don't mix and match &lt;em&gt;C++ style&lt;/em&gt;  with K &amp;amp; R.&lt;/p&gt;
 
@@ -1998,16 +2011,24 @@ catch(Exception e) {
    <link href="http://tedhagos.com /java-programming"/>
    <updated>2004-02-18T00:00:00+08:00</updated>
    <id>http://tedhagos.com /java-programming</id>
-   <content type="html">&lt;h1&gt;DOCUMENT HISTORY&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Feb 18 2004 &amp;mdash; created&lt;/li&gt;
-&lt;li&gt;Oct 21 2007 &amp;mdash; Added section on Generics&lt;/li&gt;
-&lt;li&gt;Jun 12 2013 &amp;mdash; re-written some examples to reflect Java 7 changes&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;hr class=&quot;chapterbreak&quot;/&gt;
+   <content type="html">&lt;table&gt;
+  &lt;th colspan=&quot;3&quot;&gt;DOCUMENT HISTORY&lt;/th&gt;
+  &lt;tr&gt;
+    &lt;td&gt;18 Feb 2004&lt;/td&gt;
+    &lt;td&gt;0.1&lt;/td&gt;
+    &lt;td&gt;CREATED&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;21 Oct 2007&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+    &lt;td&gt;REVISED. Covered Generics&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;12 Jun 2013&lt;/td&gt;
+    &lt;td&gt;0.3&lt;/td&gt;
+    &lt;td&gt;REVISED. Updated to Java 7&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 
 

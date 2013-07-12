@@ -5,30 +5,11 @@ description:
 
 ---
 
-<!--
-<div id="blogtitle">
-  <a href="/">tedhagos.com</a>
-</div>
--->
-<div class="content">
-
-  <!-- PARK THIS FOR NOW, you still need to get traction on TWTD
-  <div id="news">
-    <a href="#">What is this?</a>
-    <p/>
-    <a href="#">
-    <img src="http://img.thelogbox.com/twtd.png" height="190"style="margin-top:20px;"/>
-    </a>
-  </div>
-  -->
-  <div id="blogtitle">TED'S NOTEBOOK</div>  
+  <header>{% include header.html%}</header>
   
-    <div class='vertical-space'>
-    </div>
-  
-  <div id="articlelist">  
-	{% for post in site.posts %}
-  <div>
+  <div id="innerbody">
+    {% for post in site.posts %}
+    
     <div id="postentry">
 	    <div id="postdate">
         <div id="datediv">{{ post.date | date: "%b %d " }}</div>
@@ -48,13 +29,14 @@ description:
       </a>
     </div>
     </div>
+    {% endfor %}
   </div>
-	{% endfor %}
-  </div>
+  
 
-</div>
 <footer>
-	{% include footer.html %}
+  {% include footer.html %}
 </footer>
 {% include ga.html %}
+
+
 
