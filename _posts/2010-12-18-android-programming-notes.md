@@ -1,11 +1,12 @@
 ---
 layout: post
 
-title: 
+title: Android Programming
+subtitle: Technical notes on Android Programming
 
 description: 
 
-excerpt: These are my notes for android progrmaming. This is a not a tutorial, altough it may seem to be. They are closer to a cheat sheet rather than a detailed beginner's tutorial. These notes date back to late 2010 but they are updated from time to time. I could have missed some updates and you may still find some references to API level 6 (Eclair) &mdash; I'll get around to fixing those kinds of things when I get the time. 
+excerpt: These are my notes for android programming. This is a not a tutorial, altough it may seem to be. They are closer to a cheat sheet rather than a detailed beginner's tutorial. These notes date back to late 2010 but they are updated from time to time. I could have missed some updates and you may still find some references to API level 6 (Eclair) &mdash; I'll get around to fixing those kinds of things when I get the time. 
 
 categories: 
 - android

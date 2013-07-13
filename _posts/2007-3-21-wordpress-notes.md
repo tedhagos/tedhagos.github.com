@@ -1,6 +1,8 @@
 ---
 layout: post
+
 title: Wordpress notes
+subtitle: Technical notes on building a CMS with Wordpress
 
 description: my notes on how to build wordpress sites. use it as a cms. how to build themes. what skills you need for wordpress applications
 

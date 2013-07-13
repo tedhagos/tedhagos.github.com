@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java Programming
+subtitle: Technical Notes for the Java Programming Language
 
 excerpt: What follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.
 

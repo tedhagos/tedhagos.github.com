@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OSX Cheatsheet
+subtitle: Things I do on OSX but can't remember always
 
 excerpt: This is a growing list of things I do on OSX. They are on the list because I can't memorize them and they are not always easy to find *Googling*. These cheats range from networking to more elaborate setups
 

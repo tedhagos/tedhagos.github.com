@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Poor Man's 2 Factor Auth
+title: Two Factor Authentication
+subtitle: A poor man's approach for web applications
 
 excerpt: One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge.  
 

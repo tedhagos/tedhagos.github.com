@@ -2,6 +2,7 @@
 layout: post
 
 title: Common Java Programming Errors
+subtitle: The stupid things we did when we were noobs
 
 description: 
 

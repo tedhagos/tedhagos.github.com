@@ -2,6 +2,7 @@
 layout: post
 
 title: Presentation & Slides with Beamer class
+subtitle: Ref notes for LATEX and Beamer
 
 excerpt: My notes on using LATEX to author presentation slides. This note also contains instructions on how to use PANDOC as the main structure then use the beamer class to produce the PDF. Although, admittedly, Google Drive + Google Docs has overtaken this one. I don't use this as much now.
 

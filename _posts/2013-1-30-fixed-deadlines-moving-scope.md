@@ -2,6 +2,7 @@
 layout: post
 
 title: Of fixed Deadlines and Moving Scopes 
+subtitle: What you can do when things go South
 
 description: What will you do if the scope of a software project  cannot be pinned down and yet the deadline won't move
 

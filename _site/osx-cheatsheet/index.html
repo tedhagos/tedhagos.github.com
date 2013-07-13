@@ -62,6 +62,30 @@ strong {
   color: #000000;
 }
 
+hgroup h1 {
+	font-family: 'Droid Serif',Arial;
+  font-size: 65px;
+  color: #686868;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom:5px;
+  letter-spacing: -2px;
+  line-height: 90%;
+  text-align: center;
+}
+
+hgroup h2 {
+  font-family: Georgia;
+	font-style: oblique;
+  font-size: 17px;
+  color: #686868;
+  /*color: #681a1a;*/
+	margin-top:0;
+	margin-bottom:3em;
+  margin-right: 30px;
+  text-align: center;
+}
+
 #articletitle {
 	font-family: 'Droid Serif',Arial;
   font-size: 65px;
@@ -379,14 +403,24 @@ pre {
 </header>
     
     <div id="innerbody">
-      
+    
+    <!--
     <div id="articletitle">OSX Cheatsheet
     </div>
-    
+    -->
+          
+    <!--
     <div class='content-meta'>
        Tuesday , February 12 , 2008
     </div>
+    -->
     <article itemscope itemtype="http://schema.org/Article">
+
+      <hgroup>
+        <h1>OSX Cheatsheet</h1>
+        <h2>Things I do on OSX but can't remember always</h2>
+      </hgroup>
+      
       <div id="post">
         <div itemprop='articleBody'>
         <p><strong>1. SHOW THE ROUTING TABLE</strong>. <code class="codeblock">route print</code> won't work, try <code class="codeblock">netstat -nr</code></p>

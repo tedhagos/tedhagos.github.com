@@ -27,7 +27,7 @@
 <meta name="description" content="Two factor authentication using the cheap SMS mechanism. If you are looking for a poor-man's two factor auth, this might be your solution."/>
 <meta charset="utf-8"/>
 
-<title>Poor Man's 2 Factor Auth</title>
+<title>Two Factor Authentication</title>
 
 
     <style>
@@ -60,6 +60,30 @@ strong {
   font-family: Arial;
   font-weight:bold;
   color: #000000;
+}
+
+hgroup h1 {
+	font-family: 'Droid Serif',Arial;
+  font-size: 65px;
+  color: #686868;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom:5px;
+  letter-spacing: -2px;
+  line-height: 90%;
+  text-align: center;
+}
+
+hgroup h2 {
+  font-family: Georgia;
+	font-style: oblique;
+  font-size: 17px;
+  color: #686868;
+  /*color: #681a1a;*/
+	margin-top:0;
+	margin-bottom:3em;
+  margin-right: 30px;
+  text-align: center;
 }
 
 #articletitle {
@@ -379,14 +403,24 @@ pre {
 </header>
     
     <div id="innerbody">
-      
-    <div id="articletitle">Poor Man's 2 Factor Auth
-    </div>
     
+    <!--
+    <div id="articletitle">Two Factor Authentication
+    </div>
+    -->
+          
+    <!--
     <div class='content-meta'>
        Thursday , July 04 , 2013
     </div>
+    -->
     <article itemscope itemtype="http://schema.org/Article">
+
+      <hgroup>
+        <h1>Two Factor Authentication</h1>
+        <h2>A poor man's approach for web applications</h2>
+      </hgroup>
+      
       <div id="post">
         <div itemprop='articleBody'>
         <p>One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge.  The OTP will serve as the “what you have” part for our 2 factor authentication.</p>
