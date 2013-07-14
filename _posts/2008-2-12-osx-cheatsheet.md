@@ -314,7 +314,9 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
 
 **22. EXTERNAL DRIVES ARE IN** <code class="codeblock">~/Volumes/</code>
 
+**23. REALLY SIMPLE MUSIC PLAYER** <a href="http://cogx.org/">CogX</a>. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &mdash; and iTunes just isn't for me. It won't let leave my Music organization alone
 
+ 
 
 
 
