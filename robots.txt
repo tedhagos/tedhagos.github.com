@@ -19,7 +19,6 @@ Disallow: /about/
 Disallow: /mactips/
 Disallow: /nix/
 Disallow: /java/
-Disallow: /misc/
 Disallow: /projectname
 Disallow: /php/
 Disallow: /wordpress/
