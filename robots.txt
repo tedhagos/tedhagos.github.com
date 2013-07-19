@@ -1,11 +1,32 @@
 User-agent: *
-
-Disallow: /index.html
-Disallow: /index
+Disallow: /index/
 Disallow: /about.html
 Disallow: /tech-diet-confirmation.html
 Disallow: /tech-diet-thank-you.html
 Disallow: /thought-snowball
 Disallow: /ios/
+Disallow: /holiday-blues-low-grade-stress/
+Disallow: /the-task-list/
+Disallow: /android/about.html
+Disallow: /android/
+Disallow: /objective-c/
+Disallow: /html5/canvas-move-straight-line/
+Disallow: /html5//prepare-development-environment/
+Disallow: /html5//simplest-codes/
+Disallow: /html5/
+Disallow: /480-minutes-of-focus/
+Disallow: /about/
+Disallow: /mactips/
+Disallow: /nix/
+Disallow: /java/
+Disallow: /misc/
+Disallow: /projectname
+Disallow: /php/
+Disallow: /wordpress/
+Disallow: /notes/
+Disallow: /linux/
+Disallow: /ruby/
+Disallow: /phonegap/
+Disallow: /.net/
 
 
