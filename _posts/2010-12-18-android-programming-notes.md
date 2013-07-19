@@ -42,6 +42,29 @@ I wrote this for an internal skill building exercise, which never materialised. 
 
 <hr class="chapterbreak"/>
 
+<h1 class="chapter">BRIEF HISTORY</h1>
+
+Andy Rubin led a small startup team sometime in 2003. They were building a software that could power a smart phone. Google took notice of it and acquired Android Inc. The first attempts of Android were not very impressive but phone manufacturers took notice and jumped into the bandwagon. 
+
+Shortly thereafer, 200,000 android devices were being activated on a daily basis (at the time of writing, over half million android devices are activated each day). The small-ish mobile phone software began to make waves.  
+
+Android's snowball noticeably gained momentum sometime in 2008 - 2009---this is the time they began using sweet snack monikers on each version of Android; it has been unstoppable since then. 
+
+- 2003 - *Android Inc., was founded by Andy Rubin*
+- 2005 - *Android Inc was Acquired by Google*
+- 2008 - *version 1.0*
+- 2009 - *version 1.1* 
+- 2009 - *v1.5 (CupCake), v1.6 (Donut)*
+- 2009 - *v2.0/2.1 (Eclair)*
+- 2010 - *v2.2 (Froyo), v2.3 (GingerBread)*
+- 2011 - *v3.0 (HoneyComb)*
+- 2011 - *v4.0 (Ice Cream Sandwich)*
+- 2012 - *v4.1 (Jelly Bean)*
+
+An article about Andy Rubin and Android, titled [Android Invasion](http://www.thedailybeast.com/newsweek/2010/10/03/how-android-is-transforming-mobile-computing.html) appeared on a NewsWeek article sometime in 2010. 
+
+<hr class="chapterbreak"/>
+
 <h1 class="chapter">BASICS</h1>
 
 You can create the project structure by hand but I don't know of anybody (personally) who actually does that. Unless you are trying to prove something to yourself, use the SDK tools. There could be other ways to create the android project structure, *maven* perhaps, but I did not invest time using that maven route, so *android sdk* it is.
