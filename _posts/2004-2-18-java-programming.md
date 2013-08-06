@@ -2086,7 +2086,19 @@ Your new method can throw less of those exceptions but it cannot throw more.
 
 <h1 class="chapter">BIBLIOGRAPHY</h1>
 
-
+[1] James Gosling, *The Java Programming Language*. 3rd ed, 1999
+[2] James Gosling, *The Java Language Specification*. 3rd ed, 1999
+[3] Maurice Naftalin & Philip Wadler. *Java Generics Collection*. O'Reilly, 2006
+[4] Cay S. Hoffman, Gary Cornell, *Core Java 2 Volume I*, Prentice Hall PTR, 2004
+[5] Cay S. Hoffman, Gary Cornell, *Core Java 2 Volume II*, Prentice Hall PTR, 2004
+[6] Timothy Fisher, *The Java Phrasebook: Essential Code and Commands*. Sams, 2006
+[7] Robert Simmons Jr., *Hard Core Java*. O'Reilly, 2004
+[8] Bjarne Stroustrup, *Why C++ is not just an Object Oriented Programming Language*. AT&T  Bell Laboratories
+[9] Boone and Stanek, *Java 2 Exam Guide*. McGraw Hill, 2000
+[10] Kathy Sierra & Bert Bates, *SCJP Sun Certified Programmer for Java 6 Study Guide*. McGraw Hill, 2008
+[11] Jonathan Krudsen & Patrick Niemeyer, *Learning Java, 3rd Edition*. O'Reilly, 2005
+[12] Ivar Jacobson, Rumbaugh, *Object Oriented Analysis and Design, 3rd ed.*, 1965
+[13] Robert Sebesta, *The Concept of Programming Languages, 10th ed.*, Addison Wesley, 2012
 
 
 
