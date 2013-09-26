@@ -24,7 +24,7 @@ The canvas is a viewport. The DOM element <code class="codeblock">&lt; canvas he
 You are not supposed to write directly into the canvas element. You cannot. You need to get a programmatic reference to it using <code class="codeblock">getContext("2d")</code>. 
 
 
-{% highlight javascript %}
+{% highlight html %}
 
 <body>
 	<canvas id="canv" height="300" width="300">

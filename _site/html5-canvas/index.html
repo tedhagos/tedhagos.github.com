@@ -36,7 +36,8 @@
   font-family: Arial, serif;
   font-size: 16px;
   color: #414141;
-  background: #F8F5F6;
+  /*background: #F8F5F6;*/
+  background: #FFFFFF;
 }
 
 p, ol, li , .content-meta {
@@ -258,7 +259,7 @@ hr {
   }
 
 a:link, a:visited { color: #B10000; }
-  a:visited { color: #414141;}
+/*  a:visited { color: #414141;} */
     a:hover { color: #FF0000; text-decoration:none;}
 
 #news {
@@ -272,8 +273,6 @@ a:link, a:visited { color: #B10000; }
   margin-top: 70px;
   text-align: center;
 }
-
-
 
 #postentry {
   overflow:hidden;
@@ -360,7 +359,16 @@ pre {
 
 }
 
-  pre.codeblock, code.codeblock {
+  code.codeblock {
+    font-family: 'Muli';
+    font-size: 15px;
+    color: #003D82;
+    font-weight: normal;
+    background: #FFFFFF; 
+    border: 0;
+  }
+
+  pre.codeblock {
     
     font-family: 'Muli';
     font-size: 15px;
@@ -377,7 +385,7 @@ pre {
     background: #f0e9ec;
   }
   
-  .hll {background: #f0e9ec;}
+ .hll {background: #f0e9ec;}
   
 
 </style>
@@ -430,13 +438,13 @@ pre {
 
 <p>You are not supposed to write directly into the canvas element. You cannot. You need to get a programmatic reference to it using <code class="codeblock">getContext("2d")</code>.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">canvas</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;canv&quot;</span> <span class="nx">height</span><span class="o">=</span><span class="s2">&quot;300&quot;</span> <span class="nx">width</span><span class="o">=</span><span class="s2">&quot;300&quot;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;canv&quot;</span> <span class="na">height=</span><span class="s">&quot;300&quot;</span> <span class="na">width=</span><span class="s">&quot;300&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
         <span class="nx">c</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;canv&quot;</span><span class="p">);</span>
         <span class="nx">cx</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-<span class="o">&lt;</span><span class="err">/body&gt;</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
 
 
@@ -694,23 +702,6 @@ window.onload = function() {
       </div>
     </article>
 
-    <!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=8602905; 
-var sc_invisible=0; 
-var sc_security="77bbc86e"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="website
-statistics" href="http://statcounter.com/free-web-stats/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
-alt="website statistics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -721,7 +712,6 @@ alt="website statistics"></a></div></noscript>
   ga('send', 'pageview');
 
 </script>
-
     
     </div> <!-- INNER BODY -->
         

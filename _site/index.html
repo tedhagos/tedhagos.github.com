@@ -36,7 +36,8 @@
   font-family: Arial, serif;
   font-size: 16px;
   color: #414141;
-  background: #F8F5F6;
+  /*background: #F8F5F6;*/
+  background: #FFFFFF;
 }
 
 p, ol, li , .content-meta {
@@ -258,7 +259,7 @@ hr {
   }
 
 a:link, a:visited { color: #B10000; }
-  a:visited { color: #414141;}
+/*  a:visited { color: #414141;} */
     a:hover { color: #FF0000; text-decoration:none;}
 
 #news {
@@ -272,8 +273,6 @@ a:link, a:visited { color: #B10000; }
   margin-top: 70px;
   text-align: center;
 }
-
-
 
 #postentry {
   overflow:hidden;
@@ -360,7 +359,16 @@ pre {
 
 }
 
-  pre.codeblock, code.codeblock {
+  code.codeblock {
+    font-family: 'Muli';
+    font-size: 15px;
+    color: #003D82;
+    font-weight: normal;
+    background: #FFFFFF; 
+    border: 0;
+  }
+
+  pre.codeblock {
     
     font-family: 'Muli';
     font-size: 15px;
@@ -377,7 +385,7 @@ pre {
     background: #f0e9ec;
   }
   
-  .hll {background: #f0e9ec;}
+ .hll {background: #f0e9ec;}
   
 
 </style>
@@ -420,7 +428,7 @@ pre {
       <p>
       One way to achieve a two factor authentication is to couple a simple website login with an SMS  One Time PIN. The username/password (what the user know) is the first layer of security challenge. The web application generates a random number which is valid only for current browser session, sends the generated random number via a third party SMS gateway and asks the user to input the OTP (One Time Pin) in order to satisfy the security challenge. <p>
       <a href="/two-factor-auth-using-sms">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -441,7 +449,7 @@ pre {
       <p>
       You can get Java 8 by way of <a href= "http://www.oracle.com/technetwork/java/javase/downloads/ea-jsp-142245.html">Oracle Early Access</a>. This is a mainstream, run of the mill installer though. That means you install this on a machine, it takes over the Java environment for that machine. Don't do that! Not to your workhorse and go-to machine. Do it a VM, it is safer and prudent that way. <p>
       <a href="/java8-notes">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -462,7 +470,7 @@ pre {
       <p>
       My notes on using LATEX to author presentation slides. This note also contains instructions on how to use PANDOC as the main structure then use the beamer class to produce the PDF. Although, admittedly, Google Drive + Google Docs has overtaken this one. I don't use this as much now. <p>
       <a href="/latex-slides">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -483,7 +491,7 @@ pre {
       <p>
       You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that <strong>there is always a first time for everything</strong>. <p>
       <a href="/api-projects">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -504,7 +512,7 @@ pre {
       <p>
       In a perfect world, before a single line of code is ever written, everybody involved in software development (including the client) has a good understanding of what needs to be done, how to get there, how much sweat will it take and for how long everybody sweats &mdash; in a perfect world. <p>
       <a href="/fixed-deadlines-moving-scope">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -523,9 +531,9 @@ pre {
       </a>
       </h2>
       <p>
-      Some CVs are 10+ page long and peppered with a dizzying litany of projects &mdash; I have personally seen examples of these CVs &mdash; no, they are not senior developes. I have seen people who had 4 years of experience and have listed more than 50 projects on the CV, spanning 5 or more companies. The details of reasons for the short stints are only mildly interesting. Not worth the discussion. The pattern which explains the short length of stay coupled with the incredible array of projects is more interesting. <p>
+      Some things just need to marinade a little bit. Some things can only be chipped off a bit a day at a time. The small but consistent things you do everyday has cumulative effect. <p>
       <a href="/long-fuse">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -546,7 +554,28 @@ pre {
       <p>
       You can't learn if you can't focus. You can't focus if you can't concentrate. I may have taken the learning process for granted for a long time, that's why I started this note. <p>
       <a href="/notes-on-focus">
-        Continue reading &raquo;
+        READ &raquo;
+      </a>
+    </div>
+    </div>
+    
+    
+    <div id="postentry">
+	    <div id="postdate">
+        <div id="datediv">Nov 10 </div>
+        <div id="yeardiv">2012 </div>
+      </div>
+     
+      <div id="postcontent">
+      <h2>
+        <a href="/phonegap-notes">
+        Phonegap
+      </a>
+      </h2>
+      <p>
+      Create mobile apps using HTML5, CSS and JavaScript. There are 3 routes you can take for mobile app development &mdash; Native development, mobile CSS for an existing website and the third one is the route of the hybrid app. Phonegap is a technology to create hybrid apps. <p>
+      <a href="/phonegap-notes">
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -567,7 +596,7 @@ pre {
       <p>
       The canvas is a viewport. The DOM element <code class="codeblock">&lt; canvas height="300" width="300" &gt;</code>, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel. <p>
       <a href="/html5-canvas">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -588,7 +617,7 @@ pre {
       <p>
       These are my notes for android programming. This is a not a tutorial, altough it may seem to be. They are closer to a cheat sheet rather than a detailed beginner's tutorial. These notes date back to late 2010 but they are updated from time to time. I could have missed some updates and you may still find some references to API level 6 (Eclair) &mdash; I'll get around to fixing those kinds of things when I get the time. <p>
       <a href="/android-programming-notes">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -609,7 +638,7 @@ pre {
       <p>
       This is a growing list of things I do on OSX. They are on the list because I can't memorize them and they are not always easy to find *Googling*. These cheats range from networking to more elaborate setups <p>
       <a href="/osx-cheatsheet">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -630,7 +659,7 @@ pre {
       <p>
       The WordPress platform itself is built using PHP, so the more knowledge you have of PHP, the better. You also need knowledge on HTML. You need not be an expert on PHP and/or HTML  to build a basic WordPress site, you can get started with basic PHP and HTML knowledge, but in order to build a non-trivial application,   you will to more skills other than HTML and PHP. <p>
       <a href="/wordpress-notes">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -651,7 +680,7 @@ pre {
       <p>
       This should aide beginning programmers. I've compiled this list because I kept seeing them in my students over and over again. Encountering errors is part of the learning process. In fact, I think it is a critical part of that process. When our brains gets stumped, it seeks other ways of doing things. It tries out different things until it makes a break through &mdash; of course this was all before the forums became popular. Before (some)programmers turned from being creative creatures to freeloaders &mdash; CAN I HAS THE CODES. It's a sad story. <p>
       <a href="/common-errors-java-programming">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -672,7 +701,7 @@ pre {
       <p>
       What follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995. <p>
       <a href="/java-programming">
-        Continue reading &raquo;
+        READ &raquo;
       </a>
     </div>
     </div>
@@ -703,23 +732,7 @@ pre {
 
 
       </section>
-      <!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=8602905; 
-var sc_invisible=0; 
-var sc_security="77bbc86e"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="website
-statistics" href="http://statcounter.com/free-web-stats/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
-alt="website statistics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
+
   </body>
 
 </html>
