@@ -14,14 +14,16 @@
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
--->
-
 
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
+-->
+
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content="Notes on how to animate using HTML5 canvas. Drawing squares, circles, erasing and redrawing. Simplistic game programming principles on html5 canvas"/>
@@ -33,153 +35,31 @@
     <style>
 
 * {
-  font-family: Arial, serif;
-  font-size: 16px;
-  color: #414141;
-  /*background: #F8F5F6;*/
+  line-height: 125%;
   background: #FFFFFF;
 }
 
-p, ol, li , .content-meta {
-  font-family: Arial;
-  font-size: 16px;
-	line-height: 170%;
-  line-height: 160%;
-  letter-spacing: 110%;
-}
-
-em {
-  font-style:oblique;
-  font-family: Georgia;
-  color: #003D82;
-}
-
-/*ol, li { font-size: 104%;}*/
-ol, li { font-size: 16px;}
-
-strong {
-  font-family: Arial;
-  font-weight:bold;
-  color: #000000;
-}
-
-hgroup h1 {
-	font-family: 'Droid Serif',Arial;
-  font-size: 65px;
-  color: #686868;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom:5px;
-  letter-spacing: -2px;
-  line-height: 90%;
+#mast {
+  font-family: 'Arial';
   text-align: center;
+  color: #999999;
+  background: #3d3d3d;
+  padding: 1px;
 }
 
-hgroup h2 {
-  font-family: Georgia;
-	font-style: oblique;
-  font-size: 17px;
-  color: #686868;
-  /*color: #681a1a;*/
-	margin-top:0;
-	margin-bottom:3em;
-  margin-right: 30px;
-  text-align: center;
-}
-
-#articletitle {
-	font-family: 'Droid Serif',Arial;
-  font-size: 65px;
-  color: #686868;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom:5px;
-  letter-spacing: -2px;
-  line-height: 90%;
-  text-align: center;
-	/*color: #002346;*/
-	/*color: #6F0000;*/
-	/*color: #435e36;*/
-}
-
-.light {
-  font-family:'Muli', sans-serif;
-  color: #5a8080;
-}
-
-#postmeta {
-  margin-bottom: 1em;
-}
-
-#blogtitle {float:left;}
-#rightnav {float:right;}
-
-  #blogtitle a:link, #blogtitle a:visited {
-    font-family: 'Tauri';
-    font-size: 30px;
-    text-decoration:none;
-    color: #BBBBBB;
-    background: #f6f6f6;
-
-  }
-    #blogtitle a:hover{color: #b00000;}
-
-  #rightnav a:link, #rightnav a:visited {
-    font-family: 'Tauri';
-    font-size: 30px;
-    text-decoration:none;
-    color: #bbbbbb;
-    background: #f6f6f6;
-
-  }
-    #rightnav a:hover{color: #b00000;}
-
-    header {
-      display:block;
-      overflow:hidden;
-      
-    	border-bottom:1px solid #DEDEDE;
-    	height: 1.2em;
-    	padding-top:10px;
-    	padding-bottom:15px;
-      margin-bottom: 60px;
-      background: #f6f6f6;
-    }
-
-
-blockquote {
-  padding: 5px;
-  margin-left: auto;
-  margin-right:auto;
-  width: 90%;
-}
-
-  blockquote p {
-    font-family: Georgia;
-    font-style: oblique;
-    color: #545454;
-    text-align: right;
+  #mast a:link, #mast a:visited, #mast a:hover {
+    color: #999999;
+    background: #3d3d3d;
+    text-decoration: none;
   }
 
-
-h1, h2, h3, h4, h5 {
-	font-family: Arial;
-
-	/*color: #545454;*/
-  font-weight:normal;
-  color: #2D2D2D;
+h1, h2, h3, h4 {
+  font-weight: normal;
 }
-
-h1 {font-size: 170%; letter-spacing: -1px;}
-  h1.chapter {
-    font-family: 'Tauri';
-    font-size: 34px;
-    letter-spacing: -1px;
-  }
-  
-h2 {font-size: 150%; margin-bottom:0;}
-h3 {font-size: 130%; margin-bottom:0; color: #000000; }
-
+h1 {font-size: 35px;} header h1 {text-align:center;}
+h2 {font-size: 30px;}
+h3 {font-size: 25px;}
+h4 {font-size: 20px;}
 
 body {
   margin:0;
@@ -187,137 +67,44 @@ body {
   border:0;
   width: 100%;
 }
-  #innerbody {
-	  width:85%;
+
+  .innerbody {
+	  width:95%;
 	  margin: 0 auto;
   }
 
 footer {
   clear:both;
-  font-family: Arial;
-	font-size:15px;
-	font-style:normal;
-	margin-top:1em;
-	margin-bottom: 1em;
-	padding-top: 1em;
-	border-top: 1px solid #DEDEDE;
-  text-align: center;
-  text-decoration: none;
-  color: #bbbbbb;
-  background: #f6f6f6;
+  text-align:center;
+  padding: 20px;
 }
   
-  footer a:link, footer a:visited {
-    font-family: Arial;
-    font-size: 15px;
-    color: #bbbbbb;
-    background: #f6f6f6;
-    text-decoration: none;
-  }
-  footer a:hover {color: #b00000;}
-
-.content-meta {
-  font-family: Georgia;
-	font-style: normal;
-  color: #686868;
-  /*color: #681a1a;*/
-	margin-top:0;
-	margin-bottom:3em;
-  margin-right: 30px;
-  text-align: center;
-}
-
-img {
-  margin-right:auto;
-  margin-left:auto;
-  display:block;
-}
-
-  #cap {
-    padding: 10px;
-    font-family: Georgia;
-    font-size:97%;
-    color: #000000;
-    text-align:center;
-    width: 500px;
-    margin-right:auto;
-    margin-left:auto;
-    
-  }
-
 hr {
 	border:0;
 	color: #d8c7cc;
 	background: #d8c7cc;
-	height: 5px;
+	height: 2px;
 }
   hr.chapterbreak {
     color: #2d2d2d;
     background: #2d2d2d;
-    height: 6px;
+    height: 3px;
     margin-top: 40px;
   }
 
-a:link, a:visited { color: #B10000; }
-/*  a:visited { color: #414141;} */
-    a:hover { color: #FF0000; text-decoration:none;}
-
-#news {
-  clear:both;
-  width: 200px;
-  float:right;
-  padding: 20px;
-  border:2px solid #61768a;
-  overflow: hidden;
-  margin-bottom:50px;
-  margin-top: 70px;
+.notice {
+  background: #fff8ba;
+  color: #525252;
   text-align: center;
+  border: 1px solid #DEDEDE;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Arial';
+  font-size: 18px;
 }
 
-#postentry {
-  overflow:hidden;
-  clear:both;
-  padding: 5px;
-  border-bottom: 0px dashed #D8C7CC;
-  height: auto;
-  padding: 10px;
-  width: 100%;
-}
-
-
-#postdate {
-  padding-top:10px;
-  float:left;
-  text-align:right;
-}
-  #postdate #datediv {
-    font-size: 24px;
-    color: #686868;
-    text-align:right;
-  }
-  #postdate #yeardiv {
-    font-size: 30px;
-    color: #a3a3a3;
-  }
-
-#postcontent {
-  position:relative;
-  overflow:hidden;
-  top: -11px;
-  float:right;
-  width:85%;
-}
-  #postcontent h2 a:link, #postcontent h2 a:visited {
-    font-family: 'Tauri';
-    font-size: 25px;
-    letter-spacing: -0.90px;
-    color: #545454;
-    font-weight:normal;
-    text-decoration: none;
-  }
-  #postcontent h2 a:hover {
-    color: #B10000;
-  } 
+.light {text-decoration:overline;}
 
 table {
   border: 1px solid #CACACA;
@@ -326,16 +113,16 @@ table {
   margin-bottom: 50px;
 }
   table th {
-    font-family: 'Muli';
-    padding: 10px;
+    font-family: 'Courier';
+    padding: 5px;
     text-align: left;
   }
   table td {
     min-width: 30px;
     max-width: 500px;
     border: 1px solid #CACACA;
-    padding: 10px;
-    font-family: 'Muli';
+    padding: 5px;
+    font-family: 'Courier';
     color: gray;
   }
   table td:first-child {
@@ -345,73 +132,43 @@ table {
   table td:nth-child(2) {
     text-align: center;
   }
-  
 
-pre {
-
-	font-family: 'Muli';
-  font-size: 15px;
-  color: #000000;
-  background: #f0e9ec;
-	padding: 10px;
-	margin-bottom:0px;
-  line-height: 160%; 
-
-}
-
-  code.codeblock {
-    font-family: 'Muli';
-    font-size: 15px;
-    color: #003D82;
-    font-weight: normal;
-    background: #FFFFFF; 
-    border: 0;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
   }
 
-  pre.codeblock {
-    
-    font-family: 'Muli';
-    font-size: 15px;
-    color: #003D82;
-    font-weight: normal;
-    background: #F8F5F6; 
-    border: 0;
-
-  }
-
-  code * {
-    font-family: 'Muli';
-    color: #000000;
-    background: #f0e9ec;
+  code, pre {
+    font-family: 'Inconsolata';
+    font-size: 90%;
   }
   
- .hll {background: #f0e9ec;}
-  
+  pre { 
+    border: 1px dashed #b1b1b1;
+    padding: 10px;
+  }
+
+
+  #cap, .lst {
+    text-align: center;
+    font-family: 'Georgia';
+    color: #b30000;
+    margin-top: 0px;
+  }
+
 
 </style>
-
-    <!--
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
-    -->
 
   </head>
   <body>
         
-    <header>
-<div id="innerbody">
-  <div id="blogtitle">
-    <a href="/">Ted Hagos</a>
-  </div>
-  <div id="rightnav">
-    <a href="/about.html">About</a>
-  </div>
+    <div id='mast'>
+  NOTEBOOK OF 
+  <a href='https://plus.google.com/107317535953221277825?rel=author'>
+            TED HAGOS</a> 
 </div>
-</header>
-    
-    <div id="innerbody">
-    
+        
     <!--
     <div id="articletitle">HTML5 Canvas
     </div>
@@ -422,299 +179,24 @@ pre {
        Thursday , April 07 , 2011
     </div>
     -->
-    <article itemscope itemtype="http://schema.org/Article">
+    <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
 
+      <header>
       <hgroup>
         <h1>HTML5 Canvas</h1>
-        <h2>Technical notes on building HTML5 Canvas apps</h2>
       </hgroup>
+      </header>
       
       <div id="post">
         <div itemprop='articleBody'>
-        <h1 class="chapter">INTRODUCTION</h1>
-
-
-<p>The canvas is a viewport. The DOM element <code class="codeblock">&lt; canvas height="300" width="300" &gt;</code>, this creates a canvas 300 pixels wide and 300 pixels tall. You cannot change the unit of measurement, it will always be in pixel.</p>
-
-<p>You are not supposed to write directly into the canvas element. You cannot. You need to get a programmatic reference to it using <code class="codeblock">getContext("2d")</code>.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;canv&quot;</span> <span class="na">height=</span><span class="s">&quot;300&quot;</span> <span class="na">width=</span><span class="s">&quot;300&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
-        <span class="nx">c</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;canv&quot;</span><span class="p">);</span>
-        <span class="nx">cx</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</code></pre></div>
-
-
-<p>The basic idea on canvas programming is to <em>1) find a spot in the canvas</em> by specifying the <em>x and y coordinates</em> then <em>2) draw something</em> using the provided mechanisms for drawing. The <em>canvas primitives</em> (see the section below) provides some rudimentary line drawing facilities.</p>
-
-<hr />
-
-<h1>CANVAS PRIMITIVES</h1>
-
-<p><strong>RECTANGLE</strong> <code class="codeblock">fillRect(x, y, width, height)</code> &mdash; draws a black rectangle. Black is the default color of the canvas, you can change the color by changing the <em>fillStyle</em>  property of the canvas. If you want to draw the rectangle's outline rather than filling it up, use <code class="codeblock">strokeRect(x, y, width, height)</code>. The color of the outline is affected by the <em>strokeStyle</em> property of the canvas.</p>
-
-<p><strong>CIRCLE</strong> <code class="codeblock">context.arc(x,y,r,beginAngle,endAngle,clockwise);</code> &mdash; not as simple as drawing a rectangle. There is no direct way of drawing circles in the canvas, you can only draw arcs. That is why the code to draw a circle is more involved than drawing a simple rect. The parameters are easy to figure out; <em>x,y</em> is center of circle, <em>r is the radius</em>, beginning angle is 0 (zero) and ending angle is 360.</p>
-
-<pre>
-window.onload = function() {
-  var canvas = document.getElementById('canvasname');
-  var context = canvas.getContext('2d');
-  var x = 50;
-  var y = 50;
-  var r = 30;
-  var beginAngle = 0;
-  var endAngle = 360
-  var clockwise = false;
-
-  context.beginPath();
-  context.arc(x,y,r,beginAngle,endAngle,clockwise);
-  context.closePath();
-  context.stroke();
-}
-</pre>
-
-
-<div id="cap">Sample code to draw a circle</div>
-
-
-<p><strong>TEXT</strong> <code class="codeblock">fillText(string, x, y)</code> &mdash; this is self explanatory, you know what to do with this</p>
-
-<hr class="chapterbreak"/>
-
-
-
-
-<h1 class="chapter">MOTION</h1>
-
-
-<ol>
-<li>Draw the shape</li>
-<li>Change the location of the shape</li>
-<li>Erase the whole canvas or portions of it</li>
-<li>Redraw the canvas using the updated coordinates of the shape</li>
-</ol>
-
-
-<p>There is no other way. The steps above is the only way to achieve motion. Think of <a href="https://en.wikipedia.org/wiki/Flip_book">flip book or a flick book</a></p>
-
-<h2>LINEAR MOTION</h2>
-
-<p>Make the box move from left going to the right</p>
-
-<pre>
-  var c = null;
-  var cx = null;
-  var box = null;
-  
-  window.onload = function() {
-    
-    c = document.getElementById('mycanvas');
-    cx = c.getContext('2d');
-    box = new Box();
-    
-    update();
-    
-    function update() {
-      cx.clearRect(0,0,c.width, c.height);
-      cx.fillRect(box.x, box.y, box.width, box.height);
-      box.x = box.x + box.speed;
-      setTimeout(update,50);
-    }
-  }
-
-  function Box() {
-    this.x = 0;
-    this.y = 0;
-    this.width = 50;
-    this.height = 50;
-    this.speed = 5;
-  }
-</pre>
-
-
-<div id="cap">Animating a box</div>
-
-
-<p>The key of this example is the <em>update()</em> function. It calls the <em>setTimeout</em> which acts as the timer of canvas, it executes the <em>update</em> function every 50 milliseconds.</p>
-
-<p>The main things to do in the <em>update</em> function are; <em>1) Erase the canvas</em> , the <code class="codeblock">clearRect</code> function took care of that <em>2) Redraw the object</em> and <em>3) Change the x &amp; y coordinates of the object</em></p>
-
-<hr class="chapterbreak"/>
-
-
-
-
-<h1 class="chapter">HANDLING COLLISION</h1>
-
-
-<p>Once you are comfortable making objects move, you will have another problem. That is how to know when your objects are bumping into other objects. Even if you have just the one object moving about in the canvas, surely at some point it will hit the borders of the canvas. You need to be able to handle that.</p>
-
-<p>There are no magical or automatic ways to do this. You will need to resort to primitive techniques. That means being aware of coordinates of your <em>fixed-position</em> objects, in this case, the borders of the canvas and being aware of the current position of your object.</p>
-
-<p>You will devise a way to keep track of these things. When the updated position of your object coincides with the location of another object, fixed position or otherwise, you have a collision. The next thing left to do is provide programming logic when the collision happens.</p>
-
-<pre>
-  var c = null;
-  var cx = null;
-  var box = null;
-  
-  window.onload = function() {
-    
-    c = document.getElementById('mycanvas');
-    cx = c.getContext('2d');
-    box = new Box();
-    
-    update();
-    
-    function update() {
-            
-      if((box.y + box.height) < c.height) {
-        cx.clearRect(0,0,c.width, c.height);
-        cx.fillRect(box.x, box.y, box.width, box.height);
-        box.y = box.y + box.speed;
-      }
-      setTimeout(update,50);
-    }
-  }
-
-  function Box() {
-    this.x = 0;
-    this.y = 0;
-    this.width = 50;
-    this.height = 50;
-    this.speed = 5;
-  }
-</pre>
-
-
-<p>This code sample basically moves the box object along the <em>y-axis</em>. Notice that prior to the <em>clear-update-redraw</em> operation, the bounds of the box is checked against the height of the canvas. If the box's current <em>y-location</em> plus the height of the box is less than the value of the canvas' height, the animation continues, if not, then no action is taken. This gives the appearance that the box stops at the bottom of the canvas. This approach is probably good enough for a first draft, but it can get messy really quickly once we add more objects to this.</p>
-
-<p>We can improve the code a little bit if we move the programming logic of the collision away from the drawing logic.</p>
-
-<pre>   
-  var c = null;
-  var cx = null;
-  var box = null;
-  
-  window.onload = function() {
-    
-    c = document.getElementById('mycanvas');
-    cx = c.getContext('2d');
-    box = new Box();
-    
-    update();
-    
-    function update() {
-      if(!isInCollission(box)) {
-        cx.clearRect(0,0,c.width, c.height);
-        cx.fillRect(box.x, box.y, box.width, box.height);
-        box.y += box.speed;
-        setTimeout(update,50);
-      }
-    }
-  }
-
-  function isInCollission(box) {
-    if((box.x + box.width) < c.width &  
-       (box.y + box.height) < c.height) {
-         return false;
-       }
-    else {
-      return true;
-    }
-  }
-
-  function Box() {
-    this.x = 0;
-    this.y = 0;
-    this.width = 50;
-    this.height = 50;
-    this.speed = 5;
-  }
-</pre>
-
-
-<p>The  <em>isInCollission()</em> function takes a <em>box</em> parameter to check if either the bottom or the right side of the box is already in contact with either the right boundary or the floor of the canvas.</p>
-
-<p>You can make this code more robust by including codes that checks for collission on ceiling or the left side of the canvas, but that is left to you as an exercise.</p>
-
-<hr class="chapterbreak"/>
-
-
-
-
-<h1 class="chapter">EVENT HANDLING</h1>
-
-
-<p>The objects you draw on the canvas are not event aware. You won't be able to hook em up to <em>click</em> events or any other standard events. These objects are not DOM objects, hence, they cannot raise nor sink events.</p>
-
-<p>Short of using a framework like KineticJS, what you can do is attach the event to the <em>canvas</em> DOM element, capture the <em>x,y mouse coordinates</em> and devise a logic if the click happened within the bounds of your object.</p>
-
-<p>The following code sample traps the click event inside the canvas.</p>
-
-<pre>
-    window.onload = function(){
-        
-        var c = document.getElementById('mycanvas');
-        var context = c.getContext("2d");
-        var watch = document.getElementById('watch');
-        
-        var mousex;
-        var mousey;
-        var mousepos;
-        var mouseoffset = 20;
-        
-        c.onclick = function() {
-            
-            mousex = event.clientX;
-            mousey = event.clientY;
-            
-            mousepos = "X : " + mousex + " | Y :" + mousey;
-            watch.innerHTML = mousepos;
-            draw(mousex,mousey);
-        }
-        
-        function draw(x,y) {
-
-      var R = Math.floor(Math.random() * 255);
-      var G = Math.floor(Math.random() * 255);
-      var B = Math.floor(Math.random() * 255);
-      var color = "rgb(" + R + "," + G + "," + B + ")";
-      
-      var dim = Math.random() * 50;
-      
-      context.fillStyle = color;
-            context.fillRect(x-mouseoffset,y-mouseoffset,dim,dim);
-        }       
-    }
-</pre>
-
-
-<p>The current location of mouse is given by <em>event.clientX &amp; event.clientY</em>. The sample code uses the current location of the mouse to draw the <em>X &amp; Y</em> of the rectangle. The <em>offset</em> variable was used simply to reposition the top-left of the rectangle in order to coincide with tip of the mouse cursor.</p>
+        <p><a href="http://thelogbox.com/html5-what-you-will-need/">HTML5 Canvas Tutorial</a></p>
 
         </div>                
       </div>
       <div id="postmeta" class='light'>
-        file: #html5  #canvas  #animation
+        file: #html5  #canvas
       </div>
-    </article>
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42397771-1', 'tedhagos.com');
-  ga('send', 'pageview');
-
-</script>
-    
-    </div> <!-- INNER BODY -->
-        
+    </article>        
     <footer>
       
   <a href='/copyright.html'>Copyright</a>&nbsp;
@@ -733,5 +215,22 @@ window.onload = function() {
   ga('send', 'pageview');
 
 </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8602905; 
+var sc_invisible=0; 
+var sc_security="77bbc86e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
   </body>
 </html>

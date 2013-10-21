@@ -14,14 +14,16 @@
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
--->
-
 
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
+-->
+
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 <meta name="description" content=""/>
@@ -33,153 +35,31 @@
     <style>
 
 * {
-  font-family: Arial, serif;
-  font-size: 16px;
-  color: #414141;
-  /*background: #F8F5F6;*/
+  line-height: 125%;
   background: #FFFFFF;
 }
 
-p, ol, li , .content-meta {
-  font-family: Arial;
-  font-size: 16px;
-	line-height: 170%;
-  line-height: 160%;
-  letter-spacing: 110%;
-}
-
-em {
-  font-style:oblique;
-  font-family: Georgia;
-  color: #003D82;
-}
-
-/*ol, li { font-size: 104%;}*/
-ol, li { font-size: 16px;}
-
-strong {
-  font-family: Arial;
-  font-weight:bold;
-  color: #000000;
-}
-
-hgroup h1 {
-	font-family: 'Droid Serif',Arial;
-  font-size: 65px;
-  color: #686868;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom:5px;
-  letter-spacing: -2px;
-  line-height: 90%;
+#mast {
+  font-family: 'Arial';
   text-align: center;
+  color: #999999;
+  background: #3d3d3d;
+  padding: 1px;
 }
 
-hgroup h2 {
-  font-family: Georgia;
-	font-style: oblique;
-  font-size: 17px;
-  color: #686868;
-  /*color: #681a1a;*/
-	margin-top:0;
-	margin-bottom:3em;
-  margin-right: 30px;
-  text-align: center;
-}
-
-#articletitle {
-	font-family: 'Droid Serif',Arial;
-  font-size: 65px;
-  color: #686868;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom:5px;
-  letter-spacing: -2px;
-  line-height: 90%;
-  text-align: center;
-	/*color: #002346;*/
-	/*color: #6F0000;*/
-	/*color: #435e36;*/
-}
-
-.light {
-  font-family:'Muli', sans-serif;
-  color: #5a8080;
-}
-
-#postmeta {
-  margin-bottom: 1em;
-}
-
-#blogtitle {float:left;}
-#rightnav {float:right;}
-
-  #blogtitle a:link, #blogtitle a:visited {
-    font-family: 'Tauri';
-    font-size: 30px;
-    text-decoration:none;
-    color: #BBBBBB;
-    background: #f6f6f6;
-
-  }
-    #blogtitle a:hover{color: #b00000;}
-
-  #rightnav a:link, #rightnav a:visited {
-    font-family: 'Tauri';
-    font-size: 30px;
-    text-decoration:none;
-    color: #bbbbbb;
-    background: #f6f6f6;
-
-  }
-    #rightnav a:hover{color: #b00000;}
-
-    header {
-      display:block;
-      overflow:hidden;
-      
-    	border-bottom:1px solid #DEDEDE;
-    	height: 1.2em;
-    	padding-top:10px;
-    	padding-bottom:15px;
-      margin-bottom: 60px;
-      background: #f6f6f6;
-    }
-
-
-blockquote {
-  padding: 5px;
-  margin-left: auto;
-  margin-right:auto;
-  width: 90%;
-}
-
-  blockquote p {
-    font-family: Georgia;
-    font-style: oblique;
-    color: #545454;
-    text-align: right;
+  #mast a:link, #mast a:visited, #mast a:hover {
+    color: #999999;
+    background: #3d3d3d;
+    text-decoration: none;
   }
 
-
-h1, h2, h3, h4, h5 {
-	font-family: Arial;
-
-	/*color: #545454;*/
-  font-weight:normal;
-  color: #2D2D2D;
+h1, h2, h3, h4 {
+  font-weight: normal;
 }
-
-h1 {font-size: 170%; letter-spacing: -1px;}
-  h1.chapter {
-    font-family: 'Tauri';
-    font-size: 34px;
-    letter-spacing: -1px;
-  }
-  
-h2 {font-size: 150%; margin-bottom:0;}
-h3 {font-size: 130%; margin-bottom:0; color: #000000; }
-
+h1 {font-size: 35px;} header h1 {text-align:center;}
+h2 {font-size: 30px;}
+h3 {font-size: 25px;}
+h4 {font-size: 20px;}
 
 body {
   margin:0;
@@ -187,137 +67,44 @@ body {
   border:0;
   width: 100%;
 }
-  #innerbody {
-	  width:85%;
+
+  .innerbody {
+	  width:95%;
 	  margin: 0 auto;
   }
 
 footer {
   clear:both;
-  font-family: Arial;
-	font-size:15px;
-	font-style:normal;
-	margin-top:1em;
-	margin-bottom: 1em;
-	padding-top: 1em;
-	border-top: 1px solid #DEDEDE;
-  text-align: center;
-  text-decoration: none;
-  color: #bbbbbb;
-  background: #f6f6f6;
+  text-align:center;
+  padding: 20px;
 }
   
-  footer a:link, footer a:visited {
-    font-family: Arial;
-    font-size: 15px;
-    color: #bbbbbb;
-    background: #f6f6f6;
-    text-decoration: none;
-  }
-  footer a:hover {color: #b00000;}
-
-.content-meta {
-  font-family: Georgia;
-	font-style: normal;
-  color: #686868;
-  /*color: #681a1a;*/
-	margin-top:0;
-	margin-bottom:3em;
-  margin-right: 30px;
-  text-align: center;
-}
-
-img {
-  margin-right:auto;
-  margin-left:auto;
-  display:block;
-}
-
-  #cap {
-    padding: 10px;
-    font-family: Georgia;
-    font-size:97%;
-    color: #000000;
-    text-align:center;
-    width: 500px;
-    margin-right:auto;
-    margin-left:auto;
-    
-  }
-
 hr {
 	border:0;
 	color: #d8c7cc;
 	background: #d8c7cc;
-	height: 5px;
+	height: 2px;
 }
   hr.chapterbreak {
     color: #2d2d2d;
     background: #2d2d2d;
-    height: 6px;
+    height: 3px;
     margin-top: 40px;
   }
 
-a:link, a:visited { color: #B10000; }
-/*  a:visited { color: #414141;} */
-    a:hover { color: #FF0000; text-decoration:none;}
-
-#news {
-  clear:both;
-  width: 200px;
-  float:right;
-  padding: 20px;
-  border:2px solid #61768a;
-  overflow: hidden;
-  margin-bottom:50px;
-  margin-top: 70px;
+.notice {
+  background: #fff8ba;
+  color: #525252;
   text-align: center;
+  border: 1px solid #DEDEDE;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Arial';
+  font-size: 18px;
 }
 
-#postentry {
-  overflow:hidden;
-  clear:both;
-  padding: 5px;
-  border-bottom: 0px dashed #D8C7CC;
-  height: auto;
-  padding: 10px;
-  width: 100%;
-}
-
-
-#postdate {
-  padding-top:10px;
-  float:left;
-  text-align:right;
-}
-  #postdate #datediv {
-    font-size: 24px;
-    color: #686868;
-    text-align:right;
-  }
-  #postdate #yeardiv {
-    font-size: 30px;
-    color: #a3a3a3;
-  }
-
-#postcontent {
-  position:relative;
-  overflow:hidden;
-  top: -11px;
-  float:right;
-  width:85%;
-}
-  #postcontent h2 a:link, #postcontent h2 a:visited {
-    font-family: 'Tauri';
-    font-size: 25px;
-    letter-spacing: -0.90px;
-    color: #545454;
-    font-weight:normal;
-    text-decoration: none;
-  }
-  #postcontent h2 a:hover {
-    color: #B10000;
-  } 
+.light {text-decoration:overline;}
 
 table {
   border: 1px solid #CACACA;
@@ -326,16 +113,16 @@ table {
   margin-bottom: 50px;
 }
   table th {
-    font-family: 'Muli';
-    padding: 10px;
+    font-family: 'Courier';
+    padding: 5px;
     text-align: left;
   }
   table td {
     min-width: 30px;
     max-width: 500px;
     border: 1px solid #CACACA;
-    padding: 10px;
-    font-family: 'Muli';
+    padding: 5px;
+    font-family: 'Courier';
     color: gray;
   }
   table td:first-child {
@@ -345,73 +132,43 @@ table {
   table td:nth-child(2) {
     text-align: center;
   }
-  
 
-pre {
-
-	font-family: 'Muli';
-  font-size: 15px;
-  color: #000000;
-  background: #f0e9ec;
-	padding: 10px;
-	margin-bottom:0px;
-  line-height: 160%; 
-
-}
-
-  code.codeblock {
-    font-family: 'Muli';
-    font-size: 15px;
-    color: #003D82;
-    font-weight: normal;
-    background: #FFFFFF; 
-    border: 0;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
   }
 
-  pre.codeblock {
-    
-    font-family: 'Muli';
-    font-size: 15px;
-    color: #003D82;
-    font-weight: normal;
-    background: #F8F5F6; 
-    border: 0;
-
-  }
-
-  code * {
-    font-family: 'Muli';
-    color: #000000;
-    background: #f0e9ec;
+  code, pre {
+    font-family: 'Inconsolata';
+    font-size: 90%;
   }
   
- .hll {background: #f0e9ec;}
-  
+  pre { 
+    border: 1px dashed #b1b1b1;
+    padding: 10px;
+  }
+
+
+  #cap, .lst {
+    text-align: center;
+    font-family: 'Georgia';
+    color: #b30000;
+    margin-top: 0px;
+  }
+
 
 </style>
-
-    <!--
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
-    -->
 
   </head>
   <body>
         
-    <header>
-<div id="innerbody">
-  <div id="blogtitle">
-    <a href="/">Ted Hagos</a>
-  </div>
-  <div id="rightnav">
-    <a href="/about.html">About</a>
-  </div>
+    <div id='mast'>
+  NOTEBOOK OF 
+  <a href='https://plus.google.com/107317535953221277825?rel=author'>
+            TED HAGOS</a> 
 </div>
-</header>
-    
-    <div id="innerbody">
-    
+        
     <!--
     <div id="articletitle">Working on API Projects
     </div>
@@ -422,12 +179,13 @@ pre {
        Thursday , January 31 , 2013
     </div>
     -->
-    <article itemscope itemtype="http://schema.org/Article">
+    <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
 
+      <header>
       <hgroup>
         <h1>Working on API Projects</h1>
-        <h2>What you need to consider</h2>
       </hgroup>
+      </header>
       
       <div id="post">
         <div itemprop='articleBody'>
@@ -442,21 +200,7 @@ pre {
       <div id="postmeta" class='light'>
         file: #software_engineering  #estimation
       </div>
-    </article>
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42397771-1', 'tedhagos.com');
-  ga('send', 'pageview');
-
-</script>
-    
-    </div> <!-- INNER BODY -->
-        
+    </article>        
     <footer>
       
   <a href='/copyright.html'>Copyright</a>&nbsp;
@@ -475,5 +219,22 @@ pre {
   ga('send', 'pageview');
 
 </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8602905; 
+var sc_invisible=0; 
+var sc_security="77bbc86e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8602905/0/77bbc86e/0/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
   </body>
 </html>

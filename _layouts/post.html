@@ -4,19 +4,11 @@
     {% include head.html %}
     {% include nostyle.html %}
 
-    <!--
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="../css/mobile.min.css" type="text/css" media="handheld" />
-    <link rel="stylesheet" href="../css/style.min.css" type="text/css" media="Screen" />
-    -->
-
   </head>
   <body>
         
-    <header>{% include header.html%}</header>
-    
-    <div id="innerbody">
-    
+    {% include mast.html %}
+        
     <!--
     <div id="articletitle">{{ page.title }}
     </div>
@@ -27,12 +19,13 @@
       {{ page.date | date: " %A , %B %d , %Y" }}
     </div>
     -->
-    <article itemscope itemtype="http://schema.org/Article">
+    <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
 
+      <header>
       <hgroup>
         <h1>{{ page.title }}</h1>
-        <h2>{{ page.subtitle }}</h2>
       </hgroup>
+      </header>
       
       <div id="post">
         <div itemprop='articleBody'>
@@ -42,15 +35,11 @@
       <div id="postmeta" class='light'>
         file: #{{ page.categories | join: '  #' }}
       </div>
-    </article>
-
-    {% include ga.html %}
-    
-    </div> <!-- INNER BODY -->
-        
+    </article>        
     <footer>
       {% include footer.html %}
     </footer>
     {% include ga.html %}
+    {% include statcounter.html %}
   </body>
 </html>

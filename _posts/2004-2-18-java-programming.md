@@ -12,6 +12,11 @@ categories:
 - core_programming
 ---
 
+<div class='notice'>
+  The Core Java Programming will no longer be updated. They will find a new home in thelogbox.com. 
+</div>
+
+
 <table>
   <th colspan="3">DOCUMENT HISTORY</th>
   <tr>
