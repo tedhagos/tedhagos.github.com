@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-10-23T20:59:52+08:00</updated>
+ <updated>2013-10-23T21:36:44+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -426,49 +426,27 @@ will need to compile twice (use xelatex 2x) to produce the bibtex entries
    <link href="http://tedhagos.com /misc"/>
    <updated>2013-01-01T00:00:00+08:00</updated>
    <id>http://tedhagos.com /misc</id>
-   <content type="html">&lt;h3&gt;Old Airport Express in OSX Mountain Lion&lt;/h3&gt;
+   <content type="html">&lt;p&gt;&lt;strong&gt;Old Airport Express in OSX Mountain Lion&lt;/strong&gt;. How to salvage an old airport express for use in OSX 10.8 &lt;a href=&quot;https://docs.google.com/document/d/1nFsp9X1TTm8eww6jeO9N8lNgULTGrMrKxtUIa7wHPqE/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;How to salvage an old airport express for use in OSX 10.8 &lt;a href=&quot;https://docs.google.com/document/d/1nFsp9X1TTm8eww6jeO9N8lNgULTGrMrKxtUIa7wHPqE/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Google Apps Email Solution for Small Groups&lt;/strong&gt;. Some verbiage if you need to convince some people (your bosses) why adopt the Google Business Apps for email. &lt;a href=&quot;https://docs.google.com/document/d/1x8rOCEWaa-h9oxRb1gJJswUw0TvsJ9TwZB6SEzqb8ls/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Google Apps Email Solution for Small Groups&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;LinkSys WiFi Routers and AP&lt;/strong&gt;. Configurations for old linksys wifi routers and access point. These the WRT series. &lt;a href=&quot;https://docs.google.com/document/d/1dNz-ggMjbcSYTjlzehzxN-CO1rSqO-rwbxUaOnm-TKE/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Some verbiage if you need to convince some people (your bosses) why adopt the Google Business Apps for email. &lt;a href=&quot;https://docs.google.com/document/d/1x8rOCEWaa-h9oxRb1gJJswUw0TvsJ9TwZB6SEzqb8ls/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DLink 605L&lt;/strong&gt;. Configuration for DLink WiFi router. &lt;a href=&quot;https://docs.google.com/document/d/1F7nLxoQGhY7UN_aS98X8lKVT2pfgthE6yQWy7pEt29Q/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;LinkSys WiFi Routers and AP&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Email Campaigns and Junk Boxes&lt;/strong&gt;. Steps, Tips, Traps and Tricks. How to avoid the junk box when sending an email campaign. &lt;a href=&quot;https://docs.google.com/document/d/1pw_2iU3ZAOjepw-S_NU3xUpkdEh9bf4DJhk5tEsZEF4/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Configurations for old linksys wifi routers and access point. These the WRT series. &lt;a href=&quot;https://docs.google.com/document/d/1dNz-ggMjbcSYTjlzehzxN-CO1rSqO-rwbxUaOnm-TKE/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Switching to a Jekyll Blog&lt;/strong&gt;. Steps for building a Jekyll Blog. &lt;a href=&quot;https://docs.google.com/document/d/1ZsnGk4nwnK7Za__iwt7Z0QKcfqgWAqSsbj1nyPicjLQ/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;DLink 605L&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Migrating to a new iPad&lt;/strong&gt;. Steps on how to move to a new iPad. &lt;a href=&quot;https://docs.google.com/document/d/1wJhWo0DcQCYCW-HQnk9oQjINBngLFC3Adh2ZADd2mdc/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Configuration for DLink WiFi router. &lt;a href=&quot;https://docs.google.com/document/d/1F7nLxoQGhY7UN_aS98X8lKVT2pfgthE6yQWy7pEt29Q/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Synchronizing Email Data on iOS and MacBook&lt;/strong&gt;. Steps on how to always sync email data on iOS, MacBook and Other Devices without using iCloud. &lt;a href=&quot;https://docs.google.com/document/d/1NgWrdU-3u6E1YbrMCxN1K8ZB4DyZtn7zDKXZejXyeCI/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Email Campaigns and Junk Boxes&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PostgreSQL on OSX&lt;/strong&gt;. Easiest way to run PostgreSQL on OSX is to download an app from PostgresApp. Follow these steps &lt;a href=&quot;https://docs.google.com/document/d/1gsLSqgB6EV016hxFNLr4oRwvMFODmcqQl1X7sHYNrZU/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Steps, Tips, Traps and Tricks. How to avoid the junk box when sending an email campaign. &lt;a href=&quot;https://docs.google.com/document/d/1pw_2iU3ZAOjepw-S_NU3xUpkdEh9bf4DJhk5tEsZEF4/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Crafting Learning Objectives&lt;/strong&gt;. Use Blooms Taxonomy for learning objectives. &lt;a href=&quot;https://docs.google.com/document/d/17DhpUO00UMZIotX1gHLjBNohgxECbEhBd5HKeqUqFZ4/edit?usp=sharing&quot;&gt;Google Drocs MISC&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Switching to a Jekyll Blog&lt;/h3&gt;
-
-&lt;p&gt;Steps for building a Jekyll Blog. &lt;a href=&quot;https://docs.google.com/document/d/1ZsnGk4nwnK7Za__iwt7Z0QKcfqgWAqSsbj1nyPicjLQ/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Migrating to a new iPad&lt;/h3&gt;
-
-&lt;p&gt;Steps on how to move to a new iPad. &lt;a href=&quot;https://docs.google.com/document/d/1wJhWo0DcQCYCW-HQnk9oQjINBngLFC3Adh2ZADd2mdc/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Synchronizing Email Data on iOS and MacBook&lt;/h3&gt;
-
-&lt;p&gt;Steps on how to always sync email data on iOS, MacBook and Other Devices without using iCloud. &lt;a href=&quot;https://docs.google.com/document/d/1NgWrdU-3u6E1YbrMCxN1K8ZB4DyZtn7zDKXZejXyeCI/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;PostgreSQL on OSX&lt;/h3&gt;
-
-&lt;p&gt;Easiest way to run PostgreSQL on OSX is to download an app from PostgresApp. Follow these steps &lt;a href=&quot;https://docs.google.com/document/d/1gsLSqgB6EV016hxFNLr4oRwvMFODmcqQl1X7sHYNrZU/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Crafting Learning Objectives&lt;/h3&gt;
-
-&lt;p&gt;Use Blooms Taxonomy for learning objectives. &lt;a href=&quot;https://docs.google.com/document/d/17DhpUO00UMZIotX1gHLjBNohgxECbEhBd5HKeqUqFZ4/edit?usp=sharing&quot;&gt;Google Drocs MISC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Licensing Source Code&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/document/d/1w0NyKaOZCEWBHdZ0AlwWzcYuoUoh08eCxOrP8fTCW5E/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Licensing Source Code&lt;/strong&gt;. &lt;a href=&quot;https://docs.google.com/document/d/1w0NyKaOZCEWBHdZ0AlwWzcYuoUoh08eCxOrP8fTCW5E/edit?usp=sharing&quot;&gt;Google Docs MISC&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
