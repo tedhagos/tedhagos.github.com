@@ -49,6 +49,8 @@ The first one obviously shows hidden files and the other hides it. You need kill
 
 The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type <span class="codeblock">java</span>, it should launch a window asking you if you want to install Java. 
 
+The Java Development Kit (JDK) in your OSX 10.8 Mountain Lion will be wiped out after upgrading to OSX Maverick. During the upgrade from 10.7 to 10.8, typing 
+
 **JAVA 8**
 
 Don't install the EA release from Oracle, not on your workhorse machine. If you just want to play around with JDK8, get it at [java8.jdk.net/download](http://java8.jdk.net/download) or [java8.jdk.net/lambda](http://java8.jdk.net/lambda). Untar the downloaded files, then set softlinks to executables.
@@ -316,7 +318,11 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
 
 **23. REALLY SIMPLE MUSIC PLAYER** <a href="http://cogx.org/">CogX</a>. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &mdash; and iTunes just isn't for me. It won't let leave my Music organization alone
 
- 
+**23. ASSISTIVE TECHNOLOGY IN OSX MAVERICK** is no longer i *System Preferences &rarr; Accessibility*. It is now in *System Preferences &rarr; Security and Privacy &rarr; Privacy*. 
+
+**24 TEXTEXPANDER DOES NOT WORK IN OSX MAVERICK**. TextExpander needs assistive technology enabled first before you launch it. See item no. 23 above.
+
+   
 
 
 
