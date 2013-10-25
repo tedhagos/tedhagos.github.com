@@ -308,11 +308,15 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
 
 **21. BACKUP Mail.App**
 
-<pre class="codeblock">
+<code class="codeblock">
+
   $ mkdir MailBackup
+
   $ cd MailBackup
+
   $ cp -r ~/Library/Mail/V2/ .
-</pre>
+
+</code>
 
 ***
 
