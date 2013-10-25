@@ -304,6 +304,7 @@ There's a dedicated note for this [somewhere on thelogBox.com](http://thelogbox.
 
 Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about "how to clean up your Mac", swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get **Clean My Mac** or anything paid that catches your fancy. The Mac Store is a good place to start.
 
+***
 
 **21. BACKUP Mail.App**
 
@@ -313,11 +314,17 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
   $ cp -r ~/Library/Mail/V2/ .
 </pre>
 
+***
+
 **22. EXTERNAL DRIVES ARE IN** <code class="codeblock">~/Volumes/</code>
 
 **23. REALLY SIMPLE MUSIC PLAYER** <a href="http://cogx.org/">CogX</a>. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &mdash; and iTunes just isn't for me. It won't let leave my Music organization alone
 
-**23. ASSISTIVE TECHNOLOGY IN OSX MAVERICK** is no longer i *System Preferences &rarr; Accessibility*. It is now in *System Preferences &rarr; Security and Privacy &rarr; Privacy*. 
+***
+
+**23. ASSISTIVE TECHNOLOGY IN OSX MAVERICK** is no longer in *System Preferences &rarr; Accessibility*. It is now in *System Preferences &rarr; Security and Privacy &rarr; Privacy*. 
+
+***
 
 **24 TEXTEXPANDER DOES NOT WORK IN OSX MAVERICK**. TextExpander needs assistive technology enabled first before you launch it. See item no. 23 above.
 
