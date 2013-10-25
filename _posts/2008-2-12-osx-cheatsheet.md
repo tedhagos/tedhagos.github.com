@@ -47,9 +47,8 @@ The first one obviously shows hidden files and the other hides it. You need kill
 
 **4. JAVA**
 
-The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type <span class="codeblock">java</span>, it should launch a window asking you if you want to install Java. 
+The Java Development Kit (JDK) in your OSX 10.8 Mountain Lion will be wiped out after upgrading to OSX Maverick. During the upgrade from 10.7 to 10.8, typing <code class="codeblock">java</code> on a Terminal.app launched a helper window to install Java &mdash; that is no longer the case. You will need to [download java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) on your own. Just get it from [Oracle download site](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-The Java Development Kit (JDK) in your OSX 10.8 Mountain Lion will be wiped out after upgrading to OSX Maverick. During the upgrade from 10.7 to 10.8, typing 
 
 **JAVA 8**
 
