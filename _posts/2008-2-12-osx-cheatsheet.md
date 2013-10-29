@@ -322,6 +322,8 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
 
 **22. EXTERNAL DRIVES ARE IN** <code class="codeblock">~/Volumes/</code>
 
+***
+
 **23. REALLY SIMPLE MUSIC PLAYER** <a href="http://cogx.org/">CogX</a>. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &mdash; and iTunes just isn't for me. It won't let leave my Music organization alone
 
 ***
@@ -332,7 +334,70 @@ Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning u
 
 **24 TEXTEXPANDER DOES NOT WORK IN OSX MAVERICK**. TextExpander needs assistive technology enabled first before you launch it. See item no. 23 above.
 
-   
+***
 
+**26. SCANNING** 
 
+Use either *Image Capture*, *Scanner and Printer Queue* or *Preview*.  
+
+This was tested on Leopard, SL, Lion, Mountain Lion and now Maverick
+
+***
+
+**27. iPhoto.** When an iOS device is connected, iPhoto launches. To turn this off. Do the following:
+
+1. Open Image Capture app
+2. On the lower left, look for *"Connecting this iPad opens iPhoto"*
+3. Click the drop down. Choose *"No Application"*.
+
+***
+
+**28. INTERNET SHARING AND NAT.** When you share internet connection of either an LTE/3G stick, iPhone, iPad to other workstations, OSX has nasty habit of generating a new subnet. Sometimes it will share at *192.168.0* sometimes at *192.168.1* at times at *192.168.2*, these were the subnets I've noticed and experienced &mdash; there could be more. 
+
+This is bad for a LAN with static IP assignments. This is annoying if you already have a setup of a WiFi shared printer and various servers with static IP identification. So, force OSX to share only at a specific subnet. Code below should do it.
+
+<pre class="codeblock">
+sudo defaults write \
+   /Library/Preferences/SystemConfiguration/com.apple.nat \
+   NAT -dict-add SharingNetworkNumberStart 192.168.3.0
+</pre>
+
+The problem here is, you can only share at this subnet. You cannot connect/share with an LTE stick while your machine is connected to an iOS device (USB) and connected to internet using personal hotspot.
+
+***
+
+**29. CURRENT WEEK NUMBER**. This isn't really unique to OSX, but I put it here because sometimes I forget the exact command. 
+
+<pre class="codeblock">
+
+$ cal
+
+    October 2013
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+</pre>
+
+This is not what I need. The cal is easy to remember, even its options. As you can see, it does not show the week number.
+
+<pre class="codeblock">
+
+$ ncal -w
+    October 2013
+Mo     7 14 21 28
+Tu  1  8 15 22 29
+We  2  9 16 23 30
+Th  3 10 17 24 31
+Fr  4 11 18 25
+Sa  5 12 19 26
+Su  6 13 20 27
+   40 41 42 43 44
+
+</pre>
+
+This is what I need. It's *ncal -w*
 

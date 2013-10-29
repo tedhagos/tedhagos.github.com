@@ -16,20 +16,20 @@ categories:
 ---
 
 
-## SEMICOLON 
+## 1. SEMICOLON 
 
  A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.
 
 This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon. 
 
 
-## RUNNING THE BYTECODE
+## 2. RUNNING THE BYTECODE
 
 <code class="codeblock">java Hello.class</code> is not the proper way to run a byte code. You do not include the *.class* extension. You simply run it with <code class="codeblock">java Hello</code>. 
 
 This error results in a *NoDefFoundException*. This error is thrown when you try to use a class file that does not exist &mdash; true enough, there is no *Hello.class* class, there is only the *Hello* class. Drop the extension of the filename when you want to run your program.
 
-## FORGETTING MAIN
+## 3. FORGETTING MAIN
 
 <pre>
 class Hello {
@@ -63,7 +63,7 @@ main(string args[])
 
 
 
-## CURLY BRACES
+## 4. CURLY BRACES
 
 
 Methods, Classes and Interfaces always will contain *blocks*. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.
@@ -94,7 +94,7 @@ You can also move away from this problem quite easily by using a real programmer
 Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.
 
 
-## OBJECT COMPARISSON
+## 5. OBJECT COMPARISSON
 
 <pre>
 class CompEqual {
@@ -117,7 +117,7 @@ When things are stored on the *heap* &mdash; all reference types are stored on t
 Remember that *variable a* does not really contain "Hello". The string "Hello" is stored somewhere on the heap. What *variable a* contains is the location of "Hello" in the heap. So when you compare *c == (a + b)* you are not comparing the string contents, you are comparing memory addresses. 
 
 
-## ARRAY IS ZERO BASED
+## 6. ARRAY IS ZERO BASED
 
 
 <pre>
@@ -139,7 +139,7 @@ This results to an *ArrayIndexOutOfBounds* exception because the for loop is try
 The for loop above should have been written as <code class="codeblock">for(int i =0; i < arr.length)</code> or <code class="codeblock">for(int i =0; i <= arr.length - 1)</code>
 
 
-## EMPTY CATCH BLOCKS
+## 7. EMPTY CATCH BLOCKS
 
 <pre>
 try {
@@ -158,7 +158,7 @@ When an actual error happens, the *catch* block will activate and guess what hap
 As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.
 
 
-## TOO GENERIC EXCEPTION
+## 8. TOO GENERIC EXCEPTION
 
 <pre>
 try {
