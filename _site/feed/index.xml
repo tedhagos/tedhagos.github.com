@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-11-04T18:06:34+08:00</updated>
+ <updated>2013-11-04T20:20:52+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -13,11 +13,11 @@
 
  
  <entry>
-   <title>Useless Timer</title>
-   <link href="http://tedhagos.com /useless-timer"/>
+   <title>YAPT (Yet Another Pomodoro Timer)</title>
+   <link href="http://tedhagos.com /yapt"/>
    <updated>2013-11-04T00:00:00+08:00</updated>
-   <id>http://tedhagos.com /useless-timer</id>
-   <content type="html">&lt;h1&gt;WHAT IT SHOULD DO&lt;/h1&gt;
+   <id>http://tedhagos.com /yapt</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;WHAT IT SHOULD DO :&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Countdown, of course. It always count down from 30 minutes. I wrote YAPT to serve a very narrow purpose. It's an egg timer to mark focused activities. 30 minutes makes sense for a focused activity. Besides, if you feel you can hold a focused state of mind more than the mere mortals can, then just fire it up again for another 30 minutes.&lt;/li&gt;
@@ -30,7 +30,7 @@
 
 &lt;hr /&gt;
 
-&lt;h1&gt;JOURNAL&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;JOURNAL&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2013-11-4. Started&lt;/li&gt;
