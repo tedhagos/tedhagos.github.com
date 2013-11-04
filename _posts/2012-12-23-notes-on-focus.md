@@ -4,7 +4,7 @@ layout: post
 title:  On the Subject of Focus
 subtitle: Can't learn if you can't focus
 
-description: 
+description: Can't learn if you can't focus
 
 excerpt: You can't learn if you can't focus. You can't focus if you can't concentrate. I may have taken the learning process for granted for a long time, that's why I started this note. 
 

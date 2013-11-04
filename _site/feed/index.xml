@@ -4,13 +4,40 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-10-23T22:02:10+08:00</updated>
+ <updated>2013-11-04T18:06:34+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>ted@thelogbox.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Useless Timer</title>
+   <link href="http://tedhagos.com /useless-timer"/>
+   <updated>2013-11-04T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /useless-timer</id>
+   <content type="html">&lt;h1&gt;WHAT IT SHOULD DO&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Countdown, of course. It always count down from 30 minutes. I wrote YAPT to serve a very narrow purpose. It's an egg timer to mark focused activities. 30 minutes makes sense for a focused activity. Besides, if you feel you can hold a focused state of mind more than the mere mortals can, then just fire it up again for another 30 minutes.&lt;/li&gt;
+&lt;li&gt;Log each session. locally. Log the date, time of day. It will have a default label. You can override the default label if you want, but that is not necessary. It will save away anyway.&lt;/li&gt;
+&lt;li&gt;Send the log file via email. There is only one log file. And there are only two things to do on the log file. 1) Erase it and 2) Send it via email.&lt;/li&gt;
+&lt;li&gt;Display only &lt;em&gt;Start and Pause&lt;/em&gt; buttons&lt;/li&gt;
+&lt;li&gt;It will automatically pause when a call comes in&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h1&gt;JOURNAL&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2013-11-4. Started&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Two Factor Authentication</title>
@@ -608,7 +635,7 @@ The first two hours is important, it sets the tone of the day. If you don't set 
 
 &lt;p&gt;&lt;strong&gt;4. JAVA&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type &lt;span class=&quot;codeblock&quot;&gt;java&lt;/span&gt;, it should launch a window asking you if you want to install Java.&lt;/p&gt;
+&lt;p&gt;The Java Development Kit (JDK) in your OSX 10.8 Mountain Lion will be wiped out after upgrading to OSX Maverick. During the upgrade from 10.7 to 10.8, typing &lt;code class=&quot;codeblock&quot;&gt;java&lt;/code&gt; on a Terminal.app launched a helper window to install Java &amp;mdash; that is no longer the case. You will need to &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;download java&lt;/a&gt; on your own. Just get it from &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;Oracle download site&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;JAVA 8&lt;/strong&gt;&lt;/p&gt;
 
@@ -890,18 +917,108 @@ $ echo pbpaste
 
 &lt;p&gt;Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about &quot;how to clean up your Mac&quot;, swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get &lt;strong&gt;Clean My Mac&lt;/strong&gt; or anything paid that catches your fancy. The Mac Store is a good place to start.&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;strong&gt;21. BACKUP Mail.App&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre class=&quot;codeblock&quot;&gt;
-  $ mkdir MailBackup
-  $ cd MailBackup
-  $ cp -r ~/Library/Mail/V2/ .
-&lt;/pre&gt;
+&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;&lt;/p&gt;
 
+&lt;p&gt;  $ mkdir MailBackup&lt;/p&gt;
+
+&lt;p&gt;  $ cd MailBackup&lt;/p&gt;
+
+&lt;p&gt;  $ cp -r ~/Library/Mail/V2/ .&lt;/p&gt;
+
+&lt;p&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;22. EXTERNAL DRIVES ARE IN&lt;/strong&gt; &lt;code class=&quot;codeblock&quot;&gt;~/Volumes/&lt;/code&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;strong&gt;23. REALLY SIMPLE MUSIC PLAYER&lt;/strong&gt; &lt;a href=&quot;http://cogx.org/&quot;&gt;CogX&lt;/a&gt;. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &amp;mdash; and iTunes just isn't for me. It won't let leave my Music organization alone&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;23. ASSISTIVE TECHNOLOGY IN OSX MAVERICK&lt;/strong&gt; is no longer in &lt;em&gt;System Preferences &amp;rarr; Accessibility&lt;/em&gt;. It is now in &lt;em&gt;System Preferences &amp;rarr; Security and Privacy &amp;rarr; Privacy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;24 TEXTEXPANDER DOES NOT WORK IN OSX MAVERICK&lt;/strong&gt;. TextExpander needs assistive technology enabled first before you launch it. See item no. 23 above.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;26. SCANNING&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use either &lt;em&gt;Image Capture&lt;/em&gt;, &lt;em&gt;Scanner and Printer Queue&lt;/em&gt; or &lt;em&gt;Preview&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was tested on Leopard, SL, Lion, Mountain Lion and now Maverick&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;27. iPhoto.&lt;/strong&gt; When an iOS device is connected, iPhoto launches. To turn this off. Do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Image Capture app&lt;/li&gt;
+&lt;li&gt;On the lower left, look for &lt;em&gt;&quot;Connecting this iPad opens iPhoto&quot;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Click the drop down. Choose &lt;em&gt;&quot;No Application&quot;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;28. INTERNET SHARING AND NAT.&lt;/strong&gt; When you share internet connection of either an LTE/3G stick, iPhone, iPad to other workstations, OSX has nasty habit of generating a new subnet. Sometimes it will share at &lt;em&gt;192.168.0&lt;/em&gt; sometimes at &lt;em&gt;192.168.1&lt;/em&gt; at times at &lt;em&gt;192.168.2&lt;/em&gt;, these were the subnets I've noticed and experienced &amp;mdash; there could be more.&lt;/p&gt;
+
+&lt;p&gt;This is bad for a LAN with static IP assignments. This is annoying if you already have a setup of a WiFi shared printer and various servers with static IP identification. So, force OSX to share only at a specific subnet. Code below should do it.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+sudo defaults write \
+   /Library/Preferences/SystemConfiguration/com.apple.nat \
+   NAT -dict-add SharingNetworkNumberStart 192.168.3.0
+&lt;/pre&gt;
+
+
+&lt;p&gt;The problem here is, you can only share at this subnet. You cannot connect/share with an LTE stick while your machine is connected to an iOS device (USB) and connected to internet using personal hotspot.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;29. CURRENT WEEK NUMBER&lt;/strong&gt;. This isn't really unique to OSX, but I put it here because sometimes I forget the exact command.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+
+$ cal
+
+    October 2013
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is not what I need. The cal is easy to remember, even its options. As you can see, it does not show the week number.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+
+$ ncal -w
+    October 2013
+Mo     7 14 21 28
+Tu  1  8 15 22 29
+We  2  9 16 23 30
+Th  3 10 17 24 31
+Fr  4 11 18 25
+Sa  5 12 19 26
+Su  6 13 20 27
+   40 41 42 43 44
+
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is what I need. It's &lt;em&gt;ncal -w&lt;/em&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -910,28 +1027,24 @@ $ echo pbpaste
    <link href="http://tedhagos.com /common-errors-java-programming"/>
    <updated>2004-08-26T00:00:00+08:00</updated>
    <id>http://tedhagos.com /common-errors-java-programming</id>
-   <content type="html">&lt;h2&gt;SEMICOLON&lt;/h2&gt;
+   <content type="html">&lt;h2&gt;1. SEMICOLON&lt;/h2&gt;
 
 &lt;p&gt; A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.&lt;/p&gt;
 
 &lt;p&gt;This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;RUNNING THE BYTECODE&lt;/h2&gt;
+&lt;h2&gt;2. RUNNING THE BYTECODE&lt;/h2&gt;
 
 &lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;java Hello.class&lt;/code&gt; is not the proper way to run a byte code. You do not include the &lt;em&gt;.class&lt;/em&gt; extension. You simply run it with &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;This error results in a &lt;em&gt;NoDefFoundException&lt;/em&gt;. This error is thrown when you try to use a class file that does not exist &amp;mdash; true enough, there is no &lt;em&gt;Hello.class&lt;/em&gt; class, there is only the &lt;em&gt;Hello&lt;/em&gt; class. Drop the extension of the filename when you want to run your program.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;FORGETTING MAIN&lt;/h2&gt;
+&lt;h2&gt;3. FORGETTING MAIN&lt;/h2&gt;
 
 &lt;pre&gt;
-  class Hello {
+class Hello {
     
-  }
+}
 &lt;/pre&gt;
 
 
@@ -940,16 +1053,14 @@ $ echo pbpaste
 &lt;p&gt;The &lt;em&gt;main&lt;/em&gt; function is not a requirement for compilation but a requirement for runtime. Not all of your classes will need a &lt;em&gt;main&lt;/em&gt; but if you will run them on the command line, then they need a &lt;em&gt;main&lt;/em&gt;.&lt;/p&gt;
 
 &lt;pre&gt;
-  class Hello {
-    public static void main(String []args){
-    }
+class Hello {
+  public static void main(String []args){
   }
+}
 &lt;/pre&gt;
 
 
 &lt;p&gt;This code will both compile and run.&lt;/p&gt;
-
-&lt;hr /&gt;
 
 &lt;h2&gt;SPELLING AND CASING&lt;/h2&gt;
 
@@ -962,9 +1073,7 @@ main(string args[])
 &lt;/pre&gt;
 
 
-&lt;hr /&gt;
-
-&lt;h2&gt;CURLY BRACES&lt;/h2&gt;
+&lt;h2&gt;4. CURLY BRACES&lt;/h2&gt;
 
 &lt;p&gt;Methods, Classes and Interfaces always will contain &lt;em&gt;blocks&lt;/em&gt;. Blocks are made up of a pair of curly braces &amp;mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.&lt;/p&gt;
 
@@ -1001,9 +1110,7 @@ main(string args[])
 
 &lt;p&gt;Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;OBJECT COMPARISSON&lt;/h2&gt;
+&lt;h2&gt;5. OBJECT COMPARISSON&lt;/h2&gt;
 
 &lt;pre&gt;
 class CompEqual {
@@ -1028,9 +1135,7 @@ class CompEqual {
 
 &lt;p&gt;Remember that &lt;em&gt;variable a&lt;/em&gt; does not really contain &quot;Hello&quot;. The string &quot;Hello&quot; is stored somewhere on the heap. What &lt;em&gt;variable a&lt;/em&gt; contains is the location of &quot;Hello&quot; in the heap. So when you compare &lt;em&gt;c == (a + b)&lt;/em&gt; you are not comparing the string contents, you are comparing memory addresses.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;ARRAY IS ZERO BASED&lt;/h2&gt;
+&lt;h2&gt;6. ARRAY IS ZERO BASED&lt;/h2&gt;
 
 &lt;pre&gt;
 class Arr {
@@ -1053,9 +1158,7 @@ class Arr {
 
 &lt;p&gt;The for loop above should have been written as &lt;code class=&quot;codeblock&quot;&gt;for(int i =0; i &amp;lt; arr.length)&lt;/code&gt; or &lt;code class=&quot;codeblock&quot;&gt;for(int i =0; i &amp;lt;= arr.length - 1)&lt;/code&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;EMPTY CATCH BLOCKS&lt;/h2&gt;
+&lt;h2&gt;7. EMPTY CATCH BLOCKS&lt;/h2&gt;
 
 &lt;pre&gt;
 try {
@@ -1074,9 +1177,7 @@ catch(Exception e) {
 
 &lt;p&gt;As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2&gt;TOO GENERIC EXCEPTION&lt;/h2&gt;
+&lt;h2&gt;8. TOO GENERIC EXCEPTION&lt;/h2&gt;
 
 &lt;pre&gt;
 try {

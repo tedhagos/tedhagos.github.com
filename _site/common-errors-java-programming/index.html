@@ -20,16 +20,25 @@
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
+
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+
 <meta charset="utf-8">
 
+
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
-<meta name="description" content=""/>
+
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="The stupid things we did when we were noobs"/>
+<title>Common Java Programming Errors</title>
 <meta charset="utf-8"/>
 
-<title>Common Java Programming Errors</title>
+
 
 
     <style>
@@ -37,22 +46,25 @@
 * {
   line-height: 1.5em;
   background: #FBFBFB;
-  font-family: 'Georgia', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   color: #2d2d2d;
 }
 
+ol, ul { padding-left:20px; line-height:1.8em;}
+li {margin-bottom: 10px;}
+
 #mast {
   text-align: center;
-  color: #999999;
-  background: #3d3d3d;
+  color: gray;
+  background: #f1f1f1;
   padding: 1px;
   letter-spacing: .5px;
 }
 
   #mast a:link, #mast a:visited, #mast a:hover {
-    color: #999999;
-    background: #3d3d3d;
+    color: gray;
+    background: #f1f1f1;
     text-decoration: none;
   }
 
@@ -146,8 +158,8 @@ table {
   }
 
   code, pre {
-    font-family: 'Inconsolata';
-    font-size: 90%;
+    font-family: 'Lekton';
+    font-size: 16px;
   }
   
   pre { 
@@ -174,7 +186,7 @@ table {
         
     <div id='mast'>
   NOTEBOOK OF 
-  <a href='https://plus.google.com/107317535953221277825?rel=author'>
+  <a href='/' 'rel=author'>
             TED HAGOS</a> 
 </div>
         
@@ -198,28 +210,24 @@ table {
       
       <div id="post">
         <div itemprop='articleBody'>
-        <h2>SEMICOLON</h2>
+        <h2>1. SEMICOLON</h2>
 
 <p> A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.</p>
 
 <p>This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon.</p>
 
-<hr />
-
-<h2>RUNNING THE BYTECODE</h2>
+<h2>2. RUNNING THE BYTECODE</h2>
 
 <p><code class="codeblock">java Hello.class</code> is not the proper way to run a byte code. You do not include the <em>.class</em> extension. You simply run it with <code class="codeblock">java Hello</code>.</p>
 
 <p>This error results in a <em>NoDefFoundException</em>. This error is thrown when you try to use a class file that does not exist &mdash; true enough, there is no <em>Hello.class</em> class, there is only the <em>Hello</em> class. Drop the extension of the filename when you want to run your program.</p>
 
-<hr />
-
-<h2>FORGETTING MAIN</h2>
+<h2>3. FORGETTING MAIN</h2>
 
 <pre>
-  class Hello {
+class Hello {
     
-  }
+}
 </pre>
 
 
@@ -228,16 +236,14 @@ table {
 <p>The <em>main</em> function is not a requirement for compilation but a requirement for runtime. Not all of your classes will need a <em>main</em> but if you will run them on the command line, then they need a <em>main</em>.</p>
 
 <pre>
-  class Hello {
-    public static void main(String []args){
-    }
+class Hello {
+  public static void main(String []args){
   }
+}
 </pre>
 
 
 <p>This code will both compile and run.</p>
-
-<hr />
 
 <h2>SPELLING AND CASING</h2>
 
@@ -250,9 +256,7 @@ main(string args[])
 </pre>
 
 
-<hr />
-
-<h2>CURLY BRACES</h2>
+<h2>4. CURLY BRACES</h2>
 
 <p>Methods, Classes and Interfaces always will contain <em>blocks</em>. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.</p>
 
@@ -289,9 +293,7 @@ main(string args[])
 
 <p>Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.</p>
 
-<hr />
-
-<h2>OBJECT COMPARISSON</h2>
+<h2>5. OBJECT COMPARISSON</h2>
 
 <pre>
 class CompEqual {
@@ -316,9 +318,7 @@ class CompEqual {
 
 <p>Remember that <em>variable a</em> does not really contain "Hello". The string "Hello" is stored somewhere on the heap. What <em>variable a</em> contains is the location of "Hello" in the heap. So when you compare <em>c == (a + b)</em> you are not comparing the string contents, you are comparing memory addresses.</p>
 
-<hr />
-
-<h2>ARRAY IS ZERO BASED</h2>
+<h2>6. ARRAY IS ZERO BASED</h2>
 
 <pre>
 class Arr {
@@ -341,9 +341,7 @@ class Arr {
 
 <p>The for loop above should have been written as <code class="codeblock">for(int i =0; i &lt; arr.length)</code> or <code class="codeblock">for(int i =0; i &lt;= arr.length - 1)</code></p>
 
-<hr />
-
-<h2>EMPTY CATCH BLOCKS</h2>
+<h2>7. EMPTY CATCH BLOCKS</h2>
 
 <pre>
 try {
@@ -362,9 +360,7 @@ catch(Exception e) {
 
 <p>As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.</p>
 
-<hr />
-
-<h2>TOO GENERIC EXCEPTION</h2>
+<h2>8. TOO GENERIC EXCEPTION</h2>
 
 <pre>
 try {

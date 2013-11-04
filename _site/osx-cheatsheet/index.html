@@ -20,16 +20,25 @@
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
+
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+
 <meta charset="utf-8">
 
+
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta name="author" content="Ted Hagos">
 <meta name="description" content="php setup on mac. ripping audio and video. dev environment. shell hacks. terminal hacks. mac admin."/>
+<title>OSX Cheatsheet</title>
 <meta charset="utf-8"/>
 
-<title>OSX Cheatsheet</title>
+
 
 
     <style>
@@ -37,22 +46,25 @@
 * {
   line-height: 1.5em;
   background: #FBFBFB;
-  font-family: 'Georgia', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   color: #2d2d2d;
 }
 
+ol, ul { padding-left:20px; line-height:1.8em;}
+li {margin-bottom: 10px;}
+
 #mast {
   text-align: center;
-  color: #999999;
-  background: #3d3d3d;
+  color: gray;
+  background: #f1f1f1;
   padding: 1px;
   letter-spacing: .5px;
 }
 
   #mast a:link, #mast a:visited, #mast a:hover {
-    color: #999999;
-    background: #3d3d3d;
+    color: gray;
+    background: #f1f1f1;
     text-decoration: none;
   }
 
@@ -146,8 +158,8 @@ table {
   }
 
   code, pre {
-    font-family: 'Inconsolata';
-    font-size: 90%;
+    font-family: 'Lekton';
+    font-size: 16px;
   }
   
   pre { 
@@ -174,7 +186,7 @@ table {
         
     <div id='mast'>
   NOTEBOOK OF 
-  <a href='https://plus.google.com/107317535953221277825?rel=author'>
+  <a href='/' 'rel=author'>
             TED HAGOS</a> 
 </div>
         
@@ -232,7 +244,7 @@ table {
 
 <p><strong>4. JAVA</strong></p>
 
-<p>The JDK nor the JRE is not included on Mountain Lion anymore, but it fairly easy to get. Open a Terminal.app session and type <span class="codeblock">java</span>, it should launch a window asking you if you want to install Java.</p>
+<p>The Java Development Kit (JDK) in your OSX 10.8 Mountain Lion will be wiped out after upgrading to OSX Maverick. During the upgrade from 10.7 to 10.8, typing <code class="codeblock">java</code> on a Terminal.app launched a helper window to install Java &mdash; that is no longer the case. You will need to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download java</a> on your own. Just get it from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle download site</a>.</p>
 
 <p><strong>JAVA 8</strong></p>
 
@@ -514,18 +526,108 @@ $ echo pbpaste
 
 <p>Deleting stuff is easy, even applications. Just drag it to Trash can. Cleaning up left overs is the tedious part. It is not particulary difficulty, but annoying. Time is better employed somewhere else. There are better things to do than hunting down left over files; or worse, Googling about "how to clean up your Mac", swimming through the internet cess pool and trying out blog guides (like the one you are reading). You cannot do that a lot. Just get <strong>Clean My Mac</strong> or anything paid that catches your fancy. The Mac Store is a good place to start.</p>
 
+<hr />
+
 <p><strong>21. BACKUP Mail.App</strong></p>
 
-<pre class="codeblock">
-  $ mkdir MailBackup
-  $ cd MailBackup
-  $ cp -r ~/Library/Mail/V2/ .
-</pre>
+<p><code class="codeblock"></p>
 
+<p>  $ mkdir MailBackup</p>
+
+<p>  $ cd MailBackup</p>
+
+<p>  $ cp -r ~/Library/Mail/V2/ .</p>
+
+<p></code></p>
+
+<hr />
 
 <p><strong>22. EXTERNAL DRIVES ARE IN</strong> <code class="codeblock">~/Volumes/</code></p>
 
+<hr />
+
 <p><strong>23. REALLY SIMPLE MUSIC PLAYER</strong> <a href="http://cogx.org/">CogX</a>. There were others like Vox (didn't like it). WinAmp on OSX is no longer the WinAmp I remember from 10 years ago (I liked it then when it was simple) &mdash; and iTunes just isn't for me. It won't let leave my Music organization alone</p>
+
+<hr />
+
+<p><strong>23. ASSISTIVE TECHNOLOGY IN OSX MAVERICK</strong> is no longer in <em>System Preferences &rarr; Accessibility</em>. It is now in <em>System Preferences &rarr; Security and Privacy &rarr; Privacy</em>.</p>
+
+<hr />
+
+<p><strong>24 TEXTEXPANDER DOES NOT WORK IN OSX MAVERICK</strong>. TextExpander needs assistive technology enabled first before you launch it. See item no. 23 above.</p>
+
+<hr />
+
+<p><strong>26. SCANNING</strong></p>
+
+<p>Use either <em>Image Capture</em>, <em>Scanner and Printer Queue</em> or <em>Preview</em>.</p>
+
+<p>This was tested on Leopard, SL, Lion, Mountain Lion and now Maverick</p>
+
+<hr />
+
+<p><strong>27. iPhoto.</strong> When an iOS device is connected, iPhoto launches. To turn this off. Do the following:</p>
+
+<ol>
+<li>Open Image Capture app</li>
+<li>On the lower left, look for <em>"Connecting this iPad opens iPhoto"</em></li>
+<li>Click the drop down. Choose <em>"No Application"</em>.</li>
+</ol>
+
+
+<hr />
+
+<p><strong>28. INTERNET SHARING AND NAT.</strong> When you share internet connection of either an LTE/3G stick, iPhone, iPad to other workstations, OSX has nasty habit of generating a new subnet. Sometimes it will share at <em>192.168.0</em> sometimes at <em>192.168.1</em> at times at <em>192.168.2</em>, these were the subnets I've noticed and experienced &mdash; there could be more.</p>
+
+<p>This is bad for a LAN with static IP assignments. This is annoying if you already have a setup of a WiFi shared printer and various servers with static IP identification. So, force OSX to share only at a specific subnet. Code below should do it.</p>
+
+<pre class="codeblock">
+sudo defaults write \
+   /Library/Preferences/SystemConfiguration/com.apple.nat \
+   NAT -dict-add SharingNetworkNumberStart 192.168.3.0
+</pre>
+
+
+<p>The problem here is, you can only share at this subnet. You cannot connect/share with an LTE stick while your machine is connected to an iOS device (USB) and connected to internet using personal hotspot.</p>
+
+<hr />
+
+<p><strong>29. CURRENT WEEK NUMBER</strong>. This isn't really unique to OSX, but I put it here because sometimes I forget the exact command.</p>
+
+<pre class="codeblock">
+
+$ cal
+
+    October 2013
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+</pre>
+
+
+<p>This is not what I need. The cal is easy to remember, even its options. As you can see, it does not show the week number.</p>
+
+<pre class="codeblock">
+
+$ ncal -w
+    October 2013
+Mo     7 14 21 28
+Tu  1  8 15 22 29
+We  2  9 16 23 30
+Th  3 10 17 24 31
+Fr  4 11 18 25
+Sa  5 12 19 26
+Su  6 13 20 27
+   40 41 42 43 44
+
+</pre>
+
+
+<p>This is what I need. It's <em>ncal -w</em></p>
 
         </div>                
       </div>

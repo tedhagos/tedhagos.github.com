@@ -4,7 +4,7 @@ layout: post
 title: Working on API Projects
 subtitle: What you need to consider
 
-description: 
+description: API projects are tricky to estimate
 
 excerpt: You will underestimate the efforts on your first API project. Even if you have done many an estimations before and you have participated in many a projects, if none of them were API development, you will be painfully reminded that <strong>there is always a first time for everything</strong>.  
 
