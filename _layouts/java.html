@@ -7,7 +7,8 @@
   </head>
   <body>
         
-    <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
+    <div id='wrap'>    
+    <article itemscope itemtype="http://schema.org/Article">
 
       <header>
       <hgroup>
@@ -25,12 +26,26 @@
       </div>
       by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
       
+      <a class="moot"
+        title={{ page.title }}
+        href="https://moot.it/i/tedhagos/java:{{ page.title }}">
+        Comments 
+      </a>  
       {% include copyright.html %}
-      
     </article>
-                
+    
+    <div class='toc'>      
+      <ul>
+        <li><a href="#">Introduction</a></i>
+        <li><a href="#">Programming Concepts</a></i>
+        <li><a href="#">Overview of Java</a></i>
+        <li><a href="#">First program</a></i>
+      </ul>
+    </div>
+    
+    </div> <!-- wrap -->        
     <footer>
-
+    
     </footer>
     {% include ga.html %}
     {% include statcounter.html %}

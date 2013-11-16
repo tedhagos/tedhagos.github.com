@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: java
+
 title: Java Programming
 subtitle: Technical Notes for the Java Programming Language
 
@@ -10,31 +11,8 @@ description: what follows will take you through a very quick tour of the Java pr
 categories:
 - java
 - core_programming
+
 ---
-
-<div class='notice'>
-  The Core Java Programming will no longer be updated. They will find a new home in thelogbox.com. 
-</div>
-
-
-<table>
-  <th colspan="3">DOCUMENT HISTORY</th>
-  <tr>
-    <td>18 Feb 2004</td>
-    <td>0.1</td>
-    <td>CREATED</td>
-  </tr>
-  <tr>
-    <td>21 Oct 2007</td>
-    <td>0.2</td>
-    <td>REVISED. Covered Generics</td>
-  </tr>
-  <tr>
-    <td>12 Jun 2013</td>
-    <td>0.3</td>
-    <td>REVISED. Updated to Java 7</td>
-  </tr>
-</table>
 
 
 <h1 class="chapter">INTRODUCTION</h1>
@@ -86,21 +64,23 @@ Before we begin writing programs, I suggest that you create a folder for purpose
 
 Create a file named Hello.java. For now, just copy the contents from the sample code below
 
-<pre>
-  /**
-   *
-   * Our first program
-   *
-   * This is a block comment
-   *
-   * */
+{% highlight java %}
+
+/**
+*
+* Our first program
+*
+* This is a block comment
+*
+* */
    
-  class Hello {
-     public static void main (String [] args) {
-        System.out.println("Hello World\n");
-     }
+class Hello {
+  public static void main (String [] args) {
+    System.out.println("Hello World\n");
   }
-</pre>
+}
+
+{% endhighlight %}
 <div id="cap">Fig 1: Hello.java</div>
 
 Compile the source file using <code class="codeblock">javac Hello.java</code>. You will have a file named *Hello.class* as a result of the compilation. Use the command <code class="codeblock">java Hello</code>. Do not include the extension *.class* when running Java programs, only the file name portion of the resulting *.class* file is required.

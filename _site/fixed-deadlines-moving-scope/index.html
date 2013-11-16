@@ -27,6 +27,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
 
 <meta charset="utf-8">
 
@@ -39,13 +40,22 @@
 <meta charset="utf-8"/>
 
 
-
+<!-- 1. Moot style -->
+<link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css">
+<!-- 2. jQuery library (v1.7+ required) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- 3. Moot application -->
+<script src="//cdn.moot.it/1/moot.min.js"></script>
+<!-- 4. Fine tuning -->
+<!-- 4.1 Use a mobile optimized version of Moot: http://goo.gl/EOpFl -->
+<meta name="viewport" content="width=device-width">
+<!-- 4.2 Force latest IE rendering engine: http://goo.gl/tf4JH -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <style>
 
-* {
+p, li, p, br {
   line-height: 1.6em;
-  background: #FBFBFB;
   font-family: 'Libre Baskerville', serif;
   font-size: 15px;
   color: #2d2d2d;
@@ -70,24 +80,36 @@ li {margin-bottom: 10px;}
 
 h1, h2, h3, h4 {
   font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
-h1 {font-size: 30px;} header h1 {text-align:center; font-size: 35px; color: #181818;}
+h1 {font-size: 30px;} 
+  header h1 {font-size: 45px; 
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, 'Verdana' ;
+    font-weight: bold;
+    color: #555555;
+    /*color; #181818;*/
+  }
 h2 {font-size: 25px;}
 h3 {font-size: 20px;}
 h4 {font-size: 17px;}
 h4.frontpage {padding-bottom:0; margin-bottom:2px;}
 
 body {
-  margin:0;
+  margin:0 auto;
   padding:0;
   border:0;
-  width: 100%;
+  width: 960px;
+  background: #f1f1f1;
 }
 
-  .innerbody {
-	  width:95%;
-	  margin: 0 auto;
-  }
+#archives {
+  background: #FFFFFF;
+  clear: both;
+  width: 70%;
+  margin: 50px auto;
+  padding: 50px 30px 60px 30px;
+  border: 3px solid #b6b6b6;
+}
 
 a:link, a:visited { color: #3a5d9f;}
 
@@ -122,34 +144,8 @@ hr {
   font-size: 18px;
 }
 
+#postmeta {margin-top: 40px;}
 .light {text-decoration:overline;}
-
-table {
-  border: 1px solid #CACACA;
-  width: 100%;
-  border-collapse:collapse;
-  margin-bottom: 50px;
-}
-  table th {
-    font-family: 'Courier';
-    padding: 5px;
-    text-align: left;
-  }
-  table td {
-    min-width: 30px;
-    max-width: 500px;
-    border: 1px solid #CACACA;
-    padding: 5px;
-    font-family: 'Courier';
-    color: gray;
-  }
-  table td:first-child {
-    text-align: right;
-    width: auto;
-  }
-  table td:nth-child(2) {
-    text-align: center;
-  }
 
   img {
     display: block;
@@ -157,49 +153,153 @@ table {
     padding: 30px;
   }
 
-  code, pre {
-    font-family: 'Lekton';
-    font-size: 16px;
-  }
-  
-  pre { 
-    border: 1px dashed #b1b1b1;
-    padding: 10px;
+  code {
+  	font-family: 'Lekton';
   }
 
-  code.codeblock {
+  pre {
+  	font-family: 'Lekton';
+  	font-size: 14px;
+
+    line-height: 1.2em;
+  /*  background: #FBFCF9; */
+    /*
+    border: 3px solid #F0F2E7;
+    */
+
+  	margin-bottom:2em;
+    margin-top:2em;
+    white-space: pre-wrap;
+  }
+
+  .codeblock {
     font-size: 15px;
+    font-family: 'Lekton';
     color: #000000;
+    padding:0px;
+    margin: 0px;
+    border: 0px;  
+  }
+
+    pre.codeblock {
+      padding: .7em;
+      /*background: #e8ebef;*/
+      background: #F0F0FF; 
+      color: #000000;
+      line-height:120%;
   }
 
   #cap, .lst {
-    text-align: center;
+    text-align: left;
     color: #800000;
     margin-top: 0px;
+    
   }
 
+  #wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  article {
+    background: #FFFFFF;
+    clear: both;
+    width: 73%;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 50px 30px 60px 30px;
+    border: 3px solid #b6b6b6;
+  }
+  
+  .toc {
+    margin-top: 120px;
+    width: 18%;
+    text-align: right;
+    float: left;
+    padding-right: 10px;
+  }
+  
+  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:20px;}
+  .toc a:link, .toc a:visited {font-family: 'Titillium Web' , 'sans-serif'; text-decoration:none;}
+  .toc a:hover {text-decoration:underline;}
+
+  #copyright {
+    margin: 40px 0px 0px 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #CACACA;
+  }
+
+  /* Pygments stylesheets */
+
+  .hll { background-color: #ffffcc }
+  .c { color: #408080; font-style: italic } /* Comment */
+  .err { border: 1px solid #FF0000 } /* Error */
+  .k { color: #000000; font-weight: normal } /* Keyword */
+  .o { color: #666666 } /* Operator */
+  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+  .cp { color: #BC7A00 } /* Comment.Preproc */
+  .c1 { color: #408080; font-style: italic } /* Comment.Single */
+  .cs { color: #408080; font-style: italic } /* Comment.Special */
+  .gd { color: #A00000 } /* Generic.Deleted */
+  .ge { font-style: italic } /* Generic.Emph */
+  .gr { color: #FF0000 } /* Generic.Error */
+  .gh { color: #000080; font-weight: normal } /* Generic.Heading */
+  .gi { color: #00A000 } /* Generic.Inserted */
+  .go { color: #808080 } /* Generic.Output */
+  .gp { color: #000080; font-weight: normal } /* Generic.Prompt */
+  .gs { font-weight: normal } /* Generic.Strong */
+  .gu { color: #800080; font-weight: normal } /* Generic.Subheading */
+  .gt { color: #0040D0 } /* Generic.Traceback */
+  .kc { color: #e57300; font-weight: normal } /* Keyword.Constant */
+  .kd { color: #e57300; font-weight: normal } /* Keyword.Declaration */
+  .kn { color: #008000; font-weight: normal } /* Keyword.Namespace */
+  .kp { color: #008000 } /* Keyword.Pseudo */
+  .kr { color: #008000; font-weight: normal } /* Keyword.Reserved */
+  .kt { color: #B00040; } /* Keyword.Type */
+  .m { color: #666666; } /* Literal.Number */
+  .s { color: #0000e5; } /* Literal.String */
+  .na { color: #7D9029; } /* Name.Attribute */
+  .nb { color: #008000; } /* Name.Builtin */
+  .nc { color: #0000FF; font-weight: normal } /* Name.Class */
+  .no { color: #880000 } /* Name.Constant */
+  .nd { color: #AA22FF } /* Name.Decorator */
+  .ni { color: #999999; font-weight: normal } /* Name.Entity */
+  .ne { color: #D2413A; font-weight: normal } /* Name.Exception */
+  .nf { color: #0000FF } /* Name.Function */
+  .nl { color: #A0A000 } /* Name.Label */
+  .nn { color: #0000FF; font-weight: normal } /* Name.Namespace */
+  .nt { color: #008000; font-weight: normal } /* Name.Tag */
+  .nv { color: #19177C } /* Name.Variable */
+  .ow { color: #AA22FF; font-weight: normal } /* Operator.Word */
+  .w { color: #bbbbbb } /* Text.Whitespace */
+  .mf { color: #666666 } /* Literal.Number.Float */
+  .mh { color: #666666 } /* Literal.Number.Hex */
+  .mi { color: #666666 } /* Literal.Number.Integer */
+  .mo { color: #666666 } /* Literal.Number.Oct */
+  .sb { color: #0000e5 } /* Literal.String.Backtick */
+  .sc { color: #0000e5 } /* Literal.String.Char */
+  .sd { color: #0000e5; font-style: italic } /* Literal.String.Doc */
+  .s2 { color: #0000e5 } /* Literal.String.Double */
+  .se { color: #0000e5; font-weight: normal } /* Literal.String.Escape */
+  .sh { color: #0000e5 } /* Literal.String.Heredoc */
+  .si { color: #BB6688; font-weight: normal } /* Literal.String.Interpol */
+  .sx { color: #008000 } /* Literal.String.Other */
+  .sr { color: #BB6688 } /* Literal.String.Regex */
+  .s1 { color: #0000e5 } /* Literal.String.Single */
+  .ss { color: #19177C } /* Literal.String.Symbol */
+  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+  .vc { color: #19177C } /* Name.Variable.Class */
+  .vg { color: #19177C } /* Name.Variable.Global */
+  .vi { color: #19177C } /* Name.Variable.Instance */
+  .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 </style>
 
   </head>
   <body>
         
-    <div id='mast'>
-  NOTEBOOK OF 
-  <a href='/' 'rel=author'>
-            TED HAGOS</a> 
-</div>
-        
-    <!--
-    <div id="articletitle">Deadline, Scope, Resource
-    </div>
-    -->
-          
-    <!--
-    <div class='content-meta'>
-       Wednesday , January 30 , 2013
-    </div>
-    -->
     <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
 
       <header>
@@ -231,13 +331,15 @@ table {
       <div id="postmeta" class='light'>
         file: #project_management  #thoughts
       </div>
-    </article>        
-    <footer>
+      by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
       
-  <a href='/copyright.html'>Copyright</a>&nbsp;
-&copy; 2004-2013 <a href='https://plus.google.com/u/0/100317694679641558339?rel=author'>Ted Hagos</a> 
-
-
+      <div id="copyright">
+&copy; Ted Hagos, All rights reserved 
+</div>
+      
+    </article>
+                
+    <footer>
 
     </footer>
     <script>
