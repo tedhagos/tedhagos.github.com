@@ -15,7 +15,6 @@ categories:
 ---
 
 
-<h1 class="chapter">INTRODUCTION</h1>
 
 These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.
 

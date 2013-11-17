@@ -8,7 +8,17 @@
   <body>
         
     <div id='wrap'>    
-    <article itemscope itemtype="http://schema.org/Article">
+      
+    <div class='toc'>      
+      <ul>
+        <li><a href="#">Introduction</a></i>
+        <li><a href="#">Programming Concepts</a></i>
+        <li><a href="#">Overview of Java</a></i>
+        <li><a href="#">First program</a></i>
+      </ul>
+    </div>  
+      
+    <article itemscope itemtype="http://schema.org/Article" class='withtoc'>
 
       <header>
       <hgroup>
@@ -33,16 +43,7 @@
       </a>  
       {% include copyright.html %}
     </article>
-    
-    <div class='toc'>      
-      <ul>
-        <li><a href="#">Introduction</a></i>
-        <li><a href="#">Programming Concepts</a></i>
-        <li><a href="#">Overview of Java</a></i>
-        <li><a href="#">First program</a></i>
-      </ul>
-    </div>
-    
+      
     </div> <!-- wrap -->        
     <footer>
     

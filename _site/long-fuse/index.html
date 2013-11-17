@@ -87,18 +87,20 @@ h1 {font-size: 30px;}
     font-family: 'Helvetica Neue', 'Helvetica', Arial, 'Verdana' ;
     font-weight: bold;
     color: #555555;
+    text-align: right;
+    padding-bottom: 30px;
     /*color; #181818;*/
   }
+  header h1.center {text-align:center;}
 h2 {font-size: 25px;}
 h3 {font-size: 20px;}
 h4 {font-size: 17px;}
 h4.frontpage {padding-bottom:0; margin-bottom:2px;}
 
 body {
-  margin:0 auto;
+  margin:0;
   padding:0;
   border:0;
-  width: 960px;
   background: #f1f1f1;
 }
 
@@ -162,8 +164,9 @@ hr {
   	font-size: 14px;
 
     line-height: 1.2em;
-  /*  background: #FBFCF9; */
-    /*
+    
+    /*  
+    background: #FBFCF9;
     border: 3px solid #F0F2E7;
     */
 
@@ -193,31 +196,24 @@ hr {
     text-align: left;
     color: #800000;
     margin-top: 0px;
-    
   }
 
-  #wrap {
-    width: 95%;
-    margin: 0 auto;
-  }
+  #wrap { width: 90%; margin: 0 auto; padding-top: 40px;}
   
   article {
+    margin-bottom: 20px;
     background: #FFFFFF;
-    clear: both;
-    width: 73%;
-    float: right;
-    margin-top: 20px;
-    margin-bottom: 40px;
     padding: 50px 30px 60px 30px;
     border: 3px solid #b6b6b6;
   }
+  article.withtoc {width: 73%;float: right;}
+  article.notoc {width: 90%;}
   
   .toc {
-    margin-top: 120px;
+    margin-top: 90px;
     width: 18%;
     text-align: right;
     float: left;
-    padding-right: 10px;
   }
   
   .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:20px;}
@@ -299,12 +295,15 @@ hr {
 
   </head>
   <body>
-        
-    <article itemscope itemtype="http://schema.org/Article" class='innerbody'>
+    
+    
+    <div id="wrap"> 
+         
+    <article itemscope itemtype="http://schema.org/Article" class='notoc'>
 
       <header>
       <hgroup>
-        <h1>Long Fuse</h1>
+        <h1 class='center'>Long Fuse</h1>
       </hgroup>
       </header>
       
@@ -329,7 +328,10 @@ hr {
 </div>
       
     </article>
-                
+    
+    
+    
+    </div> <!-- wrap -->            
     <footer>
 
     </footer>

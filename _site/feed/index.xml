@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-11-17T00:14:31+08:00</updated>
+ <updated>2013-11-18T00:43:16+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>YAPT (Yet Another Pomodoro Timer)</title>
+   <title>YAPT Pomodoro Timer</title>
    <link href="http://tedhagos.com /yapt"/>
    <updated>2013-11-04T00:00:00+08:00</updated>
    <id>http://tedhagos.com /yapt</id>
@@ -1204,10 +1204,7 @@ catch(Exception e) {
    <link href="http://tedhagos.com /java-programming"/>
    <updated>2004-02-18T00:00:00+08:00</updated>
    <id>http://tedhagos.com /java-programming</id>
-   <content type="html">&lt;h1 class=&quot;chapter&quot;&gt;INTRODUCTION&lt;/h1&gt;
-
-
-&lt;p&gt;These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.&lt;/p&gt;
+   <content type="html">&lt;p&gt;These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.&lt;/p&gt;
 
 &lt;p&gt;Having said that, what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.&lt;/p&gt;
 
