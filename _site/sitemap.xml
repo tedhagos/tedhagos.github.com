@@ -3,6 +3,24 @@
 
   
   <url>
+    <loc>http://tedhagos.com/java-identifiers</loc>
+    <lastmod>2013-11-19T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java-key-concepts</loc>
+    <lastmod>2013-11-18T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java-beginning-to-program</loc>
+    <lastmod>2013-11-18T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/yapt</loc>
     <lastmod>2013-11-04T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>

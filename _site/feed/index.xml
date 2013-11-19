@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-11-18T16:30:09+08:00</updated>
+ <updated>2013-11-19T09:48:37+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -13,11 +13,191 @@
 
  
  <entry>
+   <title>Identifiers</title>
+   <link href="http://tedhagos.com /java-identifiers"/>
+   <updated>2013-11-19T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java-identifiers</id>
+   <content type="html">&lt;p&gt;An identifier is any part of your program that you must define for yourself. These include &lt;em&gt;classes, interfaces, methods, variables, parameters&lt;/em&gt; and &lt;em&gt;packages&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You must observe the following rules when creating identifiers. It must:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;consist of alphanumeric characters. You can use the characters a-z, A-Z and 0-9&lt;/li&gt;
+&lt;li&gt;not start with a number but it can start with an underscore or a dollar sign&lt;/li&gt;
+&lt;li&gt;not have any special characters inside it, e.g. #, &amp;amp;, @ or *&lt;/li&gt;
+&lt;li&gt;not be same as java keyword or literal&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;Keywords&lt;/h2&gt;
+
+&lt;p&gt;There are 50+ keywords in the Java language but not all of them are in use. The &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;goto&lt;/em&gt; keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language.&lt;/p&gt;
+
+&lt;p&gt;In the past, the words &lt;em&gt;true, false&lt;/em&gt; and &lt;em&gt;null&lt;/em&gt; appeared as keywords . Sometime in the past, &lt;em&gt;null, true&lt;/em&gt; and &lt;em&gt;false&lt;/em&gt; have stopped being keywords and became known as literal values (From the Java Lang Spec). These are semantics and are probably of interest only to the language lawyers of Java. If your pursuits are more of the practical nature, I suggest not to bother with the semantic difference. The point is you cannot use keywords and literals as variable names or identifiers in your own code lest you will have a problem during compilation. This is the most important reason why you need to be familiar with them.&lt;/p&gt;
+
+&lt;p&gt;It is always best to consult the most recent version of the Java Language Specification when it comes to these things because they are a matter of specification. The keywords are printed here only for ease of reference.&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  abstract  continue    for             new           switch
+  assert        default     goto            package     synchronized
+  boolean       do            if                private     this
+  break       double        implements  protected   throw
+  byte        else        import          public        throws
+  case        enum        instanceof    return      transient
+  catch       extends       int short     try
+  char        final       interface   static        void
+  class       finally       long            strictfp    volatile
+  const       float       native          super       while
+&lt;/pre&gt;
+
+
+&lt;p&gt;You do not need to memorize all the keywords now, but I think in time you will know them by heart as your practice grows.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Can you tell which ones are valid identifiers? Why? Why not?&lt;/p&gt;
+
+&lt;p&gt;small number&lt;/p&gt;
+
+&lt;p&gt;bignumber&lt;/p&gt;
+
+&lt;p&gt;this-is-a-very-long-identifier_is-it-legal&lt;/p&gt;
+
+&lt;p&gt;IsThisLegal?&lt;/p&gt;
+
+&lt;p&gt;_IsThisLegal&lt;/p&gt;
+
+&lt;p&gt;class_name&lt;/p&gt;
+
+&lt;p&gt;import-no1&lt;/p&gt;
+
+&lt;p&gt;transient&lt;/p&gt;
+
+&lt;p&gt;volatile&lt;/p&gt;
+
+&lt;p&gt;careful-this-is-volatile&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Key concepts</title>
+   <link href="http://tedhagos.com /java-key-concepts"/>
+   <updated>2013-11-18T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java-key-concepts</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Java is a compiled language.&lt;/strong&gt; You need to write the programming statements in a source file, compile them to produce an executable format or object code and finally run the executable file. If you did not make syntactical mistakes the source code will compile without problems. If you did commit syntactical errors then the compiler will not let you through, you will not be able to produce an executable format of your source program.&lt;/p&gt;
+
+&lt;p&gt;A Java source file (also called a compilation unit) is a simple text file. You can use basic text editors to create and edit a source file. The choice for program editor is at best, a matter of preference. The only requirement for the text editor is it can write in ASCII format &amp;mdash; better yet if it can handle UNICODE. So pick any that catches your fancy.&lt;/p&gt;
+
+&lt;p&gt;A Java source file will bear the extension .java, no matter which platform you are using. Don't worry that the extension doesn't follow the usual three letter format, the popular OS platforms can handle that kind of file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Java is an Object Oriented language.&lt;/strong&gt; This has many consequences that affects you as a programmer, but right now, it affects what we can write inside our very first source file. You can write only classes and interfaces inside a source file. For our first example, we will write a class and not an interface &amp;mdash; interfaces are advanced constructs in Java, we will leave that for later. Inside classes, you can write variables, methods and program statements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The source file cannot be ran directly on your platform.&lt;/strong&gt; It needs to be compiled. If you have installed the JDK (Java Development Kit) properly on your platform, you can already use the java compiler. The compiler takes on a source file (or source files) as an argument and turns them into executable files. These files do not have .com or .exe extensions, they have .class extensions instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You cannot run .class files directly on top of your OS.&lt;/strong&gt; Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — &lt;code class=&quot;codeblock&quot;&gt;$ java executable_file&lt;/code&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Beginning to program</title>
+   <link href="http://tedhagos.com /java-beginning-to-program"/>
+   <updated>2013-11-18T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java-beginning-to-program</id>
+   <content type="html">&lt;p&gt;There are many kinds of Java programs. Some run on webservers (servlet &amp;amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &amp;mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/coding-process.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.&lt;/p&gt;
+
+&lt;p&gt;Create a file named Hello.java. For now, just copy the contents from the sample code below&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/**&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;* Our first program&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;* This is a block comment&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;* */&lt;/span&gt;
+   
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello World\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Compile the source file using &lt;code class=&quot;codeblock&quot;&gt;javac Hello.java&lt;/code&gt;. You will have a file named &lt;em&gt;Hello.class&lt;/em&gt; as a result of the compilation. Use the command &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;. Do not include the extension &lt;em&gt;.class&lt;/em&gt; when running Java programs, only the file name portion of the resulting &lt;em&gt;.class&lt;/em&gt; file is required.&lt;/p&gt;
+
+&lt;p&gt;If you typed your program exactly as it appeared in Fig 1.1 the program should compile without problems. If you encountered any compilation error, to back to the program editor and check the  spelling of each and every word. Make sure you did not miss a curly brace or perhaps spelt &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; as &lt;code class=&quot;codeblock&quot;&gt;Main()&lt;/code&gt;. Java is case sensitive &amp;mdash; &lt;em&gt;main&lt;/em&gt; is different from &lt;em&gt;Main&lt;/em&gt;. When you are sure that the program is free from syntactical errors, compile it again, then run.&lt;/p&gt;
+
+&lt;p&gt;The output of the sample code is, of course, &quot;Hello World&quot;. True to tradition of every beginning programmer since Kernighan and Ritchie first started it on the first edition of the C Programming Language in 1969.&lt;/p&gt;
+
+&lt;p&gt;Unexciting as the output maybe, it is simple yet rich enough to get our feet wet in Java programming. You need to get used to the structure of the Hello program because a lot of the codes you will write starts out this way.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The first seven lines of the Hello program are &lt;em&gt;comments&lt;/em&gt;. These are non-executable statements and you can put them anywhere &amp;mdash; inside or outside a class. You can write comments in three ways.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;//&lt;/strong&gt; &amp;mdash; This is an in-line comment, effective only on the current line. Anything to the right of this comment is ignored. This is suitable for commenting individual lines of code&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;codeblock&quot;&gt;/*   */&lt;/code&gt; &amp;mdash; This is a block comment, anything in between the inner asterisks will be ignored by the compiler. These can span multiple lines&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;codeblock&quot;&gt;/**   */&lt;/code&gt; &amp;mdash; Another block comment that is used by JavaDoc, don't worry about this right now. Just experiment with these three for the time being&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;After the comments is a class block. Everything inside the outermost pair of curly braces is the class block. Java is an OO language, and a strict one at that. You cannot write anything meaningul outside a class or interface. Even a simple output to the screen has to be within the context of a class. This is the reason why you need to be very comfortable with the structure of the Hello program as early as now or you will not go very far otherwise.&lt;/p&gt;
+
+&lt;p&gt;A Java class is constructed using the keyword &lt;code class=&quot;codeblock&quot;&gt;class&lt;/code&gt; followed a &lt;em&gt;class name&lt;/em&gt;. The class name is something that you will define, in our example, the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The class name is followed by a pair of curly braces. Anything inside the curly braces constitutes the body of the class.&lt;/p&gt;
+
+&lt;pre&gt;
+  
+  // cannot write methods and variables here
+  // only import, package statements and 
+  // comments are allowed outside
+  // the class 
+  
+  class Hello {
+    // methods and variables goes here
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;You might have noticed that our example class name is &lt;em&gt;Hello&lt;/em&gt; and that is stored in a file named &lt;em&gt;Hello.java&lt;/em&gt;. That is incidental and not a requirement at all. It would have been a requirement if we made the class &lt;em&gt;public&lt;/em&gt;. &amp;mdash; the &lt;em&gt;public&lt;/em&gt; keyword is an access modifier, but don't bother with that for the moment, you will have a chance to study its effects on coding later on.&lt;/p&gt;
+
+&lt;p&gt;If we changed our construction to declare a public class, like in this&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+  public class Hello {
+    public static void main(String args[]) {
+
+    }
+  }
+&lt;/pre&gt;
+
+
+&lt;p&gt;then it becomes mandatory that the name of class be consistent with the name of the source file. There is a rule in Java programming that a source file can only contain, at most, one public class and if a class is defined as public in a source file, then name of the source file must be consistent with the name of the public class &amp;mdash; this is one of the many rules you need to be acquainted with Java.&lt;/p&gt;
+
+&lt;p&gt;The name of the generated object file was &lt;em&gt;Hello.class&lt;/em&gt; not because the name of source file is &lt;em&gt;Hello.java&lt;/em&gt; but because the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The name of class affects the name of the object file.&lt;/p&gt;
+
+&lt;p&gt;Like most programming languages, a Java program needs an entry point. In this case, that is the &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; method &amp;mdash; a method and a function are technically the same. The semantic difference has got something to do with OOP philosophies. We won't bother with that right now, but you need to get used to the term method, rather than function.&lt;/p&gt;
+
+&lt;p&gt;Having a &lt;em&gt;main&lt;/em&gt; method is not a requisite for compilation. It is a runtime requirement. Any class that you will pass on the JRE requires a main function. Not all classes will require this function, only those classes that you will use as a starting point of your program. In our example, class Hello is a program starting point.&lt;/p&gt;
+
+&lt;p&gt;Java has a very specific format for a main function. The function needs to be &lt;em&gt;public&lt;/em&gt;, &lt;em&gt;static&lt;/em&gt; and &lt;em&gt;void&lt;/em&gt; &amp;mdash; these are reserved words in Java. Each have a specific action but we will defer their discussion for later.&lt;/p&gt;
+
+&lt;p&gt;Inside the main function is &lt;em&gt;System.out.println()&lt;/em&gt; statement. This is a very common command in Java. You can practically put anything inside the parentheses and it will be printed to the screen. The string literal &quot;Hello World&quot; was placed inside the function &lt;em&gt;println()&lt;/em&gt;. String literals are defined be enclosing words using a pair of double quotation marks. You cannot define a string literal using single quotes &amp;mdash; that results into a different action.&lt;/p&gt;
+
+&lt;p&gt;Lastly, all statements in a Java program are terminated by a semicolon. The white space in Java has no meaning. Indentations in Java also have no meaning, hence, you need to use the semicolon to intstruct the compiler that you are done with what you want to say. Best to keep this rule in mind, a lot of the first few rookie mistake you will make is because of the semicolon &amp;mdash; more precisely, the lack of it.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>YAPT Pomodoro Timer</title>
    <link href="http://tedhagos.com /yapt"/>
    <updated>2013-11-04T00:00:00+08:00</updated>
    <id>http://tedhagos.com /yapt</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;WHAT IT SHOULD DO :&lt;/strong&gt;&lt;/p&gt;
+   <content type="html">&lt;h2&gt;Use cases&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Countdown, of course. It always count down from 30 minutes. I wrote YAPT to serve a very narrow purpose. It's an egg timer to mark focused activities. 30 minutes makes sense for a focused activity. Besides, if you feel you can hold a focused state of mind more than the mere mortals can, then just fire it up again for another 30 minutes.&lt;/li&gt;
@@ -28,9 +208,7 @@
 &lt;/ol&gt;
 
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;JOURNAL&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Journal&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2013-11-4. Started&lt;/li&gt;
@@ -1211,235 +1389,6 @@ catch(Exception e) {
 &lt;p&gt;The code samples and exercises in this material were built using plain editors and the Java Development Kit. The use of simple tools is ideal for learning because there are no magic tricks and convenience facilities (like the case if you use an IDE). As a result, your brain will work harder because you are forced to use primitive tools. In a production environment or consulting environment, this reasoning might not be suitable and hence, the decision for tool selection will be influenced by other factors such as programmer productivity, time schedules and other constraints.&lt;/p&gt;
 
 &lt;p&gt;For the purpose of learning programming in Java &amp;mdash; which is the goal of this material &amp;mdash; we need our brains and faculties to work harder than usual to maximize learning and understanding.&lt;/p&gt;
-
-&lt;p&gt;Here we go.&lt;/p&gt;
-
-&lt;hr class=&quot;chapterbreak&quot;/&gt;
-
-
-
-
-&lt;h1 class=&quot;chapter&quot;&gt;BEGINING TO PROGRAM&lt;/h1&gt;
-
-
-&lt;p&gt;Before we ran, we learned to walk first. Before we walked, we needed to learn how to get up on our feet &amp;mdash; and way before that, we crawled.&lt;/p&gt;
-
-&lt;p&gt;Before we build highly scalable web-endpoints or a flashy Android application, we need to do the crawling analog in Java. We need to learn how to write a basic program using the Java language. We need to discover the mechanics of compilation and runtime, what legal statements can we declare and their effects. We need to know how Java statements are organized, what kinds of control structures are available, what kinds of things we can create and manipulate.&lt;/p&gt;
-
-&lt;p&gt;The goal for now is take a first step towards a very long road of programming. We need to learn how programs are constructed, what tools and with what materials should we construct them and finally, how should we run them.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;KEY CONCEPTS&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Java is a compiled language.&lt;/strong&gt; You need to write the programming statements in a source file, compile them to produce an executable format or object code and finally run the executable file. If you did not make syntactical mistakes the source code will compile without problems. If you did commit syntactical errors then the compiler will not let you through, you will not be able to produce an executable format of your source program.&lt;/p&gt;
-
-&lt;p&gt;A Java source file (also called a compilation unit) is a simple text file. You can use basic text editors to create and edit a source file. The choice for program editor is at best, a matter of preference. The only requirement for the text editor is it can write in ASCII format &amp;mdash; better yet if it can handle UNICODE. So pick any that catches your fancy.&lt;/p&gt;
-
-&lt;p&gt;A Java source file will bear the extension .java, no matter which platform you are using. Don't worry that the extension doesn't follow the usual three letter format, the popular OS platforms can handle that kind of file.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Java is an Object Oriented language.&lt;/strong&gt; This has many consequences that affects you as a programmer, but right now, it affects what we can write inside our very first source file. You can write only classes and interfaces inside a source file. For our first example, we will write a class and not an interface &amp;mdash; interfaces are advanced constructs in Java, we will leave that for later. Inside classes, you can write variables, methods and program statements.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The source file cannot be ran directly on your platform.&lt;/strong&gt; It needs to be compiled. If you have installed the JDK (Java Development Kit) properly on your platform, you can already use the java compiler. The compiler takes on a source file (or source files) as an argument and turns them into executable files. These files do not have .com or .exe extensions, they have .class extensions instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;You cannot run .class files directly on top of your OS.&lt;/strong&gt; Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — &lt;code class=&quot;codeblock&quot;&gt;$ java executable_file&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;There are many kinds of Java programs. Some run on webservers (servlet &amp;amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &amp;mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/coding-process.png&quot;/&gt;&lt;/p&gt;
-
-&lt;div id=&quot;cap&quot;&gt;Coding Process&lt;/div&gt;
-
-
-&lt;p&gt;Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.&lt;/p&gt;
-
-&lt;p&gt;Create a file named Hello.java. For now, just copy the contents from the sample code below&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/**&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;* Our first program&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;* This is a block comment&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;* */&lt;/span&gt;
-   
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello World\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-
-
-&lt;div id=&quot;cap&quot;&gt;Fig 1: Hello.java&lt;/div&gt;
-
-
-&lt;p&gt;Compile the source file using &lt;code class=&quot;codeblock&quot;&gt;javac Hello.java&lt;/code&gt;. You will have a file named &lt;em&gt;Hello.class&lt;/em&gt; as a result of the compilation. Use the command &lt;code class=&quot;codeblock&quot;&gt;java Hello&lt;/code&gt;. Do not include the extension &lt;em&gt;.class&lt;/em&gt; when running Java programs, only the file name portion of the resulting &lt;em&gt;.class&lt;/em&gt; file is required.&lt;/p&gt;
-
-&lt;p&gt;If you typed your program exactly as it appeared in Fig 1.1 the program should compile without problems. If you encountered any compilation error, to back to the program editor and check the  spelling of each and every word. Make sure you did not miss a curly brace or perhaps spelt &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; as &lt;code class=&quot;codeblock&quot;&gt;Main()&lt;/code&gt;. Java is case sensitive &amp;mdash; &lt;em&gt;main&lt;/em&gt; is different from &lt;em&gt;Main&lt;/em&gt;. When you are sure that the program is free from syntactical errors, compile it again, then run.&lt;/p&gt;
-
-&lt;p&gt;The output of Fig 1 is a very uninteresting &quot;Hello World&quot;. True to tradition of every beginning programmer since Kernighan and Ritchie first started it on the first edition of the C Programming Language in 1969.&lt;/p&gt;
-
-&lt;p&gt;Unexciting as the output maybe, it is simple yet rich enough to get our feet wet in Java programming. You need to get used to the structure of the Hello program because a lot of the codes you will write starts out this way.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;WHAT HAVE WE JUST DONE&lt;/h2&gt;
-
-&lt;p&gt;The first seven lines of the Hello program are &lt;em&gt;comments&lt;/em&gt;. These are non-executable statements and you can put them anywhere &amp;mdash; inside or outside a class. You can write comments in three ways.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;//&lt;/code&gt;  &amp;mdash; This is an in-line comment, effective only on the current line. Anything to the right of this comment is ignored. This is suitable for commenting individual lines of code&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;/*   */&lt;/code&gt; &amp;mdash; This is a block comment, anything in between the inner asterisks will be ignored by the compiler. These can span multiple lines&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code class=&quot;codeblock&quot;&gt;/**   */&lt;/code&gt; &amp;mdash; Another block comment that is used by JavaDoc, don't worry about this right now. Just experiment with these three for the time being&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;After the comments is a class block. Everything inside the outermost pair of curly braces is the class block. Java is an OO language, and a strict one at that. You cannot write anything meaningul outside a class or interface. Even a simple output to the screen has to be within the context of a class. This is the reason why you need to be very comfortable with the structure of the Hello program as early as now or you will not go very far otherwise.&lt;/p&gt;
-
-&lt;p&gt;A Java class is constructed using the keyword &lt;code class=&quot;codeblock&quot;&gt;class&lt;/code&gt; followed a &lt;em&gt;class name&lt;/em&gt;. The class name is something that you will define, in our example, the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The class name is followed by a pair of curly braces. Anything inside the curly braces constitutes the body of the class.&lt;/p&gt;
-
-&lt;pre&gt;
-  
-  // cannot write methods and variables here
-  // only import, package statements and 
-  // comments are allowed outside
-  // the class 
-  
-  class Hello {
-    // methods and variables goes here
-  }
-&lt;/pre&gt;
-
-
-&lt;div id=&quot;cap&quot;&gt;Fig 2: Basic Java class structure&lt;/div&gt;
-
-
-&lt;p&gt;You might have noticed that our example class name is &lt;em&gt;Hello&lt;/em&gt; and that is stored in a file named &lt;em&gt;Hello.java&lt;/em&gt;. That is incidental and not a requirement at all. It would have been a requirement if we made the class &lt;em&gt;public&lt;/em&gt;. &amp;mdash; the &lt;em&gt;public&lt;/em&gt; keyword is an access modifier, but don't bother with that for the moment, you will have a chance to study its effects on coding later on.&lt;/p&gt;
-
-&lt;p&gt;If we changed our construction to declare a public class, like in this&lt;/p&gt;
-
-&lt;pre class=&quot;codeblock&quot;&gt;
-  public class Hello {
-    public static void main(String args[]) {
-
-    }
-  }
-&lt;/pre&gt;
-
-
-&lt;p&gt;then it becomes mandatory that the name of class be consistent with the name of the source file. There is a rule in Java programming that a source file can only contain, at most, one public class and if a class is defined as public in a source file, then name of the source file must be consistent with the name of the public class &amp;mdash; this is one of the many rules you need to be acquainted with Java.&lt;/p&gt;
-
-&lt;p&gt;The name of the generated object file was &lt;em&gt;Hello.class&lt;/em&gt; not because the name of source file is &lt;em&gt;Hello.java&lt;/em&gt; but because the name of the class is &lt;em&gt;Hello&lt;/em&gt;. The name of class affects the name of the object file.&lt;/p&gt;
-
-&lt;p&gt;Like most programming languages, a Java program needs an entry point. In this case, that is the &lt;code class=&quot;codeblock&quot;&gt;main()&lt;/code&gt; method &amp;mdash; a method and a function are technically the same. The semantic difference has got something to do with OOP philosophies. We won't bother with that right now, but you need to get used to the term method, rather than function.&lt;/p&gt;
-
-&lt;p&gt;Having a &lt;em&gt;main&lt;/em&gt; method is not a requisite for compilation. It is a runtime requirement. Any class that you will pass on the JRE requires a main function. Not all classes will require this function, only those classes that you will use as a starting point of your program. In our example, class Hello is a program starting point.&lt;/p&gt;
-
-&lt;p&gt;Java has a very specific format for a main function. The function needs to be &lt;em&gt;public&lt;/em&gt;, &lt;em&gt;static&lt;/em&gt; and &lt;em&gt;void&lt;/em&gt; &amp;mdash; these are reserved words in Java. Each have a specific action but we will defer their discussion for later.&lt;/p&gt;
-
-&lt;p&gt;Inside the main function is &lt;em&gt;System.out.println()&lt;/em&gt; statement. This is a very common command in Java. You can practically put anything inside the parentheses and it will be printed to the screen. The string literal &quot;Hello World&quot; was placed inside the function &lt;em&gt;println()&lt;/em&gt;. String literals are defined be enclosing words using a pair of double quotation marks. You cannot define a string literal using single quotes &amp;mdash; that results into a different action.&lt;/p&gt;
-
-&lt;p&gt;Lastly, all statements in a Java program are terminated by a semicolon. The white space in Java has no meaning. Indentations in Java also have no meaning, hence, you need to use the semicolon to intstruct the compiler that you are done with what you want to say. Best to keep this rule in mind, a lot of the first few rookie mistake you will make is because of the semicolon &amp;mdash; more precisely, the lack of it.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;EXERCISE TIME&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a Java program that prints out your name and email address on two separate lines.&lt;/li&gt;
-&lt;li&gt;Create a Java program that prints outo your name and email address on two separate lines, but you can only use a single &lt;em&gt;println()&lt;/em&gt; statement.&lt;/li&gt;
-&lt;li&gt;Play around with the source code of the Hello program. Try to compile and run. Record the results of the compilation and execution each time you make a change.&lt;/li&gt;
-&lt;li&gt;Change the spelling of function main to Main&lt;/li&gt;
-&lt;li&gt;Remove the opening curly brace immediately right after &lt;em&gt;main(String []args)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Change &quot;Hello World&quot; to &lt;em&gt;Hello\n.World&lt;/em&gt;. What's changed? Try to find out what the &lt;em&gt;\n&lt;/em&gt; means&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;hr class=&quot;chapterbreak&quot;/&gt;
-
-
-
-
-&lt;h1 class=&quot;chapter&quot;&gt;RESERVED WORDS&lt;/h1&gt;
-
-
-&lt;p&gt;You will be defining a lot of things in Java. You will name your classes, variables and methods. There are only a few rules you need to observe when creating these names, one of these rules is to steer clear from reserved words or keywords.&lt;/p&gt;
-
-&lt;p&gt;There are 50+ keywords in the Java language but not all of them are in use. The &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;goto&lt;/em&gt; keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language.&lt;/p&gt;
-
-&lt;p&gt;In the past, the words &lt;em&gt;true, false&lt;/em&gt; and &lt;em&gt;null&lt;/em&gt; appeared as keywords . Sometime in the past, &lt;em&gt;null, true&lt;/em&gt; and &lt;em&gt;false&lt;/em&gt; have stopped being keywords and became known as literal values (From the Java Lang Spec). These are semantics and are probably of interest only to the language lawyers of Java. If your pursuits are more of the practical nature, I suggest not to bother with the semantic difference. The point is you cannot use keywords and literals as variable names or identifiers in your own code lest you will have a problem during compilation. This is the most important reason why you need to be familiar with them.&lt;/p&gt;
-
-&lt;p&gt;It is always best to consult the most recent version of the Java Language Specification when it comes to these things because they are a matter of specification. The keywords are printed here only for ease of reference.&lt;/p&gt;
-
-&lt;pre class=&quot;codeblock&quot;&gt;
-  abstract  continue    for             new           switch
-  assert        default     goto            package     synchronized
-  boolean       do            if                private     this
-  break       double        implements  protected   throw
-  byte        else        import          public        throws
-  case        enum        instanceof    return      transient
-  catch       extends       int short     try
-  char        final       interface   static        void
-  class       finally       long            strictfp    volatile
-  const       float       native          super       while
-&lt;/pre&gt;
-
-
-&lt;div id=&quot;cap&quot;&gt;Fig 3: Java KeyWords&lt;/div&gt;
-
-
-&lt;p&gt;You do not need to memorize all the keywords now, but I think in time you will know them by heart as your practice grows.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;RULES ON WRITING IDENTIFIERS&lt;/h2&gt;
-
-&lt;p&gt;Any programming construct that is programmer-defined is referred to as an &lt;em&gt;identifier&lt;/em&gt;. These are the things that you will need to name yourself.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;class name&lt;/li&gt;
-&lt;li&gt;interface name&lt;/li&gt;
-&lt;li&gt;method name&lt;/li&gt;
-&lt;li&gt;name of a variable, name of parameters you pass to methods&lt;/li&gt;
-&lt;li&gt;package name&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;To create an identifier, there are certain rules that you must remember.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;It must consist of alphanumeric characters&lt;/li&gt;
-&lt;li&gt;It must not start with a number, but it can start with an underscore or a dollar sign&lt;/li&gt;
-&lt;li&gt;It must not have any special characters inside it&lt;/li&gt;
-&lt;li&gt;It must not be same as java keyword or literal&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;hr /&gt;
-
-&lt;h2&gt;EXERCISE TIME&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;small number&lt;/li&gt;
-&lt;li&gt;bignumber&lt;/li&gt;
-&lt;li&gt;this-is-a-very-long-identifier_is-it-legal&lt;/li&gt;
-&lt;li&gt;IsThisLegal?&lt;/li&gt;
-&lt;li&gt;_IsThisLegal&lt;/li&gt;
-&lt;li&gt;class_name&lt;/li&gt;
-&lt;li&gt;import-no1&lt;/li&gt;
-&lt;li&gt;transient&lt;/li&gt;
-&lt;li&gt;volatile&lt;/li&gt;
-&lt;li&gt;careful-this-is-volatile&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;hr class=&quot;chapterbreak&quot;/&gt;
-
-
-
 
 &lt;h1 class=&quot;chapter&quot;&gt;DATA TYPES&lt;/h1&gt;
 

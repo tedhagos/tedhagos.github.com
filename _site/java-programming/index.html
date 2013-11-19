@@ -14,20 +14,18 @@
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-
 <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 -->
 
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 
 <meta charset="utf-8">
 
@@ -61,8 +59,20 @@ p, li, p, br {
   color: #2d2d2d;
 }
 
-ol, ul { padding-left:20px; line-height:1.8em;}
-li {margin-bottom: 10px;}
+ol, ul {padding-left:20px;line-height:1.8em;}
+ul li {list-style-type: square;}
+
+ol {counter-reset: mycounter; margin-left:0; padding-left:0; list-style-type:none;}
+ol > li {position: relative; padding: 4px 2px;margin:0 0 1px 2em;}
+ol > li:before {
+  position: absolute;
+  content: counter(mycounter, decimal-leading-zero) ".";
+  color: #555555;
+  counter-increment: mycounter;
+  font-style: italic;
+  font-family: 'Muli';
+  left: -2em;
+}
 
 #mast {
   text-align: center;
@@ -110,7 +120,7 @@ body {
   width: 70%;
   margin: 50px auto;
   padding: 50px 30px 60px 30px;
-  border: 3px solid #b6b6b6;
+  border: 1px solid #b6b6b6;
 }
 
 a:link, a:visited { /* color: #3a5d9f; */ color: steelblue;}
@@ -119,7 +129,6 @@ a:link, a:visited { /* color: #3a5d9f; */ color: steelblue;}
 footer {
   clear:both;
   text-align:center;
-  padding: 20px;
 }
   
 hr {
@@ -146,7 +155,8 @@ hr {
   font-size: 18px;
 }
 
-#postmeta {margin-top: 40px;}
+#postmeta {margin-top: 40px; color: #CACACA;margin-bottom: 40px;}
+#postmeta a:link, #postmeta a:visited {color: inherit;}
 .light {text-decoration:overline;}
 
   img {
@@ -198,7 +208,7 @@ hr {
     margin-top: 0px;
   }
 
-  #wrap { width: 95%; margin: 0 auto; padding-top: 40px;}
+  #wrap { width: 95%;padding-top: 40px;margin: 0 auto; padding: 0 auto;}
   
   article {
     width: inherit;
@@ -210,8 +220,8 @@ hr {
     padding-right:5%;
     border: 1px solid #dedede;
   }
-  article.withtoc {width: 69%;float: right;}
-  article.notoc {width: 90%;}
+  article.withtoc {width: 69%;float: right; margin: 0 auto;}
+  article.notoc {width: 75%; margin: 0 auto;}
   
   .toc {
     margin-top: 90px;
@@ -220,11 +230,12 @@ hr {
     float: left;
   }
   
-  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:8px;}
-  .toc a:link, .toc a:visited {font-family: 'Titillium Web' , 'sans-serif'; text-decoration:none; font-size: 18px; font-weight: 600;}
+  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:3%;}
+  .toc a:link, .toc a:visited {font-family: 'Muli' , 'sans-serif'; text-decoration:none; font-size: 16px; font-weight: 300;}
   .toc a:hover {text-decoration:underline;}
 
   #copyright {
+    clear:both;
     margin: 40px 0px 0px 40px;
     text-align: center;
     font-size: 18px;
@@ -296,28 +307,27 @@ hr {
   .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 </style>
-
   </head>
   <body>
         
-    <div id='wrap'>    
+    <div id="wrap">    
       
-    <div class='toc'>      
+    <div class="toc">      
       <ul>
-        <li><a href="#">Introduction</a></i>
-        <li><a href="#">Programming Concepts</a></i>
-        <li><a href="#">Overview of Java</a></i>
-        <li><a href="#">First program</a></i>
+        <li><a href="/java-programming">Introduction</a></li>
+        <li><a href="/java-key-concepts">Key concepts</a></li>
+        <li><a href="/java-beginning-to-program">Beginning to program</a></li>
+        <li><a href="/java-identifiers">Identifiers</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ul>
     </div>  
       
     <article itemscope itemtype="http://schema.org/Article" class='withtoc'>
 
-      <header>
-      <hgroup>
-        <h1>Java Programming</h1>
-      </hgroup>
-      </header>
+      <header><h1>Java Programming</h1></header>
       
       <div id="post">
         <div itemprop='articleBody'>
@@ -328,235 +338,6 @@ hr {
 <p>The code samples and exercises in this material were built using plain editors and the Java Development Kit. The use of simple tools is ideal for learning because there are no magic tricks and convenience facilities (like the case if you use an IDE). As a result, your brain will work harder because you are forced to use primitive tools. In a production environment or consulting environment, this reasoning might not be suitable and hence, the decision for tool selection will be influenced by other factors such as programmer productivity, time schedules and other constraints.</p>
 
 <p>For the purpose of learning programming in Java &mdash; which is the goal of this material &mdash; we need our brains and faculties to work harder than usual to maximize learning and understanding.</p>
-
-<p>Here we go.</p>
-
-<hr class="chapterbreak"/>
-
-
-
-
-<h1 class="chapter">BEGINING TO PROGRAM</h1>
-
-
-<p>Before we ran, we learned to walk first. Before we walked, we needed to learn how to get up on our feet &mdash; and way before that, we crawled.</p>
-
-<p>Before we build highly scalable web-endpoints or a flashy Android application, we need to do the crawling analog in Java. We need to learn how to write a basic program using the Java language. We need to discover the mechanics of compilation and runtime, what legal statements can we declare and their effects. We need to know how Java statements are organized, what kinds of control structures are available, what kinds of things we can create and manipulate.</p>
-
-<p>The goal for now is take a first step towards a very long road of programming. We need to learn how programs are constructed, what tools and with what materials should we construct them and finally, how should we run them.</p>
-
-<hr />
-
-<h2>KEY CONCEPTS</h2>
-
-<p><strong>Java is a compiled language.</strong> You need to write the programming statements in a source file, compile them to produce an executable format or object code and finally run the executable file. If you did not make syntactical mistakes the source code will compile without problems. If you did commit syntactical errors then the compiler will not let you through, you will not be able to produce an executable format of your source program.</p>
-
-<p>A Java source file (also called a compilation unit) is a simple text file. You can use basic text editors to create and edit a source file. The choice for program editor is at best, a matter of preference. The only requirement for the text editor is it can write in ASCII format &mdash; better yet if it can handle UNICODE. So pick any that catches your fancy.</p>
-
-<p>A Java source file will bear the extension .java, no matter which platform you are using. Don't worry that the extension doesn't follow the usual three letter format, the popular OS platforms can handle that kind of file.</p>
-
-<p><strong>Java is an Object Oriented language.</strong> This has many consequences that affects you as a programmer, but right now, it affects what we can write inside our very first source file. You can write only classes and interfaces inside a source file. For our first example, we will write a class and not an interface &mdash; interfaces are advanced constructs in Java, we will leave that for later. Inside classes, you can write variables, methods and program statements.</p>
-
-<p><strong>The source file cannot be ran directly on your platform.</strong> It needs to be compiled. If you have installed the JDK (Java Development Kit) properly on your platform, you can already use the java compiler. The compiler takes on a source file (or source files) as an argument and turns them into executable files. These files do not have .com or .exe extensions, they have .class extensions instead.</p>
-
-<p><strong>You cannot run .class files directly on top of your OS.</strong> Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — <code class="codeblock">$ java executable_file</code></p>
-
-<p>There are many kinds of Java programs. Some run on webservers (servlet &amp; JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.</p>
-
-<p><img src="/img/coding-process.png"/></p>
-
-<div id="cap">Coding Process</div>
-
-
-<p>Before we begin writing programs, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.</p>
-
-<p>Create a file named Hello.java. For now, just copy the contents from the sample code below</p>
-
-<div class="highlight"><pre><code class="java"><span class="cm">/**</span>
-<span class="cm">*</span>
-<span class="cm">* Our first program</span>
-<span class="cm">*</span>
-<span class="cm">* This is a block comment</span>
-<span class="cm">*</span>
-<span class="cm">* */</span>
-   
-<span class="kd">class</span> <span class="nc">Hello</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello World\n&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-
-
-
-
-<div id="cap">Fig 1: Hello.java</div>
-
-
-<p>Compile the source file using <code class="codeblock">javac Hello.java</code>. You will have a file named <em>Hello.class</em> as a result of the compilation. Use the command <code class="codeblock">java Hello</code>. Do not include the extension <em>.class</em> when running Java programs, only the file name portion of the resulting <em>.class</em> file is required.</p>
-
-<p>If you typed your program exactly as it appeared in Fig 1.1 the program should compile without problems. If you encountered any compilation error, to back to the program editor and check the  spelling of each and every word. Make sure you did not miss a curly brace or perhaps spelt <code class="codeblock">main()</code> as <code class="codeblock">Main()</code>. Java is case sensitive &mdash; <em>main</em> is different from <em>Main</em>. When you are sure that the program is free from syntactical errors, compile it again, then run.</p>
-
-<p>The output of Fig 1 is a very uninteresting "Hello World". True to tradition of every beginning programmer since Kernighan and Ritchie first started it on the first edition of the C Programming Language in 1969.</p>
-
-<p>Unexciting as the output maybe, it is simple yet rich enough to get our feet wet in Java programming. You need to get used to the structure of the Hello program because a lot of the codes you will write starts out this way.</p>
-
-<hr />
-
-<h2>WHAT HAVE WE JUST DONE</h2>
-
-<p>The first seven lines of the Hello program are <em>comments</em>. These are non-executable statements and you can put them anywhere &mdash; inside or outside a class. You can write comments in three ways.</p>
-
-<ol>
-<li><p><code class="codeblock">//</code>  &mdash; This is an in-line comment, effective only on the current line. Anything to the right of this comment is ignored. This is suitable for commenting individual lines of code</p></li>
-<li><p><code class="codeblock">/*   */</code> &mdash; This is a block comment, anything in between the inner asterisks will be ignored by the compiler. These can span multiple lines</p></li>
-<li><p><code class="codeblock">/**   */</code> &mdash; Another block comment that is used by JavaDoc, don't worry about this right now. Just experiment with these three for the time being</p></li>
-</ol>
-
-
-<p>After the comments is a class block. Everything inside the outermost pair of curly braces is the class block. Java is an OO language, and a strict one at that. You cannot write anything meaningul outside a class or interface. Even a simple output to the screen has to be within the context of a class. This is the reason why you need to be very comfortable with the structure of the Hello program as early as now or you will not go very far otherwise.</p>
-
-<p>A Java class is constructed using the keyword <code class="codeblock">class</code> followed a <em>class name</em>. The class name is something that you will define, in our example, the name of the class is <em>Hello</em>. The class name is followed by a pair of curly braces. Anything inside the curly braces constitutes the body of the class.</p>
-
-<pre>
-  
-  // cannot write methods and variables here
-  // only import, package statements and 
-  // comments are allowed outside
-  // the class 
-  
-  class Hello {
-    // methods and variables goes here
-  }
-</pre>
-
-
-<div id="cap">Fig 2: Basic Java class structure</div>
-
-
-<p>You might have noticed that our example class name is <em>Hello</em> and that is stored in a file named <em>Hello.java</em>. That is incidental and not a requirement at all. It would have been a requirement if we made the class <em>public</em>. &mdash; the <em>public</em> keyword is an access modifier, but don't bother with that for the moment, you will have a chance to study its effects on coding later on.</p>
-
-<p>If we changed our construction to declare a public class, like in this</p>
-
-<pre class="codeblock">
-  public class Hello {
-    public static void main(String args[]) {
-
-    }
-  }
-</pre>
-
-
-<p>then it becomes mandatory that the name of class be consistent with the name of the source file. There is a rule in Java programming that a source file can only contain, at most, one public class and if a class is defined as public in a source file, then name of the source file must be consistent with the name of the public class &mdash; this is one of the many rules you need to be acquainted with Java.</p>
-
-<p>The name of the generated object file was <em>Hello.class</em> not because the name of source file is <em>Hello.java</em> but because the name of the class is <em>Hello</em>. The name of class affects the name of the object file.</p>
-
-<p>Like most programming languages, a Java program needs an entry point. In this case, that is the <code class="codeblock">main()</code> method &mdash; a method and a function are technically the same. The semantic difference has got something to do with OOP philosophies. We won't bother with that right now, but you need to get used to the term method, rather than function.</p>
-
-<p>Having a <em>main</em> method is not a requisite for compilation. It is a runtime requirement. Any class that you will pass on the JRE requires a main function. Not all classes will require this function, only those classes that you will use as a starting point of your program. In our example, class Hello is a program starting point.</p>
-
-<p>Java has a very specific format for a main function. The function needs to be <em>public</em>, <em>static</em> and <em>void</em> &mdash; these are reserved words in Java. Each have a specific action but we will defer their discussion for later.</p>
-
-<p>Inside the main function is <em>System.out.println()</em> statement. This is a very common command in Java. You can practically put anything inside the parentheses and it will be printed to the screen. The string literal "Hello World" was placed inside the function <em>println()</em>. String literals are defined be enclosing words using a pair of double quotation marks. You cannot define a string literal using single quotes &mdash; that results into a different action.</p>
-
-<p>Lastly, all statements in a Java program are terminated by a semicolon. The white space in Java has no meaning. Indentations in Java also have no meaning, hence, you need to use the semicolon to intstruct the compiler that you are done with what you want to say. Best to keep this rule in mind, a lot of the first few rookie mistake you will make is because of the semicolon &mdash; more precisely, the lack of it.</p>
-
-<hr />
-
-<h2>EXERCISE TIME</h2>
-
-<ol>
-<li>Create a Java program that prints out your name and email address on two separate lines.</li>
-<li>Create a Java program that prints outo your name and email address on two separate lines, but you can only use a single <em>println()</em> statement.</li>
-<li>Play around with the source code of the Hello program. Try to compile and run. Record the results of the compilation and execution each time you make a change.</li>
-<li>Change the spelling of function main to Main</li>
-<li>Remove the opening curly brace immediately right after <em>main(String []args)</em></li>
-<li>Change "Hello World" to <em>Hello\n.World</em>. What's changed? Try to find out what the <em>\n</em> means</li>
-</ol>
-
-
-<hr class="chapterbreak"/>
-
-
-
-
-<h1 class="chapter">RESERVED WORDS</h1>
-
-
-<p>You will be defining a lot of things in Java. You will name your classes, variables and methods. There are only a few rules you need to observe when creating these names, one of these rules is to steer clear from reserved words or keywords.</p>
-
-<p>There are 50+ keywords in the Java language but not all of them are in use. The <em>const</em> and <em>goto</em> keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language.</p>
-
-<p>In the past, the words <em>true, false</em> and <em>null</em> appeared as keywords . Sometime in the past, <em>null, true</em> and <em>false</em> have stopped being keywords and became known as literal values (From the Java Lang Spec). These are semantics and are probably of interest only to the language lawyers of Java. If your pursuits are more of the practical nature, I suggest not to bother with the semantic difference. The point is you cannot use keywords and literals as variable names or identifiers in your own code lest you will have a problem during compilation. This is the most important reason why you need to be familiar with them.</p>
-
-<p>It is always best to consult the most recent version of the Java Language Specification when it comes to these things because they are a matter of specification. The keywords are printed here only for ease of reference.</p>
-
-<pre class="codeblock">
-  abstract  continue    for             new           switch
-  assert        default     goto            package     synchronized
-  boolean       do            if                private     this
-  break       double        implements  protected   throw
-  byte        else        import          public        throws
-  case        enum        instanceof    return      transient
-  catch       extends       int short     try
-  char        final       interface   static        void
-  class       finally       long            strictfp    volatile
-  const       float       native          super       while
-</pre>
-
-
-<div id="cap">Fig 3: Java KeyWords</div>
-
-
-<p>You do not need to memorize all the keywords now, but I think in time you will know them by heart as your practice grows.</p>
-
-<hr />
-
-<h2>RULES ON WRITING IDENTIFIERS</h2>
-
-<p>Any programming construct that is programmer-defined is referred to as an <em>identifier</em>. These are the things that you will need to name yourself.</p>
-
-<ul>
-<li>class name</li>
-<li>interface name</li>
-<li>method name</li>
-<li>name of a variable, name of parameters you pass to methods</li>
-<li>package name</li>
-</ul>
-
-
-<p>To create an identifier, there are certain rules that you must remember.</p>
-
-<ol>
-<li>It must consist of alphanumeric characters</li>
-<li>It must not start with a number, but it can start with an underscore or a dollar sign</li>
-<li>It must not have any special characters inside it</li>
-<li>It must not be same as java keyword or literal</li>
-</ol>
-
-
-<hr />
-
-<h2>EXERCISE TIME</h2>
-
-<ol>
-<li>small number</li>
-<li>bignumber</li>
-<li>this-is-a-very-long-identifier_is-it-legal</li>
-<li>IsThisLegal?</li>
-<li>_IsThisLegal</li>
-<li>class_name</li>
-<li>import-no1</li>
-<li>transient</li>
-<li>volatile</li>
-<li>careful-this-is-volatile</li>
-</ol>
-
-
-<hr class="chapterbreak"/>
-
-
-
 
 <h1 class="chapter">DATA TYPES</h1>
 
@@ -2612,25 +2393,39 @@ class Child extends Base {
 
         </div>                
       </div>
-      <div id="postmeta" class='light'>
-        file: #java  #core_programming
+
+      <div id="postmeta">
+        file: <span itemprop='keywords' class='light'>introduction </span><br/>
+        last updated: <span itemprop="dateModified"> </span> <br/>
+        by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a> <p/>
+        <!-- Place this tag where you want the widget to render. -->
+<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/107317535953221277825" data-rel="author"></div>
+
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
       </div>
-      by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
       
       <a class="moot"
         title=Java Programming
         href="https://moot.it/i/tedhagos/java:Java Programming">
         Comments 
-      </a>  
+      </a>
+      
       <div id="copyright">
 &copy; Ted Hagos, All rights reserved 
 </div>
-    </article>
-      
-    </div> <!-- wrap -->        
-    <footer>
     
-    </footer>
+    </article>
+    
+    </div> <!-- wrap -->   
+    <footer></footer>  
+    
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -7,8 +7,20 @@ p, li, p, br {
   color: #2d2d2d;
 }
 
-ol, ul { padding-left:20px; line-height:1.8em;}
-li {margin-bottom: 10px;}
+ol, ul {padding-left:20px;line-height:1.8em;}
+ul li {list-style-type: square;}
+
+ol {counter-reset: mycounter; margin-left:0; padding-left:0; list-style-type:none;}
+ol > li {position: relative; padding: 4px 2px;margin:0 0 1px 2em;}
+ol > li:before {
+  position: absolute;
+  content: counter(mycounter, decimal-leading-zero) ".";
+  color: #555555;
+  counter-increment: mycounter;
+  font-style: italic;
+  font-family: 'Muli';
+  left: -2em;
+}
 
 #mast {
   text-align: center;
@@ -56,7 +68,7 @@ body {
   width: 70%;
   margin: 50px auto;
   padding: 50px 30px 60px 30px;
-  border: 3px solid #b6b6b6;
+  border: 1px solid #b6b6b6;
 }
 
 a:link, a:visited { /* color: #3a5d9f; */ color: steelblue;}
@@ -65,7 +77,6 @@ a:link, a:visited { /* color: #3a5d9f; */ color: steelblue;}
 footer {
   clear:both;
   text-align:center;
-  padding: 20px;
 }
   
 hr {
@@ -92,7 +103,8 @@ hr {
   font-size: 18px;
 }
 
-#postmeta {margin-top: 40px;}
+#postmeta {margin-top: 40px; color: #CACACA;margin-bottom: 40px;}
+#postmeta a:link, #postmeta a:visited {color: inherit;}
 .light {text-decoration:overline;}
 
   img {
@@ -144,7 +156,7 @@ hr {
     margin-top: 0px;
   }
 
-  #wrap { width: 95%; margin: 0 auto; padding-top: 40px;}
+  #wrap { width: 95%;padding-top: 40px;margin: 0 auto; padding: 0 auto;}
   
   article {
     width: inherit;
@@ -156,8 +168,8 @@ hr {
     padding-right:5%;
     border: 1px solid #dedede;
   }
-  article.withtoc {width: 69%;float: right;}
-  article.notoc {width: 75%;}
+  article.withtoc {width: 69%;float: right; margin: 0 auto;}
+  article.notoc {width: 75%; margin: 0 auto;}
   
   .toc {
     margin-top: 90px;
@@ -166,11 +178,12 @@ hr {
     float: left;
   }
   
-  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:8px;}
-  .toc a:link, .toc a:visited {font-family: 'Titillium Web' , 'sans-serif'; text-decoration:none; font-size: 18px; font-weight: 600;}
+  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:3%;}
+  .toc a:link, .toc a:visited {font-family: 'Muli' , 'sans-serif'; text-decoration:none; font-size: 16px; font-weight: 300;}
   .toc a:hover {text-decoration:underline;}
 
   #copyright {
+    clear:both;
     margin: 40px 0px 0px 40px;
     text-align: center;
     font-size: 18px;
