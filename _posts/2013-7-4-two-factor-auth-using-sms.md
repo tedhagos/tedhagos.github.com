@@ -1,5 +1,6 @@
 ---
 layout: post
+
 title: Two Factor Authentication
 subtitle: A poor man's approach for web applications
 
@@ -7,7 +8,14 @@ excerpt: One way to achieve a two factor authentication is to couple a simple we
 
 description: Two factor authentication using the cheap SMS mechanism. If you are looking for a poor-man's two factor auth, this might be your solution.
 
+lastupdated: 2013-07-4 
+
+author: Ted Hagos
+
 categories:
+- SMS
+
+tags:
 - solution
 - project
 - security

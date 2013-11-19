@@ -3,7 +3,7 @@ layout: java
 
 title: Beginning to program
 
-description: 
+description: Diving into the first program of Java
 
 excerpt: 
 

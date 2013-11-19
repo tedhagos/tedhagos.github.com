@@ -3,7 +3,7 @@ layout: java
 
 title: Key concepts 
 
-description: 
+description: Java is 3 things, a VM, a language and bunch of built-in functions
 
 excerpt: 
 

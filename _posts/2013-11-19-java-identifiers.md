@@ -3,7 +3,7 @@ layout: java
 
 title: Identifiers
 
-description: 
+description: There are fundamental rules to observe when naming classes, methods, variables, parameters and packages.
 
 excerpt: 
 
