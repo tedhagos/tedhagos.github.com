@@ -10,7 +10,7 @@ description: what follows will take you through a very quick tour of the Java pr
 
 author: Ted Hagos
 
-lastupdated: November 18, 2013
+lastupdate: November 18, 2013
 
 tags:
 - introduction

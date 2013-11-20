@@ -31,7 +31,6 @@ You must observe the following rules when creating identifiers. It must:
 3. not have any special characters inside it, e.g. #, &, @ or *
 4. not be same as java keyword or literal 
 
-## Keywords
 
 There are 50+ keywords in the Java language but not all of them are in use. The *const* and *goto* keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language. 
 
