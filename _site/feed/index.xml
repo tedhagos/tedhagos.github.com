@@ -4,13 +4,52 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-11-20T17:08:02+08:00</updated>
+ <updated>2013-11-28T18:56:33+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>ted@thelogbox.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Abstract Classes</title>
+   <link href="http://tedhagos.com /java-abstract-classes"/>
+   <updated>2013-11-28T00:00:00+08:00</updated>
+   <id>http://tedhagos.com /java-abstract-classes</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/img/java/abstract-class.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The construction of an abstract class is simple (see preceding diagram). You only need to prepend the class declaration with the &lt;em&gt;abstract&lt;/em&gt; keyword and that already makes it an abstract class. A class that is comprised of concrete or non-abstract methods can also be declared as abstract &amp;mdash; although this case is rare &amp;mdash; the absence of abstract methods does not have any bearing whether you can or cannot declare a class as abstract.&lt;/p&gt;
+
+&lt;p&gt;When the class contains at least one abstract method, it becomes necessary to declare the enclosing class as &lt;em&gt;abstract&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/java/abstract-method.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The construction of an abstract method must be approached with care. It is not enough to use the &lt;em&gt;abstract&lt;/em&gt; keyword on the method signature, but you must also ensure that the body of the method is replaced by a semi-colon. Instead of a method declaration, it will read as if it is a statement. In fact, it is. It tells the compiler that the declared method contains no implementation. Rather, the implementation is delegated to whoever inherits from the class. The logic of the method becomes the responsibility of immediate child classes.&lt;/p&gt;
+
+&lt;p&gt;An abstract method can only be written as part of an abstract class. A concrete class &amp;mdash; a class that does not declare itself as abstract &amp;mdash; may not contain any abstract method.&lt;/p&gt;
+
+&lt;h1&gt;A Bank Account Example&lt;/h1&gt;
+
+&lt;p&gt;If we were to construct the domain objects of a fictitious bank account project, we could come up with two dominant objects. The current account and the savings account. The two kinds of account are more similar than they are different. But their differences, still, needs to be considered.&lt;/p&gt;
+
+&lt;p&gt;When things share similarities in their attributes and behavior, we can collect their similarities and implement them on a base class. Their differences can be addressed by extending the base classes and altering or adding characteristics on the sub classes to make them more specific. Such is the approach we took on the following example.&lt;/p&gt;
+
+&lt;p&gt;A savings account class defined characteristics such &lt;em&gt;name, number&lt;/em&gt; and &lt;em&gt;balance&lt;/em&gt; but did not make any attempt to calculate the interest. An account's interest rate, it appears, is calculated one way when the account is &lt;em&gt;savings&lt;/em&gt; and another way when it is &lt;em&gt;current&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/java/abstract-class-hierarchy.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The similar characteristics of &lt;em&gt;Savings&lt;/em&gt; and &lt;em&gt;Current&lt;/em&gt; account objects makes inheritance a somewhat obvious choice for organization. That is why we created an &lt;em&gt;Account&lt;/em&gt; base class to act as a common organizer of the similarities.&lt;/p&gt;
+
+&lt;p&gt;The differences between the two kinds of accounts was addressed by deferring the implementation to more specific classes &amp;mdash; &lt;em&gt;Savings&lt;/em&gt; and &lt;em&gt;Current&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Usage&lt;/h1&gt;
+
+&lt;h1&gt;Rules&lt;/h1&gt;
+
+&lt;h1&gt;Vocabulary&lt;/h1&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Identifiers</title>
