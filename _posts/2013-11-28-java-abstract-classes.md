@@ -101,7 +101,7 @@ class Operation {
 }
 {% endhighlight %} 
 
-The behavior *performOperation* is where the logic variation happens. This is the method that needs to be polymorphic. It can be accomplished by sub-classing *Operation* and overrding this method on the sub classes so we can place the appropriate arithmetic action. The entire code is given in following listing
+The behavior *performOperation* is where the logic variation happens. This is the method that needs to be polymorphic. It can be accomplished by sub-classing *Operation* and overriding this method on the sub classes so we can place the appropriate arithmetic action. The entire code is given in following listing
 
 {% highlight java %}
 abstract class Operation {
@@ -185,6 +185,20 @@ class TestOperation {
 }
 {% endhighlight %}
 
+The *Operation* class was made as abstract because we don't intend for it to be directly created or instantiated. Arithmetic operation is an abstract concept, the concrete concepts are addtion, multiplication, substraction and division.
+
+As an exercise, try to provide additional functionalities to our code such that we can invoke the following commands 
+
+{% highlight bash %}
+
+java TestOperation % 15 12
+java TestOperation ^ 4 4
+
+{% endhighlight %}
+
+The first line gets the remainder. The modulo operator which is denoted by the percent sign does that job quite easily. Modulo operator is recognized by Java. 
+
+The second line raises the power of the first number using the second number. It's a bit tricky because the caret sign is an bitwise operator in Java, it is used for XORing. But that is not the intent of the exercise. You may need to write your own code on how to raise a number to a power. You may use the following code as a hint
 
 
 
