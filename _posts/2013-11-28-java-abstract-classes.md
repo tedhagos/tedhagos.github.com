@@ -198,7 +198,7 @@ java TestOperation ^ 4 4
 
 The first line gets the remainder. The modulo operator which is denoted by the percent sign does that job quite easily. Modulo operator is recognized by Java. 
 
-The second line raises the power of the first number using the second number. It's a bit tricky because the caret sign is an bitwise operator in Java, it is used for XORing. But that is not the intent of the exercise. You may need to write your own code on how to raise a number to a power. You may use the following code as a hint
+The second line raises the power of the first number using the second number. It's a bit tricky because the caret sign is a bitwise operator in Java, it is used for XORing. But that is not the intent of the exercise. You may need to write your own code on how to raise a number to a power. 
 
 
 
