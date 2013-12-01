@@ -220,7 +220,7 @@ hr {
     margin-top: 0px;
   }
 
-  #wrap {width:90%;padding-top:40px; margin: 0 auto;}
+  #wrap {width:95%;padding-top:40px; margin: 0 auto;}
   
   article {
     width: inherit;
@@ -232,19 +232,26 @@ hr {
     padding-right:5%;
     border: 1px solid #dedede;
   }
-  article.withtoc {width: 74%;float: right; margin: 0 auto;}
+  article.withtoc {width: 70%;float: right; margin: 0 auto;}
   article.notoc {width: 75%; margin: 0 auto;}
   
   .toc {
+    font-family: "Muli";
     margin-top: 90px;
-    width: 15%;
+    width: 19%;
     text-align: right;
     float: left;
+    
     border: 0px solid black;
   }
   
-  .toc li {list-style: none; line-height:1.4em; margin-bottom:6px;padding-right:3%; padding-left:0;}
-  .toc a:link, .toc a:visited {font-family: 'Muli' , 'sans-serif'; text-decoration:none; font-size: 16px; font-weight: 300;}
+  .toc li {list-style: none; line-height:1.4em; 
+    margin-bottom:6px;
+     
+    padding-left:0; 
+    padding-left: 0px; 
+  }
+  .toc a:link, .toc a:visited {font-family: 'Muli' , 'sans-serif'; text-decoration:none; font-size: 15px; font-weight: 300;}
   .toc a:hover {text-decoration:underline;}
 
   #copyright {
@@ -325,8 +332,10 @@ hr {
         
     <div id="wrap">    
       
-    <div class="toc">      
+    <div class="toc">  
+      Minimum Java <p/>    
       <ul>
+        <li><a href="#">Front matter</a></li>
         <li><a href="/java-programming">Introduction</a></li>
         <li><a href="/java-key-concepts">Key concepts</a></li>
         <li><a href="/java-beginning-to-program">Beginning to program</a></li>
