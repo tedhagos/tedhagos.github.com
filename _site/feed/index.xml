@@ -4,7 +4,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2013-11-29T21:44:54+08:00</updated>
+ <updated>2013-12-01T15:38:22+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -86,7 +86,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The behavior &lt;em&gt;performOperation&lt;/em&gt; is where the logic variation happens. This is the method that needs to be polymorphic. It can be accomplished by sub-classing &lt;em&gt;Operation&lt;/em&gt; and overrding this method on the sub classes so we can place the appropriate arithmetic action. The entire code is given in following listing&lt;/p&gt;
+&lt;p&gt;The behavior &lt;em&gt;performOperation&lt;/em&gt; is where the logic variation happens. This is the method that needs to be polymorphic. It can be accomplished by sub-classing &lt;em&gt;Operation&lt;/em&gt; and overriding this method on the sub classes so we can place the appropriate arithmetic action. The entire code is given in following listing&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Operation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   
@@ -170,7 +170,18 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;The &lt;em&gt;Operation&lt;/em&gt; class was made as abstract because we don't intend for it to be directly created or instantiated. Arithmetic operation is an abstract concept, the concrete concepts are addtion, multiplication, substraction and division.&lt;/p&gt;
 
+&lt;p&gt;As an exercise, try to provide additional functionalities to our code such that we can invoke the following commands&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;java TestOperation % 15 12
+java TestOperation ^ 4 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first line gets the remainder. The modulo operator which is denoted by the percent sign does that job quite easily. Modulo operator is recognized by Java.&lt;/p&gt;
+
+&lt;p&gt;The second line raises the power of the first number using the second number. It's a bit tricky because the caret sign is a bitwise operator in Java, it is used for XORing. But that is not the intent of the exercise. You may need to write your own code on how to raise a number to a power.&lt;/p&gt;
 </content>
  </entry>
  
