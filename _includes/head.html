@@ -36,15 +36,13 @@
 <title>{{ page.title }}</title>
 <meta charset="utf-8"/>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- 1. Moot style -->
-<link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css">
-<!-- 2. jQuery library (v1.7+ required) -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<!-- 3. Moot application -->
-<script src="//cdn.moot.it/1/moot.min.js"></script>
-<!-- 4. Fine tuning -->
-<!-- 4.1 Use a mobile optimized version of Moot: http://goo.gl/EOpFl -->
-<meta name="viewport" content="width=device-width">
-<!-- 4.2 Force latest IE rendering engine: http://goo.gl/tf4JH -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  ga('create', 'UA-42397771-1', 'tedhagos.com');
+  ga('send', 'pageview');
+
+</script>
