@@ -401,3 +401,24 @@ Su  6 13 20 27
 
 This is what I need. It's *ncal -w*
 
+***
+
+**30. CONVERT MKV TO MP4 USING FFMPEG**. 
+
+<pre class="codeblock">
+  
+  $ ffmpeg i- MovieTitle.mkv -vcodec copy -acodec copy MovieTitle.mp4
+  
+</pre>
+
+This saves quality and time because it is simply changing the containers. It does not do any conversion or encoding. 
+
+If you have a lot of MKV files to convert, a script can be handy
+
+<pre class="codeblock">
+  
+  for i in $(ls *mkv); do ffmpeg -i $i -vcodec copy -acodec copy $i.mp4; done
+  
+</pre>
+
+Maybe Handbrake.app can also do this, but I haven't tried
