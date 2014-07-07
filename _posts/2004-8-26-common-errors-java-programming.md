@@ -16,20 +16,24 @@ categories:
 ---
 
 
-## 1. SEMICOLON 
+<div style="background: #f9f2ca; border: 1px solid orange;padding:10px;margin-bottom:30px;">
+  This page has moved to <a href="http://notes.tedhagos.com/java/java-errors.html">notes.tedhagos.com/osx/java-errors</a>
+</div>
+
+#### Semicolon
 
  A lot of your errors can really be solved by the semicolon. Java ignores white space, you need to tell it that your statement is finished by ending it with a semicolon.
 
 This isn't tricky to catch. The compiler is going to tell you where exactly you forgot the semicolon. 
 
 
-## 2. RUNNING THE BYTECODE
+#### Running the bytecode
 
 <code class="codeblock">java Hello.class</code> is not the proper way to run a byte code. You do not include the *.class* extension. You simply run it with <code class="codeblock">java Hello</code>. 
 
 This error results in a *NoDefFoundException*. This error is thrown when you try to use a class file that does not exist &mdash; true enough, there is no *Hello.class* class, there is only the *Hello* class. Drop the extension of the filename when you want to run your program.
 
-## 3. FORGETTING MAIN
+#### Forgetting main
 
 <pre>
 class Hello {
@@ -51,7 +55,7 @@ class Hello {
 This code will both compile and run.
 
 
-## SPELLING AND CASING
+#### Spelling and Casing
 
 Wrong spelling and type casing of the *main function*. It should be <code class="codeblock">public static void main(String args[])</code>.   Common variations of this mistake
 
@@ -63,7 +67,7 @@ main(string args[])
 
 
 
-## 4. CURLY BRACES
+#### Curly braces
 
 
 Methods, Classes and Interfaces always will contain *blocks*. Blocks are made up of a pair of curly braces &mdash; they need to pair up. On trivial codes with just a few levels of nesting, this may not be an issue. On more involved codes with nested blocks, this will be a problem.
@@ -94,7 +98,7 @@ You can also move away from this problem quite easily by using a real programmer
 Now you know one more reason why notepad is not a hard core programmer's editor. It's not a programmer's editor. At all. It never was.
 
 
-## 5. OBJECT COMPARISSON
+### Object comparisson
 
 <pre>
 class CompEqual {
@@ -117,7 +121,7 @@ When things are stored on the *heap* &mdash; all reference types are stored on t
 Remember that *variable a* does not really contain "Hello". The string "Hello" is stored somewhere on the heap. What *variable a* contains is the location of "Hello" in the heap. So when you compare *c == (a + b)* you are not comparing the string contents, you are comparing memory addresses. 
 
 
-## 6. ARRAY IS ZERO BASED
+#### Array is zero based
 
 
 <pre>
@@ -139,7 +143,7 @@ This results to an *ArrayIndexOutOfBounds* exception because the for loop is try
 The for loop above should have been written as <code class="codeblock">for(int i =0; i < arr.length)</code> or <code class="codeblock">for(int i =0; i <= arr.length - 1)</code>
 
 
-## 7. EMPTY CATCH BLOCKS
+#### Empty catch blocks
 
 <pre>
 try {
@@ -158,9 +162,9 @@ When an actual error happens, the *catch* block will activate and guess what hap
 As a rule of thumb, make errors scream and shout during development. You don't want it with a faint voice or no voice at all. It needs to grab your attention.
 
 
-## 8. TOO GENERIC EXCEPTION
+#### Too generic exceptions
 
-<pre>
+<pre><code>
 try {
 	Class.forName();
 	DriverManager.getConnection();
@@ -168,8 +172,9 @@ try {
 catch(Exception e) {
 	// SOME ERROR HANDLING CODES HERE
 }
+</code>
 </pre>
-<div id="cap"></div>
+
 
 Yeah, this would work. *Exception* is a very general class and all possible exceptions will be trapped by this one. Problem here is that when a SQLException occurs, do you think you can tell from the *Error Message* that is something related to SQL. You will just get a very generic notification. This is just slightly better than *empty catch blocks* &mdash; like I said &mdash; make the errors scream and shout. Really loudly. 
 

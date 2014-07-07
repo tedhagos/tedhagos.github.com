@@ -16,6 +16,11 @@ categories:
 
 ---
 
+<div style="background: #f9f2ca; border: 1px solid orange;padding:10px;margin-bottom:30px;">
+  This page has moved to <a href="http://notes.tedhagos.com/osx/osx-cheatsheet.html">notes.tedhagos.com/osx/cheatsheet</a>
+</div>
+
+
 **1. SHOW THE ROUTING TABLE**. <code class="codeblock">route print</code> won't work, try <code class="codeblock">netstat -nr</code>
 
 <hr/>

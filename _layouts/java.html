@@ -7,7 +7,8 @@
   <body>
         
     <div id="wrap">    
-      
+
+<!--      
     <div class="toc">  
       Minimum Java <p/>    
       <ul>
@@ -22,11 +23,11 @@
         <li><a href="#"></a></li>
       </ul>
     </div>  
-      
+-->      
     <article itemscope itemtype="http://schema.org/Article" class='withtoc'>
 
       <header>
-        <h1>{{ page.title }}</h1>
+        <h1 class='title'>{{ page.title }}</h1>
       </header>
       
       <div id="post">
@@ -36,12 +37,10 @@
       </div>
 
       <div id="postmeta">
-        file: <span itemprop='keywords'>{{ page.tags | join: ',' }} </span><br/>
-        last updated: <span itemprop="dateModified">{{ page.lastupdate}} </span><br/>
-        by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a><p/>
-        {% include gfollow.html %}
-      </div>
-      {% include disqus.html %}
+        <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a><br/>
+        <span itemprop="dateModified">{{ page.date | date: "%-d %B %Y" }} </span><p/>
+      <!--  file: <span itemprop='keywords'>{{ page.tags | join: ',' }} </span><br/> -->
+      </div>  
       {% include copyright.html %}
     </article>
     

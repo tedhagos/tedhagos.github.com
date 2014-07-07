@@ -5,12 +5,28 @@ description:
 
 ---
 
-<div style="position:absolute; top:200px; bottom:0; left:0; right:0;
-			margin:auto;width:70%;text-align:center;">
-      
-      <div style="font-size: 100px;">&hellip;</div>
-    
+<div id="archives">
+  
+  {% for post in site.posts %}
+  
+  <a href="{{ post.url }}" class='archives'>
+    {{ post.date | date: "%m.%d.%y" }}
+    {{ post.title }}
+  </a>
+  <p class='archives'>
+  <!-- >[{{post.categories | join: ' , ' }}] -->
+	{{ post.content | strip_html |truncatewords: 40 }}  
+  </p>
+
+  {% endfor %}
 </div>
+
+
+<footer>
+  
+</footer>
+
+{% include ga.html %}
 
 
 

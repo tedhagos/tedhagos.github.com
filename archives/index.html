@@ -8,9 +8,6 @@ description:  Archives of tedhagos.com
 
 <div id="archives">
   
-  <p>
-    This is the archive page. The list is in reverse chronological arrangement 
-  </p>
   {% for post in site.posts %}
   
   <a href="{{ post.url }}" class='archives'>
@@ -18,8 +15,8 @@ description:  Archives of tedhagos.com
     {{ post.title }}
   </a>
   <p class='archives'>
-  [{{post.categories | join: ' , ' }}]
-	{{ post.content | strip_html |truncatewords: 50 }}  
+  <!--[{{post.categories | join: ' , ' }}] -->
+	{{ post.content | strip_html |truncatewords: 40 }}  
   </p>
 
   {% endfor %}

@@ -1,36 +1,8 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    
-<!--
-<link href='http://fonts.googleapis.com/css?family=Neuton:300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-
--->
-
-<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
-
-
-<meta charset="utf-8">
-
+    <meta charset="utf-8">
+<meta name="google-site-verification" content="5_SB_qpC90xz6CnRfann88sz6G8WyIsgxYVnNJQfYQI" />
 
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
 
@@ -39,29 +11,21 @@
 <title>Two Factor Authentication</title>
 <meta charset="utf-8"/>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- 1. Moot style -->
-<link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css">
-<!-- 2. jQuery library (v1.7+ required) -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<!-- 3. Moot application -->
-<script src="//cdn.moot.it/1/moot.min.js"></script>
-<!-- 4. Fine tuning -->
-<!-- 4.1 Use a mobile optimized version of Moot: http://goo.gl/EOpFl -->
-<meta name="viewport" content="width=device-width">
-<!-- 4.2 Force latest IE rendering engine: http://goo.gl/tf4JH -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  ga('create', 'UA-42397771-1', 'tedhagos.com');
+  ga('send', 'pageview');
+
+</script>
 
     <style>
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Inconsolata:700);  
 
-p, li, br {
-  line-height: 1.6em;
-  font-family: 'Libre Baskerville', serif;
-  font-size: 15px;
-  color: #202020;
-}
-p.archives {padding-left:40px;}
-
+/*
 ol, ul {padding-left:20px;line-height:1.8em;}
 ul li {list-style-type: square;}
 
@@ -73,193 +37,86 @@ ol > li:before {
   color: #555555;
   counter-increment: mycounter;
   font-style: normal;
-  font-family: 'Muli';
   left: -2em;
 }
+*/
 
-#mast {
-  text-align: center;
-  color: #acacac;
-  background: #f1f1f1;
-  padding: 1px;
-  letter-spacing: .5px;
-}
-
-  #mast a:link, #mast a:visited, #mast a:hover {
-    color: #acacac;
-    background: #f1f1f1;
-    text-decoration: none;
-  }
-
-h1, h2, h3, h4 {
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-h1 {font-size: 28px;} 
-  header h1 {font-size: 45px; 
-    font-family: 'Helvetica Neue', 'Helvetica', Arial, 'Verdana' ;
-    font-weight: bold;
-    color: #555555;
-    text-align: right;
-    padding-bottom: 30px;
-    /*color; #181818;*/
-  }
-  header h1.center {text-align:center;}
-h2 {font-size: 24px;}
-h3 {font-size: 21px;}
-h4 {font-size: 17px;}
-h4.frontpage {padding-bottom:0; margin-bottom:2px;}
-
-body {
+body, html {
   margin:0;
   padding:0;
-  border:0;
-  background: #f1f1f1;
 }
 
-#archives {
-  background: #FFFFFF;
-  clear: both;
-  width: 70%;
-  margin: 50px auto;
-  padding: 50px 30px 60px 30px;
-  border: 1px solid #b6b6b6;
+body {
+  background:#fbfbfb;
 }
 
-a:link, a:visited { /* color: #3a5d9f; */ color: steelblue;}
-.archives:link, .archives:visited {
-  font-family:'Muli'; 
-  padding-bottom: 0px;
+#archives, #post {
+  column-count:2;
+  -webkit-column-count:2;
+  -moz-column-count:2;  
 }
 
+#wrap, #archives {
+  width:97%;
+  margin-right: auto;
+  margin-left:auto;
+}
 
-footer {
-  clear:both;
+#archives {margin: 30px auto;}
+
+h1.title {
   text-align:center;
-  height: 40px;
+  margin: 40px 0;
+}
+
+a:link, a:visited {color:blue;}
+a:hover {color:brown;}
+
+#postmeta {
+  font-size: 90%;
+  margin: 20px 0;
+}
+
+#copyright {
+  font-size:90%;
+  margin:10px 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom:40px;
+  padding-left: 0; padding-right:0;
+  width: 100%;
+  }
+
+pre, code {
+  font-family: 'Droid Sans Mono';
+  font-size: 12px;
 }
   
-hr {
-	border:0;
-	color: #d8c7cc;
-	background: #d8c7cc;
-	height: 2px;
-}
-  hr.chapterbreak {
-    color: #2d2d2d;
-    background: #2d2d2d;
-    height: 3px;
-    margin-top: 40px;
-  }
-
-.notice {
-  background: #fff8ba;
-  color: #525252;
-  text-align: center;
-  border: 1px solid #DEDEDE;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-size: 18px;
+pre {
+  white-space: pre-wrap;
+  background: #dcdcff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow:auto;
 }
 
-#postmeta {margin-top: 40px; color: #CACACA;margin-bottom: 40px;font-family: 'Muli';}
-#postmeta a:link, #postmeta a:visited {color: inherit; text-decoration:none;}
-.light {text-decoration:overline;}
-
-  img {
-    display: block;
-    margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom:40px;
-    padding-left: 0; padding-right:0;
-    width: 100%;
-  }
-
-  code {
-  	font-family: 'Lekton';
-  }
-
-  pre {
-  	font-family: 'Lekton';
-  	font-size: 14px;
-
-    line-height: 1.2em;
-    
-    /*  
-    background: #FBFCF9;
-    border: 3px solid #F0F2E7;
-    */
-
-  	margin-bottom:2em;
-    margin-top:2em;
-    white-space: pre-wrap;
-  }
-
-  .codeblock {
-    font-size: 15px;
-    font-family: 'Lekton';
+.codeblock {
+  color: #000000;
+  padding:0px;
+  margin: 0px;
+  border: 0px;  
+}
+  pre.codeblock {
+    /*background: #e8ebef;*/ 
     color: #000000;
-    padding:0px;
-    margin: 0px;
-    border: 0px;  
-  }
-
-    pre.codeblock {
-      padding: .7em;
-      /*background: #e8ebef;*/
-      background: #F0F0FF; 
-      color: #000000;
-      line-height:120%;
-  }
-
-  #cap, .lst {
-    text-align: left;
-    color: #800000;
-    margin-top: 0px;
-  }
-
-  #wrap {width:95%;padding-top:40px; margin: 0 auto;}
-  
-  article {
-    width: inherit;
-    margin-bottom: 20px;
-    background: #FFFFFF;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left:5%;
-    padding-right:5%;
-    border: 1px solid #dedede;
-  }
-  article.withtoc {width: 70%;float: right; margin: 0 auto;}
-  article.notoc {width: 75%; margin: 0 auto;}
-  
-  .toc {
-    font-family: "Muli";
-    margin-top: 90px;
-    width: 19%;
-    text-align: right;
-    float: left;
-    
-    border: 0px solid black;
-  }
-  
-  .toc li {list-style: none; line-height:1.4em; 
-    margin-bottom:6px;
-     
-    padding-left:0; 
-    padding-left: 0px; 
-  }
-  .toc a:link, .toc a:visited {font-family: 'Muli' , 'sans-serif'; text-decoration:none; font-size: 15px; font-weight: 300;}
-  .toc a:hover {text-decoration:underline;}
-
-  #copyright {
-    clear:both;
-    margin: 40px 0px 0px 40px;
-    text-align: center;
-    font-size: 16px;
-    color: #CACACA;
+    padding: 10px;
+    overflow:auto;
   }
 
   /* Pygments stylesheets */
@@ -335,7 +192,7 @@ hr {
          
     <article itemscope itemtype="http://schema.org/Article" class='notoc'>
 
-      <header><h1 class='center'>Two Factor Authentication</h1></header>
+      <header><h1 class='title'>Two Factor Authentication</h1></header>
 
       <div id="post">
         <div itemprop='articleBody'>
@@ -382,39 +239,20 @@ hr {
 
         </div>                
       </div>
-      
       <div id="postmeta">
-        file: <span itemprop='keywords' class='light'>solution,project,security,web_app </span><br/>
-        last updated: <span itemprop="dateModified"> </span><br/>
-        by: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a><p/>
-        <!-- Place this tag where you want the widget to render. -->
-<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/107317535953221277825" data-rel="author"></div>
-
-<!-- Place this tag after the last widget tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>      
-      </div>
-
-      
+        <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a><br/>
+        <span itemprop="dateModified">4 July 2013 </span><p/>
+      <!--  file: <span itemprop='keywords'>solution,project,security,web_app </span><br/> -->
+      </div>      
       <div id="copyright">
-&copy; Ted Hagos, All rights reserved 
+<a href="../index.html">&copy; Ted Hagos 2004 - 204, All rights reserved </a> 
 </div>
-      
     </article>
-    
-    
-    
     </div> <!-- wrap -->            
     
     <footer>
 
     </footer>
-    
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
