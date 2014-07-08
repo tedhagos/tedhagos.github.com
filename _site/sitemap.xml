@@ -3,32 +3,26 @@
 
   
   <url>
-    <loc>http://tedhagos.com/java-abstract-classes</loc>
-    <lastmod>2013-11-28T00:00:00+08:00</lastmod>
+    <loc>http://tedhagos.com/java/java-programming-part-3</loc>
+    <lastmod>2014-07-08T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/java-identifiers</loc>
-    <lastmod>2013-11-19T00:00:00+08:00</lastmod>
+    <loc>http://tedhagos.com/java/java-programming-part-2</loc>
+    <lastmod>2014-07-08T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/java-key-concepts</loc>
-    <lastmod>2013-11-18T00:00:00+08:00</lastmod>
+    <loc>http://tedhagos.com/java/java-programming</loc>
+    <lastmod>2014-07-08T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/java-beginning-to-program</loc>
-    <lastmod>2013-11-18T00:00:00+08:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/yapt</loc>
-    <lastmod>2013-11-04T00:00:00+08:00</lastmod>
+    <loc>http://tedhagos.com/singlepageapp/deleteme</loc>
+    <lastmod>2014-07-08T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
@@ -39,7 +33,7 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/java8-notes</loc>
+    <loc>http://tedhagos.com/java/java8-notes</loc>
     <lastmod>2013-07-02T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -69,19 +63,7 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/long-fuse</loc>
-    <lastmod>2012-12-27T00:00:00+08:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/notes-on-focus</loc>
-    <lastmod>2012-12-23T00:00:00+08:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/html5-canvas</loc>
+    <loc>http://tedhagos.com/html5/html5-canvas</loc>
     <lastmod>2011-04-07T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -93,14 +75,8 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/common-errors-java-programming</loc>
+    <loc>http://tedhagos.com/java/common-errors-java-programming</loc>
     <lastmod>2004-08-26T00:00:00+08:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/java-programming</loc>
-    <lastmod>2004-02-18T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   

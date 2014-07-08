@@ -15,8 +15,7 @@ lastupdate: November 18, 2013
 tags:
 - introduction
 
-categories:
-- java
+categories: java
 
 ---
 

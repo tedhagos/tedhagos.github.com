@@ -7,12 +7,6 @@ excerpt: This is a growing list of things I do on OSX. They are on the list beca
 
 description: php setup on mac. ripping audio and video. dev environment. shell hacks. terminal hacks. mac admin.
 
-categories: 
-- osx
-- cheatsheet
-- mac
-- rip
-- hack
 
 ---
 

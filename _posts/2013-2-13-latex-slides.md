@@ -9,9 +9,7 @@ excerpt: My notes on using LATEX to author presentation slides. This note also c
 description: Reference notes when working with the beamer class
 
 categories:
-- latex
-- slides
-- beamer
+
 
 ---
 

@@ -10,7 +10,7 @@ description: Notes on how to animate using HTML5 canvas. Drawing squares, circle
 
 categories:
 - html5
-- canvas
+
 
 ---
 

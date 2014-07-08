@@ -13,13 +13,9 @@ lastupdated: 2013-07-4
 author: Ted Hagos
 
 categories:
-- SMS
 
 tags:
-- solution
-- project
-- security
-- web_app
+
 
 ---
 
