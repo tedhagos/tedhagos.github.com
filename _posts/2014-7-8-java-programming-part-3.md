@@ -1,737 +1,25 @@
 ---
-layout: java
+layout: post
 
-title: Java Programming
-subtitle: Java programming for the uniniated.
+title: Core Java Programming, Part 3
 
-excerpt: What follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.
+description: 
 
-description: what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.
+excerpt: 
 
 author: Ted Hagos
 
-lastupdate: November 18, 2013
+lastupdate: 
 
-tags:
-- introduction
 
-categories:
-- java
+tags: core java programming
+
+
+categories: java
 
 ---
 
 
-These are my notes on the Java Programming Language. These notes dates back to the late part of the 1990s. I update them from time to time but not as often as I would like. These were written primarily as a secondary reference for my students in Asia Pacific College and IBM ACE. It was not meant to be an introduction to computing concepts. It assumes that the reader has some degree of familiarization in basic programming concepts which may have been acquired from experience of another programming language.
-
-Having said that, what follows will take you through a very quick tour of the Java programming language. This material was not designed to cover all the aspects of the language, as it will be impractical to do so. The breadth and depth of Java, with all the associated technologies have increased drastically since it was first introduced in 1995.
-
-The code samples and exercises in this material were built using plain editors and the Java Development Kit. The use of simple tools is ideal for learning because there are no magic tricks and convenience facilities (like the case if you use an IDE). As a result, your brain will work harder because you are forced to use primitive tools. In a production environment or consulting environment, this reasoning might not be suitable and hence, the decision for tool selection will be influenced by other factors such as programmer productivity, time schedules and other constraints. 
-
-For the purpose of learning programming in Java, which is the goal of this material, we need our brains and faculties to work harder than usual to maximize learning and understanding.
-
-## 1. Beginning to program
-
-Before we ran, we learned to walk first. Before we walked, we needed to learn how to get up on our feet &mdash; and way before that, we crawled.
-
-Before we build highly scalable web-endpoints or a flashy Android application, we need to do the crawling analog in Java. We need to learn how to write a basic program using the Java language. We need to discover the mechanics of compilation and runtime, what legal statements can we declare and their effects. We need to know how Java statements are organized, what kinds of control structures are available, what kinds of things we can create and manipulate.
-
-The goal for now is take a first step towards a very long road of programming. We need to learn how programs are constructed, what tools and with what materials should we construct them and finally, how should we run them.
-
-
-## 2. Some concepts
-
-**Java is a compiled language.** You need to write the programming statements in a source file, compile them to produce an executable format or object code and finally run the executable file. If you did not make syntactical mistakes the source code will compile without problems. If you did commit syntactical errors then the compiler will not let you through, you will not be able to produce an executable format of your source program.
-
-A Java source file (also called a compilation unit) is a simple text file. You can use basic text editors to create and edit a source file. The choice for program editor is at best, a matter of preference. The only requirement for the text editor is it can write in ASCII format &mdash; better yet if it can handle UNICODE. So pick any that catches your fancy.
-
-A Java source file will bear the extension .java, no matter which platform you are using. Don't worry that the extension doesn't follow the usual three letter format, the popular OS platforms can handle that kind of file.
-
-**Java is an Object Oriented language.** This has many consequences that affects you as a programmer, but right now, it affects what we can write inside our very first source file. You can write only classes and interfaces inside a source file. For our first example, we will write a class and not an interface &mdash; interfaces are advanced constructs in Java, we will leave that for later. Inside classes, you can write variables, methods and program statements.
-
-
-**The source file cannot be ran directly on your platform.** It needs to be compiled. If you have installed the JDK (Java Development Kit) properly on your platform, you can already use the java compiler. The compiler takes on a source file (or source files) as an argument and turns them into executable files. These files do not have .com or .exe extensions, they have .class extensions instead.
-
-**You cannot run .class files directly on top of your OS.** Java executables run inside a special environment called the JRE (Java Runtime Environment). To run Java object files, you need to invoke the JRE and pass the name of the Java executable as a command line argument like this — <code class="codeblock">$ java executable_file</code>
-
-There are many kinds of Java programs. Some run on webservers (servlet & JSP), some inside browsers (applet) and some on mobile platforms (android). Some Java apps run on the desktop and there are two kinds of those, one with GUI and the other without &mdash; these are called CLI or Command Line Interface applications. We will create a CLI app for this chapter.
-
-<img src="/img/coding-process.png"/>
-
-Before writing any code, I suggest that you create a folder for purposes of trying out the samples in this material. It is best to name the folder without special characters or whitespace.
-
-Create a file named Hello.java. For now, just copy the contents from the sample code below
-
-{% highlight java %}
-
-/**
-*
-* Our first program
-*
-* This is a block comment
-*
-* */
-   
-class Hello {
-  public static void main (String [] args) {
-    System.out.println("Hello World\n");
-  }
-}
-
-{% endhighlight %}
-<div id="cap">Fig 1: Hello.java</div>
-
-Compile the source file using <code class="codeblock">javac Hello.java</code>. You will have a file named *Hello.class* as a result of the compilation. Use the command <code class="codeblock">java Hello</code>. Do not include the extension *.class* when running Java programs, only the file name portion of the resulting *.class* file is required.
-
-If you typed your program exactly as it appeared in Fig 1.1 the program should compile without problems. If you encountered any compilation error, to back to the program editor and check the  spelling of each and every word. Make sure you did not miss a curly brace or perhaps spelt <code class="codeblock">main()</code> as <code class="codeblock">Main()</code>. Java is case sensitive &mdash; *main* is different from *Main*. When you are sure that the program is free from syntactical errors, compile it again, then run.  
-
-The output of Fig 1 is a very uninteresting "Hello World". True to tradition of every beginning programmer since Kernighan and Ritchie first started it on the first edition of the C Programming Language in 1969. 
-
-Unexciting as the output maybe, it is simple yet rich enough to get our feet wet in Java programming. You need to get used to the structure of the Hello program because a lot of the codes you will write starts out this way. 
-
-
-### 2.1 What just happened
-
-The first seven lines of the Hello program are *comments*. These are non-executable statements and you can put them anywhere &mdash; inside or outside a class. You can write comments in three ways. 
-
-1. **//**  This is an in-line comment, effective only on the current line. Anything to the right of this comment is ignored. This is suitable for commenting individual lines of code
-
-2. **/\*   \*/**  This is a block comment, anything in between the inner asterisks will be ignored by the compiler. These can span multiple lines
-
-3. **/\*\*   \*/** Another block comment that is used by JavaDoc, don't worry about this right now. Just experiment with these three for the time being
-
-After the comments is a class block. Everything inside the outermost pair of curly braces is the class block. Java is an OO language, and a strict one at that. You cannot write anything meaningul outside a class or interface. Even a simple output to the screen has to be within the context of a class. This is the reason why you need to be very comfortable with the structure of the Hello program as early as now or you will not go very far otherwise. 
-
-A Java class is constructed using the keyword <code class="codeblock">class</code> followed a *class name*. The class name is something that you will define, in our example, the name of the class is *Hello*. The class name is followed by a pair of curly braces. Anything inside the curly braces constitutes the body of the class. 
-
-<pre>
-  
-  // cannot write methods and variables here
-  // only import, package statements and 
-  // comments are allowed outside
-  // the class 
-  
-  class Hello {
-    // methods and variables goes here
-  }
-</pre>
-<div id="cap">Fig 2: Basic Java class structure</div>
-
-You might have noticed that our example class name is *Hello* and that is stored in a file named *Hello.java*. That is incidental and not a requirement at all. It would have been a requirement if we made the class *public*. &mdash; the *public* keyword is an access modifier, but don't bother with that for the moment, you will have a chance to study its effects on coding later on.
-
-If we changed our construction to declare a public class, like in this
-
-<pre class="codeblock">
-  public class Hello {
-  	public static void main(String args[]) {
-
-  	}
-  }
-</pre>
-
-
-then it becomes mandatory that the name of class be consistent with the name of the source file. There is a rule in Java programming that a source file can only contain, at most, one public class and if a class is defined as public in a source file, then name of the source file must be consistent with the name of the public class &mdash; this is one of the many rules you need to be acquainted with Java.
-
-The name of the generated object file was *Hello.class* not because the name of source file is *Hello.java* but because the name of the class is *Hello*. The name of class affects the name of the object file. 
- 
-Like most programming languages, a Java program needs an entry point. In this case, that is the <code class="codeblock">main()</code> method &mdash; a method and a function are technically the same. The semantic difference has got something to do with OOP philosophies. We won't bother with that right now, but you need to get used to the term method, rather than function.
-
-Having a *main* method is not a requisite for compilation. It is a runtime requirement. Any class that you will pass on the JRE requires a main function. Not all classes will require this function, only those classes that you will use as a starting point of your program. In our example, class Hello is a program starting point. 
-
-Java has a very specific format for a main function. The function needs to be *public*, *static* and *void* &mdash; these are reserved words in Java. Each have a specific action but we will defer their discussion for later. 
-
-Inside the main function is *System.out.println()* statement. This is a very common command in Java. You can practically put anything inside the parentheses and it will be printed to the screen. The string literal "Hello World" was placed inside the function *println()*. String literals are defined be enclosing words using a pair of double quotation marks. You cannot define a string literal using single quotes &mdash; that results into a different action.
-
-Lastly, all statements in a Java program are terminated by a semicolon. The white space in Java has no meaning. Indentations in Java also have no meaning, hence, you need to use the semicolon to intstruct the compiler that you are done with what you want to say. Best to keep this rule in mind, a lot of the first few rookie mistake you will make is because of the semicolon &mdash; more precisely, the lack of it.
-
-### 2.2 Exercise
-
-1. Create a Java program that prints out your name and email address on two separate lines.
-2. Create a Java program that prints outo your name and email address on two separate lines, but you can only use a single *println()* statement.
-3. Play around with the source code of the Hello program. Try to compile and run. Record the results of the compilation and execution each time you make a change.
-4. Change the spelling of function main to Main
-5. Remove the opening curly brace immediately right after *main(String []args)*
-6. Change "Hello World" to *Hello\n.World*. What's changed? Try to find out what the *\n* means  
-
-## 3. Reserved words
-
-You will be defining a lot of things in Java. You will name your classes, variables and methods. There are only a few rules you need to observe when creating these names, one of these rules is to steer clear from reserved words or keywords.
-
-There are 50+ keywords in the Java language but not all of them are in use. The *const* and *goto* keywords are not in use. The keywords for Java has undergone some subtle changes over the years. There could also be some confusions regarding which keywords are treated as reserved words and which ones are simply literals for the language. 
-
-In the past, the words *true, false* and *null* appeared as keywords . Sometime in the past, *null, true* and *false* have stopped being keywords and became known as literal values (From the Java Lang Spec). These are semantics and are probably of interest only to the language lawyers of Java. If your pursuits are more of the practical nature, I suggest not to bother with the semantic difference. The point is you cannot use keywords and literals as variable names or identifiers in your own code lest you will have a problem during compilation. This is the most important reason why you need to be familiar with them.
-
-It is always best to consult the most recent version of the Java Language Specification when it comes to these things because they are a matter of specification. The keywords are printed here only for ease of reference.
-
-<pre class="codeblock">
-  abstract	continue	for			    new			  switch
-  assert		default		goto		    package		synchronized
-  boolean		do			  if			    private		this
-  break		  double		implements	protected	throw
-  byte		  else		  import		  public		throws
-  case		  enum		  instanceof	return		transient
-  catch		  extends		int	short	  try
-  char		  final		  interface	  static		void
-  class		  finally		long		    strictfp	volatile
-  const		  float		  native		  super		  while
-</pre>
-<div id="cap">Fig 3: Java KeyWords</div>
-
-You do not need to memorize all the keywords now, but I think in time you will know them by heart as your practice grows.
-
-***
-
-### 3.1 Identifiers
-
-Any programming construct that is programmer-defined is referred to as an *identifier*. These are the things that you will need to name yourself.
-
-* class name
-* interface name
-* method name
-* name of a variable, name of parameters you pass to methods
-* package name
-
-To create an identifier, there are certain rules that you must remember. 
-
-1. It must consist of alphanumeric characters
-2. It must not start with a number, but it can start with an underscore or a dollar sign
-3. It must not have any special characters inside it
-4. It must not be same as java keyword or literal
-
-
-### 3.2 Exercise
-
-1. small number
-2. bignumber
-3. this-is-a-very-long-identifier_is-it-legal
-4. IsThisLegal?
-5. _IsThisLegal
-6. class_name
-7. import-no1
-8. transient
-9. volatile
-10. careful-this-is-volatile
-
-
-## 4. Types
-
-Programmers create things (data). We manipulate them by adding, substracting, dividing or multiplying. Sometimes we mash them up together (concatenation), then we create more things. Sometimes, we store these things for later use, and other times we don't, we simply discard them. Sometimes we dig up things that we have stored in the past (retrieval) and other times we show the things we've tucked away to other people (reports). This is an oversimplification of what programmers do, but I would guess that it is not very far from it. 
-
-In order to create things, we need to know what kinds of things you can create. Will you be counting these things (whole numbers) or will you measure them (real numbers)? If we need to compare one thing to another thing, how will we  remember the result of that comparisson? Can we store the result of that comparisson inside another kind of thing, one that is aware of truth and falsity? 
-
-If we were using a language that is pretty close to the metal, like assembly or C, you may need to know quite a bit about how things are stored and organized in a very low-level fashion before you can get very far.  We are, however, using Java and it will not require us to work close to the metal. 
-
-You will work with *types* rather than bits (zeroes and ones). Java has defined some useful abstractions for us already. These abstractions allow us to work with ease because we can represent familiar concepts with ready-made *types*. For example, if you need to work with real numbers, Java has defined the *float* and *double*  data types. If you need to work with words and letters, Java has defined for us the *java.lang.String* type.  These abstractions are high enough that we don't get bogged down by the details of how they are stored and structured on the disk, we can worry about other things like the logic of our application. 
-
-
-1. **byte**   signed 8-bit integer (-128 to 127)          
-2. **short**  signed 32-bit integer (-2,147,483,648 to 2,147,483,647)
-4. **long**   signed 64-bit integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,807)
-5. **float**  signed 32-bit floating point (32 bit IEEE 754 floating point)
-6. **double**  signed 64-bit floating point (64 bit IEEE 754 floating point)
-7. **char**   16-bit Unicode character (0 to 65535 or \\u0000 to \\uFFFF)
-8. **boolean**  either *true* or *false*
-
-
-### 4.1 Variables
-
-Variables are created by declaring them, then defining them. For example, 
-
-<pre class="codeblock">
-  int i;
-</pre>
-
-is a statement that DECLARES the variable named *i*  that is of type *int*, it does not define it however. To declare and define a variable, it done like this
-
-<pre class="codeblock">
-  int i;
-  i = 0;
-</pre>
-
-In the preceding code, the variable *i* was DECLARED on one line and then DEFINED on the following line. You can create your variables like this, or like this;
-
-<pre class="codeblock">
-  int i = 0;
-</pre>
- 
-Where the variable *i* has been both declared and defined on the same line.
-
-Why are we specifying that *i* is an int? That is because Java is a statically typed language. The compiler will not guess what kind of data you are creating, you have to tell it explicitly before it gets compiled. 
-
-
-### 4.2 Rules on types
-
-The numerical types of Java follows a certain hierarchy &mdash; *double* is bigger than a *float* which is bigger than a *long* which is bigger than an *int* which is bigger than a *short* which is bigger than a *byte*. You must be aware of this hierarchy because you will not always work with just one data type, exclusively &mdash; you will work with a combination of them. 
-
-For the most part, you can add variables of different types e.g. add an int to a double, a byte to an int etc, but you can only assign the value to a variable if the type of the value is;
-
-1. the same as the type of the variable
-2. bigger than the type of the variable
-
-For example
-
-<pre class="codeblock">
-  int a = 10;
-  int b = a;
-  long c = b;
-  double d = c;
-</pre>
-
-You can assign *b to a* because they are both int; assign *b to c* because a long is bigger than an int; *c to d* because a double is bigger than a long. Makes sense right? When you assign a smaller type to a larger type, that is what programmer's call a *upcast*. Upcasting is automatically performed for you when you do operations like the above (assigning a smaller type to a larger type).
-
-Let's look at another example.
-
-<pre class="codeblock">
-  byte a = 1;
-  byte b = 2;
-  byte c = a + b;
-</pre>
-
-It looks innocent and deceitfully accurate, but it will result to an error. While you may reason that  because we added 2 byte values (a + b), it stands that we should be able assign the arithmetic result to *c* which is declared as a byte &mdash; You would have been correct if the resulting type of adding two *byte* values is also a byte, but that is not the case. One apple added to another another apple doesn't make two apples in this case. It looks counter-intrutive and scaringly frustrating to a beginner. I know. Don't panic. We just to understand the arithmetic rules of Java for this to make sense. 
-
-Remember the hierarchy of types from a discussion a while ago &mdash; *double* is bigger than a *float* which is bigger than a *long* which is bigger than an *int* which is bigger than a *short* which is bigger than a *byte* &mdash; that one? It has a related rule. 
-
-When a *double* is added to something else, the resulting type is a double. When a *float* is added to something else, the result is float. A *long* added to something else, the result is a long. For everything else the result is an *int*. Oh and by the way, I just used arithmetic *add* operation for the explanation because it's a lot easier to say, but the truth is, that rule holds up for all arithmetic operation (+ - * / and %) &mdash; that means no arithmetic operation will ever result into *short* or a *byte*. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
-
-Let's continue to work on our small byte addition example earlier, let's fix that.
-
-<pre>
-  class ByteAdd {
-    public static void main(String args[]) {
-      byte a = 1;
-      byte b = 2;
-      int c = a + b;
-    }
-  }
-</pre>
-<div id="cap">Fig 4: Adding two bytes</div>
-
-And now, all is well. 
-
-## 5. Casting
-
-You already know what *upcasting* is, we discussed that not too long ago. Upcasting happens when you assign a narrow type to a wider type e.g. an *int* value assigned to a *long*. Java does for you automatically, no intervention needed. The opposite of *upcasting* is of course, well, *downcasting* &mdash; not very creative, I know, but it makes the two terms easier to remember. 
-
-Downcasting happens when you force a wider type into a narrow type e.g. try to assign an *int* to a *byte*, the compiler won't let you. Unlike upcasting, downcasting is an explicit activity. It needs action from the programmer. 
-
-Let's go back to the byte arithmetic example of Fig 4. We solved that by making variable *c* a int. We also could have solved that problem using downcasting.
-
-<pre class="codeblock">
-  class ByteAdd {
-    public static void main(String args[]) {
-      byte a = 1;
-      byte b = 2;
-      byte c = (byte)(a + b);
-    }
-  }
-</pre>
-
-The cast operator is the pair of parentheses. We are forcing the value to the right of the cast operator, in this case <code class="codeblock">(a + b)</code> which is a *int* to become a *byte*. You have to group expression *a + b* because if you did not, only the value *a* would have been casted to a byte, then the addition operation would be performed (which results to an int) then it will be assigned to *c* &mdash; the cast operator has a higher precedence than the addition operation, that is why you need to group.
-
-## 6. Reference Type
-
-By far and thus far, the data types you have seen are called *primitive types*. The Java Type System has another kind of type. It is called *reference types*. Let's defer the discussion for reference types at least until after we've gone through the OOP topic. 
-
-For now, what we need to remember is that, if it's not primitive &mdash; not a double, float, long, int, short, byte, char or boolean, then it must be a reference type. It' not all scary, some reference types are actually pretty to use e.g. the *String* type, let's see some examples
-
-<pre class="codeblock">
-  String a = "Hello";
-  String b = "World";
-  String c = a + b;
-  int d = 10;
-  String e = a + d; // attention here
-</pre>
-
-I called your attention to the last line because I thought this might be a good opportunity to explain why the addition operator works for a String type, what happened to our rule before &mdash; when a *double* is added to something else it becomes a double.
-
-First, let's put an addendum to our rule. **When something is added to a String** the whole expression becomes a String**. The String type rules them all. 
-
-By the way, it's only the addition operator that is valid to a String type. You cannot substract a string from another string (not like numbers at least) nor can you divide or multiply Strings. The action of the *+* operator on Strings is simply for concatenation.
-
-
-## 7. Operators
-
-This should not not be a long section. If you have programmed before using another language, chances are these operators are exactly the same thing in that other language that you used. So it's a not a big deal. There is not much to see here and to be honest, quite boring. So in this section, we will simply list the operators that you can use in Java. No gotcha's nor clever examples, just a list. 
-
-### 7.1 Arithmetic
-
-The *+ - * / and %* functions as you might expect. They work on numbers, both real and integral &mdash; with the exception of the *+* which also works on *Strings* as you've seen earlier.
-
-### 7.2 Comparisson
-
-The *> >=  < <= and ==* are read, more than, more than or equal to,less than and less than or equal to, respectively. You know how to use them, you don't need me to explain.
-
-### 7.3 Logical
-
-- *&* a logical *and*. The expression will only be true if both operands are true
-- *&&* a short circuit *and*, more or less the same as the logical *and* but it's short circuit. If the first operand is already false, it will not even bother testing the second operand, it will immediately return *false*, hence it's name, short-circuit.
-- *|* a logical *or*. The expression will return true as long as one of the operand is *true*
-- *||* a short-circuit or. It follows the same prinnciple as *&&* only it performs it on an *or* condition &mdash; can you figure it out? That's your homework. 
- 
-There are other operators in Java, but we won't list them here. It makes sense to tackle them when there is more context. So we will leave the discussions of these other operators like *++ and --* for later.
-
-## 8. Program flow
-
-Your ability to direct and command the flow of control in your program is one of the defining skills for a programmer. There are basically 3 ways that you can arrange the commands in your program code. You can execute commands one after another, *sequencing*.
-You can execute certain commands when certain conditions are met, *branching*; and you can keep on repeating certain commands while certain conditions are still true, *looping or iteration*
-
-***
-
-### 8.1 If statement
-
-<pre class="codeblock">
-if(condition) {
-	statement 1;
-	statement 2;
-	statement n;
-}  
-</pre>
-
-The *if* statement allows you to conditionally perform some commands. It allows you side-step the main flow of your code. If you remember your flowcharting concepts or logic formumation. When you see the diamond shape, it means you have a fork in the road. When a condition is met, you either go left or right. That is what the *if* statement does. It allows you to test for conditions. When the condition is true, you go to the beginning of the if block (the opening curly brace) and begin executing all the statements there until all the statements are exhausted. When you have reached the end of the block (the closing curly brace), then there are no more commands to execute. The flow of control will resume immediately after the end of the curly brace. 
-
-The condition in the *if* statement can be written as expressions that will evaluate to either true or false. This is the most common use you will have of the if statement. On some occassions, you may see the condition written as the literals *true* or *false* -- this is rare, but it will still be a legal code. Looks easy, right. 
-
-Okay, a little ice-breaker. Can you spot what's wrong in the next code. Try not to read the explanation and figure it out yourself first.
-
-<pre class="codeblock">
-  int i = 0;
-  if(i = 1) {
-  	System.out.println("but i is equal to one");
-  }
-</pre>
-
-Did you catch it? If you did not, the Java compiler will. That's a good thing. People with programming experience in *C Language* would be familiar with this, because the expression <code class="codeblock">if (i = 1)</code> would have been valid in *C*. Thankfully not in Java, the compiler would have warned you of "Incompatible type error".
-
-The **if** statement requires a boolean expession in the argument. The expression <code class="codeblock">(i = 1)</code> will not result to a boolean expression, rather it will yield a integer expression; zero if the operation succeeds and non-zero if it fails.
-
-#### 8.1.1 Nested structures
-
-You can put an if statement inside another if statement. You can in fact nest them up pretty deeply. While there is no set limit on how deep you can nest if statements, practical considerations and code readability should knock some sense into your code. 
-
-From my experience, whenever I am treading dangerously deep into a web of if-else-if-else, that is usually a signal to take a step back and look if there are other ways of going about controlling program logic. It could be a design or analysis problem already and that using the if-else statement is not the right tool to solve the problem at hand. 
-
-
-
-### 8.2 Switch statement
-
-When the nature of the decision you need to make is a bit on the fuzzy side, it could be impractical to use the if-statement, for those kinds of decisions, you will use the switch-statement.
-
-The syntax of the switch statement is;
-
-<pre class="codeblock">
-switch(expression) {
-  case CONSTANTEXPR:
-  case ENUMCONSTANTNAME:
-  default:
-}
-</pre>
-
-Where expression can either be a *char, byte, short, int*. It can also be *Character, Byte, Short, Integer* OR an *enum* type. By the way, Character is not the same as char, that wasn't a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 7, you can now use String expressions on the *switch* statement
-
-The following code sample  extracts the day-of-week value from a *Calendar* object. The day-of-week is returned as integer, which makes it perfect to filter using a *switch* statement rather than nested *if*
-
-{% highlight java %}
-
-import java.util.Calendar;
-
-class SwitchSample {
-
-  public static void main(String args[]){
-
-  	Calendar now = Calendar.getInstance();
-  	int dow = now.get(Calendar.DAY_OF_WEEK);
-
-  	switch(dow) {
-  		case 0:
-  			System.out.println("Sunday");
-  			break;
-  		case 1:
-  			System.out.println("Monday");
-  			break;
-  		case 2:
-  			System.out.println("Tuesday");
-  			break;
-  		case 3:
-  			System.out.println("Wednesday");
-  			break;
-  		case 4:
-  			System.out.println("Thursday");
-  			break;
-  		case 5:
-  			System.out.println("Friday");
-  			break;
-  		case 6:
-  			System.out.println("Saturday");
-  			break;
-  		default:
-  			System.out.println("What the value really is = " + dow);
-  		}
-  	}
-}
-{% endhighlight %}
-<div id="cap">Fig 5: switch statement sample</div>
-
-The switch is really simple to use, just put the expression which you'd like to test as an argument to the switch statement, then have a series of case statements inside the switch body.
-
-Each case statement corresponds to a value, if the value of the expression is equivalent to a case value, then instructions immediately right after the colon of the case statement will be executed/evaluated, in fact the rest of the statements will be evaluated, all the way down, until it gets to the last instruction at the bottom of the switch statement; that's not what your intention might be; that is the reason why I put a break statement. Once a case statement evaluates to true, Java blindly executes all the statements after that case, it won't even bother checking the other cases -- so note this, and be careful.
-
-### 8.3 While statement
-
-The while statement is used when you would like to perform some commands repeatedly, like in a loop. There is another statement in Java that does looping, that is the *for* statement.
-
-The **while** and **for** loop may overlap at times because they have a similar function. For a beginner, it may not be quite obvious when to use one and not the other. The basic difference of the two statements though is that;
-
-1. Use the while loop if you do not know how many times you need to loop
-2. Use the for loop if you actually know how many times you will need to go through the loop
-
-A while loop looks like the following
-
-<pre class="codeblock">
-while(condition) {
-  statement 1;
-  statement 2;
-  statement n;
-}
-</pre>
-
-The condition is either a literal (the keywords true or false) or an expression that will evaluate to either true or false (boolean values).
-
-The basic idea in a *while* loop is this
-
-1. The condition is evaluated for the first time, if the condition is true or resolves to true, then;
-2. Perform statement 1, then;
-3. Perform statement 2, then;
-4. Perform statement n, then;
-5. The program detects that we are at the end of while block (the closing curly brace is the end of the while block)
-5. The program will loop back to the condition and re-evaluate it again, if it still true, then;
-6. Perform statement (again)
-7. rinse repeat until you get the end of the end of the block again and until you get to re-evaluate the condition (again). 
-
-You will only drop off end of the while block if and when the condition evaluates to false. This is the reason it is best to remember that you need write code inside the while block that will make the condition false at some point in time, lest you end up in a perpetual loop.
-
-<pre>
-import static java.lang.System.out;
-
-class While {
-  public static void main (String [] args){
-    
-    boolean condition = true;
-    int counter = 0;
-    
-    while(condition) {
-      out.println(counter);
-      counter = counter + 1;
-      
-      if(counter >10) {
-        condition = false;
-      }
-    }
-  }
-}
-</pre>
-
-The sample code above shows the use of a while statement. Always remember to put something inside your while loop that will make the conditon false at some point in time. A perpetual loop can be very difficult for a beginning programmer to spot.
-
-### 8.4 For statement
-
-<pre class="codeblock">
-for(beginning value; ending value; step) {
-  statement 1;
-  statement 2;
-  statement 3;
-}
-</pre>
-
-The *for loop* like the *while* allows you to iterate and perform a group of statements over and over again. The for loop though, allows for more control.  
-
-A key concept in using the for loop is the automatic counter, the *step*. The code will perform all the statements inside the block for a finite and determined number of times.
-
-Each time that the whole block is evaluated, the *step* value is incremented. The incremented step value is then compared to the *ending value*, and when the ending value is reached, the for loop will then terminate. The program control will fall over to first statement immediately after the for loop block. 
-
-{% highlight java %}
-class for_sample {
-  public static void main (String [] args) {
-    for(int i=0; i<=10;i++) {
-      System.out.println(i);
-    }
-  }
-}
-{% endhighlight %}
-<div id="cap">Fig 6: Sample use of the for loop</div>
-
-In the preceding example, we print some numeric values from zero (0) to ten (10). This is the exact thing that our *while* example was doing earlier.  
-
-
-
-### 8.5 Break and Continue
-
-The **break** and **continue** keywords disrupts program flow inside loops, whether the for-loop or while-loop. 
-
-<pre>
-while(condition) {
-	statement 1;
-	statement 2;
-	break;
-	statement 3;
-	statement 4;
-}
-
-statement 5;
-statement n;
-</pre>
-<div id="cap">Fig 7: break inside a while loop</div>
-
-
-The break statement caused the program flow inside a block to forcibly exit. In the sample code (Fig 7), as soon as the break statement is encountered, the program control ignored statements 3 and 4. The while loop will go out of scope and program control will be transferred to the first executable statement immediately after the while block -- in this case, statement 5.  
-
-You normally will not use the break statement in this fashion because it doesn't make sense. This statement is usually deployed with more logical finesse. 
-
-{% highlight java %}
-while(condition) {
-	statement 1;
-	statement 2;
-
-	if(someCondition) {
-		break;
-	}	
-
-	statement 3;
-	statement 4;
-}
-
-statement 5;
-statement n;
-{% endhighlight %}
-<div id="cap">Fig 8: Another sample of break statement</div>
-
-This is a more likely use of the *break* statement. I should warn you though that this is a frowned upon practice. A truly structured programming should have only one entry point and one exit point. Because of the introduction the *break* statement, our control structure now has one entry point and two exit points.  
-
-While this code is innocent enough right now, it could get very hairy and complicated. You will appreciate following the 1-entry-1-exit rule when you have had your fair share of debugging someone else's code and you are wading through a maze of nested structures with lots of breaks peppered into the source code &mdash; and by then you will understand why nobody wants to work on a code they did not write themselves. 
-
-Next is the **continue** keyword. Here is how it behaves.
-
-<pre class="codeblock">
-  while(condition) {
-  	statement 1;
-  	statement 2;
-  	continue;
-  	statement 3;
-  	statement 4;
-  }
-
-  statement 5;
-  statement n;
-</pre>
-
-When the *continue* statement is encountered, statements 3 and 4 will be ignored, just like how it was with the break. Unlike the case in **break** though, the loop will not go out of scope and will not be immediately terminated.  
-
-The *continue* statement will go back to the beginning of the loop and forcibly re-evaluate condition. If the condition is still true, then the loop continues normally.
-
-## 9. Arrays
-
-
-
-## 10. The simplest programs
-
-Before going any further with dry definitions of program structure and rules, let's pause for a while. Take the time to exercise your new found knowledge of programming. Let's do some [fizzbuzz](http://c2.com/cgi/wiki?FizzBuzzTest) exercises 
-
-
-A slight variation of the 'Hello World' program in Java. Take the time to read it. Try to see what is different about it.
-
-<pre class="codeblock">
-import static java.lang.System.*;
-
-class Hello {
-
-  public static void main (String[] args) {
-    out.println("Another Hello");
-  }
-}
-</pre>
-
-The above code sample is different in two points:
-
-The *import* statement &mdash; in most *Hello* codes, the import statement is not needed. The package *java.lang.* is imported by default, that is why you don't need it. The Simplest.java source code needed the *import* statement because it is not a simple import. It is a *static import*, it allows you to make unqualified calls to static members of a class &mdash; *out* is a static member of the *System* class, it means we can simply say *out.println* instead of fully qualifying the call like System.out.println. Okay, this may not be the simplest code because it involves static members which are discussed on the OOP lessons, but it doesn't mean we shouldn't take advantage of the short hand call
-
-The name of the source file is *Simplest.java* but the name of the class is *Hello*. There is no requirement for the name of the name of the class to be consistent with the name of the containing source file unless, the class defined has a *public* scope. 
-
-## 11. Parameters from the command line
-
-You can pass command line argument to java programs. Command line arguments allows a java program to get information from the session environment (cmd or SHELL), for example, try to invoke the *Hello* class using this call <code class="codeblock">$ java Hello World</code>
-
-It did not result into any error, but it did not do anything new as well. That is because our code is not yet equipped of dealing with command line parameters. To deal with command line parameters, you need to access the *String* array inside the *main()* function
-
-<pre class="codeblock">
-import static java.lang.System.*;
-
-class Hello {
-
-  public static void main (String[] args) {
-    out.println(args[0]);
-  }
-}
-</pre>
-
-
-Run the program again with the command line parameters <code class="codeblock">$ java Hello World</code>
-
-This code works now because *main* function of Java accepts a parameter, an array of *Strings* and because all words (tokens) immediately after the name of Java executable is converted into an array of String. During runtime, you may access the contents of this array. Let's make one more change on the source code
-
-<pre class="codeblock">
-import static java.lang.System.*;
-
-class Hello {
-
-  public static void main (String[] args) {
-    out.println("Hello " + args[0]);
-  }
-}
-</pre>
-
-Run the code one more time, but this time around, pass your name as the argument.  
-
-You can concatenate Strings inside the *println()* method, this helps out a bit when you are formatting the output a little bit. The arithmetic operator for addition works on Strings too, it adds the strings &mdash; but it doesn't mean you can substract strings using the minus sign or divide or multiply. Only the + sign works on Strings
-
-Our code, while prints prettier than its previous versions, is still very fragile. It can break easily. Try to invoke it without any command line parameter and see what happens &mdash; if you tried it, you probably have seen the *ArrayIndexOutOfBounds* exception message. The reason for that is because our program blindly assumes that the user will always pass one command line parameter. It always assumes that the *args[0]* will contain a valid data. That is why when you did not pass anything on the command line, args[0] does not contain anything, hence the error. To address that error, Let's make the code a bit defensive
-
-<pre class="codeblock">
-import static java.lang.System.*;
-
-class Hello {
-
-  public static void main (String[] args) {
-
-    if(args.length > 0){
-      out.println("Hello " + args[0]);
-    }
-  }
-}
-</pre>
-
-An array, like most things in Java is an object, which means it has methods and properties. It happens the **length** property tells us the length of the array (how many elements it has). By doing a simple check if it the length of the array is more than zero, we can avoid the *ArrayIndexOutOfBounds* error. 
-
-***
-
-### 11.1 CLI params iteration
-
-The current version of our code is bit more sturdy than its previous versions, it won't break easily if you forgot to pass an argument on the command line. It can deal already with zero command line arguments, but what it cannot do is deal with more than one argument. If you pass more than one argument to the program, it simply echoes only the first argument. It does not know how to deal with more than one argument &mdash; lets fix that.
-
-
-<pre>
-import static java.lang.System.*;
-
-class Hello {
-
-  public static void main (String[] args) {
-    int length = args.length;
-    for(int i=0; i < length; i++){
-      out.println(args[i]);
-    }
-  }
-}
-</pre>
-<div id='cap'>Simplest.java</div>
-
-We've completely replaced the *if* structure with a looping structure, the for loop. By using and iteration mechanism, it is unecessary to maintain the *if* statement because the for-loop can also deal with zero argument. 
 
 ## 12. Object Oriented Programming
 
@@ -1929,9 +1217,7 @@ We declared the object reference *p* to be of type *Employee* but we did not cre
 
 Java does not require us to fill up an Employee type with an actual Employee object. It only requires that we fill up the Employee type (variable *p*) with an object that is *at least* an Employee type. Of course class Programmer contains an employee type because it extends Employee, it is *a kind of* Employee. You could add more types to the class Programmer via interface inheritance and, still our code will be perfectly legal. 
 
-***
-
-## POLYMORPHISM AND ACCCESSIBILITY
+### 20.2 Polymorphism and Accessibility
 
 When you override a method, make sure that you don't make the new method more RESTRICTIVE than the one in the super class. 
 
@@ -1971,9 +1257,7 @@ Method *dee()* in Goo will also fail because it private in Goo. Private is more 
 
 The method *void dubidam()* in Goo will not fail because it is not an override at all. A method declared as private cannot be inherited, and hence cannot be overridden. The *dubidam()* method of Goo is simply a declaration of a new method unique to to class Goo, it is NOT a polymorphic method.
 
-***
-
-## POLYMORPHISM AND EXCEPTIONS
+### 20.3 Polymorphism and Exceptions
 
 When you override methods that *throw* exceptions you need to remember that *Exceptions* are part of the method signature which means that your new method has to throw whatever the super class method was throwing.
 
@@ -1997,12 +1281,185 @@ class Child extends Base {
 
 Your new method can throw less of those exceptions but it cannot throw more.
 
+## 21. Abstract Classes
 
-<hr class="chapterbreak"/>
+![](/img/java/abstract-class.png)
 
 
+The construction of an abstract class is simple. You only need to prepend the class declaration with the *abstract* keyword and that already makes it an abstract class. A class that is comprised of concrete or non-abstract methods can also be declared as abstract &mdash; although this case is rare &mdash; the absence of abstract methods does not have any bearing whether you can or cannot declare a class as abstract.  
 
-<h1 class="chapter">References</h1>
+When the class contains at least one abstract method, it becomes necessary to declare the enclosing class as *abstract*.  
+
+
+![](/img/java/abstract-method.png)
+
+The construction of an abstract method must be approached with care. It is not enough to use the *abstract* keyword on the method signature, but you must also ensure that the body of the method is replaced by a semi-colon. Instead of a method declaration, it will read as if it is a statement. In fact, it is. It tells the compiler that the declared method contains no implementation. Rather, the implementation is delegated to whoever inherits from the class. The logic of the method becomes the responsibility of immediate child classes. 
+
+An abstract method can only be written as part of an abstract class. A concrete class &mdash; a class that does not declare itself as abstract &mdash; may not contain any abstract method. 
+
+
+### 21.1 Bank Account object example
+
+If we were to construct the domain objects of a fictitious bank account project, we could come up with two dominant objects. The current account and the savings account. The two kinds of account are more similar than they are different. But their differences, still, needs to be considered. 
+
+When things share similarities in their attributes and behavior, we can collect their similarities and implement them on a base class. Their differences can be addressed by extending the base classes and altering or adding characteristics on the sub classes to make them more specific. Such is the approach we took on the following example. 
+
+A savings account class defined characteristics such *name, number* and *balance* but did not make any attempt to calculate the interest. An account's interest rate, it appears, is calculated one way when the account is *savings* and another way when it is *current*.  
+
+
+![](/img/java/abstract-class-hierarchy.png)
+
+
+The similar characteristics of *Savings* and *Current* account objects makes inheritance a somewhat obvious choice for organization. That is why we created an *Account* base class to act as a common organizer of the similarities. 
+
+The differences between the two kinds of accounts was addressed by deferring the implementation to more specific classes &mdash; *Savings* and *Current*. The *Account* base class contains some concrete implementations. Getting the balance of an account, it would seem, does not have to change whether you are dealing with a Savings or a Current account, this is the reason why the *getBalance* method has a concrete implementation on the base class. We intend for the sub classes *Savings* and *Current* to inherit this behavior. We will re-use functionality whenever possible.  
+
+The matter of calculating interest differs between a Savings and a Current account. This behavior cannot be, must not be, inherited. Nevertheless, we would like for all *Account* objects to respond to a uniform set of messages. We would like all Account objects to respond when sent a *calculateInterest* message. This is the reason we included it as part of base class' *Type*. We made this method *abstract* on the base class in order to force the sub classes to provide the implementation. 
+
+The child classes Savings and Account inherited the method *calculateInterest*. But what they inherited was still an abstract method. They needed to override and provide implementation for this inherited method lest they (sub classes) will also be an *abstract* class &mdash; remember that a class with at least one abstract method must be declared abstract.
+
+Converting an abstract method to a concrete one is simple matter. You need only to remove the *abstract* keyword from the signature, then replace the semi-colon with a block. The block is where you provide the specific behavior for the sub class. This makes the inherited behavior polymorphic. 
+
+### 21.2 A Simple Compute Engine example
+
+Let us consider another case in order to further our understanding of abstract classes. Consider an object that can produce the arithmetic results of any two number. To make our construction as elementary as possible, let us say that we simply need to pass three things to this object; 1) the operation 2) the first number and lastly 3) the second number. To make it simpler even, we will only accept whole numbers. We will not bother the usual trimmings of a real world application such as ensuring the validity of each input to the program. This will allow us to concentrate our analysis on the inheritance hierarchy without being bothered by issues of program robustness. 
+
+
+![](/img/java/compute-engine.png)
+
+
+We can suppose that we would like to use such an object like this
+
+{% highlight java %}
+class TestOperation {
+  public static void main(String[] args) {
+        
+    Operation op = Operation.getOperationObject(optr,n1,n2);
+    double result = op.performOperation();
+ 
+  }
+}
+{% endhighlight %}
+
+
+The actual class or type is hidden from the client. What is known only is the presence of a generic *Operation* object capable of handling rudimentary arithmetics of two whole numbers. Considering our code is structured, it appears that the *Operation* object needs to handle the routing of arithmetic logic. It must provide branching facilities to differentiate betweent + - / and * operation. Such routing can be managed using a simple switch statement.
+
+{% highlight java %}
+class Operation {
+
+  public static Operation getOperationObject(String optr, int n1, int n2){
+
+    switch(optr.trim()){
+      case("+"): // Addition operation
+      case("-"): // Subtraction operation
+      case("/"): // Division operation 
+      case("*"): // Multiplication operation
+      default: return null;
+    }
+  } 
+}
+{% endhighlight %} 
+
+The behavior *performOperation* is where the logic variation happens. This is the method that needs to be polymorphic. It can be accomplished by sub-classing *Operation* and overriding this method on the sub classes so we can place the appropriate arithmetic action. The entire code is given in following listing
+
+{% highlight java %}
+abstract class Operation {
+  
+  protected int n1 = 0;
+  protected int n2 = 0;
+
+  protected Operation (int n1, int n2){
+    this.n1 = n1;
+    this.n2 = n2;
+  }
+  
+  public abstract float performOperation();
+  
+  public static Operation getOperationObject(String optr, int n1, int n2){
+
+    switch(optr.trim()){
+      case("+"): return new Plus(n1,n2); 
+      case("-"): return new Minus(n1,n2);
+      case("/"): return new Divide(n1,n2); 
+      case("*"): return new Multiply(n1,n2); 
+      default: return null;
+    }
+  } 
+}  
+  
+class Plus extends Operation {
+  Plus(int n1, int n2){super(n1,n2);}
+  public float performOperation(){return n1 + n2; }
+}
+  
+class Minus  extends Operation {
+  Minus(int n1, int n2){super(n1,n2);}
+  public float performOperation(){return n1 - n2; }
+}
+  
+class Divide extends Operation {
+  Divide(int n1, int n2){super(n1,n2);}
+  public float performOperation(){
+    if(n2 == 0) {
+      System.err.println("Zero Divide Error");
+      System.exit(1);
+    }
+    return n2 / n2;
+  }
+}
+  
+class Multiply extends Operation {
+  Multiply(int n1, int n2){super(n1,n2);}
+  public float performOperation(){return n1 * n2;}
+}
+
+// TEST CLIENT
+// USAGE:
+// java TestOperation + 1 2
+// java TestOperation - 1 2
+// java TestOperation / 1 2
+// java TestOperation "*" 1 2
+// 
+// the asterisk will cause FormatException on the command line param
+
+class TestOperation {
+  public static void main(String[] args) {
+    
+    if(args.length < 3) System.exit(1);
+    
+    String optr = args[0];
+    int n1 = Integer.parseInt(args[1]);
+    int n2 = Integer.parseInt(args[2]);
+    
+    Operation op = Operation.getOperationObject(optr,n1,n2);
+    double result = op.performOperation();
+ 
+    if (op !=  null) {
+      System.out.printf("( %s %d %d ) = %.2f\n", optr, n1, n2, result);
+    }
+    else {
+      System.err.println("Unsupported operation");
+    }
+  }
+}
+{% endhighlight %}
+
+The *Operation* class was made as abstract because we don't intend for it to be directly created or instantiated. Arithmetic operation is an abstract concept, the concrete concepts are addtion, multiplication, substraction and division.
+
+As an exercise, try to provide additional functionalities to our code such that we can invoke the following commands 
+
+{% highlight bash %}
+
+java TestOperation % 15 12
+java TestOperation ^ 4 4
+
+{% endhighlight %}
+
+The first line gets the remainder. The modulo operator which is denoted by the percent sign does that job quite easily. Modulo operator is recognized by Java. 
+
+The second line raises the power of the first number using the second number. It's a bit tricky because the caret sign is a bitwise operator in Java, it is used for XORing. But that is not the intent of the exercise. You may need to write your own code on how to raise a number to a power. 
+
+## References
 
 1. James Gosling, *The Java Programming Language*. 3rd ed, 1999
 2. James Gosling, *The Java Language Specification*. 3rd ed, 1999
@@ -2017,32 +1474,3 @@ Your new method can throw less of those exceptions but it cannot throw more.
 11. Jonathan Krudsen & Patrick Niemeyer, *Learning Java, 3rd Edition*. O'Reilly, 2005
 12. Ivar Jacobson, Rumbaugh, *Object Oriented Analysis and Design, 3rd ed.*, 1965
 13. Robert Sebesta, *The Concept of Programming Languages, 10th ed.*, Addison Wesley, 2012
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
