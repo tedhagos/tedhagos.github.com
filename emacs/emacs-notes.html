@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Emacs setup</title>
+<!-- 2014-07-09 Wed 16:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ted Hagos" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">Emacs setup</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Setup</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Emacs is fairly ubiquitous already. It has been around for a long time so you can pretty much get it no matter what your choice of platform is. But it is pretty at home with UNIXes and the Linuxes. 
+</p>
+
+<p>
+For Linux, the <code>sudo-apt-get install emacs-nox</code> should do it. This will work for Debian and Debian-ish platforms. I haven't used RedHat or it's derivatives for a while now but you may have to use their <code>yum</code>  package manager. I specified <i>emacs-nox</i> because I don't want to install the GTK or X11 version of emacs &#x2013; <i>nox</i> means "no x windows". 
+</p>
+
+<p>
+In OSX, the  <code>brew install emacs</code> is what you will use if you use the <i>HomeBrew</i> package manager. You can use macports of Fink if that is what you use as a package manager.
+</p>
+
+<p>
+Windows users can download the binary distributions from the <a href="http://ftp.gnu.org/gnu/emacs/windows/">Emacs site</a>.
+</p>
+
+<p>
+In OSX, you need to a little bit more setup because OSX comes with an outdated version of GNU emacs, so you may have to delete that first and then do something inside <code>/usr/bin/</code> 
+</p>
+
+<p>
+<code>$ sudo rm /usr/bin/emacs</code><br  />
+<code>$ sudo rm -fvr /usr/share/emacs</code><br  />
+<code>$ sudo ln -s /usr/local/bin/emacs /usr/bin/emacs</code><br  />
+</p>
+
+
+
+<p>
+You can now launch emacs from any terminal window. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Configuration and Startup files</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Generally, emacs reads the files ~/.emacs and ~/.emacs.d/init.el. This is where you can write your startup settings e.g. setting of color theme, treatment of line wraps, how to treat tabs (or spaces) etc. 
+</p>
+
+<p>
+Emacs uses lisp, actually a specific kind of lisp called <i>elisp</i> which stands for emacs lisp. This the language you will use if you want to monkey around emacs and bend it to submission. Don't worry too much if you don't know much about lisp or don't know it all. The emacs community is large. There is no shortage of blog post and Gists which features ready made emacs init files that you can mindlessly cut and paste into your own.
+</p>
+
+<p>
+If your needs are simple, e.g. convert the tabs to spaces, set the number of spaces for a tab, write source codes using the K &amp; R convention, write your diary and convert it to HTML, a quick Google search about these things will usually do the fix for you. There are pretty standard ways of accomplishing these things in the emacs init files.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Opening and Closing files</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+After you launched emacs, you can open a file by pressing <code>C x C f</code> that means, press the control key, press <code>x</code>, don't let go of the control key, and press <code>f</code>. Emacs will wait for you to input a name of the file. Pay attention to input area in the lower left of the emacs window. You will type the name of the file and it's path in there. 
+</p>
+
+
+<div class="figure">
+<p><img src="../images/emacs/emacs-find-file.png" alt="emacs-find-file.png" />
+</p>
+</div>
+
+<p>
+You can close the file by using the command <code>C x C c</code> that means press <code>CTRL x</code> but don't let the CTRL key go. While the CTRL is still depressed, press <code>s</code>. That will save the file. If you want to save the file using another name (Save As), the command is <code>C x C w</code>.
+</p>
+
+<p>
+<code>C x C c</code> will exit emacs. In case you have unsaved work, emacs won't let you leave without confirming your action. It will nag you whether you want to save any unsaved work etc. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Packages</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Emacs has a lively community of users and contributors. If there is a functionality you need and it's not built-in with emacs, chances are somebody built a package for that. So you need to know how to get additional software for emacs. 
+</p>
+
+<p>
+Software packages for emacs are lisp files. They have the extension <i>.el</i> and there are plenty of sources for that. The more popular sources <a href="http://elpa.gnu.org/packages">elpa</a>, <a href="http://marmalade-repo.org/packages">marmalade</a> and <a href="http://melpa.milkbox.net/packages/">melpa</a> . There are others but these three seems to be favorites. 
+</p>
+
+<p>
+To use these software sources, you need to tell emacs about their existence. That is done via the init files. So if you already have installed emacs, go ahead and use it for edit your init files. You can follow these steps.
+</p>
+
+
+<p>
+<code>$ touch ~/.emacs</code><br  />
+<code>$ emacs ~/.emacs</code><br  />
+</p>
+
+<p>
+Once emacs has opened the <i>.emacs</i> init file, put the following codes inside
+</p>
+
+<pre class="example">
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+</pre>
+
+<p>
+These settings and URL values were lifted straight from the <a href="http://www.emacswiki.org/emacs/ELPA">EmacsWiki</a> site. There are other ways of configuring the package manager on that site, you should go visit that page. 
+</p>
+
+<p>
+Save the file by pressing <code>CTRL + x</code> don't let the CTRL key go, keep it pressed, then press <code>s</code>. In emacs lingo, you will see this command written as <code>C - x C - s</code>. The C stands for the CTRL key. So remember that when you see this notation, it means press CTRL key then press <code>x</code> after that press <code>s</code> without letting go of the CTRL key. That command saves the contents of your current buffer <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> to the file <i>~</i>.emacs/. 
+</p>
+
+<p>
+You have to exit your emacs session and start it over again. The restart is necessary because emacs needs to read the new entries on it's init file. To exit emacs, press <code>C - x C - c</code>. You already know what that notation means. That is the command to exit emacs. 
+</p>
+
+<p>
+Now start emacs again and then press <code>ESC - x</code>, you can also press <code>ALT - x</code>, it will yield the same result. Pay attention to message window on left lower portion of emacs, it says <b>M - x</b>. It's waiting for you to type something. It's waiting for a command. Now type <code>list-packages</code> RET (RET means return key or entery key). It might take a little while because emacs is communicating with online repositories. It's grabbing a list of available software which it will show you onscreen in a little while. 
+</p>
+
+<p>
+Take the time to browse through them, if something catches your fancy, go ahead and position the cursor on that list entry then press <code>i</code>, that means mark it for installation. Then press <code>x</code> to install what was marked. 
+</p>
+
+<p>
+When you are all done. Press <code>q</code> to quit the screen which lists the software packages. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Java Coding</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+You need to define a <i>hook</i> when emacs enters Java mode &#x2014; when it opens a <i>.java</i> source file. Then set theh appropriate variables inside the hook
+</p>
+
+<ol class="org-ol">
+<li>Use spaces in place of tabs &#x2013; <code>indent-tabs-mode nil</code>
+</li>
+<li>Use 2 spaces for indenting code &#x2013; <code>c-basic-offset 2</code>
+</li>
+<li>Use the Kernighan &amp; Ritchie convention for aligning the curly braces &#x2013; <code>c-default-style k&amp;r</code>
+</li>
+</ol>
+
+<p>
+Below is the copy-pastable setting that you can plunk in the <i>.emacs</i> init file
+</p>
+
+<pre class="example">
+(add-hook 'java-mode-hook
+  (lambda()
+    " Treat JDK 1.5 annotations as comments"
+    (setq c-comment-start-regexp "(@|/(/|[*][*]?))")
+    (modify-syntax-entry ?@ "&lt;b" java-mode-syntax-table)))
+
+(add-hook 'java-mode-hook (lambda ()
+  (setq c-default-style "k&amp;r" c-basic-offset 2 tab-width 2 indent-tabs-mode nil)))
+</pre>
+
+<p>
+The <i>c-default-style k&amp;r</i> means it will use the curly braces alignment of Kernighan and
+Ritchie, the opening curly brace is at the right most side, immediately following the
+closing parens and the closing curly brace is flushed at the left side. 
+</p>
+
+<p>
+The K &amp; R style isn't the only one you can use. The other indenting styles are well documented in EmacsWiki/Indenting C<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> and on WikiPedia/IndentStyle<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Text expansion, AutoCorrection</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<code>(setq save abbrevs nil)</code><br  />
+<code>(setq-default abbrev-mode t)</code><br  />
+<code>(load "~/.emacs.d/abbrev_defs")</code>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Note taking with org</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+You must download org-mode using the package manager (package.el), get org-mode from there either from elpa, melpa or marmalade
+</p>
+
+<p>
+To publish in HTML, M-x org-html-export-to-html, that's it or you might want to look at this 
+<a href="http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html</a>
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Color problem with tmux</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+TMUX messes with the color scheme that is setup in emacs. You need to fix the color scheme in tmux. There are plenty of ways to do this. I would think there is a way in .tmux.conf, the <a href="https://wiki.archlinux.org/index.php/tmux">TMUX section of ArchWiki</a> has some detailed advice on this one. Or you can simply pass the TERM value when you start tmux. In the <i>.bashrc</i> or or <i>.bash<sub>profile</sub></i> add an alias to tmux
+</p>
+
+<pre class="example">
+alias tmux="TERM=screen-256color-bce tmux"
+</pre>
+
+<p>
+Now open tmux as you normally would e.g. <code>tmux new -s coding</code> then open emacs. TMUX shouldn't be messing around with the emacs color-scheme now.
+</p>
+
+<p>
+Another route you can try is to customise the <code>frame-background-mode</code> variable. Try the three different settings (0 = light, 1 = dark and 2 = automatic). Invoke the customise variable command <code>M x customize-variable RET</code> then type <code>frame-background-mode RET</code>. You will see the following screen.
+</p>
+
+
+<div class="figure">
+<p><img src="../images/emacs/frame-background-mode.png" alt="frame-background-mode.png" /> 
+</p>
+</div>
+
+<p>
+Go to value menu, the RET. Choose either 0,1 or 2. Then go to the State menu and choose from one of the options. You can set the value of background just for the current session or you can choose to save it for future sessions. 
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Think of a buffer as a scratch pad. It's an editing session, there is a subtle difference between a physical file and a buffer, but for now, think of them as the same thing. If you are more comfortable with the notion that you are editing a "file" instead of buffer, then go ahead with that. Eventually, when you have used emacs enough, you will realize the difference.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+There is an indepth treatment of C indent styles <a href="http://www.emacswiki.org/emacs/IndentingC">here</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+WikiPedia shows some sample and historical context on each style. The link is <a href="http://en.wikipedia.org/wiki/Indent_style">here</a>
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-06-19 Thu 23:47</p><p/><p>Discussions and comments at: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+</div>
+</body>
+</html>

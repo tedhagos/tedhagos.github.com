@@ -1,0 +1,64 @@
+
+set nocompatible
+
+filetype off
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+set ruler
+set nu
+
+set cursorline
+set cursorcolumn
+
+" :hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkblue  ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+
+set smarttab
+set smartindent
+set autoindent
+
+autocmd!
+
+set rtp+=~/.vim/bundle/vundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tlib_vim'
+Bundle 'snipmate-snippets'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'ricardovaleriano/vim-github-theme.git'
+
+call vundle#end()
+
+" PluginInstall
+" or vim +PluginInstall +qall
+
+
+filetype plugin indent on
+
+syntax on
+colorscheme desert
+
+:imap ;; <Esc>
+
+
+" -------------------------------
+" ABBREVIATIONS
+" -------------------------------
+
+:abbr tgh Ted Hagos
+
+

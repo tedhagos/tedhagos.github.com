@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Send Receive SMS using USB Modem</title>
+<!-- 2014-07-09 Wed 16:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ted Hagos" />
+<meta  name="description" content="The howto details how to setup a modern USB modem in Linux. It will allow you to use the USB modem to send and receive SMS messages. This project used a huawei UMTS USB stick"
+ />
+<meta  name="keywords" content="huawei linux usb modem sms send receive gnokii" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">Send Receive SMS using USB Modem</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Overview</a></li>
+<li><a href="#sec-2">2. Installation</a></li>
+<li><a href="#sec-3">3. Config</a></li>
+<li><a href="#sec-4">4. Database backend</a></li>
+<li><a href="#sec-5">5. Sending and Receiving SMS</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Overview</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.
+</p>
+
+<p>
+There were a couple of other solution approaches but I went for gnokii-sms. I didn't have a lot of time, which ruled out whipping serial I/O codes and concocting SMS messages using Hayes AT command set.
+</p>
+
+<p>
+I could have used Kannel but it was so big. I only needed a simple mechanism to receve and send SMS message. I did not need a full gateway with all the bells and whistles.
+</p>
+
+<p>
+GNOKii-SMS and Gammu were mature solutions. I went eventually with gnokii-sms but Gammu would have been a fit as well.
+</p>
+
+<p>
+Hence, this mashup uses gnokii-sms. It is a stand-alone application with a daemon and it uses MySQL database as a datastore. I don't need to learn any API in order to integrate it with my application. All I need to do is to write an application that will query the gnokii-sms backend. I won't even alter the structure of the gnokii-sms database. My application will simply use gnokii for the SMS facility. No application logic will be added to gnokii-sms
+</p>
+
+<p>
+This little project requires the following
+</p>
+
+<ol class="org-ol">
+<li>A Linux PC. Debian was used but I got to test it on Crunchbang as well, worked out fine. It should work fairly well on the Debian derivatives e.g. Ubuntu, Xubuntu, Mint etc
+</li>
+<li>A USB modem. A post paid plan was used for the project, but a USB stick on pre-paid should work just as well
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Installation</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<code>sudo apt-get update</code><br  />
+<code>sudo apt-get install mysql-server</code><br  />
+<code>sudo apt-get install gnokii-smsd-mysql</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Config</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Connect the USB modem to PC and find out which port it is using
+</p>
+
+<p>
+<code>sudo lsusb</code>
+</p>
+
+<p>
+Another command to use could be
+</p>
+
+<p>
+<code>sudo dmesg | grep USB</code>
+</p>
+
+<p>
+What you are looking for is the device name for the modem. Usually, the modem is at <code>/dev/tty0</code>, but just to be sure, run either lsusb or the dmesg command as stated above. Remember the device name because you will need it when you edit <code>~/.config/gnokii/config</code> &#x2014; that is the configuration file for gnokii. 
+</p>
+
+<p>
+On some Debian derivatives like Crunchbang, the gnokii config file was not created during the installation <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>. If that is the case, just create the config file manually.
+</p>
+
+<p>
+<code>sudo mkdir -p ~/.config/gnokii</code><br  />
+<code>sudo touch ~/.config/gnokii/config</code>
+</p>
+
+<p>
+Edit the <b>config</b> file. Set the port number and model to their appropriate values
+</p>
+
+<pre class="example">
+port=/dev/tty0
+model=AT
+</pre>
+
+<p>
+There might a default value for the model property, it could be 6510. That value corresponds to a Nokia phone. But we are not using a Nokia phone, we are using a USB modem, so set the model value to <b>AT</b>.
+</p>
+
+<p>
+Once done with the configuration, just do a quick test so that we know things are working out fine. Gnokii has a command that can quickly tell us if we are doing things correctly.
+</p>
+
+<p>
+<code>sudo gnokii --identify</code>
+</p>
+
+<p>
+It should give us some diagnostics and a quick peek if we did something wrong on the configuration file.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Database backend</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The gnokii-smsd-msyql package contains the SQL scripts necessary to create the table structure, but the database itself still needs to be manually prepared. 
+</p>
+
+<p>
+<code>mysql -u root -p</code><br  />
+<code>mysql&gt; create database smsgw;</code><br  />
+<code>mysql&gt; use smsgw;</code><br  />
+<code>mysql&gt; \. /usr/share/doc/gnokii-smsd-mysql/sms.tables.mysql.sql;</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Sending and Receiving SMS</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+First, the daemon smsgw daemon process needs to run. Get another terminal window and run the daemon process from there
+</p>
+
+<p>
+<code>sudo smsd -u root -p smsgw -c localhost -m mysql</code>
+</p>
+
+<p>
+To send an SMS message, the command is
+</p>
+
+<p>
+<code>echo "Test message | gnokii --sendsmsd +MobileNumber</code>
+</p>
+
+<p>
++MobileNumber is structured as <span class="underline">(country code) phone number</span>
+</p>
+
+<p>
+If you send an SMS message to the number of the USB modem, all incoming messages are stored in the <b>inbox</b> table of the database
+</p>
+
+<p>
+<code>mysql -u root -p</code><br  />
+<code>mysql&gt; use smsgw;</code><br  />
+<code>mysql&gt; select * from inbox;</code>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+There was a gnokii config file though at <code>/etc/xdg/gnokii/config</code>, this
+was probably meant to be copied over to <code>~/.config/gnokii/config</code>
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-06-27 Fri 22:23</p><p/><p>Discussions and comments at: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+</div>
+</body>
+</html>

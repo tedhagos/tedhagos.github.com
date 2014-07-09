@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Printing</title>
+<!-- 2014-07-09 Wed 16:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ted Hagos" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">Printing</h1>
+<p>
+You've already seen the <b>println</b> method previous. We used it before. It is one the easiest built-in functions to utilize. All one needs to do to print is to pass something as a parameter to the <b>println</b> method, and it will do the rest.  The println can handle a variety of data types. You don’t need to worry what kind of data to use, just throw it to println and let it do its work.  
+</p>
+
+<p>
+To send a bunch of Strings to STDOUT (standard output oir the
+</p>
+
+
+<pre class="example">
+class PrintOne {
+  
+  public static void main(String[] args) {
+    
+    System.out.println("Line number one");
+    System.out.println("Line number two");
+    
+  }
+  
+}
+</pre>
+
+<p>
+No surprises here. You have seen this code many times before.  It prints “Line number one”, then adds new line before it prints out “Line number two” then adds another new line. 
+</p>
+
+<p>
+<b>*</b>
+</p>
+
+<p>
+You can put expressions inside the println.  Like this
+</p>
+
+<p>
+<code>~~~~~~</code>
+System.out.println(1 * 2 * 3 * 4);
+System.out.println(“1 + 2 = “ + 1 + 2);
+<code>~~~~~~</code>
+</p>
+
+<p>
+![Printing Expressions](images/expressions-println.png)
+</p>
+
+<p>
+Expressions inside the println method will be evaluated first before it gets printed. Any expression that results to a value can be printed inside the println — whether it is arithmetic, logical or simply combining Strings.  
+</p>
+
+<p>
+The second line in the second example is worth pointing out.  The first plus sign after the enclosing double quote is not meant to perform an arithmetic addition — the second plus sign was meant to do that. The first plus sign was meant to perform String combination. 
+</p>
+
+<p>
+Once the arithmetic sum of 1 and 2 have been resolved, the result will be combined with the String “1 + 2 = “.  In Java, if you add a String to anything, anything at all, whether it be a native or reference type, it gets converted into a String type.  Hence, the quickest way to convert any number to String is to add an empty String to it.
+</p>
+
+<p>
+<code>~~~~~~</code>
+10 + “”;
+<code>~~~~~~</code>
+</p>
+
+
+<p>
+## System.out.print
+</p>
+
+<p>
+The <b>println</b> has a variant form called <b>print</b> — without the <b>ln</b>. It does basically the same thing but it does not add a new line to the output.  Try this one out.
+</p>
+
+<p>
+<code>~~~~~~</code>
+class PrintTwo  {
+  public static void main(String[] args) {
+    System.out.print("Line number one");
+    System.out.print("Line number two");
+  }
+}
+<code>~~~~~~</code>
+</p>
+
+<p>
+This sample prints “Line number oneLine number two”. It was mashed up.  This behavior can come in handy depending on what you are doing. If you need to print things without adding a new line or carriage return, use the <b>print</b> method, if you need the line feed then use <b>println</b>. 
+</p>
+
+<p>
+<b>*</b>
+</p>
+
+<p>
+There are things you can embed on Strings that can alter the printing behavior. They are called escape sequences or escape characters.  The most common escape sequence you may encounter is the <b><b>\n</b></b>.  
+</p>
+
+<p>
+<code>~~~~~~</code>
+class Escape {
+</p>
+
+<p>
+public static void main(String[] args) {
+  System.out.print("The quick brown\n fox jumped over the lazy\n dog");
+}
+</p>
+
+<p>
+}
+<code>~~~~~~</code> 
+</p>
+
+<p>
+Escape characters are written as part of the String literal. These characters start with a back slash and they affect the way the String is printed. In the sample code above, the \n escape character will add a line feed or carriage return then it will resume printing on the next line. 
+</p>
+
+<p>
+## Formatting the print
+</p>
+
+<p>
+There might be times when you will need to use a combination of variables and String literals  during printing. Since we know that adding String to another data type produces a String, we can always write expressions like this.
+</p>
+
+<p>
+<code>~~~~~~</code>
+class Positional {
+</p>
+
+<p>
+public static void main(String[] args) {
+</p>
+
+<p>
+int a = 1;
+int b = 2;
+int c = 3;
+</p>
+
+<p>
+System.out.println("a = " + a + " b = " + b + " c = " + c);
+</p>
+
+<p>
+  }
+}
+<code>~~~~~~</code>
+</p>
+
+<p>
+There is nothing wrong with this technique except that it’s cumbersome and prone to error. You can almost get cross-eyed just looking at it and checking whether the the pairs of double quotes are correct.  Fortunately, there are other ways to handle printing. These are <b>printf</b> and <b>format</b>.  The <b>printf</b> and <b>format</b>  method are equivalent in functionality, you can use either of one them to replace <b>println</b> or <b>print</b>.
+</p>
+
+<p>
+Printf behaves exactly the same as its brothers <b>println</b> and <b>print</b>. All of them can handle whatever variable, literal or expression you throw to them. They will simply send it to STDOUT (your terminal).  But there are two things that <b>printf</b> does exceptionally well. It can handle positional parameters and formatting.  
+</p>
+
+<p>
+<code>~~~~~~</code>
+class Positional {
+</p>
+
+<p>
+public static void main(String[] args) {
+</p>
+
+<p>
+int a = 1;
+int b = 2;
+int c = 3;
+</p>
+
+<p>
+System.out.println("a = " + a + " b = " + b + " c = " + c);
+</p>
+
+<p>
+System.out.printf("a = %d b = %d c = %d \n", a, b , c);
+</p>
+
+<p>
+  }
+}
+<code>~~~~~~</code>
+</p>
+
+<p>
+Printf lets you insert placeholders or format specifiers inside the String literal. These placeholders will be filled up by the actual values which are specified also inside the <b>printf</b> method.  In the example, <b><b>%d</b></b> is a placeholder. There were three of them because there were three variables also to the right of the String literal.  The first %d corresponds to the variable <b>a</b>. The second %d is for the variable <b>b</b> and the last %d corresponds to variable c.  
+</p>
+
+<p>
+The format specifier we used  in the example was written as %d because it needed to handle <b>int</b> values.  If we wanted it to deal with another type of data, we would have used a different specifier.  You can format quite a few things with <b>printf</b>. It can deal with dates, 
+</p>
+
+
+<p>
+##Activity
+</p>
+
+<p>
+##Glossary
+</p>
+
+
+
+<p>
+##Exercise
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-06 Sun 20:04</p><p/><p>Discussions and comments at: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+</div>
+</body>
+</html>

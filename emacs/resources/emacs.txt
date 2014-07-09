@@ -1,0 +1,127 @@
+(load "~/.emacs.d/abbrev_defs")
+(load "~/.emacs.d/init.el")
+
+(setq-default inhibit-splash-screen t)
+
+
+(setq linum-format "%4d")
+(menu-bar-mode -1)
+
+;;(disable-theme 'wombat)
+;;(disable-theme 'tango)
+;;(disable-theme 'adwaita)
+
+;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el/")
+
+;;(require 'color-theme)
+;;(setq-default color-theme-is-global t)
+;;(color-theme-initialize)
+;;(load-theme 'tango t)
+;;(color-theme-greiner)
+
+(custom-set-variables
+ '(load-home-init-file t t))
+(custom-set-faces)
+
+; ORG SETUP
+
+(require 'org)
+(require 'ox-publish)
+;(setq org-src-fontify-natively nil)
+(setq org-publish-use-timestamps-flag nil)
+(setq org-export-html-postamble t)
+(setq org-export-html-postamble-format t)
+;(setq org-html-postamble "<p class=\"author\">By: <a href=\"https://plus.google.com/+TedHagos?rel=author\">%a</a></p> <p class=\"date\">Updated on: %C</p><p/><p>Discussions and comments at: <a href=\"https://muut.com/tedsnotebook\">muut.com</a></p>")
+
+(setq org-publish-project-alist
+'(( 
+  "org-notes"
+  :export-author-info nil
+  :export-creator-info nil
+  :author "Ted Hagos"
+  :email "tedhagos@gmail.com"
+  :base-directory "~/Dropbox/org/"
+  :base-extension "org"
+  :publishing-directory "~/Dropbox/notebook_html/"
+  :recursive t
+  :timestamp t
+  :auto-index t
+  :makeindex set
+  :html-head "<link rel=\"stylesheet\" href=\"../css/stylesheet.css\" type=\"text/css\" />"
+  :html-head-extra "<link href=\"http://fonts.googleapis.com/css?family=Inconsolata\" rel=\"stylesheet\" type=\"text/css\" /> <link href=\"http://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\" type=\"text/css\" />"
+  :auto-sitemap t
+  :sitemap-filename "sitemap.org"
+  :sitemap-title "sitemap"
+  :with-toc nil
+  :section-numbers nil
+  :headline-levels 4
+  :publishing-function org-html-publish-to-html
+  :html-postamble "<p class=\"author\">By: <a href=\"https://plus.google.com/+TedHagos?rel=author\">%a</a></p> <p class=\"date\">Updated on: %C</p><p/><p>Discussions and comments at: <a href=\"https://muut.com/tedsnotebook\">muut.com</a></p>"
+)
+(
+ "org-static"
+ :base-directory "~/Dropbox/org/"
+ :recursive t
+ :publishing-directory "~/Dropbox/notebook_html/"
+ :base-extension "css\\|js\\|jpeg\\|jpeg\\|png\\|gif"
+ :publishing-function org-publish-attachment
+)
+("website" :components ("org-notes" "org-static"))
+
+(
+ "rd-notes"
+ :author "Ted Hagos"
+ :base-directory "~/Dropbox/rd/"
+ :base-extension "org"
+ :publishing-directory "~/Dropbox/rd_html/"
+ :html-head "<link rel=\"stylesheet\" href=\"../css/stylesheet.css\" type=\"text/css\" />"  
+ :recursive t
+ :auto-index t
+ :makeindex set
+ :with-toc nil
+; :html-link-home ../index.html
+ :auto-sitemap t
+ :section-numbers nil
+ :sitemap-filename "sitemap.org"
+ :sitemap-title "RD works"
+ :publishing-function org-html-publish-to-html
+; :html-postamble "author : %a, created on: %d, last update: %C"
+ )
+ (
+  "rd-static"
+  :base-directory "~/Dropbox/rd"
+  :recursive t
+  :base-extension "css\\|js\\|jpeg\\|jpg\\|png\\|gif"
+  :publishing-directory "~/Dropbox/rd_html"
+  :publishing-function org-publish-attachment
+ )
+("rd" :components("rd-notes" "rd-static"))
+
+( "scratchpaper"
+  :base-directory "~/Dropbox/docstage/"
+  :base-extension "org"
+  :publishing-directory "~/Dropbox/docstage_html"
+  :publishing-function org-html-publish-to-html
+  :html-head "<link rel=\"stylesheet\" href=\"../css/stylesheet.css\" type=\"text/css\" />"
+  :recursive t
+  :with-toc nil
+  :section-numbers nil
+  :autoindex t
+  :makeindex set
+  :auto-sitemap t
+  :sitemap-filename "sitemap.org"
+  :sitemap-title "Temp Doc"
+  :html-link-up "index.html"
+  :html-link-home "../index.html"
+  :html-head-extra "<link href=\"http://fonts.googleapis.com/css?family=Inconsolata\" rel=\"stylesheet\" type=\"text/css\" /> <link href=\"http://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\" type=\"text/css\" />"
+
+)
+( "scratchpaper-static"
+  :base-directory "~/Dropbox/docstage/"
+  :recursive t
+  :publishing-directory "~/Dropbox/docstage_html/"
+  :publishing-function org-publish-attachment
+  :base-extension "css\\|jpg\\|jpeg\\|gif\\|png\\|htm\\|html\\|js\\|txt"
+)
+("scratch" :components("scratchpaper" "scratchpaper-static"))
+))

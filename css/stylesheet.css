@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Droid+Sans+Mono|Inconsolata:700);
+
+
+.title {
+  margin-top:0;
+  padding-top:0;
+  text-align: left; 
+}
+
+#org-div-home-and-up  {
+  margin-bottom:20px;
+  margin-right: 10px;
+}
+
+body {
+
+  background: #fbfbfb;
+  width: 98%;
+  font-size: 97%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#content {
+  column-count:2;
+  -webkit-column-count:2;
+  -moz-column-count:2;
+}
+
+#text-table-of-contents {
+  width: 100%;
+}
+
+#text-table-of-contents h2 {
+  color: black;
+  border-bottom: 0px;
+}
+
+/*
+h2 {font-size: 25px;}
+h3 {font-size: 20px;}
+h4 {font-size: 17px;}
+*/
+
+h2 {font-size: 21px;}
+h3 {font-size: 17px;}
+h4 {font-size: 15px;}
+
+
+h1, h2, h3, h4 {
+  margin-top: 20px;
+}
+
+code {
+  font-family: 'Inconsolata','Droid Sans Mono', monospace;
+  color: #000000;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+#org-src-container, pre  {
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 11px;
+}
+
+table {table-border:none; border-collapse:collapse;}
+table, th, td {border: 1px solid #fff;}
+
+pre {
+  border: 0px solid gray;
+  box-shadow: 0px 0px 0px #eee;
+  background: #e0e0e0; 
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  overflow: auto;
+  width: 98%;
+  margin: 0px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+}
+
+pre.src {
+  position: relative;
+  overflow: visible;
+  padding-top: 1.2em;
+}
+
+a:link,  a:visited {
+  text-decoration: underlined;
+  color: blue;
+}
+
+#org-div-home-and-up a:link, #org-div-home-and-up {
+  font-size: 100%;
+  text-transform: capitalize;
+}
+
+
+ol, ul {padding-left: 10px; margin-left:10px;}
+
+/*
+dt { margin-top: 15px; color: #333333;}
+dd { margin-top: 6px;}
+*/
+
+hr {
+  border:0;
+  color: #DEDEDE;
+  background: #DEDEDE;
+  height: 4px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.figure {
+  padding: 0;
+}
+
+img {
+  width: 95%;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+#postamble {margin-top:20px;}

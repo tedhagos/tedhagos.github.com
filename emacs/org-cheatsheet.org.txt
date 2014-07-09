@@ -1,0 +1,41 @@
+#+AUTHOR: Ted Hagos
+#+TITLE: Org cheatsheet
+
+#+description: 
+
+#+options: ^:nil timestamp:t num:nil
+
+#+HTML_LINK_UP: index.html
+#+HTML_LINK_HOME: ../index.html
+# + INFOJS_OPT: view:content toc:1
+
+#+INDEX: 
+#+INDEX: 
+
+#+TOC: headlines 1
+
+
+** Inclusion of table of contents
+
+Two ways of doing this. First one is in the /org-publish-project-alist/ declaration. Actually, you don't have to do anything in there. TOC is included by default, if the /:with-toc/ directive is not /nil/ the exported HTML will always contain a table of contents unless otherwise overidden by /OPTIONS/ variable in the org document itself.
+
+#+begin_example     
+(setq org-publish-alist
+'((
+  "mynotes"
+  :with-toc nil
+  :base-directory "/somedir/"
+))
+)
+#+end_example 
+
+The above example will supress the generation of TOC on every exported document. If you want to generated the TOC, remove the /:with-toc nil/ statement
+
+The second way of generating TOC is to put statement in the export options of each org document e.g. if you have a document named /somedocument.org/, it might look like this
+
+
+#+begin_example
+
+#+end_example
+
+
