@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Data Types</title>
-<!-- 2014-07-09 Wed 23:38 -->
+<!-- 2014-07-10 Thu 00:20 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ted Hagos" />
@@ -180,7 +180,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
+ <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
@@ -312,23 +312,15 @@ It looks innocent and deceitfully accurate, but it will result to an error. Whil
 </p>
 
 <p>
-Remember the hierarchy of types from a discussion a while ago &amp;mdash; <b>double</b> is bigger than a <b>float</b> which is bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b> &amp;mdash; that one? It has a related rule. 
+Remember the hierarchy of types? A <b>double</b> is bigger than a <b>float</b> which is in turn bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b>? We need to remember one more thing.  
 </p>
 
 <p>
-When a <b>double</b> is added to something else, the resulting type is a double. 
+When a <b>double</b> is added to something smaller (float, long, int etc) the resulting type is a double. When a <b>float</b> is added to something smaller (long, int, short etc), the result is float. When a <b>long</b> added to either an <b>int, short,  byte or char</b>, the result is a long. 
 </p>
 
 <p>
-When a <b>float</b> is added to something else, the result is float. 
-</p>
-
-<p>
-A <b>long</b> added to something else, the result is a long. 
-</p>
-
-<p>
-For everything else the result is an <b>int</b>. Oh and by the way, I just used arithmetic <b>add</b> operation for the explanation because it's a lot easier to say, but the truth is, that rule holds up for all arithmetic operation (+ - * / and %). No arithmetic operation will ever result into <b>short</b> or <b>byte</b>. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
+For everything else the result is an <b>int</b>. Oh and by the way, I just used arithmetic <b>add</b> operation for the explanation because it's a lot easier to say, but the truth is the rule holds up for subtraction, multiplication, division and even modulo. No arithmetic operation will ever result into <b>short</b> or <b>byte</b>. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
 </p>
 
 <p>
@@ -353,7 +345,7 @@ And now, all is well.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-09 Wed 22:44</p><p/><p>Question and comments: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-10 Thu 00:10</p><p/><p>Discussions and comments at: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
 </div>
 </body>
 </html>
