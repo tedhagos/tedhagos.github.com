@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Abstraction and Complexity</title>
+<title>Operators</title>
 <!-- 2014-07-09 Wed 23:38 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
@@ -142,65 +142,57 @@ for the JavaScript code in this tag.
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
-<h1 class="title">Abstraction and Complexity</h1>
-<p>
-Complexity can be managed by a system of hierarchic abstractions. One layer on top of the other. Each layer hides some degree of implementation from the layer on top. One layer of abstraction building on top of  other abstractions. Each understandable by itself. 
-</p>
-
-<p>
-There are factors that drive the complexity of system
-</p>
-
-<dl class="org-dl">
-<dt> Complexity of the problem domain </dt><dd></dd>
-<dt> Difficulty in managing the software development process </dt><dd></dd>
-<dt> Flexibility is possible through software </dt><dd></dd>
-<dt> Software is a discrete system </dt><dd></dd>
-</dl>
-
-<hr  />
-
-<p>
-Abstraction defines the essential characteristics of an object. It makes the object different from any other object.
-</p>
-
-<p>
-The elevator is different from an escalator—how? go figure. The essence of an object makes it distinguishable from other objects in the eye of the obsever (you).
-</p>
-
-<p>
-It allows an observer to appreciate object without knowing how it works internally. Like the light switch, you really don’t know how electricity works but you know you can get the light if you flip the switch. If you flip it in the opposite direction, light is off.
-</p>
-
-<p>
-Abstraction is one of the major focus of OO analysis and design. It allows you to ignore the details of an object. It simply presents the protocols (big word) of interaction between objects — in Java, the unit of abstraction is the class/object. 
-</p>
-
-<hr  />
-
-<p>
-Abstraction helps us grapple with large complex systems by chunking. The span of absolute judgement and span of immediate memory impose limitations on our capability to understand things, concepts and procedures. To break the information bottleneck, we chunk into several dimensions.
-</p>
-
-<p>
-We focus on one chunk and ignore the inessential details of others. We choose to deal with the generalized and idealized model of the object in front of us. This way, we can increase its semantic content
-</p>
-
+<h1 class="title">Operators</h1>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">References</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Operators</h2>
 <div class="outline-text-2" id="text-1">
-<ol class="org-ol">
-<li>Booch, Rumbaugh, Jacobson, <span class="underline">Object Oriented Analysis and Design</span> 
-</li>
-<li>Brooks, <span class="underline">OOAD</span>
-</li>
-</ol>
+<p>
+This should not not be a long section. If you have programmed before using another language, chances are these operators are exactly the same thing in that other language that you used. So it's a not a big deal. There is not much to see here and to be honest, quite boring. So in this section, we will simply list the operators that you can use in Java. No gotcha's nor clever examples, just a list. 
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Arithmetic</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The <b>+ - * / and %</b> functions as you might expect. They work on numbers, both real and integral &amp;mdash; with the exception of the <b>+</b> which also works on <b>Strings</b> as you've seen earlier.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Comparisson</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The <b>&gt; &gt;=  &lt; &lt;= and ==</b> are read, more than, more than or equal to,less than and less than or equal to, respectively. You know how to use them, you don't need me to explain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Logical</h3>
+<div class="outline-text-3" id="text-1-3">
+<dl class="org-dl">
+<dt> &amp;   </dt><dd>a logical <b>and</b>. The expression will only be true if both operands are true
+</dd>
+<dt> &amp;&amp;  </dt><dd>a short circuit <b>and</b>, more or less the same as the logical <b>and</b> but it's short circuit. If the first operand is already false, it will not even bother testing the second operand, it will immediately return <b>false</b>, hence it's name, short-circuit.
+</dd>
+<dt> |   </dt><dd>a logical <b>or</b>. The expression will return true as long as one of the operand is <b>true</b>
+</dd>
+<dt> ||  </dt><dd>a short-circuit or. It follows the same prinnciple as <b>&amp;&amp;</b> only it performs it on an <b>or</b> condition &amp;mdash; can you figure it out? That's your homework. 
+</dd>
+</dl>
+
+<p>
+There are other operators in Java, but we won't list them here. It makes sense to tackle them when there is more context. So we will leave the discussions of these other operators like <code>++ and --</code> for later.
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-06-20 Fri 15:19</p><p/><p>Question and comments: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-09 Wed 22:58</p><p/><p>Question and comments: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
 </div>
 </body>
 </html>

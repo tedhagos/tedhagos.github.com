@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Data Types</title>
+<!-- 2014-07-09 Wed 23:38 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ted Hagos" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">Data Types</h1>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Types</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Programmers create things (data). We manipulate them by adding, substracting, dividing or multiplying. Sometimes we mash them up together (concatenation), then we create more things. Sometimes, we store these things for later use, and other times we don't, we simply discard them. Sometimes we dig up things that we have stored in the past (retrieval) and other times we show the things we've tucked away to other people (reports). This is an oversimplification of what programmers do, but I would guess that it is not very far from it. 
+</p>
+
+<p>
+In order to create things, we need to know what kinds of things you can create. Will you be counting these things (whole numbers) or will you measure them (real numbers)? If we need to compare one thing to another thing, how will we  remember the result of that comparisson? Can we store the result of that comparisson inside another kind of thing, one that is aware of truth and falsity? 
+</p>
+
+<p>
+If we were using a language that is pretty close to the metal, like assembly or C, you may need to know quite a bit about how things are stored and organized in a very low-level fashion before you can get very far.  We are, however, using Java and it will not require us to work close to the metal. 
+</p>
+
+<p>
+You will work with <b>types</b> rather than bits (zeroes and ones). Java has defined some useful abstractions for us already. These abstractions allow us to work with ease because we can represent familiar concepts with ready-made <b>types</b>. For example, if you need to work with real numbers, Java has defined the <b>float</b> and <b>double</b>  data types. If you need to work with words and letters, Java has defined for us the <b>java.lang.String</b> type.  These abstractions are high enough that we don't get bogged down by the details of how they are stored and structured on the disk, we can worry about other things like the logic of our application. 
+</p>
+
+
+<dl class="org-dl">
+<dt> byte </dt><dd>signed 8-bit integer (-128 to 127)          
+</dd>
+<dt> short  </dt><dd>signed 32-bit integer (-2,147,483,648 to 2,147,483,647)
+</dd>
+<dt> long </dt><dd>signed 64-bit integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,807)
+</dd>
+<dt> float </dt><dd>signed 32-bit floating point (32 bit IEEE 754 floating point)
+</dd>
+<dt> double </dt><dd>signed 64-bit floating point (64 bit IEEE 754 floating point)
+</dd>
+<dt> char  </dt><dd>16-bit Unicode character (0 to 65535 or \u0000 to \uFFFF)
+</dd>
+<dt> boolean </dt><dd>either <b>true</b> or <b>false</b>
+</dd>
+</dl>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Variables</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Variables are created by declaring them, then defining them. For example, 
+</p>
+
+<pre class="example">
+int i;
+</pre>
+
+<p>
+is a statement that DECLARES the variable named <b>i</b>  that is of type <b>int</b>, it does not define it however. To declare and define a variable, it done like this
+</p>
+
+<pre class="example">
+int i;
+i = 0;
+</pre>
+
+<p>
+In the preceding code, the variable <b>i</b> was DECLARED on one line and then DEFINED on the following line. You can create your variables like this, or like this;
+</p>
+
+<pre class="example">
+int i = 0;
+</pre>
+
+<p>
+Where the variable <b>i</b> has been both declared and defined on the same line.
+</p>
+
+<p>
+Why are we specifying that <b>i</b> is an int? That is because Java is a statically typed language. The compiler will not guess what kind of data you are creating, you have to tell it explicitly before it gets compiled. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Rules on types</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The numerical types of Java follows a certain hierarchy &amp;mdash; <b>double</b> is bigger than a <b>float</b> which is bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b>. You must be aware of this hierarchy because you will not always work with just one data type, exclusively &amp;mdash; you will work with a combination of them. 
+</p>
+
+<p>
+For the most part, you can add variables of different types e.g. add an int to a double, a byte to an int etc, but you can only assign the value to a variable if the type of the value is;
+</p>
+
+<ol class="org-ol">
+<li>the same as the type of the variable
+</li>
+<li>bigger than the type of the variable
+</li>
+</ol>
+
+<p>
+For example
+</p>
+
+<pre class="example">
+int a = 10;
+int b = a;
+long c = b;
+double d = c;
+</pre>
+
+<p>
+You can assign <b>b to a</b> because they are both int; assign <b>b to c</b> because a long is bigger than an int; <b>c to d</b> because a double is bigger than a long. Makes sense right? When you assign a smaller type to a larger type, that is what programmer's call a <b>upcast</b>. Upcasting is automatically performed for you when you do operations like the above (assigning a smaller type to a larger type).
+</p>
+
+<p>
+Let's look at another example.
+</p>
+
+<pre class="example">
+byte a = 1;
+byte b = 2;
+byte c = a + b;
+</pre>
+
+<p>
+It looks innocent and deceitfully accurate, but it will result to an error. While you may reason that  because we added 2 byte values (a + b), it stands that we should be able assign the arithmetic result to <b>c</b> which is declared as a byte &amp;mdash; You would have been correct if the resulting type of adding two <b>byte</b> values is also a byte, but that is not the case. One apple added to another another apple doesn't make two apples in this case. It looks counter-intrutive and scaringly frustrating to a beginner. I know. Don't panic. We just to understand the arithmetic rules of Java for this to make sense. 
+</p>
+
+<p>
+Remember the hierarchy of types from a discussion a while ago &amp;mdash; <b>double</b> is bigger than a <b>float</b> which is bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b> &amp;mdash; that one? It has a related rule. 
+</p>
+
+<p>
+When a <b>double</b> is added to something else, the resulting type is a double. 
+</p>
+
+<p>
+When a <b>float</b> is added to something else, the result is float. 
+</p>
+
+<p>
+A <b>long</b> added to something else, the result is a long. 
+</p>
+
+<p>
+For everything else the result is an <b>int</b>. Oh and by the way, I just used arithmetic <b>add</b> operation for the explanation because it's a lot easier to say, but the truth is, that rule holds up for all arithmetic operation (+ - * / and %). No arithmetic operation will ever result into <b>short</b> or <b>byte</b>. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
+</p>
+
+<p>
+Let's continue to work on our small byte addition example earlier, let's fix that.
+</p>
+
+<pre class="example">
+class ByteAdd {
+  public static void main(String args[]) {
+    byte a = 1;
+    byte b = 2;
+    int c = a + b;
+  }
+}
+</pre>
+
+<p>
+And now, all is well. 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-09 Wed 22:44</p><p/><p>Question and comments: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+</div>
+</body>
+</html>
