@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Data Types</title>
-<!-- 2014-07-10 Thu 00:20 -->
+<!-- 2014-07-10 Thu 08:56 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ted Hagos" />
@@ -180,7 +180,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="index.html"> UP </a>
+ <a accesskey="h" href=""> UP </a>
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
@@ -195,15 +195,15 @@ Programmers create things (data). We manipulate them by adding, substracting, di
 </p>
 
 <p>
-In order to create things, we need to know what kinds of things you can create. Will you be counting these things (whole numbers) or will you measure them (real numbers)? If we need to compare one thing to another thing, how will we  remember the result of that comparisson? Can we store the result of that comparisson inside another kind of thing, one that is aware of truth and falsity? 
+In order to create things, we need to know what kinds of things you can create. Will you be counting these things (whole numbers) or will you measure them (real numbers)? If we need to compare one thing to another thing, how will we  remember the result of that comparisson? Can we store the result of that comparisson inside another kind of thing, perhaps one that is aware of truth and falsity? 
 </p>
 
 <p>
-If we were using a language that is pretty close to the metal, like assembly or C, you may need to know quite a bit about how things are stored and organized in a very low-level fashion before you can get very far.  We are, however, using Java and it will not require us to work close to the metal. 
+If we were using a language that is pretty close to the metal, like assembly, you may need to know quite a bit about how things are stored and organized in a very low-level fashion before you can get very far.  We are, however, using Java and it will not require us to work close to the metal. 
 </p>
 
 <p>
-You will work with <b>types</b> rather than bits (zeroes and ones). Java has defined some useful abstractions for us already. These abstractions allow us to work with ease because we can represent familiar concepts with ready-made <b>types</b>. For example, if you need to work with real numbers, Java has defined the <b>float</b> and <b>double</b>  data types. If you need to work with words and letters, Java has defined for us the <b>java.lang.String</b> type.  These abstractions are high enough that we don't get bogged down by the details of how they are stored and structured on the disk, we can worry about other things like the logic of our application. 
+You will work with <b>types</b> rather than bits (zeroes and ones). Java has defined some useful abstractions for us already. These abstractions allow us to work with relative ease because we can represent familiar concepts with ready-made <b>types</b>. For example, if you need to work with real numbers, Java has defined the <b>float</b> and <b>double</b>  data types. If you need to work with words and letters, Java has defined for us the <b>java.lang.String</b> type.  These abstractions are high enough that we don't get bogged down by the details of how they are stored and structured on the disk, we can worry about other things like the logic of our application. 
 </p>
 
 
@@ -237,7 +237,7 @@ int i;
 </pre>
 
 <p>
-is a statement that DECLARES the variable named <b>i</b>  that is of type <b>int</b>, it does not define it however. To declare and define a variable, it done like this
+The code above is a statement that <b>declares</b> the variable named <b>i</b> that is of type <b>int</b> (integer). It does not <b>define</b> the value of i though.
 </p>
 
 <pre class="example">
@@ -246,19 +246,16 @@ i = 0;
 </pre>
 
 <p>
-In the preceding code, the variable <b>i</b> was DECLARED on one line and then DEFINED on the following line. You can create your variables like this, or like this;
+In the code sample above, the variable <b>i</b> was <b>declared</b> on one line and then <b>defined</b> on the following line. Declaration and definition of variables does not necessarily need 2 separate statements. The next sample code declares and defines a variable in one statement.
 </p>
 
 <pre class="example">
 int i = 0;
 </pre>
 
-<p>
-Where the variable <b>i</b> has been both declared and defined on the same line.
-</p>
 
 <p>
-Why are we specifying that <b>i</b> is an int? That is because Java is a statically typed language. The compiler will not guess what kind of data you are creating, you have to tell it explicitly before it gets compiled. 
+Why are we specifying that <b>i</b> is an int? That is because Java is a statically <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> typed language. The compiler will not guess what kind of data you are creating, you have to tell it explicitly before it gets compiled. 
 </p>
 </div>
 </div>
@@ -268,22 +265,7 @@ Why are we specifying that <b>i</b> is an int? That is because Java is a statica
 <h3 id="sec-1-2"><span class="section-number-3">1.2</span> Rules on types</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-The numerical types of Java follows a certain hierarchy &amp;mdash; <b>double</b> is bigger than a <b>float</b> which is bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b>. You must be aware of this hierarchy because you will not always work with just one data type, exclusively &amp;mdash; you will work with a combination of them. 
-</p>
-
-<p>
-For the most part, you can add variables of different types e.g. add an int to a double, a byte to an int etc, but you can only assign the value to a variable if the type of the value is;
-</p>
-
-<ol class="org-ol">
-<li>the same as the type of the variable
-</li>
-<li>bigger than the type of the variable
-</li>
-</ol>
-
-<p>
-For example
+The numerical types of Java follows a certain hierarchy. A <b>double</b> type is bigger than a <b>float</b> which is bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b>. It is best to keep this hierarchy in mind because we will be working with types quite a lot. There are times that we need to work with a combination of types in one statement. But for now, we need to remember that values of a smaller type can be assigned to a variable that has a larger type.
 </p>
 
 <pre class="example">
@@ -294,7 +276,7 @@ double d = c;
 </pre>
 
 <p>
-You can assign <b>b to a</b> because they are both int; assign <b>b to c</b> because a long is bigger than an int; <b>c to d</b> because a double is bigger than a long. Makes sense right? When you assign a smaller type to a larger type, that is what programmer's call a <b>upcast</b>. Upcasting is automatically performed for you when you do operations like the above (assigning a smaller type to a larger type).
+We can assign <b>b to a</b> because they are both integers. We can assign <b>b to c</b> because a long is bigger than an integer. And <b>c to d</b> because a double is bigger than a long. When you assign a value that is of a smaller type to one of a larger type, it is referred to as <b>upcasting</b>. Upcasting is automatically performed for you when you do operations like the one in the example above. 
 </p>
 
 <p>
@@ -308,19 +290,19 @@ byte c = a + b;
 </pre>
 
 <p>
-It looks innocent and deceitfully accurate, but it will result to an error. While you may reason that  because we added 2 byte values (a + b), it stands that we should be able assign the arithmetic result to <b>c</b> which is declared as a byte &amp;mdash; You would have been correct if the resulting type of adding two <b>byte</b> values is also a byte, but that is not the case. One apple added to another another apple doesn't make two apples in this case. It looks counter-intrutive and scaringly frustrating to a beginner. I know. Don't panic. We just to understand the arithmetic rules of Java for this to make sense. 
+It looks innocent and deceitfully correct, but it will result to an error. It can be reasoned that because we added two byte values, <b>a + b</b>, we can assign the arithmetic result to variable <b>c</b>, which is declared as a byte. That would have been correct if the resulting type of adding two <b>byte</b> values is also a byte. That is not the case. One apple added to another another apple doesn't make two apples in this case. It looks counter-intutive and scaringly frustrating to a beginning Java programmer. But the frustration, hopefully, should go away given a bit more practice and familiarity with the rules governing Java programming.
 </p>
 
 <p>
-Remember the hierarchy of types? A <b>double</b> is bigger than a <b>float</b> which is in turn bigger than a <b>long</b> which is bigger than an <b>int</b> which is bigger than a <b>short</b> which is bigger than a <b>byte</b>? We need to remember one more thing.  
+For the most part, we can work with variables of differing types e.g. add an int to a double, subtract a byte from an int etc, multiply a float with a long. But what kind of type will the resultant value have? To answer that, we will need to know another rule.
 </p>
 
 <p>
-When a <b>double</b> is added to something smaller (float, long, int etc) the resulting type is a double. When a <b>float</b> is added to something smaller (long, int, short etc), the result is float. When a <b>long</b> added to either an <b>int, short,  byte or char</b>, the result is a long. 
+When a <b>double</b> is added to something smaller (float, long, int etc) the resulting type is a double. When a <b>float</b> is added to something smaller (long, int, short etc), the result is float. When a <b>long</b> added to either an <b>int, short,  byte or char</b>, the result is a long. For everything else the result of the operation is an <b>int</b>.
 </p>
 
 <p>
-For everything else the result is an <b>int</b>. Oh and by the way, I just used arithmetic <b>add</b> operation for the explanation because it's a lot easier to say, but the truth is the rule holds up for subtraction, multiplication, division and even modulo. No arithmetic operation will ever result into <b>short</b> or <b>byte</b>. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
+I simply chose the arithmetic <b>add</b> operation for the explanation for convenience. It is a lot easier to say (and write), but the rule holds up for subtraction, multiplication, division and even modulus. No arithmetic operation will ever result into <b>short</b> or <b>byte</b>. There is a very interesting reason for that rule, it sounds really clever too but that is out of the scope of this material. If you want to pursue that reason, dig up on "how Java does arithmetic internally". 
 </p>
 
 <p>
@@ -342,10 +324,29 @@ And now, all is well.
 </p>
 </div>
 </div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> Reference and footnote Java internal arithmetic</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Look at the JLS
+</p>
 </div>
 </div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+A statically typed language requires that that all variable types should be known before compilation. Static typing gives the compiler information about the data. This is why Java can prevent you from doing silly things like declaring a variable as String and then using them in an arithmetic operation which may not be appropriate for Strings.
+</p></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos</a></p> <p class="date">Updated on: 2014-07-10 Thu 00:10</p><p/><p>Discussions and comments at: <a href="https://muut.com/tedsnotebook">muut.com</a></p>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-07-10 Thu 08:56</p><p/>
 </div>
 </body>
 </html>
