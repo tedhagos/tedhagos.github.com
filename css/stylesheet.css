@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Droid+Sans+Mono|Inconsolata:700);
 
+.title, h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial',sans-serif;
+}
 
 .title {
   margin-top:0;
@@ -36,11 +39,6 @@ body {
   border-bottom: 0px;
 }
 
-/*
-h2 {font-size: 25px;}
-h3 {font-size: 20px;}
-h4 {font-size: 17px;}
-*/
 
 h2 {font-size: 21px;}
 h3 {font-size: 17px;}
@@ -127,3 +125,8 @@ img {
 #postamble {margin-top:20px;}
 
 .author {color:#000;}
+
+blockquote {
+  margin: 25px 10;
+  border-bottom: 1px solid gray;
+}
