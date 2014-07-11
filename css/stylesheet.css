@@ -16,10 +16,10 @@
 }
 
 body {
-
+  font-family: 'Georgia', serif;
   background: #fbfbfb;
   width: 98%;
-  font-size: 97%;
+  font-size: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -53,7 +53,7 @@ code {
   font-family: 'Inconsolata','Droid Sans Mono', monospace;
   color: #000000;
   font-weight: bold;
-  font-size: 90%;
+  font-size: 15px;
 }
 
 #org-src-container, pre  {
