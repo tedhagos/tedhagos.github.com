@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Vim setup</title>
+<title>Object Oriented Programming</title>
 <!-- 2014-09-25 Thu 13:59 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
@@ -142,115 +142,46 @@ for the JavaScript code in this tag.
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
-<h1 class="title">Vim setup</h1>
-<p>
-Most of Vim addons can be installed manually, you just need to put them inside inside <code>~/.vim/</code> folder, but it's a lot simpler to automate that install/config process if you use some sort of a Vim package manager. There are a couple out there, one of them is <b>Vundle</b>. First thing to do is to grab it from github. 
-</p>
+<h1 class="title">Object Oriented Programming</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Objects</a></li>
+<li><a href="#sec-2">2. Complexity</a></li>
+<li><a href="#sec-3">3. Abstraction</a></li>
+</ul>
+</div>
+</div>
 
-<p>
-<code>$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code>
-</p>
-
-<p>
-Add the following lines to ~/.vimrc
-</p>
-
-
-<pre class="example">
-set rtp+=~/.vim/bundle/vundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tomtom/tlib_vim'
-Bundle 'snipmate-snippets'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
-Plugin 'tpope/vim-rails.git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-markdown.git'
-Plugin 'ricardovaleriano/vim-github-theme.git'
-
-call vundle#end()
-</pre>
-
-<p>
-You don't have to install all those plugins, go and read up what those plugins are supposed to do before you add them to your own vimrc. 
-</p>
-
-<p>
-If you used Vim to edit .vimrc, you can switch command mode and execute <code>:PluginInstall</code>. If you didn't use vim to edit vimrc, you can start vim and install the plugins using the command <code>vim +PluginInstall +qall</code>. 
-</p>
-
-<p>
-There are more instructions from the <a href="https://github.com/gmarik/Vundle.vim">GitHub pages of Vundle</a> 
-</p>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Other settings</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Objects</h2>
 <div class="outline-text-2" id="text-1">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="left" />
-
-<col  class="left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="left"><code>set nocompatible</code></td>
-<td class="left">Does practically nothing, but better safe than sorry</td>
-</tr>
-
-<tr>
-<td class="left"><code>filetype off</code></td>
-<td class="left"><i>Vundle</i> requires this, so just go with it</td>
-</tr>
-
-<tr>
-<td class="left"><code>set expandtab</code></td>
-<td class="left">Use spaces rather than tabs</td>
-</tr>
-
-<tr>
-<td class="left"><code>set shiftwidth=2</code></td>
-<td class="left">The number of spaces to use for indent</td>
-</tr>
-
-<tr>
-<td class="left"><code>set ruler</code></td>
-<td class="left">So you can see col and row position of cursor</td>
-</tr>
-
-<tr>
-<td class="left"><code>colorscheme</code></td>
-<td class="left">Just so it's easy on the eyes</td>
-</tr>
-
-<tr>
-<td class="left"><code>:imap ;; &lt;Esc&gt;</code></td>
-<td class="left">So that I only have to press <code>;</code> 2x to enter normal mode</td>
-</tr>
-
-<tr>
-<td class="left"><code>abbr</code></td>
-<td class="left">Use this for autocorrect entries</td>
-</tr>
-</tbody>
-</table>
+<p>
+There are many other programming languages which use objects. JavaScript isn't even the first language to do it. The concept of managing complexity using objects as abstraction mechanism has been going on for quite some time. 
+</p>
 
 <p>
-A working .vimrc is <a href="resources/vimrc.txt">available here</a>, rename it to <i>.vimrc</i> and put it in your home folder 
+What is it really
+</p>
+
+<p>
+Well, it's a way to manage complexity. But then I should make a case for complexity. What is complexity in software and how does objects abstraction address those. What kinds of problems does OOP solve
 </p>
 </div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Complexity</h2>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Abstraction</h2>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos  (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-06-09 Mon 17:13</p>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos  (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-09-01 Mon 23:03</p>
 </div>
 </body>
 </html>
