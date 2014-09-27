@@ -1,9 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Droid+Sans+Mono|Inconsolata:700|Roboto:400,500|Montserrat:400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Droid+Sans+Mono|Inconsolata:700|Roboto:300,400,500);
 
 .title, h1, h2, h3, h4 {
-  font-family: 'Monserrat','Source Sans Pro', 'Helvetica', 'Arial',sans-serif;
+  font-weight: 400;
   color: #292929;
+  
 }
+
+h1 {30px;}
+h2 {25px;}
+h3 {20px;}
+
 
 .title {
   margin-top:0;
@@ -17,20 +23,23 @@
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
   background: #fbfbfb;
   color: #1f1f1f;
-  font-size: 14px;
-  width: 98%;
+  font-size: 15px;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
+/*
 #content {
   column-count:2;
   -webkit-column-count:2;
   -moz-column-count:2;
 }
+*/
 
 #text-table-of-contents {
   width: 100%;
@@ -40,12 +49,6 @@ body {
   color: black;
   border-bottom: 0px;
 }
-
-
-h2 {font-size: 21px;}
-h3 {font-size: 17px;}
-h4 {font-size: 15px;}
-
 
 h1, h2, h3, h4 {
   margin-top: 20px;
@@ -131,4 +134,33 @@ img {
 blockquote {
   margin: 25px 10;
   border-bottom: 1px solid gray;
+}
+
+@media (min-width: 960px) {
+  #content {
+    column-count:2;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+  }
+  
+  body {
+    width: 95%;
+    font-size: 1em;
+  }
+  h1 {2em;}
+  h2 {1.5em;}
+  h3 {1.2em;}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    width: 100%;
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    width: 98%%;
+  }
 }
