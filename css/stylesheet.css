@@ -58,7 +58,7 @@ code {
   font-family: 'Inconsolata','Droid Sans Mono', monospace;
   color: #000000;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #org-src-container, pre  {
@@ -122,7 +122,7 @@ hr {
 }
 
 img {
-  width: 95%;
+  width: 70%;
   margin-bottom: 1.5em;
   margin-top: 1.5em;
 }
@@ -143,6 +143,8 @@ blockquote {
     -moz-column-count:2;
   }
   
+  img {width: 98%;}
+  code {font-size:.85em;}
   body {
     width: 95%;
     font-size: 1em;
