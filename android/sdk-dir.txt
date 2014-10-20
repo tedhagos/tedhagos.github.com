@@ -1,0 +1,13 @@
+/home/ted/progtools/android-sdk-linux/
+├── add-ons
+├── build-tools
+├── docs
+├── platforms
+├── platform-tools
+├── samples
+├── sources
+├── system-images
+├── temp
+└── tools
+
+10 directories

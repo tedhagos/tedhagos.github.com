@@ -1,19 +1,20 @@
 #+AUTHOR: Ted Hagos
 #+TITLE: 
 
+#+index:
+
 #+description: 
 
 
-#+options: ^:nil timestamp:t 
+#+options: ^:nil timestamp:t toc:nil
+#+toc: headlines 0
 
 #+HTML_LINK_UP: index.html
 #+HTML_LINK_HOME: ../index.html
-# + INFOJS_OPT: view:content toc:1
 
-#+INDEX: 
-#+INDEX: 
 
-#+TOC: headlines 0
+
+
 
 
 
