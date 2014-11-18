@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>OSX JAVA_HOME</title>
-<!-- 2014-10-23 Thu 23:15 -->
+<!-- 2014-11-18 Tue 20:17 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ted Hagos" />
@@ -152,13 +152,12 @@ The JAVA_HOME variable, however, is a different matter. The installer will not a
 </p>
 
 <p>
-There is a command line tool in OSX which points to the folder where Java is installed, the command is <code>/usr/libexec/java_home</code>. If you run it from a terminal app, it will point to the installation folder of the JDK. You can cut and paste the location of the folder in your <code>~/.bash_profile</code> so the JAVA_HOME variable will always be set when you use a terminal window. Or, instead of cutting and pasting the result of <i>usr/libexec/java_home, you can execute it as part of your startup script. Add the following line to  =~</i>.bash_profile=. 
+There is a command line tool in OSX which points to the folder where Java is installed, the command is <code>/usr/libexec/java_home</code>. If you run it from a terminal app, it will point to the installation folder of the JDK. You can cut and paste the location of the folder in your <b>~/.bash_profile</b> so the JAVA_HOME variable will always be set when you use a terminal window. Or, instead of cutting and pasting the result of <code>/usr/libexec/java_home</code>, you can execute it as part of your startup script. Add the following line to  <code>~/.bash_profile</code>. 
 </p>
 
-<p>
-<code>export JAVA_HOME=$(/usr/libexec/java_home)</code> 
-</p>
-
+<pre class="example">
+export JAVA_HOME=$(/usr/libexec/java_home)=
+</pre>
 
 
 
@@ -177,7 +176,7 @@ There is a command line tool in OSX which points to the folder where Java is ins
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-10-20 Mon 22:55</p><p/>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-10-28 Tue 23:17</p><p/>
 </div>
 </body>
 </html>
