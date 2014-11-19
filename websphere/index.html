@@ -3,11 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Liberty Profile notes</title>
-<!-- 2014-11-18 Tue 20:27 -->
+<title>WebSphere 8.5.5 Liberty Profile</title>
+<!-- 2014-11-19 Wed 12:11 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ted Hagos" />
+<meta  name="description" content="An introduction to using WebSphere 8.5 Liberty Profile"
+ />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -142,69 +144,180 @@ for the JavaScript code in this tag.
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
-<h1 class="title">Liberty Profile notes</h1>
+<h1 class="title">WebSphere 8.5.5 Liberty Profile</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. WebSphere family of products</a></li>
+<li><a href="#sec-2">2. WebSphere Editions</a></li>
+<li><a href="#sec-3">3. Installing the Liberty Profile</a>
+<ul>
+<li><a href="#sec-3-1">3.1. System Requirements</a></li>
+<li><a href="#sec-3-2">3.2. Archive install</a></li>
+<li><a href="#sec-3-3">3.3. WDT for Eclipse</a></li>
+<li><a href="#sec-3-4">3.4. Installation Manager</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Core Concepts</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Cell, Nodes and Profiles</a></li>
+<li><a href="#sec-4-2">4.2. Full Profile and Liberty Profile</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Liberty Profile</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Description</a></li>
+<li><a href="#sec-5-2">5.2. Simplified Configuration</a></li>
+<li><a href="#sec-5-3">5.3. Dynamic runtime</a></li>
+<li><a href="#sec-5-4">5.4. Deployment Options</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Installation</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Stand alone</a></li>
+<li><a href="#sec-6-2">6.2. Installing the Liberty Profile in Eclipse</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Creating Servers</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Starting and Stopping servers</a></li>
+<li><a href="#sec-7-2">7.2. Server Configuration</a></li>
+<li><a href="#sec-7-3">7.3. Features</a></li>
+<li><a href="#sec-7-4">7.4. Eclipse</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Deploying Apps</a>
+<ul>
+<li><a href="#sec-8-1">8.1. Eclipse</a></li>
+<li><a href="#sec-8-2">8.2. Command Line</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9. Recipes</a>
+<ul>
+<li><a href="#sec-9-1">9.1. JSP</a></li>
+<li><a href="#sec-9-2">9.2. Servlet</a></li>
+<li><a href="#sec-9-3">9.3. JDBC</a></li>
+<li><a href="#sec-9-4">9.4. Session Bean</a></li>
+<li><a href="#sec-9-5">9.5. JPA</a></li>
+<li><a href="#sec-9-6">9.6. Message Driven Bean</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10. JVM Tuning</a></li>
+<li><a href="#sec-11">11. Server options</a></li>
+<li><a href="#sec-12">12. Resources</a></li>
+</ul>
+</div>
+</div>
 
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> WebSphere Introduction</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> WebSphere family of products</h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="./images/was-family.png" alt="was-family.png" />
+</p>
+</div>
+</div>
 </div>
 
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Editions</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> WebSphere Editions</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="./images/was-editions.png" alt="was-editions.png" />
+</p>
 </div>
+</div>
+</div>
+
 
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Core Concepts</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Installing the Liberty Profile</h2>
 <div class="outline-text-2" id="text-3">
 </div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Cell, Nodes and Profiles</h3>
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> System Requirements</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Minimum supported Java Level <a href="http://www-01.ibm.com/support/knowledgecenter/#!/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_restrict.html">http://www-01.ibm.com/support/knowledgecenter/#!/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_restrict.html</a>
+</p>
+
+<p>
+Which OS, Windows, Linux and Mac OSX. I need to find official versions 
+</p>
+</div>
 </div>
 
+
 <div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Full Profile and Liberty Profile</h3>
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Archive install</h3>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> WDT for Eclipse</h3>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Installation Manager</h3>
 </div>
 </div>
+
 
 
 <div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Liberty Profile</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Core Concepts</h2>
 <div class="outline-text-2" id="text-4">
 </div><div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Description</h3>
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Cell, Nodes and Profiles</h3>
 </div>
 
 <div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Simplified Configuration</h3>
-<div class="outline-text-3" id="text-4-2">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Full Profile and Liberty Profile</h3>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Liberty Profile</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Description</h3>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Simplified Configuration</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 There is only one XML file 
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Dynamic runtime</h3>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Dynamic runtime</h3>
 </div>
 
-<div id="outline-container-sec-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Deployment Options</h3>
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Deployment Options</h3>
 </div>
 </div>
 
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Installation</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Installation</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 The Liberty Profile is provided as a no-charge and free to distribute set of packages. It comes as a set of jar files. 
 </p>
 </div>
 
 
-<div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Stand alone</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Stand alone</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 Download the jars from <a href="https://developer.ibm.com/wasdev/downloads/liberty-profile-beta/">WASDev.net</a>. 
 </p>
@@ -265,9 +378,9 @@ java -jar wlp-beta-admin.xx.xx..xx.jar
 </div>
 </div>
 
-<div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Installing the Liberty Profile in Eclipse</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Installing the Liberty Profile in Eclipse</h3>
+<div class="outline-text-3" id="text-6-2">
 <p>
 If the <a href="https://developer.ibm.com/wasdev/downloads/liberty-profile-beta/">WASDev.net</a> page is still open in your browser, look for the <b>Online</b> icon. Drag and drop the icon with the Eclipse logo inside an open instance of Eclipse. That will launch an installation window. 
 </p>
@@ -299,9 +412,9 @@ Follow the prompts. Eclipse will restart after the installation
 </p>
 </div>
 
-<div id="outline-container-sec-5-2-1" class="outline-4">
-<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Creating the server in Eclipse</h4>
-<div class="outline-text-4" id="text-5-2-1">
+<div id="outline-container-sec-6-2-1" class="outline-4">
+<h4 id="sec-6-2-1"><span class="section-number-4">6.2.1</span> Creating the server in Eclipse</h4>
+<div class="outline-text-4" id="text-6-2-1">
 <ol class="org-ol">
 <li>Click <b>File</b>, <b>New</b>, <b>Other</b>
 </li>
@@ -322,9 +435,9 @@ It will ask you to either point to an existing Liberty Profile runtime or define
 </div>
 
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Creating Servers</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Creating Servers</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 The server scripts that you will need need are inside the *wasroot*/bin folder. For purposes of convenience, you may include that folder into your system path so you can invoke them from any directory
 </p>
@@ -346,9 +459,9 @@ This will create a server folder named firstServer. You should now see it in <b>
 </p>
 </div>
 
-<div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Starting and Stopping servers</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Starting and Stopping servers</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
 To start a server, use the command <b>server run firstServer</b>. This will run the server in the foreground, which means you will see all the console logs on the terminal. You can also start the server using the command <b>server start firstServer</b> which will run the server in the background. You will not see the cconsole logs in the terminal, but they are logged inside <b>wasroot</b> /logs/console.log
 </p>
@@ -360,9 +473,9 @@ A server that was started using the <b>server run</b> can be stopped by pressing
 </div>
 
 
-<div id="outline-container-sec-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Server Configuration</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Server Configuration</h3>
+<div class="outline-text-3" id="text-7-2">
 <p>
 The server configuration in WAS 8.5 is now a development artifact. This is a good thing because it is now simpler to include the server configuration in source control. When a server is created, you are given a really basic configuration file, but it has reasonable defaults. The Liberty Profile is configured by exception. It operates from a set of built-in configuration settings. 
 </p>
@@ -445,9 +558,9 @@ The server.xml configuration file has the following characteristics
 </div>
 </div>
 
-<div id="outline-container-sec-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Features</h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Features</h3>
+<div class="outline-text-3" id="text-7-3">
 <p>
 Features are the units of functionality by which you control the pieces of the runtime environment that are loaded into a particular server.
 </p>
@@ -489,9 +602,9 @@ The listing above is a server that uses quite a few features. It uses jdbc4 and 
 </div>
 
 
-<div id="outline-container-sec-6-4" class="outline-3">
-<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Eclipse</h3>
-<div class="outline-text-3" id="text-6-4">
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Eclipse</h3>
+<div class="outline-text-3" id="text-7-4">
 <p>
 Use the context menu of Eclipse to start, stop and restart the server
 </p>
@@ -500,26 +613,26 @@ Use the context menu of Eclipse to start, stop and restart the server
 </div>
 
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Deploying Apps</h2>
-<div class="outline-text-2" id="text-7">
-</div><div id="outline-container-sec-7-1" class="outline-3">
-<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Eclipse</h3>
-</div>
-
-<div id="outline-container-sec-7-2" class="outline-3">
-<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Command Line</h3>
-</div>
-</div>
-
-
-
 <div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Recipes</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> Deploying Apps</h2>
 <div class="outline-text-2" id="text-8">
 </div><div id="outline-container-sec-8-1" class="outline-3">
-<h3 id="sec-8-1"><span class="section-number-3">8.1</span> JSP</h3>
-<div class="outline-text-3" id="text-8-1">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Eclipse</h3>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Command Line</h3>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Recipes</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> JSP</h3>
+<div class="outline-text-3" id="text-9-1">
 <ol class="org-ol">
 <li>File, <b>Dynamic Web Project</b> 
 </li>
@@ -553,9 +666,9 @@ Use the context menu of Eclipse to start, stop and restart the server
 </div>
 
 
-<div id="outline-container-sec-8-2" class="outline-3">
-<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Servlet</h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> Servlet</h3>
+<div class="outline-text-3" id="text-9-2">
 <p>
 Create a new project in Eclipse, <b>File</b>, <b>New</b> then choose <b>Dynamic Web Project</b>. Give the project a name, say, <b>third</b>  and then uncheck the <b>Add Project to an EAR</b>. We won't be using EAR files still. Follow the prompts and click Finish. Add a Servlet to project third, give it a name and specify any package to your liking. Implement the <b>doGet()</b> method and add a simple println command to it
 </p>
@@ -614,9 +727,9 @@ Next, copy the export war file to <b>wasroot</b> /usr/servers/firstserver/dropin
 
 
 
-<div id="outline-container-sec-8-3" class="outline-3">
-<h3 id="sec-8-3"><span class="section-number-3">8.3</span> JDBC</h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> JDBC</h3>
+<div class="outline-text-3" id="text-9-3">
 <p>
 There are 
 </p>
@@ -631,9 +744,9 @@ There are
 </ol>
 </div>
 
-<div id="outline-container-sec-8-3-1" class="outline-4">
-<h4 id="sec-8-3-1"><span class="section-number-4">8.3.1</span> Database preparation</h4>
-<div class="outline-text-4" id="text-8-3-1">
+<div id="outline-container-sec-9-3-1" class="outline-4">
+<h4 id="sec-9-3-1"><span class="section-number-4">9.3.1</span> Database preparation</h4>
+<div class="outline-text-4" id="text-9-3-1">
 <p>
 We will use a MySQL database for this example. The SQL script in the code listing below basically creates a database named "liberty" and  a table named "users" with a single column. 
 </p>
@@ -651,9 +764,9 @@ desc users;
 </div>
 </div>
 
-<div id="outline-container-sec-8-3-2" class="outline-4">
-<h4 id="sec-8-3-2"><span class="section-number-4">8.3.2</span> Server configuration</h4>
-<div class="outline-text-4" id="text-8-3-2">
+<div id="outline-container-sec-9-3-2" class="outline-4">
+<h4 id="sec-9-3-2"><span class="section-number-4">9.3.2</span> Server configuration</h4>
+<div class="outline-text-4" id="text-9-3-2">
 <pre class="example">
 &lt;server description="boo server"&gt;
   &lt;dataSource jndiName="jdbc/mysql"&gt;
@@ -686,23 +799,23 @@ desc users;
 
 
 
-<div id="outline-container-sec-8-4" class="outline-3">
-<h3 id="sec-8-4"><span class="section-number-3">8.4</span> Session Bean</h3>
+<div id="outline-container-sec-9-4" class="outline-3">
+<h3 id="sec-9-4"><span class="section-number-3">9.4</span> Session Bean</h3>
 </div>
 
-<div id="outline-container-sec-8-5" class="outline-3">
-<h3 id="sec-8-5"><span class="section-number-3">8.5</span> JPA</h3>
+<div id="outline-container-sec-9-5" class="outline-3">
+<h3 id="sec-9-5"><span class="section-number-3">9.5</span> JPA</h3>
 </div>
 
-<div id="outline-container-sec-8-6" class="outline-3">
-<h3 id="sec-8-6"><span class="section-number-3">8.6</span> Message Driven Bean</h3>
+<div id="outline-container-sec-9-6" class="outline-3">
+<h3 id="sec-9-6"><span class="section-number-3">9.6</span> Message Driven Bean</h3>
 </div>
 </div>
 
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> JVM Tuning</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> JVM Tuning</h2>
+<div class="outline-text-2" id="text-10">
 <p>
 Each server created in the Liberty Profile comes with the default JVM options. The defaults are reasonable but in case you need to tweak it, you simply need to create a file named jvm.options and place it at the root directory of a server folder. In our case, if we would like to alter some settings of JVM for our <b>firstserver</b>, we need to create the options file and place in <b>wasroot</b> /usr/servers/firstserver/jvm.options. If you want the JVM options to be applicable to all servers, put the options file in <b>wasroot</b> /etc/jvm.options.
 </p>
@@ -740,14 +853,14 @@ There are many settings that can be set in the jvm.options file, for a complete 
 
 
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> Server options</h2>
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Server options</h2>
 </div>
 
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> Resources</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Resources</h2>
+<div class="outline-text-2" id="text-12">
 <ol class="org-ol">
 <li>Redbooks
 </li>
@@ -774,7 +887,7 @@ There are many settings that can be set in the jvm.options file, for a complete 
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-11-18 Tue 20:17</p><p/>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-11-19 Wed 00:02</p><p/>
 </div>
 </body>
 </html>
