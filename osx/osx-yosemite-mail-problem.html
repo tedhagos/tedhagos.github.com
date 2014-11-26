@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>OSX Yosemite Mail Problem</title>
-<!-- 2014-11-26 Wed 12:16 -->
+<!-- 2014-11-27 Thu 00:27 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ted Hagos" />
@@ -143,17 +143,6 @@ for the JavaScript code in this tag.
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
 <h1 class="title">OSX Yosemite Mail Problem</h1>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 468pxby60banner -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:468px;height:60px"
-     data-ad-client="ca-pub-4627957463175380"
-     data-ad-slot="5760679882"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <p>
 Mail.app in Yosemite has a default setting of using <b>secure authentication</b> when it sends password. If you email server is not using secure authentication for checking credentials, you will not be able to send out any email.
 </p>
@@ -255,16 +244,6 @@ Open the file <b>~/Library/Mail/V2/MailData/Accounts.plist</b>. Find the entry f
 </pre>
 
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 468pxby60banner -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:468px;height:60px"
-     data-ad-client="ca-pub-4627957463175380"
-     data-ad-slot="5760679882"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <p>
 The snippet above is not the whole plist file, you need to look for a <b>dict</b> entry whose key is <b>SMTPAccount</b>. There is more than one dict entry in the plist file, so be careful where you make the changes. Make sure you are making on the email account which you'd like to allow for insecure passing of username and password.
 </p>
@@ -287,7 +266,7 @@ The snippet above is not the whole plist file, you need to look for a <b>dict</b
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-11-26 Wed 12:16</p><p/>
+<p class="author">By: <a href="https://plus.google.com/+TedHagos?rel=author">Ted Hagos (<a href="mailto:tedhagos@gmail.com">tedhagos@gmail.com</a>)</a></p> <p class="date">Updated on: 2014-11-27 Thu 00:26</p><p/>
 </div>
 </body>
 </html>
