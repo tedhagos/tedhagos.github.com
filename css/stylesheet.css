@@ -2,17 +2,18 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Source+Sans+Pro:600|Droid+Serif:400,700);
 */
 
-@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Special+Elite:400);
 
 .title {
   font-weight: normal;
 }
 
 h1, h2, h3, h4 {
+  font-family: 'Special Elite','Lucida Sans Unicode','Lucidan Grande','Arial', sans-serif;
   font-weight: normal;
   /*color: #292929; */
   color: #000;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 h1 {2em;}
@@ -21,15 +22,17 @@ h3 {1.4em;}
 
 
 .title {
+  font-family: 'Special Elite';
   font-size: 2.2em;
   margin-top:0;
   margin-bottom: 60px;
   padding-top:0;
-  text-align: left; 
+  text-align: center;
+  line-height: 1.3em;
 }
 
 #org-div-home-and-up  {
-  font-family: 'Lucida Sans Unicode','Helvetica', 'Arial', sans-serif ;
+/*  font-family: 'Lucida Sans Unicode','Helvetica', 'Arial', sans-serif ; */
   font-size: 16px;
   font-weight: normal;
   margin-bottom:20px;
@@ -37,20 +40,19 @@ h3 {1.4em;}
 }
 
 body {
-  font-family:  'Palatino', 'Times New Roman',serif;
+  font-family: 'Times New Roman',serif;
   font-weight: 300;
   line-height: 1.3em;
   /*background: #fbfbfb;
   color: #1f1f1f; */
-  font-size: 16px;
-  width: 90%;
+  width: 97%;
   margin-right: auto;
   margin-left: auto;
   font-size: 16px;
 }
 
 #postamble {
-  font-family: 'Lucida Sans Unicode','Helvetica', 'Arial', sans-serif ;
+  font-family: 'Helvetica', 'Arial', sans-serif ; 
   font-size: 13px;
   font-weight: normal;
 }
@@ -94,7 +96,7 @@ pre {
   overflow: auto;
   color: #000000;
   margin: 0px;
-  width: 100%;
+  width: 97%;
 }
 /*
 pre {
@@ -172,11 +174,19 @@ blockquote {
   border-bottom: 1px solid gray;
 }
 
+.two-column {
+  column-count:2;
+  -webkit-column-count:2;
+  -moz-column-count:2;
+}
+
+
 @media (min-width: 800px) {
-  body {
-    width: 700px;
+  img {
+    width: 600px;
   }
 }
+
 
 /*
 @media (min-width: 960px) {
