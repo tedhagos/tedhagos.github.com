@@ -27,8 +27,17 @@ h1, h2, h3, h4, .title {font-weight: normal; color:#000;}
   font-weight: normal;
 }
 
-#text-table-of-contents {
-  width: 100%;
+#table-of-contents {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #ffffcc;
+}
+
+#text-table-of-contents ul {
+  list-style: none;
+  padding-left: 0px; margin-left: 0px;
 }
 
 #text-table-of-contents h2 {
@@ -39,8 +48,7 @@ h1, h2, h3, h4, .title {font-weight: normal; color:#000;}
 code {
   font-family: monospace;
   color: #000000;
-  font-weight: bold;
-  font-size:90%;
+  font-size: 110%;
 }
 
 #org-src-container, pre  {
@@ -113,9 +121,10 @@ hr {
 }
 
 img {
-  width: 85%;
+  display:block;
   margin-bottom: 1.5em;
   margin-top: 1.5em;
+  margin-left: 0px;
 }
 
 #postamble {margin-top:20px;}
@@ -140,6 +149,7 @@ blockquote {
   }
 }
 
+@media (min-width: 769px){img{width: 600px;}}
 
 /*
 @media (min-width: 960px) {
