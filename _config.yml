@@ -1,0 +1,16 @@
+# auto: false
+markdown: kramdown
+permalink: /:categories/:title.html
+rdiscount extensions: [smart]
+highlighter: pygments
+lsi: false
+
+pygments:
+  tab_size: 2
+  
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"

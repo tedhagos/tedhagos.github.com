@@ -1,0 +1,19 @@
+
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a> (tedhagos@gmail.com)
+</author>
+<dateCreated>
+	Date created: {{ page.date | date: "%B %d, %Y" }}
+  {% if page.lastupdated %}
+    <dateModified>
+      <br/>
+      Last updated: {{ page.lastupdated | "%B %d, %Y"}}
+    </dateModified>
+  {% endif %}
+</dateCreated>
+<br/>
+Url : <a href={{ page.url }}>http://tedhagos.com{{ page.url }}</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+
+
+

@@ -1,0 +1,117 @@
+---
+title: Archives
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />   
+  <title>archives:theLogBox</title>
+  <meta name="google-site-verification" content="Dg--5pO3MqOZk7aJ4jMia-MpnfcGdJaGIkYBJIDSkWU" />
+
+<style>
+
+mast, footer {display:block;}
+
+/*
+  mast a, footer a {color: #ccc;} mast a:hover, footer a:hover {color: blue;}
+*/
+
+.pagetitle {font-size:2em; font-weight:normal;}
+
+body {
+  font-family: 'Times New Roman',serif;
+  font-size: 17px;
+  color: #000;
+}
+
+.title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5em;
+}
+.category {color: brown;}
+  
+a {color: #222; text-decoration:none;} a:hover {text-decoration: underline;}
+
+.pagination {display: block;margin-top:20px;margin-bottom:20px;}
+
+footer {
+  font-family: sans-serif;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  
+  padding-top:20px;
+}
+footer a {color:#222;}
+
+</style>
+
+
+</head>
+<body>
+
+<mast><a href="/">thelogbox.com</a>/archives</mast>
+
+<h1 class="pagetitle">{{ page.title }}</h1>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">&laquo; Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+  
+  
+
+{% for post in paginator.posts %}
+
+  <a href="{{ post.url }}" class='title'>
+    {{ post.date | date: "%m.%d.%y" }}
+    {{ post.title }}
+  </a>
+  
+  <p class='archives'>
+  <!--<b>[{{post.categories | join: '  ,' }}]</b> -->
+  {% if post.categories.size > 0 %}
+    <span class="category">{{post.categories | join: '  ,' }}</span>
+  {% endif %}
+  {{ post.content | strip_html |truncatewords: 60 }}
+  </p>
+
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">&laquo; Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+
+
+<footer>
+Url : <a href={{ page.url }}>http://thelogbox.com{{ page.url }}</a><br/>
+Rss Feed : <a href="http://thelogbox.com/feed/index.xml">http://thelogbox.com/feed/index.xml</a><br/>
+Copyright &copy; <a href="/">theLogBox.com</a>. All rights reserved <br/>
+</footer>
+</body>
+</html>
+
