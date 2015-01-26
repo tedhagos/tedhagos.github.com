@@ -2,7 +2,6 @@
 
 title: Emacs Setup
 author: Ted Hagos
-categories: java
 
 ---
 
