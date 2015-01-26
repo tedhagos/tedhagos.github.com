@@ -3,6 +3,7 @@
 layout: post
 title: Just Enough Java
 author: Ted Hagos
+categories: java
 
 ---
 
