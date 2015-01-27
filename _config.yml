@@ -14,3 +14,4 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "post"
+      author: "Ted Hagos"

@@ -6,7 +6,11 @@
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >    
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/{{ page.categories | join: '/' }}>{{ page.categories | join: '/' }}</a>
+      </div>
       <headline><h1>{{ page.title }}</h1></headline>
 
 		  <articleBody itempprop="articleBody">
