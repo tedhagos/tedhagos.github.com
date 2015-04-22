@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    First Program
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/nodejs>nodejs</a>
+      </div>
+      <headline><h1>First Program</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// server.js</span>
+    
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">});</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello World\n&#39;</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server running at http://127.0.0.1:1337/&#39;</span><span class="p">);</span></code></pre></div>
+
+<p>What is it doing
+Why do we have to write our own webserver
+How come it is not like Apache where all I have to do is write HTML files and plunk it into the DocRoot
+What is the deal with the call back
+And why that self executing function</p>
+
+<p>Can it be written in clearer, more verbose way</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">pages</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;&#39;</span><span class="o">:</span> <span class="s2">&quot;Landing page&quot;</span><span class="p">,</span>
+  <span class="nx">about</span><span class="o">:</span> <span class="s1">&#39;About&#39;</span><span class="p">,</span>
+  <span class="nx">foo</span><span class="o">:</span> <span class="s2">&quot;Yeah Foo&quot;</span><span class="p">,</span>
+  <span class="nx">goo</span><span class="o">:</span> <span class="s2">&quot;Yeah Goo&quot;</span><span class="p">,</span>
+  <span class="nx">xoo</span><span class="o">:</span> <span class="nx">callxoo</span><span class="p">()</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">callxoo</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">retval</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">empname</span><span class="o">:</span> <span class="s2">&quot;Ted Hagos&quot;</span><span class="p">,</span>
+    <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;tedhagos@gmail.com&quot;</span>
+  <span class="p">};</span>
+  <span class="c1">// I cannot return the bare JS object because</span>
+  <span class="c1">// the HTTP object of node will throw an error.</span>
+  <span class="c1">// First type argument must be a string or buffer</span>
+  <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">retval</span><span class="p">);</span>
+  
+<span class="p">}</span>
+
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span>
+  <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+    
+    <span class="kd">var</span> <span class="nx">lookup</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nb">decodeURI</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">));</span>
+    <span class="kd">var</span> <span class="nx">thedata</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    
+    <span class="c1">// Check first if we are looking for an HTML file</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="nx">lookup</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+        <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">lookup</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">woops</span><span class="p">,</span> <span class="nx">filecontent</span><span class="p">){</span>
+          <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">woops</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//console.log(filecontent);</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">filecontent</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">});</span> 
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;inside the else&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+        
+    <span class="k">if</span> <span class="p">(</span><span class="nx">pages</span><span class="p">[</span><span class="nx">lookup</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;inside pages&quot;</span><span class="p">);</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">pages</span><span class="p">[</span><span class="nx">lookup</span><span class="p">]);</span>
+    <span class="p">}</span>           
+  <span class="p">}</span>
+<span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span></code></pre></div>
+
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: November 05, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/nodejs/firstprogram.html>http://tedhagos.com/nodejs/firstprogram.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

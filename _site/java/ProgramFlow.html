@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Program Flow
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/java>java</a>
+      </div>
+      <headline><h1>Program Flow</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <p>Your ability to direct and command the flow of control in your program is one of the defining skills for a programmer. There are basically 3 ways that you can arrange the commands in your program code. You can execute commands one after another, <strong>sequencing</strong>.
+You can execute certain commands when certain conditions are met, <strong>branching</strong>; and you can keep on repeating certain commands while certain conditions are still true, <strong>looping or iteration</strong></p>
+
+<h2 id="if-statement">If statement</h2>
+
+<pre><code>if(condition) {
+  statement 1;
+  statement 2;
+  statement n;
+}
+</code></pre>
+
+<p>The <strong>if</strong> statement allows you to conditionally perform some commands. It allows you side-step the main flow of your code. If you remember your flowcharting concepts or logic formumation. When you see the diamond shape, it means you have a fork in the road. When a condition is met, you either go left or right. That is what the <strong>if</strong> statement does. It allows you to test for conditions. When the condition is true, you go to the beginning of the if block (the opening curly brace) and begin executing all the statements there until all the statements are exhausted. When you have reached the end of the block (the closing curly brace), then there are no more commands to execute. The flow of control will resume immediately after the end of the curly brace. </p>
+
+<p>The condition in the <strong>if</strong> statement can be written as expressions that will evaluate to either true or false. This is the most common use you will have of the if statement. On some occassions, you may see the condition written as the literals <strong>true</strong> or <strong>false</strong> – this is rare, but it will still be a legal code. Looks easy, right. </p>
+
+<p>Okay, a little ice-breaker. Can you spot what’s wrong in the next code. Try not to read the explanation and figure it out yourself first.</p>
+
+<pre><code>int i = 0;
+
+if(i = 1) {
+ System.out.println("but i is equal to one");
+}
+</code></pre>
+
+<p>Did you catch it? If you did not, the Java compiler will. That’s a good thing. People with programming experience in <strong>C Language</strong> would be familiar with this, because the expression <code>if (i = 1)</code> would have been valid in <strong>C</strong>. Thankfully not in Java, the compiler would have warned you of “Incompatible type error”.</p>
+
+<p>The <strong>**if</strong>** statement requires a boolean expession in the argument. The expression <code>(i = 1)</code> will not result to a boolean expression, rather it will yield a integer expression; zero if the operation succeeds and non-zero if it fails.</p>
+
+<h2 id="nested-structures">Nested structures</h2>
+
+<p>You can put an if statement inside another if statement. You can in fact nest them up pretty deeply. While there is no set limit on how deep you can nest if statements, practical considerations and code readability should knock some sense into your code. </p>
+
+<p>From my experience, whenever I am treading dangerously deep into a web of if-else-if-else, that is usually a signal to take a step back and look if there are other ways of going about controlling program logic. It could be a design or analysis problem already and that using the if-else statement is not the right tool to solve the problem at hand. </p>
+
+<h2 id="switch-statement">Switch statement</h2>
+
+<p>When the nature of the decision you need to make is a bit on the fuzzy side, it could be impractical to use the if-statement, for those kinds of decisions, you will use the switch-statement.</p>
+
+<p>The syntax of the switch statement is;</p>
+
+<pre><code>switch(expression) {
+  case CONSTANTEXPR:
+  case ENUMCONSTANTNAME:
+  default:
+}
+</code></pre>
+
+<p>Where expression can either be a <strong>char, byte, short, int</strong>. It can also be <strong>Character, Byte, Short, Integer</strong> OR an <strong>enum</strong> type. By the way, Character is not the same as char, that wasn’t a typo. Character is a Java class which is a wrapper class for the char primitive. As of Java 7, you can now use String expressions on the <strong>switch</strong> statement</p>
+
+<p>The following code sample  extracts the day-of-week value from a <strong>Calendar</strong> object. The day-of-week is returned as integer, which makes it perfect to filter using a <strong>switch</strong> statement rather than nested <strong>if</strong></p>
+
+<pre><code>import java.util.Calendar;
+
+class SwitchSample {
+
+  public static void main(String args[]){
+
+    Calendar now = Calendar.getInstance();
+    int dow = now.get(Calendar.DAY_OF_WEEK);
+
+    switch(dow) {
+      case 0:
+        System.out.println("Sunday");
+        break;
+      case 1:
+        System.out.println("Monday");
+        break;
+      case 2:
+        System.out.println("Tuesday");
+        break;
+      case 3:
+        System.out.println("Wednesday");
+        break;
+      case 4:
+        System.out.println("Thursday");
+        break;
+      case 5:
+        System.out.println("Friday");
+        break;
+      case 6:
+        System.out.println("Saturday");
+        break;
+      default:
+        System.out.println("What the value really is = " + dow);
+      }
+    }
+}
+</code></pre>
+
+<p>The switch is really simple to use, just put the expression which you’d like to test as an argument to the switch statement, then have a series of case statements inside the switch body.</p>
+
+<p>Each case statement corresponds to a value, if the value of the expression is equivalent to a case value, then instructions immediately right after the colon of the case statement will be executed/evaluated, in fact the rest of the statements will be evaluated, all the way down, until it gets to the last instruction at the bottom of the switch statement; that’s not what your intention might be; that is the reason why I put a break statement. Once a case statement evaluates to true, Java blindly executes all the statements after that case, it won’t even bother checking the other cases – so note this, and be careful.</p>
+
+<h2 id="while-statement">While statement</h2>
+
+<p>The while statement is used when you would like to perform some commands repeatedly, like in a loop. There is another statement in Java that does looping, that is the <strong>for</strong> statement.</p>
+
+<p>The <strong>**while</strong>** and <strong>**for</strong>** loop may overlap at times because they have a similar function. For a beginner, it may not be quite obvious when to use one and not the other. The basic difference of the two statements though is that;</p>
+
+<ol>
+  <li>Use the while loop if you do not know how many times you need to loop</li>
+  <li>Use the for loop if you actually know how many times you will need to go through the loop</li>
+</ol>
+
+<p>A while loop looks like the following</p>
+
+<pre><code>while(condition) {
+  statement 1;
+  statement 2;
+  statement n;
+}
+</code></pre>
+
+<p>The condition is either a literal (the keywords true or false) or an expression that will evaluate to either true or false (boolean values).</p>
+
+<p>The basic idea in a <strong>while</strong> loop is this</p>
+
+<ol>
+  <li>The condition is evaluated for the first time, if the condition is true or resolves to true, then;</li>
+  <li>Perform statement 1, then;</li>
+  <li>Perform statement 2, then;</li>
+  <li>Perform statement n, then;</li>
+  <li>The program detects that we are at the end of while block (the closing curly brace is the end of the while block)</li>
+  <li>The program will loop back to the condition and re-evaluate it again, if it still true, then;</li>
+  <li>Perform statement (again)</li>
+  <li>rinse repeat until you get the end of the end of the block again and until you get to re-evaluate the condition (again).</li>
+</ol>
+
+<p>You will only drop off end of the while block if and when the condition evaluates to false. This is the reason it is best to remember that you need write code inside the while block that will make the condition false at some point in time, lest you end up in a perpetual loop.</p>
+
+<pre><code>import static java.lang.System.out;
+
+class While {
+  public static void main (String [] args){
+    
+    boolean condition = true;
+    int counter = 0;
+    
+    while(condition) {
+      out.println(counter);
+      counter = counter + 1;
+      
+      if(counter &gt;10) {
+        condition = false;
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>The sample code above shows the use of a while statement. Always remember to put something inside your while loop that will make the conditon false at some point in time. A perpetual loop can be very difficult for a beginning programmer to spot.</p>
+
+<h2 id="for-statement">For statement</h2>
+
+<pre><code>for(beginning value; ending value; step) {
+  statement 1;
+  statement 2;
+  statement 3;
+}
+</code></pre>
+
+<p>The <strong>for loop</strong> like the <strong>while</strong> allows you to iterate and perform a group of statements over and over again. The for loop though, allows for more control.  </p>
+
+<p>A key concept in using the for loop is the automatic counter, the <strong>step</strong>. The code will perform all the statements inside the block for a finite and determined number of times.</p>
+
+<p>Each time that the whole block is evaluated, the <strong>step</strong> value is incremented. The incremented step value is then compared to the <strong>ending value</strong>, and when the ending value is reached, the for loop will then terminate. The program control will fall over to first statement immediately after the for loop block. </p>
+
+<pre><code>class for_sample {
+  public static void main (String [] args) {
+    for(int i=0; i&lt;=10;i++) {
+      System.out.println(i);
+    }
+  }
+}
+</code></pre>
+
+<p>In the preceding example, we print some numeric values from zero (0) to ten (10). This is the exact thing that our <strong>while</strong> example was doing earlier.  </p>
+
+<h2 id="break-and-continue">Break and Continue</h2>
+
+<p>The <strong>**break</strong>** and <strong>**continue</strong>** keywords disrupts program flow inside loops, whether the for-loop or while-loop. </p>
+
+<pre><code>while(condition) {
+  statement 1;
+  statement 2;
+  break;
+  statement 3;
+  statement 4;
+}
+
+statement 5;
+statement n;
+</code></pre>
+
+<p>The break statement caused the program flow inside a block to forcibly exit. In the sample code (Fig 7), as soon as the break statement is encountered, the program control ignored statements 3 and 4. The while loop will go out of scope and program control will be transferred to the first executable statement immediately after the while block – in this case, statement 5.  </p>
+
+<p>You normally will not use the break statement in this fashion because it doesn’t make sense. This statement is usually deployed with more logical finesse. </p>
+
+<pre><code>while(condition) {
+  statement 1;
+  statement 2;
+
+  if(someCondition) {
+    break;
+  } 
+
+  statement 3;
+  statement 4;
+}
+
+statement 5;
+statement n;
+</code></pre>
+
+<p>This is a more likely use of the <strong>break</strong> statement. I should warn you though that this is a frowned upon practice. A truly structured programming should have only one entry point and one exit point. Because of the introduction the <strong>break</strong> statement, our control structure now has one entry point and two exit points.  </p>
+
+<p>While this code is innocent enough right now, it could get very hairy and complicated. You will appreciate following the 1-entry-1-exit rule when you have had your fair share of debugging someone else’s code and you are wading through a maze of nested structures with lots of breaks peppered into the source code — and by then you will understand why nobody wants to work on a code they did not write themselves. </p>
+
+<p>Next is the <strong>**continue</strong>** keyword. Here is how it behaves.</p>
+
+<pre><code>while(condition) {
+  statement 1;
+  statement 2;
+  continue;
+  statement 3;
+  statement 4;
+}
+
+statement 5;
+statement n;
+</code></pre>
+
+<p>When the <strong>continue</strong> statement is encountered, statements 3 and 4 will be ignored, just like how it was with the break. Unlike the case in <strong>**break</strong>** though, the loop will not go out of scope and will not be immediately terminated.  </p>
+
+<p>The <strong>continue</strong> statement will go back to the beginning of the loop and forcibly re-evaluate condition. If the condition is still true, then the loop continues normally.</p>
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: July 10, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/java/ProgramFlow.html>http://tedhagos.com/java/ProgramFlow.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

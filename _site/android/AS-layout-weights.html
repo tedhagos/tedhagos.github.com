@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Layout Weights
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/android>android</a>
+      </div>
+      <headline><h1>Layout Weights</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <p>A project created with a default Activity will include an XML file and an Activity class. These two are given to you so you can get started quickly in displaying at least one screen in your application. The screen is of vanilla construction. This default layout is mostly used for some quick fire challenges. The kinds of things you do when you just want to test some things.</p>
+
+<p>Real applications typically display some sophistication in their layouts. Let’s look at one small change you can do to effect some layout changes. The code snippet below is typical of the vanilla XML file given to us during project creation.</p>
+
+<h2 id="review-of-linearlayout">Review of LinearLayout</h2>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas...&quot;</span><span class="nt">&gt;</span>
+  android:orientation=&quot;vertical&quot;
+  android:layout_width=&quot;fill_parent&quot;
+<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
+
+<p>The orientation is set to <strong>vertical</strong> and the layout_width is set to <strong>fill_parent</strong>. With those setting in effect, each View component you will add to this layout will be stacked on top of each other. The first View object to be added will be the one on top, the next View object will follow suit.</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;LinearLayout&gt;</span>
+  android:orientation=&quot;vertical&quot;
+  android:layout_width=&quot;fill_parent&quot;  
+
+  <span class="nt">&lt;Button</span> <span class="err">...</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;CheckBox</span> <span class="err">...</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
+
+<p>The preceding code example will result in a screen which has a CheckBox with a Button View right on top of it. The Button occupied whole width of the screen because the LinearLayout container says <strong>fill_parent</strong> on its layout width. The Checkbox did the same, it spanned the whole width of the screen for the same reason the Button did. No surprises here. This is how a linear layout is supposed to work. The behavior is expected. </p>
+
+<p><img src="../images/linear-layout-vertical.png" alt="img" /></p>
+
+<p>There are some class of applications for which this kind of layouting might be okay. If the screen for example just wants to display a series of check boxes stacked on top of each other, like in a survey form, then this layout will suffice. No further tweaking is needed. </p>
+
+<h2 id="weighted-layout">Weighted layout</h2>
+
+<p>Let’s go to another layout example. Suppose we create a screen that allows a user to enter some data and when the user clicks a button, whatever he entered onto the text box will be added to a static text View, like a label. To build this example, we will need the following View objects: <strong>EditText, TextView</strong> and <strong>Button</strong>. </p>
+
+<p>An EditText View allows for user input. If you have programming experience, you may have called this by a different name, perhaps you referred to it before as a textfield. Its the same thing. A TextView is a static text control. Some programmers call it a label. And you already know what a Button View does. </p>
+
+<p>Once we have created a new project with a default Activity, we can add the Views to our Layout. It could look like the next code sample</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;LinearLayout</span>
+  <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+  <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+  <span class="na">android:layout_height=</span><span class="s">&quot;fill_parent&quot;</span>
+  <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;EditText</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/editText&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceLarge&quot;</span>
+    <span class="na">android:text=</span><span class="s">&quot;Large Text&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;Button</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:text=</span><span class="s">&quot;New Button&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/button&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
+
+<p>This will result to a screen where the EditText, TextView and the Button are stacked on top of one another. Each of the Views stretching out to the whole width of the screen. That may not be a problem for the width but it will be a problem for the height. Each View will vertically occupy just what it needs to display their content. The Button will size its height just enough to accomodate its label, the TextEdit will size itself accordingly to accomodate its current textual content and the EditText will size itself to accomodate a single line text input. </p>
+
+<p><img src="../images/weighted-layout.png" alt="img" /></p>
+
+<p>The screen layout is not tight. There is plenty of unutilized screen space after the Button which makes the design clumsy. Putting screen space to good use gives the the app a more sophiscticated look. </p>
+
+<p>A small change we can make is to anchor the EditText and the Button on the opposite sides of the screen, top and bottom to be precise, so that the TextEdit can stretch itself vertically in between and occupy whatever space is left. To achieve this result, we will assign layout weights on each View.</p>
+
+<p>LinearLayout allows weight assignment for each View that is contained within. All Views by default are assigned a weight of zero. If the weight of a View is zero, the View cannot grow in space beyond what it needs to display its content. A View whose weight is more than zero is deemed to be more important. Hence it is allowed to stretch and hog the remaining space left on the screen.</p>
+
+<p>To achieve our desired layout, we will make the weight of the Button and EditText zero and assign a weight of one to the TextView</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;LinearLayout</span>
+  <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+  <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+  <span class="na">android:layout_height=</span><span class="s">&quot;fill_parent&quot;</span>
+  <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;EditText</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/editText&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span>
+    <span class="na">android:layout_weight=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceLarge&quot;</span>
+    <span class="na">android:text=</span><span class="s">&quot;Large Text&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span>
+    <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;Button</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:text=</span><span class="s">&quot;New Button&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/button&quot;</span>
+    <span class="na">android:layout_gravity=</span><span class="s">&quot;center_horizontal&quot;</span>
+    <span class="na">android:layout_weight=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
+
+<p>The EditText and Button Views are now pushed to the top and bottom and the TextView stretched its height to fill up the gap left by other two Views. Because only the TextView is assigned a weight more than zero, it is the only View that can grow beyond what it needs for display. </p>
+
+<p>Had we assigned all three Views equal weights of 1, all of them will grow in space beyond what they need but they will grow uniformly. The whole screen will be divided by three components. If we assigned each of them a weight of 2, you will not see any difference when they all had a weight of 1. Interesting things happen Views are assigned varying weights.</p>
+
+<p><img src="../images/different-weights.png" alt="img" /></p>
+
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: October 20, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/android/AS-layout-weights.html>http://tedhagos.com/android/AS-layout-weights.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    OSX Yosemite Mail Problem
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/osx>osx</a>
+      </div>
+      <headline><h1>OSX Yosemite Mail Problem</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <p>Mail.app in Yosemite has a default setting of using <strong>secure authentication</strong> when it sends password. If you email server is not using secure authentication for checking credentials, you will not be able to send out any email.</p>
+
+<p>The fix is simple. You only need to uncheck two option boxes on the <strong>Accounts Preferences</strong> window of Mail.app. The two checkboxes will prevent Mail.app from overriding your manual setting. One of them is found on the “Advanced” tab of the Accounts Preferences and other other one can be found on the “Edit SMTP Server list” window. You will also need to check one option box that will allow you to send plain username and password to your server.</p>
+
+<p>When Mail.app is open, go to <strong>Mail</strong> menu,  <strong>Preferences</strong>, then click the <strong>Accounts</strong> tab. </p>
+
+<p><img src="../images/accounts-pref-1.png" alt="img" /></p>
+
+<p>Uncheck the box that says “Automatically detect and maintain settings”. If this is checked, Mail.app may overwrite whatever settings you change. We don’t need that. On the same window, find the option box that says “Allow insecure authentication”. This will let you authenticate using plain username and passwords.</p>
+
+<p>From the “Advanced” tab, go to “Account information” tab and find the dropdown box for “Outgoing Mail Server”. </p>
+
+<p><img src="../images/accounts-pref-2.png" alt="img" /></p>
+
+<p>Click the dropdown and go to “Edit SMTP Server list”</p>
+
+<p><img src="../images/accounts-pref-3.png" alt="img" /></p>
+
+<p>Go to the “Advanced” tab and uncheck the “Automatically detect and maintain settings” option</p>
+
+<p><img src="../images/accounts-pref-4.png" alt="img" /></p>
+
+<p>When Mail.app ask you if you want to save the changes, save the changes. </p>
+
+<h1 id="editing-the-plist">Editing the plist</h1>
+
+<p>The build of the Mail.app is suspicious, sometimes it respects the changes you’ve done on the Preferences window, sometimes it doesn’t. If you find that Mail.app is ignoring your changes, you can go straight to the <strong>plist</strong> file. </p>
+
+<p>Open the file <strong>~/Library/Mail/V2/MailData/Accounts.plist</strong>. Find the entry for <strong>UserAllowsInsecureAuthentication</strong> and make sure the value is <strong>true</strong></p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dict&gt;</span>
+<span class="nt">&lt;key&gt;</span>AccountName<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>PH<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>AccountType<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>SMTPAccount<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>AuthenticationScheme<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>CanonicalEmailAddress<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>tedhagos@somedomain.com<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>ConfigureDynamically<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;false/&gt;</span>
+<span class="nt">&lt;key&gt;</span>Hostname<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>101.202.303.404<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>MaxMessageBytes<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;integer&gt;</span>31457280<span class="nt">&lt;/integer&gt;</span>
+<span class="nt">&lt;key&gt;</span>PortNumber<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;integer&gt;</span>587<span class="nt">&lt;/integer&gt;</span>
+<span class="nt">&lt;key&gt;</span>ShouldUseAuthentication<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>YES<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>UserAllowsInsecureAuthentication<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;true/&gt;</span>
+<span class="nt">&lt;key&gt;</span>Username<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>tedhagos@somedomain.com<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>uniqueId<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>12345678790<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span></code></pre></div>
+
+<p>The snippet above is not the whole plist file, you need to look for a <strong>dict</strong> entry whose key is <strong>SMTPAccount</strong>. There is more than one dict entry in the plist file, so be careful where you make the changes. Make sure you are making on the email account which you’d like to allow for insecure passing of username and password.</p>
+
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: November 27, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/osx/osx-yosemite-mail-problem.html>http://tedhagos.com/osx/osx-yosemite-mail-problem.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

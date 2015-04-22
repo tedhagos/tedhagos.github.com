@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    OSX Cheatsheet
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/osx>osx</a>
+      </div>
+      <headline><h1>OSX Cheatsheet</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <h1 id="routing-table">Routing table</h1>
+
+<p>The routing table does not show using <code>route print</code> in OSX, this may have worked in Linux but not here. Use the command <code>netstat -nr</code> instead</p>
+
+<h1 id="showhide-hidden-files-finder">Show/Hide hidden files Finder</h1>
+
+<p>The OSX Finder does not show hidden files by default. A file is hidden if the name starts with a dot or period e.g. <em>.bash_profile</em>, <em>.emacs.d</em> etc. If you want to see these kinds of files in the Finder, execute this commands using the Terminal.app</p>
+
+<pre><code>$ defaults write com.apple.finder AppleShowAll Files -bool YES
+$ killall Finder
+</code></pre>
+
+<p>To reverse the process, execute the following commands</p>
+
+<p>The <code>killall</code> command will restart the Finder. After it has restarted, you should be able to see hidden files.</p>
+
+<pre><code>$ defaults write com.apple.finder AppleShowAll Files -bool NO
+$ killall Finder
+</code></pre>
+
+<h1 id="setting-the-hostname">Setting the hostname</h1>
+
+<p>The <code>hostname</code> command, when executed on a terminal window will give you, well, the hostname, which is the name of your machine. On a networked environment, this hostname gets affected by DHCP; it overrides the hostname of your machine. If you want to set the hostname, execute <code>sudo scutil --set HostName anyname_you_want</code> on a terminal window</p>
+
+<h1 id="anti-alias">Anti alias</h1>
+
+<p>On the terminal, type</p>
+
+<pre><code>$ defaults --currentHost write -globalDomain AppleFontSmoothing -int 1
+</code></pre>
+
+<p>The value 1 in <code>-int 1</code> means light anti aliasing, a value of <em>2</em> will set anti aliasing to medium and and <em>3</em> will be for strong anti aliasing</p>
+
+<h1 id="homebrew-package-management">Homebrew package management</h1>
+
+<p>You need XCode before you can install homebrew. Make sure you have downloaded it from the AppStore and that you have also installed it’s command line utilities. After that, get a terminal window and type</p>
+
+<pre><code>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+</code></pre>
+
+<p>Ruby comes packaged with OSX so this command will work. Now test it out.</p>
+
+<pre><code>$ brew install git # will install git
+$ brew install wget
+$ brew install curl 
+$ brew install axel # wget in steroids
+</code></pre>
+
+<h1 id="colored-terminal-window">Colored terminal window</h1>
+
+<p>Open up <code>~/.bash_profile</code> and add the following line</p>
+
+<pre><code>alias ls="ls -G"
+</code></pre>
+
+<h1 id="picture-file-location-of-photobooth">Picture file location of Photobooth</h1>
+
+<p>They are in <em>~/Pictures/Photo Booth Library Pictures</em></p>
+
+<h1 id="cli-copy-paste">CLI Copy Paste</h1>
+
+<p>To copy content of files while on a terminal, use <code>pbcopy</code> e.g. <code>cat somefile | pbcopy</code>. The contents of somefile are now on the clipboard. You can paste it with the usual <code>CTRL v</code> if you are using any GUI editor. If you need to perform a paste on the terminal, use <code>pbpaste</code> e.g. <code>echo pbpaste</code>, the contents of the clipboard will be echoed to the terminal.</p>
+
+<h1 id="assistive-technology-in-109-mavericks">Assistive Technology in 10.9 (mavericks)</h1>
+
+<p>Not anymore in its usual place. This is now in <code>System Preferences -&gt; Security and Privacy -&gt; Privacy</code>. TextExpander will not work as soon as you upgrade to 10.9. But if you quickly visit and reenable TextExpander in Assistive technology dialog window, all will be well again</p>
+
+<h1 id="scanning">Scanning</h1>
+
+<p>Use <em>Image capture</em>, the <em>Scaner and Printer Queue</em> or <em>Preview</em>. All of these built-in software in have capabilities for image capture</p>
+
+<h1 id="turn-off-iphoto-when-an-ios-device-connects">Turn off iPhoto when an iOS device connects</h1>
+
+<p>When you plug an iOS device, iPhoto quickly springs into action offering to sync Photos. You can turn it off
+1.  Launch <em>Image Capture</em>, <code>cmd + space</code> then type Image Capture in Spotlight
+2.  On the lower left region of <em>Image Capture</em> window, look for <strong>Connecting this iPad opens iPhoto</strong>
+3.  Click the dropdown. Choose <strong>No Application</strong></p>
+
+<h1 id="external-usb-drives">External USB drives</h1>
+
+<p>You can <code>cd</code> to the external drive in <code>~/Volumes</code></p>
+
+<h1 id="back-up-mailapp">Back up Mail.app</h1>
+
+<ol>
+  <li><code>mkdir ~/MailBackup</code></li>
+  <li><code>cd ~/MailBackup</code></li>
+  <li><code>cp -r ~/Library/Mail/V2</code></li>
+</ol>
+
+<h1 id="convert-matroska-mkv-files-to-mp4">Convert matroska (mkv) files to mp4</h1>
+
+<p><code>ffmpeg i movietitle.mkv -vcodec copy -acodec copy movietitle.mp4</code></p>
+
+<p>This only involves changing of containers. No encoding or conversion will happen. If you have a lot of mkv files to convert, a script file is a better approach. On the same folder where the mkv files are located, create a script file, say <em>convert.sh</em>, type the following script inside the script</p>
+
+<pre><code>for i in $(ls *mkv); do ffmpeg -i -vcodec copy -acodec copy $i.mp4; done
+</code></pre>
+
+<p><code>chmod u+x convert.sh</code><br />
+<code>convert.sh</code></p>
+
+<h1 id="share-internet">Share internet</h1>
+
+<p>If you don’t mind OSX changing changing the subnet when <em>Internet Sharing</em> is activated, you don’t have to do this. If on the other hand, you have other devices that needs a fixed subnet e.g. file servers, other PCs that have statically defined IPs, then you need to control OSX’s behavior on NAT</p>
+
+<p><code>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict-add SharingNetworkNumberStart 192.168.3.0</code></p>
+
+<h1 id="simple-music-player">Simple music player</h1>
+
+<p>Get Cogx, head over to <a href="http://cogx.org">cogx.org</a></p>
+
+<h1 id="squeaky-clean-hard-drive">Squeaky clean hard drive</h1>
+
+<p>Removing apps is simple, just go the <em>Applications folder and remove it. But there are residual files left when doing this. Also those language files take up hard drive. If you are using an SSD with limited drive space, then every Gig counts. Get a commercial app. /Clean My Mac</em> is decent and cheap enough</p>
+
+<h1 id="download-accelerator">Download accelerator</h1>
+
+<p><code>brew install axel</code><br />
+<code>axel -n 10 http://wordpress.org/latest.zip</code></p>
+
+<p>The int value <em>10</em> means it will use 10 threads to pull the file simultaneously. It’s similar to <em>wget</em>, only this time, there are 10 wget running at the same time</p>
+
+<h1 id="rip-audio-cds-to-mp3">Rip audio cds to mp3</h1>
+
+<p>Get <a href="http://sbooth.org/Max/">MAX</a> from SBooth. Work on the archive files and put it in /Applications folder or where you want them. It’s a GUI tool, so it’s easy to work with.</p>
+
+<p>MAX uses musicbrainz.org for the CD metadata, the service is not good enough. GraceNotes, which is used by iTunes is more capable. The problem is, I couldn’t find a direct way to connect MAX to GraceNotes. You need a bit of AppleScripting, this solution was the from the SBooth forums as well.</p>
+
+<ol>
+  <li>Create a Script in AppleScript, Save it anywhere you can find it easily. The script can be found on the link above (the sbooth forum), but I saved it in gist.github.com, here’s the link <a href="https://gist.github.com/tedhagos/5845190">https://gist.github.com/tedhagos/5845190</a></li>
+  <li>When you insert the CD, iTunes will launch as well (you need this)</li>
+  <li>Run the script you created. That will get the meta data of iTunes</li>
+  <li>Rip Away</li>
+</ol>
+
+<p>This solution needs both iTunes and MAX running at the same time. When iTunes grabs the metadata from Gracenotes, the script grabs the metadata from iTunes</p>
+
+<h1 id="rip-audio-cds-to-flac-format">Rip audio cds to flac format</h1>
+
+<p><code>brew install cdparanoia</code><br />
+<code>brew install abcde</code><br />
+<code>touch ~/.abcde.conf</code></p>
+
+<p>Put the following codes inside ~/.abcde.conf</p>
+
+<pre><code>CDROM=/dev/disk1
+OUTPUTTYPE=flac
+INTERACTIVE=n
+PADTRACKS=y
+OUTPUTDIR=~/Music/abcde
+OUTPUTFORMAT='${ARTISTFILE}/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+VAOUTPUTFORMAT='Various/${ALBUMFILE}/${TRACKNUM} - ${TRACKFILE}'
+mungefilename ()
+{
+  echo "$@" | sed s,:, -,g | tr /* _+ | tr -d '"?[:cntrl:]
+}
+</code></pre>
+
+<p>dev/disk1 is where my CD is mounted, find out where yours is mounted. A simple <code>df</code> command should give you some clue where the CD drive is mounted. After that, ripping can start. To rip, do the following</p>
+
+<p><code>diskutil unmount /dev/disk1</code><br />
+<code>abcde</code><br />
+<code>diskutil eject /dev/disk1</code></p>
+
+<p>The unmounting is necessary because abcde works with raw block devices and cannot function when the CD is mounted. I shamlessly ripped most of this guide from <a href="http://hints.macworld.com/article.php?story=2005101620055677">extempore, MacWorld</a></p>
+
+<h1 id="php-pear">PHP pear</h1>
+
+<p>This is no longer included in 10.8, maybe it did not even make it in Leopard, I’m not sure. Just curl it</p>
+
+<p><code>curl http://pear.php.net/go-pear.phar &gt; go-pear.phar</code><br />
+<code>sudo php -q go-pear.phar</code></p>
+
+<p>PEAR installation will be at ~/pear/, bin, etc and all. Next, update your ~/.bash_profile to include pear in the system path.</p>
+
+<p><code>echo "export PATH=$PATH:~/pear/bin:." &gt;&gt; ~/.bash_profile</code></p>
+
+<h1 id="phar--php-composer">PHAR &amp; PHP composer</h1>
+
+<p>Create a php.ini file first. OSX does have it at <em>private/etc. Don’t copy the ini file somewhere else, it needs to be at /private/etc</em>. Make sure that php.ini is actually in that directory</p>
+
+<p><code>cd /private/etc</code><br />
+<code>sudo cp php.ini.default php.ini</code></p>
+
+<p>Add the following to php.ini, it’s okay to add it at the very beginning, it didn’t give me problems that way</p>
+
+<pre><code>detect_unicode = Off
+date.timezone = YourCountry/YourCity
+</code></pre>
+
+<p>After saving the update php.ini,</p>
+
+<p><code>cd /path/to/your/workarea</code><br />
+<code>curl -s http://getcomposer.org/installer | php</code></p>
+
+<p>composer.phar should be downloaded to /path/to/your/workarea. Test it</p>
+
+<p><code>php composer.phar</code></p>
+
+<h1 id="write-markdown-files-export-latex-html-etc">Write markdown files, export LaTex, HTML etc</h1>
+
+<p>Get Pandoc, there are installation instructions on the <a href="http://johnmacfarlane.net/pandoc/installing.html">johnmacfarlane/pandoc</a> page. If you don’t want to monkey around with Haskell, get the binary distributions. If you prefer the Haskell route on the other hand
+1.  Get Haskell, either via brew, macport or fink
+2.  Update the system path to include the <em>cabal</em> binaries, they would have been installed at ~/.cabal/bin
+3.  <code>sudo cabal update</code>
+4.  <code>sudo cabal install pandoc</code></p>
+
+<h1 id="show-the-week-number-in-cal">Show the week number in cal</h1>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left" />
+
+<col class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">`ncal -w`</td>
+<td class="left">shows the week numbers</td>
+</tr>
+
+
+<tr>
+<td class="left">`ncal -e`</td>
+<td class="left">shows the dates for Easter</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="keyboard-shortcut-for-full-screen">Keyboard shortcut for Full Screen</h1>
+
+<p>There is no built-in or standard shortcut for entering fullscreen. You have to define it. It isn’t like Lubuntu where F10 gets any app into full screen mode. Fortunately, it’s quite easy to add a keyboard shortcut for it.
+1.  Go to <strong>System Preferences</strong> → <strong>Keyboard</strong> → <strong>App Shortcuts</strong>
+2.  Click <strong>+</strong> to add a new shortcut
+3.  Type <code>Enter Full Screen</code> in the box labeled as “Menu title”. This essentially is a like programming a macro. You need to type <code>Enter Full Screen</code> (exactly as it is, including which letter is capitalized) because it is the title of the menu option in most applications responsible for entering full screen mode. If you mess up the spelling or the case of this entry, you won’t get the results you expect.</p>
+
+<p>Though most applications have the <code>Enter Full Screen</code> menu title, some applications don’t follow this convention e.g. iTerm2. So you need to verify what is the exact text that an application uses to enter full screen and use what’s appropriate</p>
+
+<p><img src="../images/fullscreen.png" alt="img" /></p>
+
+<h1 id="cli-music-player">CLI music player</h1>
+
+<h2 id="using-the-built-in-cli-player">Using the built in CLI player</h2>
+
+<p><code>afplay MusicFileName.ext</code></p>
+
+<p>This command will block, it will wait until the track has finished playing before you get returned to the prompt.</p>
+
+<p><code>afplay</code> comes with OSX, it is already there</p>
+
+<h2 id="music-on-console-moc">Music On Console (moc)</h2>
+
+<p><code>brew update</code><br />
+<code>brew install moc</code></p>
+
+<p>moc will need the Jack Audio. If you pulled moc from brew, jackd may have been installed already. If not, just pull it from brew with <code>brew install jack</code>.  The jack audio needs to run as daemon before you can use moc </p>
+
+<p><code>jackd -d coreaudio</code></p>
+
+<p>Now you can run moc.</p>
+
+<p><code>mocp Folder/</code> will launch a console UI, you can navigate the tracks using the arrow keys. Press ENTER to play a track. Press <strong>p</strong> to pause/play. <strong>q</strong> will exit</p>
+
+<h1 id="fixing-homebrew-after-upgrade-to-109">Fixing homebrew after upgrade to 10.9</h1>
+
+<p>The <code>brew update</code> command stopped working after upgrading to Mavericks. Fix it with</p>
+
+<pre><code>$ cd `brew --prefix` 
+$ git fetch origin 
+$ sudo git reset --hard origin/master
+$ brew update
+</code></pre>
+
+<h1 id="screen-shooting">Screen shooting</h1>
+
+<p><strong>shift+cmd+4</strong> will turn the cursor to a cross hair. You can now click and drag the cross-hair to cover the region of the screen that you want to capture. </p>
+
+<p>By default, the screen shot will be placed the Desktop. You can change this location on the terminal</p>
+
+<pre><code>$ defaults write com.apple.screencapture location ~/Desktop/screenshots
+$ killall SystemUIServer
+</code></pre>
+
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: October 20, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/osx/osx-cheatsheet.html>http://tedhagos.com/osx/osx-cheatsheet.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

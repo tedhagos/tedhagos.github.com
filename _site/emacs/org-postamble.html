@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Org HTML Postamble
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/emacs>emacs</a>
+      </div>
+      <headline><h1>Org HTML Postamble</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <p>Org can export the postamble to HTML, the default postamble exports the author name, date of creation, creator information (which shows the Org and Emacs version) and a link to validate the XHTML document. It usually is at the foot part of generated html document. </p>
+
+<p>The default postamble can be overidden by specifying a value of postamble. Org exports certain variables which you can override and customize to your liking. The variable <code>org-html-postamble</code> is exported. </p>
+
+<h1 id="inspecting-the-current-value-of-the-postamble">Inspecting the current value of the postamble</h1>
+
+<p>Before you monkey around the postamble value, you might want to check the original/default values of the postamble, even just reference purposes. You can inspect the current value of the postamble by issuing the command</p>
+
+<p><code>C h v org-html-postamble RET</code></p>
+
+<p>Shows the current value of the postamble. </p>
+
+<p><code>C h v org-html-postamble-format RET</code></p>
+
+<p>Tells you a bit more information of what you can put inside the postamble. Below is excerpt from that last command</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left" />
+
+<col class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">%a</td>
+<td class="left">author's name</td>
+</tr>
+
+
+<tr>
+<td class="left">%e</td>
+<td class="left">author's email, if specified</td>
+</tr>
+
+
+<tr>
+<td class="left">%d</td>
+<td class="left">timestamp, date created</td>
+</tr>
+
+
+<tr>
+<td class="left">%c</td>
+<td class="left">creator string (Org and Emacs</td>
+</tr>
+
+
+<tr>
+<td class="left">%v</td>
+<td class="left">The link for XHTML validation</td>
+</tr>
+
+
+<tr>
+<td class="left">%T</td>
+<td class="left">The time of exporting</td>
+</tr>
+
+
+<tr>
+<td class="left">%C</td>
+<td class="left">Time of last modification</td>
+</tr>
+</tbody>
+</table>
+
+<p>One way to set the postamble is to set the value of <code>org-html-postamble</code> in the init files, e.g. <em>~</em>.emacs/. You can add the following line</p>
+
+<pre><code>(setq org-html-postamble "whatever you want, make sure its html though")
+</code></pre>
+
+<p>If you have more than one <code>org</code> project in your alist, this may not be ideal. You can set the value of the postamble for each invidual project, e.g.</p>
+
+<div class="highlight"><pre><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">org-publish-project-alist</span>
+<span class="o">&#39;&#39;</span><span class="p">(</span>
+  <span class="p">(</span><span class="s">&quot;project1&quot;</span>
+   <span class="ss">:author</span> <span class="s">&quot;Your name&quot;</span>
+   <span class="ss">:html-postamble</span> <span class="s">&quot;postamble for project 1&quot;</span>
+  <span class="p">)</span>
+  <span class="p">(</span><span class="s">&quot;project2&quot;</span>
+   <span class="ss">:author</span> <span class="s">&quot;Author of project 2&quot;</span>
+   <span class="ss">:html-postamble</span> <span class="s">&quot;postamble for project 2&quot;</span>
+  <span class="p">)</span>
+<span class="p">))</span></code></pre></div>
+
+<p>You can put HTML elements in the postamble.</p>
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 19, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/emacs/org-postamble.html>http://tedhagos.com/emacs/org-postamble.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>

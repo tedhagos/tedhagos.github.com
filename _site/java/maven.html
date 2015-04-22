@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Maven
+  
+</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  </head>
+  <body>
+
+    <article itemscope itemtype="http://schema.org/Article" >
+      <div>
+        <a href="/">home</a> &raquo;
+        <a href=/java>java</a>
+      </div>
+      <headline><h1>Maven</h1></headline>
+
+		  <articleBody itempprop="articleBody">
+		    <h2 id="installation">Installation</h2>
+
+<ol>
+  <li>Download the installer from  <a href="http://maven.apache.org/download.cgi">maven site</a></li>
+  <li>Unzip or untar downloaded file, put it somewhere in your file system, preferably a location where you have read/write/execute permissions</li>
+  <li>Update the SYSTEM PATH to include the folder where you unzipped the maven installation</li>
+  <li>Make sure Maven is working on the command line. Get a terminal window and invoke the maven command — <code>mvn</code>. If you did not get a <em>bad command or filename</em> error, that’s a good sign.</li>
+</ol>
+
+<h2 id="folder-structure">Folder structure</h2>
+
+<p>Maven expects a folder structure for a project. You can choose not to follow what it expects, but that means you need to do some configuration on your own. If you prefer not to monkey around the config, follow Maven’s world view on directory structure unless you have a really compelling reason not to.</p>
+
+<p>The next set of terminal commands prepares a basic Maven project</p>
+
+<pre><code>
+$ cd ~/
+$ mkdir BasicProject
+$ cd BasicProject
+$ mkdir -p src/main/java
+$ touch src/main/java/HelloWorld.java
+$ touch pom.xml
+
+</code></pre>
+
+<h3 id="pom-file">POM file</h3>
+
+<p>Maven expects a pom.xml file on the top level directory of the project. This xml file drives the behavior of the build. There are a couple of things that Maven expects to find inside the pom file. It expects to find the modelVersion, groupId, artifactId and the version.</p>
+
+<p>The pom file, short for Project Object Model, is an xml file. It contains information and configuration details about the project. Maven uses these details to do the build.</p>
+
+<p>A simple POM file is shown below.</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.hagos<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>HelloWorld<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+<span class="nt">&lt;/project&gt;</span></code></pre></div>
+
+<p>The <strong>modelVersion</strong> is always set to 4.0 because it is currently the only supported model for Maven versions 2 and 3. This may change in the future. If Maven 4 comes out and there is another model, you should use the prescribed model and update the modelVersion value appropriately. Where can you find the modelVersion value? The <a href="https://maven.apache.org/pom.html">maven site</a> of course. </p>
+
+<p>The <strong>groupId</strong> element is the same as the package name, it is that reverse domain name convention you use to organize your java source files, so just use that. The <strong>version</strong> element is self explanatory, you get to choose that. It simply indicates what version your application is already in.</p>
+
+<h3 id="test">Test</h3>
+
+<p>Create a rudimentary HelloWorld.java source file and save it in <strong>/src/main/java</strong> folder then try to compile the project. On a terminal window, make sure you are at the top level directory of the <em>BasicProject</em> folder, run the command</p>
+
+<p><code>mvn compile</code></p>
+
+<p>This will compile the project. There is only one source file in the project so far so it may not seem to be a big deal right now. A build tools like Maven shines better when working with multi file projects. </p>
+
+<p>All the compiled codes will be placed in the <strong><em>target/classes</em></strong> folder. Those were created by Maven during compilation. The BasicProject folder should now resemble the following</p>
+
+<pre><code>.
+├── pom.xml
+├── src
+│   └── main
+│       └── java
+│           └── HelloWorld.java
+└── target
+    └── classes
+        └── com
+            └── hagos
+                └── HelloWorld.class
+</code></pre>
+
+<h3 id="running-the-application">Running the application</h3>
+
+<p>On the same terminal window that you have been using, cd to the target/classes folder then run the Java app</p>
+
+<p><code>cd target/classes</code><br />
+<code>java com.hagos.HelloWorld</code></p>
+
+<h2 id="java-execute">Java Execute</h2>
+
+<p>Maven can do lots of stuff via plugins. One of the things it can do is to execute a Java app from maven. It’s not a big deal to cd to target/classes then run the Java app from there. But if you do this lots of times in a day, that can get annoying. </p>
+
+<h3 id="maven-exec-plugin">Maven Exec Plugin</h3>
+
+<p>To make maven run your programs, you need to get the mvn-exec plugin. Using this plugin in your app requires not much else than declaring the plugin in the POM file. Add the plugin in the build section. </p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.hagos<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>HelloWorld<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.2.1<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span></code></pre></div>
+
+<p>The build node of the POM contains the plugins node. Each plugin, like the mvn-exec, needs to be inside the plugins node. </p>
+
+<p>Now you can do the following command</p>
+
+<p><code>mvn compile</code><br />
+<code>mvn exec:java -DmainClass=com.hagos.HelloWorld</code></p>
+
+<p>If you want to get rid of that pesky -D argument, you can declare the main class inside the POM file.</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.2.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;mainClass&gt;</span>com.hagos.HelloWorld<span class="nt">&lt;/mainClass&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></div>
+
+<p>Now that maven knows what the main class is, there is no need to pass the -D argument when you want to execute the Java app from maven</p>
+
+<p><code>mvn compile</code><br />
+<code>mvn exec:java</code>  </p>
+
+<h2 id="review-of-the-maven-commands">Review of the maven commands</h2>
+
+<ul>
+  <li><strong>mvn compile:</strong> compiles a maven project</li>
+  <li><strong>mvn clean:</strong> removes the target folder and all of its contentes. It will remove also any jar file packages that may have been created</li>
+  <li><strong>mvn package:</strong> creates a jar package if you specified <em>packaging</em> in the POM file</li>
+  <li><strong>mvn exec:java:</strong> executes a Java app, you need to pass the -DmainClass argument for this command, or you can configure the mainClass in the POM file</li>
+</ul>
+	
+		  </articleBody>
+		</article>
+    <footer>
+      
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 20, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/java/maven.html>http://tedhagos.com/java/maven.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+    </footer>
+  </body>
+</html>
