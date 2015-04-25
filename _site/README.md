@@ -1,1 +1,0 @@
-Ted's notebook
