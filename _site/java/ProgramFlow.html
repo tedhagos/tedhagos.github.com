@@ -18,19 +18,78 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/java>java</a>
-      </div>
-      <headline><h1>Program Flow</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>Your ability to direct and command the flow of control in your program is one of the defining skills for a programmer. There are basically 3 ways that you can arrange the commands in your program code. You can execute commands one after another, <strong>sequencing</strong>.
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Program Flow</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>Your ability to direct and command the flow of control in your program is one of the defining skills for a programmer. There are basically 3 ways that you can arrange the commands in your program code. You can execute commands one after another, <strong>sequencing</strong>.
 You can execute certain commands when certain conditions are met, <strong>branching</strong>; and you can keep on repeating certain commands while certain conditions are still true, <strong>looping or iteration</strong></p>
 
 <h2 id="if-statement">If statement</h2>
@@ -266,11 +325,11 @@ statement n;
 <p>When the <strong>continue</strong> statement is encountered, statements 3 and 4 will be ignored, just like how it was with the break. Unlike the case in <strong>**break</strong>** though, the loop will not go out of scope and will not be immediately terminated.  </p>
 
 <p>The <strong>continue</strong> statement will go back to the beginning of the loop and forcibly re-evaluate condition. If the condition is still true, then the loop continues normally.</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -287,6 +346,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

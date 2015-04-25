@@ -18,19 +18,46 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/javascript/html5>javascript/html5</a>
-      </div>
-      <headline><h1>HTML5 Exercises</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>javascript</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/javascript/OOP-introduction.html">Object Oriented Programming</a></li>
+          
+          <li><a href="/javascript/html5/html5-exercises.html">HTML5 Exercises</a></li>
+          
+          <li><a href="/javascript/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/javascript/LearningObjectives.html">JavaScript Learning Objectives</a></li>
+          
+          <li><a href="/javascript/tools.html">Tools</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p><strong>1. Resize the triangle</strong></p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/javascript/html5>javascript/html5</a>
+          -->
+        </div>
+        <headline><h1>HTML5 Exercises</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p><strong>1. Resize the triangle</strong></p>
 
 <p>Create a 500px wide HTML5 canvas that allows a user to increase/decrease the size of an equilateral triangle as shown in the picture. If the user clicks the small triangle pointing downward (labeled 1), the height of the triangle decreases by 5px. If the user clicks the small triangle pointing upwards (labeld 2), the height of the triangle increases by 5px.</p>
 
@@ -47,11 +74,11 @@
 <p>Animate the ball inside the bounded region. The ball travels in a straight path. When it hits a side of the bounding region, it will bounce (like in a pool table). The angle of deflection does not need to physically accurate, you can use an arbitrary angle for the deflection (e.g. 45 deg). The canvas size is 500px wide by 500px tall</p>
 
 <p><a href="/images/bounce-exam.png">See the picture</a> </p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -68,6 +95,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

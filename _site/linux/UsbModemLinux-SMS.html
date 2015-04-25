@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/linux>linux</a>
-      </div>
-      <headline><h1>Send Receive SMS Using USB Modem</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <h1 id="overview">1 Overview</h1>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>Send Receive SMS Using USB Modem</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="overview">1 Overview</h1>
 
 <p>This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.</p>
 
@@ -123,11 +158,11 @@ was probably meant to be copied over to `~/.config/gnokii/config`</div>
 
 </div>
 </div>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -144,6 +179,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

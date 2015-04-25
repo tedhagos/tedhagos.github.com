@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/linux>linux</a>
-      </div>
-      <headline><h1>Terminal Copy and Paste</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>The terminal has no access to X clipboard. That is the general situation. Grabbing text from a GUI app e.g. text from a web page opened in a web browser cannot be simply pasted to xterm, or lxterminal or whatever terminal console you are using. Copying and pasting using CTRL c and CTRL v won’t work. At least not without the aid of some extra programs.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>Terminal Copy and Paste</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>The terminal has no access to X clipboard. That is the general situation. Grabbing text from a GUI app e.g. text from a web page opened in a web browser cannot be simply pasted to xterm, or lxterminal or whatever terminal console you are using. Copying and pasting using CTRL c and CTRL v won’t work. At least not without the aid of some extra programs.</p>
 
 <p>Xclip can help during these kind of situations. This program mostly comes automatic with the installation of a modern Linux desktop. My Lubuntu 12 came with xclip, installed already. But just in case you need to install it, you can grab it from the software repositories, a simple <code>sudo apt-get install xclip</code> should do the trick. Obviously this is the command to use for Debian or Debian derivatives such as Ubuntu, Lubuntu etc. For other systems. Use your package manager e.g. yum (for Fedora and CentOS)</p>
 
@@ -59,11 +94,11 @@ alias pbpaste='xclip -selection clipboard -o'
 </code></pre>
 
 <p>Of course you need to quit your current terminal and restart it so the new settings will take effect. Or you can issue the command <code>source ~/.bashrc</code>.</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -80,6 +115,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

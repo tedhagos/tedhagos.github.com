@@ -18,19 +18,78 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/java>java</a>
-      </div>
-      <headline><h1>Object Life cycle</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>There are things that happen inside a Java object from the time you create it using <strong>new</strong> up until you call its first method. The Java runtime makes certain calls to specific blocks of code in your class definition.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Object Life cycle</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>There are things that happen inside a Java object from the time you create it using <strong>new</strong> up until you call its first method. The Java runtime makes certain calls to specific blocks of code in your class definition.</p>
 
 <p>A Java object goes through several stages before you can call any of its instance methods. The static initializer kicks in first, if one is defined. And after that, the instance initializer and  then the constructor kicks in. The code below illustrates the construction of such initializers. </p>
 
@@ -85,11 +144,11 @@ Q: Can I call methods inside the blocks
 Q: Why bother with blocks in the first place</p>
 
 <p><a href="http://docs.oracle.com/javase/tutorial/java/javaOO/initial.html">http://docs.oracle.com/javase/tutorial/java/javaOO/initial.html</a></p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -106,6 +165,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

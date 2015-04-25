@@ -18,19 +18,78 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/java>java</a>
-      </div>
-      <headline><h1>Threads</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>When you call someone over the phone, you can’t talk right away because the line is still ringing. You need to wait for the other person to pick up, you will then say hello, introduce yourself then the conversation can begin. The steps that are necessary to complete a phone call are carried out in a very serial way. Before the last step can begin, the step before that needs to complete first, so is the step before that and the step before it etc. Everything is in the critical path. If we wrote programs this way, we’d be in trouble. </p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Threads</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>When you call someone over the phone, you can’t talk right away because the line is still ringing. You need to wait for the other person to pick up, you will then say hello, introduce yourself then the conversation can begin. The steps that are necessary to complete a phone call are carried out in a very serial way. Before the last step can begin, the step before that needs to complete first, so is the step before that and the step before it etc. Everything is in the critical path. If we wrote programs this way, we’d be in trouble. </p>
 
 <p>Imagine that we have to write a program that accepts input from a user, that input will be used as a key to look up a value in a remote database. If we will write this program in a serial way, it is likely that the users of the program will complain at some point when the program becomes non-responsive. A database  operation can take a long time especially if it is on a remote location. </p>
 
@@ -83,11 +142,11 @@ boss and delegation, or a clone of myself. I will hand over a post-it note to my
   <li>Asynchronous</li>
 </ol>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -104,6 +163,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

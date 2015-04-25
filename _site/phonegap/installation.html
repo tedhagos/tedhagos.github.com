@@ -18,19 +18,38 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/phonegap>phonegap</a>
-      </div>
-      <headline><h1>PhoneGap Dev Environment</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>phonegap</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/phonegap/installation.html">PhoneGap Dev Environment</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>To install the PhoneGap SDK, you will need <strong>NodeJS</strong> and <strong>npm</strong>. You can download the binaries of Node which are available from the <a href="http://nodejs.org">nodejs.org</a>. The binaries are simple to install, just install them as you would do any other software you installed on your platform. It is as simple as download the file, double click it, follow the prompts. You may to adjust your system path settings after the installation so that you can run node and npm from the command line.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/phonegap>phonegap</a>
+          -->
+        </div>
+        <headline><h1>PhoneGap Dev Environment</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>To install the PhoneGap SDK, you will need <strong>NodeJS</strong> and <strong>npm</strong>. You can download the binaries of Node which are available from the <a href="http://nodejs.org">nodejs.org</a>. The binaries are simple to install, just install them as you would do any other software you installed on your platform. It is as simple as download the file, double click it, follow the prompts. You may to adjust your system path settings after the installation so that you can run node and npm from the command line.</p>
 
 <p>Alternatively, you can install node and npm using some package managers. On a Mac with Homebrew as package manager, node and npm can be installed as follows.</p>
 
@@ -60,11 +79,11 @@ C:\&gt; cinst npm -y
 <p>If you get a “command not found error”, the node and npm directories are probably not yet added to system path variable. Make the necessary adjustment/edits to the path variable and run the npm install command again.</p>
 
 <p>When the installation has finished, run <code>phonegap</code> on a command line just to make sure everything installed properly. The result you should get from running <code>phonegap</code> should be a help screen, not a “command not found error”</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -81,6 +100,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

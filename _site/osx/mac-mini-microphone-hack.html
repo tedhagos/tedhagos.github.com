@@ -18,19 +18,50 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/osx>osx</a>
-      </div>
-      <headline><h1>Mac Mini Microphone Hack</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>osx</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/osx/homebrew-yosemite.html">Yosemite upgrade and Homebrew</a></li>
+          
+          <li><a href="/osx/remove-ds-store-from-git.html">Remove .DS_STORE from a Git Repo</a></li>
+          
+          <li><a href="/osx/java-home-osx.html">Java Home Variable</a></li>
+          
+          <li><a href="/osx/osx-yosemite-mail-problem.html">OSX Yosemite Mail Problem</a></li>
+          
+          <li><a href="/osx/osx-cheatsheet.html">OSX Cheatsheet</a></li>
+          
+          <li><a href="/osx/mac-mini-microphone-hack.html">Mac Mini Microphone Hack</a></li>
+          
+          <li><a href="/osx/iterm-256-color.html">iTerm 256 Colors</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>The Mac Mini requires line level mic input. It needs to be powered. A mic that works on PC may not work on the mini.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/osx>osx</a>
+          -->
+        </div>
+        <headline><h1>Mac Mini Microphone Hack</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>The Mac Mini requires line level mic input. It needs to be powered. A mic that works on PC may not work on the mini.</p>
 
 <p>If you just want to have a mic for the mini and it’s easier to buy than to improvise, go ahead and shop around for mics, there isn’t a shortage for third party products for the mini. On the other hand, if you have an old voice recorder equipped with a stereo mini jack (3.5mm) and don’t mind shopping around for a stereo mini jack connector (3.5mm also, obviously), then hack away.</p>
 
@@ -42,11 +73,11 @@
   <li>Test it. I tested mine by using it in a skype call. In fact, that was the only reason I needed a microphone for the Mac Mini</li>
 </ol>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -63,6 +94,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

@@ -18,19 +18,40 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/php>php</a>
-      </div>
-      <headline><h1>MAMP Installation</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>php</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/php/howto-include-other-scripts.html">How to Include other scripts</a></li>
+          
+          <li><a href="/php/mamp.html">MAMP Installation</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>MAMP is short for Mac, Apache, MySQL and PHP. It is the WAMP (Windows Apache MySQL PHP) equivalent on Macs. The installer bundles 3 programs, a web server (Apache), a database server (MySQL) and a scripting language (PHP).</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/php>php</a>
+          -->
+        </div>
+        <headline><h1>MAMP Installation</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>MAMP is short for Mac, Apache, MySQL and PHP. It is the WAMP (Windows Apache MySQL PHP) equivalent on Macs. The installer bundles 3 programs, a web server (Apache), a database server (MySQL) and a scripting language (PHP).</p>
 
 <p>You don’t need the MAMP installer in order to get the 3 programs, Apache in fact, is bundled with OSX. You can get the other two programs using eithe Fink, Brew or Macports. So why are we bothering with MAMP? Because MAMP gives an installation process that has less hassle or friction. Installing the 3 programs without MAMP involves more than just downloading and running installer programs. There is configuration that needs to be done afterwards. It is the configuration activity that usually gets beginning programmers stomped. Wiring the 3 programs to work together can prove to be daunting if it is your first time to setuy a web stack development environment. MAMP eases that configuration process for us.  </p>
 
@@ -134,11 +155,11 @@
 
 <p><img src="images/mamp-21.png" alt="mamp-21" /></p>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -160,6 +181,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

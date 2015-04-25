@@ -18,19 +18,44 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/nodejs>nodejs</a>
-      </div>
-      <headline><h1>Hello Node</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>nodejs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/nodejs/hello-node.html">Hello Node</a></li>
+          
+          <li><a href="/nodejs/basic-setup.html">Basic Setup</a></li>
+          
+          <li><a href="/nodejs/firstprogram.html">First Program</a></li>
+          
+          <li><a href="/nodejs/node-package-manager.html">Node Package Manager</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>Node has a <strong>REPL</strong> environment where you can interactively write commands and expressions. As you type something on the REPL, it will be evaluated and interpreted by Node and results will immediately shown to you. The REPL is a good tool to use for learning Node, but most of the things we will do in Node will not be on the REPL. We will write our programs in a JavaScript file and execute that file on the Node runtime. To Demonstrat this workflow, we will write a simple program.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/nodejs>nodejs</a>
+          -->
+        </div>
+        <headline><h1>Hello Node</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>Node has a <strong>REPL</strong> environment where you can interactively write commands and expressions. As you type something on the REPL, it will be evaluated and interpreted by Node and results will immediately shown to you. The REPL is a good tool to use for learning Node, but most of the things we will do in Node will not be on the REPL. We will write our programs in a JavaScript file and execute that file on the Node runtime. To Demonstrat this workflow, we will write a simple program.</p>
 
 <h2 id="steps">Steps</h2>
 
@@ -58,11 +83,11 @@
   <dt>Idiomatic JavaScript</dt>
   <dd>What is this</dd>
 </dl>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -79,6 +104,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

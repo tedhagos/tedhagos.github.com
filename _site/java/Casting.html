@@ -18,19 +18,78 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/java>java</a>
-      </div>
-      <headline><h1>Casting</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>You already know what <strong>upcasting</strong> is, we discussed that not too long ago. Upcasting happens when you assign a narrow type to a wider type e.g. an <strong>int</strong> value assigned to a <strong>long</strong>. Java does for you automatically, no intervention needed. The opposite of <strong>upcasting</strong> is of course, well, <strong>downcasting</strong> — not very creative, I know, but it makes the two terms easier to remember. </p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Casting</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>You already know what <strong>upcasting</strong> is, we discussed that not too long ago. Upcasting happens when you assign a narrow type to a wider type e.g. an <strong>int</strong> value assigned to a <strong>long</strong>. Java does for you automatically, no intervention needed. The opposite of <strong>upcasting</strong> is of course, well, <strong>downcasting</strong> — not very creative, I know, but it makes the two terms easier to remember. </p>
 
 <p>Downcasting happens when you force a wider type into a narrow type e.g. try to assign an <strong>int</strong> to a <strong>byte</strong>, the compiler won’t let you. Unlike upcasting, downcasting is an explicit activity. It needs action from the programmer. </p>
 
@@ -46,11 +105,11 @@
 </code></pre>
 
 <p>The cast operator is the pair of parentheses. We are forcing the value to the right of the cast operator, in this case <code>(a + b)</code> which is a <strong>int</strong> to become a <strong>byte</strong>. You have to group expression <strong>a + b</strong> because if you did not, only the value <strong>a</strong> would have been casted to a byte, then the addition operation would be performed (which results to an int) then it will be assigned to <strong>c</strong> — the cast operator has a higher precedence than the addition operation, that is why you need to group.</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -67,6 +126,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

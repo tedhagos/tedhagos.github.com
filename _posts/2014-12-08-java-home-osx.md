@@ -1,6 +1,6 @@
 ---
 
-title: How to Set JAVA_HOME
+title: Java Home Variable
 author: Ted Hagos
 categories: osx
 

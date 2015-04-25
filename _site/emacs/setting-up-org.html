@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/emacs>emacs</a>
-      </div>
-      <headline><h1>Org Note Taking</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>emacs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/emacs/emacs-notes.html">Emacs Setup</a></li>
+          
+          <li><a href="/emacs/emacs-markdown.html">Markdown Documents</a></li>
+          
+          <li><a href="/emacs/GnusEmail.html">Gnus Email</a></li>
+          
+          <li><a href="/emacs/emacs-cheatsheet.html">Emacs Cheatsheet</a></li>
+          
+          <li><a href="/emacs/troubleshooting-org.html">Org problems and errors</a></li>
+          
+          <li><a href="/emacs/setting-up-org.html">Org Note Taking</a></li>
+          
+          <li><a href="/emacs/org-postamble.html">Org HTML Postamble</a></li>
+          
+          <li><a href="/emacs/org-html-publishing-cheatsheet.html">Org HTML Publishing Cheatsheet</a></li>
+          
+          <li><a href="/emacs/org-cheatsheet.html">Org Cheatsheet</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <h1 id="use-elpa-or-org-mode-packages">Use elpa or org-mode packages</h1>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/emacs>emacs</a>
+          -->
+        </div>
+        <headline><h1>Org Note Taking</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="use-elpa-or-org-mode-packages">Use elpa or org-mode packages</h1>
 
 <p>Emacs 24.x use the GNU elpa repositories, so if you issue the command <code>M x list-packages</code>, you will see all the available (and installed) packages in Emacs. You need to be connected to the internet when you do this. Emacs will make a connection to elpa repository and grab a list of available software packages. </p>
 
@@ -94,11 +129,11 @@
 </code></pre>
 
 <p>When this variable is set to <em>nil</em>, org will republish all of the files defined inside org-publish-project-alist.</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -115,6 +150,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

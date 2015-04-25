@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/linux>linux</a>
-      </div>
-      <headline><h1>Vim Setup</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>Most of Vim addons can be installed manually, you just need to put them inside inside <code>~/.vim/</code> folder, but it’s a lot simpler to automate that install/config process if you use some sort of a Vim package manager. There are a couple out there, one of them is <strong>Vundle</strong>. First thing to do is to grab it from github. </p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>Vim Setup</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>Most of Vim addons can be installed manually, you just need to put them inside inside <code>~/.vim/</code> folder, but it’s a lot simpler to automate that install/config process if you use some sort of a Vim package manager. There are a couple out there, one of them is <strong>Vundle</strong>. First thing to do is to grab it from github. </p>
 
 <p><code>$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code></p>
 
@@ -114,11 +149,11 @@ call vundle#end()
 
 
 </esc></td></tr></tbody></table>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -135,6 +170,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

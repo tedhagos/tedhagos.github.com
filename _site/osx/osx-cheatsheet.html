@@ -18,19 +18,50 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/osx>osx</a>
-      </div>
-      <headline><h1>OSX Cheatsheet</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>osx</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/osx/homebrew-yosemite.html">Yosemite upgrade and Homebrew</a></li>
+          
+          <li><a href="/osx/remove-ds-store-from-git.html">Remove .DS_STORE from a Git Repo</a></li>
+          
+          <li><a href="/osx/java-home-osx.html">Java Home Variable</a></li>
+          
+          <li><a href="/osx/osx-yosemite-mail-problem.html">OSX Yosemite Mail Problem</a></li>
+          
+          <li><a href="/osx/osx-cheatsheet.html">OSX Cheatsheet</a></li>
+          
+          <li><a href="/osx/mac-mini-microphone-hack.html">Mac Mini Microphone Hack</a></li>
+          
+          <li><a href="/osx/iterm-256-color.html">iTerm 256 Colors</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <h1 id="routing-table">Routing table</h1>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/osx>osx</a>
+          -->
+        </div>
+        <headline><h1>OSX Cheatsheet</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="routing-table">Routing table</h1>
 
 <p>The routing table does not show using <code>route print</code> in OSX, this may have worked in Linux but not here. Use the command <code>netstat -nr</code> instead</p>
 
@@ -316,11 +347,11 @@ $ brew update
 $ killall SystemUIServer
 </code></pre>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -337,6 +368,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

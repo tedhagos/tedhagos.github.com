@@ -18,19 +18,40 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/websphere>websphere</a>
-      </div>
-      <headline><h1>WebSphere 8.5.5 Liberty Profile</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>websphere</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/websphere/websphere-822.html">WebSphere 8.5.5 Liberty Profile</a></li>
+          
+          <li><a href="/websphere/01-Preparation.html">Prep</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <h1 id="websphere-family-of-products">WebSphere family of products</h1>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/websphere>websphere</a>
+          -->
+        </div>
+        <headline><h1>WebSphere 8.5.5 Liberty Profile</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="websphere-family-of-products">WebSphere family of products</h1>
 
 <p><img src="../images/was-family.png" alt="img" /></p>
 
@@ -429,11 +450,11 @@ desc users;
   <li>IBM</li>
 </ol>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -450,6 +471,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

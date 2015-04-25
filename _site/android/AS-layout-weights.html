@@ -18,19 +18,62 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/android>android</a>
-      </div>
-      <headline><h1>Layout Weights</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>android</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/android/android-database-programming.html">Database Programming</a></li>
+          
+          <li><a href="/android/CLI-development-environment.html">CLI Development Environment</a></li>
+          
+          <li><a href="/android/AS-layout-weights.html">Layout Weights</a></li>
+          
+          <li><a href="/android/AS-android-project.html">Android Project</a></li>
+          
+          <li><a href="/android/AS-activities.html">Activities</a></li>
+          
+          <li><a href="/android/GettingStarted.html">Getting Started</a></li>
+          
+          <li><a href="/android/Emulator.html">Emulator</a></li>
+          
+          <li><a href="/android/CannotFindBuildXml.html">Cannot Find Build.xml</a></li>
+          
+          <li><a href="/android/AS-simple-camera.html">Working with the Camera</a></li>
+          
+          <li><a href="/android/AS-network-connectivity.html">Network Connectivity</a></li>
+          
+          <li><a href="/android/AS-key-concepts.html">Key Concepts</a></li>
+          
+          <li><a href="/android/AS-development-environment.html">Development Environment</a></li>
+          
+          <li><a href="/android/Workflow.html">Workflow</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>A project created with a default Activity will include an XML file and an Activity class. These two are given to you so you can get started quickly in displaying at least one screen in your application. The screen is of vanilla construction. This default layout is mostly used for some quick fire challenges. The kinds of things you do when you just want to test some things.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/android>android</a>
+          -->
+        </div>
+        <headline><h1>Layout Weights</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>A project created with a default Activity will include an XML file and an Activity class. These two are given to you so you can get started quickly in displaying at least one screen in your application. The screen is of vanilla construction. This default layout is mostly used for some quick fire challenges. The kinds of things you do when you just want to test some things.</p>
 
 <p>Real applications typically display some sophistication in their layouts. Let’s look at one small change you can do to effect some layout changes. The code snippet below is typical of the vanilla XML file given to us during project creation.</p>
 
@@ -146,11 +189,11 @@
 
 <p><img src="../images/different-weights.png" alt="img" /></p>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -167,6 +210,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

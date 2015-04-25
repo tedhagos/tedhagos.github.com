@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/java/ocjp/working-with-bytes.html</loc>
+    <loc>http://tedhagos.com/ocjp/working-with-bytes.html</loc>
     <lastmod>2015-02-16T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -50,20 +50,14 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/ruby/jekyll/howto-show-posts-in-category.html</loc>
+    <loc>http://tedhagos.com/jekyll/howto-show-posts-in-category.html</loc>
     <lastmod>2015-01-26T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/ruby/jekyll/howto-highlight-liquid-code-in-jekyll.html</loc>
+    <loc>http://tedhagos.com/jekyll/howto-highlight-liquid-code-in-jekyll.html</loc>
     <lastmod>2015-01-26T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/osx/tmux/error-10810-LsUrlOpenWithRole.html</loc>
-    <lastmod>2015-01-25T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   
@@ -152,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/javascript/node/node-package-manager.html</loc>
+    <loc>http://tedhagos.com/nodejs/node-package-manager.html</loc>
     <lastmod>2014-10-20T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -280,12 +274,6 @@
   <url>
     <loc>http://tedhagos.com/linux/linux-cheatsheet.html</loc>
     <lastmod>2014-07-21T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-    <loc>http://tedhagos.com/tools/tmux.html</loc>
-    <lastmod>2014-07-18T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   

@@ -18,19 +18,62 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/android>android</a>
-      </div>
-      <headline><h1>Getting Started</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>android</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/android/android-database-programming.html">Database Programming</a></li>
+          
+          <li><a href="/android/CLI-development-environment.html">CLI Development Environment</a></li>
+          
+          <li><a href="/android/AS-layout-weights.html">Layout Weights</a></li>
+          
+          <li><a href="/android/AS-android-project.html">Android Project</a></li>
+          
+          <li><a href="/android/AS-activities.html">Activities</a></li>
+          
+          <li><a href="/android/GettingStarted.html">Getting Started</a></li>
+          
+          <li><a href="/android/Emulator.html">Emulator</a></li>
+          
+          <li><a href="/android/CannotFindBuildXml.html">Cannot Find Build.xml</a></li>
+          
+          <li><a href="/android/AS-simple-camera.html">Working with the Camera</a></li>
+          
+          <li><a href="/android/AS-network-connectivity.html">Network Connectivity</a></li>
+          
+          <li><a href="/android/AS-key-concepts.html">Key Concepts</a></li>
+          
+          <li><a href="/android/AS-development-environment.html">Development Environment</a></li>
+          
+          <li><a href="/android/Workflow.html">Workflow</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>An Android project is made up of lots of files. Even the humble Hello World app, which is what we will do, requires more than just a single Java source file. An Android app needs a couple of XML files to facilitate user interfaces and overall configuration. Obviously it will need at least one Java program file and it could contain a couple of other resource files e.g. images etc.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/android>android</a>
+          -->
+        </div>
+        <headline><h1>Getting Started</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>An Android project is made up of lots of files. Even the humble Hello World app, which is what we will do, requires more than just a single Java source file. An Android app needs a couple of XML files to facilitate user interfaces and overall configuration. Obviously it will need at least one Java program file and it could contain a couple of other resource files e.g. images etc.</p>
 
 <p>While you can create and assemble an Android application without the aid of a tool, it can be difficult and cumbersome, not to mention, quite impractical. The Android SDK contains tools that helps to create, build and test projects. </p>
 
@@ -96,11 +139,11 @@
 <h2 id="physical-device">Physical device</h2>
 
 <p>What are the insights, have you answered the description above. Can Steph understand this</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -117,6 +160,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

@@ -18,19 +18,62 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/android>android</a>
-      </div>
-      <headline><h1>Android Project</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>android</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/android/android-database-programming.html">Database Programming</a></li>
+          
+          <li><a href="/android/CLI-development-environment.html">CLI Development Environment</a></li>
+          
+          <li><a href="/android/AS-layout-weights.html">Layout Weights</a></li>
+          
+          <li><a href="/android/AS-android-project.html">Android Project</a></li>
+          
+          <li><a href="/android/AS-activities.html">Activities</a></li>
+          
+          <li><a href="/android/GettingStarted.html">Getting Started</a></li>
+          
+          <li><a href="/android/Emulator.html">Emulator</a></li>
+          
+          <li><a href="/android/CannotFindBuildXml.html">Cannot Find Build.xml</a></li>
+          
+          <li><a href="/android/AS-simple-camera.html">Working with the Camera</a></li>
+          
+          <li><a href="/android/AS-network-connectivity.html">Network Connectivity</a></li>
+          
+          <li><a href="/android/AS-key-concepts.html">Key Concepts</a></li>
+          
+          <li><a href="/android/AS-development-environment.html">Development Environment</a></li>
+          
+          <li><a href="/android/Workflow.html">Workflow</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>An Android project is required to build a single app. A project is a simple folder that contains a collection of XML, Java source, images, property and optional audio or video files. It has a very specific structure that stays the same for all android projects. With the exception of images, audio and video files which may be used by your project, everything inside this project are plain text files. This is the reason why some programmers can develop android applications using just plain editors.</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/android>android</a>
+          -->
+        </div>
+        <headline><h1>Android Project</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>An Android project is required to build a single app. A project is a simple folder that contains a collection of XML, Java source, images, property and optional audio or video files. It has a very specific structure that stays the same for all android projects. With the exception of images, audio and video files which may be used by your project, everything inside this project are plain text files. This is the reason why some programmers can develop android applications using just plain editors.</p>
 
 <p>The commands and utilities inside the Android SDK expects this structure and is optimized to work with it. If you deviate from this structure, you will have grief. It is not wise to build this project structure unaided by tools. At the very least, you should use the <strong>android create project</strong> utility included in the SDK. </p>
 
@@ -50,11 +93,11 @@
   <li><strong>AndroidManifest.xml:</strong> Every project needs one manifest file. This file is important. It declares the things that are inside your application like how many screens it have, what their names are. It also affects the things your application can do. It declares whether your application can use the network, the local storage or the camera for example</li>
   <li><strong>local.properties:</strong> This file contains build configuration information e.g. the location of the Android SDK in your system</li>
 </ul>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -71,6 +114,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

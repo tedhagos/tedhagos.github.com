@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/linux>linux</a>
-      </div>
-      <headline><h1>/usr/bin/env No Such File</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>If your platform is Debian, Ubuntu, Lubuntu or any of the Debian derivatives and you installed NodeJS via the <code>aptitude</code> or <code>apt-get</code> package manager, you may experience this error when you try to use NodeJS. Not only will this appear by using NodeJS itself but it may appear as well when you use any package gotten via <strong>npm</strong> e.g. <code>http-server</code> or <code>express</code>. </p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>/usr/bin/env No Such File</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>If your platform is Debian, Ubuntu, Lubuntu or any of the Debian derivatives and you installed NodeJS via the <code>aptitude</code> or <code>apt-get</code> package manager, you may experience this error when you try to use NodeJS. Not only will this appear by using NodeJS itself but it may appear as well when you use any package gotten via <strong>npm</strong> e.g. <code>http-server</code> or <code>express</code>. </p>
 
 <p>The error <code>/usr/bin/env node no such file or directory</code> means it is looking for the node executable in <code>/usr/bin/node</code> but it’s not there because what the package manager installed was <code>/usr/bin/nodejs</code> intead. </p>
 
@@ -45,11 +80,11 @@
 
 <p><code>$ sudo apt-get install -y nodejs-legacy</code></p>
 
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -66,6 +101,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

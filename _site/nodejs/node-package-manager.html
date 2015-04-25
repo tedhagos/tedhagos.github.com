@@ -18,19 +18,44 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/javascript/node>javascript/node</a>
-      </div>
-      <headline><h1>Node Package Manager</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>nodejs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/nodejs/hello-node.html">Hello Node</a></li>
+          
+          <li><a href="/nodejs/basic-setup.html">Basic Setup</a></li>
+          
+          <li><a href="/nodejs/firstprogram.html">First Program</a></li>
+          
+          <li><a href="/nodejs/node-package-manager.html">Node Package Manager</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>The Debian and Ubuntu repos require that you pull npm separately from nodejs, maybe in the future this will change, but as far as <em>quantal</em> (Ubuntu codename), I still had to do this</p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/nodejs>nodejs</a>
+          -->
+        </div>
+        <headline><h1>Node Package Manager</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>The Debian and Ubuntu repos require that you pull npm separately from nodejs, maybe in the future this will change, but as far as <em>quantal</em> (Ubuntu codename), I still had to do this</p>
 
 <p><code>sudo apt-get install nodejs npm</code> </p>
 
@@ -103,11 +128,11 @@
 </script>
 
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -116,7 +141,7 @@
   
 </dateCreated>
 <br/>
-Url : <a href=/javascript/node/node-package-manager.html>http://tedhagos.com/javascript/node/node-package-manager.html</a><br/>
+Url : <a href=/nodejs/node-package-manager.html>http://tedhagos.com/nodejs/node-package-manager.html</a><br/>
 Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 <p>
 	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
@@ -124,6 +149,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

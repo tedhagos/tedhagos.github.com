@@ -18,19 +18,54 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/emacs>emacs</a>
-      </div>
-      <headline><h1>Org problems and errors</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>emacs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/emacs/emacs-notes.html">Emacs Setup</a></li>
+          
+          <li><a href="/emacs/emacs-markdown.html">Markdown Documents</a></li>
+          
+          <li><a href="/emacs/GnusEmail.html">Gnus Email</a></li>
+          
+          <li><a href="/emacs/emacs-cheatsheet.html">Emacs Cheatsheet</a></li>
+          
+          <li><a href="/emacs/troubleshooting-org.html">Org problems and errors</a></li>
+          
+          <li><a href="/emacs/setting-up-org.html">Org Note Taking</a></li>
+          
+          <li><a href="/emacs/org-postamble.html">Org HTML Postamble</a></li>
+          
+          <li><a href="/emacs/org-html-publishing-cheatsheet.html">Org HTML Publishing Cheatsheet</a></li>
+          
+          <li><a href="/emacs/org-cheatsheet.html">Org Cheatsheet</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p><code>M x org-version</code> shows 7.x.x when you expect it to be 8.x. This is a version conflict problem. This happened to my installation when I copied an .emacs init file, with ‘org’ references to it, and used it to load up a fresh install of emacs. Once I grabbed the org package from elpa, it resulted into tons of errors. </p>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/emacs>emacs</a>
+          -->
+        </div>
+        <headline><h1>Org problems and errors</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p><code>M x org-version</code> shows 7.x.x when you expect it to be 8.x. This is a version conflict problem. This happened to my installation when I copied an .emacs init file, with ‘org’ references to it, and used it to load up a fresh install of emacs. Once I grabbed the org package from elpa, it resulted into tons of errors. </p>
 
 <p>The solution is to do the following:</p>
 
@@ -41,11 +76,11 @@
   <li>Reinstall org from either elpa or orgmode source</li>
   <li>Exit and restart emacs. That solved the problem</li>
 </ol>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -62,6 +97,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

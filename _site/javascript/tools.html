@@ -18,19 +18,46 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/javascript>javascript</a>
-      </div>
-      <headline><h1>Tools</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>javascript</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/javascript/OOP-introduction.html">Object Oriented Programming</a></li>
+          
+          <li><a href="/javascript/html5/html5-exercises.html">HTML5 Exercises</a></li>
+          
+          <li><a href="/javascript/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/javascript/LearningObjectives.html">JavaScript Learning Objectives</a></li>
+          
+          <li><a href="/javascript/tools.html">Tools</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <h1 id="simple-web-server">Simple web server</h1>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/javascript>javascript</a>
+          -->
+        </div>
+        <headline><h1>Tools</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="simple-web-server">Simple web server</h1>
 
 <p>If you just need to serve up HTML, JS and CSS files, there is no need to setup Apache or NGINX. For quick and dirty testing of a static website, use anyone of these tools.</p>
 
@@ -64,11 +91,11 @@
 <h2 id="nodejs">NodeJS</h2>
 
 <h2 id="java">Java</h2>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -85,6 +112,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

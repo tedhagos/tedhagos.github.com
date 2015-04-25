@@ -18,19 +18,38 @@
 </title>
 
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
 
-    <article itemscope itemtype="http://schema.org/Article" >
-      <div>
-        <a href="/">home</a> &raquo;
-        <a href=/writing>writing</a>
-      </div>
-      <headline><h1>Publishing on Leanpub</h1></headline>
+    <div id="menu" style="display:none;">
+      
+      <h2>writing</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/writing/LeanPub.html">Publishing on Leanpub</a></li>
+          
+      </ul>
+      
+    </div>
 
-		  <articleBody itempprop="articleBody">
-		    <p>The whole getting started, syntax, Dropbox integrations, getting paid etc are all on <a href="http://leanpub.com/manual">http://leanpub.com/manual</a>
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/writing>writing</a>
+          -->
+        </div>
+        <headline><h1>Publishing on Leanpub</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>The whole getting started, syntax, Dropbox integrations, getting paid etc are all on <a href="http://leanpub.com/manual">http://leanpub.com/manual</a>
 . The book is free. There is no execuse why you should not read it.</p>
 
 <h1 id="orgmode-doc-to-leanpub-markdown">Orgmode doc to Leanpub Markdown</h1>
@@ -54,11 +73,11 @@
 <h1 id="how-will-you-handle-beginexample-and-endexample">How will you handle begin_example and end_example</h1>
 
 <p>Sed scripts, perhaps</p>
-	
-		  </articleBody>
-		</article>
-    <footer>
-      
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
 <author>
   By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
 </author>
@@ -75,6 +94,14 @@ Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
 
 
 
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
   </body>
 </html>

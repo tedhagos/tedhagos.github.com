@@ -1,6 +1,6 @@
 ---
 
-title: How to Show Posts in a given category
+title: Show Posts in a given category
 author: Ted Hagos
 
 ---
@@ -19,7 +19,7 @@ The **categories** variable is a list in Liquid. In order to selectively display
 {% endraw %}
 ~~~
 
-Alternatively, we can use the **site.categories.CATEGORY** variable in Jekyll to do exactly what the code sample above does. I prefer the second approach because it has less code. It is easier to read, maintain and most importantly, less processing time. 
+Alternatively, we can use the **site.categories.CATEGORY** variable in Jekyll to do exactly what the code sample above does. I prefer the second approach because it has less code. It is easier to read, maintain and most importantly, less processing time.
 
 ~~~
 {% raw %}
