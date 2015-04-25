@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Org Note Taking
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>emacs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/emacs/emacs-notes.html">Emacs Setup</a></li>
+          
+          <li><a href="/emacs/emacs-markdown.html">Markdown Documents</a></li>
+          
+          <li><a href="/emacs/GnusEmail.html">Gnus Email</a></li>
+          
+          <li><a href="/emacs/emacs-cheatsheet.html">Emacs Cheatsheet</a></li>
+          
+          <li><a href="/emacs/troubleshooting-org.html">Org problems and errors</a></li>
+          
+          <li><a href="/emacs/setting-up-org.html">Org Note Taking</a></li>
+          
+          <li><a href="/emacs/org-postamble.html">Org HTML Postamble</a></li>
+          
+          <li><a href="/emacs/org-html-publishing-cheatsheet.html">Org HTML Publishing Cheatsheet</a></li>
+          
+          <li><a href="/emacs/org-cheatsheet.html">Org Cheatsheet</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/emacs>emacs</a>
+          -->
+        </div>
+        <headline><h1>Org Note Taking</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="use-elpa-or-org-mode-packages">Use elpa or org-mode packages</h1>
+
+<p>Emacs 24.x use the GNU elpa repositories, so if you issue the command <code>M x list-packages</code>, you will see all the available (and installed) packages in Emacs. You need to be connected to the internet when you do this. Emacs will make a connection to elpa repository and grab a list of available software packages. </p>
+
+<p>Since you already know that you want to install <em>org</em>, you can take a shorter route to the installation by issuing the command <code>M x package install RET org RET</code>. Wait for a while because that package will be grabbed from elpa and will be compiled afterwards.</p>
+
+<p>Exit emacs, <code>C x C c</code> and restart it. You should now have the org package. You can check which version of org has been installed using the command <code>M x org-version RET</code>. You might see something similar to </p>
+
+<pre><code>Org-mode version 8.2.6 (8.2.6-22-gb11b4a-elpa @ /home/thagos/.emacs.d/elpa/org-20140519/)/
+</code></pre>
+
+<h1 id="problems-with-version">Problems with version</h1>
+
+<p>Sometimes you expect your version of org to be one thing, and then see another e.g., I expected my verion of org to be <code>8.x</code> but right after I grabbed org from the repos, it still showed 7.x. It appeared to be reverting back to the version of org built-in within Emacs. A telling sign that there was a problem on installation was that it showed errors during the compilation of the <code>org</code> package. It’s okay to see warnings, but not compilation errors. To solve this, follow the steps below.
+1.  Exit emacs
+2.  Sanitize the init files <em>~.emacs</em> or <em>~</em>.emacs.d/init.el/. Make sure there isn’t any reference to <em>org</em> in the startup up files
+3.  Remove the <em>org</em> directories inside ~/.emacs.d/elpa/ folder.
+4.  Start emacs using the sanitized init files
+5.  Install the package again using <code>M x package-install RET org</code></p>
+
+<p>The compilation errors should disappear and you should have an updated version of org</p>
+
+<h1 id="how-to-trigger-publishing">How to trigger publishing</h1>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left" />
+
+<col class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">`C c C e P x`</td>
+<td class="left">Will prompt for the name of the project to be published.</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">This is the same as `M x org-publish`</td>
+</tr>
+
+
+<tr>
+<td class="left">`C c C e P p`</td>
+<td class="left">It will publish the current project. Equal to `M x org-publish-current-project`</td>
+</tr>
+
+
+<tr>
+<td class="left">`C c C e P a`</td>
+<td class="left">Will publish all the defined projects in *org-project-alist*</td>
+</tr>
+</tbody>
+</table>
+
+<p>Org uses timestamps to trigger publishing. That means it won’t republish documents that have not changed. To override this behavior, you need to change the default behavior of Org when publishing. One way to do this is to customize the variable <em>org-publish-use-timestamps-flag</em>. This can be done within an emacs session. You can also achieve the same result by adding an entry to the the emacs init file, this could be the the ~/.emacs file. Add this entry </p>
+
+<pre><code>(setq org-publish-use-timestamps-flag nil)
+</code></pre>
+
+<p>When this variable is set to <em>nil</em>, org will republish all of the files defined inside org-publish-project-alist.</p>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 19, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/emacs/setting-up-org.html>http://tedhagos.com/emacs/setting-up-org.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

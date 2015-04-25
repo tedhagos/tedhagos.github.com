@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Switch JDK on OSX
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Switch JDK on OSX</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>To set the <code>JAVA_HOME</code> variable on OSX, use the tool <code>/usr/libexec/java_home</code> on a terminal window. That command will echo where the current JDK is pointing to. You can copy the output  of that command from the clipboard with this command</p>
+
+<p><code>$ /usr/libexec/java_home | pbcopy</code></p>
+
+<p>then update the <strong>~/.bash_profile</strong> so you can export the JAVA_HOME variable. Tools like Apache Ant and Maven expects this variable to be present in order to locate the installed JDK on your system. Some IDEs like Android Studio also expects to find this variable defined somewhere in your system. </p>
+
+<p>Alternatively, you can add this line to the <strong>/.bash_profile</strong></p>
+
+<pre><code>export JAVA_HOME=$(/usr/libexec/java_home)
+</code></pre>
+
+<h2 id="when-you-have-more-than-one-jdk-installed">When you have more than one JDK installed</h2>
+
+<p>If you have JDK 1.5,1.6,1.7 and Java 8 installed on the Mac, <code>java_home</code> will point the most recent version of JDK you installed.  There used to be a way in OSX to switch JDKs, it was a utility called <strong>Java Preferences</strong>. It’s gone now. It has been gone for quite some time. If you want to see all the JDKs installed in your system, run this command</p>
+
+<pre><code>$ /usr/libexec.java_home -V
+</code></pre>
+
+<p>You might be tempted to fool around with symlinks in order so switch between one version of the JDK to another. Don’t. It’s a bad idea, especially if you are not very handy with the SHELL. Use the <code>java_home</code> tool instead.</p>
+
+<p>I found the script floating around on the internet while I was searching for a solution on how to safely switch from one version of the JDK to another.  </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function</span> setjdk<span class="o">()</span> <span class="o">{</span>  
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  
+   removeFromPath <span class="s1">&#39;/System/Library/Frameworks/JavaVM.framework/Home/bin&#39;</span>  
+   <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&quot;${JAVA_HOME+x}&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  
+    removeFromPath <span class="nv">$JAVA_HOME</span>  
+   <span class="k">fi</span>  
+   <span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="sb">`</span>/usr/libexec/java_home -v <span class="nv">$@</span><span class="sb">`</span>  
+   <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span>  
+  <span class="k">fi</span>  
+  <span class="nb">echo </span>JAVA_HOME <span class="nb">set </span>to <span class="nv">$JAVA_HOME</span>  
+  java -version  
+ <span class="o">}</span>  
+
+<span class="k">function</span> removeFromPath<span class="o">()</span> <span class="o">{</span>  
+ <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$PATH</span> <span class="p">|</span> sed -E -e <span class="s2">&quot;s;:$1;;&quot;</span> -e <span class="s2">&quot;s;$1:?;;&quot;</span><span class="k">)</span>  
+<span class="o">}</span></code></pre></div>
+
+<p>You can append this to <strong>~/.bash_profile</strong> so it is available everytime you open a terminal window. </p>
+
+<p>This is how to use it</p>
+
+<pre><code>
+$ setjdk 1.7 // to use JDK 7
+$ setjdk 1.8 // to use JDK 8
+
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/java_home.1.html">developer.apple.com/java_home</a></li>
+  <li><a href="http://raibledesigns.com/rd/entry/installing_openjdk_7_on_os">raibledesigns.com/installing openjdk on osx</a></li>
+</ol>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: January 26, 2015
+  
+</dateCreated>
+<br/>
+Url : <a href=/java/howto-switch-jdk-on-osx.html>http://tedhagos.com/java/howto-switch-jdk-on-osx.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Org HTML Publishing Cheatsheet
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>emacs</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/emacs/emacs-notes.html">Emacs Setup</a></li>
+          
+          <li><a href="/emacs/emacs-markdown.html">Markdown Documents</a></li>
+          
+          <li><a href="/emacs/GnusEmail.html">Gnus Email</a></li>
+          
+          <li><a href="/emacs/emacs-cheatsheet.html">Emacs Cheatsheet</a></li>
+          
+          <li><a href="/emacs/troubleshooting-org.html">Org problems and errors</a></li>
+          
+          <li><a href="/emacs/setting-up-org.html">Org Note Taking</a></li>
+          
+          <li><a href="/emacs/org-postamble.html">Org HTML Postamble</a></li>
+          
+          <li><a href="/emacs/org-html-publishing-cheatsheet.html">Org HTML Publishing Cheatsheet</a></li>
+          
+          <li><a href="/emacs/org-cheatsheet.html">Org Cheatsheet</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/emacs>emacs</a>
+          -->
+        </div>
+        <headline><h1>Org HTML Publishing Cheatsheet</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="inclusion-of-table-of-contents">Inclusion of table of contents</h1>
+
+<p>Two ways of doing this. First one is in the <em>org-publish-project-alist</em> declaration. Actually, you don’t have to do anything in there. TOC is included by default, if the <em>:with-toc</em> directive is not <em>nil</em> the exported HTML will always contain a table of contents unless otherwise overidden by <em>OPTIONS</em> variable in the org document itself.</p>
+
+<pre><code>(setq org-publish-alist
+'((
+  "mynotes"
+  :with-toc nil
+  :base-directory "/somedir/"
+))
+)
+</code></pre>
+
+<p>The above example will supress the generation of TOC on every exported document. If you want to generated the TOC, remove the <em>:with-toc nil</em> statement</p>
+
+<p>The second way of generating TOC is to put statement in the export options of each org document e.g. if you have a document named <em>somedocument.org</em>, it might look like this</p>
+
+<pre><code>#+TITLE: My awesome document
+#+TOC: headlines 1
+
+Lorem ipsum dolor sit amet /consectitur/ alet *si do*
+</code></pre>
+
+<p>Example document above will contain a table a TOC when exported. The value <em>1</em> means heading 1 will be exported. If you use the value <em>2</em> for headlines, TOC will contain until second level headings etc. The export options written on the org document itself will override whatever setting you have on the <em>project-alist</em> </p>
+
+<h1 id="document-navigation">Document navigation</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td>The *UP</td>
+      <td>HOME* navigation links can be exported on each document if you use the :html_link_up and :html_link_home settings on <em>project-alist</em> e.g.</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code>(setq org-publish-alist
+'((
+  "mynotes"
+  :with-toc nil
+  :base-directory "/somedir/"
+  :html_link_up "index.html"
+  :html_link_home "../index.html"
+))
+)
+</code></pre>
+
+<p>If you put the link up/home directives in the alist, all exported HTML documents will contain a link to both home and up. This can be overriden on each org document using the OPTIONS template, e.g.</p>
+
+<pre><code>#+TITLE: My awesome document
+#+TOC: headlines 1
+
+#+HTML_LINK_UP: index.html
+#+HTML_LINK_HOME: somepage.html 
+
+Lorem ipsum dolor sit amet /consectitur/ alet *si do*
+</code></pre>
+
+<h1 id="embed-an-iframe">Embed an iframe</h1>
+
+<p>Use <code>#+begin_html .. #+end_html</code> to embed the iframe. Make sure that in the document, you have turned off the subscript/superscript setting. In the org doc itself, just add the options line to turn off the subscript action, then you can use the begin..end blocks to insert HTML codes</p>
+
+<pre><code>#+options: ^:nil
+
+...
+
+#+begin_html
+&lt;iframe&gt; 
+
+&lt;/iframe&gt;
+#+end_html
+</code></pre>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 19, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/emacs/org-html-publishing-cheatsheet.html>http://tedhagos.com/emacs/org-html-publishing-cheatsheet.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

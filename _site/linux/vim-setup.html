@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Vim Setup
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>Vim Setup</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>Most of Vim addons can be installed manually, you just need to put them inside inside <code>~/.vim/</code> folder, but it’s a lot simpler to automate that install/config process if you use some sort of a Vim package manager. There are a couple out there, one of them is <strong>Vundle</strong>. First thing to do is to grab it from github. </p>
+
+<p><code>$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code></p>
+
+<p>Add the following lines to ~/.vimrc</p>
+
+<pre><code>set rtp+=~/.vim/bundle/vundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tlib_vim'
+Bundle 'snipmate-snippets'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'ricardovaleriano/vim-github-theme.git'
+
+call vundle#end()
+</code></pre>
+
+<p>You don’t have to install all those plugins, go and read up what those plugins are supposed to do before you add them to your own vimrc. </p>
+
+<p>If you used Vim to edit .vimrc, you can switch command mode and execute <code>:PluginInstall</code>. If you didn’t use vim to edit vimrc, you can start vim and install the plugins using the command <code>vim +PluginInstall +qall</code>. </p>
+
+<p>There are more instructions from the <a href="https://github.com/gmarik/Vundle.vim">GitHub pages of Vundle</a> </p>
+
+<h2 id="resources">Resources</h2>
+
+<ol>
+  <li>A working .vimrc is <a href="../resources/linux/vimrc.txt">available here</a>, rename it to <em>.vimrc</em> and put it in your home folder </li>
+</ol>
+
+<h2 id="other-settings">Other settings</h2>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="left" />
+<col class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">`set nocompatible`</td>
+<td class="left">Does practically nothing, but better safe than sorry</td>
+</tr>
+<tr>
+<td class="left">`filetype off`</td>
+<td class="left">*Vundle* requires this, so just go with it</td>
+</tr>
+<tr>
+<td class="left">`set expandtab`</td>
+<td class="left">Use spaces rather than tabs</td>
+</tr>
+<tr>
+<td class="left">`set shiftwidth=2`</td>
+<td class="left">The number of spaces to use for indent</td>
+</tr>
+<tr>
+<td class="left">`set ruler`</td>
+<td class="left">So you can see col and row position of cursor</td>
+</tr>
+<tr>
+<td class="left">`colorscheme`</td>
+<td class="left">Just so it's easy on the eyes</td>
+</tr>
+<tr>
+<td class="left">`:imap ;; <esc>`
+<td class="left">So that I only have to press `;` 2x to enter normal mode</td>
+
+<tr>
+<td class="left">`abbr`</td>
+<td class="left">Use this for autocorrect entries</td>
+</tr>
+
+
+
+
+
+</esc></td></tr></tbody></table>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: October 20, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/linux/vim-setup.html>http://tedhagos.com/linux/vim-setup.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

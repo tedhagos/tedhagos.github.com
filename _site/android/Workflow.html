@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Workflow
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>android</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/android/android-database-programming.html">Database Programming</a></li>
+          
+          <li><a href="/android/CLI-development-environment.html">CLI Development Environment</a></li>
+          
+          <li><a href="/android/AS-layout-weights.html">Layout Weights</a></li>
+          
+          <li><a href="/android/AS-android-project.html">Android Project</a></li>
+          
+          <li><a href="/android/AS-activities.html">Activities</a></li>
+          
+          <li><a href="/android/GettingStarted.html">Getting Started</a></li>
+          
+          <li><a href="/android/Emulator.html">Emulator</a></li>
+          
+          <li><a href="/android/CannotFindBuildXml.html">Cannot Find Build.xml</a></li>
+          
+          <li><a href="/android/AS-simple-camera.html">Working with the Camera</a></li>
+          
+          <li><a href="/android/AS-network-connectivity.html">Network Connectivity</a></li>
+          
+          <li><a href="/android/AS-key-concepts.html">Key Concepts</a></li>
+          
+          <li><a href="/android/AS-development-environment.html">Development Environment</a></li>
+          
+          <li><a href="/android/Workflow.html">Workflow</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/android>android</a>
+          -->
+        </div>
+        <headline><h1>Workflow</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="project-creation">Project creation</h1>
+
+<p><code>android create project --path &lt;project folder&gt; --target &lt;API level&gt; --package &lt;package name&gt; --Activity &lt;Activity name&gt;</code></p>
+
+<h1 id="work-on-manifestxml">Work on Manifest.xml</h1>
+
+<p>If necessary, modify the <strong>*AndroidManifest.xml</strong>. There will be certain applications that will require explicit permissions to be declared on manifest e.g. use of camera, use of the MIC for media recording etc</p>
+
+<h1 id="get-the-project-in-source-control">Get the project in source control</h1>
+
+<p>This is for bitbucket.org, adjust the url accordingly for github.com</p>
+
+<pre class="codeblock">
+
+$ cd /path/to/your/project
+$ git init
+$ git remote add origin &lt;https://yourname@bitbucket.org/yourname/yourproject.git&gt;
+
+</pre>
+
+<h1 id="add-the-gitignore-and-readme-file">Add the .gitignore and README file</h1>
+
+<p>cd to project folder, create a .gitignore file. You don’t want all of the files to be under source control e.g. location of the build.xml and the android-SDK, these information are specific to developer workstation and may not be true for all developers. Also, you don’t want generated files to be part of source control</p>
+
+<p>A sample content of .gitignore</p>
+
+<pre><code>bin/
+gen/
+ant.properties
+local.properties
+build.properties
+project.properties
+</code></pre>
+
+<p>Don’t forget the README.txt. Even if you are working alone, it can’t hurt to write down your thoughts why you were trying to write that piece of code in the first place, put it in the README.txt</p>
+
+<h1 id="work-often-commit-often-iterate">Work often, commit often. Iterate</h1>
+
+<p>Keep adding files to the project, keep modifying files. At the end of the day, commit your changes. Now, the frequency of the commit is usually decided as a group. There are projects where you cannot until certain number of unit tests have been performed (and passed) etc. Know your project practices and adhere to them, but the last thing you want is losing a days worth of coding/unit testing, so commit to the repo religiously</p>
+
+<h1 id="license-the-source-file">License the source file</h1>
+
+<p>You need to decide which license you will use. Remember, if there is no explicit license on the source file, it means its a full copyright. No one can use your code, they will have to contact you and ask for express permissions — not that everybody abides by that, but still, if you intend other people to benefit from your creation, then license it either using a permissive license (like MIT or BSD) or the GPL or what have you.</p>
+
+<h1 id="debug-observe-inspect-adjust">Debug, Observe, Inspect, Adjust</h1>
+
+<p>Learn how to type ant debug install really quickly, better yet, use a text expander so you have a fighting chance against carpal tunnel syndrome</p>
+
+<h1 id="beta-test">Beta test</h1>
+
+<p>Send the app to friends, relatives, colleagues etc, look for feedback. Go back to the app, refine. Let your thoughts germinate some more. You need to iterate a bit on the app before you release to the wild</p>
+
+<h1 id="sign-the-app">Sign the app</h1>
+
+<p>ant debug install was fine for testing and development, but it cannot be consumed by other people without the developer signature. You need to <a href="/signing-an-android-app">digitally sign your app</a> before you release it to the public </p>
+
+<h1 id="publish-to-google-play">Publish to Google Play</h1>
+
+<p>You can make the app available from your website as a downloadable apk (android package) or you could pay Google Play so you can sell the app at the Google Market Place (its like iTunes or the Apple App Store for Android apps)</p>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: July 09, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/android/Workflow.html>http://tedhagos.com/android/Workflow.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

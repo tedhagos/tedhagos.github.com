@@ -2,7 +2,7 @@
 
 title: Node Package Manager
 author: Ted Hagos
-categories: javascript node
+categories: nodejs
 
 ---
 

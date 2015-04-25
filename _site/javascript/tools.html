@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Tools
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>javascript</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/javascript/OOP-introduction.html">Object Oriented Programming</a></li>
+          
+          <li><a href="/javascript/html5/html5-exercises.html">HTML5 Exercises</a></li>
+          
+          <li><a href="/javascript/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/javascript/LearningObjectives.html">JavaScript Learning Objectives</a></li>
+          
+          <li><a href="/javascript/tools.html">Tools</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/javascript>javascript</a>
+          -->
+        </div>
+        <headline><h1>Tools</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="simple-web-server">Simple web server</h1>
+
+<p>If you just need to serve up HTML, JS and CSS files, there is no need to setup Apache or NGINX. For quick and dirty testing of a static website, use anyone of these tools.</p>
+
+<h2 id="http-server-npm">http-server, npm</h2>
+
+<p><code>sudo npm install -g http-server</code><br />
+<code>cd /folder/path/to/html/files/</code></p>
+
+<p>Then point your browser to <a href="http://localhost:8080">http://localhost:8080</a></p>
+
+<h2 id="simplehttpserver-python">SimpleHTTPServer, python</h2>
+
+<p><code>cd /path/to/html/files/</code><br />
+<code>python -m SimpleHTTPServer</code></p>
+
+<p>Point the browser to to <a href="http://localhost:8000">http://localhost:8000</a></p>
+
+<h2 id="php-standalone-server">PHP standalone server</h2>
+
+<p>This tool requires a PHP version 5.4 or higher</p>
+
+<p><code>cd /path/to/html/files/</code><br />
+<code>php -S localhost:8080</code></p>
+
+<p>Obviously, the server is listening on port 8080, so point your browser to it</p>
+
+<h1 id="restful-endpoints">RESTful endpoints</h1>
+
+<h2 id="sinatra">Sinatra</h2>
+
+<h2 id="nodejs">NodeJS</h2>
+
+<h2 id="java">Java</h2>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 15, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/javascript/tools.html>http://tedhagos.com/javascript/tools.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

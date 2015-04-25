@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    MAMP Installation
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>php</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/php/howto-include-other-scripts.html">How to Include other scripts</a></li>
+          
+          <li><a href="/php/mamp.html">MAMP Installation</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/php>php</a>
+          -->
+        </div>
+        <headline><h1>MAMP Installation</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>MAMP is short for Mac, Apache, MySQL and PHP. It is the WAMP (Windows Apache MySQL PHP) equivalent on Macs. The installer bundles 3 programs, a web server (Apache), a database server (MySQL) and a scripting language (PHP).</p>
+
+<p>You don’t need the MAMP installer in order to get the 3 programs, Apache in fact, is bundled with OSX. You can get the other two programs using eithe Fink, Brew or Macports. So why are we bothering with MAMP? Because MAMP gives an installation process that has less hassle or friction. Installing the 3 programs without MAMP involves more than just downloading and running installer programs. There is configuration that needs to be done afterwards. It is the configuration activity that usually gets beginning programmers stomped. Wiring the 3 programs to work together can prove to be daunting if it is your first time to setuy a web stack development environment. MAMP eases that configuration process for us.  </p>
+
+<p><strong>1 Download the installer</strong></p>
+
+<p>The installer is at <a href="http://www.mamp.info/en/downloads/">mamp.info/downloads</a>. The MAMP installer has 2 editions. The first one is simply called MAMP and the other is MAMP Pro. There is only one installer for both editions, so just hit the download button. After the installation, you will be asked if you want to upgrade to MAMP Pro. The differences between the two editions is beyond our scope for now. </p>
+
+<p>Install the downloaded file just how you would install any other Mac programs. You will be guided by a series of wizard-type dialog boxes.</p>
+
+<p>Click <strong>Continue</strong> on this screen</p>
+
+<p><img src="images/mamp-1.png" alt="mamp-1" /></p>
+
+<p>Also click <strong>Continue</strong> on this one</p>
+
+<p><img src="images/mamp-2.png" alt="mamp-2" /></p>
+
+<p><strong>2 Read the license agreement</strong> and click <strong>Continue</strong></p>
+
+<p><img src="images/mamp-3.png" alt="mamp-3" /></p>
+
+<p>Agree to license agreement and click <strong>Continue</strong></p>
+
+<p><img src="images/mamp-4.png" alt="mamp-4" /></p>
+
+<p><strong>3 Accept the default setting</strong> which is “install for all users” and click <strong>Continue</strong></p>
+
+<p><img src="images/mamp-5.png" alt="mamp-5" /></p>
+
+<p>The screen tells you how much space it will take up on the disk. It also offers a slight customization. If you want to install the program files to a folder other than the default, you may do so by clicking the <strong>Change Install Location</strong> button. You will be asked where you would like to put the program files instead. For now, just accept the default location and click <strong>Continue</strong></p>
+
+<p><img src="images/mamp-6.png" alt="mamp-6" /></p>
+
+<p>The installer, by default will put the program files in <strong>/Applications/MAMP</strong> folder. This is a system folder, and as such is  off-limits to users who don’t have administrator or root privileges. That is why the installer is asking for permission if you would like to allow the action. </p>
+
+<p>In order to proceed, you need to give your password to the installer. This is the same password that you use when logging in to your Mac. It is also the same password that you installed other applications on your Mac the past. After typing your password, click <strong>Install</strong></p>
+
+<p><img src="images/mamp-7.png" alt="mamp-7" /></p>
+
+<p><img src="images/mamp-8.png" alt="mamp-8" /></p>
+
+<p><strong>4 Close</strong> the installer when all files have been written to disk. You will notice that the “Continue button” has been replaced by <strong>Close</strong> </p>
+
+<p><img src="images/mamp-9.png" alt="mamp-9" /></p>
+
+<p><strong>5 Launch MAMP</strong>. Open a Finder window and click “Applications” on the side bar. If you prefer to use the Finder menu, click <strong>Go</strong> then <strong>Applications</strong>. Alternatively, you can also press <strong>Shift + CMD + A</strong>, that will also take you the Applications folder. The MAMP program is inside the MAMP folder. Double click it.</p>
+
+<p><img src="images/mamp-10.png" alt="mamp-10" /></p>
+
+<p>Ignore this warning. We are not going to use MAMP Pro. Also you may want to uncheck the box that says “Check for MAMP Pro when starting MAMP”, so that the next time you launch MAMP, you won’t be bothered by warning again.</p>
+
+<p><img src="images/mamp-11.png" alt="mamp-11" /></p>
+
+<p>Click <strong>Launch MAMP</strong></p>
+
+<p><img src="images/mamp-12.png" alt="mamp-12" /></p>
+
+<p>The management screen of MAMP is a bit simplistic. Notice that Apache and MySQL has status indicators on the right upper portion of the screen, but there’s none for PHP. You won’t see PHP in there because PHP is already configured to work with Apache. Also, PHP is not a standalone program, its a scripting language, so a status indicator doesn’t really make sense for it. </p>
+
+<p><strong>6 Configure</strong> the services</p>
+
+<p>At the moment Apache and MySQL are not running. When they do, the status boxes will change their colors to green. Right now they are greyed out because. Do not click the <strong>Start Servers</strong> just yet. We still have to do a little bit of configuration. To do that, click <strong>Preferences</strong></p>
+
+<p><img src="images/mamp-13.png" alt="mamp-13" /></p>
+
+<p>There is not much to configure on the “Start/Stop” tab, except to check the box that says “When starting MAMP, Start servers”. This way, everytime we start MAMP, Apache and MySQL will start automatically. </p>
+
+<p>Next, we will configure the Webserver. Click the <strong>WebServer</strong> tab</p>
+
+<p><img src="images/mamp-14.png" alt="mamp-14" /></p>
+
+<p>MAMP contains two webservers, one Apache and the other one is NGINX (pronounced as engine X). NGINX is relatively newer, and arguably, faster than Apache. Both are very capable webservers but they are architecturally different. The choice on what to use between the two is not always obvious because it depends on what language and other technologies you will use in your web application. A discussion on the merits or comparisson of these two webservers is beyond our scope. </p>
+
+<p>For our purpose, we will use Apache. Apache is already selected by default, so you don’t need to anything there. </p>
+
+<p>The next item we will configure is the <strong>Document Root</strong> or docroot for short. The docroot is a special folder that holds all the files of your website or web application. When somebody goes to your website by typing its URL address on a web browser, the webserver, which in our case Apache, it will look for files to serve inside the docroot folder. The MAMP installer decided that it will put the docroot on /Applications/MAMP/htdocs, but we can change that. </p>
+
+<p>Changing the location of the docroot has some benefits for developoment. If we relocate it to somewhere inside our user folder, then we can add, edit, modify and delete files inside the docroot to our heart’s content without being bothered to authenticate ourselves each time. </p>
+
+<p>To change the location of docroot, click eithe the arrow icon or the folder with ellipsis (the one with 3 dots) right beside the <strong>Document Root</strong> label. It will launch a Finder window and let you select a new folder which will be the new docroot.</p>
+
+<p><img src="images/mamp-15.png" alt="mamp-15" /></p>
+
+<p>Select a folder somewhere inside /Users/yourname, in my case, I am  choosing a folder inside my ~/Dropbox folder named <strong>cares</strong>. Click the <strong>Select</strong> button</p>
+
+<p><img src="images/mamp-17.png" alt="mamp-17" /></p>
+
+<p>The location of the new docroot is now selected and reflected on MAMP preferences. Click <strong>Ok</strong> to close the preferences window.</p>
+
+<p><img src="images/mamp-18.png" alt="mamp-18" /></p>
+
+<p><strong>7 Start MAMP</strong> by click the “Start Servers” icon. Wait for a little while until you see the status boxes of Apache and MySQL turn green. As soon as the server starts, a browser session will automatically be launched for you and you will see the welcome page of MAMP.</p>
+
+<p><img src="images/mamp-19.png" alt="mamp-19" /></p>
+
+<p>The welcome page of MAMP automatically opens right after you start the servers. It contains links for <strong>phpinfo</strong> and <strong>phpadmin</strong>. We won’t </p>
+
+<p><img src="images/mamp-20.png" alt="mamp-20" /></p>
+
+<p><strong>8 Shutdown MAMP</strong>. When you are done, you can shutdown MAMP by clicking the <strong>Shutdown servers</strong> icon then click the <strong>Quit</strong> button to dismiss the MAMP management window</p>
+
+<p><img src="images/mamp-21.png" alt="mamp-21" /></p>
+
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: March 02, 2015
+  
+    <dateModified>
+      <br/>
+      Last updated: March 11, 2015
+    </dateModified>
+  
+</dateCreated>
+<br/>
+Url : <a href=/php/mamp.html>http://tedhagos.com/php/mamp.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

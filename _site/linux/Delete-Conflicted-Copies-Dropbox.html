@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    How to Delete Conflicted Copies in Dropbox
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>linux</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/linux/Delete-Conflicted-Copies-Dropbox.html">How to Delete Conflicted Copies in Dropbox</a></li>
+          
+          <li><a href="/linux/vim-setup.html">Vim Setup</a></li>
+          
+          <li><a href="/linux/UsrBinEnVNodeNoSuchFile.html">/usr/bin/env No Such File</a></li>
+          
+          <li><a href="/linux/UsbModemLinux-SMS.html">Send Receive SMS Using USB Modem</a></li>
+          
+          <li><a href="/linux/ThinkPadEdge130.html">Lubuntu Trusty on Thinkpad Edge 130</a></li>
+          
+          <li><a href="/linux/linux-cheatsheet.html">Linux Cheatsheet</a></li>
+          
+          <li><a href="/linux/fstab.html">Mounting Drives in fstab</a></li>
+          
+          <li><a href="/linux/PrintingCommandLine.html">CLI Printing</a></li>
+          
+          <li><a href="/linux/clipboard-copy-paste-terminal.html">Terminal Copy and Paste</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/linux>linux</a>
+          -->
+        </div>
+        <headline><h1>How to Delete Conflicted Copies in Dropbox</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>You need to be sure you have a backup of your files. These commands are on CLI, if you make a mistake, the only way to go back is to restore the files using the tools found in the Dropbox website.</p>
+
+<pre><code>
+$ cd ~/Dropbox/thefolder
+$ find . -type f -name "* conflicted copy*" -exec rm -f {} \;
+$ awk '!/conflicted/' .git/packed-refs &gt; temp &amp;&amp; mv temp $ .git/packed-refs
+
+</code></pre>
+
+<p>The last command is applicable to you if the <strong>thefolder</strong> is also a git repo. If it is not, you should not use that command. Actually it won’t hurt if you accidentally typed that last command if thefolder is not a git repo because it will not find the <code>.git</code> hidden folder</p>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: December 07, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/linux/Delete-Conflicted-Copies-Dropbox.html>http://tedhagos.com/linux/Delete-Conflicted-Copies-Dropbox.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

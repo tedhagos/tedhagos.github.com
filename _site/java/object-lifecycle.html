@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Object Life cycle
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>java</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/java/threads.html">Threads</a></li>
+          
+          <li><a href="/java/howto-switch-jdk-on-osx.html">Switch JDK on OSX</a></li>
+          
+          <li><a href="/java/Types.html">Types</a></li>
+          
+          <li><a href="/java/ProgramFlow.html">Program Flow</a></li>
+          
+          <li><a href="/java/Printing.html">How to Print Stuff</a></li>
+          
+          <li><a href="/java/MavenServlet.html">Simple Servlet Using Maven</a></li>
+          
+          <li><a href="/java/database-programming-jdbc.html">JDBC Programming</a></li>
+          
+          <li><a href="/java/ReferenceTypes.html">Reference Types</a></li>
+          
+          <li><a href="/java/Operators.html">Operators</a></li>
+          
+          <li><a href="/java/Casting.html">Casting</a></li>
+          
+          <li><a href="/java/ReservedWords.html">Reserved Words</a></li>
+          
+          <li><a href="/java/tomcat-install.html">Apache Tomcat</a></li>
+          
+          <li><a href="/java/inheritance.html">Inheritance</a></li>
+          
+          <li><a href="/java/polymorphism.html">Polymorphism</a></li>
+          
+          <li><a href="/java/packages.html">Packages</a></li>
+          
+          <li><a href="/java/maven.html">Maven</a></li>
+          
+          <li><a href="/java/java-errors.html">Common Java Errors</a></li>
+          
+          <li><a href="/java/generics.html">Generic Programming</a></li>
+          
+          <li><a href="/java/encapsulation.html">Encapsulation</a></li>
+          
+          <li><a href="/java/object-lifecycle.html">Object Life cycle</a></li>
+          
+          <li><a href="/java/java-string-literal-pool.html">String Literal Pool</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/java>java</a>
+          -->
+        </div>
+        <headline><h1>Object Life cycle</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>There are things that happen inside a Java object from the time you create it using <strong>new</strong> up until you call its first method. The Java runtime makes certain calls to specific blocks of code in your class definition.</p>
+
+<p>A Java object goes through several stages before you can call any of its instance methods. The static initializer kicks in first, if one is defined. And after that, the instance initializer and  then the constructor kicks in. The code below illustrates the construction of such initializers. </p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// LifeCycle.java</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">System</span><span class="o">.</span><span class="na">out</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">LifeCycle</span> <span class="o">{</span>
+
+  <span class="kd">static</span> <span class="o">{</span>
+   <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;1&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="o">{</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;2&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="n">LifeCycle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;3&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">finalize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;4&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">LifeCycle</span> <span class="n">lc</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">LifeCycle</span><span class="o">();</span>
+    <span class="n">lc</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Initializers are still just code blocks. When you define variables inside them, they will still be local to the block. So you can’t do things like this</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">LifeCycle</span> <span class="o">{</span>
+  <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>  <span class="c1">// i still local to the block</span>
+  <span class="o">}</span>
+
+  <span class="n">LifeCycle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;i = %d&quot;</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span> <span class="c1">// cannot access i from here</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<h1 id="static-initializers">Static initializers</h1>
+
+<h1 id="instance-initializer">instance initializer</h1>
+
+<h1 id="constructors">Constructors</h1>
+
+<p>Q: Are variables defined in the initializer blocks local to the blocks, or like instance members also
+Q: Are blocks inherited
+Q: Can I call methods inside the blocks
+Q: Why bother with blocks in the first place</p>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/java/javaOO/initial.html">http://docs.oracle.com/javase/tutorial/java/javaOO/initial.html</a></p>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: June 19, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/java/object-lifecycle.html>http://tedhagos.com/java/object-lifecycle.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

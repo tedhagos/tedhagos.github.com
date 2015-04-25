@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Show Posts in a given category
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>jekyll</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/jekyll/howto-show-posts-in-category.html">Show Posts in a given category</a></li>
+          
+          <li><a href="/jekyll/howto-highlight-liquid-code-in-jekyll.html">Highlight Liquid Code</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/jekyll>jekyll</a>
+          -->
+        </div>
+        <headline><h1>Show Posts in a given category</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <p>The <strong>categories</strong> variable is a list in Liquid. In order to selectively display posts that belongs to a specific category, we need to do 3 things. First is to traverse all the <strong>posts</strong>, then traverse the <strong>categories</strong> list  and lastly, inquire if the category is a match to the category we want to display on the page. The code snippet below will display all the post, the title at least, that belongs to the ‘linux’ category.</p>
+
+<pre><code>
+{% for post in site.posts %}
+  {% for cat in post.categories %}
+    {% if cat == 'linux' %}
+      {{ post.title }} &lt;br/&gt;
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+</code></pre>
+
+<p>Alternatively, we can use the <strong>site.categories.CATEGORY</strong> variable in Jekyll to do exactly what the code sample above does. I prefer the second approach because it has less code. It is easier to read, maintain and most importantly, less processing time.</p>
+
+<pre><code>
+
+{% for post in site.categories.linux %}
+  {{ post.title }} &lt;br/&gt;
+{% endfor %}
+
+
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="http://jekyllrb.com/docs/variables/">jekylrb.com/variables</a></li>
+</ol>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: January 26, 2015
+  
+</dateCreated>
+<br/>
+Url : <a href=/jekyll/howto-show-posts-in-category.html>http://tedhagos.com/jekyll/howto-show-posts-in-category.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

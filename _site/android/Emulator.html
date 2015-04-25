@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/" />
+
+<meta charset="utf-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="">
+<meta name="author" content="Ted Hagos">
+<meta name="description" content="" />
+
+
+<title>
+  
+    Emulator
+  
+</title>
+
+
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div id="menu" style="display:none;">
+      
+      <h2>android</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+          <li><a href="/android/android-database-programming.html">Database Programming</a></li>
+          
+          <li><a href="/android/CLI-development-environment.html">CLI Development Environment</a></li>
+          
+          <li><a href="/android/AS-layout-weights.html">Layout Weights</a></li>
+          
+          <li><a href="/android/AS-android-project.html">Android Project</a></li>
+          
+          <li><a href="/android/AS-activities.html">Activities</a></li>
+          
+          <li><a href="/android/GettingStarted.html">Getting Started</a></li>
+          
+          <li><a href="/android/Emulator.html">Emulator</a></li>
+          
+          <li><a href="/android/CannotFindBuildXml.html">Cannot Find Build.xml</a></li>
+          
+          <li><a href="/android/AS-simple-camera.html">Working with the Camera</a></li>
+          
+          <li><a href="/android/AS-network-connectivity.html">Network Connectivity</a></li>
+          
+          <li><a href="/android/AS-key-concepts.html">Key Concepts</a></li>
+          
+          <li><a href="/android/AS-development-environment.html">Development Environment</a></li>
+          
+          <li><a href="/android/Workflow.html">Workflow</a></li>
+          
+      </ul>
+      
+    </div>
+
+    <div id="wrapper">
+
+      <article itemscope itemtype="http://schema.org/Article" >
+        <div>
+          <span class="menu-trigger">&#9776</span>
+          <!--
+          <a href="/">&#x2302</a> &raquo;
+          <a href=/android>android</a>
+          -->
+        </div>
+        <headline><h1>Emulator</h1></headline>
+
+  		  <articleBody itempprop="articleBody">
+  		    <h1 id="what-is-it">What is it</h1>
+
+<h1 id="what-is-it-good-for">What is it good for</h1>
+
+<h1 id="shortcomings">Shortcomings</h1>
+
+<h1 id="advantage-over-a-real-device">Advantage over a real device</h1>
+
+<h1 id="creation-and-use">Creation and use</h1>
+
+<h1 id="intel-haxm">Intel HAXM</h1>
+
+<p>Hardware Accelerated Execution Manager. It’s a hypervisor (hardware assisted virtualization) that uses Intel VT. You use it to speed up the Android emulation on your machine. it allows for faster android emulation</p>
+
+<p>There are two ways to get it, one is by downloading it from the intel site <a href="https://software.intel.com/en-us/android">https://software.intel.com/en-us/android</a> the other way is to download it using the Android SDK Manager. Under Extras, you will see the Intel x86 emulation installer (HAXM). Note that even if you download it using the SDK manager, it will not install the HAXM automatically. You still have to run the the HAXM installer. The installation instruction for HAXM is at <a href="https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x">https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x</a></p>
+
+<h2 id="managing-the-haxm">Managing the HAXM</h2>
+
+<p>To verify that its running</p>
+
+<pre><code>kextstat | grep intel
+</code></pre>
+
+<p>You should see the kernel extension “com.intel.kext.intelhaxm”</p>
+
+<p>To stop the haxm</p>
+
+<pre><code>sudo kextunload -b com.intel.kext.intelhaxm
+</code></pre>
+
+<p>To start the haxm</p>
+
+<pre><code>sudo kextload -b com.intel.kext.intelhaxm
+</code></pre>
+
+  		  </articleBody>
+  		</article>
+      <footer>
+        
+<author>
+  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
+</author>
+<dateCreated>
+	Date created: October 16, 2014
+  
+</dateCreated>
+<br/>
+Url : <a href=/android/Emulator.html>http://tedhagos.com/android/Emulator.html</a><br/>
+Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
+<p>
+	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+</p>
+
+
+
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var jPM = $.jPanelMenu();
+        jPM.on();
+      });
+    </script>
+  </body>
+</html>

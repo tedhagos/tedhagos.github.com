@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://tedhagos.com/php/howto-include-other-scripts.html</loc>
+    <lastmod>2015-03-26T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/phonegap/installation.html</loc>
+    <lastmod>2015-03-25T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/php/mamp.html</loc>
+    <lastmod>2015-03-02T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/ocjp/working-with-bytes.html</loc>
+    <lastmod>2015-02-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/nodejs/hello-node.html</loc>
+    <lastmod>2015-01-29T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/nodejs/basic-setup.html</loc>
+    <lastmod>2015-01-29T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/threads.html</loc>
+    <lastmod>2015-01-27T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/howto-switch-jdk-on-osx.html</loc>
+    <lastmod>2015-01-26T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/jekyll/howto-show-posts-in-category.html</loc>
+    <lastmod>2015-01-26T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/jekyll/howto-highlight-liquid-code-in-jekyll.html</loc>
+    <lastmod>2015-01-26T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/homebrew-yosemite.html</loc>
+    <lastmod>2015-01-24T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/emacs-notes.html</loc>
+    <lastmod>2015-01-10T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/remove-ds-store-from-git.html</loc>
+    <lastmod>2014-12-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/android-database-programming.html</loc>
+    <lastmod>2014-12-12T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/writing/LeanPub.html</loc>
+    <lastmod>2014-12-12T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/java-home-osx.html</loc>
+    <lastmod>2014-12-08T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/Delete-Conflicted-Copies-Dropbox.html</loc>
+    <lastmod>2014-12-07T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/osx-yosemite-mail-problem.html</loc>
+    <lastmod>2014-11-27T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/websphere/websphere-822.html</loc>
+    <lastmod>2014-11-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/nodejs/firstprogram.html</loc>
+    <lastmod>2014-11-05T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/websphere/01-Preparation.html</loc>
+    <lastmod>2014-11-04T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/CLI-development-environment.html</loc>
+    <lastmod>2014-10-28T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/vim-setup.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/osx-cheatsheet.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/nodejs/node-package-manager.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/mac-mini-microphone-hack.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/osx/iterm-256-color.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/UsrBinEnVNodeNoSuchFile.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/UsbModemLinux-SMS.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/ThinkPadEdge130.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-layout-weights.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-android-project.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-activities.html</loc>
+    <lastmod>2014-10-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/GettingStarted.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/Emulator.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/CannotFindBuildXml.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-simple-camera.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-network-connectivity.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-key-concepts.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/AS-development-environment.html</loc>
+    <lastmod>2014-10-16T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/emacs-markdown.html</loc>
+    <lastmod>2014-09-25T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/javascript/OOP-introduction.html</loc>
+    <lastmod>2014-09-01T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/tools/Email.html</loc>
+    <lastmod>2014-08-07T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/javascript/html5/html5-exercises.html</loc>
+    <lastmod>2014-08-05T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/javascript/ProgramFlow.html</loc>
+    <lastmod>2014-08-04T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/linux-cheatsheet.html</loc>
+    <lastmod>2014-07-21T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/javascript/LearningObjectives.html</loc>
+    <lastmod>2014-07-17T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/tools/ScreenCastHardware.html</loc>
+    <lastmod>2014-07-13T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/Types.html</loc>
+    <lastmod>2014-07-10T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/ProgramFlow.html</loc>
+    <lastmod>2014-07-10T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/Printing.html</loc>
+    <lastmod>2014-07-10T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/MavenServlet.html</loc>
+    <lastmod>2014-07-10T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/database-programming-jdbc.html</loc>
+    <lastmod>2014-07-09T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/android/Workflow.html</loc>
+    <lastmod>2014-07-09T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/ReferenceTypes.html</loc>
+    <lastmod>2014-07-09T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/Operators.html</loc>
+    <lastmod>2014-07-09T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/Casting.html</loc>
+    <lastmod>2014-07-09T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/ReservedWords.html</loc>
+    <lastmod>2014-07-08T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/ruby/jekyll.html</loc>
+    <lastmod>2014-07-01T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/fstab.html</loc>
+    <lastmod>2014-06-30T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/PrintingCommandLine.html</loc>
+    <lastmod>2014-06-30T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/GnusEmail.html</loc>
+    <lastmod>2014-06-30T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/c/1.html</loc>
+    <lastmod>2014-06-29T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/tomcat-install.html</loc>
+    <lastmod>2014-06-25T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/linux/clipboard-copy-paste-terminal.html</loc>
+    <lastmod>2014-06-25T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/inheritance.html</loc>
+    <lastmod>2014-06-21T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/polymorphism.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/packages.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/maven.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/java-errors.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/generics.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/encapsulation.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/emacs-cheatsheet.html</loc>
+    <lastmod>2014-06-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/troubleshooting-org.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/setting-up-org.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/org-postamble.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/org-html-publishing-cheatsheet.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/emacs/org-cheatsheet.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/object-lifecycle.html</loc>
+    <lastmod>2014-06-19T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/javascript/tools.html</loc>
+    <lastmod>2014-06-15T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/java/java-string-literal-pool.html</loc>
+    <lastmod>2014-06-13T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+</urlset>
