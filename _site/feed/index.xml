@@ -5,7 +5,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2015-04-26T17:43:52+08:00</updated>
+ <updated>2015-04-27T00:15:51+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -14,132 +14,80 @@
 
  
  <entry>
-   <title>jpanelmenu</title>
-   <link href="http://tedhagos.com/vagrant/jquery-panel-scrollbar.html"/>
+   <title>setup</title>
+   <link href="http://tedhagos.com/vagrant/setup.html"/>
    <updated>2015-04-26T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/vagrant/jquery-panel-scrollbar</id>
-   <content type="html">&lt;p&gt;Download the jpanelmenu javascript file from &lt;a href=&quot;http://jpanelmenu.com&quot;&gt;jpanelmenu.com&lt;/a&gt; and include it in your page. Don’t forget to include JQuery as well, JPanelMenu needs JQuery.&lt;/p&gt;
+   <id>http://tedhagos.com/vagrant/setup</id>
+   <content type="html">&lt;p&gt;You can install vagrant using precompiled binaries. Head over to &lt;a href=&quot;http://www.vagrantup.com/downloads.html&quot;&gt;vagrantup.com&lt;/a&gt; website and download the installer appropriate for your platform. These are wizard type installers, so you will install them in a familiar way. Download, then double click, then follow the prompts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
-  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
-&amp;lt;/head&amp;gt;
+&lt;p&gt;Alternatively, you can use the package manager of your platform. OSX has either MacPorts or Homebrew. Windows has got chocolatey and Debian derived Linuxes has got the aptitude package manager.&lt;/p&gt;
+
+&lt;p&gt;On OSX homebrew, you could install vagrant this way&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew update
+brew tap caskroom/cask
+brew install brew-cask
+brew cask install vagrant virtualbox
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Structure your webpage like you normally would. JPanelMenu will monkey around with the DOM anyway. It will restructure the DOM during runtime and put its own div wrappers, so don’t sweat your static structure so much. Make it as simple as possible. Having said that, JPanel will look for an element with an &lt;code&gt;id=menu&lt;/code&gt;, this is the part of page that it will hide. Change the display property of that element to &lt;strong&gt;none&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On a Windows machine with chocolatey, you can do it this way&lt;/p&gt;
 
-&lt;p&gt;JPanelMenu will also look for an element whose &lt;code&gt;class=menu-trigger&lt;/code&gt;. This will be some sort of a hotspot or a button which when clicked, will trigger the sliding of the menu div.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
-&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
-  &amp;lt;header&amp;gt;
-    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
-  &amp;lt;/header&amp;gt;
-  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
-  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;/body&amp;gt;
+&lt;pre&gt;&lt;code&gt;cinst --y virtualbox vagrant
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Lastly, to activate JPanelMenu, you need to instantiate and turn it on.&lt;/p&gt;
+&lt;p&gt;On Debian derived Linux box, you might do the following&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-  $(document).ready(function(){
-    var jPM = $.jPanelMenu();
-    jPM.on();
-  });
-&amp;lt;/script&amp;gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install vagrant virtualbox-dkms
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;A basic structure of a whole page that uses the the JPanelMenu might look something like the html code sample below&lt;/p&gt;
+&lt;p&gt;Make sure everything has been installed properly. On terminal window, run the following commands&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE HTML&amp;gt;
-&amp;lt;html lang=&quot;en&quot;&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
-  &amp;lt;header&amp;gt;
-    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
-  &amp;lt;/header&amp;gt;
-  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
-  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-  $(document).ready(function(){
-    var jPM = $.jPanelMenu();
-    jPM.on();
-  });
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
+&lt;pre&gt;&lt;code&gt;vagrant --v
+vboxmanage - v
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&quot;styling&quot;&gt;Styling&lt;/h1&gt;
+&lt;p&gt;If you saw the actual version numbers of vagrant and virtualbox instead of getting a “command not found” or “bad command or filename” error, that means virtualbox and vagrant are good to go.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>repl</title>
+   <link href="http://tedhagos.com/nodejs/repl.html"/>
+   <updated>2015-04-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/nodejs/repl</id>
+   <content type="html">&lt;p&gt;NodeJS includes a REPL utility. The Read Eval Print Loop is a pretty good way to start exploring node. You can type any node command in the repl and it will automatically spit out the results of what you typed. &lt;/p&gt;
 
-&lt;p&gt;JPanelMenu will rewrite the DOM of the page. So if you think you can style the sliding panel by using the &lt;code&gt;#menu&lt;/code&gt; selector, that won’t work. If you inspect the elements of the page using firebug or the chrome developer tools, you will find that the sliding panel is actually enclosed in an element named &lt;code&gt;#jPanelMenu-menu&lt;/code&gt;. This is the element you need to style. Code below is a snippet taken from &lt;code&gt;style.css&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#jPanelMenu-menu {
-  border-right: 1px solid #dbdbdb;
-  margin: 5px;
-  text-align: center;
-  line-height: 2em;
-  background: #fff;
-}
-#menu {
-  padding: 10px;
-}
-  .menu-trigger {font-size: 3em; cursor: pointer; color: #979797;}
-
-#jPanelMenu-menu a {
-  text-decoration: none;
-  color: #838383;
-}
-#jPanelMenu-menu a:hover {
-  text-decoration: underline;
-  color: #000;
-}
-#jPanelMenu-menu ul {
-  list-style-type: none;
-  margin:0;
-  padding:0;
-}
+&lt;pre&gt;&lt;code&gt;$ node
+&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The code above changed the style of the unordered list and anchor tags because the sliding panel was intended to hide a menu navigation panel. The navigation panel is built by a bunch of anchor tags enumerated using an unordered list.&lt;/p&gt;
+&lt;p&gt;The chevron sign indicates that the repl is ready to take on commands. Node is javascript, so you can type valid JS commands and the repl will evaluate it. &lt;/p&gt;
 
-&lt;h2 id=&quot;remove-the-scrollbar&quot;&gt;Remove the scrollbar&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ node
+&amp;gt; new Date();
+&amp;gt; Sun Apr 26 2015 23:01:58 GMT+0800
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The JPanel adds a whitespace on the side, which is probably intended for a scrollbar. To remove the whitespace without removing the scrolling ability of the panel, you need to edit the &lt;code&gt;jquery.jpanelmenu.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can even type functions in it.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Find the line &lt;code&gt;overflow-y:scroll&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Replace it with &lt;code&gt;overflow-y:visible&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ node
+&amp;gt; var numarray = [1,2,3,4];
+undefined
+&amp;gt; function cube(num) {
+... return Math.pow(num,3);
+... }
+undefined
+&amp;gt; numarray.map(cube);
+[ 1, 8, 27, 64 ]
+&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The repl is just a good tool to have if you want to quickly test a statement or an expression. It allows instant feedback if a piece of code will work or not without you having to construct a proper source file. &lt;/p&gt;
+
+&lt;p&gt;You can end the repl session by pressing &lt;code&gt;CTRL C&lt;/code&gt; twice on the terminal.&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -270,87 +218,6 @@
   &lt;li&gt;Find the line &lt;code&gt;overflow-y:scroll&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Replace it with &lt;code&gt;overflow-y:visible&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>jquery basics</title>
-   <link href="http://tedhagos.com/vagrant/basics.html"/>
-   <updated>2015-04-26T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/vagrant/basics</id>
-   <content type="html">&lt;p&gt;JQuery is pretty good at a lot of things, the most usage though is DOM selection and manipulation and event handling. To get it going, we simply include it in a page using the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag. First, you need to download it from &lt;a href=&quot;https://jquery.com&quot;&gt;JQuery’s home page&lt;/a&gt;. Save it somewhere inside the docroot of your web project. Then reference it from the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
-  &amp;lt;script src=&quot;js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;/head&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the example above, the JQuery js file is stored inside the &lt;strong&gt;js&lt;/strong&gt; folder and the html page is on the top folder of docroot, hence we need to reference the js file relative to the location of the webpage that is defining the inclusion of the jquery library.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, you can include jquery in your webpage by loading it using a CDN, a content delivery network. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h1&gt;
-
-&lt;p&gt;Before doing anything on the DOM, you need to make sure that all DOM elements have already been loaded and rendered. This is why our JQuery codes will look like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
-$(document).ready(function(){
-  // DOM manipulation and other codes here .
-});
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Before JQuery, your code might have looked like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
-body.onload = function(){
-  // DOM manipulation and other codes here .
-}
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can use JQuery as a drop-in replacement for these kinds of codes.&lt;/p&gt;
-
-&lt;h1 id=&quot;hunting-for-elements&quot;&gt;Hunting for elements&lt;/h1&gt;
-
-&lt;p&gt;In traditional javascript, we used codes like &lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;var b = document.getElementById(&#39;btnLogin&#39;);&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;in order to get a programmatic reference to an html element with an &lt;strong&gt;id=btnLogin&lt;/strong&gt;. To do the same task in jquery, we will use codes like this&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;var b = $(&quot;#btnLogin&quot;);&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;JQuery uses CSS like syntax. That is why there is a pound/sharp sign before &lt;strong&gt;btnLogin&lt;/strong&gt;. If you have constructed CSS files before, the jquery syntax for element ids and names will be familiar to you. &lt;/p&gt;
-
-&lt;h1 id=&quot;common-usage&quot;&gt;Common Usage&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
-&amp;lt;button id=&quot;btnLogin&quot;&amp;gt;Login&amp;lt;/button&amp;gt;
-&amp;lt;script&amp;gt;
-
-$(document).ready(function(){
-  // get a DOM reference to the login button 
-  var blogin = $(&quot;#btnlogin&quot;);
-  blogin.click(function(){
-    alert(&quot;Button click&quot;);
-  });
-
-  // detect browser type
-  
-});
-
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;binding-events&quot;&gt;Binding events&lt;/h1&gt;
-
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-
 </content>
  </entry>
  
@@ -618,11 +485,44 @@ System.out.println(++a);
  </entry>
  
  <entry>
-   <title>Hello Node</title>
-   <link href="http://tedhagos.com/nodejs/hello-node.html"/>
+   <title>Hello</title>
+   <link href="http://tedhagos.com/nodejs/hello.html"/>
    <updated>2015-01-29T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/nodejs/hello-node</id>
-   <content type="html">&lt;p&gt;Node has a &lt;strong&gt;REPL&lt;/strong&gt; environment where you can interactively write commands and expressions. As you type something on the REPL, it will be evaluated and interpreted by Node and results will immediately shown to you. The REPL is a good tool to use for learning Node, but most of the things we will do in Node will not be on the REPL. We will write our programs in a JavaScript file and execute that file on the Node runtime. To Demonstrat this workflow, we will write a simple program.&lt;/p&gt;
+   <id>http://tedhagos.com/nodejs/hello</id>
+   <content type="html">&lt;p&gt;While the repl allows you to write node codes, as a programmer, you will write your commands in a source file and then run it using the node interpreter.&lt;/p&gt;
+
+&lt;p&gt;We will create a directory where we can save our node source files and then we will run them on the node interperter.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir ~/nodeplayground &amp;amp;&amp;amp; cd ~/nodeplayground
+touch hello.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On a Windows machine, this might be accomplished with these commands&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir c:\Users\yourname\nodeplayground
+cd c:\Users\yourname\nodeplayground
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can create hello.js using your program editor of choice. Node programs are javascript programs. So whatever you have used to write JS codes before, that should be fine.&lt;/p&gt;
+
+&lt;p&gt;Edit &lt;code&gt;hello.js&lt;/code&gt; and put the following codes in it&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var http=require(&#39;http&#39;)
+
+app=http.createServer(sayHi);
+
+function sayHi(request, response) {
+  response.writeHead(200, {&#39;Context-Type&#39; : &#39;text/plain&#39;});
+  response.end(&quot;Hello Node\n&quot;);
+}
+
+app.listen(8000, &#39;127.0.0.1&#39;);
+console.log(&quot;Web Server has started&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Choose or create a directory to save our first node program. &lt;/p&gt;
+
+&lt;p&gt;Node has a &lt;strong&gt;REPL&lt;/strong&gt; environment where you can interactively write commands and expressions. As you type something on the REPL, it will be evaluated and interpreted by Node and results will immediately shown to you. The REPL is a good tool to use for learning Node, but most of the things we will do in Node will not be on the REPL. We will write our programs in a JavaScript file and execute that file on the Node runtime. To Demonstrat this workflow, we will write a simple program.&lt;/p&gt;
 
 &lt;h2 id=&quot;steps&quot;&gt;Steps&lt;/h2&gt;
 
@@ -658,34 +558,62 @@ System.out.println(++a);
    <link href="http://tedhagos.com/nodejs/basic-setup.html"/>
    <updated>2015-01-29T00:00:00+08:00</updated>
    <id>http://tedhagos.com/nodejs/basic-setup</id>
-   <content type="html">&lt;p&gt;Nodejs is available for a variety of platforms. You can get the binary distributions for installation on &lt;a href=&quot;http://nodejs.org&quot;&gt;nodejs.org&lt;/a&gt;. There are binaries for Mac and Windows. If you are using Linux, you can get NodeJS from the Linux repositories appropriate for your specific flavor of Linux.&lt;/p&gt;
+   <content type="html">&lt;p&gt;There are 3 ways to install node, each with pros and cons. You can get node going in your system using anyone of the following&lt;/p&gt;
 
-&lt;p&gt;The installation using the binaries requires nothing more than downloading the installer file, double-cliking it and following the prompts. This is true for either the Windows or the Mac binaries.  &lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Precompiled binaries&lt;/strong&gt;. This is the simplest. You simply head over towards &lt;a href=&quot;http://nodejs.org&quot;&gt;nodejs.org&lt;/a&gt; and download the precompiled binary that is right for your system. NodeJS installers are available for OSX, Linux and Windows. If you install node this way, you would have installed npm as well. Npm is the node package manager. This is the easiest for most users because the installation process is very familiar to anyone who have installed applications before. It is a a wizard. You download, double click and follow the prompts. There is nothing more to it. When a new version of node comes along though, you have to go through this process again&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Node Version Manager&lt;/strong&gt;. This method of installation allows you to run multiple versions of node within the sample computer. You can install a new version (or an older version) of node with just a few simple commands. This is not as simple as using precompiled binaries because before you can install node itself, you need to install the nvm first. If you are using OSX or Linux, you can use nvm. If you are on windows, nvm is currently not officially supported on that platform. There were people who made nvm available to Windows users.Y0u can find the instructions on how to get nvm going on Windows on the &lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;github page for nvm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Compilation from source&lt;/strong&gt;. This has the highest difficulty of all the options for node installation. If you have installed software before by compiling them from source, you maybe right at home with this option. If you haven’t, the process for a first time user may prove to be daunting. This is the most flexible though because you can control the compilation using options. If you want to run node on a platform other than OSX,  Linux or Windows, this maybe the only the option available to you&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Other package managers&lt;/strong&gt;. OSX users have homebrew or macports, Windows users have chocolatey and Linux users have either yum, aptitude and many other else, depending on the Linux flavor. Node has been around for a quite a while now and its precompiled binaries have made it to the most popular and common code repositories&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&quot;program-editor&quot;&gt;Program Editor&lt;/h2&gt;
+&lt;h1 id=&quot;os-package-managers&quot;&gt;OS Package Managers&lt;/h1&gt;
 
-&lt;p&gt;NodeJS programs are JavaScript programs. Whatever you already are using to code in JavaScript, that is probably the best editor for you because you already know the quirks and tricks of that Editor.&lt;/p&gt;
+&lt;p&gt;On a Linux machine with Debian or Ubuntu, you could install node with the following commands&lt;/p&gt;
 
-&lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
-
-&lt;p&gt;Download the NodeJS installer file for your platform. Install it on your machine. Open a terminal window. A terminal window launches a shell program that allows you to issue OS commands. On a mac, you can open a terminal window by launching the &lt;strong&gt;Terminal.app&lt;/strong&gt;, it is in &lt;code&gt;/Applications/Utilities/Terminal&lt;/code&gt;. On Windows, you can use &lt;strong&gt;cmd.exe&lt;/strong&gt;. Press the &lt;strong&gt;SuperKey&lt;/strong&gt; on the keyboard and type &lt;code&gt;cmd.exe&lt;/code&gt;. If you are using Windows 7 and below, press the &lt;strong&gt;SuperKey&lt;/strong&gt;, go to &lt;strong&gt;Run&lt;/strong&gt; and type &lt;code&gt;cmd.exe&lt;/code&gt;. &lt;/p&gt;
-
-&lt;p&gt;After launching a terminal, type &lt;code&gt;node&lt;/code&gt;. You should get to the &lt;strong&gt;node&lt;/strong&gt; REPL&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-$ node
-&amp;gt;
-
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get -y build-essential
+sudo apt-get -y install curl
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get -y install nodejs npm
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Quit &lt;strong&gt;node&lt;/strong&gt; by pressing &lt;code&gt;CTRL C&lt;/code&gt;. It will ask you to press &lt;code&gt;CTRL C&lt;/code&gt; again to completely quit. &lt;/p&gt;
+&lt;p&gt;Installation instructions for other Linux distros can be found at &lt;a href=&quot;https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager&quot;&gt;joyent wiki page at github&lt;/a&gt;. &lt;/p&gt;
 
-&lt;h2 id=&quot;glossary&quot;&gt;Glossary&lt;/h2&gt;
+&lt;p&gt;On OSX with homebrew, you could install it with the command &lt;code&gt;brew install node&lt;/code&gt;. You need to ensure that the folder &lt;code&gt;/usr/local/bin&lt;/code&gt; is included in your system path because brew will put the node executable on that folder. On Windows with the chocolatey package manager, you could get node going with the command &lt;code&gt;cinst nodejs&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For information on chocolatey, head over to their website at &lt;a href=&quot;http://chocolatey.org&quot;&gt;chocolatey.org&lt;/a&gt;. For information on homebrew, go to their website at &lt;a href=&quot;http://brew.sh&quot;&gt;brew.sh&lt;/a&gt;. You may need to install some other software before you can even install either chocolatey or brew.&lt;/p&gt;
+
+&lt;h1 id=&quot;node-version-manager&quot;&gt;Node Version Manager&lt;/h1&gt;
+
+&lt;p&gt;We need to install nvm first before we can proceed with the node installation. You will need either &lt;code&gt;curl&lt;/code&gt; or &lt;code&gt;wget&lt;/code&gt; to install nvm. In our case, we will use curl. If you don’t have &lt;code&gt;curl&lt;/code&gt;, you need to get it first. On OSX you can get it with &lt;code&gt;brew install curl&lt;/code&gt; and on Linux you can get using &lt;code&gt;sudo apt-get install curl&lt;/code&gt;. Once done, open a terminal window and run the command &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may need to completely quit the terminal window and relaunch it again in order to use nvm. At this point, we can now install node. Once nvm is up and running, node can be installed with a simple nvm command like &lt;code&gt;nvm install 0.10&lt;/code&gt;. This command will fetch the node binaries from preconfigured software repositories where node is hosted. You can test if node was downloaded to your system by using the commadn &lt;code&gt;node -v&lt;/code&gt;. It should echo on your screen the version number of node. Here’s a small list of nvm commands that you might need for daily use&lt;/p&gt;
 
 &lt;dl&gt;
-  &lt;dt&gt;REPL &lt;/dt&gt;
-  &lt;dd&gt;&lt;strong&gt;R&lt;/strong&gt;ead &lt;strong&gt;E&lt;/strong&gt;val &lt;strong&gt;P&lt;/strong&gt;rint &lt;strong&gt;L&lt;/strong&gt;oop. It is an interactive environment where you can enter node commands and expressions. The result will be immediately printed on the screen. It is a great tool to explore the Node platofrm&lt;/dd&gt;
+  &lt;dt&gt;nvm&lt;/dt&gt;
+  &lt;dd&gt;Displays a help file on how to use nvm. It lists options and flags the nvm command&lt;/dd&gt;
+  &lt;dt&gt;nvm install 0.10&lt;/dt&gt;
+  &lt;dd&gt;Installs node version .10. You don’t need to specify anything after 10, nvm will automatically fetch the latest version in the .10 series. Just replace 0.10 for whatever version of node that you want to install&lt;/dd&gt;
+  &lt;dt&gt;nvm use 0.10&lt;/dt&gt;
+  &lt;dd&gt;Switch to version .10 of node&lt;/dd&gt;
+  &lt;dt&gt;nvm use 0.08&lt;/dt&gt;
+  &lt;dd&gt;Switch to version .08, if you have installed it before&lt;/dd&gt;
+  &lt;dt&gt;nvm alias default 0.10&lt;/dt&gt;
+  &lt;dd&gt;It makes version 0.10 of node the default version. Every time you open a terminal window and use the command &lt;code&gt;node -v&lt;/code&gt;, it will always point to version 0.10 &lt;/dd&gt;
 &lt;/dl&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Joyent page at github - &lt;a href=&quot;https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager&quot;&gt;github.com/joyent/node/wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Creationix github page - &lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;github.com/creationix/nvm&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </content>
  </entry>
  
@@ -1059,15 +987,6 @@ $ find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
  </entry>
  
  <entry>
-   <title>Database Programming</title>
-   <link href="http://tedhagos.com/android/android-database-programming.html"/>
-   <updated>2014-12-12T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/android-database-programming</id>
-   <content type="html">&lt;h1 id=&quot;todo-rewrite-the-example&quot;&gt;TODO Rewrite the example&lt;/h1&gt;
-</content>
- </entry>
- 
- <entry>
    <title>Publishing on Leanpub</title>
    <link href="http://tedhagos.com/writing/LeanPub.html"/>
    <updated>2014-12-12T00:00:00+08:00</updated>
@@ -1116,10 +1035,10 @@ $ find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
  </entry>
  
  <entry>
-   <title>How to Delete Conflicted Copies in Dropbox</title>
-   <link href="http://tedhagos.com/linux/Delete-Conflicted-Copies-Dropbox.html"/>
+   <title>Delete Conflicted Copies in Dropbox</title>
+   <link href="http://tedhagos.com/tools/Delete-Conflicted-Copies-Dropbox.html"/>
    <updated>2014-12-07T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/linux/Delete-Conflicted-Copies-Dropbox</id>
+   <id>http://tedhagos.com/tools/Delete-Conflicted-Copies-Dropbox</id>
    <content type="html">&lt;p&gt;You need to be sure you have a backup of your files. These commands are on CLI, if you make a mistake, the only way to go back is to restore the files using the tools found in the Dropbox website.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;
@@ -1699,156 +1618,6 @@ And why that self executing function&lt;/p&gt;
 &lt;h1 id=&quot;editions&quot;&gt;Editions&lt;/h1&gt;
 
 &lt;h1 id=&quot;what-you-need&quot;&gt;What you need&lt;/h1&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>CLI Development Environment</title>
-   <link href="http://tedhagos.com/android/CLI-development-environment.html"/>
-   <updated>2014-10-28T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/CLI-development-environment</id>
-   <content type="html">&lt;p&gt;The Android SDK is a collection of tools and libraries to help you build Android projects. Before you can create projects, you must install the SDK. The SDK also installs, among other things, the Android Virtual Device or the AVD. The AVD emulates a physical android device. You can use this for testing your applications.&lt;/p&gt;
-
-&lt;p&gt;The SDK depends on other software. You need to make sure that you have the following installed on your system.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A Java Development Kit. You will need the full JDK not just the JRE. The JRE is good only for running Java software, not for developing them. The prescribed versions of JDK is either 1.5 or 1.6 but I have experience running them on Java 7 and 8 without problems&lt;/li&gt;
-  &lt;li&gt;Apache Ant will also be needed. Android uses Ant as a build tool&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
-
-&lt;p&gt;The SDK can be downloaded from &lt;a href=&quot;https://developer.android.com/sdk&quot;&gt;https://developer.android.com/sdk&lt;/a&gt;. Click the link which says “View all downloads and sizes”. The SDK is available for Mac, Linux and Windows, find the right installer for your platform and download it.&lt;/p&gt;
-
-&lt;h1 id=&quot;configure&quot;&gt;Configure&lt;/h1&gt;
-
-&lt;p&gt;At the time of writing, the SDK is packaged as a zipped file.  Unzip the downloaded file somewhere your disk. Unzip it preferably to a directory where you have read,write and execute privileges so you do not have to worry about tweaking permissions later. The name of directory where you unzipped the SDK files will be known as ANDROID_HOME. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/android-sdk-linux/
-
-├── add-ons
-├── build-tools
-├── docs
-├── platforms
-├── platform-tools
-├── samples
-├── sources
-├── system-images
-├── temp
-└── tools
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The diagram above shows the folder structure of the unzipped SDK files on a Linux box. If you are on Windows, this could be &lt;strong&gt;c:\&amp;gt;Users\yourname\android-sdk-windows&lt;/strong&gt;. On a Mac it could read &lt;strong&gt;~/android-sdk-mac&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are two specific folders in the ANDROID_HOME that you must include in your system path, the tools folder and the platform-tools folder.  The common utilities and commands that you will use in Android Development are found on those folders. &lt;/p&gt;
-
-&lt;h2 id=&quot;mac&quot;&gt;Mac&lt;/h2&gt;
-
-&lt;p&gt;You can edit your &lt;strong&gt;~/.bash_profile&lt;/strong&gt; and include the following&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export ANDROID_HOME=/&amp;lt;location of android home&amp;gt;
-export PATH=$PATH:ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Replace &lt;location of=&quot;&quot; android=&quot;&quot; home=&quot;&quot;&gt; with the actual directory location of your ANDROID_HOME&lt;/location&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
-
-&lt;p&gt;You can edit &lt;strong&gt;~/.bashrc&lt;/strong&gt; and include the following&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export ANDROID_HOME=/&amp;lt;location of android home&amp;gt;/
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Replace &lt;location of=&quot;&quot; android=&quot;&quot; home=&quot;&quot;&gt; with the actual directory location of your ANDROID_HOME&lt;/location&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
-
-&lt;p&gt;You can include the path of tools and platform-tools using the GUI tools. Go to Control Panel, System Properties then go Environment Variables. You can put it either in User or System variables. If you do not have Administrative privileges on the Windows machine, you may not be able to alter the System variables. &lt;/p&gt;
-
-&lt;p&gt;Alternatively, you can create a batch file somewhere on your user directory and set the paths on that batch file.  Launch cmd.exe to get a command line window&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd \Users\&amp;lt;yourname&amp;gt;
-notepad adev.bat
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Write the following inside adev.bat&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;set ANDROID_HOME=c:\&amp;lt;location of android home&amp;gt;
-set PATH=%PATH%/tools;%ANDROID_HOME%/platform-tools:.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You will need to run this batch file each time you open a cmd window so the Android path information can be recognized. The moment you close the cmd window, these path settings will be lost. If you include the Android paths using the System Properties method, will be permanent. Each time you open an cmd window, the paths will be set automatically.&lt;/p&gt;
-
-&lt;h1 id=&quot;download-the-android-versions&quot;&gt;Download the Android versions&lt;/h1&gt;
-
-&lt;p&gt;The SDK includes just the tools and utilities for development. It does not include the specific Android platform libraries that you will need. You will need to download the specific platforms/versions using the SDK manager. You may also need to download system images which will be required when you create an emulator. &lt;/p&gt;
-
-&lt;p&gt;Open a terminal window and type &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will launch the Android SDK Manager. If you get a “bad command command or file name” or a “command not found error” that means you have not included the &lt;strong&gt;tools&lt;/strong&gt; and &lt;strong&gt;platform-tools&lt;/strong&gt; folder of the SDK into your PATH. Fix that first, then try the &lt;strong&gt;android&lt;/strong&gt; command again.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/android-sdk-manager.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Android has been around for quite some time. There have been several versions of it over the course of many years. Each version of the Android platform can be downloaded using this tool. If you have a lot of bandwidth and disk space, you can download all of them by ticking all the check boxes you can find. Or you can simply download the Android versions you want to target for development.&lt;/p&gt;
-
-&lt;p&gt;If you want to develop apps that will run on KitKat, tick the box of “Android 4.4.2 (API 19)”. At a minimum, you will need the “SDK platform”, so check that. You will also need the “System Images”, check those that you want to use. If you are unsure which System Image you will need, just check “Intel X86 Atom System Image”.  &lt;/p&gt;
-
-&lt;p&gt;Scroll down the SDK Manager window and go to the “Extras” section. Check the “Android Support Library”. If you are on Windows, you might need the “Google USB Driver”, Mac and Linux users do not need the drivers. The USB drivers will be needed if you use a real Android device to run and test your app.  &lt;/p&gt;
-
-&lt;p&gt;Once you are happy with your selections, click the “Install packages” button. You will have to accept the license agreement before any download begins.  &lt;/p&gt;
-
-&lt;h1 id=&quot;android-virtual-device&quot;&gt;Android Virtual Device&lt;/h1&gt;
-
-&lt;p&gt;The Android Virtual Device emulate a real device. You can use this for testing your apps in place of a real device. I do highly recommend testing your app on real device before you release to the public. There is no substitute with real device testing.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-an-avd&quot;&gt;Create an AVD&lt;/h2&gt;
-
-&lt;p&gt;You can create an AVD for any Android platform provided that you downloaded a System Image for it. To create an AVD, use the following command on a terminal window&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android create avd --name kitkat --target android-19 --abi default/x86
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The preceding command will create an an AVD for android API level 19, which is KitKat version. It was given a name “kitkat” using the –name flag. The System Image used was the default/x86 image (Intel X86 Atom System Image). &lt;/p&gt;
-
-&lt;p&gt;If you are wondering how did we know what values to put in the command options, that answer is we got them by listing the available android targets. You can view the available targets using the command &lt;strong&gt;android list targets&lt;/strong&gt;. It will list all the versions of Android which you downloaded earlier using the SDK Manager. Below is a snippet of the output using the android list targets command.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;id: 11 or &quot;android-19&quot;
-     Name: Android 4.4.2
-     Type: Platform
-     API level: 19
-     Revision: 4
-     Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
- Tag/ABIs : default/armeabi-v7a, default/x86 -   **&amp;amp;#x2013;name**. Put any name you want, I used kikat in our example because it is descriptive -   **&amp;amp;#x2013;target**. The API Level for your application. If we wanted to create a project that will run on JellyBean, I would have put android-18. But I did put android-19 because I wanted the app to run on KitKat -   **&amp;amp;#x2013;abi**.  The name of the System Image that you will use for the emulator, in our example above I could also have used default/armeabi-v7a because it is also listed among the available targets
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The create avd command has a couple of options you can use, but we only used three of them. You can pass other options that will affect things like skin, sdcard storage etc.  You can learn the other options of this command by typing &lt;strong&gt;android create avd&lt;/strong&gt; without any options. That will display the help file.&lt;/p&gt;
-
-&lt;p&gt;Overtime, you will create more AVDs because you will target different Android versions. To find out how many and what kind of AVDs you already have created, use the command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android list avd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That command will output the details of all the AVDs you have created.&lt;/p&gt;
-
-&lt;p&gt;You can test the AVD you just created by launching it&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;emulator -avd kitkat
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This command will launch the emulator in its own window. Just close the window if you want to terminate the emulator. &lt;/p&gt;
-
-&lt;h2 id=&quot;alternative-avd-management&quot;&gt;Alternative AVD Management&lt;/h2&gt;
-
-&lt;p&gt;The creation and management of AVDs can also be accomplished using the GUI tool of the Android SDK Manager. Launch the SDK Manager again using the &lt;strong&gt;android&lt;/strong&gt; command from a terminal window. Go to “Tools” then “Manage AVDs”. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/avd-creation.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/avd-launched.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 </content>
  </entry>
@@ -2603,680 +2372,6 @@ was probably meant to be copied over to `~/.config/gnokii/config`&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Layout Weights</title>
-   <link href="http://tedhagos.com/android/AS-layout-weights.html"/>
-   <updated>2014-10-20T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-layout-weights</id>
-   <content type="html">&lt;p&gt;A project created with a default Activity will include an XML file and an Activity class. These two are given to you so you can get started quickly in displaying at least one screen in your application. The screen is of vanilla construction. This default layout is mostly used for some quick fire challenges. The kinds of things you do when you just want to test some things.&lt;/p&gt;
-
-&lt;p&gt;Real applications typically display some sophistication in their layouts. Let’s look at one small change you can do to effect some layout changes. The code snippet below is typical of the vanilla XML file given to us during project creation.&lt;/p&gt;
-
-&lt;h2 id=&quot;review-of-linearlayout&quot;&gt;Review of LinearLayout&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas...&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  android:orientation=&amp;quot;vertical&amp;quot;
-  android:layout_width=&amp;quot;fill_parent&amp;quot;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The orientation is set to &lt;strong&gt;vertical&lt;/strong&gt; and the layout_width is set to &lt;strong&gt;fill_parent&lt;/strong&gt;. With those setting in effect, each View component you will add to this layout will be stacked on top of each other. The first View object to be added will be the one on top, the next View object will follow suit.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&amp;gt;&lt;/span&gt;
-  android:orientation=&amp;quot;vertical&amp;quot;
-  android:layout_width=&amp;quot;fill_parent&amp;quot;  
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;CheckBox&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The preceding code example will result in a screen which has a CheckBox with a Button View right on top of it. The Button occupied whole width of the screen because the LinearLayout container says &lt;strong&gt;fill_parent&lt;/strong&gt; on its layout width. The Checkbox did the same, it spanned the whole width of the screen for the same reason the Button did. No surprises here. This is how a linear layout is supposed to work. The behavior is expected. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/linear-layout-vertical.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There are some class of applications for which this kind of layouting might be okay. If the screen for example just wants to display a series of check boxes stacked on top of each other, like in a survey form, then this layout will suffice. No further tweaking is needed. &lt;/p&gt;
-
-&lt;h2 id=&quot;weighted-layout&quot;&gt;Weighted layout&lt;/h2&gt;
-
-&lt;p&gt;Let’s go to another layout example. Suppose we create a screen that allows a user to enter some data and when the user clicks a button, whatever he entered onto the text box will be added to a static text View, like a label. To build this example, we will need the following View objects: &lt;strong&gt;EditText, TextView&lt;/strong&gt; and &lt;strong&gt;Button&lt;/strong&gt;. &lt;/p&gt;
-
-&lt;p&gt;An EditText View allows for user input. If you have programming experience, you may have called this by a different name, perhaps you referred to it before as a textfield. Its the same thing. A TextView is a static text control. Some programmers call it a label. And you already know what a Button View does. &lt;/p&gt;
-
-&lt;p&gt;Once we have created a new project with a default Activity, we can add the Views to our Layout. It could look like the next code sample&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/editText&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?android:attr/textAppearanceLarge&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Large Text&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/textView&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;New Button&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/button&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This will result to a screen where the EditText, TextView and the Button are stacked on top of one another. Each of the Views stretching out to the whole width of the screen. That may not be a problem for the width but it will be a problem for the height. Each View will vertically occupy just what it needs to display their content. The Button will size its height just enough to accomodate its label, the TextEdit will size itself accordingly to accomodate its current textual content and the EditText will size itself to accomodate a single line text input. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/weighted-layout.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The screen layout is not tight. There is plenty of unutilized screen space after the Button which makes the design clumsy. Putting screen space to good use gives the the app a more sophiscticated look. &lt;/p&gt;
-
-&lt;p&gt;A small change we can make is to anchor the EditText and the Button on the opposite sides of the screen, top and bottom to be precise, so that the TextEdit can stretch itself vertically in between and occupy whatever space is left. To achieve this result, we will assign layout weights on each View.&lt;/p&gt;
-
-&lt;p&gt;LinearLayout allows weight assignment for each View that is contained within. All Views by default are assigned a weight of zero. If the weight of a View is zero, the View cannot grow in space beyond what it needs to display its content. A View whose weight is more than zero is deemed to be more important. Hence it is allowed to stretch and hog the remaining space left on the screen.&lt;/p&gt;
-
-&lt;p&gt;To achieve our desired layout, we will make the weight of the Button and EditText zero and assign a weight of one to the TextView&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/editText&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?android:attr/textAppearanceLarge&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Large Text&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/textView&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;New Button&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/button&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The EditText and Button Views are now pushed to the top and bottom and the TextView stretched its height to fill up the gap left by other two Views. Because only the TextView is assigned a weight more than zero, it is the only View that can grow beyond what it needs for display. &lt;/p&gt;
-
-&lt;p&gt;Had we assigned all three Views equal weights of 1, all of them will grow in space beyond what they need but they will grow uniformly. The whole screen will be divided by three components. If we assigned each of them a weight of 2, you will not see any difference when they all had a weight of 1. Interesting things happen Views are assigned varying weights.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/different-weights.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Android Project</title>
-   <link href="http://tedhagos.com/android/AS-android-project.html"/>
-   <updated>2014-10-20T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-android-project</id>
-   <content type="html">&lt;p&gt;An Android project is required to build a single app. A project is a simple folder that contains a collection of XML, Java source, images, property and optional audio or video files. It has a very specific structure that stays the same for all android projects. With the exception of images, audio and video files which may be used by your project, everything inside this project are plain text files. This is the reason why some programmers can develop android applications using just plain editors.&lt;/p&gt;
-
-&lt;p&gt;The commands and utilities inside the Android SDK expects this structure and is optimized to work with it. If you deviate from this structure, you will have grief. It is not wise to build this project structure unaided by tools. At the very least, you should use the &lt;strong&gt;android create project&lt;/strong&gt; utility included in the SDK. &lt;/p&gt;
-
-&lt;p&gt;Popular IDEs like Eclipse, NetBeans and Android Studio have wizard driven ways of creating an android project. But no matter what you use to create such a project, the structure of the files and folders is pretty uniform. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/android-project-structure.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The one on the left is a project created using just the SDK. The picture on the right was created using the Android App Studio, a full blown IDE for Android development. While the Android Studio project appears to have more files, the basic structure of the two projects remains very consistent. &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;src:&lt;/strong&gt; a folder that contains the Java source files. All your program logic will be written on these files. If you want to do something when a user clicks a Button, starts you application or suspends an application, you will write them on the source files. And these source files will be stored here&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;res:&lt;/strong&gt; a folder that contains other folders like “res”, “values” and some images. The folder names that says “drawable” contains images that your application may use&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;bin:&lt;/strong&gt; When you compile the project, this is where the binary or executable files will be stored&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;libs:&lt;/strong&gt; Sometimes you will need to use codes that other developers built. These third party libraries should be located on this folder&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;layout:&lt;/strong&gt; Android favors the declarative way of defining user interfaces. The screens you will create can be built using XML files. This is the folder where XML screen files are stored&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;values:&lt;/strong&gt; Hard coding string values is a dangerous practice. The idiomatic way of defining strings for labels, buttons etc is to store them in resource bundles. These resource bundles are nothing more than XML files. You will store the resource bundles in this folder&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;AndroidManifest.xml:&lt;/strong&gt; Every project needs one manifest file. This file is important. It declares the things that are inside your application like how many screens it have, what their names are. It also affects the things your application can do. It declares whether your application can use the network, the local storage or the camera for example&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;local.properties:&lt;/strong&gt; This file contains build configuration information e.g. the location of the Android SDK in your system&lt;/li&gt;
-&lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Activities</title>
-   <link href="http://tedhagos.com/android/AS-activities.html"/>
-   <updated>2014-10-20T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-activities</id>
-   <content type="html">&lt;p&gt;An Activity is single screen that a user sees in your application. They are the primary ways for xyour application to communicate with the user. You will capture inputs with them and you will show outputs using them. If you  built Java applications for the desktop before, you might think of them as AWT Frames. &lt;/p&gt;
-
-&lt;p&gt;An activity is made up of two files. An XML file which defines what the screen looks like. How many buttons, menus and textfields it has etc. The second one is a Java source file which contains all the programming logic that will support the behavior of the screen. If you want something to happen when a user does something to the screen e.g. inputs a text or clicks a button, you will write that program logic on the Java source file.&lt;/p&gt;
-
-&lt;p&gt;We will create another Hello project in this chapter&lt;/p&gt;
-
-&lt;p&gt;Create another project with the following details.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Application Name&lt;/strong&gt; is Hello&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Minimum SDK&lt;/strong&gt; is API 15&lt;/li&gt;
-  &lt;li&gt;Use a &lt;strong&gt;Blank Activity&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Activity Name&lt;/strong&gt; is Main&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;the-xml-file&quot;&gt;The XML file&lt;/h2&gt;
-
-&lt;p&gt;The XML file for an Activity will be stored in &lt;strong&gt;Hello/app/src/main/res/layout&lt;/strong&gt; folder. There will be one XML file for each Activity. If you only have one Activity in your application, then there will only be one XML file in this folder. If you have several screens in the app, there will be several XML files here, one for each screen. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
-    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
-    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
-    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
-    tools:context=&quot;.Main&quot;&amp;gt;
-
-    &amp;lt;TextView
-        android:text=&quot;@string/hello_world&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot; /&amp;gt;
-
-&amp;lt;/RelativeLayout&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;java-source-file&quot;&gt;Java source file&lt;/h2&gt;
-
-&lt;p&gt;This is just filler text. Delete this at once, once you find it&lt;/p&gt;
-
-&lt;p&gt;What is it
-Why do I care
-What is it made of&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Java file. What, where is it. how di we get it.what’s in it, what are they for&lt;/li&gt;
-  &lt;li&gt;Layout file. What. Where is it. How did we gert it. What’s in it&lt;/li&gt;
-  &lt;li&gt;how are the two related. Via setcontentView nad R.layout.main – what’s that. Well the appt (Android Asset Packaging Tool) will compile all layout and values XML. It will produce the the R clas which you can use to get a programmatic reference to Views and resource bundles you have defined.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;multiple-activities&quot;&gt;Multiple Activities&lt;/h2&gt;
-
-&lt;h1 id=&quot;scratch&quot;&gt;scratch&lt;/h1&gt;
-
-&lt;p&gt;An Activity is a screen. It is the visible part of the Android application. &lt;/p&gt;
-
-&lt;p&gt;What is it made of - a java file and an XML. It describes in XML what the screen should look like, will it have buttons, text fields etc. Will the Buttons stretch vertically or horizontally etc&lt;/p&gt;
-
-&lt;p&gt;What about it, what do they need to know&lt;/p&gt;
-
-&lt;p&gt;Create it. which is covered already but recapitulate it
-Point out min sdk
-package
-name of Main Activity&lt;/p&gt;
-
-&lt;p&gt;Show the project structure again&lt;/p&gt;
-
-&lt;p&gt;What is Main.java
-The visual content, is referencing R.layout.main 
-What does setContentView does. Where did we get it
-What does it mean that it extends androiv.view.Activity&lt;/p&gt;
-
-&lt;p&gt;Manifest&lt;/p&gt;
-
-&lt;p&gt;activity declaration
-  intent filter, why is it important. It tells the Android runtime, that this is the activity that should be launched when the application is launched by the user. When you launch me, launch this activity first.&lt;/p&gt;
-
-&lt;p&gt;What about another activity.
-  how to add another activity&lt;/p&gt;
-
-&lt;p&gt;What to put
- onCreate, why does it have super.onCreate(), then setContent again
- create another XML file, how in Android Studio. will the name of the XMLs case sensitive&lt;/p&gt;
-
-&lt;p&gt;How to put some things inside the screen file&lt;/p&gt;
-
-&lt;p&gt;Simple way to launch another Activity, use the XML for declaration&lt;/p&gt;
-
-&lt;p&gt;Why do we have add the second activity into the Manifest, because it will throw an ActivityNotFoundException - How did we know. Because I launched the DDMS. I need to tell them about the DDMS&lt;/p&gt;
-
-&lt;p&gt;What happens if you omit the setContentView of the second Activity, well, you will launch the second activity but you won’t see anything&lt;/p&gt;
-
-&lt;p&gt;This needs a video supplement&lt;/p&gt;
-
-&lt;p&gt;Summary&lt;/p&gt;
-
-&lt;p&gt;AndroidManifest controls everything
-What it takes to add a new activity, create a Java file, create an XML, define in manifest and how to launch another activity is to use Intents, Excplicit intents&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Getting Started</title>
-   <link href="http://tedhagos.com/android/GettingStarted.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/GettingStarted</id>
-   <content type="html">&lt;p&gt;An Android project is made up of lots of files. Even the humble Hello World app, which is what we will do, requires more than just a single Java source file. An Android app needs a couple of XML files to facilitate user interfaces and overall configuration. Obviously it will need at least one Java program file and it could contain a couple of other resource files e.g. images etc.&lt;/p&gt;
-
-&lt;p&gt;While you can create and assemble an Android application without the aid of a tool, it can be difficult and cumbersome, not to mention, quite impractical. The Android SDK contains tools that helps to create, build and test projects. &lt;/p&gt;
-
-&lt;p&gt;At this point, you must already have a properly configured development environment. If you haven’t setup your environment, you can refer to &lt;a href=&quot;android-environment-setup.md&quot;&gt;Android Environment Setup&lt;/a&gt; before going any further.&lt;/p&gt;
-
-&lt;h1 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h1&gt;
-
-&lt;p&gt;We need to create a folder or directory where we can put all our project files. We will give that folder a name that is descriptive of the project. You can put this folder anywhere you like but there are some locations in your hard drive that might not be suited for a project like ours. Normally these places are folders where you don’t have read, write and execute privileges (rwx). You  have &lt;strong&gt;rwx&lt;/strong&gt; capabilities on your home folder, so we wil put our project in there. The location of your home folder varies depending on what OS you use. &lt;/p&gt;
-
-&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
-
-
-&lt;colgroup&gt;
-&lt;col class=&quot;left&quot; /&gt;
-
-&lt;col class=&quot;left&quot; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&quot;left&quot;&gt;Windows 7 or 8&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;`C:\Users\YourName`&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;left&quot;&gt;Linux&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;`/home/YourName/` or simply `~/`&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;left&quot;&gt;OSX&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;`/Users/YourName` or simply `~/`&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;android create project --target 16 --path hello --activity HelloWorld --package com.tedhagos&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;–target 16:&lt;/strong&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;–path hello :&lt;/strong&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;–activity HelloWorld:&lt;/strong&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;–package:&lt;/strong&gt; &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What will you have&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../images/android-project-structure.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;compiling&quot;&gt;Compiling&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;ant debug install&lt;/code&gt; &lt;/p&gt;
-
-&lt;p&gt;Why debug, what happens if I remove it.&lt;/p&gt;
-
-&lt;p&gt;Are there any other  targets&lt;/p&gt;
-
-&lt;h1 id=&quot;how-will-you-test&quot;&gt;How will you test&lt;/h1&gt;
-
-&lt;h2 id=&quot;avd&quot;&gt;AVD&lt;/h2&gt;
-
-&lt;h2 id=&quot;physical-device&quot;&gt;Physical device&lt;/h2&gt;
-
-&lt;p&gt;What are the insights, have you answered the description above. Can Steph understand this&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Emulator</title>
-   <link href="http://tedhagos.com/android/Emulator.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/Emulator</id>
-   <content type="html">&lt;h1 id=&quot;what-is-it&quot;&gt;What is it&lt;/h1&gt;
-
-&lt;h1 id=&quot;what-is-it-good-for&quot;&gt;What is it good for&lt;/h1&gt;
-
-&lt;h1 id=&quot;shortcomings&quot;&gt;Shortcomings&lt;/h1&gt;
-
-&lt;h1 id=&quot;advantage-over-a-real-device&quot;&gt;Advantage over a real device&lt;/h1&gt;
-
-&lt;h1 id=&quot;creation-and-use&quot;&gt;Creation and use&lt;/h1&gt;
-
-&lt;h1 id=&quot;intel-haxm&quot;&gt;Intel HAXM&lt;/h1&gt;
-
-&lt;p&gt;Hardware Accelerated Execution Manager. It’s a hypervisor (hardware assisted virtualization) that uses Intel VT. You use it to speed up the Android emulation on your machine. it allows for faster android emulation&lt;/p&gt;
-
-&lt;p&gt;There are two ways to get it, one is by downloading it from the intel site &lt;a href=&quot;https://software.intel.com/en-us/android&quot;&gt;https://software.intel.com/en-us/android&lt;/a&gt; the other way is to download it using the Android SDK Manager. Under Extras, you will see the Intel x86 emulation installer (HAXM). Note that even if you download it using the SDK manager, it will not install the HAXM automatically. You still have to run the the HAXM installer. The installation instruction for HAXM is at &lt;a href=&quot;https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x&quot;&gt;https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;managing-the-haxm&quot;&gt;Managing the HAXM&lt;/h2&gt;
-
-&lt;p&gt;To verify that its running&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kextstat | grep intel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You should see the kernel extension “com.intel.kext.intelhaxm”&lt;/p&gt;
-
-&lt;p&gt;To stop the haxm&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo kextunload -b com.intel.kext.intelhaxm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To start the haxm&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo kextload -b com.intel.kext.intelhaxm
-&lt;/code&gt;&lt;/pre&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Cannot Find Build.xml</title>
-   <link href="http://tedhagos.com/android/CannotFindBuildXml.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/CannotFindBuildXml</id>
-   <content type="html">&lt;p&gt;After running &lt;code&gt;ant debug install&lt;/code&gt;, an error happens. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;BUILD FAILED
-/Users/ted/workarea/android-training/practice
-/helloworld/    build.xml:83: Cannot find /Users/ted/
-progtools/android-sdk-macos/tools/ant/build.xml 
-imported from /Users/ted/workarea/android-training/
-practice/helloworld/build.xml
-
-Total time: 0 seconds
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is a build script problem. What the error tells us is that, it cannot find &lt;strong&gt;build.xml&lt;/strong&gt;. How can that be? The android SDK tools actually setup up everything for us, the ant build script is one of the artefacts created when you start a new android project. There could be lots of reasons, but this particular error happened to me because I was using two machines for program development. And that I forgot to include the &lt;strong&gt;local.properties&lt;/strong&gt; in the .gitignore file. So the settings and properties on one machine spilled over to the other development machine. &lt;/p&gt;
-
-&lt;p&gt;If you inspect the build.xml in your android project folder, you will find out that it is actually importing another &lt;strong&gt;build.xml&lt;/strong&gt;, a generic one. This generic build.xml is located at &lt;code&gt;SDK.DIR/tools/build.xml&lt;/code&gt;. SDK.DIR is the folder where you installed the Android SDK when you downloaded it. &lt;/p&gt;
-
-&lt;p&gt;The following example downloads and installs the android SDK&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/progtools
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;progtools
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wget http://dl.google.com/android/android-sdk-linux.tgz
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -xzvf android-sdk-linux.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This will create a folder named &lt;code&gt;~/progtools/android-sdk-linux/&lt;/code&gt;. This is the SDK.DIR&lt;/p&gt;
-
-&lt;p&gt;To fix this error, you need to make sure that the value of &lt;strong&gt;SDK.DIR&lt;/strong&gt; inside the local.properties file is pointing to the correct location. The local.properties file is located on the top level folder of your android project. &lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Working with the Camera</title>
-   <link href="http://tedhagos.com/android/AS-simple-camera.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-simple-camera</id>
-   <content type="html">
-</content>
- </entry>
- 
- <entry>
-   <title>Network Connectivity</title>
-   <link href="http://tedhagos.com/android/AS-network-connectivity.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-network-connectivity</id>
-   <content type="html">&lt;p&gt;Things to look for;&lt;/p&gt;
-
-&lt;p&gt;context.getSystemService(Context.CONNECTIVITY_SERVICE) - What is this code doing&lt;/p&gt;
-
-&lt;p&gt;ConnectivityManager class, What are the static constants&lt;/p&gt;
-
-&lt;p&gt;LinearLayout.addView()&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Key Concepts</title>
-   <link href="http://tedhagos.com/android/AS-key-concepts.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-key-concepts</id>
-   <content type="html">&lt;p&gt;Android applications are comprised of Java executable codes, XML files and other application resources like video, images and audio. These are all bundled together inside an .apk file.&lt;/p&gt;
-
-&lt;p&gt;You will write your program in the Java programming language and compile them using the  Android SDK (software development kit). When the app is compiled, it becomes an android package. An android package is an archive file with a .apk extension. Think of them like zipped files for Android.&lt;/p&gt;
-
-&lt;p&gt;When applications have been built and digitally signed, they can be distributed on market places like Google Play or Amazon. They don’t have to be but these market places are frequented by a lot of people, your can benefit from exposure which the market places can offer. &lt;/p&gt;
-
-&lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;
-
-&lt;p&gt;Android may refer to many things, some people use it to refer to their mobile device and some others use the term to refer to the programming environment. That’s fine. For our purpose, what we mean by Android is a platform which have runtime components where mobile apps can run.&lt;/p&gt;
-
-&lt;p&gt;This platform is special version of Linux that is optimized for mobile devices. The Linux part takes care system services e.g. network and file operations, concurrency etc. The platform includes a bunch of other
-things like WebKit which is the same browser engine that powers Chrome and Safari. It also has SQLite which you can use for database programming. It has other components useful for application development, but instead of listing all of them here, I will point them out in later when we need to use them.&lt;/p&gt;
-
-&lt;p&gt;The one other thing to point out in the Android software stack is the framework. The framework lets us do things such as create screens, write code that runs in background, listen to some events that may happen on the mobile device (and do something about it). The platform enables us to do all these things by simply extending existing classes in the
-Android SDK.&lt;/p&gt;
-
-&lt;p&gt;Extending classes means utilizing the inheritance mechanism of Java to reuse existing functionality. The Android development team already wrote codes to display buttons and textfields for example. All we need to do, is to reuse them, mash them up or mix it up so we can use them in our own applications.&lt;/p&gt;
-
-&lt;p&gt;The Android SDK is a collection of tools and code libraries. SDK is short for software development kit. You will need to download, install and configure the SDK before you can start any development work.&lt;/p&gt;
-
-&lt;h2 id=&quot;versions-and-api-level&quot;&gt;Versions and API level&lt;/h2&gt;
-
-&lt;p&gt;Android has been around for quite some time. It has evolved so many times and as a result, there are various versions of it.&lt;/p&gt;
-
-&lt;p&gt;A version number will correspond to a code name. Buyers of Android devices would probably recognize the android versions using the codename rather than the actual number. As a developer, we need to be familiar not only with both the version number and codename, we also need to know the API level.&lt;/p&gt;
-
-&lt;p&gt;The API level is what you will see on the Android SDK manager. You will use the SDK manager when updating your software development kit.&lt;/p&gt;
-
-&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
-
-
-&lt;colgroup&gt;
-&lt;col class=&quot;right&quot; /&gt;
-
-&lt;col class=&quot;left&quot; /&gt;
-
-&lt;col class=&quot;right&quot; /&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;Version&lt;/th&gt;
-&lt;th scope=&quot;col&quot; class=&quot;left&quot;&gt;Codename&lt;/th&gt;
-&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;API&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;2.2&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Froyo&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;8&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;2.3.3 - 2.3.7&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Gingerbread&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;10&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;4.0.3 - 4.0.4&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Ice Cream Sandwich&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;15&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;4.1.x&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;16&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;4.2.x&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;17&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;4.3&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;18&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;right&quot;&gt;4.4&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;KitKat&lt;/td&gt;
-&lt;td class=&quot;right&quot;&gt;19&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;By the time you read this, there could be changes or additions to the Android platform. The official site of Android keeps an updated list of this info over at &lt;a href=&quot;https://developer.android.com/about/dashboards/index.html&quot;&gt;https://developer.android.com/about/dashboards/index.html&lt;/a&gt;. &lt;/p&gt;
-
-&lt;h2 id=&quot;fundamentals&quot;&gt;Fundamentals&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Creation of an app starts by creating an Android project. It is a simple folder that contains the Java sources, XML files, videos, audio, images etc. Depending on what IDE or tool you use, a project can be created and managed using either Ant, Maven or Gradle. These are called build tools and they are usually managed by the IDE. Most of the time, they are invisible to you&lt;/li&gt;
-  &lt;li&gt;Write the program logic using Java. Whether you would like to show something on the screen, listen to an event or do something in the background, Android has prebuilt classes to handle those. These prebuilt classes are part of the Android framework that lets us create rich apps by extending exisiting classes in the framework. We’ll discuss Application components a bit more later&lt;/li&gt;
-  &lt;li&gt;The screen user interface is, usually, constructed using XML. Widgets like buttons, textfields and other UI components are declared in the XML. Things such as size, alignments and weights of each component can be declared in this file as well&lt;/li&gt;
-  &lt;li&gt;Most of apps are event driven. They wait for the user to enter or press something then then some processing happens. Program logic is usually written as response to an event. These codes are the ones you write using the Java language&lt;/li&gt;
-  &lt;li&gt;The Java source file are converted to an executable form and the XMl is flattened as a result of the compilation process. The XML is converted to byte code representation, this is what we mean by flattened&lt;/li&gt;
-  &lt;li&gt;If the compilation is not successful, the compiler will you what’s wrong with it and you should fix it then compile again. If it compiles successfully, you will test the application by deploying it either an emulator or a real device connected to your computer&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;application-components&quot;&gt;Application Components&lt;/h2&gt;
-
-&lt;h3 id=&quot;activities&quot;&gt;Activities&lt;/h3&gt;
-
-&lt;p&gt;If you want to create a screen that can interact with the user, you can do that by creating an Activity class. It is called that because the class you will create will extend the existing Activity class that is part of the Android framework.&lt;/p&gt;
-
-&lt;p&gt;By extending this class, you will be able to create other components such as buttons, textfields, lists etc and contain them inside a screen. You can also react to some events such as when an incoming call interrupts the user while using your application. &lt;/p&gt;
-
-&lt;p&gt;An Activity is basically a single screen that a user can see and interact with. Most applications will have more than one Activity. They have more than one screen. You can stitch Activities together using &lt;strong&gt;Intents&lt;/strong&gt;. You can define a button on one Activity then write program logic such that when the button is clicked, it will launch another Activity. You will use Intents to launch other Activities.  &lt;/p&gt;
-
-&lt;h3 id=&quot;services&quot;&gt;Services&lt;/h3&gt;
-
-&lt;p&gt;Sometimes you will need to write code that is invisible to the user. One that doesn’t have a user interface. Surely you will need to launch it somehow from an Activity but once launched, the application just keeps on running. Even if the UI that launched it has already disappeared from view. A music player is such an example of this kind of app. A GPS enabled application which updates your location every now and then is another example.&lt;/p&gt;
-
-&lt;p&gt;If you need to build these kinds of apps, you will use &lt;strong&gt;Services&lt;/strong&gt;. These are long running operations that are executed in the background. A Service is independent of the Activity that launched. Even if the UI screen that was used to launch the service has already died, the Service code just keeps on going.&lt;/p&gt;
-
-&lt;h3 id=&quot;content-providers&quot;&gt;Content Providers&lt;/h3&gt;
-
-&lt;p&gt;Each application runs on its own process. Its own virtual machine. This behavior of Android protects each application. If one badly written application goes wonky, it cannot bring the other running applications down. Its good for application stability. But this makes it nearly impossible for one application to access data from another. &lt;/p&gt;
-
-&lt;p&gt;Content Providers solves the problem of data sharing between applications. It is possible for you to write an application and share whatever data it has with other applications. The &lt;strong&gt;Contacts&lt;/strong&gt; and &lt;strong&gt;Calendar&lt;/strong&gt; apps in Android are good examples of apps that have Content Providers.&lt;/p&gt;
-
-&lt;p&gt;Don’t confuse Content Provider with your own database. If you create an application that uses a SQLite database, of course your application can access that. If, for example, you want to allow other applications to gain access to your app’s data, you can build a Content Provider. Your application will make the data available to other apps using standard URIs. &lt;/p&gt;
-
-&lt;h3 id=&quot;broadcast-receivers&quot;&gt;Broadcast Receivers&lt;/h3&gt;
-
-&lt;p&gt;Broadcast Receivers are used if you want to execute some program logic in your app as a response to events generated by either the Android system or other applications. You can, for example, inititate a database write when the phone receives an SMS message. You probably want to examine the SMS message and if it fits a certain criteria, you will record it to the database. This is one example of how to use Broadcast receivers.  &lt;/p&gt;
-
-&lt;p&gt;You can make your application listen to certain events. To do this, you need to register your application to listen to a specific event. Its the same concept when you subcribe to a mailing list. When there is a new mail, you get notified.&lt;/p&gt;
-
-&lt;p&gt;Apart from listening to broadcasted events, you can also make your application broadcast specific events. To do that, you will extend a specific Android class called the &lt;strong&gt;BroadcastReceiver&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;BroadcastReceivers typically don’t have user interfaces. But you can create notifications that will show up on the status bar.&lt;/p&gt;
-
-&lt;h3 id=&quot;android-manifest-file&quot;&gt;Android Manifest file&lt;/h3&gt;
-
-&lt;p&gt;This is one of the most important parts of an Android app. The manifest is an XML file that needs be on the root folder of the application project. Every project needs one, and there can only be one per project. It needs to be named &lt;strong&gt;AndroidManifest.xml&lt;/strong&gt;. The manifest declares lots of things like:&lt;/p&gt;
-
-&lt;p&gt;-the name of the application
--what kinds of components does the app have. Does it have Activities, what are their names. Does it listen to broadcast etc
--what kinds of things can it do with the mobile device? Can it access the network. The internet. Will it use the camera. Will it record a GPS location
--can other applications interact with this applcation. If so, what kinds of permission should these other applications have
--does this application use any external libraries (usually jar files that other people wrote)
--what versions of Android will this application run on. Will it run on Froyo (API level 8)&lt;/p&gt;
-
-&lt;p&gt;The Android manifest file is usually created by default when you start a new project. But it only provides some minimum declaration. Beyond the basic HelloWorld apps, you will need to learn how to work and manage the manifest file.&lt;/p&gt;
-
-&lt;h3 id=&quot;other-resources&quot;&gt;Other Resources&lt;/h3&gt;
-
-&lt;p&gt;Besides the programming components and the Android manifest file, your application may also include the following:&lt;/p&gt;
-
-&lt;p&gt;-*XML resource files* . XMLs are everywhere in Android. They are used to define screen layouts, manifest file, resource bundles etc.
--*Image Resources*. At a minimum, your app needs an icon that will appear on the Android apps menu
--*Video and Audio  Resources* .If you are building a game or a training application, your apps may contain lots of these
--*Third Party Libraries*. You include codes that other people built e.g. social media functionalities. These are included in the project in the form of jar files (Java archive)&lt;/p&gt;
-
-&lt;h2 id=&quot;other-ways-to-build-android-apps&quot;&gt;Other ways to build Android apps&lt;/h2&gt;
-
-&lt;p&gt;There are other ways to build an Android app. You can build apps using using languages other than Java. An app can be built using HTML, CSS, JavaScript and a middleware like the Cordova API, a good example of this is Phonegap. You can use C# to write apps and retarget the compilation to Android using a product called Xamarin. There are ways to build Android apps as well using Ruby or Python.  &lt;/p&gt;
-
-&lt;p&gt;There are tools or products that can build an Android app without coding or with minimal coding. MIT’s App Inventor is a example of this kind of tool. There are other tools like AppyPie, MakeMeDroid and Como. These app making tools are far too many to list down here. And by the time you are reading this, some of these names could be out of business already and new app makers have taken their places. Just search Google for “android app builder no code 2014” if you happen to still be reading this text in 2015, just substitute the current year in search term.&lt;/p&gt;
-
-&lt;p&gt;Our focus in here, of course, is to write our app using the Java language and build it using the Android SDK.&lt;/p&gt;
-
-&lt;div id=&quot;footnotes&quot;&gt;
-&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
-&lt;div id=&quot;text-footnotes&quot;&gt;
-
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Uniform Resource Identifier is just a piece of string that is used to identify a resource, such as a data resource that you would like to export using a Content Provider. It can appear like this: content://yourapp/resourcename. It looks a lot like what you would type in a browser address bar, although technically, what you use in a browser is called a URL (Uniform Resource Locator). Becauase a URL specifies not only the name of the resource, it also specifies the manner on how to get the resource (http). But for all intents and purposes, a URL is also a URI.&lt;/div&gt;
-
-
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Development Environment</title>
-   <link href="http://tedhagos.com/android/AS-development-environment.html"/>
-   <updated>2014-10-16T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/AS-development-environment</id>
-   <content type="html">&lt;p&gt;Setting up a development rig for Android varies a bit depending on what tool you will use. We will use the Android App Studio but we will brush a little bit on instlaling the barebones SDK as well. You do not have to follow the barebones SDK install &lt;/p&gt;
-
-&lt;p&gt;There are two different ways to install a dev environment, one is is via the pure SDK and using only the tools provided by the SDK  and some rudimentary programmign editor. The other way is using an IDE like Eclipse, Netbeans and Android App Studio&lt;/p&gt;
-
-&lt;p&gt;The IDE is a monilithic way and the SDK is more involved. &lt;/p&gt;
-
-&lt;p&gt;We will cover the Android App Studio. Why, because this is the tool endorsed by Google. While it is still in Beta, I don’t know, get some words from other authors&lt;/p&gt;
-
-&lt;h1 id=&quot;sdk&quot;&gt;SDK&lt;/h1&gt;
-
-&lt;p&gt;Screenshot of where to download it, and which link. &lt;/p&gt;
-
-&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
-
-&lt;p&gt;double click, installer&lt;/p&gt;
-
-&lt;h2 id=&quot;mac&quot;&gt;Mac&lt;/h2&gt;
-
-&lt;p&gt;unzip
-system path&lt;/p&gt;
-
-&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
-
-&lt;p&gt;unzip
-system path&lt;/p&gt;
-
-&lt;h1 id=&quot;android-app-studio&quot;&gt;Android App Studio&lt;/h1&gt;
-
-&lt;h2 id=&quot;windows-1&quot;&gt;Windows&lt;/h2&gt;
-
-&lt;p&gt;double click&lt;/p&gt;
-
-&lt;h2 id=&quot;mac-1&quot;&gt;Mac&lt;/h2&gt;
-
-&lt;p&gt;double click, drag into /Applications&lt;/p&gt;
-
-&lt;h2 id=&quot;linux-1&quot;&gt;Linux&lt;/h2&gt;
-
-&lt;p&gt;unzip
-include in system path&lt;/p&gt;
 </content>
  </entry>
  
@@ -4540,73 +3635,6 @@ web.xml&lt;/p&gt;
 &lt;h1 id=&quot;metadata&quot;&gt;Metadata&lt;/h1&gt;
 
 &lt;p&gt;no. yes. no&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Workflow</title>
-   <link href="http://tedhagos.com/android/Workflow.html"/>
-   <updated>2014-07-09T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/android/Workflow</id>
-   <content type="html">&lt;h1 id=&quot;project-creation&quot;&gt;Project creation&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;android create project --path &amp;lt;project folder&amp;gt; --target &amp;lt;API level&amp;gt; --package &amp;lt;package name&amp;gt; --Activity &amp;lt;Activity name&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;work-on-manifestxml&quot;&gt;Work on Manifest.xml&lt;/h1&gt;
-
-&lt;p&gt;If necessary, modify the &lt;strong&gt;*AndroidManifest.xml&lt;/strong&gt;. There will be certain applications that will require explicit permissions to be declared on manifest e.g. use of camera, use of the MIC for media recording etc&lt;/p&gt;
-
-&lt;h1 id=&quot;get-the-project-in-source-control&quot;&gt;Get the project in source control&lt;/h1&gt;
-
-&lt;p&gt;This is for bitbucket.org, adjust the url accordingly for github.com&lt;/p&gt;
-
-&lt;pre class=&quot;codeblock&quot;&gt;
-
-$ cd /path/to/your/project
-$ git init
-$ git remote add origin &amp;lt;https://yourname@bitbucket.org/yourname/yourproject.git&amp;gt;
-
-&lt;/pre&gt;
-
-&lt;h1 id=&quot;add-the-gitignore-and-readme-file&quot;&gt;Add the .gitignore and README file&lt;/h1&gt;
-
-&lt;p&gt;cd to project folder, create a .gitignore file. You don’t want all of the files to be under source control e.g. location of the build.xml and the android-SDK, these information are specific to developer workstation and may not be true for all developers. Also, you don’t want generated files to be part of source control&lt;/p&gt;
-
-&lt;p&gt;A sample content of .gitignore&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;bin/
-gen/
-ant.properties
-local.properties
-build.properties
-project.properties
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Don’t forget the README.txt. Even if you are working alone, it can’t hurt to write down your thoughts why you were trying to write that piece of code in the first place, put it in the README.txt&lt;/p&gt;
-
-&lt;h1 id=&quot;work-often-commit-often-iterate&quot;&gt;Work often, commit often. Iterate&lt;/h1&gt;
-
-&lt;p&gt;Keep adding files to the project, keep modifying files. At the end of the day, commit your changes. Now, the frequency of the commit is usually decided as a group. There are projects where you cannot until certain number of unit tests have been performed (and passed) etc. Know your project practices and adhere to them, but the last thing you want is losing a days worth of coding/unit testing, so commit to the repo religiously&lt;/p&gt;
-
-&lt;h1 id=&quot;license-the-source-file&quot;&gt;License the source file&lt;/h1&gt;
-
-&lt;p&gt;You need to decide which license you will use. Remember, if there is no explicit license on the source file, it means its a full copyright. No one can use your code, they will have to contact you and ask for express permissions — not that everybody abides by that, but still, if you intend other people to benefit from your creation, then license it either using a permissive license (like MIT or BSD) or the GPL or what have you.&lt;/p&gt;
-
-&lt;h1 id=&quot;debug-observe-inspect-adjust&quot;&gt;Debug, Observe, Inspect, Adjust&lt;/h1&gt;
-
-&lt;p&gt;Learn how to type ant debug install really quickly, better yet, use a text expander so you have a fighting chance against carpal tunnel syndrome&lt;/p&gt;
-
-&lt;h1 id=&quot;beta-test&quot;&gt;Beta test&lt;/h1&gt;
-
-&lt;p&gt;Send the app to friends, relatives, colleagues etc, look for feedback. Go back to the app, refine. Let your thoughts germinate some more. You need to iterate a bit on the app before you release to the wild&lt;/p&gt;
-
-&lt;h1 id=&quot;sign-the-app&quot;&gt;Sign the app&lt;/h1&gt;
-
-&lt;p&gt;ant debug install was fine for testing and development, but it cannot be consumed by other people without the developer signature. You need to &lt;a href=&quot;/signing-an-android-app&quot;&gt;digitally sign your app&lt;/a&gt; before you release it to the public &lt;/p&gt;
-
-&lt;h1 id=&quot;publish-to-google-play&quot;&gt;Publish to Google Play&lt;/h1&gt;
-
-&lt;p&gt;You can make the app available from your website as a downloadable apk (android package) or you could pay Google Play so you can sell the app at the Google Market Place (its like iTunes or the Apple App Store for Android apps)&lt;/p&gt;
 </content>
  </entry>
  
@@ -5877,6 +4905,1072 @@ Q: Why bother with blocks in the first place&lt;/p&gt;
    <updated>2014-06-13T00:00:00+08:00</updated>
    <id>http://tedhagos.com/java/java-string-literal-pool</id>
    <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Database Programming</title>
+   <link href="http://tedhagos.com/android/android-database-programming.html"/>
+   <updated>2012-12-12T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/android-database-programming</id>
+   <content type="html">&lt;h1 id=&quot;todo-rewrite-the-example&quot;&gt;TODO Rewrite the example&lt;/h1&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CLI Development Environment</title>
+   <link href="http://tedhagos.com/android/CLI-development-environment.html"/>
+   <updated>2012-10-28T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/CLI-development-environment</id>
+   <content type="html">&lt;p&gt;The Android SDK is a collection of tools and libraries to help you build Android projects. Before you can create projects, you must install the SDK. The SDK also installs, among other things, the Android Virtual Device or the AVD. The AVD emulates a physical android device. You can use this for testing your applications.&lt;/p&gt;
+
+&lt;p&gt;The SDK depends on other software. You need to make sure that you have the following installed on your system.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A Java Development Kit. You will need the full JDK not just the JRE. The JRE is good only for running Java software, not for developing them. The prescribed versions of JDK is either 1.5 or 1.6 but I have experience running them on Java 7 and 8 without problems&lt;/li&gt;
+  &lt;li&gt;Apache Ant will also be needed. Android uses Ant as a build tool&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The SDK can be downloaded from &lt;a href=&quot;https://developer.android.com/sdk&quot;&gt;https://developer.android.com/sdk&lt;/a&gt;. Click the link which says “View all downloads and sizes”. The SDK is available for Mac, Linux and Windows, find the right installer for your platform and download it.&lt;/p&gt;
+
+&lt;h1 id=&quot;configure&quot;&gt;Configure&lt;/h1&gt;
+
+&lt;p&gt;At the time of writing, the SDK is packaged as a zipped file.  Unzip the downloaded file somewhere your disk. Unzip it preferably to a directory where you have read,write and execute privileges so you do not have to worry about tweaking permissions later. The name of directory where you unzipped the SDK files will be known as ANDROID_HOME. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/android-sdk-linux/
+
+├── add-ons
+├── build-tools
+├── docs
+├── platforms
+├── platform-tools
+├── samples
+├── sources
+├── system-images
+├── temp
+└── tools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The diagram above shows the folder structure of the unzipped SDK files on a Linux box. If you are on Windows, this could be &lt;strong&gt;c:\&amp;gt;Users\yourname\android-sdk-windows&lt;/strong&gt;. On a Mac it could read &lt;strong&gt;~/android-sdk-mac&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two specific folders in the ANDROID_HOME that you must include in your system path, the tools folder and the platform-tools folder.  The common utilities and commands that you will use in Android Development are found on those folders. &lt;/p&gt;
+
+&lt;h2 id=&quot;mac&quot;&gt;Mac&lt;/h2&gt;
+
+&lt;p&gt;You can edit your &lt;strong&gt;~/.bash_profile&lt;/strong&gt; and include the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export ANDROID_HOME=/&amp;lt;location of android home&amp;gt;
+export PATH=$PATH:ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;location of=&quot;&quot; android=&quot;&quot; home=&quot;&quot;&gt; with the actual directory location of your ANDROID_HOME&lt;/location&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;p&gt;You can edit &lt;strong&gt;~/.bashrc&lt;/strong&gt; and include the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export ANDROID_HOME=/&amp;lt;location of android home&amp;gt;/
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;location of=&quot;&quot; android=&quot;&quot; home=&quot;&quot;&gt; with the actual directory location of your ANDROID_HOME&lt;/location&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;p&gt;You can include the path of tools and platform-tools using the GUI tools. Go to Control Panel, System Properties then go Environment Variables. You can put it either in User or System variables. If you do not have Administrative privileges on the Windows machine, you may not be able to alter the System variables. &lt;/p&gt;
+
+&lt;p&gt;Alternatively, you can create a batch file somewhere on your user directory and set the paths on that batch file.  Launch cmd.exe to get a command line window&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd \Users\&amp;lt;yourname&amp;gt;
+notepad adev.bat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Write the following inside adev.bat&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set ANDROID_HOME=c:\&amp;lt;location of android home&amp;gt;
+set PATH=%PATH%/tools;%ANDROID_HOME%/platform-tools:.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will need to run this batch file each time you open a cmd window so the Android path information can be recognized. The moment you close the cmd window, these path settings will be lost. If you include the Android paths using the System Properties method, will be permanent. Each time you open an cmd window, the paths will be set automatically.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-the-android-versions&quot;&gt;Download the Android versions&lt;/h1&gt;
+
+&lt;p&gt;The SDK includes just the tools and utilities for development. It does not include the specific Android platform libraries that you will need. You will need to download the specific platforms/versions using the SDK manager. You may also need to download system images which will be required when you create an emulator. &lt;/p&gt;
+
+&lt;p&gt;Open a terminal window and type &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will launch the Android SDK Manager. If you get a “bad command command or file name” or a “command not found error” that means you have not included the &lt;strong&gt;tools&lt;/strong&gt; and &lt;strong&gt;platform-tools&lt;/strong&gt; folder of the SDK into your PATH. Fix that first, then try the &lt;strong&gt;android&lt;/strong&gt; command again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/android-sdk-manager.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android has been around for quite some time. There have been several versions of it over the course of many years. Each version of the Android platform can be downloaded using this tool. If you have a lot of bandwidth and disk space, you can download all of them by ticking all the check boxes you can find. Or you can simply download the Android versions you want to target for development.&lt;/p&gt;
+
+&lt;p&gt;If you want to develop apps that will run on KitKat, tick the box of “Android 4.4.2 (API 19)”. At a minimum, you will need the “SDK platform”, so check that. You will also need the “System Images”, check those that you want to use. If you are unsure which System Image you will need, just check “Intel X86 Atom System Image”.  &lt;/p&gt;
+
+&lt;p&gt;Scroll down the SDK Manager window and go to the “Extras” section. Check the “Android Support Library”. If you are on Windows, you might need the “Google USB Driver”, Mac and Linux users do not need the drivers. The USB drivers will be needed if you use a real Android device to run and test your app.  &lt;/p&gt;
+
+&lt;p&gt;Once you are happy with your selections, click the “Install packages” button. You will have to accept the license agreement before any download begins.  &lt;/p&gt;
+
+&lt;h1 id=&quot;android-virtual-device&quot;&gt;Android Virtual Device&lt;/h1&gt;
+
+&lt;p&gt;The Android Virtual Device emulate a real device. You can use this for testing your apps in place of a real device. I do highly recommend testing your app on real device before you release to the public. There is no substitute with real device testing.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-an-avd&quot;&gt;Create an AVD&lt;/h2&gt;
+
+&lt;p&gt;You can create an AVD for any Android platform provided that you downloaded a System Image for it. To create an AVD, use the following command on a terminal window&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android create avd --name kitkat --target android-19 --abi default/x86
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The preceding command will create an an AVD for android API level 19, which is KitKat version. It was given a name “kitkat” using the –name flag. The System Image used was the default/x86 image (Intel X86 Atom System Image). &lt;/p&gt;
+
+&lt;p&gt;If you are wondering how did we know what values to put in the command options, that answer is we got them by listing the available android targets. You can view the available targets using the command &lt;strong&gt;android list targets&lt;/strong&gt;. It will list all the versions of Android which you downloaded earlier using the SDK Manager. Below is a snippet of the output using the android list targets command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;id: 11 or &quot;android-19&quot;
+     Name: Android 4.4.2
+     Type: Platform
+     API level: 19
+     Revision: 4
+     Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
+ Tag/ABIs : default/armeabi-v7a, default/x86 -   **&amp;amp;#x2013;name**. Put any name you want, I used kikat in our example because it is descriptive -   **&amp;amp;#x2013;target**. The API Level for your application. If we wanted to create a project that will run on JellyBean, I would have put android-18. But I did put android-19 because I wanted the app to run on KitKat -   **&amp;amp;#x2013;abi**.  The name of the System Image that you will use for the emulator, in our example above I could also have used default/armeabi-v7a because it is also listed among the available targets
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The create avd command has a couple of options you can use, but we only used three of them. You can pass other options that will affect things like skin, sdcard storage etc.  You can learn the other options of this command by typing &lt;strong&gt;android create avd&lt;/strong&gt; without any options. That will display the help file.&lt;/p&gt;
+
+&lt;p&gt;Overtime, you will create more AVDs because you will target different Android versions. To find out how many and what kind of AVDs you already have created, use the command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android list avd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That command will output the details of all the AVDs you have created.&lt;/p&gt;
+
+&lt;p&gt;You can test the AVD you just created by launching it&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emulator -avd kitkat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will launch the emulator in its own window. Just close the window if you want to terminate the emulator. &lt;/p&gt;
+
+&lt;h2 id=&quot;alternative-avd-management&quot;&gt;Alternative AVD Management&lt;/h2&gt;
+
+&lt;p&gt;The creation and management of AVDs can also be accomplished using the GUI tool of the Android SDK Manager. Launch the SDK Manager again using the &lt;strong&gt;android&lt;/strong&gt; command from a terminal window. Go to “Tools” then “Manage AVDs”. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/avd-creation.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/avd-launched.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Layout Weights</title>
+   <link href="http://tedhagos.com/android/AS-layout-weights.html"/>
+   <updated>2012-10-20T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-layout-weights</id>
+   <content type="html">&lt;p&gt;A project created with a default Activity will include an XML file and an Activity class. These two are given to you so you can get started quickly in displaying at least one screen in your application. The screen is of vanilla construction. This default layout is mostly used for some quick fire challenges. The kinds of things you do when you just want to test some things.&lt;/p&gt;
+
+&lt;p&gt;Real applications typically display some sophistication in their layouts. Let’s look at one small change you can do to effect some layout changes. The code snippet below is typical of the vanilla XML file given to us during project creation.&lt;/p&gt;
+
+&lt;h2 id=&quot;review-of-linearlayout&quot;&gt;Review of LinearLayout&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas...&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  android:orientation=&amp;quot;vertical&amp;quot;
+  android:layout_width=&amp;quot;fill_parent&amp;quot;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The orientation is set to &lt;strong&gt;vertical&lt;/strong&gt; and the layout_width is set to &lt;strong&gt;fill_parent&lt;/strong&gt;. With those setting in effect, each View component you will add to this layout will be stacked on top of each other. The first View object to be added will be the one on top, the next View object will follow suit.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&amp;gt;&lt;/span&gt;
+  android:orientation=&amp;quot;vertical&amp;quot;
+  android:layout_width=&amp;quot;fill_parent&amp;quot;  
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;CheckBox&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The preceding code example will result in a screen which has a CheckBox with a Button View right on top of it. The Button occupied whole width of the screen because the LinearLayout container says &lt;strong&gt;fill_parent&lt;/strong&gt; on its layout width. The Checkbox did the same, it spanned the whole width of the screen for the same reason the Button did. No surprises here. This is how a linear layout is supposed to work. The behavior is expected. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/linear-layout-vertical.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are some class of applications for which this kind of layouting might be okay. If the screen for example just wants to display a series of check boxes stacked on top of each other, like in a survey form, then this layout will suffice. No further tweaking is needed. &lt;/p&gt;
+
+&lt;h2 id=&quot;weighted-layout&quot;&gt;Weighted layout&lt;/h2&gt;
+
+&lt;p&gt;Let’s go to another layout example. Suppose we create a screen that allows a user to enter some data and when the user clicks a button, whatever he entered onto the text box will be added to a static text View, like a label. To build this example, we will need the following View objects: &lt;strong&gt;EditText, TextView&lt;/strong&gt; and &lt;strong&gt;Button&lt;/strong&gt;. &lt;/p&gt;
+
+&lt;p&gt;An EditText View allows for user input. If you have programming experience, you may have called this by a different name, perhaps you referred to it before as a textfield. Its the same thing. A TextView is a static text control. Some programmers call it a label. And you already know what a Button View does. &lt;/p&gt;
+
+&lt;p&gt;Once we have created a new project with a default Activity, we can add the Views to our Layout. It could look like the next code sample&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/editText&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?android:attr/textAppearanceLarge&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Large Text&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/textView&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;New Button&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/button&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will result to a screen where the EditText, TextView and the Button are stacked on top of one another. Each of the Views stretching out to the whole width of the screen. That may not be a problem for the width but it will be a problem for the height. Each View will vertically occupy just what it needs to display their content. The Button will size its height just enough to accomodate its label, the TextEdit will size itself accordingly to accomodate its current textual content and the EditText will size itself to accomodate a single line text input. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/weighted-layout.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The screen layout is not tight. There is plenty of unutilized screen space after the Button which makes the design clumsy. Putting screen space to good use gives the the app a more sophiscticated look. &lt;/p&gt;
+
+&lt;p&gt;A small change we can make is to anchor the EditText and the Button on the opposite sides of the screen, top and bottom to be precise, so that the TextEdit can stretch itself vertically in between and occupy whatever space is left. To achieve this result, we will assign layout weights on each View.&lt;/p&gt;
+
+&lt;p&gt;LinearLayout allows weight assignment for each View that is contained within. All Views by default are assigned a weight of zero. If the weight of a View is zero, the View cannot grow in space beyond what it needs to display its content. A View whose weight is more than zero is deemed to be more important. Hence it is allowed to stretch and hog the remaining space left on the screen.&lt;/p&gt;
+
+&lt;p&gt;To achieve our desired layout, we will make the weight of the Button and EditText zero and assign a weight of one to the TextView&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/editText&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?android:attr/textAppearanceLarge&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Large Text&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/textView&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;New Button&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/button&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;center_horizontal&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The EditText and Button Views are now pushed to the top and bottom and the TextView stretched its height to fill up the gap left by other two Views. Because only the TextView is assigned a weight more than zero, it is the only View that can grow beyond what it needs for display. &lt;/p&gt;
+
+&lt;p&gt;Had we assigned all three Views equal weights of 1, all of them will grow in space beyond what they need but they will grow uniformly. The whole screen will be divided by three components. If we assigned each of them a weight of 2, you will not see any difference when they all had a weight of 1. Interesting things happen Views are assigned varying weights.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/different-weights.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Project</title>
+   <link href="http://tedhagos.com/android/AS-android-project.html"/>
+   <updated>2012-10-20T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-android-project</id>
+   <content type="html">&lt;p&gt;An Android project is required to build a single app. A project is a simple folder that contains a collection of XML, Java source, images, property and optional audio or video files. It has a very specific structure that stays the same for all android projects. With the exception of images, audio and video files which may be used by your project, everything inside this project are plain text files. This is the reason why some programmers can develop android applications using just plain editors.&lt;/p&gt;
+
+&lt;p&gt;The commands and utilities inside the Android SDK expects this structure and is optimized to work with it. If you deviate from this structure, you will have grief. It is not wise to build this project structure unaided by tools. At the very least, you should use the &lt;strong&gt;android create project&lt;/strong&gt; utility included in the SDK. &lt;/p&gt;
+
+&lt;p&gt;Popular IDEs like Eclipse, NetBeans and Android Studio have wizard driven ways of creating an android project. But no matter what you use to create such a project, the structure of the files and folders is pretty uniform. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/android-project-structure.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The one on the left is a project created using just the SDK. The picture on the right was created using the Android App Studio, a full blown IDE for Android development. While the Android Studio project appears to have more files, the basic structure of the two projects remains very consistent. &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;src:&lt;/strong&gt; a folder that contains the Java source files. All your program logic will be written on these files. If you want to do something when a user clicks a Button, starts you application or suspends an application, you will write them on the source files. And these source files will be stored here&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;res:&lt;/strong&gt; a folder that contains other folders like “res”, “values” and some images. The folder names that says “drawable” contains images that your application may use&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;bin:&lt;/strong&gt; When you compile the project, this is where the binary or executable files will be stored&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;libs:&lt;/strong&gt; Sometimes you will need to use codes that other developers built. These third party libraries should be located on this folder&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;layout:&lt;/strong&gt; Android favors the declarative way of defining user interfaces. The screens you will create can be built using XML files. This is the folder where XML screen files are stored&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;values:&lt;/strong&gt; Hard coding string values is a dangerous practice. The idiomatic way of defining strings for labels, buttons etc is to store them in resource bundles. These resource bundles are nothing more than XML files. You will store the resource bundles in this folder&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;AndroidManifest.xml:&lt;/strong&gt; Every project needs one manifest file. This file is important. It declares the things that are inside your application like how many screens it have, what their names are. It also affects the things your application can do. It declares whether your application can use the network, the local storage or the camera for example&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;local.properties:&lt;/strong&gt; This file contains build configuration information e.g. the location of the Android SDK in your system&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Activities</title>
+   <link href="http://tedhagos.com/android/AS-activities.html"/>
+   <updated>2012-10-20T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-activities</id>
+   <content type="html">&lt;p&gt;An Activity is single screen that a user sees in your application. They are the primary ways for xyour application to communicate with the user. You will capture inputs with them and you will show outputs using them. If you  built Java applications for the desktop before, you might think of them as AWT Frames. &lt;/p&gt;
+
+&lt;p&gt;An activity is made up of two files. An XML file which defines what the screen looks like. How many buttons, menus and textfields it has etc. The second one is a Java source file which contains all the programming logic that will support the behavior of the screen. If you want something to happen when a user does something to the screen e.g. inputs a text or clicks a button, you will write that program logic on the Java source file.&lt;/p&gt;
+
+&lt;p&gt;We will create another Hello project in this chapter&lt;/p&gt;
+
+&lt;p&gt;Create another project with the following details.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Application Name&lt;/strong&gt; is Hello&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Minimum SDK&lt;/strong&gt; is API 15&lt;/li&gt;
+  &lt;li&gt;Use a &lt;strong&gt;Blank Activity&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Activity Name&lt;/strong&gt; is Main&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-xml-file&quot;&gt;The XML file&lt;/h2&gt;
+
+&lt;p&gt;The XML file for an Activity will be stored in &lt;strong&gt;Hello/app/src/main/res/layout&lt;/strong&gt; folder. There will be one XML file for each Activity. If you only have one Activity in your application, then there will only be one XML file in this folder. If you have several screens in the app, there will be several XML files here, one for each screen. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;.Main&quot;&amp;gt;
+
+    &amp;lt;TextView
+        android:text=&quot;@string/hello_world&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&amp;gt;
+
+&amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;java-source-file&quot;&gt;Java source file&lt;/h2&gt;
+
+&lt;p&gt;This is just filler text. Delete this at once, once you find it&lt;/p&gt;
+
+&lt;p&gt;What is it
+Why do I care
+What is it made of&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java file. What, where is it. how di we get it.what’s in it, what are they for&lt;/li&gt;
+  &lt;li&gt;Layout file. What. Where is it. How did we gert it. What’s in it&lt;/li&gt;
+  &lt;li&gt;how are the two related. Via setcontentView nad R.layout.main – what’s that. Well the appt (Android Asset Packaging Tool) will compile all layout and values XML. It will produce the the R clas which you can use to get a programmatic reference to Views and resource bundles you have defined.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;multiple-activities&quot;&gt;Multiple Activities&lt;/h2&gt;
+
+&lt;h1 id=&quot;scratch&quot;&gt;scratch&lt;/h1&gt;
+
+&lt;p&gt;An Activity is a screen. It is the visible part of the Android application. &lt;/p&gt;
+
+&lt;p&gt;What is it made of - a java file and an XML. It describes in XML what the screen should look like, will it have buttons, text fields etc. Will the Buttons stretch vertically or horizontally etc&lt;/p&gt;
+
+&lt;p&gt;What about it, what do they need to know&lt;/p&gt;
+
+&lt;p&gt;Create it. which is covered already but recapitulate it
+Point out min sdk
+package
+name of Main Activity&lt;/p&gt;
+
+&lt;p&gt;Show the project structure again&lt;/p&gt;
+
+&lt;p&gt;What is Main.java
+The visual content, is referencing R.layout.main 
+What does setContentView does. Where did we get it
+What does it mean that it extends androiv.view.Activity&lt;/p&gt;
+
+&lt;p&gt;Manifest&lt;/p&gt;
+
+&lt;p&gt;activity declaration
+  intent filter, why is it important. It tells the Android runtime, that this is the activity that should be launched when the application is launched by the user. When you launch me, launch this activity first.&lt;/p&gt;
+
+&lt;p&gt;What about another activity.
+  how to add another activity&lt;/p&gt;
+
+&lt;p&gt;What to put
+ onCreate, why does it have super.onCreate(), then setContent again
+ create another XML file, how in Android Studio. will the name of the XMLs case sensitive&lt;/p&gt;
+
+&lt;p&gt;How to put some things inside the screen file&lt;/p&gt;
+
+&lt;p&gt;Simple way to launch another Activity, use the XML for declaration&lt;/p&gt;
+
+&lt;p&gt;Why do we have add the second activity into the Manifest, because it will throw an ActivityNotFoundException - How did we know. Because I launched the DDMS. I need to tell them about the DDMS&lt;/p&gt;
+
+&lt;p&gt;What happens if you omit the setContentView of the second Activity, well, you will launch the second activity but you won’t see anything&lt;/p&gt;
+
+&lt;p&gt;This needs a video supplement&lt;/p&gt;
+
+&lt;p&gt;Summary&lt;/p&gt;
+
+&lt;p&gt;AndroidManifest controls everything
+What it takes to add a new activity, create a Java file, create an XML, define in manifest and how to launch another activity is to use Intents, Excplicit intents&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting Started</title>
+   <link href="http://tedhagos.com/android/GettingStarted.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/GettingStarted</id>
+   <content type="html">&lt;p&gt;An Android project is made up of lots of files. Even the humble Hello World app, which is what we will do, requires more than just a single Java source file. An Android app needs a couple of XML files to facilitate user interfaces and overall configuration. Obviously it will need at least one Java program file and it could contain a couple of other resource files e.g. images etc.&lt;/p&gt;
+
+&lt;p&gt;While you can create and assemble an Android application without the aid of a tool, it can be difficult and cumbersome, not to mention, quite impractical. The Android SDK contains tools that helps to create, build and test projects. &lt;/p&gt;
+
+&lt;p&gt;At this point, you must already have a properly configured development environment. If you haven’t setup your environment, you can refer to &lt;a href=&quot;android-environment-setup.md&quot;&gt;Android Environment Setup&lt;/a&gt; before going any further.&lt;/p&gt;
+
+&lt;h1 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h1&gt;
+
+&lt;p&gt;We need to create a folder or directory where we can put all our project files. We will give that folder a name that is descriptive of the project. You can put this folder anywhere you like but there are some locations in your hard drive that might not be suited for a project like ours. Normally these places are folders where you don’t have read, write and execute privileges (rwx). You  have &lt;strong&gt;rwx&lt;/strong&gt; capabilities on your home folder, so we wil put our project in there. The location of your home folder varies depending on what OS you use. &lt;/p&gt;
+
+&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class=&quot;left&quot; /&gt;
+
+&lt;col class=&quot;left&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;left&quot;&gt;Windows 7 or 8&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;`C:\Users\YourName`&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;left&quot;&gt;Linux&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;`/home/YourName/` or simply `~/`&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;left&quot;&gt;OSX&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;`/Users/YourName` or simply `~/`&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;code&gt;android create project --target 16 --path hello --activity HelloWorld --package com.tedhagos&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;–target 16:&lt;/strong&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;–path hello :&lt;/strong&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;–activity HelloWorld:&lt;/strong&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;–package:&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What will you have&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/android-project-structure.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;compiling&quot;&gt;Compiling&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;ant debug install&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;Why debug, what happens if I remove it.&lt;/p&gt;
+
+&lt;p&gt;Are there any other  targets&lt;/p&gt;
+
+&lt;h1 id=&quot;how-will-you-test&quot;&gt;How will you test&lt;/h1&gt;
+
+&lt;h2 id=&quot;avd&quot;&gt;AVD&lt;/h2&gt;
+
+&lt;h2 id=&quot;physical-device&quot;&gt;Physical device&lt;/h2&gt;
+
+&lt;p&gt;What are the insights, have you answered the description above. Can Steph understand this&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Emulator</title>
+   <link href="http://tedhagos.com/android/Emulator.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/Emulator</id>
+   <content type="html">&lt;h1 id=&quot;what-is-it&quot;&gt;What is it&lt;/h1&gt;
+
+&lt;h1 id=&quot;what-is-it-good-for&quot;&gt;What is it good for&lt;/h1&gt;
+
+&lt;h1 id=&quot;shortcomings&quot;&gt;Shortcomings&lt;/h1&gt;
+
+&lt;h1 id=&quot;advantage-over-a-real-device&quot;&gt;Advantage over a real device&lt;/h1&gt;
+
+&lt;h1 id=&quot;creation-and-use&quot;&gt;Creation and use&lt;/h1&gt;
+
+&lt;h1 id=&quot;intel-haxm&quot;&gt;Intel HAXM&lt;/h1&gt;
+
+&lt;p&gt;Hardware Accelerated Execution Manager. It’s a hypervisor (hardware assisted virtualization) that uses Intel VT. You use it to speed up the Android emulation on your machine. it allows for faster android emulation&lt;/p&gt;
+
+&lt;p&gt;There are two ways to get it, one is by downloading it from the intel site &lt;a href=&quot;https://software.intel.com/en-us/android&quot;&gt;https://software.intel.com/en-us/android&lt;/a&gt; the other way is to download it using the Android SDK Manager. Under Extras, you will see the Intel x86 emulation installer (HAXM). Note that even if you download it using the SDK manager, it will not install the HAXM automatically. You still have to run the the HAXM installer. The installation instruction for HAXM is at &lt;a href=&quot;https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x&quot;&gt;https://software.intel.com/en-us/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-mac-os-x&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;managing-the-haxm&quot;&gt;Managing the HAXM&lt;/h2&gt;
+
+&lt;p&gt;To verify that its running&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;kextstat | grep intel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should see the kernel extension “com.intel.kext.intelhaxm”&lt;/p&gt;
+
+&lt;p&gt;To stop the haxm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo kextunload -b com.intel.kext.intelhaxm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To start the haxm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo kextload -b com.intel.kext.intelhaxm
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cannot Find Build.xml</title>
+   <link href="http://tedhagos.com/android/CannotFindBuildXml.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/CannotFindBuildXml</id>
+   <content type="html">&lt;p&gt;After running &lt;code&gt;ant debug install&lt;/code&gt;, an error happens. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;BUILD FAILED
+/Users/ted/workarea/android-training/practice
+/helloworld/    build.xml:83: Cannot find /Users/ted/
+progtools/android-sdk-macos/tools/ant/build.xml 
+imported from /Users/ted/workarea/android-training/
+practice/helloworld/build.xml
+
+Total time: 0 seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is a build script problem. What the error tells us is that, it cannot find &lt;strong&gt;build.xml&lt;/strong&gt;. How can that be? The android SDK tools actually setup up everything for us, the ant build script is one of the artefacts created when you start a new android project. There could be lots of reasons, but this particular error happened to me because I was using two machines for program development. And that I forgot to include the &lt;strong&gt;local.properties&lt;/strong&gt; in the .gitignore file. So the settings and properties on one machine spilled over to the other development machine. &lt;/p&gt;
+
+&lt;p&gt;If you inspect the build.xml in your android project folder, you will find out that it is actually importing another &lt;strong&gt;build.xml&lt;/strong&gt;, a generic one. This generic build.xml is located at &lt;code&gt;SDK.DIR/tools/build.xml&lt;/code&gt;. SDK.DIR is the folder where you installed the Android SDK when you downloaded it. &lt;/p&gt;
+
+&lt;p&gt;The following example downloads and installs the android SDK&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/progtools
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;progtools
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wget http://dl.google.com/android/android-sdk-linux.tgz
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -xzvf android-sdk-linux.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will create a folder named &lt;code&gt;~/progtools/android-sdk-linux/&lt;/code&gt;. This is the SDK.DIR&lt;/p&gt;
+
+&lt;p&gt;To fix this error, you need to make sure that the value of &lt;strong&gt;SDK.DIR&lt;/strong&gt; inside the local.properties file is pointing to the correct location. The local.properties file is located on the top level folder of your android project. &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>android device camera</title>
+   <link href="http://tedhagos.com/android/AS-simple-camera.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-simple-camera</id>
+   <content type="html">&lt;pre&gt;&lt;code&gt;package com.thelogbox;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.content.Context;
+import android.widget.LinearLayout;
+import android.hardware.Camera;
+import android.hardware.Camera.ShutterCallback;
+import android.hardware.Camera.PictureCallback;
+import android.view.SurfaceView;
+import android.util.Log;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import android.os.Handler;
+
+
+class VSimpleCamera extends LinearLayout implements OnClickListener {
+
+  private String TAG = null;
+  private SurfaceView surfaceview = null;
+  private Camera camera = null;
+  private FileOutputStream out = null;
+
+  public VSimpleCamera(Context ctx){
+    super(ctx);
+
+    TAG = getClass().getName();
+    surfaceview = new SurfaceView(ctx);
+    camera = Camera.open();
+
+    setOnClickListener(this);
+
+
+    Handler handler = new Handler();
+    handler.postDelayed(new Runnable(){
+      public void run() {
+        Log.v(TAG, &quot;Runnable is running&quot;);
+
+        //You can put the camera hooba jub here
+
+      }
+    }, 3000);
+
+  }
+
+  public void onClick(View v){
+
+    boolean cameratest = (camera == null);
+    Log.v(TAG, &quot;Clicked&quot;);
+
+    try {
+      camera.setPreviewDisplay(surfaceview.getHolder());
+      camera.startPreview();
+      camera.takePicture(shutterCallBack, rawCallBack, jpgCallBack);
+    }
+    catch(Exception e){
+      Log.v(TAG, &quot;Exception &quot; + e.toString());
+    }
+  }
+
+  ShutterCallback shutterCallBack = new ShutterCallback() {
+    public void onShutter() {
+      Log.v(TAG, &quot;shutter call&quot;);
+    }
+  };
+
+  PictureCallback rawCallBack = new PictureCallback() {
+    public void onPictureTaken(byte[] data, Camera cam){
+      Log.v(TAG, &quot;raw Call back&quot;);
+    }
+  };
+
+  PictureCallback jpgCallBack = new PictureCallback() {
+    public void onPictureTaken(byte[] data, Camera cam){
+
+      try {
+        out = new FileOutputStream(String.format(&quot;/sdcard/%d.jpg&quot;, System.currentTimeMillis()));
+        out.write(data);
+      }
+      catch(FileNotFoundException fe) {
+        Log.v(TAG, fe.getMessage());
+      }
+      catch(IOException ioe) {
+        Log.v(TAG,ioe.getMessage());
+      }
+
+    Log.v(TAG, &quot;jpg Call Back&quot;);
+    }
+  };
+
+}
+
+public class SimpleCamera extends Activity {
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(new VSimpleCamera(this));
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Network Connectivity</title>
+   <link href="http://tedhagos.com/android/AS-network-connectivity.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-network-connectivity</id>
+   <content type="html">&lt;pre&gt;&lt;code&gt;package com.thelogbox;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.content.Context;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+class ViewConnnTest extends LinearLayout implements OnClickListener {
+
+  Context context = null;
+  TextView tv = null;
+  ConnectivityManager connman = null;
+  NetworkInfo netinfo = null;
+
+  public ViewConnnTest(Context context) {
+
+    super(context);
+    this.context = context;
+    tv = new TextView(context);
+    addView(tv);
+    setOnClickListener(this);
+
+  }
+
+  public void onClick(View v){
+
+    StringBuilder sb = new StringBuilder();
+    connman = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    netinfo = connman.getActiveNetworkInfo();
+
+    switch(netinfo.getType()) {
+      case ConnectivityManager.TYPE_MOBILE:
+        sb.append(&quot;\nMobile data OK.&quot;);
+        break;
+      case ConnectivityManager.TYPE_WIFI:
+        sb.append(&quot;\nWIFI OK.&quot;);
+        break;
+      case ConnectivityManager.TYPE_WIMAX:
+        sb.append(&quot;\nWIMAX OK.&quot;);
+        break;
+      case ConnectivityManager.TYPE_ETHERNET:
+        sb.append(&quot;\nOn Ethernet.&quot;);
+        break;
+      case ConnectivityManager.TYPE_BLUETOOTH:
+        sb.append(&quot;\nBluetooth OK.&quot;);
+        break;
+      default:
+        sb.append(&quot;\nNot connected. Not OK.&quot;);
+    }
+    sb.append(&quot;\nState= &quot;);
+    sb.append(netinfo.getState().toString());
+
+    tv.setText(sb.toString());
+  }
+}
+
+public class ConnTest extends Activity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new ViewConnnTest(this));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Key Concepts</title>
+   <link href="http://tedhagos.com/android/AS-key-concepts.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-key-concepts</id>
+   <content type="html">&lt;p&gt;Android applications are comprised of Java executable codes, XML files and other application resources like video, images and audio. These are all bundled together inside an .apk file.&lt;/p&gt;
+
+&lt;p&gt;You will write your program in the Java programming language and compile them using the  Android SDK (software development kit). When the app is compiled, it becomes an android package. An android package is an archive file with a .apk extension. Think of them like zipped files for Android.&lt;/p&gt;
+
+&lt;p&gt;When applications have been built and digitally signed, they can be distributed on market places like Google Play or Amazon. They don’t have to be but these market places are frequented by a lot of people, your can benefit from exposure which the market places can offer. &lt;/p&gt;
+
+&lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;
+
+&lt;p&gt;Android may refer to many things, some people use it to refer to their mobile device and some others use the term to refer to the programming environment. That’s fine. For our purpose, what we mean by Android is a platform which have runtime components where mobile apps can run.&lt;/p&gt;
+
+&lt;p&gt;This platform is special version of Linux that is optimized for mobile devices. The Linux part takes care system services e.g. network and file operations, concurrency etc. The platform includes a bunch of other
+things like WebKit which is the same browser engine that powers Chrome and Safari. It also has SQLite which you can use for database programming. It has other components useful for application development, but instead of listing all of them here, I will point them out in later when we need to use them.&lt;/p&gt;
+
+&lt;p&gt;The one other thing to point out in the Android software stack is the framework. The framework lets us do things such as create screens, write code that runs in background, listen to some events that may happen on the mobile device (and do something about it). The platform enables us to do all these things by simply extending existing classes in the
+Android SDK.&lt;/p&gt;
+
+&lt;p&gt;Extending classes means utilizing the inheritance mechanism of Java to reuse existing functionality. The Android development team already wrote codes to display buttons and textfields for example. All we need to do, is to reuse them, mash them up or mix it up so we can use them in our own applications.&lt;/p&gt;
+
+&lt;p&gt;The Android SDK is a collection of tools and code libraries. SDK is short for software development kit. You will need to download, install and configure the SDK before you can start any development work.&lt;/p&gt;
+
+&lt;h2 id=&quot;versions-and-api-level&quot;&gt;Versions and API level&lt;/h2&gt;
+
+&lt;p&gt;Android has been around for quite some time. It has evolved so many times and as a result, there are various versions of it.&lt;/p&gt;
+
+&lt;p&gt;A version number will correspond to a code name. Buyers of Android devices would probably recognize the android versions using the codename rather than the actual number. As a developer, we need to be familiar not only with both the version number and codename, we also need to know the API level.&lt;/p&gt;
+
+&lt;p&gt;The API level is what you will see on the Android SDK manager. You will use the SDK manager when updating your software development kit.&lt;/p&gt;
+
+&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class=&quot;right&quot; /&gt;
+
+&lt;col class=&quot;left&quot; /&gt;
+
+&lt;col class=&quot;right&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;Version&lt;/th&gt;
+&lt;th scope=&quot;col&quot; class=&quot;left&quot;&gt;Codename&lt;/th&gt;
+&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;API&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;2.2&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Froyo&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;2.3.3 - 2.3.7&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Gingerbread&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;4.0.3 - 4.0.4&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Ice Cream Sandwich&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;4.1.x&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;4.2.x&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;17&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;4.3&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;Jelly Bean&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+
+
+&lt;tr&gt;
+&lt;td class=&quot;right&quot;&gt;4.4&lt;/td&gt;
+&lt;td class=&quot;left&quot;&gt;KitKat&lt;/td&gt;
+&lt;td class=&quot;right&quot;&gt;19&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;By the time you read this, there could be changes or additions to the Android platform. The official site of Android keeps an updated list of this info over at &lt;a href=&quot;https://developer.android.com/about/dashboards/index.html&quot;&gt;https://developer.android.com/about/dashboards/index.html&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h2 id=&quot;fundamentals&quot;&gt;Fundamentals&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Creation of an app starts by creating an Android project. It is a simple folder that contains the Java sources, XML files, videos, audio, images etc. Depending on what IDE or tool you use, a project can be created and managed using either Ant, Maven or Gradle. These are called build tools and they are usually managed by the IDE. Most of the time, they are invisible to you&lt;/li&gt;
+  &lt;li&gt;Write the program logic using Java. Whether you would like to show something on the screen, listen to an event or do something in the background, Android has prebuilt classes to handle those. These prebuilt classes are part of the Android framework that lets us create rich apps by extending exisiting classes in the framework. We’ll discuss Application components a bit more later&lt;/li&gt;
+  &lt;li&gt;The screen user interface is, usually, constructed using XML. Widgets like buttons, textfields and other UI components are declared in the XML. Things such as size, alignments and weights of each component can be declared in this file as well&lt;/li&gt;
+  &lt;li&gt;Most of apps are event driven. They wait for the user to enter or press something then then some processing happens. Program logic is usually written as response to an event. These codes are the ones you write using the Java language&lt;/li&gt;
+  &lt;li&gt;The Java source file are converted to an executable form and the XMl is flattened as a result of the compilation process. The XML is converted to byte code representation, this is what we mean by flattened&lt;/li&gt;
+  &lt;li&gt;If the compilation is not successful, the compiler will you what’s wrong with it and you should fix it then compile again. If it compiles successfully, you will test the application by deploying it either an emulator or a real device connected to your computer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;application-components&quot;&gt;Application Components&lt;/h2&gt;
+
+&lt;h3 id=&quot;activities&quot;&gt;Activities&lt;/h3&gt;
+
+&lt;p&gt;If you want to create a screen that can interact with the user, you can do that by creating an Activity class. It is called that because the class you will create will extend the existing Activity class that is part of the Android framework.&lt;/p&gt;
+
+&lt;p&gt;By extending this class, you will be able to create other components such as buttons, textfields, lists etc and contain them inside a screen. You can also react to some events such as when an incoming call interrupts the user while using your application. &lt;/p&gt;
+
+&lt;p&gt;An Activity is basically a single screen that a user can see and interact with. Most applications will have more than one Activity. They have more than one screen. You can stitch Activities together using &lt;strong&gt;Intents&lt;/strong&gt;. You can define a button on one Activity then write program logic such that when the button is clicked, it will launch another Activity. You will use Intents to launch other Activities.  &lt;/p&gt;
+
+&lt;h3 id=&quot;services&quot;&gt;Services&lt;/h3&gt;
+
+&lt;p&gt;Sometimes you will need to write code that is invisible to the user. One that doesn’t have a user interface. Surely you will need to launch it somehow from an Activity but once launched, the application just keeps on running. Even if the UI that launched it has already disappeared from view. A music player is such an example of this kind of app. A GPS enabled application which updates your location every now and then is another example.&lt;/p&gt;
+
+&lt;p&gt;If you need to build these kinds of apps, you will use &lt;strong&gt;Services&lt;/strong&gt;. These are long running operations that are executed in the background. A Service is independent of the Activity that launched. Even if the UI screen that was used to launch the service has already died, the Service code just keeps on going.&lt;/p&gt;
+
+&lt;h3 id=&quot;content-providers&quot;&gt;Content Providers&lt;/h3&gt;
+
+&lt;p&gt;Each application runs on its own process. Its own virtual machine. This behavior of Android protects each application. If one badly written application goes wonky, it cannot bring the other running applications down. Its good for application stability. But this makes it nearly impossible for one application to access data from another. &lt;/p&gt;
+
+&lt;p&gt;Content Providers solves the problem of data sharing between applications. It is possible for you to write an application and share whatever data it has with other applications. The &lt;strong&gt;Contacts&lt;/strong&gt; and &lt;strong&gt;Calendar&lt;/strong&gt; apps in Android are good examples of apps that have Content Providers.&lt;/p&gt;
+
+&lt;p&gt;Don’t confuse Content Provider with your own database. If you create an application that uses a SQLite database, of course your application can access that. If, for example, you want to allow other applications to gain access to your app’s data, you can build a Content Provider. Your application will make the data available to other apps using standard URIs. &lt;/p&gt;
+
+&lt;h3 id=&quot;broadcast-receivers&quot;&gt;Broadcast Receivers&lt;/h3&gt;
+
+&lt;p&gt;Broadcast Receivers are used if you want to execute some program logic in your app as a response to events generated by either the Android system or other applications. You can, for example, inititate a database write when the phone receives an SMS message. You probably want to examine the SMS message and if it fits a certain criteria, you will record it to the database. This is one example of how to use Broadcast receivers.  &lt;/p&gt;
+
+&lt;p&gt;You can make your application listen to certain events. To do this, you need to register your application to listen to a specific event. Its the same concept when you subcribe to a mailing list. When there is a new mail, you get notified.&lt;/p&gt;
+
+&lt;p&gt;Apart from listening to broadcasted events, you can also make your application broadcast specific events. To do that, you will extend a specific Android class called the &lt;strong&gt;BroadcastReceiver&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;BroadcastReceivers typically don’t have user interfaces. But you can create notifications that will show up on the status bar.&lt;/p&gt;
+
+&lt;h3 id=&quot;android-manifest-file&quot;&gt;Android Manifest file&lt;/h3&gt;
+
+&lt;p&gt;This is one of the most important parts of an Android app. The manifest is an XML file that needs be on the root folder of the application project. Every project needs one, and there can only be one per project. It needs to be named &lt;strong&gt;AndroidManifest.xml&lt;/strong&gt;. The manifest declares lots of things like:&lt;/p&gt;
+
+&lt;p&gt;-the name of the application
+-what kinds of components does the app have. Does it have Activities, what are their names. Does it listen to broadcast etc
+-what kinds of things can it do with the mobile device? Can it access the network. The internet. Will it use the camera. Will it record a GPS location
+-can other applications interact with this applcation. If so, what kinds of permission should these other applications have
+-does this application use any external libraries (usually jar files that other people wrote)
+-what versions of Android will this application run on. Will it run on Froyo (API level 8)&lt;/p&gt;
+
+&lt;p&gt;The Android manifest file is usually created by default when you start a new project. But it only provides some minimum declaration. Beyond the basic HelloWorld apps, you will need to learn how to work and manage the manifest file.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-resources&quot;&gt;Other Resources&lt;/h3&gt;
+
+&lt;p&gt;Besides the programming components and the Android manifest file, your application may also include the following:&lt;/p&gt;
+
+&lt;p&gt;-*XML resource files* . XMLs are everywhere in Android. They are used to define screen layouts, manifest file, resource bundles etc.
+-*Image Resources*. At a minimum, your app needs an icon that will appear on the Android apps menu
+-*Video and Audio  Resources* .If you are building a game or a training application, your apps may contain lots of these
+-*Third Party Libraries*. You include codes that other people built e.g. social media functionalities. These are included in the project in the form of jar files (Java archive)&lt;/p&gt;
+
+&lt;h2 id=&quot;other-ways-to-build-android-apps&quot;&gt;Other ways to build Android apps&lt;/h2&gt;
+
+&lt;p&gt;There are other ways to build an Android app. You can build apps using using languages other than Java. An app can be built using HTML, CSS, JavaScript and a middleware like the Cordova API, a good example of this is Phonegap. You can use C# to write apps and retarget the compilation to Android using a product called Xamarin. There are ways to build Android apps as well using Ruby or Python.  &lt;/p&gt;
+
+&lt;p&gt;There are tools or products that can build an Android app without coding or with minimal coding. MIT’s App Inventor is a example of this kind of tool. There are other tools like AppyPie, MakeMeDroid and Como. These app making tools are far too many to list down here. And by the time you are reading this, some of these names could be out of business already and new app makers have taken their places. Just search Google for “android app builder no code 2014” if you happen to still be reading this text in 2015, just substitute the current year in search term.&lt;/p&gt;
+
+&lt;p&gt;Our focus in here, of course, is to write our app using the Java language and build it using the Android SDK.&lt;/p&gt;
+
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Uniform Resource Identifier is just a piece of string that is used to identify a resource, such as a data resource that you would like to export using a Content Provider. It can appear like this: content://yourapp/resourcename. It looks a lot like what you would type in a browser address bar, although technically, what you use in a browser is called a URL (Uniform Resource Locator). Becauase a URL specifies not only the name of the resource, it also specifies the manner on how to get the resource (http). But for all intents and purposes, a URL is also a URI.&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Development Environment</title>
+   <link href="http://tedhagos.com/android/AS-development-environment.html"/>
+   <updated>2012-10-16T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/AS-development-environment</id>
+   <content type="html">&lt;p&gt;Setting up a development rig for Android varies a bit depending on what tool you will use. We will use the Android App Studio but we will brush a little bit on instlaling the barebones SDK as well. You do not have to follow the barebones SDK install &lt;/p&gt;
+
+&lt;p&gt;There are two different ways to install a dev environment, one is is via the pure SDK and using only the tools provided by the SDK  and some rudimentary programmign editor. The other way is using an IDE like Eclipse, Netbeans and Android App Studio&lt;/p&gt;
+
+&lt;p&gt;The IDE is a monilithic way and the SDK is more involved. &lt;/p&gt;
+
+&lt;p&gt;We will cover the Android App Studio. Why, because this is the tool endorsed by Google. While it is still in Beta, I don’t know, get some words from other authors&lt;/p&gt;
+
+&lt;h1 id=&quot;sdk&quot;&gt;SDK&lt;/h1&gt;
+
+&lt;p&gt;Screenshot of where to download it, and which link. &lt;/p&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;p&gt;double click, installer&lt;/p&gt;
+
+&lt;h2 id=&quot;mac&quot;&gt;Mac&lt;/h2&gt;
+
+&lt;p&gt;unzip
+system path&lt;/p&gt;
+
+&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;p&gt;unzip
+system path&lt;/p&gt;
+
+&lt;h1 id=&quot;android-app-studio&quot;&gt;Android App Studio&lt;/h1&gt;
+
+&lt;h2 id=&quot;windows-1&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;p&gt;double click&lt;/p&gt;
+
+&lt;h2 id=&quot;mac-1&quot;&gt;Mac&lt;/h2&gt;
+
+&lt;p&gt;double click, drag into /Applications&lt;/p&gt;
+
+&lt;h2 id=&quot;linux-1&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;p&gt;unzip
+include in system path&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Workflow</title>
+   <link href="http://tedhagos.com/android/Workflow.html"/>
+   <updated>2012-07-09T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/android/Workflow</id>
+   <content type="html">&lt;h1 id=&quot;project-creation&quot;&gt;Project creation&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;android create project --path &amp;lt;project folder&amp;gt; --target &amp;lt;API level&amp;gt; --package &amp;lt;package name&amp;gt; --Activity &amp;lt;Activity name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;work-on-manifestxml&quot;&gt;Work on Manifest.xml&lt;/h1&gt;
+
+&lt;p&gt;If necessary, modify the &lt;strong&gt;*AndroidManifest.xml&lt;/strong&gt;. There will be certain applications that will require explicit permissions to be declared on manifest e.g. use of camera, use of the MIC for media recording etc&lt;/p&gt;
+
+&lt;h1 id=&quot;get-the-project-in-source-control&quot;&gt;Get the project in source control&lt;/h1&gt;
+
+&lt;p&gt;This is for bitbucket.org, adjust the url accordingly for github.com&lt;/p&gt;
+
+&lt;pre class=&quot;codeblock&quot;&gt;
+
+$ cd /path/to/your/project
+$ git init
+$ git remote add origin &amp;lt;https://yourname@bitbucket.org/yourname/yourproject.git&amp;gt;
+
+&lt;/pre&gt;
+
+&lt;h1 id=&quot;add-the-gitignore-and-readme-file&quot;&gt;Add the .gitignore and README file&lt;/h1&gt;
+
+&lt;p&gt;cd to project folder, create a .gitignore file. You don’t want all of the files to be under source control e.g. location of the build.xml and the android-SDK, these information are specific to developer workstation and may not be true for all developers. Also, you don’t want generated files to be part of source control&lt;/p&gt;
+
+&lt;p&gt;A sample content of .gitignore&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bin/
+gen/
+ant.properties
+local.properties
+build.properties
+project.properties
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Don’t forget the README.txt. Even if you are working alone, it can’t hurt to write down your thoughts why you were trying to write that piece of code in the first place, put it in the README.txt&lt;/p&gt;
+
+&lt;h1 id=&quot;work-often-commit-often-iterate&quot;&gt;Work often, commit often. Iterate&lt;/h1&gt;
+
+&lt;p&gt;Keep adding files to the project, keep modifying files. At the end of the day, commit your changes. Now, the frequency of the commit is usually decided as a group. There are projects where you cannot until certain number of unit tests have been performed (and passed) etc. Know your project practices and adhere to them, but the last thing you want is losing a days worth of coding/unit testing, so commit to the repo religiously&lt;/p&gt;
+
+&lt;h1 id=&quot;license-the-source-file&quot;&gt;License the source file&lt;/h1&gt;
+
+&lt;p&gt;You need to decide which license you will use. Remember, if there is no explicit license on the source file, it means its a full copyright. No one can use your code, they will have to contact you and ask for express permissions — not that everybody abides by that, but still, if you intend other people to benefit from your creation, then license it either using a permissive license (like MIT or BSD) or the GPL or what have you.&lt;/p&gt;
+
+&lt;h1 id=&quot;debug-observe-inspect-adjust&quot;&gt;Debug, Observe, Inspect, Adjust&lt;/h1&gt;
+
+&lt;p&gt;Learn how to type ant debug install really quickly, better yet, use a text expander so you have a fighting chance against carpal tunnel syndrome&lt;/p&gt;
+
+&lt;h1 id=&quot;beta-test&quot;&gt;Beta test&lt;/h1&gt;
+
+&lt;p&gt;Send the app to friends, relatives, colleagues etc, look for feedback. Go back to the app, refine. Let your thoughts germinate some more. You need to iterate a bit on the app before you release to the wild&lt;/p&gt;
+
+&lt;h1 id=&quot;sign-the-app&quot;&gt;Sign the app&lt;/h1&gt;
+
+&lt;p&gt;ant debug install was fine for testing and development, but it cannot be consumed by other people without the developer signature. You need to &lt;a href=&quot;/signing-an-android-app&quot;&gt;digitally sign your app&lt;/a&gt; before you release it to the public &lt;/p&gt;
+
+&lt;h1 id=&quot;publish-to-google-play&quot;&gt;Publish to Google Play&lt;/h1&gt;
+
+&lt;p&gt;You can make the app available from your website as a downloadable apk (android package) or you could pay Google Play so you can sell the app at the Google Market Place (its like iTunes or the Apple App Store for Android apps)&lt;/p&gt;
 </content>
  </entry>
  

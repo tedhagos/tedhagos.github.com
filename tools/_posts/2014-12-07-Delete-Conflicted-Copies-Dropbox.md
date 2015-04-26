@@ -1,8 +1,9 @@
 ---
 
-title: How to Delete Conflicted Copies in Dropbox
-author: Ted Hagos
-categories:  linux
+title: Delete Conflicted Copies in Dropbox
+tags:
+- dropbox
+- cloud
 
 ---
 
