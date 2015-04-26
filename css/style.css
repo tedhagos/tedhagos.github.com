@@ -1,7 +1,11 @@
 /*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600); */
 
+/*
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400);
+*/
+
+@import url("/css/fonts.css");
 
 body {
   font-family: 'Fira Sans';
@@ -15,6 +19,7 @@ b, strong {color: #000; font-weight: 400;}
 
 #wrapper {
   padding: 10px;
+  width: 95%;
 }
 
 #jPanelMenu-menu {
@@ -52,8 +57,17 @@ mast,headline,author,dateCreated, author {
 mast a {color: #222;}
 
 
-h1, h2, h3, h4 {font-weight: 400;}
-headline h1 {font-size: 2.5em; letter-spacing: -1.3px; font-weight:400;}
+h1, h2, h3, h4 {font-weight: 400; color: #414141;}
+
+headline h1 {
+  font-size: 2.5em;
+  letter-spacing: -1.3px;
+  font-weight:400;
+  line-height:1.2em;
+  color:#7c7c7c;
+  text-transform: lowercase;
+}
+
 img {
   display: block;
   width: 100%;
@@ -69,7 +83,7 @@ a {color: #005BB5; text-decoration:none;}
 a:hover {color: blue;}
 
 pre {
-  font-family: 'Inconsolata', monospace; font-size: 1em;
+  font-family: 'Inconsolata', monospace; font-size: .95em;
   font-weight: normal;
   margin-bottom:2em;
   margin-top:2em;
@@ -94,18 +108,18 @@ pre code {
   padding: 2px 3px 3px 3px;
 /*  padding-top: 1.2em; */
 /*  color: #000; */
-  color: #2f4d79;
+  color: #243b5d;
   font-weight: normal;
   line-height: 1.1em;
   text-indent: 3px;
   margin-left: -3px;
 }
 
-footer {font-size: 75%;margin-top: 40px; line-height:1.2em;}
+footer {font-size: 75%;margin-top: 40px; line-height:1.4em;}
 footer a {color:#6f6f6f;}
 
 @media (min-width: 550px) {
-  #wrapper {width: 95%;}
+  #wrapper {width: 90%;}
   .toc {
     column-count:2;
     -moz-column-count:2; /* Firefox */

@@ -2,7 +2,7 @@
 
 title: HTML5 Exercises
 author: Ted Hagos
-categories: javascript html5
+categories: html5
 
 ---
 

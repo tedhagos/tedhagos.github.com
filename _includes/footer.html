@@ -1,21 +1,20 @@
 
-<author>
-  By: <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>
-</author>
+
 <dateCreated>
-	Date created: {{ page.date | date: "%B %d, %Y" }}
+	{{ page.date | date: "%d %b %y" }} (created)
   {% if page.lastupdated %}
     <dateModified>
       <br/>
-      Last updated: {{ page.lastupdated | "%B %d, %Y"}}
+			<!--
+      {{ page.lastupdated | "%B %d, %Y"}} (updated)
+			-->
+			{{ page.lastupdated | "%d %b %y"}} (updated)
     </dateModified>
   {% endif %}
 </dateCreated>
 <br/>
-Url : <a href={{ page.url }}>http://tedhagos.com{{ page.url }}</a><br/>
-Copyright &copy; <a href="/">Ted Hagos</a>. All rights reserved <br/>
-<p>
-	Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
-</p>
-
-
+Feedback, comments, questions and errata can be sent to tedhagos@gmail.com
+<p/>
+<author>
+  &copy; <a href='https://plus.google.com/+TedHagos?rel=author'>Ted Hagos</a>. All Rights Reserved
+</author>

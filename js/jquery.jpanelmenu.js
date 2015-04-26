@@ -27,22 +27,22 @@
 					{
 						code: 27,
 						open: false,
-						close: true 
+						close: true
 					},
 					{
 						code: 37,
 						open: false,
-						close: true 
+						close: true
 					},
 					{
 						code: 39,
 						open: true,
-						close: true 
+						close: true
 					},
 					{
 						code: 77,
 						open: true,
-						close: true 
+						close: true
 					}
 				],
 
@@ -167,9 +167,9 @@
 				} else if ( htmlBG !== 'transparent' && htmlBG !== "rgba(0, 0, 0, 0)") {
 					bg = backgroundGenerator($('html'));
 				}
-				
+
 				if ( $('#jPanelMenu-style-master').length == 0 ) {
-					$('body').append('<style id="jPanelMenu-style-master">body{width:100%}.jPanelMenu,body{overflow-x:hidden}#jPanelMenu-menu{display:block;position:fixed;top:0;'+jP.options.direction+':0;height:100%;z-index:-1;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch}.jPanelMenu-panel{position:static;'+jP.options.direction+':0;top:0;z-index:2;width:100%;min-height:100%;' + bg + ';}</style>');
+					$('body').append('<style id="jPanelMenu-style-master">body{width:100%}.jPanelMenu,body{overflow-x:hidden}#jPanelMenu-menu{display:block;position:fixed;top:0;'+jP.options.direction+':0;height:100%;z-index:-1;overflow-x:hidden;overflow-y:visible;-webkit-overflow-scrolling:touch}.jPanelMenu-panel{position:static;'+jP.options.direction+':0;top:0;z-index:2;width:100%;min-height:100%;' + bg + ';}</style>');
 				}
 			},
 
@@ -302,14 +302,14 @@
 
 			openMenu: function(animated) {
 				if ( typeof(animated) == "undefined" || animated == null ) { animated = jP.options.animated };
-				
+
 				jP.clearTimeouts();
 
 				jP.options.before();
 				jP.options.beforeOpen();
 
 				jP.setMenuState(true);
-				
+
 				jP.showMenu();
 
 				var animationChecks = {

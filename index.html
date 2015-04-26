@@ -1,5 +1,5 @@
 ---
-title: tedhagos.com 
+title: tedhagos.com
 layout: index
 ---
 
@@ -8,7 +8,7 @@ layout: index
 
 <head>
   {% include head.html %}
-  <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body>
 
@@ -26,11 +26,13 @@ layout: index
   {% if post.categories.size > 0 %}
   <span class="category">({{post.categories | join: '  , ' }})</span>
   {% endif %}
+  <dateCreated>{{ post.date | date: "%d %b %y" }}</dateCreated>
+  <!--
   <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
-
+  -->
   {% if post.lastupdated %}
   <dateModified>
-    , last updated: {{ post.lastupdated | "%B %d, %Y"}}
+    , last updated: {{ post.lastupdated | "%d %b %y" }}
   </dateModified>
   {% endif %}
 </li>
@@ -41,4 +43,3 @@ layout: index
 <footer></footer>
 </body>
 </html>
-

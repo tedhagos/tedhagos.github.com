@@ -5,13 +5,435 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2015-04-26T00:16:24+08:00</updated>
+ <updated>2015-04-26T17:43:52+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>tedhagos@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>jpanelmenu</title>
+   <link href="http://tedhagos.com/vagrant/jquery-panel-scrollbar.html"/>
+   <updated>2015-04-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/vagrant/jquery-panel-scrollbar</id>
+   <content type="html">&lt;p&gt;Download the jpanelmenu javascript file from &lt;a href=&quot;http://jpanelmenu.com&quot;&gt;jpanelmenu.com&lt;/a&gt; and include it in your page. Don’t forget to include JQuery as well, JPanelMenu needs JQuery.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Structure your webpage like you normally would. JPanelMenu will monkey around with the DOM anyway. It will restructure the DOM during runtime and put its own div wrappers, so don’t sweat your static structure so much. Make it as simple as possible. Having said that, JPanel will look for an element with an &lt;code&gt;id=menu&lt;/code&gt;, this is the part of page that it will hide. Change the display property of that element to &lt;strong&gt;none&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;JPanelMenu will also look for an element whose &lt;code&gt;class=menu-trigger&lt;/code&gt;. This will be some sort of a hotspot or a button which when clicked, will trigger the sliding of the menu div.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
+  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lastly, to activate JPanelMenu, you need to instantiate and turn it on.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+  $(document).ready(function(){
+    var jPM = $.jPanelMenu();
+    jPM.on();
+  });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A basic structure of a whole page that uses the the JPanelMenu might look something like the html code sample below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE HTML&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
+  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+  $(document).ready(function(){
+    var jPM = $.jPanelMenu();
+    jPM.on();
+  });
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;styling&quot;&gt;Styling&lt;/h1&gt;
+
+&lt;p&gt;JPanelMenu will rewrite the DOM of the page. So if you think you can style the sliding panel by using the &lt;code&gt;#menu&lt;/code&gt; selector, that won’t work. If you inspect the elements of the page using firebug or the chrome developer tools, you will find that the sliding panel is actually enclosed in an element named &lt;code&gt;#jPanelMenu-menu&lt;/code&gt;. This is the element you need to style. Code below is a snippet taken from &lt;code&gt;style.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#jPanelMenu-menu {
+  border-right: 1px solid #dbdbdb;
+  margin: 5px;
+  text-align: center;
+  line-height: 2em;
+  background: #fff;
+}
+#menu {
+  padding: 10px;
+}
+  .menu-trigger {font-size: 3em; cursor: pointer; color: #979797;}
+
+#jPanelMenu-menu a {
+  text-decoration: none;
+  color: #838383;
+}
+#jPanelMenu-menu a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+#jPanelMenu-menu ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code above changed the style of the unordered list and anchor tags because the sliding panel was intended to hide a menu navigation panel. The navigation panel is built by a bunch of anchor tags enumerated using an unordered list.&lt;/p&gt;
+
+&lt;h2 id=&quot;remove-the-scrollbar&quot;&gt;Remove the scrollbar&lt;/h2&gt;
+
+&lt;p&gt;The JPanel adds a whitespace on the side, which is probably intended for a scrollbar. To remove the whitespace without removing the scrolling ability of the panel, you need to edit the &lt;code&gt;jquery.jpanelmenu.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find the line &lt;code&gt;overflow-y:scroll&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Replace it with &lt;code&gt;overflow-y:visible&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>jpanelmenu</title>
+   <link href="http://tedhagos.com/jquery/jquery-panel-scrollbar.html"/>
+   <updated>2015-04-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/jquery/jquery-panel-scrollbar</id>
+   <content type="html">&lt;p&gt;Download the jpanelmenu javascript file from &lt;a href=&quot;http://jpanelmenu.com&quot;&gt;jpanelmenu.com&lt;/a&gt; and include it in your page. Don’t forget to include JQuery as well, JPanelMenu needs JQuery.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Structure your webpage like you normally would. JPanelMenu will monkey around with the DOM anyway. It will restructure the DOM during runtime and put its own div wrappers, so don’t sweat your static structure so much. Make it as simple as possible. Having said that, JPanel will look for an element with an &lt;code&gt;id=menu&lt;/code&gt;, this is the part of page that it will hide. Change the display property of that element to &lt;strong&gt;none&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;JPanelMenu will also look for an element whose &lt;code&gt;class=menu-trigger&lt;/code&gt;. This will be some sort of a hotspot or a button which when clicked, will trigger the sliding of the menu div.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
+  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lastly, to activate JPanelMenu, you need to instantiate and turn it on.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+  $(document).ready(function(){
+    var jPM = $.jPanelMenu();
+    jPM.on();
+  });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A basic structure of a whole page that uses the the JPanelMenu might look something like the html code sample below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE HTML&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&quot;../js/jquery.jpanelmenu.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/style.css&quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;menu&quot; style=&quot;display:none;&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;Menu 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;wrapper&quot;&amp;gt;
+  &amp;lt;header&amp;gt;
+    &amp;lt;span class=&quot;menu-trigger&quot; style=&quot;cursor:pointer;&quot;&amp;gt;&amp;amp;#9776&amp;lt;/span&amp;gt;
+  &amp;lt;/header&amp;gt;
+  &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt;
+  &amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+  $(document).ready(function(){
+    var jPM = $.jPanelMenu();
+    jPM.on();
+  });
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;styling&quot;&gt;Styling&lt;/h1&gt;
+
+&lt;p&gt;JPanelMenu will rewrite the DOM of the page. So if you think you can style the sliding panel by using the &lt;code&gt;#menu&lt;/code&gt; selector, that won’t work. If you inspect the elements of the page using firebug or the chrome developer tools, you will find that the sliding panel is actually enclosed in an element named &lt;code&gt;#jPanelMenu-menu&lt;/code&gt;. This is the element you need to style. Code below is a snippet taken from &lt;code&gt;style.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#jPanelMenu-menu {
+  border-right: 1px solid #dbdbdb;
+  margin: 5px;
+  text-align: center;
+  line-height: 2em;
+  background: #fff;
+}
+#menu {
+  padding: 10px;
+}
+  .menu-trigger {font-size: 3em; cursor: pointer; color: #979797;}
+
+#jPanelMenu-menu a {
+  text-decoration: none;
+  color: #838383;
+}
+#jPanelMenu-menu a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+#jPanelMenu-menu ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code above changed the style of the unordered list and anchor tags because the sliding panel was intended to hide a menu navigation panel. The navigation panel is built by a bunch of anchor tags enumerated using an unordered list.&lt;/p&gt;
+
+&lt;h2 id=&quot;remove-the-scrollbar&quot;&gt;Remove the scrollbar&lt;/h2&gt;
+
+&lt;p&gt;The JPanel adds a whitespace on the side, which is probably intended for a scrollbar. To remove the whitespace without removing the scrolling ability of the panel, you need to edit the &lt;code&gt;jquery.jpanelmenu.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find the line &lt;code&gt;overflow-y:scroll&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Replace it with &lt;code&gt;overflow-y:visible&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>jquery basics</title>
+   <link href="http://tedhagos.com/vagrant/basics.html"/>
+   <updated>2015-04-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/vagrant/basics</id>
+   <content type="html">&lt;p&gt;JQuery is pretty good at a lot of things, the most usage though is DOM selection and manipulation and event handling. To get it going, we simply include it in a page using the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag. First, you need to download it from &lt;a href=&quot;https://jquery.com&quot;&gt;JQuery’s home page&lt;/a&gt;. Save it somewhere inside the docroot of your web project. Then reference it from the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the example above, the JQuery js file is stored inside the &lt;strong&gt;js&lt;/strong&gt; folder and the html page is on the top folder of docroot, hence we need to reference the js file relative to the location of the webpage that is defining the inclusion of the jquery library.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, you can include jquery in your webpage by loading it using a CDN, a content delivery network. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h1&gt;
+
+&lt;p&gt;Before doing anything on the DOM, you need to make sure that all DOM elements have already been loaded and rendered. This is why our JQuery codes will look like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+$(document).ready(function(){
+  // DOM manipulation and other codes here .
+});
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Before JQuery, your code might have looked like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+body.onload = function(){
+  // DOM manipulation and other codes here .
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can use JQuery as a drop-in replacement for these kinds of codes.&lt;/p&gt;
+
+&lt;h1 id=&quot;hunting-for-elements&quot;&gt;Hunting for elements&lt;/h1&gt;
+
+&lt;p&gt;In traditional javascript, we used codes like &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;var b = document.getElementById(&#39;btnLogin&#39;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;in order to get a programmatic reference to an html element with an &lt;strong&gt;id=btnLogin&lt;/strong&gt;. To do the same task in jquery, we will use codes like this&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;var b = $(&quot;#btnLogin&quot;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;JQuery uses CSS like syntax. That is why there is a pound/sharp sign before &lt;strong&gt;btnLogin&lt;/strong&gt;. If you have constructed CSS files before, the jquery syntax for element ids and names will be familiar to you. &lt;/p&gt;
+
+&lt;h1 id=&quot;common-usage&quot;&gt;Common Usage&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+&amp;lt;button id=&quot;btnLogin&quot;&amp;gt;Login&amp;lt;/button&amp;gt;
+&amp;lt;script&amp;gt;
+
+$(document).ready(function(){
+  // get a DOM reference to the login button 
+  var blogin = $(&quot;#btnlogin&quot;);
+  blogin.click(function(){
+    alert(&quot;Button click&quot;);
+  });
+
+  // detect browser type
+  
+});
+
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;binding-events&quot;&gt;Binding events&lt;/h1&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>jquery basics</title>
+   <link href="http://tedhagos.com/jquery/basics.html"/>
+   <updated>2015-04-26T00:00:00+08:00</updated>
+   <id>http://tedhagos.com/jquery/basics</id>
+   <content type="html">&lt;p&gt;JQuery is pretty good at a lot of things, the most usage though is DOM selection and manipulation and event handling. To get it going, we simply include it in a page using the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag. First, you need to download it from &lt;a href=&quot;https://jquery.com&quot;&gt;JQuery’s home page&lt;/a&gt;. Save it somewhere inside the docroot of your web project. Then reference it from the &lt;strong&gt;&amp;lt;script&amp;gt;&lt;/strong&gt; tag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;script src=&quot;js/jquery-1.11.2.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the example above, the JQuery js file is stored inside the &lt;strong&gt;js&lt;/strong&gt; folder and the html page is on the top folder of docroot, hence we need to reference the js file relative to the location of the webpage that is defining the inclusion of the jquery library.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, you can include jquery in your webpage by loading it using a CDN, a content delivery network. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h1&gt;
+
+&lt;p&gt;Before doing anything on the DOM, you need to make sure that all DOM elements have already been loaded and rendered. This is why our JQuery codes will look like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+$(document).ready(function(){
+  // DOM manipulation and other codes here .
+});
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Before JQuery, your code might have looked like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+body.onload = function(){
+  // DOM manipulation and other codes here .
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can use JQuery as a drop-in replacement for these kinds of codes.&lt;/p&gt;
+
+&lt;h1 id=&quot;hunting-for-elements&quot;&gt;Hunting for elements&lt;/h1&gt;
+
+&lt;p&gt;In traditional javascript, we used codes like &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;var b = document.getElementById(&#39;btnLogin&#39;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;in order to get a programmatic reference to an html element with an &lt;strong&gt;id=btnLogin&lt;/strong&gt;. To do the same task in jquery, we will use codes like this&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;var b = $(&quot;#btnLogin&quot;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;JQuery uses CSS like syntax. That is why there is a pound/sharp sign before &lt;strong&gt;btnLogin&lt;/strong&gt;. If you have constructed CSS files before, the jquery syntax for element ids and names will be familiar to you. &lt;/p&gt;
+
+&lt;h1 id=&quot;common-usage&quot;&gt;Common Usage&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+&amp;lt;button id=&quot;btnLogin&quot;&amp;gt;Login&amp;lt;/button&amp;gt;
+&amp;lt;script&amp;gt;
+
+$(document).ready(function(){
+  // get a DOM reference to the login button 
+  var blogin = $(&quot;#btnlogin&quot;);
+  blogin.click(function(){
+    alert(&quot;Button click&quot;);
+  });
+
+  // detect browser type
+  
+});
+
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;binding-events&quot;&gt;Binding events&lt;/h1&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>How to Include other scripts</title>
@@ -2908,9 +3330,9 @@ include in system path&lt;/p&gt;
  
  <entry>
    <title>HTML5 Exercises</title>
-   <link href="http://tedhagos.com/javascript/html5/html5-exercises.html"/>
+   <link href="http://tedhagos.com/html5/html5-exercises.html"/>
    <updated>2014-08-05T00:00:00+08:00</updated>
-   <id>http://tedhagos.com/javascript/html5/html5-exercises</id>
+   <id>http://tedhagos.com/html5/html5-exercises</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;1. Resize the triangle&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Create a 500px wide HTML5 canvas that allows a user to increase/decrease the size of an equilateral triangle as shown in the picture. If the user clicks the small triangle pointing downward (labeled 1), the height of the triangle decreases by 5px. If the user clicks the small triangle pointing upwards (labeld 2), the height of the triangle increases by 5px.&lt;/p&gt;
