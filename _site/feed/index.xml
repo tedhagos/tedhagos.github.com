@@ -5,7 +5,7 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2015-04-27T00:15:51+08:00</updated>
+ <updated>2015-04-27T15:09:13+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
@@ -2009,83 +2009,55 @@ $ killall SystemUIServer
  </entry>
  
  <entry>
-   <title>Node Package Manager</title>
+   <title>npm</title>
    <link href="http://tedhagos.com/nodejs/node-package-manager.html"/>
    <updated>2014-10-20T00:00:00+08:00</updated>
    <id>http://tedhagos.com/nodejs/node-package-manager</id>
-   <content type="html">&lt;p&gt;The Debian and Ubuntu repos require that you pull npm separately from nodejs, maybe in the future this will change, but as far as &lt;em&gt;quantal&lt;/em&gt; (Ubuntu codename), I still had to do this&lt;/p&gt;
+   <content type="html">&lt;p&gt;When you installed nodejs using the precompiled binaries, npm would have been installed with it. The section on &lt;a href=&quot;/nodejs/basic-setup.html&quot;&gt;node setup&lt;/a&gt; details the installation of both node and npm. &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sudo apt-get install nodejs npm&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;The npm tool can also be installed on its own by curling an install file from npmjs.org. If you have already have curl installed, you can run this command from a terminal&lt;/p&gt;
 
-&lt;p&gt;Another way to get npm is to do&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl http://npmjs.org/install.sh | sudo sh
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;code&gt;sudo apt-get install curl&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;curl http://npmjs.org/install.sh | sudo sh&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;what-is-it&quot;&gt;What is it&lt;/h1&gt;
 
-&lt;h1 id=&quot;osx-install&quot;&gt;OSX install&lt;/h1&gt;
+&lt;p&gt;It’s a package manager for node and other apps. Its what you will use to get packages like express, http-server, jade and even phonegap or cordova. If you have ever used a package manager like aptitude, apt-get, yum, emerge, brew, macports, nuget or chocolatey, npm is does what they do. It gets software for you so you don’t have to download precompiled binaries manually.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;brew instal node&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h1&gt;
 
-&lt;p&gt;npm should be part of the node formula. If the brew route fails, you can always download and install the binary package from &lt;a href=&quot;http://nodejs.org&quot;&gt;nodejs.org&lt;/a&gt;. &lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;npm info &lt;package name=&quot;&quot;&gt;&lt;/package&gt;&lt;/dt&gt;
+  &lt;dd&gt;find out some info about the package e.g. &lt;code&gt;npm info express&lt;/code&gt;&lt;/dd&gt;
+  &lt;dt&gt;npm install &lt;package name=&quot;&quot;&gt;&lt;/package&gt;&lt;/dt&gt;
+  &lt;dd&gt;installs a package locally, inside the folder where you invoked the npm command. This is useful if you will install a package which is a dependency for an application you are working on e.g. &lt;code&gt;npm install express&lt;/code&gt;&lt;/dd&gt;
+  &lt;dt&gt;npm install -g &lt;package name=&quot;&quot;&gt;&lt;/package&gt;&lt;/dt&gt;
+  &lt;dd&gt;installs a package globally. The binaries will be on a central location in your computer. This is useful when installing packages that are meant as tools rather than package dependency for a software project e.g. &lt;code&gt;npm install -g http-server&lt;/code&gt;&lt;/dd&gt;
+  &lt;dt&gt;npm ls&lt;/dt&gt;
+  &lt;dd&gt;this is how you list all the packages installed in your system&lt;/dd&gt;
+  &lt;dt&gt;npm install npm -g&lt;/dt&gt;
+  &lt;dd&gt;this is how you update npm itself&lt;/dd&gt;
+  &lt;dt&gt;npm search &lt;name or=&quot;&quot; grep=&quot;&quot; expressions=&quot;&quot;&gt;&lt;/name&gt;&lt;/dt&gt;
+  &lt;dd&gt;search for packages&lt;/dd&gt;
+  &lt;dt&gt;npm update &lt;package name=&quot;&quot;&gt;&lt;/package&gt;&lt;/dt&gt;
+  &lt;dd&gt;updates a specific package &lt;/dd&gt;
+  &lt;dt&gt;npm update&lt;/dt&gt;
+  &lt;dd&gt;without specifying a package name, npm will update everything&lt;/dd&gt;
+&lt;/dl&gt;
 
-&lt;h1 id=&quot;how-to-use-npm&quot;&gt;How to use npm&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;npm info &amp;lt;name of package&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The info argument spits out, well, info about a package — without installing it of course. It contains authors, versions, contributors, dependencies etc. It’s in JSON format&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sudo npm install -g &amp;lt;name of package&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If you don’t put the &lt;em&gt;-g&lt;/em&gt; (global) option, the package will be installed in the current directory. You may have to add that directory to the system path variable if you need to run the package from another directory. In global mode, the installed package will be runnable from any directory. Here are some examples of usage. &lt;/p&gt;
-
-&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
-
-
-&lt;colgroup&gt;
-&lt;col class=&quot;left&quot; /&gt;
-
-&lt;col class=&quot;left&quot; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&quot;left&quot;&gt;`sudo npm install -g http-server`&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;installs a basic http server. Perfect for web projects&lt;/td&gt;
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-&lt;td class=&quot;left&quot;&gt;`sudo npm install -g express`&lt;/td&gt;
-&lt;td class=&quot;left&quot;&gt;a web framework for NodeJS projects&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;There are lots of other stuff npm can do. Learn them further using&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;info npm&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;npm help install&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;registry-problems&quot;&gt;Registry problems&lt;/h1&gt;
+&lt;h1 id=&quot;registry-or-repo-problems&quot;&gt;registry or repo problems&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;npm&lt;/strong&gt; is configured to pull from known registries. But from time to time, pulling software from the registries might fail. Repointing the registry to &lt;a href=&quot;http://registry.npmjs.org&quot;&gt;http://registry.npmjs.org&lt;/a&gt; fixes things &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sudo npm config set registry http://registry.npmjs.org&lt;/code&gt; &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo npm config set registry http://registry.npmjs.org
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = &#39;thagos&#39;; // required: replace example with your forum shortname
+&lt;h1 id=&quot;references&quot;&gt;references&lt;/h1&gt;
 
-    /* * * DON&#39;T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement(&#39;script&#39;); dsq.type = &#39;text/javascript&#39;; dsq.async = true;
-        dsq.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
-        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
+&lt;ol&gt;
+  &lt;li&gt;faq at docs.npmjs.org - &lt;a href=&quot;https://docs.npmjs.com/misc/faq&quot;&gt;npmjs.org/faq&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 </content>
  </entry>
  

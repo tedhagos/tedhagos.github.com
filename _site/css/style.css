@@ -10,8 +10,8 @@
 body {
   font-family: 'Fira Sans';
   font-size: 1em; font-weight:400;
-/*  background: #fcfcfc; */
-  background: #efefef;
+  background: #fcfcfc;
+/*  background: #efefef; */
   line-height: 1.5em;
   color: #383838;
 }
@@ -23,11 +23,11 @@ dt {font-family: 'Source Code Pro'; font-weight: bold;}
 #wrapper {
   padding: 10px;
   width: 95%;
+  margin: 0 auto;
 }
 
 #jPanelMenu-menu {
-/*  border-right: 1px solid #dbdbdb; */
-  margin: 5px;
+  border-right: 1px solid #e5e5e5;
   text-align: right;
   line-height: 2em;
   background: #fff;
@@ -60,7 +60,7 @@ mast,headline,author,dateCreated, author {
 mast a {color: #222;}
 
 
-h1, h2, h3, h4 {font-weight: 400; color: #414141;}
+h1, h2, h3, h4 {font-weight: 400; color: #414141; text-transform: lowercase; color: #004182; margin-top: 2em;}
 
 headline h1 {
   font-size: 2.5em;
@@ -94,7 +94,7 @@ pre {
   font-weight: normal;
   white-space: pre-wrap;
 /*  background: #f2f2f2; */
-  background: #e5e5e5;
+  background: #efefef;
   padding: 5px;
   white-space:pre-wrap;
   overflow:auto;
