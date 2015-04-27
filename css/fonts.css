@@ -24,6 +24,7 @@ font-weight: 500;
 font-style: medium;
 }
 
+/*
 @font-face {
 font-family: 'Fira Mono';
 src: local('Fira Mono'),
@@ -60,6 +61,7 @@ font-weight: 600;
 font-style: bold;
 }
 
+*/
 @font-face {
 font-family: 'Inconsolata';
 src: local('Inconsolata'),
