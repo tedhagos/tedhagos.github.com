@@ -2,3 +2,5 @@
 .DS_STORE?
 .Trashes
 _site/*
+_site/feed/*
+
