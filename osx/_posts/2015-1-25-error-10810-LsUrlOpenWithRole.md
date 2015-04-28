@@ -2,7 +2,11 @@
 
 title: Error 10810 LsUrlOpenWithRole
 author: Ted Hagos
-tags: tmux user-namespace yosemite osx10.10
+tags: 
+- tmux 
+- user-namespace 
+- yosemite 
+- osx10.10
 
 ---
 
