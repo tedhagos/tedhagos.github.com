@@ -1,5 +1,8 @@
 ---
 title: PhoneGap Dev Environment
+tags:
+- cli
+
 ---
 
 
