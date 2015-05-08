@@ -1,7 +1,8 @@
 ---
+
 title: Mac Mini Microphone Hack
-author: Ted Hagos
-categories: osx
+
+
 ---
 
 The Mac Mini requires line level mic input. It needs to be powered. A mic that works on PC may not work on the mini.
@@ -13,5 +14,3 @@ If you just want to have a mic for the mini and it's easier to buy than to impro
 3.  Once you have procured the 2 items above. Connect the Mac Mini and the voice recorder using the stereo mini jack. You might want to check the batteries on that old voice recorder, I hope you did not forget to remove the batteries when you locked it away for keeping. If the dry cell batteries have leaked, the voice recorded may not be usable anymore.
 4.  Power the voice recorder. Put in record mode (you can press the pause button so that it actually doesn't record, we just need the mic)
 5.  Test it. I tested mine by using it in a skype call. In fact, that was the only reason I needed a microphone for the Mac Mini
-
-
