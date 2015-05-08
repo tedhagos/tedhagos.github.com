@@ -1,19 +1,9 @@
 ---
 title: tedhagos.com/nodejs
-layout: index
+layout: layout
 ---
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  {% include head.html %}
-  <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
-</head>
-<body>
-
-
-<div id="toc">
 <ol reversed>
   {% for post in site.categories.nodejs %}
     <li>
@@ -21,13 +11,7 @@ layout: index
       <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
         {% if post.lastupdated %}
           <dateModified>, last updated: {{ post.lastupdated | "%B %d, %Y"}}</dateModified>
-        {% endif %}  
+        {% endif %}
     </li>
   {% endfor %}
 </ol>
-</div>
-
-<footer></footer>
-</body>
-</html>
-

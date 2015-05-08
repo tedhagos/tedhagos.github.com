@@ -1,19 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-  <head>				
-		{% include head.html %}
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
 
-    <!--
-		<link href="css/style.min.css" rel="stylesheet" type="text/css" />
-    -->		
-  </head>
-	
   <body>
     <header>
 
     </header>
     <section>
+      <headline><h1>{{ page.title }}</h1></headline>
       {{ content }}
     </section>
+        
   </body>
 </html>

@@ -8,7 +8,7 @@ layout: index
 
 <head>
   {% include head.html %}
-  <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body>
 
@@ -26,10 +26,9 @@ layout: index
 {{ site.categories }}
 
 {% for c in site.categories%}
-  {{ c }}
+  {{ c[0] }}
 {% endfor %}
 
 <footer></footer>
 </body>
 </html>
-

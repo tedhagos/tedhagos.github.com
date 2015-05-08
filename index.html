@@ -3,6 +3,7 @@ title: tedhagos.com
 layout: index
 ---
 
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,34 +13,65 @@ layout: index
 </head>
 <body>
 
-<!--
+
 <h1 class="pagetitle">{{ page.title }}</h1>
 -->
 
-<div id="toc">
-<ol reversed>
-{% for post in site.posts %}
-<li>
-  <a href={{post.url}}>
-  {{post.title}}
-</a>
-  {% if post.categories.size > 0 %}
-  <span class="category">({{post.categories | join: '  , ' }})</span>
-  {% endif %}
-  <dateCreated>{{ post.date | date: "%d %b %y" }}</dateCreated>
-  <!--
-  <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
-  -->
-  {% if post.lastupdated %}
-  <dateModified>
-    , last updated: {{ post.lastupdated | "%d %b %y" }}
-  </dateModified>
-  {% endif %}
-</li>
-{% endfor %}
-</ol>
-</div>
+<div class="indexflexbox">
 
-<footer></footer>
+  <div id="tags">
+    <h2 style="text-align:right;">Categories</h2>
+    <ul class="categories">
+    {% for cat in site.categories %}
+      {% assign category = {{cat[0]}} %}
+      <li><a href=/{{category}} class="acategory">{{category}}</a></li>
+    {% endfor %}
+    </ul>
+
+    <!--
+
+    I am not ready for this yet. For now, just implement a single tags page
+    with tags on the left, and all post with those tags on the right
+
+    <ul class="categories">
+    {% for sitetags in site.tags %}
+      {% assign tag = {{sitetags[0]}} %}
+      <li><a href=/{{tag}} class="atag">{{tag}}</a></li>
+    {% endfor %}
+    </ul>
+    -->
+  </div>
+
+  <div id="toc">
+
+    <h2>Doc</h2>
+
+    <ol reversed>
+      {% for post in site.posts %}
+      <li>
+        <a href={{post.url}}>
+        {{post.title}}
+
+        {% if post.categories.size > 0 %}
+        <span class="category">({{post.categories | join: '  , ' }})</span>
+        {% endif %}
+        <dateCreated>{{ post.date | date: "%d %b %y" }}</dateCreated>
+        <!--
+        <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
+        -->
+        {% if post.lastupdated %}
+        <dateModified>
+          , last updated: {{ post.lastupdated | "%d %b %y" }}
+        </dateModified>
+        {% endif %}
+      </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <footer></footer>
+
+</div>
 </body>
 </html>
