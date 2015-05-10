@@ -33,10 +33,6 @@ section {width: 80%; margin: 0 auto;}
   padding-left: 20px;
 }
 
-.pagetags {display: inline; margin:0;padding:0; list-style-type:none;}
-.pagetags:after {content: ", ";}
-.pagetags:last-child:after {content: "";}
-
 #tagsrelated {
   margin-top: 50px;
   border-top: 1px dashed #cacaca;
@@ -44,9 +40,19 @@ section {width: 80%; margin: 0 auto;}
   color: gray;
   font-family: 'Inconsolata';
 }
-#tagsrelated > ul {padding: 0; margin:0;}
-#tagsrelated a {color: gray; font-family: 'Inconsolata';text-transform:lowercase;}
-#tagsrelated a:hover {text-decoration:underline;}
+
+.relatedlist {
+  margin:0 padding:0; list-style-type:none; display: inline;
+  -webkit-margin-before:0;-webkit-margin-after:0;-webkit-padding-start:0;
+  -moz-margin-before:0;-moz-margin-after:0;-moz-padding-start:0;
+  margin-before:0; margin-after:0; padding-start:0;
+}
+.relatedlist li {display:inline;}
+.relatedlist li:after {content: ",";}
+.relatedlist li:last-child:after {content: "";}
+
+.relatedlist a {color: gray; font-family: 'Inconsolata';text-transform:lowercase;}
+.relatedlist a:hover {text-decoration:underline;}
 
 #tags {width: 30%;padding:10px;}
 #toc {

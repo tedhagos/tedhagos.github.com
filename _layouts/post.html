@@ -33,11 +33,18 @@
         </articleBody>
       </article>
 
+
+
       {% if page.tags.size > 0 %}
-
       <div id="tagsrelated">
-      filed under: {{page.tags | array_to_sentence_string }}
 
+      <!--
+      filed under: {{page.tags | array_to_sentence_string }}
+      #{{page.tags | join: " #"}} -->
+      filed under: #{{page.tags | join: " #"}}
+      <br/>
+      related docs:
+        <ul class="relatedlist">
         {% for post in site.posts %}
 
             {% assign sameTagCount = 0 %}
@@ -53,20 +60,20 @@
               {% endif %}
             {% endfor %}
 
-            <ul>
             {% if sameTagCount >= 1 %}
-
               {% if post.title == page.title %}
+
               {% else %}
-              <li class="pagetags">
-                <a href="{{ post.url }}">{{ post.title }}{{ commonTags }}</a>
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <!-- {{ commonTags }} -->
               </li>
               {% endif %}
 
             {% endif %}
-          </ul>
-        {% endfor %}
 
+        {% endfor %}
+      </ul>
       </div>
       <!--
       <div id="tagsrelated">

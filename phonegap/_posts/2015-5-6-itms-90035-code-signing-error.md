@@ -1,9 +1,7 @@
 ---
 
 title: ITMS-90035 Code is not signed at all
-tags:
-- ios8
-- phonegap5
+tags: [ios8, phonegap5]
 
 ---
 
