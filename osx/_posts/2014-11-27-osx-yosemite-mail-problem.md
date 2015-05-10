@@ -1,6 +1,8 @@
 ---
 
 title: OSX Yosemite Mail Problem
+tags:
+- mail
 
 ---
 

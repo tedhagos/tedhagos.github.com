@@ -1,8 +1,7 @@
 ---
 
 title: create, compile and test
-tags:
-- cli
+
 ---
 
 
@@ -19,7 +18,7 @@ app id
 : this is a package identifier. It is written, usually, in reverse domain name style. For example, if you have a website named myawesomeapp.com, then what you might put as an app namespace is `com.myawesomeapp`. Unlike the the project name, the app id parameter is optional and you can change its value later in the phonegap configuration file (config.xml)
 
 app display name
-: this is just something that you will see on the default user interface that phonegap generates as a result of the project creation command. Like the app id, this one too is optional and you can change its value in the config.xml 
+: this is just something that you will see on the default user interface that phonegap generates as a result of the project creation command. Like the app id, this one too is optional and you can change its value in the config.xml
 
 ~~~
 phonegap create hello
@@ -63,7 +62,3 @@ phonegap emulate ios
 ~~~
 
 These two commands will be your best friends because you will type them many times over. Everytime you make a change on the source code or you replace some image files or some other application asset, you need to recompile and rebuild the project.
-
-
-
-

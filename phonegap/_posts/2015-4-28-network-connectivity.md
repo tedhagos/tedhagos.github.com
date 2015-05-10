@@ -1,17 +1,15 @@
---- 
-
-title: Network Connectivity
-tags: 
-- cordova
-- phonegap
-- network
 ---
 
-Checking for connectivity is not an out of the box functionality for phonegap. You need to get a plugin for it. 
+title: Network Connectivity
+tags:
+- network connectivity
+---
+
+Checking for connectivity is not an out of the box functionality for phonegap. You need to get a plugin for it.
 
 ~~~
 cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-~~~ 
+~~~
 
 The network state is exposed via the variable `navigator.connection.type` which will be available to your app as soon as the the `deviceready` event has been raised. The code snippet below shows the basic use of this plugin
 
@@ -58,4 +56,3 @@ Adjust your application logic appropriately so you can route the programming flo
 # Reference
 
 1. Cordova Docs/connection - [docs.phonegap.com/connection](http://docs.phonegap.com/en/edge/cordova_connection_connection.md.html)
-

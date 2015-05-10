@@ -5,7 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400);
 */
 
-@import url("/css/fonts.css");
+@import url("/styles/fonts.css");
 
 body, html {padding:0; margin:0;}
 
@@ -32,6 +32,21 @@ section {width: 80%; margin: 0 auto;}
   background: #fff;
   padding-left: 20px;
 }
+
+.pagetags {display: inline; margin:0;padding:0; list-style-type:none;}
+.pagetags:after {content: ", ";}
+.pagetags:last-child:after {content: "";}
+
+#tagsrelated {
+  margin-top: 50px;
+  border-top: 1px dashed #cacaca;
+  padding-top: 10px;
+  color: gray;
+  font-family: 'Inconsolata';
+}
+#tagsrelated > ul {padding: 0; margin:0;}
+#tagsrelated a {color: gray; font-family: 'Inconsolata';text-transform:lowercase;}
+#tagsrelated a:hover {text-decoration:underline;}
 
 #tags {width: 30%;padding:10px;}
 #toc {

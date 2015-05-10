@@ -2,13 +2,11 @@
 
 title: Working with Dates
 tags:
-- date formatting
-- mysqli
-- php
+- date formatting in mysqli
 
 ---
 
-Your programs will deal with date and times some of the time. On some occassions, the date and time data will be inputs coming from an html view. These inputs will be in string format which means you need to transform them to the appropriate date/time format before you can persist them to the database. On other occassions,  you will read the date/time data from a database and then display them in the html view. 
+Your programs will deal with date and times some of the time. On some occassions, the date and time data will be inputs coming from an html view. These inputs will be in string format which means you need to transform them to the appropriate date/time format before you can persist them to the database. On other occassions,  you will read the date/time data from a database and then display them in the html view.
 
 There are two functions that will be handy when you need to work with date and times, these are the `date` and `strtotime` functions.
 
@@ -18,9 +16,9 @@ There are two functions that will be handy when you need to work with date and t
 $date = date('Y-m-d', strtotime($_POST["inputdate"]));
 ~~~
 
-The `strtotime` function by itself may not be enough. You will need to use it in tandem with the `date` function; `strtotime` takes a date or time data in string format and converts it to a UNIX timestamp. This timestamp is an integer value which represents the number of seconds that has elapsed since January 1 1970 (UTC). This timestamp is also known as POSIX time or epoch time. 
+The `strtotime` function by itself may not be enough. You will need to use it in tandem with the `date` function; `strtotime` takes a date or time data in string format and converts it to a UNIX timestamp. This timestamp is an integer value which represents the number of seconds that has elapsed since January 1 1970 (UTC). This timestamp is also known as POSIX time or epoch time.
 
-The `date` function needs 2 parameters. The second parameter is a timestamp data, that was why we needed the `strtotime` function, and  the first parameter is a string that will dictate how the date information will be formatted. 
+The `date` function needs 2 parameters. The second parameter is a timestamp data, that was why we needed the `strtotime` function, and  the first parameter is a string that will dictate how the date information will be formatted.
 
 Here are some common usage of date and strtotime.
 
@@ -33,7 +31,7 @@ echo date('m-d-Y', strtotime("now"));
 
 echo date('l, M d, Y', strtotime("now"));
 // Saturday, May 09, 2015
-~~~ 
+~~~
 
 There are many format characters that you can use, head over to the documentation page for a full listing, they are listed on references section below.
 
@@ -52,7 +50,7 @@ while($row = $result->fetch_assoc()){
 }
 ~~~
 
-The `H:i` time format will echo the time date in 24 hour format. If you need to display it in 12 hour format, use the `g:i a` formatter. 
+The `H:i` time format will echo the time date in 24 hour format. If you need to display it in 12 hour format, use the `g:i a` formatter.
 
 ~~~
 echo date('H:i', $row['timein']);
@@ -67,7 +65,7 @@ echo date('g:i a', $row['timein']);
 
 # Formatting Dates using MySQL Database Functions
 
-The PHP `date` function is very flexible and allows to do lots of things already. For most situations formatting a date variable using PHP functions will suffice. There might be situations when this approach can be tedious. 
+The PHP `date` function is very flexible and allows to do lots of things already. For most situations formatting a date variable using PHP functions will suffice. There might be situations when this approach can be tedious.
 
 ~~~
 $returnarray = array();
@@ -104,12 +102,12 @@ In these situations, we can do the date formatting on the database level rather 
 
 ~~~
 $returnarray = array();
-$query = "SELECT username, 
-          DATE_FORMAT(workdate, '%d.%m.%Y'), 
-          DATE_FORMAT(timein, '%h:%i %p'), 
+$query = "SELECT username,
+          DATE_FORMAT(workdate, '%d.%m.%Y'),
+          DATE_FORMAT(timein, '%h:%i %p'),
           DATE_FORMAT(timeout, '%h:%i %p')
           FROM attendance";
-          
+
 $result = $cn->query($query);
 $row = $result->fetch_assoc();
 
@@ -120,7 +118,9 @@ while($row = $result->fetch_assoc()){
 echo json_encode($returnarray);
 ~~~
 
-The issue with this approach is that the resulting code might not be portable because we did use a specific function of MySQL. This might not work for other databases. The `DATE_FORMAT` function has quite a lot of format specifiers, you can find the details of the format specifiers in MySQL documentation page which is listed on the references section.
+The issue with this approach is that the resulting code might not be portable because we did use a specific function of MySQL. This might not work for other databases.
+
+The `DATE_FORMAT` function has quite a lot of format specifiers, you can find the details of the format specifiers in MySQL documentation page which is listed on the references section.
 
 
 # References
@@ -128,4 +128,3 @@ The issue with this approach is that the resulting code might not be portable be
 1. PHP.net/manual [strtotime](http://php.net/manual/en/function.strtotime.php)
 2. PHP.net/manual [Date](http://php.net/manual/en/function.date.php)
 3. Dev.MySQL [Doc/Date and Time Functions](https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_date-format)
-

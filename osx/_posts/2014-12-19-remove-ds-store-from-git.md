@@ -1,8 +1,6 @@
 ---
 
 title: Remove .DS_STORE from a Git Repo
-author: Ted Hagos
-categories: osx
 
 ---
 
@@ -18,5 +16,3 @@ Once everything is removed, make sure that .DS\_STORE will not be added to the r
 ~~~
 
 Commit and push as usual
-
-

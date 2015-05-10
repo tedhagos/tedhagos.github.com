@@ -1,8 +1,6 @@
 ---
 
 title: Yosemite upgrade and Homebrew
-author: Ted Hagos
-categories: osx
 
 ---
 
@@ -33,7 +31,6 @@ $ brew upgrade
 
 If the cd $(brew –repository) command gives you problem, just cd to usr/local/Library then do the commit while in that directory.
 
-## References 
+## References
 
 1. [Hans Van Gent, Fixing Homebrew](http://jcvangent.com/fixing-homebrew-os-x-10-10-yosemite/)
-

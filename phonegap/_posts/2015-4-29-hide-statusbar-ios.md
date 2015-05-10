@@ -3,7 +3,7 @@
 title: Hide StatusBar on iOS
 tags:
 - ios8
-- phonegap4
+- phonegap5
 
 ---
 
@@ -21,4 +21,3 @@ View controller-based status bar appearance
 The value of this key should be set to NO.
 
 Build and run your app. The status bar should now be hidden and the app should be in full-screen mode
-
