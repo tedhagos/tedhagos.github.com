@@ -22,7 +22,7 @@ Quit Mail.app completely then launch a terminal window. You can use Terminal.app
 
 ~~~
 cd ~/Library/Mail/V2/MailData
-ls | Envelope
+ls | grep Envelope
 ~~~
 
 You should see at least 3 files that has the word 'Envelope' in them. These are `Envelope Index, Envelope Index-shm` and `Envelope Index-wal`. You need to delete all three

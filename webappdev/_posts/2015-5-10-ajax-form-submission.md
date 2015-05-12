@@ -2,8 +2,9 @@
 
 title: AJAX Form Submission
 tags:
-- ajax jquery
-- form submission
+- ajaxjquery
+- formsubmission
+- phpendpoint
 ---
 
 The code samples use the ajax functions of jquery, so you need to add jquery to the page
