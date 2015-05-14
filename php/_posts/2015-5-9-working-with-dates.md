@@ -12,9 +12,9 @@ There are two functions that will be handy when you need to work with date and t
 
 # Handling Date Inputs from a Form
 
-~~~
+{% highlight php startinline %}
 $date = date('Y-m-d', strtotime($_POST["inputdate"]));
-~~~
+{% endhighlight %}
 
 The `strtotime` function by itself may not be enough. You will need to use it in tandem with the `date` function; `strtotime` takes a date or time data in string format and converts it to a UNIX timestamp. This timestamp is an integer value which represents the number of seconds that has elapsed since January 1 1970 (UTC). This timestamp is also known as POSIX time or epoch time.
 
@@ -22,7 +22,7 @@ The `date` function needs 2 parameters. The second parameter is a timestamp data
 
 Here are some common usage of date and strtotime.
 
-~~~
+{% highlight php startinline %}
 echo date('Y-m-d', strtotime("now"));
 // 2015-05-09
 
@@ -31,14 +31,14 @@ echo date('m-d-Y', strtotime("now"));
 
 echo date('l, M d, Y', strtotime("now"));
 // Saturday, May 09, 2015
-~~~
+{% endhighlight %}
 
 There are many format characters that you can use, head over to the documentation page for a full listing, they are listed on references section below.
 
 
 # Presenting Date Output to a View
 
-~~~
+{% highlight php startinline %}
 $query = "SELECT username, workdate, timein, timeout FROM attendance";
 $result = $cn->query($query);
 $row = $result->fetch_assoc();
@@ -48,11 +48,11 @@ while($row = $result->fetch_assoc()){
   echo date('H:i', $row['timein']);
   echo date('H:i', $row['timeout']);
 }
-~~~
+{% endhighlight %}
 
 The `H:i` time format will echo the time date in 24 hour format. If you need to display it in 12 hour format, use the `g:i a` formatter.
 
-~~~
+{% highlight php startinline %}
 echo date('H:i', $row['timein']);
 // 21:17
 
@@ -61,13 +61,13 @@ echo date('g:i', $row['timein']);
 
 echo date('g:i a', $row['timein']);
 // 9:17 pm
-~~~
+{% endhighlight %}
 
 # Formatting Dates using MySQL Database Functions
 
 The PHP `date` function is very flexible and allows to do lots of things already. For most situations formatting a date variable using PHP functions will suffice. There might be situations when this approach can be tedious.
 
-~~~
+{% highlight php startinline %}
 $returnarray = array();
 $query = "SELECT username, workdate, timein, timeout FROM attendance";
 $result = $cn->query($query);
@@ -81,11 +81,11 @@ while($row = $result->fetch_assoc()){
 }
 
 echo json_encode($returnarray);
-~~~
+{% endhighlight %}
 
 The code sample above reads the the attendance record, formats it and then aggregates each record into an associative before echoing  it so than an AJAX client may consume it. The only reason we parsed the columns is so that the date/time data can be properly formatted. If we didn't need to format it, the code could have been written like the sample below.
 
-~~~
+{% highlight php startinline %}
 $returnarray = array();
 $query = "SELECT username, workdate, timein, timeout FROM attendance";
 $result = $cn->query($query);
@@ -96,11 +96,11 @@ while($row = $result->fetch_assoc()){
 }
 
 echo json_encode($returnarray);
-~~~
+{% endhighlight %}
 
 In these situations, we can do the date formatting on the database level rather than on the application level. MySQL has built-in functions that can be used for date transformations.
 
-~~~
+{% highlight php startinline %}
 $returnarray = array();
 $query = "SELECT username,
           DATE_FORMAT(workdate, '%d.%m.%Y'),
@@ -116,7 +116,7 @@ while($row = $result->fetch_assoc()){
 }
 
 echo json_encode($returnarray);
-~~~
+{% endhighlight %}
 
 The issue with this approach is that the resulting code might not be portable because we did use a specific function of MySQL. This might not work for other databases.
 

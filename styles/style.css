@@ -6,6 +6,7 @@
 */
 
 @import url("/styles/fonts.css");
+@import url("/styles/pygment.css");
 
 body, html {padding:0; margin:0;}
 
@@ -20,7 +21,7 @@ section {width: 80%; margin: 0 auto;}
 #tableofcontents {
   width: 25%;
   padding-right: 20px;
-  background: #f3f9ff;
+/*  background: #f3f9ff; */
   text-align: right;
   font-weight: 300;
 }
@@ -73,12 +74,12 @@ section {width: 80%; margin: 0 auto;}
   font-size: .9em;
 }
 #tableofcontents a {
-  color:#979797;
+  color:#838383;
 }
 #tableofcontents h2 {
   color: #b4b4b4;
   margin-top: 5px;
-  text-transform:uppercase;
+  text-transform:lowercase;
 }
 #tableofcontents a:hover {
   color:#000;
@@ -92,6 +93,7 @@ body {
   line-height: 1.5em;
   color: #383838;
   margin: 0 auto;
+  background: #eee url('/img/body.png') center top;
 }
 
 b, strong {color: #000; font-weight: 500;}
@@ -124,7 +126,8 @@ headline h1 {
   letter-spacing: -1.3px;
   font-weight:300;
   line-height:1.2em;
-  color:#a3a3a3;
+  /*color:#a3a3a3; */
+  color: #414141;
   text-transform: lowercase;
   margin-top: 5px;
 }
@@ -152,7 +155,7 @@ pre {
   overflow:auto;
   line-height: 1em;
   background: #f9f9f9;
-  border: 1px solid #ececec;
+  border: 2px solid #dedede;
 
 }
 
@@ -166,11 +169,11 @@ pre code {
 /*  color:#2f4d79; */
 /*  color: #34566e; */
 /* color: #5c5c5c; */
-  color: #5d5d5d;
+/*  color: #5d5d5d; */
   font-weight: 400 !important;
   line-height: 1.4em;
-  text-indent: 3px;
-  margin-left: -3px;
+/*  text-indent: 3px; */
+  /* margin-left: -3px; */
 }
 
 footer {font-size: 85%;margin-top: 40px; line-height:1.4em; font-weight: 300;}

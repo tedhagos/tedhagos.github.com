@@ -6,19 +6,19 @@ categories: nodejs
 
 ---
 
-When you installed nodejs using the precompiled binaries, npm would have been installed with it. The section on [node setup](/nodejs/basic-setup.html) details the installation of both node and npm. 
+When you installed nodejs using the precompiled binaries, npm would have been installed with it. The section on [node setup](/nodejs/basic-setup.html) details the installation of both node and npm.
 
 The npm tool can also be installed on its own by curling an install file from npmjs.org. If you have already have curl installed, you can run this command from a terminal
 
-~~~
-curl http://npmjs.org/install.sh | sudo sh
-~~~
+
+`curl http://npmjs.org/install.sh | sudo sh`
+
 
 # What is it
 
 It's a package manager for node and other apps. Its what you will use to get packages like express, http-server, jade and even phonegap or cordova. If you have ever used a package manager like aptitude, apt-get, yum, emerge, brew, macports, nuget or chocolatey, npm is does what they do. It gets software for you so you don't have to download precompiled binaries manually.
 
-# Basic usage 
+# Basic usage
 
 npm info <package name>
 : find out some info about the package e.g. `npm info express`
@@ -39,21 +39,17 @@ npm search <name or grep expressions>
 : search for packages
 
 npm update <package name>
-: updates a specific package 
+: updates a specific package
 
 npm update
 : without specifying a package name, npm will update everything
 
 # registry or repo problems
 
-**npm** is configured to pull from known registries. But from time to time, pulling software from the registries might fail. Repointing the registry to <http://registry.npmjs.org> fixes things 
+**npm** is configured to pull from known registries. But from time to time, pulling software from the registries might fail. Repointing the registry to <http://registry.npmjs.org> fixes things
 
-~~~
-sudo npm config set registry http://registry.npmjs.org
-~~~
+`sudo npm config set registry http://registry.npmjs.org`
 
 # references
 
 1. faq at docs.npmjs.org - [npmjs.org/faq](https://docs.npmjs.com/misc/faq)
-
-

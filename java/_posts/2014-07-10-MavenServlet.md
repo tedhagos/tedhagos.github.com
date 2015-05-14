@@ -19,6 +19,7 @@ and why do we have to structure our maven project like this
 
 Directory Structure
 
+~~~
     ├── pom.xml
     ├── src
     │   └── main
@@ -33,6 +34,8 @@ Directory Structure
         └── tmp
             └── jsp
 
+~~~
+
 Create the toplevel dir
 `mkdir -p src/main/java`  
 `mkdir -p src/main/webapp/WEB-INF`  
@@ -41,62 +44,67 @@ Take the sample of
 Get the sample pom sample of
 web.xml
 
-    <?xml version="1.0" encoding="UTF8"?>
-    <web-app>
-      <servlet>
-        <servlet-name>Hello</servlet-name>
-        <servlet-class>HelloWeb</servlet-class>
-      </servlet>
-      <servlet-mapping>
-        <servlet-name>Hello</servlet-name>
-        <url-pattern>/hello/*</url-pattern>
-      </servlet-mapping>
-    </web-app>
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF8"?>
+<web-app>
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>HelloWeb</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/hello/*</url-pattern>
+  </servlet-mapping>
+</web-app>
+{% endhighlight %}
 
 pom.xml
 
-    <project>
-      <modelVersion>4.0.0</modelVersion>
-      <groupId>com.hagos</groupId>
-      <artifactId>CookieSample</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <packaging>jar</packaging>
+{% highlight java %}
 
-      <properties>
-        <jettyVersion>9.1.2.v20140210</jettyVersion>
-      </properties>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hagos</groupId>
+  <artifactId>CookieSample</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-      <dependencies>
-        <dependency>
-          <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-server</artifactId>
-          <version>${jettyVersion}</version>
-        </dependency>
-      </dependencies>
+  <properties>
+    <jettyVersion>9.1.2.v20140210</jettyVersion>
+  </properties>
 
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-maven-plugin</artifactId>
-            <version>${jettyVersion}</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>${jettyVersion}</version>
+    </dependency>
+  </dependencies>
 
-            <configuration>
-              <mainClass>CookieSample</mainClass>
-              <scanTarget>src/main/java/</scanTarget>
-              <scanIntervalSeconds>1</scanIntervalSeconds>
-            </configuration>
-          </plugin>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
 
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>1.2.1</version>
-          </plugin>
+        <configuration>
+          <mainClass>CookieSample</mainClass>
+          <scanTarget>src/main/java/</scanTarget>
+          <scanIntervalSeconds>1</scanIntervalSeconds>
+        </configuration>
+      </plugin>
 
-        </plugins>
-      </build>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+      </plugin>
 
-    </project>
+    </plugins>
+  </build>
+
+</project>
+{% endhighlight %}
 
 You still have to mvn compile, to see the changes on the servlet

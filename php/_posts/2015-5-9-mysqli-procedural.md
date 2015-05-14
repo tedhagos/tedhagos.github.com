@@ -7,7 +7,7 @@ tags:
 
 Start by connecting to the database. PHP is a server side scripting language and heavily dependent on the http protocol. The  request/response nature of http means that whatever data or information you created on previous requests, will not matter in future request. Everytime you need to do something that involves a database operation (insert, delete, update or select), you need to make a connection to the database before you can do anything else.
 
-~~~
+{% highlight php startinline %}
 // filename db.php
 <?php
 
@@ -21,17 +21,17 @@ global $cn;
 $cn = mysqli_connect(DBSERVER,DBUSER,DBPASS,DBNAME);
 
 if(mysqli_connect_errno()) {
-  die("DBCONNECT | database connection failed" . mysqli_connect_error());	
+  die("DBCONNECT | database connection failed" . mysqli_connect_error());
 }
 
 ?>
-~~~
+{% endhighlight %}
 
 The code above is boilerplate, the usual practice is to write this code on a separate file e.g. an include file and "include" or "require" it before doing some other database handling codes like inserts or updates etc.
 
 # Fetch One Record
 
-~~~
+{% highlight php startinline %}
 <?php
 require_once("db.php");
 
@@ -41,14 +41,14 @@ if(!$result) die("db error " . mysqli_error($cn));
 
 $row = mysqli_fetch_assoc($result);
 ?>
-~~~
+{% endhighlight %}
 
-Notice the `require_once` statement on the first line. We need to connect to the database first before we can proceed with fetching a record. 
+Notice the `require_once` statement on the first line. We need to connect to the database first before we can proceed with fetching a record.
 
 
 # Fetch Many Records
 
-~~~
+{% highlight php startinline %}
 <?php
 require_once("db.php");
 
@@ -62,13 +62,13 @@ while($row = mysqli_fetch_assoc($result)) {
   echo "{$fname} {$lname}";
 }
 ?>
-~~~
+{% endhighlight %}
 
-The `mysqli_fetch_assoc` will return an associative array rather than a basic array. You may find, in the course of writing CRUD applications, that associative arrays are more useful than basic arrays. It is more intuitive to read a code like `$fname = $row["firstname"]` rather than a code like `$fname = $row[0]`. 
+The `mysqli_fetch_assoc` will return an associative array rather than a basic array. You may find, in the course of writing CRUD applications, that associative arrays are more useful than basic arrays. It is more intuitive to read a code like `$fname = $row["firstname"]` rather than a code like `$fname = $row[0]`.
 
 There maybe times when you need to work with numeric arrays, for example, if you need to write a pretty generic code that can traverse any given result from `mysqli_fetch`. To work with numeric arrays, you can use the following code
 
-~~~
+{% highlight php startinline %}
 <?php
 require_once("db.php");
 
@@ -82,47 +82,47 @@ while($row = mysqli_fetch($result, MYSQL_NUM)) {
   echo "{$fname} {$lname}";
 }
 ?>
-~~~ 
+{% endhighlight %}
 
 # Update a Record
 
-~~~
+{% highlight php startinline %}
 <?php
 require_once("db.php");
 
-$idno  = $_POST['idno']; 
+$idno  = $_POST['idno'];
 $fname = $_POST['firstname'];
 $lname = $_POST['lastname'];
 
-$query = "UPDATE users SET firstname={$fname}, 
-          lastname={$lname} 
+$query = "UPDATE users SET firstname={$fname},
+          lastname={$lname}
           WHERE idno={$idno}";
 
 $result = mysqli_query($cn, $query);
 if(!$result) die("db error " . mysqli_error($cn));
 
 ?>
-~~~
+{% endhighlight %}
 
-The code above is a typical program that handles a form submission. The `$fname`,  `$lname` and `$idno` variables were extracted from the `$_POST` superglobal. The code is not very robust though because it will break if the html form sends data like O'Connel or  any other data that needs to be properly escaped first before saving to the database. Most of the time, when you allow the user to type the data which will be saved to a database, you must always ensure that the data is properly escaped. You can do that by using the `mysqli_real_escape_string` function. 
+The code above is a typical program that handles a form submission. The `$fname`,  `$lname` and `$idno` variables were extracted from the `$_POST` superglobal. The code is not very robust though because it will break if the html form sends data like O'Connel or  any other data that needs to be properly escaped first before saving to the database. Most of the time, when you allow the user to type the data which will be saved to a database, you must always ensure that the data is properly escaped. You can do that by using the `mysqli_real_escape_string` function.
 
-~~~
+{% highlight php startinline %}
 <?php
 require_once("db.php");
 
-$idno   = mysqli_real_escape_string($cn, $_POST['idno']); 
-$fname  = mysqli_real_escape_string($cn, $_POST['firstname']); 
-$lname  = mysqli_real_escape_string($cn, $_POST['lastname']); 
+$idno   = mysqli_real_escape_string($cn, $_POST['idno']);
+$fname  = mysqli_real_escape_string($cn, $_POST['firstname']);
+$lname  = mysqli_real_escape_string($cn, $_POST['lastname']);
 
-$query = "UPDATE users SET firstname={$fname}, 
-          lastname={$lname} 
+$query = "UPDATE users SET firstname={$fname},
+          lastname={$lname}
           WHERE idno={$idno}";
 
 $result = mysqli_query($cn, $query);
 if(!$result) die("db error " . mysqli_error($cn));
 
 ?>
-~~~
+{% endhighlight %}
 
 The `mysqli_real_escape_string` function takes two parameters. The first one is `connection` variable and the second param, obviously, is the actual string data that you would like to escape.
 
@@ -132,5 +132,3 @@ The `mysqli_real_escape_string` function takes two parameters. The first one is 
 1. PHP.net/doc/quickstart [Connections](http://php.net/manual/en/mysqli.quickstart.connections.php)
 2. PHP.net/docs/quickstart/dualinterface [Dual Interface](http://php.net/manual/en/mysqli.quickstart.dual-interface.php)
 3. PHP.net/docs/statements [Executing Statements](http://php.net/manual/en/mysqli.quickstart.dual-interface.php)
-
-
