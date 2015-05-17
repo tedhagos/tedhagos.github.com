@@ -11,15 +11,15 @@ tags:
 
 The html page
 
-~~~
+{% highlight html %}
 <div class="videocontainer">
 <!-- video embed codes here, iframe probably -->
 </div>
-~~~
+{% endhighlight %}
 
 The CSS definition
 
-~~~
+{% highlight css %}
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -37,4 +37,4 @@ The CSS definition
   width: 100%;
   height: 100%;
 }
-~~~
+{% endhighlight %}

@@ -12,6 +12,8 @@ There are two functions that will be handy when you need to work with date and t
 
 # Handling Date Inputs from a Form
 
+The code below will extract the data from the `inputdate` element sent from an html form.
+
 {% highlight php startinline %}
 $date = date('Y-m-d', strtotime($_POST["inputdate"]));
 {% endhighlight %}

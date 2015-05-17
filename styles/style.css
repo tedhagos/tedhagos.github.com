@@ -61,9 +61,14 @@ section {width: 80%; margin: 0 auto;}
   padding: 10px;
 }
 
+/*
 #toc {color: #005bb5;line-height: 1.5em;}
 #toc a {color: #005bb5; text-decoration: none;}
-#toc a:hover {color: blue; text-decoration: underline;}
+*/
+
+#toc {color: #494949;line-height: 1.5em;}
+#toc a {color: #494949; text-decoration: none;}
+#toc a:hover {color: #000;text-decoration: underline;}
 #toc ol li {text-transform: capitalize;}
 #toc ol, #toc ol li {margin-left:0;padding-left:0}
 #toc ol {margin-left:1.9em;}
@@ -78,11 +83,12 @@ section {width: 80%; margin: 0 auto;}
 }
 #tableofcontents h2 {
   color: #b4b4b4;
-  margin-top: 5px;
+  margin-top: 1.5em;
   text-transform:lowercase;
 }
 #tableofcontents a:hover {
   color:#000;
+  text-decoration: underline;
 }
 
 body {
@@ -126,10 +132,9 @@ headline h1 {
   letter-spacing: -1.3px;
   font-weight:300;
   line-height:1.2em;
-  /*color:#a3a3a3; */
   color: #414141;
   text-transform: lowercase;
-  margin-top: 5px;
+  margin-top: 1em;
 }
 
 img {
@@ -140,7 +145,7 @@ img {
 dateCreated, dateModified {display: inline;}
 
 a {color: #005BB5; text-decoration:none;}
-a:hover {color: blue;}
+a:hover {color: blue; text-decoration:underline;}
 
 pre {
   font-family: 'Inconsolata', monospace;
@@ -148,8 +153,6 @@ pre {
   margin-top:2em;
   font-weight: normal;
   white-space: pre-wrap;
-/*  background: #f9f9f9; */
-/*  background: #efefef; */
   padding: 10px;
   white-space:pre-wrap;
   overflow:auto;
@@ -160,23 +163,13 @@ pre {
 }
 
 code {font-family: 'Inconsolata', monospace; font-weight: bold; font-size: 1em;}
-
 pre code {
   overflow: visible;
-/*  padding-top: 1.2em; */
-/*  color: #000; */
-/*  color: #355282; */
-/*  color:#2f4d79; */
-/*  color: #34566e; */
-/* color: #5c5c5c; */
-/*  color: #5d5d5d; */
   font-weight: 400 !important;
   line-height: 1.4em;
-/*  text-indent: 3px; */
-  /* margin-left: -3px; */
 }
 
-footer {font-size: 85%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
+footer {font-size: 90%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
 footer a {color:#6f6f6f;}
 
 .categories { margin-left: 0;padding-left: 0;text-align:right;}

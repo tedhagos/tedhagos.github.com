@@ -13,7 +13,7 @@ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-networ
 
 The network state is exposed via the variable `navigator.connection.type` which will be available to your app as soon as the the `deviceready` event has been raised. The code snippet below shows the basic use of this plugin
 
-~~~
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,8 +37,7 @@ The network state is exposed via the variable `navigator.connection.type` which 
   </script>
 </body>
 </html>
-
-~~~
+{% endhighlight %}
 
 The possible values for `navigator.connection.type` are the following
 
