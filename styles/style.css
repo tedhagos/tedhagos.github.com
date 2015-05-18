@@ -179,6 +179,7 @@ footer a {color:#6f6f6f;}
 }
 .atag {color: brown}
 .acategory {color:gray;}
+.category {text-transform: lowercase;}
 
 @media (min-width: 550px) {
   img {width: 80%;}
