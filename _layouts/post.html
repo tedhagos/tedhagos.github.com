@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
 		{% include head.html %}
+    <!--
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/jquery.jpanelmenu.js"></script>
+    -->
     <link rel="stylesheet" type="text/css" href="/styles/style.css" />
   </head>
   <body>
@@ -11,11 +15,11 @@
       {% for category_name in page.categories limit:1 %}
       <h2>{{ category_name }}</h2>
       <ul>
-        {% assign sorted_pages = (site.categories[category_name] | sort: 'title') %}
-        <!-- {% for post in site.categories[category_name] %} -->
-        {% for post in sorted_pages %}
+        <!-- <li><a href="/">Home</a></li> -->
+        {% assign sortedpages = (site.categories[category_name] | sort: 'title') %}
+        {% for post in sortedpages %}
           <li><a href="{{post.url}}">{{ post.title }}</a></li>
-        {% endfor %}
+          {% endfor %}
       </ul>
       {% endfor %}
       <h2><a href="/">HOME</a></h2>
@@ -30,14 +34,14 @@
         </articleBody>
       </article>
 
+
+
       {% if page.tags.size > 0 %}
       <div id="tagsrelated">
 
       <!--
       filed under: {{page.tags | array_to_sentence_string }}
       #{{page.tags | join: " #"}} -->
-
-
       filed under: #{{page.tags | join: " #"}}
       <br/>
       related docs:
@@ -72,6 +76,26 @@
         {% endfor %}
       </ul>
       </div>
+      <!--
+      <div id="tagsrelated">
+      filed under: {{page.tags | array_to_sentence_string }}
+
+      {% for t in page.tags %}
+        {% if site.tags[t].size > 0 %}
+        <ul>
+        {% for post in site.tags[t] %}
+          {% if post.title == page.title %}
+
+          {% else %}
+            <li class=pagetags><a href={{post.url}}>{{post.title}}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+        {% endif %}
+      {% endfor %}
+
+      </div>
+      -->
       {% endif %}
 
       <footer>
