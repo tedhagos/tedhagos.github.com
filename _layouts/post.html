@@ -16,7 +16,7 @@
       <h2>{{ category_name }}</h2>
       <ul>
         <!-- <li><a href="/">Home</a></li> -->
-        {% assign sortedpages = (site.categories[category_name] | sort: 'title') %}
+        {% assign sortedpages = (site.categories[category_name] | sort: 'title', 'first') %}
         {% for post in sortedpages %}
           <li><a href="{{post.url}}">{{ post.title }}</a></li>
           {% endfor %}

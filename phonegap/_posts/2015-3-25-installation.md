@@ -39,3 +39,5 @@ C:\> npm install -g phonegap
 If you get a "command not found error", the node and npm directories are probably not yet added to system path variable. Make the necessary adjustment/edits to the path variable and run the npm install command again.
 
 When the installation has finished, run `phonegap` on a command line just to make sure everything installed properly. The result you should get from running `phonegap` should be a help screen, not a "command not found error"
+
+

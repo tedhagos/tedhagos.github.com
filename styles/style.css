@@ -8,6 +8,13 @@
 @import url("/styles/fonts.css");
 @import url("/styles/pygment.css");
 
+html {
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  -moz-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
 body, html {padding:0; margin:0;}
 
 .flexbox, .indexflexbox {
@@ -78,9 +85,12 @@ section {width: 80%; margin: 0 auto;}
   line-height: 1.7em;
   font-size: .9em;
 }
+/*
 #tableofcontents a {
-  color:#838383;
+  color:#838383; 
+  color: #6ca4dd;
 }
+*/
 #tableofcontents h2 {
   color: #b4b4b4;
   margin-top: 1.5em;
@@ -92,7 +102,7 @@ section {width: 80%; margin: 0 auto;}
 }
 
 body {
-  font-family: 'Fira Sans';
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1em; font-weight:400;
 /*  background: #fcfcfc; */
 /*  background: #efefef; */
