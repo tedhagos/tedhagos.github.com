@@ -1,0 +1,34 @@
+---
+title: tedhagos.com/categories
+layout: index
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<div id="toc">
+
+<ul>
+  {% for post in site.categories.osx %}
+    <li>{{ post.title }}</li>
+  {% endfor %}
+</ul>
+</div>
+
+<hr/>
+
+{{ site.categories }}
+
+{% for c in site.categories%}
+  {{ c[0] }}
+{% endfor %}
+
+<footer></footer>
+</body>
+</html>
