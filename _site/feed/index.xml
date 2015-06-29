@@ -5,13 +5,235 @@
  <title>Ted's blog'</title>
  <link href="http://tedhagos.com/feed/" rel="self"/>
  <link href="http://tedhagos.com/"/>
- <updated>2015-04-27T16:03:47+08:00</updated>
+ <updated>2015-06-29T16:53:35+08:00</updated>
  <id>http://tedhagos.com/</id>
  <author>
    <name>Ted Hagos</name>
    <email>tedhagos@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Just Enough Java</title>
+   <link href="http://tedhagos.com/java/just-enough-java.html"/>
+   <updated>2015-05-22T23:30:46+08:00</updated>
+   <id>http://tedhagos.com/java/just-enough-java</id>
+   <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;h2 id=&quot;a-brief-history-of-java&quot;&gt;A Brief History of Java&lt;/h2&gt;
+
+&lt;p&gt;In the early part the 1990s, a team of engineers at Sun Microsystem, led by James Gosling, created a programming language called &lt;strong&gt;Oak&lt;/strong&gt;. Sometime later, Oak was renamed to &lt;strong&gt;Java&lt;/strong&gt;. The origins of how Java got its name is a storied one. Some stories say that it was inspired by the coffee and some other stoies say that Java is an acronym for &lt;strong&gt;J&lt;/strong&gt;ames Gosling, &lt;strong&gt;A&lt;/strong&gt;rthur &lt;strong&gt;V&lt;/strong&gt;an Hoff and &lt;strong&gt;A&lt;/strong&gt;ndy Bechtolsheim, all three are from Sun Microsystems. Who knows what the back story really is. As a Java programmer, this story tidbit is just nice to know and we’ll leave it at that.&lt;/p&gt;
+
+&lt;p&gt;In 1996, Java 1.0 was released. Its claim to fame was the applet technology. Before the time of web applications, there were desktop applications. These were thick client software which you need to install on a PC. They were distributed via physical media such as CD ROMS. They were painful to maintain and upgrade. If a company releases a bug fix for a desktop software, that meant packaging the updates on a physical media, distributing it via snail mail so that IT people can install the software on each and every PC. A very painstaking process. &lt;/p&gt;
+
+&lt;p&gt;In the mid 90s, the Internet was experiencing a phenomenal leap in terms of adoption. Internet browsers and web pages were all the rage. It  so happened that Java applets live inside web pages. Applets allowed developers to write applications, distribute it from a central point (a web server) and execute the applications immediately right after the web page has rendered. And it didn’t matter whether the end user was on Linux, Solaris Windows or Mac. As long the web browser ran Java, the applet can run.  Hence the rallying cry of Java, Write Once Run Anywhere or &lt;strong&gt;WORA&lt;/strong&gt; for short. When developers write a bug fix for their apps, they only need to update application from a single location. The next time end users download the web page, they will be using the updated applet.&lt;/p&gt;
+
+&lt;p&gt;1995 was a magical and pivotal moment for Java. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1996&lt;/strong&gt; Java 1.0&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1997&lt;/strong&gt; Java 1.1&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1998&lt;/strong&gt; Java 1.2&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2000&lt;/strong&gt; Java 1.3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2002&lt;/strong&gt; Java 1.4&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2002&lt;/strong&gt; Java 5&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2006&lt;/strong&gt; Java 6&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2011&lt;/strong&gt; Java 7&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2014&lt;/strong&gt; Java 8&lt;/p&gt;
+
+&lt;p&gt;Editions, JEE, JSE etc&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-concepts&quot;&gt;Basic Concepts&lt;/h2&gt;
+
+&lt;p&gt;Java programs are written on source files that has a &lt;strong&gt;.java&lt;/strong&gt; extension. These are nothing more than plain text files&lt;/p&gt;
+
+&lt;h2 id=&quot;development-setup&quot;&gt;Development Setup&lt;/h2&gt;
+
+&lt;p&gt;The Java SE is available for the Solaris, Linux, OSX and Windows platform. The installer files can be downloaded from the &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;Oracle.com site&lt;/a&gt;. Download the binary files appropriate for your platform&lt;/p&gt;
+
+&lt;h3 id=&quot;osx&quot;&gt;OSX&lt;/h3&gt;
+
+&lt;p&gt;The Mac installer is a &lt;strong&gt;.dmg&lt;/strong&gt; file. Like all dmg packages, just double click it and follow the onscreen prompts. It will unwrap the package and reveal a &lt;strong&gt;.pkg&lt;/strong&gt; file. Double click the pkg file then follow the onscreen prompts once again. You will be asked for your  Mac user password because the installer will make changes to the system files. &lt;/p&gt;
+
+&lt;p&gt;JAVA_HOME and bash_profile&lt;/p&gt;
+
+&lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+
+&lt;p&gt;The Windows installer is a typical &lt;strong&gt;.exe&lt;/strong&gt; file. Double click it and follow the onscreen prompts&lt;/p&gt;
+
+&lt;p&gt;JAVA_HOME on Environment Settings&lt;/p&gt;
+
+&lt;h3 id=&quot;linux&quot;&gt;Linux&lt;/h3&gt;
+
+&lt;p&gt;Ubuntu
+Fedora, Centos (recommend a link)&lt;/p&gt;
+
+&lt;p&gt;JAVA_HOME&lt;/p&gt;
+
+&lt;p&gt;http://java.sun.com/javase/downloads/index_jdk5.jsp&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-syntax&quot;&gt;Basic Syntax&lt;/h2&gt;
+
+&lt;h2 id=&quot;identifiers-and-keywords&quot;&gt;Identifiers and Keywords&lt;/h2&gt;
+
+&lt;p&gt;The lexical makeup of our programs require the use of classes, variables and methods. When we create any of these, we need to name them so they can be identified by the compiler. The names we give to our classes, variables and methods are called &lt;strong&gt;identifiers&lt;/strong&gt;. &lt;/p&gt;
+
+&lt;p&gt;Identifiers are programmer defined names. We make them up. There are a few simple rules when creating identifiers. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It cannot start with a digit, but digits are okay to use as long as they are not the first character&lt;/li&gt;
+  &lt;li&gt;It cannot contain special characters except the dollar sign and underscore&lt;/li&gt;
+  &lt;li&gt;It cannot be the same as a Java keyword or reserved word&lt;/li&gt;
+  &lt;li&gt;It can only use the characters A - Z, a - z, 0 - 9&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In the next code snippet, the &lt;strong&gt;identifiers&lt;/strong&gt; in the code are marked in red.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/java/images/keywords.png&quot; alt=&quot;keywords&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;the-java-keywords&quot;&gt;The Java Keywords&lt;/h4&gt;
+
+&lt;p&gt;The list of Java special words are listed below. Not all of them may make sense right now but they don’t have to. At the moment, we simply need to remember that we cannot use them either as class name, method name or variable name.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;abstract&lt;/td&gt;
+      &lt;td&gt;continue&lt;/td&gt;
+      &lt;td&gt;for&lt;/td&gt;
+      &lt;td&gt;new&lt;/td&gt;
+      &lt;td&gt;switch&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;assert&lt;/td&gt;
+      &lt;td&gt;default&lt;/td&gt;
+      &lt;td&gt;goto&lt;/td&gt;
+      &lt;td&gt;package&lt;/td&gt;
+      &lt;td&gt;synchronized&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;boolean&lt;/td&gt;
+      &lt;td&gt;do&lt;/td&gt;
+      &lt;td&gt;if&lt;/td&gt;
+      &lt;td&gt;private&lt;/td&gt;
+      &lt;td&gt;this&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;break&lt;/td&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;implements&lt;/td&gt;
+      &lt;td&gt;protected&lt;/td&gt;
+      &lt;td&gt;throw&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;byte&lt;/td&gt;
+      &lt;td&gt;else&lt;/td&gt;
+      &lt;td&gt;import&lt;/td&gt;
+      &lt;td&gt;public&lt;/td&gt;
+      &lt;td&gt;throws&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;case&lt;/td&gt;
+      &lt;td&gt;enum&lt;/td&gt;
+      &lt;td&gt;instanceof&lt;/td&gt;
+      &lt;td&gt;return&lt;/td&gt;
+      &lt;td&gt;transient&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;catch&lt;/td&gt;
+      &lt;td&gt;extends&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;try&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;char&lt;/td&gt;
+      &lt;td&gt;final&lt;/td&gt;
+      &lt;td&gt;interface&lt;/td&gt;
+      &lt;td&gt;static&lt;/td&gt;
+      &lt;td&gt;void&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;class&lt;/td&gt;
+      &lt;td&gt;finally&lt;/td&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;strictfp&lt;/td&gt;
+      &lt;td&gt;volatile&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;const&lt;/td&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;native&lt;/td&gt;
+      &lt;td&gt;super&lt;/td&gt;
+      &lt;td&gt;while&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;modifiers&quot;&gt;Modifiers&lt;/h2&gt;
+
+&lt;h2 id=&quot;variables&quot;&gt;Variables&lt;/h2&gt;
+
+&lt;h2 id=&quot;collections-and-arrays&quot;&gt;Collections and Arrays&lt;/h2&gt;
+
+&lt;h2 id=&quot;enums&quot;&gt;Enums&lt;/h2&gt;
+
+&lt;h2 id=&quot;keywords&quot;&gt;Keywords&lt;/h2&gt;
+
+&lt;h2 id=&quot;data-types&quot;&gt;Data Types&lt;/h2&gt;
+
+&lt;h3 id=&quot;primitive-types&quot;&gt;Primitive Types&lt;/h3&gt;
+
+&lt;h3 id=&quot;reference-types&quot;&gt;Reference Types&lt;/h3&gt;
+
+&lt;h2 id=&quot;literals&quot;&gt;Literals&lt;/h2&gt;
+
+&lt;h2 id=&quot;package-and-access-modifiers&quot;&gt;Package and Access Modifiers&lt;/h2&gt;
+
+&lt;h2 id=&quot;operators&quot;&gt;Operators&lt;/h2&gt;
+
+&lt;h3 id=&quot;arithmetic&quot;&gt;Arithmetic&lt;/h3&gt;
+
+&lt;h3 id=&quot;relational&quot;&gt;Relational&lt;/h3&gt;
+
+&lt;h3 id=&quot;bitwise&quot;&gt;Bitwise&lt;/h3&gt;
+
+&lt;h3 id=&quot;logical&quot;&gt;Logical&lt;/h3&gt;
+
+&lt;h3 id=&quot;assignment&quot;&gt;Assignment&lt;/h3&gt;
+
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
+
+&lt;p&gt;instanceOf
+(?:)&lt;/p&gt;
+
+&lt;h2 id=&quot;control-flow&quot;&gt;Control Flow&lt;/h2&gt;
+
+&lt;h2 id=&quot;methods&quot;&gt;Methods&lt;/h2&gt;
+
+&lt;h2 id=&quot;classes-and-objects&quot;&gt;Classes and Objects&lt;/h2&gt;
+
+&lt;h2 id=&quot;inheritance&quot;&gt;Inheritance&lt;/h2&gt;
+
+&lt;h2 id=&quot;polymorphism&quot;&gt;Polymorphism&lt;/h2&gt;
+
+&lt;h2 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h2&gt;
+
+&lt;h2 id=&quot;concurrency&quot;&gt;Concurrency&lt;/h2&gt;
+
+&lt;h2 id=&quot;input-and-output&quot;&gt;Input and Output&lt;/h2&gt;
+
+&lt;h2 id=&quot;database&quot;&gt;Database&lt;/h2&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>setup</title>
@@ -303,6 +525,90 @@ $(document).ready(function(){
  </entry>
  
  <entry>
+   <title>XPages Notes</title>
+   <link href="http://tedhagos.com/java/xpages.html"/>
+   <updated>2015-03-26T10:57:29+08:00</updated>
+   <id>http://tedhagos.com/java/xpages</id>
+   <content type="html">&lt;h1 id=&quot;what-is-it&quot;&gt;What is it&lt;/h1&gt;
+
+&lt;p&gt;It’s a &lt;em&gt;notes&lt;/em&gt; design element. Whatever that means. It is used to present content in either a web server or a mobile browser or a notes client. I think, a lot of my confusion stems from the fact that I don’t know notes. So how do I understand this?&lt;/p&gt;
+
+&lt;p&gt;I know about a web presentation but I don’t know anything about a notes clients. From this definition, it appears that XPages is somewhat similar to Apache Cocoon document. It is written in a specific XML dialect, actually &lt;strong&gt;XSP&lt;/strong&gt; which is short for eXtensible Stylesheet Page. This document is then processed so that it can emit either a PDF, html or something else altogether. &lt;/p&gt;
+
+&lt;h2 id=&quot;questions&quot;&gt;Questions&lt;/h2&gt;
+&lt;p&gt;What does NSF stand for? What is a notes database design element Can you build an XPage without the designer? Gotta figure that one out.&lt;/p&gt;
+
+&lt;h1 id=&quot;first-principles-of-designing-an-xpage-application&quot;&gt;First Principles of designing an XPage Application&lt;/h1&gt;
+
+&lt;p&gt;There is an XPage programming model that involves Java, JSF to be specific. It is in chapter 5&lt;/p&gt;
+
+&lt;p&gt;An XPage is a plaintext file. It is written using XSP (I need to be careful if what XSP means is the same for IBM Notes and Apache Cocoon). XSP is a declarative language, a specific dialect of XML. In a declarative language, you define what you want to happen and not how to do it. You leave the how to processors. From the book, it says, you can achieve a lot without a single line of code (Now why don’t I believe that), but you can write code if you want or need to, which will most likely be the case if you want to do something that is non-trivial, things that are beyond the HelloWorld application. It seems that you can code XPages using either Java or JavaScript or both.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-xpage-markup&quot;&gt;The XPage Markup&lt;/h2&gt;
+
+&lt;p&gt;The markup allows us to&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create the user interface&lt;/li&gt;
+  &lt;li&gt;Define data that can be manipulated and displayed&lt;/li&gt;
+  &lt;li&gt;Define the application logic to be executed in response to events&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;does-all-this-makes-sense-to-me&quot;&gt;Does all this makes sense to me&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Can I understand this. This is the basic model for an android app, even XML, there is a processor that reads the markup then a code is emitted so that the appropriate view or UI design element can be properly ran/displayed&lt;/li&gt;
+  &lt;li&gt;XML is all about data, which means that XPage is also a document that defines structured data&lt;/li&gt;
+  &lt;li&gt;No 3 above is what I don’t get. How does it do that. I have to keep reading&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;the-tags&quot;&gt;The tags&lt;/h1&gt;
+
+&lt;p&gt;Each tag in the XSP markup corresponds to a;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User interface control&lt;/li&gt;
+  &lt;li&gt;Data source&lt;/li&gt;
+  &lt;li&gt;Pre defined app logic or&lt;/li&gt;
+  &lt;li&gt;Propery used by one the components of any of the above&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There is well defined interaction between the UI, app, data and app logic. But where is the processor? Is the XPage runtime or Domino runtime. Are these two one and the same&lt;/p&gt;
+
+&lt;p&gt;Each new XPage is an XML doc. Here’s what it looks like&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;xp:view&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.ibm.com/xsp/core&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+ 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xp:view&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The book warns &lt;strong&gt;do not confuse xp:view with notes:view&lt;/strong&gt;, but what does that mean?&lt;/p&gt;
+
+&lt;p&gt;The xmlns attribute should be replaced by your own (but how will I define that. What does the ns document look like)&lt;/p&gt;
+
+&lt;h2 id=&quot;root-of-jsf-element&quot;&gt;Root of JSF element&lt;/h2&gt;
+
+&lt;p&gt;The root is the &lt;strong&gt;view&lt;/strong&gt; tag. This convention was adopted from JSF. The &lt;strong&gt;&amp;lt;xp:view&amp;gt;&lt;/strong&gt; means it is the body of an HTML doc&lt;/p&gt;
+
+&lt;p&gt;The view tag can be customized by adding attributes to it. It is an xml tag after all, so it can have attributes that can add to the specifity of its behavior or how it is displayed. but where can you learn these attributes? (Find the documentation of this one) &lt;/p&gt;
+
+&lt;h2 id=&quot;properties-of-tags&quot;&gt;Properties of tags&lt;/h2&gt;
+
+&lt;p&gt;Properties of tags are categorized according to function&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Accessibility - assistive technologies&lt;/li&gt;
+  &lt;li&gt;Basics - generaral properties&lt;/li&gt;
+  &lt;li&gt;Dojo - Yes. it uses the dojo toolkit, so I need to learn dojo&lt;/li&gt;
+  &lt;li&gt;Data - Optional properties that allow association between data and tag&lt;/li&gt;
+  &lt;li&gt;Events - what events can the component respond to. Kinda like prefabricated events found on VB editors or the predefined events of DOM elements&lt;/li&gt;
+  &lt;li&gt;Styling - CSS stuff&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>How to Include other scripts</title>
    <link href="http://tedhagos.com/php/howto-include-other-scripts.html"/>
    <updated>2015-03-26T00:00:00+08:00</updated>
@@ -481,6 +787,47 @@ C:\&amp;gt; cinst npm -y
 System.out.println(++a);
 &lt;/code&gt;&lt;/pre&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CARES Quick Guides</title>
+   <link href="http://tedhagos.com/nodejs/cares-node.html"/>
+   <updated>2015-01-29T16:09:35+08:00</updated>
+   <id>http://tedhagos.com/nodejs/cares-node</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;Development Environment Setup&lt;/li&gt;
+  &lt;li&gt;DevOps requirement&lt;/li&gt;
+  &lt;li&gt;Basics of Node&lt;/li&gt;
+  &lt;li&gt;Why are we using Express
+    &lt;ul&gt;
+      &lt;li&gt;Routing&lt;/li&gt;
+      &lt;li&gt;Another routing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Basic templating with Jade&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;development-environment-setup&quot;&gt;Development Environment Setup&lt;/h1&gt;
+
+&lt;p&gt;Nodejs is available for a variety of platforms. You can get the binary distributions for installation on &lt;a href=&quot;http://nodejs.org&quot;&gt;nodejs.org&lt;/a&gt;. There are binaries for Mac and Windows. If you are using Linux, you can get NodeJS from the Linux repositories appropriate for your specific flavor of Linux.&lt;/p&gt;
+
+&lt;p&gt;The installation using the binaries requires nothing more than downloading the installer file, double-cliking it and following the prompts. This is true for either the Windows or the Mac binaries.  &lt;/p&gt;
+
+&lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
+
+&lt;p&gt;Download the NodeJS installer file for your platform. Install it on your machine. Open a terminal window. A terminal window launches a shell program that allows you to issue OS commands. On a mac, you can open a terminal window by launching the &lt;strong&gt;Terminal.app&lt;/strong&gt;, it is in &lt;code&gt;/Applications/Utilities/Terminal&lt;/code&gt;. On Windows, you can use &lt;strong&gt;cmd.exe&lt;/strong&gt;. Press the &lt;strong&gt;SuperKey&lt;/strong&gt; on the keyboard and type &lt;code&gt;cmd.exe&lt;/code&gt;. If you are using Windows 7 and below, press the &lt;strong&gt;SuperKey&lt;/strong&gt;, go to &lt;strong&gt;Run&lt;/strong&gt; and type &lt;code&gt;cmd.exe&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;After launching a terminal, type &lt;code&gt;node&lt;/code&gt;. You should get to the &lt;strong&gt;node&lt;/strong&gt; REPL&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+$ node
+&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Quit &lt;strong&gt;node&lt;/strong&gt; by pressing &lt;code&gt;CTRL C&lt;/code&gt;. It will ask you to press &lt;code&gt;CTRL C&lt;/code&gt; again to completely quit. &lt;/p&gt;
 </content>
  </entry>
  
@@ -673,6 +1020,34 @@ boss and delegation, or a clone of myself. I will hand over a post-it note to my
   &lt;li&gt;Non-blocking operation&lt;/li&gt;
   &lt;li&gt;Concurrent&lt;/li&gt;
   &lt;li&gt;Asynchronous&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>JDBC Programming NEW</title>
+   <link href="http://tedhagos.com/java/database-programming-jdbc.html"/>
+   <updated>2015-01-26T21:55:14+08:00</updated>
+   <id>http://tedhagos.com/java/database-programming-jdbc</id>
+   <content type="html">&lt;p&gt;Java applications can communicate to many relational databases like MySQL, Oracle, MSSQLServer and SQLite to name a few. Each of these databases have their own ways and mechanism on how to manipulate data. When you use anyone of these databases, you will generally do so using a client software that is usually provided by the database vendor. If you use SQlite for example, you will manage the database records using the SQLite executable which acts as the database client software. This client allows you to enter SQL commands via a command prompt. &lt;/p&gt;
+
+&lt;p&gt;Our application will be the client.  &lt;/p&gt;
+
+&lt;h2 id=&quot;basic-concepts&quot;&gt;Basic Concepts&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/java/images/jdbc-architecture.png&quot; alt=&quot;jdbc-architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/java/images/jdbc.png&quot; alt=&quot;jdbc&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;steps&quot;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;JDBC Driver&lt;/li&gt;
+  &lt;li&gt;Connection&lt;/li&gt;
+  &lt;li&gt;Statement&lt;/li&gt;
+  &lt;li&gt;ResultSet &lt;/li&gt;
+  &lt;li&gt;SQL &lt;/li&gt;
 &lt;/ol&gt;
 
 </content>
