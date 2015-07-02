@@ -9,13 +9,13 @@ tags:
 
 Create a directory for the application, for this example, the project folder name will be **expressSimple**
 
-{% highlight bash %}
+~~~
 mkdir expressSimple
 cd expressSimple
 mkdir node_modules
 npm install express
 touch server.js
-{% endhighlight %}
+~~~
 
 The first two lines are obvious and does not need an elaborate explanation. They simply created a folder that will hold all the files in our application and we switched our current directory to that project folder. The third line might require a bit of explanation.
 
@@ -40,8 +40,6 @@ app.listen(2000, function(){
 
 
 # Other Ways of Getting Started
-
-
 
 
 Create a file named `package.json` inside the project folder. This file will contain a list of software which the project needs to run. If you have experience working with ruby projects, the `package.json` file is similar to the `bundler`. In Java, this will be similar to maven's pom file and in php, this kind of package management style is the equivalent of `composer`.  The basic idea is to have a file which contains a list of all the software, and their versions, that the project needs to run.
