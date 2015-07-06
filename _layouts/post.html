@@ -18,7 +18,11 @@
         <!-- <li><a href="/">Home</a></li> -->
         {% assign sortedpages = (site.categories[category_name] | sort: 'title', 'first') %}
         {% for post in sortedpages %}
-          <li><a href="{{post.url}}">{{ post.title }}</a></li>
+          {% if post.chapterhead %}
+            <li><a href="{{post.url}}" class="chapterhead">{{ post.title }}</a></li>
+          {% else %}
+            <li><a href="{{post.url}}">{{ post.title }}</a></li>
+          {% endif %}
           {% endfor %}
       </ul>
       {% endfor %}
@@ -28,7 +32,6 @@
     <div id="contents">
       <article itemscope itemtype="http://schema.org/Article" >
         <headline><h1>{{ page.title }}</h1></headline>
-
         <articleBody itempprop="articleBody">
           {{ content }}
         </articleBody>

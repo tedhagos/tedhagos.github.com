@@ -111,7 +111,7 @@ body {
   font-size: 1em; font-weight:400;
 /*  background: #fcfcfc; */
 /*  background: #efefef; */
-  line-height: 1.5em;
+  line-height: 1.6em;
   /*color: #383838; */
   color: #696969;
   margin: 0 auto;
@@ -133,6 +133,10 @@ mast,headline,author,dateCreated, author {
 
 mast a {color: #222;}
 
+a.chapterhead {
+  font-size: 1.8em;
+  font-weight: 400;
+}
 
 h1, h2, h3, h4 {
   font-family: 'Muli';
