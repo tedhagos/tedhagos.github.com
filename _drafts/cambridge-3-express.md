@@ -1,6 +1,7 @@
 ---
 
 title:  3 Express
+chapterhead: yes
 categories:
 - nodejs
 
@@ -19,7 +20,7 @@ The things I would like to cover
 
 The express framework needs to be installed as a dependency of your application. That means we will install it locally via npm on the project folder and not globally. You will install node modules globally if they are tools that you wish to use from anywhere in your system. If the modules are things that you need for a specific project, then these modules needs to be installed as dependency and should be located on the same folder where the project files are.
 
-To get started, 
+To get started,
 
 ~~~
 cd
@@ -37,7 +38,7 @@ var express = require('express'),
     app = express();
 ~~~
 
-At this point, we can use any method of the express object to create our application. The first thing we will use is the `get` method. The `GET` method allows 
+At this point, we can use any method of the express object to create our application. The first thing we will use is the `get` method. The `GET` method allows
 
 
 {% highlight javascript %}
