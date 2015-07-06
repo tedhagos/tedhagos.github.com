@@ -188,7 +188,7 @@ pre code {
 }
 
 footer {font-size: 90%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
-footer a {color:#6f6f6f;}
+/*footer a {color:#6f6f6f;} */
 
 .categories { margin-left: 0;padding-left: 0;text-align:right;}
 .categories  li {

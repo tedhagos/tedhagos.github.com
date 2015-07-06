@@ -1,18 +1,18 @@
 
 
 <dateCreated>
-	{{ page.date | date: "%d %b %y" }} (created)
+	Doc created on  {{ page.date | date: "%d %b %y" }}
   {% if page.lastupdated %}
     <dateModified>
       <br/>
 			<!--
       {{ page.lastupdated | "%B %d, %Y"}} (updated)
 			-->
-			{{ page.lastupdated | "%d %b %y"}} (updated)
+			and last updated on {{ page.lastupdated | "%d %b %y"}}
     </dateModified>
   {% endif %}
 </dateCreated>
-<br/>
+<p/>
 For comments and questions, head over to <a href='http://muut.com/tedhagos' target="_blank">muut.com.</a></br>
 For other stuff, you can email ted[at]thelogbox[dot]com
 <p/>
