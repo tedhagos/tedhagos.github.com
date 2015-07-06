@@ -1,6 +1,6 @@
 ---
 
-title: /2/1/ Basic Setup
+title: 2.1 Basic Setup
 tags:
 - nvm
 - node setup

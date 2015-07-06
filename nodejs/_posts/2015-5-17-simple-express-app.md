@@ -1,6 +1,6 @@
 ---
 
-title:  /3/1/ Simple Express App
+title:  3.1 Simple Express App
 tags:
 - express
 
