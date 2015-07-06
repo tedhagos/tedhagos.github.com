@@ -25,6 +25,17 @@ font-style: medium;
 }
 
 @font-face {
+font-family: 'Muli';
+src: local('Muli'),
+ local('Muli'),
+ url('/fonts/Muli/Muli-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+/*
+
+@font-face {
 font-family: 'Nunito';
 src: local('Nunito'),
  local('Nunito'),
@@ -41,7 +52,8 @@ src: local('Nunito'),
 font-weight: 400;
 font-style: normal;
 }
-/*
+
+
 @font-face {
 font-family: 'Fira Mono';
 src: local('Fira Mono'),
