@@ -108,12 +108,12 @@ section {width: 80%; margin: 0 auto;}
 
 body {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 1em; font-weight:400;
+  font-size: 1.05em; font-weight:400;
 /*  background: #fcfcfc; */
 /*  background: #efefef; */
   line-height: 1.6em;
   /*color: #383838; */
-  color: #696969;
+  color: #4c4c4c;
   margin: 0 auto;
 /*  background: #eee url('/img/body.png') center top; */
 }
@@ -181,6 +181,7 @@ pre {
   line-height: 1em;
   background: #f9f9f9;
   border: 0px solid #e7e7e7;
+  font-size: .9em;
 
 }
 
