@@ -6,6 +6,11 @@ categories: nodejs
 
 ---
 
+NPM is the node package manager. There are side stories you might hear or read about that NPM is not actually an acronym for node package manager, but interesting as that story is, it is of little consequence and adds little value on our knowledge on how to use the package manager. 
+
+If you have ever used NuGet or Chocolatey (Windows tools) or apt-get (Linux Debian tools) or maybe brew, macport or even fink (OSX tools) to install software on your OS, npm is a lot like those. It allows you to install software tools, libraries or even frameworks. 
+
+
 When you installed nodejs using the precompiled binaries, npm would have been installed with it. The section on [node setup](/nodejs/basic-setup.html) details the installation of both node and npm.
 
 The npm tool can also be installed on its own by curling an install file from npmjs.org. If you have already have curl installed, you can run this command from a terminal

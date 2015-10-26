@@ -74,6 +74,9 @@ section {width: 80%; margin: 0 auto;}
 #toc a {color: #005bb5; text-decoration: none;}
 */
 
+.indexflexbox {
+  font-family: 'Fira Sans', 'Helvetica Neue', sans-serif;
+}
 #toc {color: #696969;line-height: 1.5em;}
 #toc a {color: #696969; text-decoration: none; font-weight:300;}
 #toc a:hover {color: #000;text-decoration: underline;}
@@ -83,6 +86,9 @@ section {width: 80%; margin: 0 auto;}
 
 #tableofcontents {
   background: #f1f1f1;
+}
+#tableofcontents a {
+  font-family: 'Fira Sans', 'Helvetica Neueue', 'Helvetica', sans-serif;
 }
 
 #tableofcontents > ul {
@@ -106,16 +112,20 @@ section {width: 80%; margin: 0 auto;}
   text-decoration: underline;
 }
 
+/*
 body {
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.05em; font-weight:400;
-/*  background: #fcfcfc; */
-/*  background: #efefef; */
   line-height: 1.6em;
-  /*color: #383838; */
   color: #4c4c4c;
   margin: 0 auto;
-/*  background: #eee url('/img/body.png') center top; */
+}
+*/
+
+body {
+  font-family: 'Cambria','Georgia', 'Times New Roman', serif;
+  font-size: 1em;
+  line-height: 1.3em;
 }
 
 b, strong {color: #000; font-weight: 500;}
@@ -139,23 +149,32 @@ a.chapterhead {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Muli';
+  font-family: 'Georgia';
   font-weight: 400;
   color: #414141;
   text-transform: capitalize;
 /*  color: #004182; */
   color: #222;
   margin-top: 2em;
+  line-height: 1.2em;
 }
 
+h1 {font-size:3em;}
+h2 {font-size:2.3em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.17em;}
+h5 {font-size: 1em;}
+h6 {font-size: .83em;}
+
 headline h1 {
-  font-family: 'Muli';
+  font-family:'Georgia';
   font-size: 3.1em;
   letter-spacing: -1.3px;
-  font-weight:400;
+/*  font-weight:400; */
   line-height:1.2em;
   color: #414141;
-  text-transform: lowercase;
+/*  text-transform: capitalize; */
+text-transform: none;
   margin-top: 1em;
 }
 
@@ -170,9 +189,9 @@ a {color: #005BB5; text-decoration:none;}
 a:hover {color: blue; text-decoration:underline;}
 
 pre {
-  font-family: 'Inconsolata', monospace;
-  margin-bottom:2em;
-  margin-top:2em;
+  font-family: 'Monaco','Inconsolata','Consolas', monospace;
+  margin-bottom:1em;
+  margin-top:1em;
   font-weight: normal;
   white-space: pre-wrap;
   padding: 10px;
@@ -180,12 +199,13 @@ pre {
   overflow:auto;
   line-height: 1em;
   background: #f9f9f9;
-  border: 0px solid #e7e7e7;
-  font-size: .9em;
-
 }
 
-code {font-family: 'Inconsolata', monospace; font-weight: bold; font-size: 1em;}
+code {
+  font-family: 'Monaco','Inconsolata','Consolas', monospace;
+  font-size: .85em;
+}
+
 pre code {
   overflow: visible;
   font-weight: 400 !important;
@@ -203,6 +223,69 @@ footer {font-size: 90%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
 .atag {color: brown}
 .acategory {color:gray;}
 .category {text-transform: lowercase;}
+
+
+/*
+START Autonumbering for headings -----------------------------
+*/
+
+body {
+counter-reset : h2;
+  }
+
+h2 {
+counter-reset : h3;
+  }
+
+h3 {
+counter-reset : h4;
+  }
+
+h4 {
+counter-reset : h5;
+  }
+
+h5 {
+counter-reset : h6;
+  }
+
+article h2:before {
+content : counter(h2,decimal) ". ";
+counter-increment : h2;
+  }
+
+article h3:before {
+content : counter(h2,decimal) "." counter(h3,decimal) ". ";
+counter-increment : h3;
+  }
+
+article h4:before {
+content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) ". ";
+counter-increment : h4;
+  }
+
+article h5:before {
+content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) "." counter(h5,decimal) ". ";
+counter-increment : h5;
+  }
+
+article h6:before {
+content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) "." counter(h5,decimal) "." counter(h6,decimal) ". ";
+counter-increment : h6;
+  }
+
+h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+content : "";
+counter-increment : none;
+  }
+
+/*
+END Autonumbering for headings -------------------------------
+*/
+
+
+
+/* media queries */
 
 @media (min-width: 550px) {
   img {width: 80%;}

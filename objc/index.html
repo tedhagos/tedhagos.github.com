@@ -1,0 +1,17 @@
+---
+title: tedhagos.com/objc
+layout: layout
+---
+
+<ul>
+  {% assign sortedpages = (site.categories.objc | sort: 'title', 'first') %}
+  {% for post in sortedpages %}
+    <li>
+      <a href={{ post.url }}>{{ post.title }}</a>
+      <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
+        {% if post.lastupdated %}
+          <dateModified>, last updated: {{ post.lastupdated | "%B %d, %Y"}}</dateModified>
+        {% endif %}
+    </li>
+  {% endfor %}
+</ul>

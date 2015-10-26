@@ -6,7 +6,7 @@ layout: index
 <div class="indexflexbox">
 
   <div id="tags">
-    <h2 style="text-align:right;">Categories</h2>
+    <h3 style="text-align:right;">Categories</h3>
     <ul class="categories">
     {% for cat in site.categories %}
       {% assign category = {{cat[0]}} %}
@@ -18,7 +18,7 @@ layout: index
 
   <div id="toc">
 
-    <h2>Doc</h2>
+    <h3>Doc</h3>
 
     <ol reversed>
       {% for post in site.posts %}
