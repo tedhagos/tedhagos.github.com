@@ -2,10 +2,11 @@
 markdown: kramdown
 permalink: /:categories/:title.html
 rdiscount extensions: [smart]
-highlighter: pygments
+highlighter: true
+highlighter: rouge
 lsi: false
 
-pygments:
+rouge:
   tab_size: 2
 
 defaults:

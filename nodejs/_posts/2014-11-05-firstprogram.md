@@ -1,8 +1,6 @@
 ---
 
 title: First Program
-author: Ted Hagos
-categories: nodejs
 
 ---
 
