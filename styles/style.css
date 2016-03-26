@@ -198,6 +198,12 @@ pre code {
   overflow: visible;
   line-height: 1.4em;
 }
+/*
+I had to put a figure.highlight definition because
+for some reason, github marks pygments or rogue code
+highlight with the figure element, and it messed up my
+css
+*/
 figure.highlight {
   margin-left:0px;
   padding:0px;
