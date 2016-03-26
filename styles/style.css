@@ -183,14 +183,13 @@ pre {
   font-weight: normal;
   white-space: pre-wrap;
   padding: 10px;
-  white-space:pre-wrap;
-  overflow:auto;
+/*  overflow:auto; */
   line-height: 1em;
   background: #f9f9f9;
 }
 
 code {
-  
+  font-size: 1.1em;
 }
 
 pre code {
