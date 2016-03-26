@@ -70,7 +70,7 @@ Car *obj = [[Car alloc] init];
 ### The init method
 
 
-{% highlight objc linenos %}
+{% highlight objc %}
 int main(int argv, const char *argv[]) {
   Car *obj = [Car alloc];  
 }
