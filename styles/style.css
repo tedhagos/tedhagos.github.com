@@ -177,7 +177,7 @@ a {color: #005BB5; text-decoration:none;}
 a:hover {color: blue; text-decoration:underline;}
 
 pre {
-  font-family: monospace, 'Monaco','Inconsolata','Consolas', monospace;
+  font-family: monospace;
   margin-bottom:1em;
   margin-top:1em;
   font-weight: normal;
@@ -190,12 +190,11 @@ pre {
 }
 
 code {
-  font-family: monospace;
+  
 }
 
 pre code {
   overflow: visible;
-  font-weight: 400 !important;
   line-height: 1.4em;
 }
 
