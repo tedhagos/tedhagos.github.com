@@ -45,7 +45,7 @@ section {width: 80%; margin: 0 auto;}
   border-top: 1px dashed #cacaca;
   padding-top: 10px;
   color: gray;
-  font-family: 'Inconsolata';
+  font-family: 'Calibri', 'sans-serif';
 }
 
 .relatedlist {
@@ -58,7 +58,7 @@ section {width: 80%; margin: 0 auto;}
 .relatedlist li:after {content: ",";}
 .relatedlist li:last-child:after {content: "";}
 
-.relatedlist a {color: gray; font-family: 'Inconsolata';text-transform:lowercase;}
+.relatedlist a {color: gray; font-family: 'Calibri','sans-serif';text-transform:lowercase;}
 .relatedlist a:hover {text-decoration:underline;}
 
 #tags {width: 30%;padding:10px; background: #f1f1f1;}
@@ -75,10 +75,10 @@ section {width: 80%; margin: 0 auto;}
 */
 
 .indexflexbox {
-  font-family: 'Fira Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto'; font-weight:300;
 }
 #toc {color: #696969;line-height: 1.5em;}
-#toc a {color: #696969; text-decoration: none; font-weight:300;}
+#toc a {color: #696969; text-decoration: none; font-weight:400;}
 #toc a:hover {color: #000;text-decoration: underline;}
 #toc ol li {text-transform: capitalize;}
 #toc ol, #toc ol li {margin-left:0;padding-left:0}
@@ -88,7 +88,7 @@ section {width: 80%; margin: 0 auto;}
   background: #f1f1f1;
 }
 #tableofcontents a {
-  font-family: 'Fira Sans', 'Helvetica Neueue', 'Helvetica', sans-serif;
+  font-family: 'Roboto'; font-weight:300;
 }
 
 #tableofcontents > ul {
@@ -109,15 +109,16 @@ section {width: 80%; margin: 0 auto;}
 }
 
 body {
-  font-family: 'Calibri', 'Helvetica', 'Arial', sans-serif;
-  font-size: 1em;
-  line-height: 1.4em;
+  font-family: 'Roboto', 'Calibri', 'Helvetica', 'Arial', sans-serif;
+  font-size: .95em;
+  font-weight:400;
+  line-height: 1.5em;
   color: #4c4c4c;
 }
 
 b, strong {color: #000; font-weight: 500;}
 
-dt {font-family: 'Inconsolata'; font-weight: bold;}
+dt {font-family: 'Calibri', 'sans-serif'; font-weight: bold;}
 
 
   .menu-trigger {font-size: 3em; cursor: pointer; color: #979797;}
@@ -136,8 +137,8 @@ a.chapterhead {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Muli';
-  font-weight: 400;
+  font-family: 'Roboto';
+  font-weight: 500;
   color: #414141;
   text-transform: capitalize;
 /*  color: #004182; */
@@ -156,9 +157,10 @@ h6 {font-size: .83em;}
 */
 
 headline h1 {
-  font-family:'Muli';
-  font-size: 2.1em;
-  letter-spacing: -1.3px;
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 2.4em;
+  /*letter-spacing: -1.3px; */
 /*  font-weight:400; */
   line-height:1.2em;
   color: #414141;

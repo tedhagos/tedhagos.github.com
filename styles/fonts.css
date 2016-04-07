@@ -1,3 +1,31 @@
+@font-face {
+font-family: 'Roboto';
+src: local('Roboto'),
+ local('Roboto'),
+ url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+font-weight: 300;
+font-style: light;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: local('Roboto'),
+ local('Roboto'),
+ url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: Normal;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: local('Roboto'),
+ local('Roboto'),
+ url('/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: Bold;
+}
+
+/*
 
 @font-face {
 font-family: 'Fira Sans';
@@ -60,6 +88,7 @@ font-weight: 700;
 font-style: bold;
 }
 
+*/
 
 /*
 
