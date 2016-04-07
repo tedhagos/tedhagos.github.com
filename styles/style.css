@@ -143,7 +143,7 @@ h1, h2, h3, h4 {
   text-transform: capitalize;
 /*  color: #004182; */
   color: #222;
-  margin-top: 2em;
+/*  margin-top: 2em; */
   line-height: 1.2em;
 }
 
@@ -186,14 +186,16 @@ pre {
   margin-left:0;
   font-weight: normal;
   white-space: pre-wrap;
-  padding: 10px;
+  color: #000;
+/*  padding: 10px; */
 /*  overflow:auto; */
   line-height: 1em;
-  background: #f9f9f9;
+/*  background: #f9f9f9; */
 }
 
 code {
   font-size: 1.1em;
+  font-weight:normal;
 }
 
 pre code {

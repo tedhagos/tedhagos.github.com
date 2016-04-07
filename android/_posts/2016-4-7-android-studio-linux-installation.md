@@ -40,19 +40,19 @@ Linux users cannot use HAXM. Instead, Intel suggest to use KVM. Again, the detai
 
 Check first if your hardware can run virtualization
 
-```bash
+~~~~
 egrep –c ‘(vmx|svm)’ /proc/cpuinfo
-```
+~~~~
 
 If you see a number more than zero, that means you can run virtualization. You can proceed to install KVM. Virtualization support is not automatically enabled on the BIOS level. You may have to check if hardware virtualization is enabled on your BIOS, enable it as appropriate.
 
 Next step is to install the KVM and a few other packages. Then add your username to the KVM group
 
-```bash
+~~~~
 sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 sudo adduser your_user_name kvm
 sudo adduser your_user_name libvirtd
-```
+~~~~
 
 Reboot. After that, KVM should be available for your use.
 
@@ -62,18 +62,18 @@ The basic steps to get install Android Studio on a Linux machine is as follows
 
 Download the installer from [http://developer.android.com/sdk/index.html](developer.android.com/sdk/). Decompress or unzip the downloaded file and place it somewhere in your disk. Preferably, put it in a place where you have read, write and execute permissions. Your home folder would be a good location
 
-```bash
+~~~~
 cd ~
 cp ~/Downloads/xzvf android-sdk-versionnumberhere.tgz .
 tar -xzvf android-sdk-versionnumberhere.tgz
-```
+~~~~
 
 Switch to the folder where you decompressed the installer and run the android studio shell script. Assuming the installer decompressed the downloaded files into a folder named **android-studio** inside your home folder, run the following command
 
-```bash
+~~~~
 cd ~/android-studio/bin
 ./android-studio.sh
-```
+~~~~
 
 ## Adding SDK libraries
 
