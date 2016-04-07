@@ -11,23 +11,8 @@
   <body>
 
   <div class="flexbox">
-    <div id="tableofcontents">
-      {% for category_name in page.categories limit:1 %}
-      <h2>{{ category_name }}</h2>
-      <ul>
-        <!-- <li><a href="/">Home</a></li> -->
-        {% assign sortedpages = (site.categories[category_name] | sort: 'title', 'first') %}
-        {% for post in sortedpages %}
-          {% if post.chapterhead %}
-            <li><a href="{{post.url}}" class="chapterhead">{{ post.title }}</a></li>
-          {% else %}
-            <li><a href="{{post.url}}">{{ post.title }}</a></li>
-          {% endif %}
-          {% endfor %}
-      </ul>
-      {% endfor %}
-      <h2><a href="/">HOME</a></h2>
-    </div>
+
+
 
     <div id="contents">
       <article itemscope itemtype="http://schema.org/Article" >
@@ -107,8 +92,26 @@
       </footer>
 
       {% include disqus.html %}
-
     </div>
+
+    <div id="tableofcontents">
+      {% for category_name in page.categories limit:1 %}
+      <h2>{{ category_name }}</h2>
+      <ul>
+        <!-- <li><a href="/">Home</a></li> -->
+        {% assign sortedpages = (site.categories[category_name] | sort: 'title', 'first') %}
+        {% for post in sortedpages %}
+          {% if post.chapterhead %}
+            <li><a href="{{post.url}}" class="chapterhead">{{ post.title }}</a></li>
+          {% else %}
+            <li><a href="{{post.url}}">{{ post.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+      </ul>
+      {% endfor %}
+      <h2><a href="/">HOME</a></h2>
+    </div>
+
   </div>
 
   </body>

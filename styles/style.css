@@ -27,17 +27,17 @@ section {width: 80%; margin: 0 auto;}
 
 #tableofcontents {
   width: 25%;
-  padding-right: 20px;
+  padding:10px;
 /*  background: #f3f9ff; */
-  text-align: right;
+  text-align: left;
   font-weight: 300;
 }
+  #tableofcontents > ul {padding-left:0; margin-left:0;}
 #contents {
   -webkit-flex: 1;
           flex: 1;
   padding: 10px;
 /*  background: #fff; */
-  padding-left: 20px;
 }
 
 #tagsrelated {
@@ -140,7 +140,7 @@ h1, h2, h3, h4 {
   font-family: 'Roboto';
   font-weight: 500;
   color: #414141;
-  text-transform: capitalize;
+/*  text-transform: capitalize; */
 /*  color: #004182; */
   color: #222;
 /*  margin-top: 2em; */
@@ -191,8 +191,6 @@ pre {
 /*  overflow:auto; */
   line-height: 1em;
 /*  background: #f9f9f9; */
-  margin-top:1.2em;
-  margin-bottom:1.2em;
 }
 
 code {
@@ -204,6 +202,13 @@ pre code {
   overflow: visible;
   line-height: 1.4em;
 }
+.highlight pre {
+  border-top:1px dashed gray;
+  border-bottom: 1px dashed gray;
+  margin-top:1.2em;
+  margin-bottom:1.2em;
+}
+
 /*
 I had to put a figure.highlight definition because
 for some reason, github marks pygments or rogue code
@@ -287,6 +292,24 @@ counter-increment : none;
 END Autonumbering for headings -------------------------------
 */
 
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
 
 
 /* media queries */
