@@ -77,7 +77,12 @@ cd ~/android-studio/bin
 
 ## Adding SDK libraries
 
-Launch Android Studio. From the command line, cd to `/path/to/android-studio/bin` and then run `./android-studio.sh`. Click "Configure"
+Launch AS from the command line. Switch to the folder where you installed it and run the android studio shell script
+
+~~~~
+cd ~/path/to/android-studio/bin
+./android-studio.sh
+~~~~
 
 Choose the SDK Manager. Launch the stand alone SDK Manager, so you can cherry pick only the packages and tools that are absolutely necessary
 

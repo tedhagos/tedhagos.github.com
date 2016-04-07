@@ -191,6 +191,8 @@ pre {
 /*  overflow:auto; */
   line-height: 1em;
 /*  background: #f9f9f9; */
+  margin-top:1.2em;
+  margin-bottom:1.2em;
 }
 
 code {
