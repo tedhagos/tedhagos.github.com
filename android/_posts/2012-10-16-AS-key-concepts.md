@@ -1,8 +1,7 @@
 ---
 
-title: Key Concepts
-author: Ted Hagos
-categories: android
+title: 3. Key Concepts
+chapterhead: yes
 
 ---
 

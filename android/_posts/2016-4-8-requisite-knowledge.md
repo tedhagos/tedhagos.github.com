@@ -1,8 +1,9 @@
 ---
 
-title: Requisite Knowledge
+title: 1.3 Requisite Knowledge
 
 ---
+
 
 java language fundamentals
 : you will need to be familiar with programming fundamentals in Java. Even if Android uses a different VM to run the apps, the language used for native apps development is Java. The more familiarity you have with basic programming concepts in Java, the better. You should at least know the concept of variables, constants, branching and looping, packaging and scope visibility, basic I/O and file persistence

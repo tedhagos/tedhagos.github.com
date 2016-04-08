@@ -1,8 +1,7 @@
 ---
 
 title: Network Connectivity
-author: Ted Hagos
-categories: android
+
 
 ---
 

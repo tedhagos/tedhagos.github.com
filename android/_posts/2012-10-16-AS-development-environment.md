@@ -1,8 +1,6 @@
 ---
 
 title: Development Environment
-author: Ted Hagos
-categories: android
 
 ---
 

@@ -2,7 +2,7 @@
 
 title: CLI Development Environment
 author: Ted Hagos
-categories: android
+
 
 ---
 

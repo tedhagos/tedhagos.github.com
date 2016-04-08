@@ -1,7 +1,6 @@
 ---
 
-title: Activities
-chapterhead: yes
+title: 4.1 Activities
 lastupdated: 07 April 2016
 
 ---

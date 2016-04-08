@@ -1,7 +1,6 @@
 ---
 
-title: Application Structure
-chapterhead: yes
+title: 3.4 Application Structure
 lastupdated: 07 April 2016
 
 ---

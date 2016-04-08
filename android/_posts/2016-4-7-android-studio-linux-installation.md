@@ -1,6 +1,6 @@
 ---
 
-title: Android Studio Installation on Linux
+title: 2.3 Development Setup - Linux
 
 ---
 

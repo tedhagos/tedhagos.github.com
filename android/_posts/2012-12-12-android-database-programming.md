@@ -1,9 +1,6 @@
 ---
 
-title: Database Programming
-author: Ted Hagos
-categories: android
+title: 6.3 Database Programming
+lastupdated: 08 April 2016
 
 ---
-
-# TODO Rewrite the example

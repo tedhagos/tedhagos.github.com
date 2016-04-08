@@ -2,7 +2,6 @@
 
 title: Android Project
 author: Ted Hagos
-categories: android
 
 ---
 
