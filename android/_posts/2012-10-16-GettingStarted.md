@@ -1,8 +1,7 @@
 ---
 
 title: Getting Started
-author: Ted Hagos
-categories: android
+chapterhead: yes
 
 ---
 
