@@ -1,6 +1,6 @@
 ---
 
-title: CLI Development Environment
+title: 2.6 CLI Development Environment
 lastupdated: 08 April 2016
 
 ---

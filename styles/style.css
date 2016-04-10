@@ -234,6 +234,11 @@ footer {font-size: 90%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
 .acategory {color:gray;}
 .category {text-transform: lowercase;}
 
+blockquote {
+  border-left: 2px dashed #ccc;
+  padding-left: 20px;
+}
+
 
 /*
 START Autonumbering for headings -----------------------------
