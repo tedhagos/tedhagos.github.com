@@ -1,28 +1,22 @@
 ---
 
 title: CLI Development Environment
-author: Ted Hagos
-
+lastupdated: 08 April 2016
 
 ---
 
-The Android SDK is a collection of tools and libraries to help you build Android projects. Before you can create projects, you must install the SDK. The SDK also installs, among other things, the Android Virtual Device or the AVD. The AVD emulates a physical android device. You can use this for testing your applications.
+Download the precompiled binary installer from [developer.android.com download page](http://developer.android.com/sdk/index.html). If you choose to download Android Studio, it will also install the SDK. You may choose to download just the SDK and not Android Studio. There is a section on the download where it specifically says "get just the command line tools".  The android sdk command line tools will need the java development kit and apache ant installed. 
 
-The SDK depends on other software. You need to make sure that you have the following installed on your system.
+The installer comes in a compressed file. Decompress it and place it somewhere in your disk where you have read, write and execute permissions. 
 
--   A Java Development Kit. You will need the full JDK not just the JRE. The JRE is good only for running Java software, not for developing them. The prescribed versions of JDK is either 1.5 or 1.6 but I have experience running them on Java 7 and 8 without problems
--   Apache Ant will also be needed. Android uses Ant as a build tool
+{% highlight bash %}
+mv /path-to-downloaded-binary/android-sdk_rversionno-yourOS.tgz .
+tar -xzvf android-sdk_rversionno-yourOS.tgz
+mv android-sdk_rversionno-yourOS android-sdk
+{% endhighlight %}
 
-# Download
+The third command was not necessary, I simply prefer the shorter folder name "android-sdk". You may leave the default folder name if you wish.  The directory structure of the SDK is as follows
 
-The SDK can be downloaded from <https://developer.android.com/sdk>. Click the link which says "View all downloads and sizes". The SDK is available for Mac, Linux and Windows, find the right installer for your platform and download it.
-
-# Configure
-
-At the time of writing, the SDK is packaged as a zipped file.  Unzip the downloaded file somewhere your disk. Unzip it preferably to a directory where you have read,write and execute privileges so you do not have to worry about tweaking permissions later. The name of directory where you unzipped the SDK files will be known as ANDROID\_HOME. 
-
-    ~/android-sdk-linux/
-    
     ├── add-ons
     ├── build-tools
     ├── docs
@@ -34,109 +28,225 @@ At the time of writing, the SDK is packaged as a zipped file.  Unzip the downloa
     ├── temp
     └── tools
 
-The diagram above shows the folder structure of the unzipped SDK files on a Linux box. If you are on Windows, this could be **c:\\>Users\yourname\android-sdk-windows**. On a Mac it could read **~/android-sdk-mac**.
+Add "tools" and "platform-tools" to your system path. Restart your shell or terminal appropriately so that the new environment settings will take effect. The sdk comes complete with tools and utilities that you will need to develop android applications, there are quite a few of them. Here's some of them.
 
-There are two specific folders in the ANDROID\_HOME that you must include in your system path, the tools folder and the platform-tools folder.  The common utilities and commands that you will use in Android Development are found on those folders. 
+android
+: probably the command you will use the most. This command can manager projects and virtual devices. It can also launch the graphical SDK manager tool that lets you download android packages (API levels or versions), tools and some other extras. The manager can launch the avd (android virtual device) which is another manager. The avd lets you define and start emulators which you can use for testing applications
 
-## Mac
+emulator
+: manages virtual devices
 
-You can edit your **~/.bash_profile** and include the following
+adb
+: the android debug bridge is a client-server debugger
 
-    export ANDROID_HOME=/<location of android home>
-    export PATH=$PATH:ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
+monitor
+: graphical tool that is used for debugging and analysis. It now encapsulates other tools such as ddms, traceview, systrace, hierarchy viewer
 
-Replace <location of android home> with the actual directory location of your ANDROID_HOME
+## Create a Project
 
-## Linux
+{% highlight bash %}
+android create project --path hello --activity Hello --target 23 --package com.tedhagos
+{% endhighlight %}
 
-You can edit **~/.bashrc** and include the following
+--path
+: this will become the project folder. In the example above, a folder named "hello" will created in the current working directory where  `android create` was invoked
 
-    export ANDROID_HOME=/<location of android home>/
-    export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:.
+--activity
+: a java class named "Hello.java" will be created
 
-Replace <location of android home> with the actual directory location of your ANDROID_HOME
+--target
+: the API level or android version
 
-## Windows
+--package
+: the company domain of your project. This is ideally your website (as a company or individual developer) in reverse dns notation. This also dictates the file organization of your java codes. In this case, the main source file will be located in `hello/src/com/tedhagos/Hello.java`
 
-You can include the path of tools and platform-tools using the GUI tools. Go to Control Panel, System Properties then go Environment Variables. You can put it either in User or System variables. If you do not have Administrative privileges on the Windows machine, you may not be able to alter the System variables. 
+The `create` project command will generate the following files and subfolders.
 
-Alternatively, you can create a batch file somewhere on your user directory and set the paths on that batch file.  Launch cmd.exe to get a command line window
+    .
+    ├── AndroidManifest.xml
+    ├── ant.properties
+    ├── bin
+    ├── build.xml
+    ├── libs
+    ├── local.properties
+    ├── proguard-project.txt
+    ├── project.properties
+    ├── res
+    │   ├── layout
+    │   │   └── main.xml
+    │   └── values
+    │       └── strings.xml
+    └── src
+        └── com
+            └── tedhagos
+                └── First.java
 
-    cd \Users\<yourname>
-    notepad adev.bat
 
-Write the following inside adev.bat
+## Virtual Devices
 
-    set ANDROID_HOME=c:\<location of android home>
-    set PATH=%PATH%/tools;%ANDROID_HOME%/platform-tools:.
+{% highlight bash %}
+android create avd --name marshmallow --target android-23 --abi default/x86
+{% endhighlight %}
 
-You will need to run this batch file each time you open a cmd window so the Android path information can be recognized. The moment you close the cmd window, these path settings will be lost. If you include the Android paths using the System Properties method, will be permanent. Each time you open an cmd window, the paths will be set automatically.
+The above command will create a virtual device that we can use for testing.
 
-# Download the Android versions
+--name
+: you can choose whatever name you want. This is programmer defined
 
-The SDK includes just the tools and utilities for development. It does not include the specific Android platform libraries that you will need. You will need to download the specific platforms/versions using the SDK manager. You may also need to download system images which will be required when you create an emulator. 
+--target
+: API level of the virtual device
 
-Open a terminal window and type 
+--abi
+: system image that will be used for the device. Only put images that are already dowloaded by the android sdk manager
 
-    android
+You can launch the emulator using the command
 
-This will launch the Android SDK Manager. If you get a "bad command command or file name" or a "command not found error" that means you have not included the **tools** and **platform-tools** folder of the SDK into your PATH. Fix that first, then try the **android** command again.
+{% highlight bash %}
+emulator -avd marshmallow
+{% endhighlight %}
 
-![img](../images/android-sdk-manager.png)
+## Debugging 
 
-Android has been around for quite some time. There have been several versions of it over the course of many years. Each version of the Android platform can be downloaded using this tool. If you have a lot of bandwidth and disk space, you can download all of them by ticking all the check boxes you can find. Or you can simply download the Android versions you want to target for development.
+Once the emulator has been launched, we can connect a debugger to it. We will use the android debug bridge.
 
-If you want to develop apps that will run on KitKat, tick the box of "Android 4.4.2 (API 19)". At a minimum, you will need the "SDK platform", so check that. You will also need the "System Images", check those that you want to use. If you are unsure which System Image you will need, just check "Intel X86 Atom System Image".  
+{% highlight bash %}
+adb devices
+{% endhighlight %}
 
-Scroll down the SDK Manager window and go to the "Extras" section. Check the "Android Support Library". If you are on Windows, you might need the "Google USB Driver", Mac and Linux users do not need the drivers. The USB drivers will be needed if you use a real Android device to run and test your app.  
+You should see the emulator device listed on the screen. Connect to it using the command
 
-Once you are happy with your selections, click the "Install packages" button. You will have to accept the license agreement before any download begins.  
+{% highlight bash %}
+adb connect [ipaddress]:[portno]
+{% endhighlight %}
 
-# Android Virtual Device
+We can now attach the debugger to running emulator.
 
-The Android Virtual Device emulate a real device. You can use this for testing your apps in place of a real device. I do highly recommend testing your app on real device before you release to the public. There is no substitute with real device testing.
+{% highlight bash %}
+adb logcat -c
+adb logcat
+{% endhighlight %}
 
-## Create an AVD
+The first command will clear the logcat buffer, it is a good idea to start with a clean slate during debugging. 
 
-You can create an AVD for any Android platform provided that you downloaded a System Image for it. To create an AVD, use the following command on a terminal window
+Edit the file `Hello.java`, we won't do anything significant with it yet, but we will add some debugging codes inside the onCreate method.  
 
-    android create avd --name kitkat --target android-19 --abi default/x86
+{% highlight java %}
+package com.tedhagos;
 
-The preceding command will create an an AVD for android API level 19, which is KitKat version. It was given a name "kitkat" using the &#x2013;name flag. The System Image used was the default/x86 image (Intel X86 Atom System Image). 
+import android.app.Activity;
+import android.os.Bundle;
 
-If you are wondering how did we know what values to put in the command options, that answer is we got them by listing the available android targets. You can view the available targets using the command **android list targets**. It will list all the versions of Android which you downloaded earlier using the SDK Manager. Below is a snippet of the output using the android list targets command.
+public class Hello extends Activity {
 
-    id: 11 or "android-19"
-         Name: Android 4.4.2
-         Type: Platform
-         API level: 19
-         Revision: 4
-         Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
-     Tag/ABIs : default/armeabi-v7a, default/x86
--   **&#x2013;name**. Put any name you want, I used kikat in our example because it is descriptive
--   **&#x2013;target**. The API Level for your application. If we wanted to create a project that will run on JellyBean, I would have put android-18. But I did put android-19 because I wanted the app to run on KitKat
--   **&#x2013;abi**.  The name of the System Image that you will use for the emulator, in our example above I could also have used default/armeabi-v7a because it is also listed among the available targets
+  /** Called when the activity is first created. */
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
+  }
+}
+{% endhighlight %}
 
-The create avd command has a couple of options you can use, but we only used three of them. You can pass other options that will affect things like skin, sdcard storage etc.  You can learn the other options of this command by typing **android create avd** without any options. That will display the help file.
+Insert  the statement `System.out.println("Hello World");` anywhere inside the onCreate method. Then use the command below to build and install an android package for hello project.
 
-Overtime, you will create more AVDs because you will target different Android versions. To find out how many and what kind of AVDs you already have created, use the command
+{% highlight bash %} 
+ant debug install
+{% endhighlight %}
 
-    android list avd
+If an android emulator or a physical device is connected to the computer, the android debug bridge would have kicked in as part of the build process and automatically install the apk on the device. A stream of debug messages also passed through the logcat screen. Everything that happens on an android device is captured by logcat. In order for us to see our simple hello message, we need to filter the logcat output. Kill the `adb logcat` sesssion, **ctrl+c** usually does the job. Then restart the debugger with a filter.
 
-That command will output the details of all the AVDs you have created.
+{% highlight bash %}
+adb logcat -c
+adb logcat | grep System.out
+{% endhighlight %}
 
-You can test the AVD you just created by launching it
+Edit the Hello.java source file and override the onBackPressed method
 
-    emulator -avd kitkat
+{% highlight java %}
+package com.tedhagos;
 
-This command will launch the emulator in its own window. Just close the window if you want to terminate the emulator. 
+import android.app.Activity;
+import android.os.Bundle;
 
-## Alternative AVD Management
+public class Hello extends Activity {
 
-The creation and management of AVDs can also be accomplished using the GUI tool of the Android SDK Manager. Launch the SDK Manager again using the **android** command from a terminal window. Go to "Tools" then "Manage AVDs". 
+  /** Called when the activity is first created. */
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
 
-![img](../images/avd-creation.png)
+    System.out.println("Hello");
+  }
 
-![img](../images/avd-launched.png)
+  public void onBackPressed() {
+    super.onBackPressed();
+    System.out.println("Back button was pressed");
+  }
+}
+{% endhighlight %}
 
+Rebuild and reinstall the apk to the emulator.
+
+{% highlight bash %}
+ant debug install
+{% endhighlight %}
+
+You should see the hello message by now. Try clicking the back button of emulated phone.
+
+## Using logcat in your applications
+
+The System.out is quite handy for debugging, but the preferred way to create debug messages is to use the Log class. Rewrite the Hello.java activity file and replace the System.out statements with Log statements.
+
+{% highlight java %}
+package com.tedhagos;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class Hello extends Activity {
+
+  private static String TAG = "Hello";
+  /** Called when the activity is first created. */
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
+
+    Log.d(TAG, "Hello");
+  }
+
+  public void onBackPressed() {
+    super.onBackPressed();
+    Log.d(TAG, );
+  }
+}
+{% endhighlight %}
+
+The Log class is from the package android.util, make sure to include it in your import statements. Next, we will restart the android debug bridge and apply a new filter to logcat. The first argument to the Log.d method is a String value. You can put whatever you want in this value, in our example above, I set to the same value as the name of the activity. 
+
+{% highlight bash %}
+adb logcat -c
+adb logcat | grep Hello
+{% endhighlight %}
+
+Rebuild and reinstall the android package to the emulator
+
+{% highlight bash %}
+ant debug install
+{% endhighlight %}
+
+## Shell access to the Emulator or Device
+
+
+
+
+
+
+
+## References
+
+1. developer.android.com [download page](http://developer.android.com/sdk/index.html). Retrieved 08 April 2016
+2. developer.android.com [Log class](http://developer.android.com/reference/android/util/Log.html)
 

@@ -9,6 +9,9 @@ Android may refer to many things, some people use it to refer to their mobile de
 
 This platform is special version of Linux that is optimized for mobile devices. The Linux part takes care system services e.g. network and file operations, concurrency etc. The platform includes a bunch of other things like WebKit which is the same browser engine that powers Chrome and Safari. It also has SQLite which you can use for database programming. It has other components useful for application development, but instead of listing all of them here, I will point them out in later when we need to use them.
 
+![](images/android-runtime.png)
+
+
 The one other thing to point out in the Android software stack is the framework. The framework lets us do things such as create screens, write code that runs in background, listen to some events that may happen on the mobile device (and do something about it). The platform enables us to do all these things by simply extending existing classes in the Android SDK.
 
 Extending classes means utilizing the inheritance mechanism of Java to reuse existing functionality. The Android development team already wrote codes to display buttons and textfields for example. All we need to do, is to reuse them, mash them up or mix it up so we can use them in our own applications.

@@ -5,27 +5,19 @@ chapterhead: yes
 
 ---
 
+## A Project
 
+An application is built from an android project. A project is made of up 3 things. These are components, resources and manifest file. Components are the building blocks of an application, examples of these are activities, services, broadcast receivers, intents and content providers. These components and resources are loosely related to each other, there is little dependency that exist among them. The manifest file is the glue that holds components and resources together. The SDK tools, specifically the android application package tool (aapt) expect a certain structure on the project, it follows a certain convention. The aapt tool takes care of packaging the compiled codes and resources into an .apk file (android package). The apk file is what we install on devices and emulators, it is also the same file that ends up in Google Play market
 
-Android applications are comprised of Java executable codes, XML files and other application resources like video, images and audio. These are all bundled together inside an .apk file.
+## Source Files, Byte codes and dex
 
-You will write your program in the Java programming language and compile them using the  Android SDK (software development kit). When the app is compiled, it becomes an android package. An android package is an archive file with a .apk extension. Think of them like zipped files for Android.
+Components are built with either a java source file or an xml file or both. We needed to install the java development kit because we still need the java toolchain to compile our source. The resulting java bytecode will not be used during runtime. The android runtime (ART) executes .dex files (dalvik executables). Dalvik executables and java executables are not the same thing 
 
-When applications have been built and digitally signed, they can be distributed on market places like Google Play or Amazon. They don't have to be but these market places are frequented by a lot of people, your can benefit from exposure which the market places can offer. 
+![workflow execution model](images/workflow-execution-model.png)
 
-## Architecture
+## Sandbox
 
-Android may refer to many things, some people use it to refer to their mobile device and some others use the term to refer to the programming environment. That's fine. For our purpose, what we mean by Android is a platform which have runtime components where mobile apps can run.
-
-This platform is special version of Linux that is optimized for mobile devices. The Linux part takes care system services e.g. network and file operations, concurrency etc. The platform includes a bunch of other
-things like WebKit which is the same browser engine that powers Chrome and Safari. It also has SQLite which you can use for database programming. It has other components useful for application development, but instead of listing all of them here, I will point them out in later when we need to use them.
-
-The one other thing to point out in the Android software stack is the framework. The framework lets us do things such as create screens, write code that runs in background, listen to some events that may happen on the mobile device (and do something about it). The platform enables us to do all these things by simply extending existing classes in the
-Android SDK.
-
-Extending classes means utilizing the inheritance mechanism of Java to reuse existing functionality. The Android development team already wrote codes to display buttons and textfields for example. All we need to do, is to reuse them, mash them up or mix it up so we can use them in our own applications.
-
-The Android SDK is a collection of tools and code libraries. SDK is short for software development kit. You will need to download, install and configure the SDK before you can start any development work.
+Each application, when launched, will be ran in their own dedicated process with its own instance of the virtual machine. This ensures that the application's data is protected from other applications. Data sharing between applications is provided by certain mechanism such as content providers, intents and IPCs (interprocess communication).
 
 ## Versions and API level
 

@@ -17,20 +17,20 @@ I ran into some problems when using Android Studio on Linux. The following secti
 
 Linux could be missing some library files. If you run the installer at this point, it may crash and throw out the error message **cannot run mksdkcard tool**. A solution that worked was to add the **libstdc++6** to Linux
 
-{% highlight bash %}
+~~~~
 sudo apt-get update
 sudo apt-get install lib32stdc++6
-{% endhighlight %}
+~~~~
 
 ## Gradle build tool
 
 The gradle build tool maybe stuck in **building** for a long time. 64 bit Linux installations may have to install additional libraries for gradle to function properly
 
-{% highlight bash %}
+~~~~
 sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt-get install libncurses5:i386 libstdc++6:i386 zlib1g:i386
-{% endhighlight %}
+~~~~
 
 ## Hardware Acceleration
 
@@ -89,5 +89,5 @@ Choose the SDK Manager. Launch the stand alone SDK Manager, so you can cherry pi
 
 ## References
 
-1. **Stackoverflow** - http://stackoverflow.com/questions/28847151/unable-to-install-android-studio-in-ubuntu
-2. **Intel** - https://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture#_Toc358213273
+1. **Stackoverflow** - http://stackoverflow.com/questions/28847151/unable-to-install-android-studio-in-ubuntu. Retrieved 07 April 2016
+2. **Intel** - https://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture#_Toc358213273. Retrieved 07 April 2016

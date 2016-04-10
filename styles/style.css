@@ -172,6 +172,7 @@ text-transform: none;
 img {
   display: block;
   width: 100%;
+  margin:0 auto;
 }
 
 dateCreated, dateModified {display: inline;}
@@ -238,6 +239,8 @@ footer {font-size: 90%;margin-top: 40px; line-height:1.4em; font-weight: 300;}
 START Autonumbering for headings -----------------------------
 */
 
+
+/*
 body {
 counter-reset : h2;
   }
@@ -288,6 +291,7 @@ content : "";
 counter-increment : none;
   }
 
+*/
 /*
 END Autonumbering for headings -------------------------------
 */
@@ -315,11 +319,11 @@ END Autonumbering for headings -------------------------------
 /* media queries */
 
 @media (min-width: 550px) {
-  img {width: 80%;}
+  img {width: 70%;}
 }
 
 @media (min-width: 950px) {
-  img {width: 70%;}
+  img {width: 60%;}
 }
 /*
 @media (min-width: 550px) {

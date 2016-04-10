@@ -58,5 +58,5 @@ When Android first came out, many thought that Google would become telephone han
 
 ## References
 
-1. Wikipedia [android version history](https://en.wikipedia.org/wiki/Android_version_history)
-2. OHA [Frequently Asked Questions](http://www.openhandsetalliance.com/oha_faq.html)
+1. Wikipedia [android version history](https://en.wikipedia.org/wiki/Android_version_history). Retrieved 08 April 2016
+2. OHA [Frequently Asked Questions](http://www.openhandsetalliance.com/oha_faq.html). Retrieved 08 April 2016
