@@ -1,6 +1,6 @@
 ---
 
-title: 2.6.1 cannot  find build.xml
+title: 2.7 cannot  find build.xml
 
 ---
 

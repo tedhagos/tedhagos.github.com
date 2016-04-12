@@ -1,9 +1,25 @@
 ---
 
-title: 2.6 CLI Development Environment
+title: 2.6 Cmd Line Tools - LAB
 lastupdated: 08 April 2016
 
 ---
+
+
+## Introduction
+
+
+## Objectives
+
+- Configure the system path to include the android command line tools
+- Create a simple project
+- Familiarize with the directory structure of an android project
+- Create and run a virtual device
+- Use logcat and the Log class for debugging
+- Attach a debugger to a running emulator
+
+
+##  Creating, Running and Testing Applications using the Cmd Line Tools
 
 Download the precompiled binary installer from [developer.android.com download page](http://developer.android.com/sdk/index.html). If you choose to download Android Studio, it will also install the SDK. You may choose to download just the SDK and not Android Studio. There is a section on the download where it specifically says "get just the command line tools".  The android sdk command line tools will need the java development kit and apache ant installed. 
 
