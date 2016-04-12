@@ -83,10 +83,4 @@ The ACTION_TIME_TICK is a protected intent which can only be sent by the system.
 ## Exercises
 
 
-## References
 
-Youtube source <https://www.youtube.com/watch?v=OjGtGjuHecI> Vogella source <http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html>
-
-Although, the vogella tutorial was very verbose, the OReilly video was more clear in explanation
-
-Notes from StackOverflow <http://stackoverflow.com/questions/22445413/android-implicit-intents-vs-broadcast-receivers>
