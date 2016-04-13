@@ -10,7 +10,7 @@ title: 5.1.2 Implicit Intents - LAB
 
 ## Objectives
 
-## Explicit Intents
+## Implicit Intents
 
 **1. Start an emulator**, then push some images to the sdcard. You can do this using the android device monitor. Navigate to the file browser, select /mnt/sdcard by pointing and clicking to it using your mouse. You can drag and drop images onto that folder
 
