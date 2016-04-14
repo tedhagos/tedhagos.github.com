@@ -1,15 +1,10 @@
 ---
-title: 4.2.1 ListView - LAB
+title: 4.2.1 Basic ListView Usage - LAB
 ---
 
 # Introduction
 
-**Source files**:
-
-- github page [github.com/tedhagos](git@github.com:tedhagos/BroadcastReceiverManifest.git) or;
-- `git clone git@github.com:tedhagos/BroadcastReceiverManifest.git` or;
-- ` git clone https://github.com/tedhagos/BroadcastReceiverManifest.git`
-
+**Source files** at the [github page](git@github.com:tedhagos/BroadcastReceiverManifest.git)
 
 ## Objectives
 
@@ -22,6 +17,8 @@ title: 4.2.1 ListView - LAB
 Name the project ListViewSample. Add a ListView to the main activity layout
 
 ![](images/listview-lab.png)
+
+## How to display array items in a ListView
 
 **2.  Create a new layout**. 
 

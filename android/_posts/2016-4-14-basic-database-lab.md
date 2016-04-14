@@ -1,6 +1,6 @@
 ---
 
-title: 6.3.1 sqlite database - LAB
+title: 6.3.1 Basic Database Operation - LAB
 
 ---
 
