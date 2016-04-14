@@ -133,6 +133,32 @@ sqlite> SELECT * FROM MyTable;
 sqlite> .quit
 {% endhighlight %}
 
+**7. Implement the readRecords method**
+
+{% highlight java %}
+  private void readRecords() {
+
+    StringBuilder sb = new StringBuilder();
+    db = openOrCreateDatabase(DB, MODE_PRIVATE, null);
+
+
+    Cursor c = db.rawQuery("SELECT * FROM MyTable", null);
+    //c.moveToFirst();
+
+
+    while (c.moveToNext()) {
+      /*
+      System.out.println(c.getString(c.getColumnIndex("lastname")));
+      System.out.println(c.getString(c.getColumnIndex("firstname")));
+      System.out.println(c.getString(c.getColumnIndex("email")));
+      */
+      // c.getString(c.getColumnIndex("lastname"));
+      sb.append(c.getString(0) + " , " + c.getString(1) + " " + c.getString(2));
+      sb.append("\n");
+      tv.setText(sb.toString());
+    }
+  }
+{% endhighlight %}
 
 
 
