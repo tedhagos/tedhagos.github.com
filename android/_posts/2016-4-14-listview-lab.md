@@ -1,17 +1,38 @@
 ---
-title: 4.2.1 Displaying Data in a ListView - LAB
+title: 4.2.1 ListView - LAB
 ---
 
-**1. Create a project with an empty activity**. Name the project ListViewSample. Add a ListView to the main activity layout
+# Introduction
+
+**Source files**:
+
+- github page [github.com/tedhagos](git@github.com:tedhagos/BroadcastReceiverManifest.git) or;
+- `git clone git@github.com:tedhagos/BroadcastReceiverManifest.git` or;
+- ` git clone https://github.com/tedhagos/BroadcastReceiverManifest.git`
+
+
+## Objectives
+
+- Know the basic step needed to display an array into a listview
+- Create a new layout to be used by the listview
+- Use an Adapter to connect an array of values to the listview
+
+**1. Create a project with an empty activity**. 
+
+Name the project ListViewSample. Add a ListView to the main activity layout
 
 ![](images/listview-lab.png)
 
-**2.  Create a new layout**. You can do this in Android Studio via File-> New-> XML-> Layout XML File. You will be asked for the layout file name and the root tag. Use the following values
+**2.  Create a new layout**. 
+
+You can do this in Android Studio via File-> New-> XML-> Layout XML File. You will be asked for the layout file name and the root tag. Use the following values
 
 - Layout File Name : myitem
 - Root Tag: TextView
 
-**3. Implement the onCreate** method of the main activity
+We created this new layout because this will effectively be  a single row in our listview. We are displaying only one item of data per row, hence, a simple textview
+
+**3. Implement the onCreate** method of the main activity.
 
 {% highlight java %}
   @Override

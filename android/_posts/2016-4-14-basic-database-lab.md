@@ -1,44 +1,31 @@
 ---
 
-title: 6.3.1 Basic SQLite Programming - LAB
+title: 6.3.1 sqlite database - LAB
 
 ---
 
-**1. Create a project with an empty activity**, named "databasesample". Add two buttons, a scrollview and a textview. The textview should be nested inside the scrollview. 
+## Introduction
+
+
+## Objectives
+
+- Learn to open or create a sqlite3 database programmatically
+- Learn to view the contents of  a sqlite database in the adb shell
+- Learn the various objects that are needed to create a database, create a table, save a record to a table and read records from a table
+- Learn to use the scrollview
+
+## Basic SQLite Programming
+
+**1. Create a project with an empty activity**, 
+
+Named the project "databasesample". Add two buttons, a scrollview and a textview. The textview should be nested inside the scrollview. 
 
 ![](images/basic-sqlite-lab.png)
 
-The definition of activity_main.xml is found below.
+Parts of the main activity xml is shown below. Take care that the textview is nested inside the scrollview. When the number rows in the database table exceeds the height of the textview, some records will not be visible. The textview does not have a scrollable viewport, but the scrollview has. That is the reason we embedded the textview inside a scrollview.
 
 {% highlight xml %}
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:paddingBottom="@dimen/activity_vertical_margin"
-  android:paddingLeft="@dimen/activity_horizontal_margin"
-  android:paddingRight="@dimen/activity_horizontal_margin"
-  android:paddingTop="@dimen/activity_vertical_margin"
-  tools:context="com.example.ted.databasesample.MainActivity">
-
-  <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Insert Records"
-    android:id="@+id/insertButton"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="49dp"/>
-
-  <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Read Records"
-    android:id="@+id/readButton"
-    android:layout_below="@+id/insertButton"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="31dp"/>
+<RelativeLayout>
 
   <ScrollView
     android:layout_width="match_parent"
@@ -60,7 +47,6 @@ The definition of activity_main.xml is found below.
 </RelativeLayout>
 {% endhighlight %}
 
-
 **2. Create some private members** of the main activity class
 
 {% highlight  java %}
@@ -79,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
 The variables "mydb", "db" and "tv" will be accessed later by the methods createRecords and readRecords, that is the reason why they needed to be defined as top level class members.
 
 
-**3. Implement the onCreate** method of the main activity. Add event listeners for the buttons "Read records" and "Insert records". 
+**3. Implement the onCreate** method of the main activity. 
+
+Add event listeners for the buttons "Read records" and "Insert records". 
 
 {% highlight java %}
 
@@ -152,7 +140,6 @@ sqlite> .quit
       System.out.println(c.getString(c.getColumnIndex("firstname")));
       System.out.println(c.getString(c.getColumnIndex("email")));
       */
-      // c.getString(c.getColumnIndex("lastname"));
       sb.append(c.getString(0) + " , " + c.getString(1) + " " + c.getString(2));
       sb.append("\n");
       tv.setText(sb.toString());
