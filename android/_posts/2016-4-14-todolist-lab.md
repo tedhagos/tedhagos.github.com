@@ -163,7 +163,7 @@ public class TodoAdapter extends CursorAdapter {
 {% highlight java %}
   private void fetchRecords(SQLiteDatabase sqldb) {
 
-    String sqlquery = "SELECT _id,status, task, strftime('%m.%d.%Y') FROM todo ORDER BY timestamp DESC;";
+    String sqlquery = "SELECT _id,status, task, strftime('%m.%d.%Y', timestamp) FROM todo ORDER BY timestamp DESC;";
     Cursor cur = sqldb.rawQuery(sqlquery, null);
 
     TodoAdapter adapter = new TodoAdapter(this, cur, false);
