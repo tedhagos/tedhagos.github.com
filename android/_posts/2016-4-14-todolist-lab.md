@@ -14,6 +14,7 @@ title: 6.3.2 CursorAdapters and ListView - LAB
 
 ## Display database contents in a ListView
 
+
 **1. Plan the database structure**
  
  Our small todo list application will only need to keep a few data points, a description of a task, its status and the date it was created. The data dictionary for our app is as follows:
@@ -110,10 +111,92 @@ public class MainActivity extends AppCompatActivity {
   }
 {% endhighlight %}
 
+The click action of the button will simply call the addRecord method and pass the contents of the edittext to it.
+
+**6. Create the cursor adapter class**
+
+To create an the adapter class for a cursor, we extend the CursorAdapter, it is a class from the android.widget package. The CursorAdapter is an abstract class, hence we need to provide method implementations for some of its methods.   Save the TodoAdapter class on the same package as the main activity.
+
+{% highlight java %}
+public class TodoAdapter extends CursorAdapter {
+  public TodoAdapter(Context context, Cursor c, boolean autoRequery) {
+    super(context, c, autoRequery);
+  }
+
+  @Override
+  public View newView(Context context, Cursor cursor, ViewGroup parent) {
+    return LayoutInflater.from(context).inflate(R.layout.todo_items, parent, false);
+  }
+
+  @Override
+  public void bindView(View view, Context context, Cursor cursor) {
+
+    TextView tvstatus = (TextView) view.findViewById(R.id.txtStatus);
+    TextView tvtask = (TextView) view.findViewById(R.id.txtTask);
+    TextView tvdate = (TextView) view.findViewById(R.id.txtDate);
+
+    tvstatus.setText(cursor.getString(1));
+    tvtask.setText(cursor.getString(2));
+    tvdate.setText(cursor.getString(3));
+
+  }
+}
+{% endhighlight %}
+
+
+**7. Implement the code for adding records**
+
+{% highlight java %}
+  public void addRecord(String todo) {
+    SQLiteDatabase sqldb = openOrCreateDatabase(DBNAME, MODE_PRIVATE, null);
+
+    String sql = String.format("INSERT INTO todo (status, task) VALUES (0, '%s');", todo);
+    sqldb.execSQL(sql);
+    fetchRecords(sqldb);
+    sqldb.close();
+
+  }
+{% endhighlight %}
+
+**8. Implement the code for fetching records**
+
+{% highlight java %}
+  private void fetchRecords(SQLiteDatabase sqldb) {
+
+    String sqlquery = "SELECT _id,status, task, strftime('%m.%d.%Y') FROM todo ORDER BY timestamp DESC;";
+    Cursor cur = sqldb.rawQuery(sqlquery, null);
+
+    TodoAdapter adapter = new TodoAdapter(this, cur, false);
+
+    ListView listview = (ListView) findViewById(R.id.listView);
+    listview.setAdapter(adapter);
+  }
+{% endhighlight %}
+
+**9. Implement the code for handling clicks on each item**
+
+The event method implementation for handling item clicks inside the list is situated inside the onCreate method of the main activity class.
+
+{% highlight java %}
+   ListView listview = (ListView) findViewById(R.id.listView);
+    assert listview != null;
+    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        TextView task  = ((TextView) view.findViewById(R.id.txtTask));
+        String tasktext = task.getText().toString();
+        String message = String.format("Position: %d, Text: %s", position, tasktext );
+        Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
+      }
+    });
+{% endhighlight %}
 
 ## Exercises
 
-1 Provide validation for task edittext
-2 Linkify the edittext
-3 implement the DELETE AND EDIT OPERATION
+1. Provide validation for task edittext
+2. Linkify the edittext
+3. Implement the Delete and Edit operation
+
+
+
 
