@@ -128,5 +128,17 @@ public class MyService extends Service {
   </application>
 {% endhighlight %}
 
+## Exercise
+
+From the Service class, send a message to the activity using a broadcast.  The codes you need to programmatically send a broadcast is as follows
+
+{% highlight java %}
+    Intent broadcastintent = new Intent();
+    broadcastintent.setAction("com.yourcompany.project.MESSAGE");
+    broadcastintent.addCategory(Intent.CATEGORY_DEFAULT);
+    sendBroadcast(intent);
+{% endhighlight %}
+
+
 
 
