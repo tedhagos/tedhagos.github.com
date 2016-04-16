@@ -83,7 +83,31 @@ public class MyService extends Service {
   }
 {% endhighlight %}
 
-**5. Declare the service in the android manifest file**
+**5. Start the service from the main activity**
+
+{% highlight java %}
+
+    Button startButton = (Button) findViewById(R.id.startButton);
+    Button stopButton = (Button) findViewById(R.id.stopButton);
+
+    assert startButton != null;
+    startButton.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View v) {
+        //Toast.makeText(v.getContext(), "Start Button", Toast.LENGTH_LONG).show();
+        startService(new Intent(getBaseContext(), MyService.class));
+      }
+    });
+
+    assert stopButton != null;
+    stopButton.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View v) {
+        Toast.makeText(v.getContext(), "Stop Button", Toast.LENGTH_LONG).show();
+      }
+    });
+{% endhighlight %}
+
+
+**6. Declare the service in the android manifest file**
 
 {% highlight xml %}
   <application
@@ -103,5 +127,6 @@ public class MyService extends Service {
     <service android:name=".MyService"/>
   </application>
 {% endhighlight %}
+
 
 
