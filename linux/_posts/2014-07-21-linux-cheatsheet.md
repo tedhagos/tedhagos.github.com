@@ -194,11 +194,19 @@ Configure /etc/cups/cupsd.conf
 
 # Screen capture
 
-`sudo apt-get install imagemagick`  
-`cd ~/Pictures`
--   **`import -window root Image1.png`:** Take the screenshot of the whole screen
--   **`import Image2.png`:** The mouse pointer will turn to a crosshair, click and drag the screen region you want to capture
--   **`import -frame Image3.png`:** Just like the command above but this one captures the frame of the window region
+{% highlight bash %} 
+sudo apt-get install imagemagick  
+cd ~/Pictures
+{% endhighlight %}
+
+import -window root Image1.png`
+: Take the screenshot of the whole screen
+
+import Image2.png
+: The mouse pointer will turn to a crosshair, click and drag the screen region you want to capture
+
+import -frame Image3.png
+: Just like the command above but this one captures the frame of the window region
 
 ## Other options
 
