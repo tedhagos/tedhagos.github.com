@@ -53,7 +53,7 @@ public class MyService extends IntentService {
         Intent broadcastintent = new Intent();
         broadcastintent.setAction(MyReceiver.BROADCASTMSG);
         broadcastintent.addCategory(Intent.CATEGORY_DEFAULT);
-        sendBroadcast(intent);
+        sendBroadcast(broadcastintent);
         // adb shell am broadcast -a ""
       }
       catch(InterruptedException ie) {
