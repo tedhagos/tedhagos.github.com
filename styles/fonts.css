@@ -128,6 +128,7 @@ src: local('Fira Mono'),
 font-weight: 700;
 font-style: bold;
 }
+*/
 
 @font-face {
 font-family: 'Source Code Pro';
@@ -147,8 +148,7 @@ font-weight: 600;
 font-style: bold;
 }
 
-*/
-
+/*
 @font-face {
 font-family: 'Inconsolata';
 src: local('Inconsolata'),
@@ -166,3 +166,4 @@ src: local('Inconsolata'),
 font-weight: 700;
 font-style: bold;
 }
+*/
