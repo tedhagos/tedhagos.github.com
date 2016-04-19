@@ -1,8 +1,6 @@
 ---
 
 title: /usr/bin/env No Such File
-author: Ted Hagos
-categories: linux
 
 ---
 

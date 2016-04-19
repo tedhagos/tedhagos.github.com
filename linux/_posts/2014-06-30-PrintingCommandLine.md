@@ -1,8 +1,6 @@
 ---
 
 title: CLI Printing
-author: Ted hagos
-categories: linux
 
 ---
 

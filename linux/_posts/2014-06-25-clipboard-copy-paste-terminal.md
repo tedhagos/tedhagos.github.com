@@ -1,8 +1,6 @@
 ---
 
 title: Terminal Copy and Paste
-author: Ted Hagos
-categories: linux
 
 ---
 

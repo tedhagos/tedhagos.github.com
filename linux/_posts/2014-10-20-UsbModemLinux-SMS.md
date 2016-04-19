@@ -1,8 +1,6 @@
 ---
 
 title: Send Receive SMS Using USB Modem
-author: Ted Hagos
-categories: Linux
 
 ---
 

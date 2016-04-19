@@ -1,8 +1,6 @@
 ---
 
 title: Lubuntu Trusty on Thinkpad Edge 130
-author: Ted Hagos
-categories: Linux
 
 ---
 The E130 is an entry level ThinkPad. It doesn't have the same solid feel of the T420 or even the lower ends of the X series. It's not a bad notebook though. For it's price, it makes a pretty good type writer and secondary development machine.

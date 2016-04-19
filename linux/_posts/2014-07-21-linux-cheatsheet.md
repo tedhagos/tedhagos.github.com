@@ -1,8 +1,6 @@
 ---
 
 title: Linux Cheatsheet
-author: Ted Hagos
-categories: linux
 
 ---
 
