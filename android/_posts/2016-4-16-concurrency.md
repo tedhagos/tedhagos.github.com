@@ -5,3 +5,5 @@ chapterhead: yes
 
 ---
 
+
+![AsyncTask](images/asynctask-lifecycle.png)

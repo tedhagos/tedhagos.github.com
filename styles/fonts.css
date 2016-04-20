@@ -1,4 +1,22 @@
 @font-face {
+font-family: 'Inconsolata';
+src: local('Inconsolata'),
+ local('Inconsolata'),
+ url('/fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Inconsolata';
+src: local('Inconsolata'),
+ local('Inconsolata'),
+ url('/fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: bold;
+}
+
+@font-face {
 font-family: 'Roboto';
 src: local('Roboto'),
  local('Roboto'),
@@ -24,6 +42,8 @@ src: local('Roboto'),
 font-weight: 500;
 font-style: Bold;
 }
+
+
 
 /*
 
@@ -128,6 +148,9 @@ src: local('Fira Mono'),
 font-weight: 700;
 font-style: bold;
 }
+*/
+
+/*
 
 @font-face {
 font-family: 'Source Code Pro';
@@ -135,7 +158,7 @@ src: local('Source Code Pro'),
  local('Source Code Pro'),
  url('/fonts/Source_Code_Pro/SourceCodePro-Medium.ttf') format('truetype');
 font-weight: 500;
-font-style: medium;
+font-style: normal;
 }
 
 @font-face {
@@ -148,21 +171,3 @@ font-style: bold;
 }
 
 */
-
-@font-face {
-font-family: 'Inconsolata';
-src: local('Inconsolata'),
- local('Inconsolata'),
- url('/fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
-font-weight: 400;
-font-style: normal;
-}
-
-@font-face {
-font-family: 'Inconsolata';
-src: local('Inconsolata'),
- local('Inconsolata'),
- url('/fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
-font-weight: 700;
-font-style: bold;
-}
