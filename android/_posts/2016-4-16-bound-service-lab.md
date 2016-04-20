@@ -1,6 +1,6 @@
 ---
 
-title:  9.2 Bound Services - LAB
+title:  09.2 Bound Services - LAB
 
 ---
 

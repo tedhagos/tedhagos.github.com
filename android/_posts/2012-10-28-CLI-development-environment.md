@@ -1,6 +1,6 @@
 ---
 
-title: 2.6 Cmd Line Tools - LAB
+title: 02.6 Cmd Line Tools - LAB
 lastupdated: 08 April 2016
 
 ---

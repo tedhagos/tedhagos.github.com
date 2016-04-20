@@ -1,6 +1,6 @@
 ---
 
-title: 6.3.2 CursorAdapters and ListView - LAB
+title: 06.3.2 CursorAdapters and ListView - LAB
 
 ---
 
