@@ -1,5 +1,5 @@
 ---
-title: 5.2.1 System Broadcast - LAB
+title: 05.2.1 System Broadcast - LAB
 ---
 
 ## Introduction

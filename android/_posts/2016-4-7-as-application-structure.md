@@ -1,6 +1,6 @@
 ---
 
-title: 3.4 Application Structure
+title: 03.4 Application Structure
 lastupdated: 07 April 2016
 
 ---

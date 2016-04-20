@@ -1,6 +1,6 @@
 ---
 
-title: 2. Getting Started
+title: 02. Getting Started
 chapterhead: yes
 
 ---

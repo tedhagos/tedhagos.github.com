@@ -1,6 +1,6 @@
 ---
 
-title: 6.3.1 Basic Database Operation - LAB
+title: 06.3.1 Basic Database Operation - LAB
 
 ---
 
