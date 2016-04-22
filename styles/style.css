@@ -45,7 +45,7 @@ section {width: 80%; margin: 0 auto;}
   border-top: 1px dashed #cacaca;
   padding-top: 10px;
   color: gray;
-  font-family: 'Calibri', 'sans-serif';
+  font-family: 'Roboto','Calibri', 'sans-serif';
 }
 
 .relatedlist {
@@ -58,7 +58,7 @@ section {width: 80%; margin: 0 auto;}
 .relatedlist li:after {content: ",";}
 .relatedlist li:last-child:after {content: "";}
 
-.relatedlist a {color: gray; font-family: 'Calibri','sans-serif';text-transform:lowercase;}
+.relatedlist a {color: gray; font-family: 'Roboto','Calibri','sans-serif';text-transform:lowercase;}
 .relatedlist a:hover {text-decoration:underline;}
 
 #tags {width: 30%;padding:10px; background: #f1f1f1;}
@@ -118,7 +118,7 @@ body {
 
 b, strong {color: #000; font-weight: 500;}
 
-dt {font-family: 'Calibri', 'sans-serif'; font-weight: bold;}
+dt {font-family: 'Roboto','Calibri', 'sans-serif'; font-weight: bold;}
 
 
   .menu-trigger {font-size: 3em; cursor: pointer; color: #979797;}
