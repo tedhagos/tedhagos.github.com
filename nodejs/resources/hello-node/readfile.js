@@ -10,6 +10,6 @@ function read(filename) {
     file = data;
     console.log(data);
     return file; // this does not work, because of callbacks
-    // TASK: read promises
+    // TASK: read promises 
   });
 }
