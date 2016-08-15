@@ -26,7 +26,7 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get -y install nodejs npm
 ~~~
 
-Installation instructions for other Linux distros can be found at [joyent wiki page at github](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+Installation instructions for other Linux distros can be found at [joyent wiki page at github](https://github.com/nodejs/node/wiki).
 
 On OSX with homebrew, you could install it with the command `brew install node`. You need to ensure that the folder `/usr/local/bin` is included in your system path because brew will put the node executable on that folder. On Windows with the chocolatey package manager, you could get node going with the command `cinst nodejs`.
 
@@ -63,3 +63,5 @@ nvm alias default 0.10
 
 1. Joyent page at github - [github.com/joyent/node/wiki](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 2. Creationix github page - [github.com/creationix/nvm](https://github.com/creationix/nvm)
+
+_TASK_: Complete the instructions for nvm, it is quite outdated

@@ -1,4 +1,7 @@
-.highlight pre {background: #fff; /*border: 1px solid #ddd;*/}
+.highlight pre {
+  background: #ebebeb; 
+/*border: 1px solid #ddd;*/
+}
 
 .hll { background-color: #ffffcc }
 .c { color: #408080; font-style: normal } /* Comment */

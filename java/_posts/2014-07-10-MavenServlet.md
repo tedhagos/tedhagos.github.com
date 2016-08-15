@@ -44,7 +44,7 @@ Take the sample of
 Get the sample pom sample of
 web.xml
 
-{% highlight xml %}
+{% highlight java %}
 <?xml version="1.0" encoding="UTF8"?>
 <web-app>
   <servlet>
