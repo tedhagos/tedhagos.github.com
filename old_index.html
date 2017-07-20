@@ -1,0 +1,51 @@
+---
+title: tedhagos.com
+layout: index
+---
+
+<div class="indexflexbox">
+
+  <div id="tags">
+    <h3 style="text-align:right;">Categories</h3>
+    <ul class="categories">
+    {% for cat in site.categories %}
+      {% assign category = {{cat[0]}} %}
+      <li><a href=/{{category}} class="acategory">{{category}}</a></li>
+    {% endfor %}
+    </ul>
+
+  </div>
+
+  <div id="toc">
+
+    <h3>Doc</h3>
+
+    <ol reversed>
+      {% for post in site.posts %}
+      <li>
+        <a href={{post.url}}>
+        {{post.title}}
+
+        {% if post.categories.size > 0 %}
+        <span class="category">({{post.categories | join: '  , ' }})</span>
+        {% endif %}
+        <dateCreated>{{ post.date | date: "%d %b %y" }}</dateCreated>
+        <!--
+        <dateCreated>{{ post.date | date: "%m.%d.%Y" }}</dateCreated>
+        -->
+        {% if post.lastupdated %}
+        <dateModified>
+          , last updated: {{ post.lastupdated | "%d %b %y" }}
+        </dateModified>
+        {% endif %}
+      </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <footer></footer>
+
+</div>
+</body>
+</html>
