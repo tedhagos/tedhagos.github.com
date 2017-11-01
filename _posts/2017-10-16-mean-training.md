@@ -16,7 +16,7 @@ The preworked code examples are in [github/mean-training][meantraining]. You sho
 
 ## Lecture codes
 
-Whenever there are live coding samples, they will be posted as a Gist on github.com. Here are there links.
+Whenever there are live coding samples, they will be posted as a Gist on github.com. Here are the links.
 
 * [Event Emitters](https://gist.github.com/tedhagos/cf50e62273a0e4c3f9d49a8f1b165b99)
 * [File Read , events](https://gist.github.com/tedhagos/0f126adb8e96eaab1a42affe6142cc24)
