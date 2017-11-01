@@ -2,7 +2,7 @@
 layout: post
 title:  "MEAN Training resource page"
 date:   2017-10-16 08:00:00
-categories: training
+categories: training nodejs
 ---
 
 ## Contact details
