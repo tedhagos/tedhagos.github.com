@@ -5,9 +5,19 @@
 @import "{{ site.theme }}";
 
 code {
-  font-family: 'Monaco', monospace;
+  font-family: 'Monaco', monospace; 
+  background: #f1f1f1; 
+  border: 0px;
 }
 
 pre {
   font-family: 'Monaco', monospace;
+  border: 0px;
 }
+
+.highlight pre {
+  background: #f1f1f1;
+}
+
+
+

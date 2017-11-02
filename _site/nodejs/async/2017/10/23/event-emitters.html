@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MEAN Training resource page</title>
-  <meta name="description" content="Contact details">
+  <title>Event Emitters</title>
+  <meta name="description" content="This is just another markdown this is code">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/training/nodejs/2017/10/16/mean-training.html">
+  <link rel="canonical" href="http://localhost:4000/nodejs/async/2017/10/23/event-emitters.html">
   <link rel="alternate" type="application/rss+xml" title="tedhagos.github.com" href="/feed.xml">
   
   
@@ -70,43 +70,28 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">MEAN Training resource page</h1>
+    <h1 class="post-title" itemprop="name headline">Event Emitters</h1>
     <p class="post-meta">
-      <time datetime="2017-10-16T16:00:00+08:00" itemprop="datePublished">
+      <time datetime="2017-10-23T16:00:00+08:00" itemprop="datePublished">
         
-        Oct 16, 2017
+        Oct 23, 2017
       </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Ted Hagos</span></span>
+      
+      (categories : nodejs, async)
       </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h2 id="contact-details">Contact details</h2>
+    <p>This is just another markdown <code class="highlighter-rouge">this is code</code></p>
 
-<ul>
-  <li><strong>email</strong> ted@thelogbox.com, tedhagos@gmail.com</li>
-  <li><strong>twitter</strong> @lovescaffeine</li>
-</ul>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">EventEmitter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'events'</span><span class="p">).</span><span class="nx">EventEmitter</span><span class="p">;</span> 
+<span class="kd">let</span> <span class="nx">server</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
 
-<p><strong>Lecture notes</strong> can be found at <a href="https://tedhagos.gitbooks.io/mean/content/">tedhagos.gitbooks.io</a>. This is a work in progress, it is quite possible that the training sessions will finish first before this gets completed. PDF version of the lecture notes can be downloaded from the site.</p>
-
-<p>The preworked code examples are in <a href="https://github.com/tedhagos/mean-training">github/mean-training</a>. You should really try to download it early on in the training sessions so you can read ahead.</p>
-
-<h2 id="lecture-codes">Lecture codes</h2>
-
-<p>Whenever there are live coding samples, they will be posted as a Gist on github.com. Here are the links.</p>
-
-<ul>
-  <li><a href="https://gist.github.com/tedhagos/cf50e62273a0e4c3f9d49a8f1b165b99">Event Emitters</a></li>
-  <li><a href="https://gist.github.com/tedhagos/0f126adb8e96eaab1a42affe6142cc24">File Read , events</a></li>
-  <li><a href="https://gist.github.com/tedhagos/24da81d407974a6800a5d7cc82b1093b">Server, streams</a></li>
-  <li><a href="https://gist.github.com/tedhagos/62fbafe35ad43e17ad97afb969caf2ee">Router + bodyparser example</a></li>
-  <li><a href="https://gist.github.com/tedhagos/1cbe338791b28f05bb039f9faff4368e">Connect middleware example</a></li>
-  <li><a href="https://gist.github.com/tedhagos/d1dee307e7317ffc83a057b1906c55c5">ArrayFilter method</a></li>
-  <li><a href="https://gist.github.com/tedhagos/e65bcb8e67b2529eee6ee207ef3c7f71">Promises</a></li>
-  <li><a href="https://gist.github.com/tedhagos/98e37bd6eeef07c4ba66a5c78a1f14f5">Basic express usage</a></li>
-  <li><a href="https://gist.github.com/tedhagos/a26a834abe068734fed01be8b0746bfa">Express, Bodyparser, modules</a></li>
-  <li><a href="https://gist.github.com/tedhagos/f311cee24292bd45a6dccb604923611a">Mongoose test</a></li>
-</ul>
+  <span class="k">return</span> <span class="nx">e</span><span class="p">;</span> 
+<span class="p">}</span></code></pre></figure>
 
 
   </div>
@@ -158,7 +143,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>There is nothing much to see here, this is a scratch paper. It is used for classroom communications etc.</p>
+        <p>There is nothing much to see here, this is a scratch paper. This is primarily used as a communications medium during training sessions. There is no &quot;comments&quot; section, I can be reached via email (already  listed somewhere in this site) or via twitter (also listed in this site)</p>
       </div>
     </div>
 

@@ -16,8 +16,11 @@
 title: tedhagos.github.com
 email: tedhagos@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  There is nothing much to see here, this is a scratch paper.
-  It is used for classroom communications etc.
+  There is nothing much to see here, this is a scratch paper. This is
+  primarily used as a communications medium during training sessions.
+  There is no "comments" section, I can be reached via email (already 
+  listed somewhere in this site) or via twitter (also listed in this site)
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tedhagos.github.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lovescaffeine
@@ -28,6 +31,14 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+
+defaults:
+  -
+    values:
+      layout: "post"
+      author: "Ted Hagos"
+      
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
