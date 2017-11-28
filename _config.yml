@@ -16,10 +16,7 @@
 title: tedhagos.com
 email: ted@thelogbox.com
 description: >- # this means to ignore newlines until "baseurl:"
-  There is nothing much to see here, this is a scratch paper. This is
-  primarily used as a communications medium during training sessions.
-  There is no "comments" section, I can be reached via email (already 
-  listed somewhere in this site) or via twitter (also listed in this site)
+   developer, trainer, author
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tedhagos.com" # the base hostname & protocol for your site, e.g. http://example.com
