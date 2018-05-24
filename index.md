@@ -14,7 +14,6 @@ Ted is also busy conducting trainings on full-stack JS, Android and other tech a
 
 He maintains a blog of sorts, at <a href="http://tedhagos.com/notes" target="_blank">tedhagos.com/notes</a>
 
-### Contact
 
 <ul class="fa-ul">
   <li><i class="fa-li fa fa-envelope"></i>
