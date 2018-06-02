@@ -10,7 +10,7 @@ googleAnalytics = "Toracking ID"
 
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright Ted Hagos"
-publishDir = "docs"
+# publishDir = "docs"
 
 [params]
   # Date format
