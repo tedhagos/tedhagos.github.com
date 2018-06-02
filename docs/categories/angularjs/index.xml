@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angularjs on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/angularjs/</link>
+    <description>Recent content in Angularjs on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Sun, 31 Dec 2017 20:58:27 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angularjs Quickstart</title>
+      <link>http://tedhagos.com/posts/angularjs-quickstart/</link>
+      <pubDate>Sun, 31 Dec 2017 20:58:27 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/angularjs-quickstart/</guid>
+      <description>1. Introduction  What&amp;rsquo;s covered What versions Why this tutorial  Why Angular1 (you saved someting in instapaper). Why would you want to use this in 2018?
+Package this with
+Resources for the book (have it downloadable)
+2. Requisite knowledge and background  JS Command line experience Experience setting up a POSIX shell such as Cygwin or MingW, if you are using Windows. It is possible to do all the examples which requires the use of the command line in Windows Powershell, but that is out of the scope of this tutorial.</description>
+    </item>
+    
+  </channel>
+</rss>
