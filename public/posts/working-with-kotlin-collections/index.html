@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title> Collections - Ted&#39;s notes</title>
+  <meta property="og:title" content=" Collections - Ted&#39;s notes" />
+  <meta name="twitter:title" content=" Collections - Ted&#39;s notes" />
+  <meta name="description" content="Why are we bothering Should I go through all the topics in collections What are the collections, by the way, should I describe them in detail Don&rsquo;t write raw loops (the filter and lambdas should actually be able to do the job), why should&rsquo;nt I use raw loops, the syntax is there, why shouldn&rsquo;t I use it — because most of hte time, there&rsquo;s probably a better way of doing it Why do we call it a framework  The questions I should be asking;">
+  <meta property="og:description" content="Why are we bothering Should I go through all the topics in collections What are the collections, by the way, should I describe them in detail Don&rsquo;t write raw loops (the filter and lambdas should actually be able to do the job), why should&rsquo;nt I use raw loops, the syntax is there, why shouldn&rsquo;t I use it — because most of hte time, there&rsquo;s probably a better way of doing it Why do we call it a framework  The questions I should be asking;">
+  <meta name="twitter:description" content="Why are we bothering Should I go through all the topics in collections What are the collections, by the way, should I describe them in detail Don&rsquo;t write raw loops (the filter and lambdas should …">
+  <meta name="author" content="Your name"/>
+  <meta property="og:site_name" content="Ted&#39;s notes" />
+  <meta property="og:url" content="/posts/working-with-kotlin-collections/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.36" />
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Ted&#39;s notes</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <div class="main" role="main">
+    <article class="article">
+      
+      
+      <h1 class="article-title"> Collections</h1>
+      
+      
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>May 7, 2018</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/kotlin/">
+            <i class="fas fa-folder"></i>
+            kotlin
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+<aside class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-are-they">What are they</a></li>
+<li><a href="#why-do-we-bother">Why do we bother</a></li>
+<li><a href="#kotlin-and-java-collections">Kotlin and Java collections</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+      
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Why are we bothering</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Should I go through all the topics in collections</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> What are the collections, by the way, should I describe them in detail</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Don&rsquo;t write raw loops (the filter and lambdas should actually be able to do the job), why should&rsquo;nt I use raw loops, the syntax is there, why shouldn&rsquo;t I use it — because most of hte time, there&rsquo;s probably a better way of doing it</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Why do we call it a framework</label></li>
+</ul>
+
+<p>The questions I should be asking;</p>
+
+<ul>
+<li><p>[ ] What are collections</p></li>
+
+<li><p>[ ] Do I need them, we&rsquo;ve already got arrays, wouldn&rsquo;t that suffice</p></li>
+
+<li><p>[ ] How many kinds are there</p></li>
+
+<li><p>[ ] Are there operations that are common to all Collections, or do I have the operation for each one of them</p></li>
+
+<li><p>[ ] What are the basic operations, how do I go through them</p></li>
+
+<li><p>[ ] Is the declarative (functional) way really better than if work with collections the imperative way? You know, like how we did it in Java. Are there downsides (decompiler), and this is where sequences comes in</p></li>
+</ul>
+
+<p><em>Q</em> : What is a collection?</p>
+
+<p><em>A</em> : The dictionary meanings are;</p>
+
+<ol>
+<li>the act of <em>collecting</em></li>
+<li>something that is <em>collected</em>; a group of objects or an amount of material accumulated in one location, especially for some purpose of or as a result of some process</li>
+</ol>
+
+<p>Maybe the second definition fits our purpose. So we&rsquo;ll use that — it&rsquo;s a group of objects accumulated in one location. We can probably think of a collection like a coin purse. Sometimes the purse will be empty, sometimes it will contain some coins, and perhaps at other times, it might be full. In this analogy, the coints are the items and the purse is the <em>container</em>. So, we can probably say that a collection is container with zero, one or more items in it. But you might remember that</p>
+
+<h2 id="what-are-they">What are they</h2>
+
+<p>[Can be used for the intro]</p>
+
+<p>I&rsquo;m assuming that you didn&rsquo;t skip this topic while you at it with Java. Working with the collections framework is very crucial if you wanted to build a strong foundation as a developer — that was true in Java, and it&rsquo;s still true in Kotlin. We won&rsquo;t spend too much time on the introductory part of collections because the Kotlin collections are very similar to their Java counterparts. We&rsquo;ll spend just enough time to jog our memories.</p>
+
+<p>One of hte real-world analogies for collections would be a purse or a pouch filled with various things such as coins. The coins would be the <em>items</em> and the pouch itself is the  <em>colllection</em>. So based on this analogy, we can say that a collection is a <em>container</em> of sorts that may have zero, one or many items in it.  You might remember that we already have something like this, an <code>Array</code>. The <code>Array</code> fits this description exactly because it can contain zero or one or many items inside it. If this is the case, do we really need to learn about other containers.</p>
+
+<p>IntArray</p>
+
+<p>ByteArray</p>
+
+<p>CharArray</p>
+
+<p>etc. Mention when to use this, I need to talk about the Kotlin nullable type system, why it isn&rsquo;t always efficient to use the reference types. When I say Int in Kotlin, does that always mean that in runtime, it will be represented as as Integer or Java&rsquo;s int</p>
+
+<p>Kotlin focuses on interoperability, it doesn&rsquo;t have it&rsquo;s own Collections classes, it uses the Java ones. But it has lots of extended methods.</p>
+
+<h2 id="why-do-we-bother">Why do we bother</h2>
+
+<p>Why do we call</p>
+
+<h2 id="kotlin-and-java-collections">Kotlin and Java collections</h2>
+
+    </article>
+
+    
+
+    <ul class="pager article-pager">
+      <li class="pager-newer pager-noitem">&lt; Newer</li>
+      <li class="pager-older">
+        <a href="/posts/kotlin-higher-order-functions/" data-toggle="tooltip" data-placement="top" title="Higher Order Functions">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">&copy; Copyright Ted Hagos</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-"><a href="" title=""></a></li>
+  </ul>
+  
+</div>
+<script src="/js/script.js"></script>
+<script src="/js/custom.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Toracking ID', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Kotlin - Ted&#39;s notes</title>
+  <meta property="og:title" content="Kotlin - Ted&#39;s notes" />
+  <meta name="twitter:title" content="Kotlin - Ted&#39;s notes" />
+  <meta name="description" content="1. Tooling There are a few ways to get started.
+ Explore the online editor at try.kotlinlang.org Get the command line tools at kotlinlang.org/commandline Use an IDE like Eclipse or IntelliJ IDEA, there is a non-paid version of IntelliJ called CE or Community Edition  2. A few characteristics Like Java, its
+ compiled, so it goes through the same cycle of writing &gt; compiling &gt; running statically typed, but we don&rsquo;t always have to write the type.">
+  <meta property="og:description" content="1. Tooling There are a few ways to get started.
+ Explore the online editor at try.kotlinlang.org Get the command line tools at kotlinlang.org/commandline Use an IDE like Eclipse or IntelliJ IDEA, there is a non-paid version of IntelliJ called CE or Community Edition  2. A few characteristics Like Java, its
+ compiled, so it goes through the same cycle of writing &gt; compiling &gt; running statically typed, but we don&rsquo;t always have to write the type.">
+  <meta name="twitter:description" content="1. Tooling There are a few ways to get started.
+ Explore the online editor at try.kotlinlang.org Get the command line tools at kotlinlang.org/commandline Use an IDE like Eclipse or IntelliJ IDEA, …">
+  <meta name="author" content="Your name"/>
+  <meta property="og:site_name" content="Ted&#39;s notes" />
+  <meta property="og:url" content="/posts/kotlin-getting-started/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.36" />
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Ted&#39;s notes</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <div class="main" role="main">
+    <article class="article">
+      
+      
+      <h1 class="article-title">Kotlin</h1>
+      
+      
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>December 30, 2017</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/kotlin/">
+            <i class="fas fa-folder"></i>
+            kotlin
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+<aside class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#1-tooling">1. Tooling</a></li>
+<li><a href="#2-a-few-characteristics">2. A few characteristics</a></li>
+<li><a href="#3-functions">3. Functions</a>
+<ul>
+<li><a href="#3-1-default-params">3.1 Default params</a></li>
+<li><a href="#3-2-named-params">3.2 Named params</a></li>
+<li><a href="#3-3-variable-args">3.3 Variable args</a></li>
+<li><a href="#3-4-extension-functions">3.4 Extension functions</a></li>
+<li><a href="#3-5-infix-functions">3.5 Infix functions</a></li>
+</ul></li>
+<li><a href="#4-variables-and-basic-types">4. Variables and Basic Types</a></li>
+<li><a href="#5-classes-and-objects">5. Classes and Objects</a></li>
+<li><a href="#6-access-modifiers">6. Access Modifiers</a></li>
+<li><a href="#7-companion-objects">7. Companion Objects</a></li>
+<li><a href="#8-higher-order-functions">8. Higher Order Functions</a></li>
+<li><a href="#9-collections">9. Collections</a></li>
+<li><a href="#10-working-with-java">10. Working with Java</a></li>
+<li><a href="#11-nullability-and-java-inter-op">11. Nullability and Java Inter-Op</a></li>
+<li><a href="#12-generics">12. Generics</a></li>
+</ul>
+</nav>
+</aside>
+      
+
+<h1 id="1-tooling">1. Tooling</h1>
+
+<p>There are a few ways to get started.</p>
+
+<ol>
+<li>Explore the online editor at <a href="http://bit.ly/kotlinonline">try.kotlinlang.org</a></li>
+<li>Get the command line tools at <a href="http://bit.ly/kotlincommandline">kotlinlang.org/commandline</a></li>
+<li>Use an IDE like Eclipse or IntelliJ IDEA, there is a non-paid version of IntelliJ called CE or Community Edition</li>
+</ol>
+
+<h1 id="2-a-few-characteristics">2. A few characteristics</h1>
+
+<p>Like Java, its</p>
+
+<ul>
+<li>compiled, so it goes through the same cycle of writing &gt; compiling &gt; running</li>
+<li>statically typed, but we don&rsquo;t always have to write the type. Kotlin can infer types on certain situations</li>
+<li>strongly typed</li>
+<li>object oriented</li>
+</ul>
+
+<p>Unlike Java, it</p>
+
+<ul>
+<li>treats functions as first class citizens and it supports functional programming. We also can write functions as top-level constructs, it doesn&rsquo;t have to be inside a class anymore. Kotlin refers functions inside a class as member functions, not member methods</li>
+<li>treats exceptions differently. All exceptions are unchecked exceptions, you may (or may not) handle exceptions, it&rsquo;s up to you and not the compiler. try-catch blocks are optional</li>
+<li>doesn&rsquo;t have primitive types</li>
+<li>doesn&rsquo;t have static members</li>
+<li>treats everything as public by default, classes, variables and functions. If you want to restrict accessibility, you&rsquo;ll have to specify it</li>
+<li>treats expressions and statements differently, e.g. assignment is a statement in Kotlin (it is an expression in Java), the decision making constructs like <em>if</em> and <em>when</em> are expressions, not statements</li>
+<li>treats all variables as <em>non-Nullable</em> by default. It means, when you declare a variable in Kotlin, without any decoration, modifier or annotation, the variable can never be assigned a <em>null</em> value</li>
+</ul>
+
+<hr />
+
+<h1 id="3-functions">3. Functions</h1>
+
+<p>The <em>main</em> function in Kotlin is written as follows</p>
+
+<pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;) { 
+  println(&quot;Hello&quot;)
+}
+</code></pre>
+
+<ul>
+<li>The keyword <code>fun</code> is used to declare that the block is a function</li>
+<li>Functions names are identifiers, just like in Java. The function name <code>main</code> is special, it denotes the entry point of the program, much like the <code>public static void main</code> in Java</li>
+<li>The <code>args</code> argument of <code>main</code> is an <em>Array</em> of <em>String</em>. Kotlin doesn&rsquo;t have a syntax to create arrays using the <code>[]</code> notation. The Kotlin <em>Array</em> is a generic class, it accepts a typed parameter, it&rsquo;s <em>String</em> in this case. So, the <code>main</code> function accepts an array of <em>String</em></li>
+<li>println is translated (under the hood) to a call to Java&rsquo;s <code>System.out.println()</code>. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well</li>
+</ul>
+
+<h2 id="3-1-default-params">3.1 Default params</h2>
+
+<p>Function params can be assigned a default value, like this</p>
+
+<p>Listing 3-1. connectDb function</p>
+
+<pre><code class="language-kotlin">fun connectDb(host: String = &quot;localhost&quot;,
+              user: String = &quot;root&quot;,
+              password: String = &quot;password&quot;)
+</code></pre>
+
+<p>All the params of <code>connectDb()</code> have default values, so we can call this function like this</p>
+
+<pre><code class="language-kotlin">connectDb() // no arguments passed
+connectDb(&quot;jupiter&quot;) // just the 1st param
+connectDb(&quot;jupiter&quot;, &quot;neptune&quot;) // 1st and 2nd params
+connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all three
+</code></pre>
+
+<h2 id="3-2-named-params">3.2 Named params</h2>
+
+<p>Calling functions in your code can be further improved using named parameters.</p>
+
+<h2 id="3-3-variable-args">3.3 Variable args</h2>
+
+<h2 id="3-4-extension-functions">3.4 Extension functions</h2>
+
+<h2 id="3-5-infix-functions">3.5 Infix functions</h2>
+
+<hr />
+
+<h1 id="4-variables-and-basic-types">4. Variables and Basic Types</h1>
+
+<h1 id="5-classes-and-objects">5. Classes and Objects</h1>
+
+<h1 id="6-access-modifiers">6. Access Modifiers</h1>
+
+<h1 id="7-companion-objects">7. Companion Objects</h1>
+
+<h1 id="8-higher-order-functions">8. Higher Order Functions</h1>
+
+<h1 id="9-collections">9. Collections</h1>
+
+<h1 id="10-working-with-java">10. Working with Java</h1>
+
+<h1 id="11-nullability-and-java-inter-op">11. Nullability and Java Inter-Op</h1>
+
+<h1 id="12-generics">12. Generics</h1>
+
+    </article>
+
+    
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/posts/angularjs-quickstart/" data-toggle="tooltip" data-placement="top" title="Angularjs Quickstart">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/posts/linux-cheatsheet/" data-toggle="tooltip" data-placement="top" title="Linux Cheatsheet">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">&copy; Copyright Ted Hagos</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-"><a href="" title=""></a></li>
+  </ul>
+  
+</div>
+<script src="/js/script.js"></script>
+<script src="/js/custom.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Toracking ID', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

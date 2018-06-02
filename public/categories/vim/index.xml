@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/vim/</link>
+    <description>Recent content in Vim on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Sat, 30 Dec 2017 18:21:10 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim Setup</title>
+      <link>http://tedhagos.com/posts/vim-setup/</link>
+      <pubDate>Sat, 30 Dec 2017 18:21:10 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/vim-setup/</guid>
+      <description>Get Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git  Create .vimrc in your home folder (~/.vimrc) and add the following entries to it
+set rtp+=~/.vim/bundle/vundle/Vundle.vim call vundle#begin() Plugin &#39;gmarik/Vundle.vim&#39; Plugin &#39;MarcWeber/vim-addon-mw-utils&#39; Plugin &#39;Valloric/YouCompleteMe&#39; Plugin &#39;tomtom/tlib_vim&#39; Bundle &#39;snipmate-snippets&#39; Plugin &#39;honza/vim-snippets&#39; Plugin &#39;garbas/vim-snipmate&#39; Plugin &#39;tpope/vim-rails.git&#39; Plugin &#39;tpope/vim-fugitive&#39; Plugin &#39;tpope/vim-surround&#39; Plugin &#39;tpope/vim-sleuth&#39; Plugin &#39;tpope/vim-markdown.git&#39; Plugin &#39;ricardovaleriano/vim-github-theme.git&#39; call vundle#end()  Save the .vimrc file. Close it and execute the following command on a terminal window
+vim +PluginInstall +qall  </description>
+    </item>
+    
+  </channel>
+</rss>
