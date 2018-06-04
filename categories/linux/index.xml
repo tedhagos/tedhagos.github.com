@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/linux/</link>
+    <description>Recent content in Linux on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Tue, 04 Oct 2011 08:10:54 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SMS messages using USB Modem</title>
+      <link>http://tedhagos.com/posts/send-receive-sms-usb-modem/</link>
+      <pubDate>Tue, 04 Oct 2011 08:10:54 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/send-receive-sms-usb-modem/</guid>
+      <description>This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.
+There were a couple of other solution approaches but I went for gnokii-sms.</description>
+    </item>
+    
+  </channel>
+</rss>

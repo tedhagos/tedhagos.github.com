@@ -14,6 +14,8 @@
   <meta name="generator" content="Hugo 0.36" />
   <link href="/categories/vim/index.xml" rel="alternate" type="application/rss+xml" title="Ted&#39;s notes" />
   <link href="/categories/vim/index.xml" rel="feed" type="application/rss+xml" title="Ted&#39;s notes" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
   <link rel="stylesheet" href="/css/style.css" media="all" />
   <link rel="stylesheet" href="/css/syntax.css" media="all" />
   <link rel="stylesheet" href="/css/custom.css" media="all" />
@@ -35,39 +37,67 @@
 </header>
 
 
-<body>
-  <article>
-   <div class="container">
-     
-    <p>Ted is the CTO of RenditionDigital International. Before he joined RDI, 
-       he had various software development roles and also spent time as trainer 
-       at IBM Advanced Career Education, Ateneo ITI, and Asia Pacific College. 
-    </p>
-    <p>
-      He spent many years in software development dating back to Turbo C, Clipper, 
-      dBase IV, and Visual Basic. Eventually, he found Java and spent many years there. 
-      Nowadays, he’s busy with other things like Javascript and Android. 
-      Sometime in 2017, he wrote a book on 
-      Android programming 
-      <a href="http://www.apress.com/us/book/9781484231555" target="_blank">
-        Learn Android Studio 3, Apress publishing
-      </a></p>
-    </p>
+<div class="breadcrumb">
+  <a href="/categories/">Categories</a> / Vim
+</div>
+<div class="main" role="main">
+  <section class="list taxonomy-list">
+    <article class="article">
+      <a href="/posts/vim-setup/" class="article-titles">
+        <h2 class="article-title">Vim Setup</h2>
+        
+      </a>
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>December 30, 2017</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/vim/">
+            <svg class="icon"><use xlink:href="/images/fa-solid.svg#folder"></use></svg>
+            vim
+          </a>&nbsp;
+        </li>
+      </ul>
+      <div class="article-content">
+        <p><strong>Get Vundle</strong></p>
 
-<p><a href="https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;qid=1525940796&amp;sr=8-1&amp;keywords=learn+android++studio+3" target="_blank">
-<img src="/images/as3bookcover.png" width="70%"/>
-</a></p>
+<pre><code>git clone https://github.com/VundleVim/Vundle.vim.git
+</code></pre>
 
-<ul class="fa-ul">
-  <li><i class="fa-li fa fa-envelope"></i>
-  <a href="mailto:ted@thelogbox.com">ted@thelogbox.com</a>
-  </li>
-</ul>
+<p><strong>Create .vimrc in your home folder</strong> (~/.vimrc) and add the following entries to it</p>
 
-    </div>
-  </article>
-<script src="/scripts/rrssb.min.js"></script>
-</body>
+<pre><code class="language-bash">set rtp+=~/.vim/bundle/vundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tlib_vim'
+Bundle 'snipmate-snippets'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'ricardovaleriano/vim-github-theme.git'
+
+call vundle#end()
+</code></pre>
+
+<p><strong>Save the .vimrc file</strong>. Close it and execute the following command on a terminal window</p>
+
+<pre><code>vim +PluginInstall +qall
+</code></pre>
+
+      </div>
+      <div class="article-readmore"><a href="/posts/vim-setup/">Read more...</a></div>
+      <div class="article-floatclear"></div>
+    </article>
+  </section>
+  
+
+</div>
+
 
 
 <div class="site-footer">

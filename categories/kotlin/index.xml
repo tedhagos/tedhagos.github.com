@@ -18,7 +18,7 @@
       <pubDate>Mon, 07 May 2018 13:22:10 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/working-with-kotlin-collections/</guid>
-      <description>Why are we bothering Should I go through all the topics in collections What are the collections, by the way, should I describe them in detail Don&amp;rsquo;t write raw loops (the filter and lambdas should actually be able to do the job), why should&amp;rsquo;nt I use raw loops, the syntax is there, why shouldn&amp;rsquo;t I use it — because most of hte time, there&amp;rsquo;s probably a better way of doing it Why do we call it a framework  The questions I should be asking;</description>
+      <description>The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now. Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</description>
     </item>
     
     <item>
@@ -27,18 +27,8 @@
       <pubDate>Sat, 05 May 2018 09:16:00 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/kotlin-higher-order-functions/</guid>
-      <description>Why the name? are there lower order functions? How is it any different from the usual method I know from Java, C/C++ or Visual Basic What does it mean when they say “first class citizen”, first class functions What do they look like How do they accept functions as parameter and why is this useful How would it return functions? again, why is this useful Do the Kotlin team themselves use higher order functions  What’s with the name The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</description>
-    </item>
-    
-    <item>
-      <title>Kotlin</title>
-      <link>http://tedhagos.com/posts/kotlin-getting-started/</link>
-      <pubDate>Sat, 30 Dec 2017 21:07:12 +0800</pubDate>
-      
-      <guid>http://tedhagos.com/posts/kotlin-getting-started/</guid>
-      <description>1. Tooling There are a few ways to get started.
- Explore the online editor at try.kotlinlang.org Get the command line tools at kotlinlang.org/commandline Use an IDE like Eclipse or IntelliJ IDEA, there is a non-paid version of IntelliJ called CE or Community Edition  2. A few characteristics Like Java, its
- compiled, so it goes through the same cycle of writing &amp;gt; compiling &amp;gt; running statically typed, but we don&amp;rsquo;t always have to write the type.</description>
+      <description>The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.
+ NOTE It makes me wonder if there a thing such as &amp;ldquo;lower order functions&amp;rdquo;, I don&amp;rsquo;t think this term was ever used, neither in programming nor in the world of Math.</description>
     </item>
     
   </channel>

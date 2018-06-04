@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/android/</link>
+    <description>Recent content in Android on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Sun, 03 Jun 2018 21:27:54 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Studio 3</title>
+      <link>http://tedhagos.com/posts/android-studio-3/</link>
+      <pubDate>Sun, 03 Jun 2018 21:27:54 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/android-studio-3/</guid>
+      <description>What to configure - this is part of the book Coding preferences - no need for this Common shortcuts - yes Common task you need to perform - I will do this, I will add this as part of the book  refactor find some thing across projects TODO lists marking blocks of code for commenting  Project organization - yes Project settings - yes Java 10 - A small clause.</description>
+    </item>
+    
+    <item>
+      <title>Activities and Layouts</title>
+      <link>http://tedhagos.com/posts/android-activities-layouts/</link>
+      <pubDate>Sat, 20 Oct 2012 18:40:33 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/android-activities-layouts/</guid>
+      <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.</description>
+    </item>
+    
+  </channel>
+</rss>

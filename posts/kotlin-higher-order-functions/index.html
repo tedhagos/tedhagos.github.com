@@ -6,15 +6,21 @@
   <title>Higher Order Functions - Ted&#39;s notes</title>
   <meta property="og:title" content="Higher Order Functions - Ted&#39;s notes" />
   <meta name="twitter:title" content="Higher Order Functions - Ted&#39;s notes" />
-  <meta name="description" content="Why the name? are there lower order functions? How is it any different from the usual method I know from Java, C/C&#43;&#43; or Visual Basic What does it mean when they say “first class citizen”, first class functions What do they look like How do they accept functions as parameter and why is this useful How would it return functions? again, why is this useful Do the Kotlin team themselves use higher order functions  What’s with the name The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.">
-  <meta property="og:description" content="Why the name? are there lower order functions? How is it any different from the usual method I know from Java, C/C&#43;&#43; or Visual Basic What does it mean when they say “first class citizen”, first class functions What do they look like How do they accept functions as parameter and why is this useful How would it return functions? again, why is this useful Do the Kotlin team themselves use higher order functions  What’s with the name The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.">
-  <meta name="twitter:description" content="Why the name? are there lower order functions? How is it any different from the usual method I know from Java, C/C&#43;&#43; or Visual Basic What does it mean when they say “first class citizen”, first class …">
+  <meta name="description" content="The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.
+ NOTE It makes me wonder if there a thing such as &ldquo;lower order functions&rdquo;, I don&rsquo;t think this term was ever used, neither in programming nor in the world of Math.">
+  <meta property="og:description" content="The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.
+ NOTE It makes me wonder if there a thing such as &ldquo;lower order functions&rdquo;, I don&rsquo;t think this term was ever used, neither in programming nor in the world of Math.">
+  <meta name="twitter:description" content="The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference …">
   <meta name="author" content="Your name"/>
   <meta property="og:site_name" content="Ted&#39;s notes" />
   <meta property="og:url" content="/posts/kotlin-higher-order-functions/" />
   <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/kotlin-lambda.png" />
+  <meta name="twitter:image" content="/images/kotlin-lambda.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.36" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
   <link rel="stylesheet" href="/css/style.css" media="all" />
   <link rel="stylesheet" href="/css/syntax.css" media="all" />
   <link rel="stylesheet" href="/css/custom.css" media="all" />
@@ -31,6 +37,7 @@
       <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
       <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
     </ul>
   </nav>
 </header>
@@ -39,7 +46,7 @@
 
   <div class="main" role="main">
     <article class="article">
-      
+      <img src="/images/kotlin-lambda.png" class="article-image" />
       
       <h1 class="article-title">Higher Order Functions</h1>
       
@@ -54,12 +61,12 @@
         </li>
       </ul>
       
+      
 <aside class="toc">
   <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
-<li><a href="#what-s-with-the-name">What’s with the name</a></li>
 <li><a href="#how-is-it-different">How is it different</a></li>
 <li><a href="#what-does-it-look-like">What does it look like</a></li>
 <li><a href="#why-are-we-bothering">Why are we bothering</a></li>
@@ -70,21 +77,11 @@
 </aside>
       
 
-<ol>
-<li>Why the name? are there lower order functions?</li>
-<li>How is it any different from the usual method I know from Java, C/C++ or Visual Basic</li>
-<li>What does it mean when they say “first class citizen”, first class functions</li>
-<li>What do they look like</li>
-<li>How do they accept functions as parameter and why is this useful</li>
-<li>How would it return functions? again, why is this useful</li>
-<li>Do the Kotlin team themselves use higher order functions</li>
-</ol>
-
-<h2 id="what-s-with-the-name">What’s with the name</h2>
-
 <p>The name <em>higher order functions</em>  come from the world of Mathematics, in there, a higher order function is also called <em>functional</em>, <em>functional form</em> or <em>functor</em>, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</p>
 
-<p>I don’t think that the term “lower order function” is used, either in programming nor in Math. At least in Math, anything that isn’t a higher order function is referred to as “first order function”. I haven’t really heard any coder use the term “lower order function”— or maybe I just didn’t “Google” deep enough.</p>
+<blockquote>
+<p><strong>NOTE</strong>  It makes me wonder if there a thing such as &ldquo;lower order functions&rdquo;,  I don&rsquo;t think this term was ever used, neither in programming nor in the world of Math. At least in Math, anything that isn’t a higher order function is referred to as “first order function”. I haven’t really heard any coder use the term “lower order function”— or maybe I just didn’t “Google” deep enough.</p>
+</blockquote>
 
 <p>Another name that was given to higher order functions is <em>first class functions</em>. A very clever guy named Christopher Strachey coined the term sometime in the mid 60s.</p>
 
@@ -173,7 +170,7 @@ fun main(args: Array&lt;String&gt;) {
           <a href="/posts/working-with-kotlin-collections/" data-toggle="tooltip" data-placement="top" title=" Collections">&lt; Newer</a>
       </li>
       <li class="pager-older">
-        <a href="/posts/angularjs-quickstart/" data-toggle="tooltip" data-placement="top" title="Angularjs Quickstart">Older &gt;</a>
+        <a href="/posts/python-exercises/" data-toggle="tooltip" data-placement="top" title="Python Exercises">Older &gt;</a>
       </li>
     </ul>
   </div>

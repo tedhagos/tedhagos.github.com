@@ -15,8 +15,12 @@ You copied something in an X window (browser or editor etc), you want to paste t
   <meta property="og:site_name" content="Ted&#39;s notes" />
   <meta property="og:url" content="/posts/linux-cheatsheet/" />
   <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/linux-cheatsheet.png" />
+  <meta name="twitter:image" content="/images/linux-cheatsheet.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.36" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
   <link rel="stylesheet" href="/css/style.css" media="all" />
   <link rel="stylesheet" href="/css/syntax.css" media="all" />
   <link rel="stylesheet" href="/css/custom.css" media="all" />
@@ -33,6 +37,7 @@ You copied something in an X window (browser or editor etc), you want to paste t
       <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
       <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
     </ul>
   </nav>
 </header>
@@ -41,13 +46,13 @@ You copied something in an X window (browser or editor etc), you want to paste t
 
   <div class="main" role="main">
     <article class="article">
-      
+      <img src="/images/linux-cheatsheet.png" class="article-image" />
       
       <h1 class="article-title">Linux Cheatsheet</h1>
       
       
       <ul class="article-meta">
-        <li class="article-meta-date"><time>December 30, 2017</time></li>
+        <li class="article-meta-date"><time>July 21, 2014</time></li>
         <li class="article-meta-tags">
           <a href="/tags/linux/">
             <i class="fas fa-tag"></i>
@@ -55,6 +60,7 @@ You copied something in an X window (browser or editor etc), you want to paste t
           </a>&nbsp;
         </li>
       </ul>
+      
       
 <aside class="toc">
   <nav id="TableOfContents">
@@ -91,6 +97,7 @@ You copied something in an X window (browser or editor etc), you want to paste t
 <li><a href="#format-external-drive-to-fat32">Format external drive to FAT32</a></li>
 <li><a href="#hash-sum-mismatch-error">Hash Sum Mismatch Error</a></li>
 <li><a href="#nvpy">nvPY</a></li>
+<li><a href="#cmd-line-printing">cmd Line printing</a></li>
 </ul>
 </nav>
 </aside>
@@ -430,16 +437,131 @@ sort_mode = 1
 
 <p>There is a detailed example and explanation of the cfg file in <a href="https://github.com/cpbotha/nvpy">https://github.com/cpbotha/nvpy</a></p>
 
+<h1 id="cmd-line-printing">cmd Line printing</h1>
+
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>lpstat -d</code></td>
+<td>Find out if there is default printer configured</td>
+</tr>
+
+<tr>
+<td><code>lpstat -p</code></td>
+<td>See all the printers configured</td>
+</tr>
+
+<tr>
+<td><code>lpstat -p -d</code></td>
+<td>See all of the printers and the default printer</td>
+</tr>
+
+<tr>
+<td><code>lpr &lt;filename&gt;</code></td>
+<td>Send file to the default printer</td>
+</tr>
+
+<tr>
+<td>`cat <filename\></td>
+<td>lpr`</td>
+</tr>
+
+<tr>
+<td><code>lpadmin</code></td>
+<td>CLI command to configure cups printers, but it is really much easier to use the web interface. Use the browser and go to <code>http://localhost:631</code>. You can pretty much do everything there and without memorizing all the command line flags needed by lpadmin. If you have no choice but to do the admin on the command line, the</td>
+</tr>
+
+<tr>
+<td><code>lpoptions -d printername</code></td>
+<td>Set a default printer</td>
+</tr>
+
+<tr>
+<td><code>lpq</code></td>
+<td>See what print jobs are in progress and if there are ones on the queue</td>
+</tr>
+
+<tr>
+<td><code>lprm \&lt;job id&gt;</code></td>
+<td>Cancel a print job. You need to know the job id, that is why you need to <code>lpq</code> first</td>
+</tr>
+
+<tr>
+<td><code>lpoptions -p &lt;printername&gt;</code></td>
+<td>Show the settings of the printer</td>
+</tr>
+</tbody>
+</table>
+
+<p>Either the <code>lpr</code> and <code>lp</code> command will send contents of a file to the configured printer. But before you can print, you need a properly configured printer. Use either <code>lpadmin</code> for that, or configure the printer via the web gui admin at <em><a href="http://printserverNameOrIpAddress:631">http://printserverNameOrIpAddress:631</a></em> .</p>
+
+<p>The most basic usage is to send the contents of a file to the configured printer, like so</p>
+
+<pre><code>lpr filename.ext
+</code></pre>
+
+<p>Some options of the <code>lpr</code> command</p>
+
+<ul>
+<li><strong>lpr -o landscape <filename>:</strong> Print in landscape mode</li>
+<li><strong>lpr -o fit-to-page <filename>:</strong> Fit everything in 1 page</li>
+<li><strong>lpr -o media=A4 <filename>:</strong> Use A4 as paper</li>
+<li><strong>lpr -o media=Letter <filename >:</strong> Use letter size</li>
+<li><strong>lpr -n 2 <filename>:</strong> Print 2 copies</li>
+<li><strong>lpr -n 2 Collate=True:</strong> Print 2 copies and collate</li>
+</ul>
+
+<hr />
+
+<p>Revision history</p>
+
+<table>
+<thead>
+<tr>
+<th>version</th>
+<th>date revised</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>21.April.2014</td>
+<td>First draft</td>
+</tr>
+
+<tr>
+<td>1.1</td>
+<td>20.October.2015</td>
+<td>Rewrote some content, added some</td>
+</tr>
+
+<tr>
+<td>1.2</td>
+<td>15.December.2016</td>
+<td>nvPY and printer notes</td>
+</tr>
+</tbody>
+</table>
+
     </article>
 
     
 
     <ul class="pager article-pager">
       <li class="pager-newer">
-          <a href="/posts/kotlin-getting-started/" data-toggle="tooltip" data-placement="top" title="Kotlin">&lt; Newer</a>
+          <a href="/posts/macos-cheatsheet/" data-toggle="tooltip" data-placement="top" title="macOS Cheatsheet">&lt; Newer</a>
       </li>
       <li class="pager-older">
-        <a href="/posts/vim-setup/" data-toggle="tooltip" data-placement="top" title="Vim Setup">Older &gt;</a>
+        <a href="/posts/android-activities-layouts/" data-toggle="tooltip" data-placement="top" title="Activities and Layouts">Older &gt;</a>
       </li>
     </ul>
   </div>

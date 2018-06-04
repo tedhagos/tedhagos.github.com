@@ -6,20 +6,27 @@
   <title>Python Exercises - Ted&#39;s notes</title>
   <meta property="og:title" content="Python Exercises - Ted&#39;s notes" />
   <meta name="twitter:title" content="Python Exercises - Ted&#39;s notes" />
-  <meta name="description" content="1. Summing things up Create a module named &ldquo;sums.py&rdquo; with three functions in it. These functions are named as follows
- sum_to(end) sum_of_even(end) sum_of_odd(end)  The module should be loadable from the REPL, sample usage is as follows
-&gt;&gt;&gt; import sums &gt;&gt;&gt; sums.sum(100) Sum of numbers from 1 to 100 is 4950 &gt;&gt;&gt; sums.sum_of_even(100) “Your answer here” &gt;&gt;&gt; exer1.sum_of_odd(100) “Your answer here”  You should also be able to run the module as a script, like so">
-  <meta property="og:description" content="1. Summing things up Create a module named &ldquo;sums.py&rdquo; with three functions in it. These functions are named as follows
- sum_to(end) sum_of_even(end) sum_of_odd(end)  The module should be loadable from the REPL, sample usage is as follows
-&gt;&gt;&gt; import sums &gt;&gt;&gt; sums.sum(100) Sum of numbers from 1 to 100 is 4950 &gt;&gt;&gt; sums.sum_of_even(100) “Your answer here” &gt;&gt;&gt; exer1.sum_of_odd(100) “Your answer here”  You should also be able to run the module as a script, like so">
-  <meta name="twitter:description" content="1. Summing things up Create a module named &ldquo;sums.py&rdquo; with three functions in it. These functions are named as follows
- sum_to(end) sum_of_even(end) sum_of_odd(end)  The module should be …">
+  <meta name="description" content="Exer 1. Ask the user for input, then greet the user. Store the user&rsquo;s response in a variable and print it out.
+Exer 2. Ask the user the year he was born, then print out his age.
+Exer 3. Print a triangle of asterisk, see the output below
+* ** *** **** ***** ****** ******* ******** *********  There are 10 asterisk on the last line of the printed output">
+  <meta property="og:description" content="Exer 1. Ask the user for input, then greet the user. Store the user&rsquo;s response in a variable and print it out.
+Exer 2. Ask the user the year he was born, then print out his age.
+Exer 3. Print a triangle of asterisk, see the output below
+* ** *** **** ***** ****** ******* ******** *********  There are 10 asterisk on the last line of the printed output">
+  <meta name="twitter:description" content="Exer 1. Ask the user for input, then greet the user. Store the user&rsquo;s response in a variable and print it out.
+Exer 2. Ask the user the year he was born, then print out his age.
+Exer 3. Print a …">
   <meta name="author" content="Your name"/>
   <meta property="og:site_name" content="Ted&#39;s notes" />
   <meta property="og:url" content="/posts/python-exercises/" />
   <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/exercise.png" />
+  <meta name="twitter:image" content="/images/exercise.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.36" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
   <link rel="stylesheet" href="/css/style.css" media="all" />
   <link rel="stylesheet" href="/css/syntax.css" media="all" />
   <link rel="stylesheet" href="/css/custom.css" media="all" />
@@ -36,6 +43,7 @@
       <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
       <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
     </ul>
   </nav>
 </header>
@@ -44,7 +52,7 @@
 
   <div class="main" role="main">
     <article class="article">
-      
+      <img src="/images/exercise.png" class="article-image" />
       
       <h1 class="article-title">Python Exercises</h1>
       
@@ -65,40 +73,57 @@
         </li>
       </ul>
       
-<aside class="toc">
-  <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#1-summing-things-up">1.  Summing things up</a></li>
-<li><a href="#2-greatest-common-factor">2. Greatest Common Factor</a></li>
-<li><a href="#3-string-parsing">3. String parsing</a></li>
-</ul></li>
-</ul>
-</nav>
-</aside>
       
+<aside class="toc">
+  
+</aside>
+      <p><strong>Exer 1</strong>. Ask the user for input, then greet the user.  Store the user&rsquo;s response in a variable and print it out.</p>
 
-<h2 id="1-summing-things-up">1.  Summing things up</h2>
+<hr />
 
-<p><strong>Create a module named &ldquo;sums.py&rdquo;</strong> with three functions in it. These functions are named as follows</p>
+<p><strong>Exer 2</strong>. Ask the user the year he was born, then print out his age.</p>
 
-<ul>
-<li><code>sum_to(end)</code></li>
-<li><code>sum_of_even(end)</code></li>
-<li><code>sum_of_odd(end)</code></li>
-</ul>
+<hr />
+
+<p><strong>Exer 3</strong>. Print a triangle of asterisk, see the output below</p>
+
+<pre><code>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+</code></pre>
+
+<p>There are 10 asterisk on the last line of the printed output</p>
+
+<hr />
+
+<p><strong>Exer 4</strong>. Print a triangle of asterisk, just like how you did it in Exer 3, but this time, ask the user how many layers of asterisk he wants to print.</p>
+
+<p>For additional difficulty, you may also ask the user what character to print, use that instead of the asterisk. If the user doesn&rsquo;t input any character, then use the asterisk</p>
+
+<hr />
+
+<p><strong>Exer 5</strong>. FizzBuzz</p>
+
+<p>Loop through the numbers 1 through 100. If the number is odd, print &ldquo;Fizz&rdquo;. If it&rsquo;s even, print &ldquo;Buzz&rdquo;. If the number is a multiple of 10, print &ldquo;FizzBuzz&rdquo;</p>
+
+<hr />
+
+<p><strong>Exer 6</strong> Create a module  with three functions in it. These functions are named as follows</p>
+
+<pre><code>sum_to(end)
+sum_of_even(end)
+sum_of_odd(end)
+</code></pre>
 
 <p>The module should be loadable from the <strong>REPL</strong>, sample usage is as follows</p>
 
-<pre><code>&gt;&gt;&gt; import sums
-&gt;&gt;&gt; sums.sum(100)
-Sum of numbers from 1 to 100 is 4950
-&gt;&gt;&gt; sums.sum_of_even(100)
-“Your answer here”
-&gt;&gt;&gt; exer1.sum_of_odd(100)
-“Your answer here”
-</code></pre>
+<p><img src="/images/python-exer-sums.png" alt="python-exer-sum_to" /></p>
 
 <p>You should also be able to run the module as a script, like so</p>
 
@@ -118,7 +143,34 @@ Sum of numbers from 1 to 100 is 4950
 <li>knowledge of Python execution model, know when a module is run as a script and when it&rsquo;s loaded from the REPL</li>
 </ol>
 
-<h2 id="2-greatest-common-factor">2. Greatest Common Factor</h2>
+<hr />
+
+<p><strong>Exer 7</strong>. Find the divisors of a number.</p>
+
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (A divisor is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
+
+<pre><code>$ python exer2.py
+
+Enter a number: 10 [enter]
+
+[1,2,5,10]
+</code></pre>
+
+<p>You don’t have to find an efficient algorithm like constant time, O(1), you can solve it by brute force methods or O(n). You can solve this this way</p>
+
+<ol>
+<li>Get a number input from the user, convert it to a Number using the int() function, save it to a variable named num</li>
+<li>Generate a range; you may or may not convert it to a list, it doesn’t matter</li>
+<li>Create an empty list</li>
+<li>Go through each item in the range, get the quotient of num and the current item (in the range) —  in remainder form, so modulo). If the remainder is == 0, add the current item in the list</li>
+<li>Rinse and repeat, until all the items in the range is processed</li>
+</ol>
+
+<p>Remember that ranges are half-closed, meaning, it will exclude the last item in the range</p>
+
+<hr />
+
+<p><strong>Exer 8</strong> Greatest Common Factor</p>
 
 <p>Given two non-negative integers <em>firstNum</em> and <em>secondNum</em>, find the greatest common factor. There are many solutions to this problem, but for the purpose of our exercise, we&rsquo;ll use the Euclidean algorithm. The steps are as follows;</p>
 
@@ -135,11 +187,7 @@ Sum of numbers from 1 to 100 is 4950
 </ol></li>
 </ol>
 
-<blockquote>
-<p>NOTE:</p>
-
-<p>Pass the numbers as argument to the command line. This module needs to be ran as a script</p>
-</blockquote>
+<p>Pass the numbers as argument to the command line. This module needs to be ran as a script.</p>
 
 <p>This is an exercise on the following areas</p>
 
@@ -151,7 +199,47 @@ Sum of numbers from 1 to 100 is 4950
 <li>Knowledge of some data structures like <em>tuples</em> and <em>dereferencing</em> operations (if you use them for finding the bigger and smaller number, it&rsquo;s entirely optional to use <em>tuples</em> though)</li>
 </ol>
 
-<h2 id="3-string-parsing">3. String parsing</h2>
+<hr />
+
+<p><strong>Exer 9</strong>. Guessing game</p>
+
+<p>Create a script that will do the following;</p>
+
+<ol>
+<li>Generate a random integer (whole number), the range is 1 to 1000</li>
+<li>Ask the user for input, ask him to guess a number from 1 to 1000</li>
+<li>Compare your (random) number, from step 1, to the user input</li>
+<li>If the user’s guess is lower that the random number, tell the user, by printing it on the screen “your guess is lower than the number”; otherwise, print “your guess is higher than the number</li>
+<li>On the other hand, if the user has guessed it correctly, then print “you are right, the number is (print the number here)”</li>
+</ol>
+
+<hr />
+
+<p><strong>Exer 10</strong>. Multiples of 3 and 5</p>
+
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+
+<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+
+<p><em>Hint</em> 1: Answer is 233, 168  →  The hint is provided so that you can check your algorithm.  It’s the solution we need. (This is Project Euler problem # 1)</p>
+
+<p><em>Hint</em> 2: You can solve it this way</p>
+
+<ol>
+<li>Generate a list or range from 1 to 1001 (remember that ranges are exclusive, so if you want to include 1000, you need to terminate the range at 1001)</li>
+<li>Create two lists, call it listA and listB</li>
+<li>Iterate through the range, for each item in it, see if it’s divisible by 3, if it is, add it to listA</li>
+<li>Iterate through the range again, this time, for each item in it, see if it’s divisible by 5, if it is, add it to listB</li>
+<li>listA and listB will have common items in it, because some numbers will be divisible by either 3 or 5</li>
+<li>Combine listA and listB into a single list (listC) but you need to make sure to eliminate the duplicates (try looking into Python sets or using list comprehensions) — you’ll need to do a bit of research in here, visiting stackoverflow isn’t a bad idea</li>
+<li>Now, you can sum all the items in listC</li>
+</ol>
+
+<p>Show the solution using both list comprehension and imperative code (for loops)</p>
+
+<hr />
+
+<p>About the post image (above), it&rsquo;s from <a href="https://xkcd.com/189/">xckd.com</a></p>
 
     </article>
 
@@ -159,9 +247,11 @@ Sum of numbers from 1 to 100 is 4950
 
     <ul class="pager article-pager">
       <li class="pager-newer">
-          <a href="/posts/vim-setup/" data-toggle="tooltip" data-placement="top" title="Vim Setup">&lt; Newer</a>
+          <a href="/posts/kotlin-higher-order-functions/" data-toggle="tooltip" data-placement="top" title="Higher Order Functions">&lt; Newer</a>
       </li>
-      <li class="pager-older pager-noitem">Older &gt;</li>
+      <li class="pager-older">
+        <a href="/posts/macos-cheatsheet/" data-toggle="tooltip" data-placement="top" title="macOS Cheatsheet">Older &gt;</a>
+      </li>
     </ul>
   </div>
 

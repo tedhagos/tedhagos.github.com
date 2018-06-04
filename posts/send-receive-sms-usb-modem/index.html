@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>SMS messages using USB Modem - Ted&#39;s notes</title>
+  <meta property="og:title" content="SMS messages using USB Modem - Ted&#39;s notes" />
+  <meta name="twitter:title" content="SMS messages using USB Modem - Ted&#39;s notes" />
+  <meta name="description" content="This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.
+There were a couple of other solution approaches but I went for gnokii-sms.">
+  <meta property="og:description" content="This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.
+There were a couple of other solution approaches but I went for gnokii-sms.">
+  <meta name="twitter:description" content="This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of …">
+  <meta name="author" content="Your name"/>
+  <meta property="og:site_name" content="Ted&#39;s notes" />
+  <meta property="og:url" content="/posts/send-receive-sms-usb-modem/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/tuxracer.png" />
+  <meta name="twitter:image" content="/images/tuxracer.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.36" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Ted&#39;s notes</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <div class="main" role="main">
+    <article class="article">
+      <img src="/images/tuxracer.png" class="article-image" />
+      
+      <h1 class="article-title">SMS messages using USB Modem</h1>
+      
+      
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>October 4, 2011</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/linux/">
+            <i class="fas fa-folder"></i>
+            linux
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+      
+<aside class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#config">Config</a></li>
+<li><a href="#database-backend">Database backend</a></li>
+<li><a href="#sending-and-receiving-sms">Sending and Receiving SMS</a></li>
+</ul>
+</nav>
+</aside>
+      
+
+<p>This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.</p>
+
+<p>There were a couple of other solution approaches but I went for gnokii-sms. I didn&rsquo;t have a lot of time, which ruled out whipping serial I/O codes and concocting SMS messages using Hayes AT command set.</p>
+
+<p>I could have used Kannel but it was so big. I only needed a simple mechanism to receve and send SMS message. I did not need a full gateway with all the bells and whistles.</p>
+
+<p>GNOKii-SMS and Gammu were mature solutions. I went eventually with gnokii-sms but Gammu would have been a fit as well.</p>
+
+<p>Hence, this mashup uses gnokii-sms. It is a stand-alone application with a daemon and it uses MySQL database as a datastore. I don&rsquo;t need to learn any API in order to integrate it with my application. All I need to do is to write an application that will query the gnokii-sms backend. I won&rsquo;t even alter the structure of the gnokii-sms database. My application will simply use gnokii for the SMS facility. No application logic will be added to gnokii-sms</p>
+
+<p>This little project requires the following</p>
+
+<ol>
+<li>A Linux PC. Debian was used but I got to test it on Crunchbang as well, worked out fine. It should work fairly well on the Debian derivatives e.g. Ubuntu, Xubuntu, Mint etc</li>
+<li>A USB modem. A post paid plan was used for the project, but a USB stick on pre-paid should work just as well</li>
+</ol>
+
+<h1 id="installation">Installation</h1>
+
+<p><code>sudo apt-get update</code><br />
+<code>sudo apt-get install mysql-server</code><br />
+<code>sudo apt-get install gnokii-smsd-mysql</code></p>
+
+<h1 id="config">Config</h1>
+
+<p>Connect the USB modem to PC and find out which port it is using</p>
+
+<p><code>sudo lsusb</code></p>
+
+<p>Another command to use could be</p>
+
+<p><code>sudo dmesg | grep USB</code></p>
+
+<p>What you are looking for is the device name for the modem. Usually, the modem is at <code>/dev/tty0</code>, but just to be sure, run either lsusb or the dmesg command as stated above. Remember the device name because you will need it when you edit <code>~/.config/gnokii/config</code> &#x2014; that is the configuration file for gnokii.</p>
+
+<p>On some Debian derivatives like Crunchbang, the gnokii config file was not created during the installation . If that is the case, just create the config file manually.</p>
+
+<p><code>sudo mkdir -p ~/.config/gnokii</code><br />
+<code>sudo touch ~/.config/gnokii/config</code></p>
+
+<p>Edit the <strong>config</strong> file. Set the port number and model to their appropriate values</p>
+
+<pre><code>port=/dev/tty0
+model=AT
+</code></pre>
+
+<p>There might a default value for the model property, it could be 6510. That value corresponds to a Nokia phone. But we are not using a Nokia phone, we are using a USB modem, so set the model value to <strong>AT</strong>.</p>
+
+<p>Once done with the configuration, just do a quick test so that we know things are working out fine. Gnokii has a command that can quickly tell us if we are doing things correctly.</p>
+
+<p><code>sudo gnokii --identify</code></p>
+
+<p>It should give us some diagnostics and a quick peek if we did something wrong on the configuration file.</p>
+
+<h1 id="database-backend">Database backend</h1>
+
+<p>The gnokii-smsd-msyql package contains the SQL scripts necessary to create the table structure, but the database itself still needs to be manually prepared.</p>
+
+<p><code>mysql -u root -p</code><br />
+<code>mysql&gt; create database smsgw;</code><br />
+<code>mysql&gt; use smsgw;</code><br />
+<code>mysql&gt; \. /usr/share/doc/gnokii-smsd-mysql/sms.tables.mysql.sql;</code></p>
+
+<h1 id="sending-and-receiving-sms">Sending and Receiving SMS</h1>
+
+<p>First, the daemon smsgw daemon process needs to run. Get another terminal window and run the daemon process from there</p>
+
+<p><code>sudo smsd -u root -p smsgw -c localhost -m mysql</code></p>
+
+<p>To send an SMS message, the command is</p>
+
+<p><code>echo &quot;Test message | gnokii --sendsmsd +MobileNumber</code></p>
+
+<p>+MobileNumber is structured as <span class="underline">(country code) phone number</span></p>
+
+<p>If you send an SMS message to the number of the USB modem, all incoming messages are stored in the <strong>inbox</strong> table of the database</p>
+
+<p><code>mysql -u root -p</code><br />
+<code>mysql&gt; use smsgw;</code><br />
+<code>mysql&gt; select * from inbox;</code></p>
+
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> There was a gnokii config file though at `/etc/xdg/gnokii/config`, this
+was probably meant to be copied over to `~/.config/gnokii/config`</div>
+
+<p></div>
+</div></p>
+
+    </article>
+
+    
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/posts/android-activities-layouts/" data-toggle="tooltip" data-placement="top" title="Activities and Layouts">&lt; Newer</a>
+      </li>
+      <li class="pager-older pager-noitem">Older &gt;</li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">&copy; Copyright Ted Hagos</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-"><a href="" title=""></a></li>
+  </ul>
+  
+</div>
+<script src="/js/script.js"></script>
+<script src="/js/custom.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Toracking ID', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright Ted Hagos</copyright>
-    <lastBuildDate>Sat, 30 Dec 2017 19:18:23 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jul 2014 19:18:23 +0800</lastBuildDate>
     
 	<atom:link href="http://tedhagos.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Linux Cheatsheet</title>
       <link>http://tedhagos.com/posts/linux-cheatsheet/</link>
-      <pubDate>Sat, 30 Dec 2017 19:18:23 +0800</pubDate>
+      <pubDate>Mon, 21 Jul 2014 19:18:23 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/linux-cheatsheet/</guid>
       <description>Copy pasting clipboard to/from terminal Can be done either via xsel or xclip. Xclip is part of most modern installations, so you it may be there in your installation already. The common usages are:
