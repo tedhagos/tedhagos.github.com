@@ -31,5 +31,15 @@
  NOTE It makes me wonder if there a thing such as &amp;ldquo;lower order functions&amp;rdquo;, I don&amp;rsquo;t think this term was ever used, neither in programming nor in the world of Math.</description>
     </item>
     
+    <item>
+      <title>Kotlin</title>
+      <link>http://tedhagos.com/posts/kotlin-getting-started/</link>
+      <pubDate>Sun, 15 Oct 2017 21:07:12 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/kotlin-getting-started/</guid>
+      <description>It&amp;rsquo;s new(est) kid on the the JVM block.
+It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. They&amp;rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&amp;rsquo;m not sure, I&amp;rsquo;m too lazy to research). The &amp;ldquo;hooray&amp;rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.</description>
+    </item>
+    
   </channel>
 </rss>
