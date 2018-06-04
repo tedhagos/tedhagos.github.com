@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tedhagos.com/posts/android-studio-3/</loc>
+    <loc>http://tedhagos.com/posts/android-studio/</loc>
     <lastmod>2018-06-03T21:27:54+08:00</lastmod>
   </url>
   
@@ -53,19 +53,25 @@
   
   <url>
     <loc>http://tedhagos.com/categories/android/</loc>
-    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tedhagos.com/tags/android-studio/</loc>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/categories/android-studio/</loc>
     <lastmod>2018-06-03T21:27:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tedhagos.com/categories/</loc>
-    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -82,14 +88,14 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/categories/linux/</loc>
-    <lastmod>2011-10-04T08:10:54+08:00</lastmod>
+    <loc>http://tedhagos.com/tags/linux/</loc>
+    <lastmod>2014-07-21T19:18:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/tags/linux/</loc>
-    <lastmod>2014-07-21T19:18:23+08:00</lastmod>
+    <loc>http://tedhagos.com/categories/linux/</loc>
+    <lastmod>2011-10-04T08:10:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,7 +118,7 @@
   
   <url>
     <loc>http://tedhagos.com/tags/</loc>
-    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
