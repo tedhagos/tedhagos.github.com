@@ -40,6 +40,15 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>http://tedhagos.com/categories/java/</link>
+      <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kotlin</title>
       <link>http://tedhagos.com/categories/kotlin/</link>
       <pubDate>Mon, 07 May 2018 13:22:10 +0800</pubDate>
@@ -54,6 +63,15 @@
       <pubDate>Tue, 04 Oct 2011 08:10:54 +0800</pubDate>
       
       <guid>http://tedhagos.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>http://tedhagos.com/categories/nodejs/</link>
+      <pubDate>Tue, 21 Apr 2015 15:55:09 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/categories/nodejs/</guid>
       <description></description>
     </item>
     

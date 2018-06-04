@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/java/</link>
+    <description>Recent content in Java on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Thu, 19 Jul 2012 14:54:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java</title>
+      <link>http://tedhagos.com/posts/java/</link>
+      <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/java/</guid>
+      <description>Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&amp;rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.
+The Language The Java language is not so old, as far as programming languages go.</description>
+    </item>
+    
+  </channel>
+</rss>

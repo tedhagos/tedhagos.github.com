@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Java - Ted&#39;s notes</title>
+  <meta property="og:title" content="Java - Ted&#39;s notes" />
+  <meta name="twitter:title" content="Java - Ted&#39;s notes" />
+  <meta name="description" content="Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.
+The Language The Java language is not so old, as far as programming languages go.">
+  <meta property="og:description" content="Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.
+The Language The Java language is not so old, as far as programming languages go.">
+  <meta name="twitter:description" content="Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a …">
+  <meta name="author" content="Your name"/>
+  <meta property="og:site_name" content="Ted&#39;s notes" />
+  <meta property="og:url" content="/posts/java/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/java-10-jdk.png" />
+  <meta name="twitter:image" content="/images/java-10-jdk.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.36" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Ted&#39;s notes</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <div class="main" role="main">
+    <article class="article">
+      <img src="/images/java-10-jdk.png" class="article-image" />
+      
+      <h1 class="article-title">Java</h1>
+      
+      
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>July 19, 2012</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/java/">
+            <i class="fas fa-folder"></i>
+            java
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+      
+<aside class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#the-language">The Language</a></li>
+<li><a href="#java-virtual-machine">Java Virtual Machine</a></li>
+<li><a href="#editions">Editions</a></li>
+<li><a href="#version-history">Version history</a></li>
+<li><a href="#setup">Setup</a></li>
+</ul></li>
+<li><a href="#hello-world">Hello World</a></li>
+<li><a href="#program-elements">Program Elements</a></li>
+<li><a href="#variables-and-data-types">Variables and Data types</a>
+<ul>
+<li><a href="#primitive-types">Primitive Types</a></li>
+<li><a href="#reference-types">Reference Types</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+      
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.</p>
+
+<h2 id="the-language">The Language</h2>
+
+<p>The Java language is not so old, as far as programming languages go. James Gosling worked on it in the early part of the 90s and released it in 1995. It is barely 22 years old at the time of this writing. Whereas the C language is almost 47 years old, C was released sometime in 1969.</p>
+
+<p>If you have background in other languages such as JavaScript, C++ or C#, Java may look familiar because all of them share some semblance with the C language. By the way, Java is in no way related to JavaScript. JavaScript is not a derivative of Java nor was it inspired by Java. Java is related to JavaScript the same way as car is related to carpet. They just have common letters in their names.</p>
+
+<p>Java is a high-level language. It provides a fair amount of abstraction above the physical machine that it runs on. But you can dive down and perform some decent low level operation on the bit level if you want to. It is also a general-purpose language. It wasn’t designed just to program web applications or anything specific. It is not a domain specific language the way Sinatra (Ruby) or Express (NodeJS) is. You can build pretty much anything you can imagine.</p>
+
+<h2 id="java-virtual-machine">Java Virtual Machine</h2>
+
+<p>Java is a compiled language. Like other languages such as C or C++, you will write your programming instructions in a source file using a somewhat English-like language. This source file will be compiled into an object file. An object file contains a set of instructions that a machine can understand and execute. In Java, an object file or executable file is called <strong>byte code</strong>. The byte code is what a Java Virtual Machine, or JVM, can execute.</p>
+
+<p>Byte codes, however, cannot be executed directly by the operating system (OS). They do not contain the same instructions nor are they structured like the regular EXE files or other forms of portable executable. The OS does not know what to do with byte code. They should be executed within a virtual machine. The Java runtime engine (JRE) is such a machine.</p>
+
+<p>Java is portable at the byte code level. You can write and compile your program in one OS, say Windows and run it on another OS without requiring any modification. Sun Microsystem, the former custodian of the Java technology, came up with the WORA slogan during the early days of Java, it stood for Write Once Run Anywhere.</p>
+
+<p><img src="/images/java-work-cycle.png" alt="java work cycle" /></p>
+
+<p>The basic idea is to write the program source in a file that has a .<em>java</em> extension. A compilation process happens which results in a byte code (.<em>class</em> file).  The byte code is executed within a Java runtime engine (JRE). A JRE is also known as a Java virtual machine (JVM).   Each operating system has their own version of the virtual machine but what runs on one virtual machine, will run on all.</p>
+
+<h2 id="editions">Editions</h2>
+
+<p>You can use Java to build applications for a variety of architectures. Java comes in several editions. The Java SE (Java Standard Edition) which is the topic of this book, can be used to build Desktop applications. Java Enterprise Edition (Jave EE) can be used to build web applications, web services, high availability back-end processes, etc. Java Mobile Edition (Java ME) can be used to build apps for mobile or embedded devices. Although for mobile devices like Android phones/tablets, you might want to consider the Android SDK. By the way, the native language for the Android platform is Java.</p>
+
+<h2 id="version-history">Version history</h2>
+
+<table>
+<thead>
+<tr>
+<th><strong>Version Name</strong></th>
+<th><strong>Code Name</strong></th>
+<th><strong>Release Date</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>JDK 1.0</strong></td>
+<td>Oak</td>
+<td>January 1996</td>
+</tr>
+
+<tr>
+<td><strong>JDK 1.1</strong></td>
+<td>(none)</td>
+<td>February 1997</td>
+</tr>
+
+<tr>
+<td><strong>J2SE 1.2</strong></td>
+<td>Playground</td>
+<td>December 1998</td>
+</tr>
+
+<tr>
+<td><strong>J2SE 1.3</strong></td>
+<td>Kestrel</td>
+<td>May 2000</td>
+</tr>
+
+<tr>
+<td><strong>J2SE 1.4</strong></td>
+<td>Merlin</td>
+<td>February 2002</td>
+</tr>
+
+<tr>
+<td><strong>J2SE 5.0</strong></td>
+<td>Tiger</td>
+<td>September 2004</td>
+</tr>
+
+<tr>
+<td><strong>Java SE 6</strong></td>
+<td>Mustang</td>
+<td>December 2006</td>
+</tr>
+
+<tr>
+<td><strong>Java SE 7</strong></td>
+<td>Dolphin</td>
+<td>July 2011</td>
+</tr>
+
+<tr>
+<td><strong>Java SE 8</strong></td>
+<td></td>
+<td>March 2014</td>
+</tr>
+
+<tr>
+<td><strong>Java SE 9</strong></td>
+<td></td>
+<td>September, 21st 2017</td>
+</tr>
+
+<tr>
+<td><strong>Java SE 10</strong></td>
+<td></td>
+<td>March, 20th 2018</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>NOTE: JDK 11 is on early access at the time I was revising this doc, so it&rsquo;s not yet included here.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>The JDK is available for macOS, Windows and Linux. There are pre-compiled binary installer for each of these platforms and you can get it from the Oracle download page for Java.</p>
+
+<p>If you&rsquo;re on macOS, double click the dmg installer and follow the prompts. It takes care of everything, including the system path and classpath.</p>
+
+<p>If you are on Windows, double click the installer and follow the prompts. You will need to update your Environment settings so that the the <code>JAVA_HOME/bin</code> folder is included in the system path. You will also need to include a <code>CLASSPATH</code> definition in your Environment Settings.</p>
+
+<p>If you are on <strong>Linux</strong>, specifically Ubuntu, you may have installed your JDK in the past using a <em>PPA</em> from the webupd8 team; well, at the time of this writing, the webupd8 team hasn&rsquo;t released anything for JDK 11, in fact, even the JDK 10 isn&rsquo;t out yet. So, for the time being, you may have to install the new JDK using either tarballs or RPM.  The following example shows the terminal command on how to install Java 9 on the Ubuntu, or any of its derivatives.</p>
+
+<pre><code>sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java9-installer
+sudo update-alternatives --config java
+</code></pre>
+
+<hr />
+
+<h1 id="hello-world">Hello World</h1>
+
+<p>All programs in Java have to be written inside a class construct, there&rsquo;s a long-winded, but good explanation for that, however, I don&rsquo;t think it&rsquo;s best to deal with that reason this early because it will get in the way and it&rsquo;s not that important — at least for now. So, let&rsquo;s accept it that it&rsquo;s just the way it is and we need to get used to it early on. A class construct looks something like this</p>
+
+<pre><code class="language-java">class Hello { // (1) (2) (3)
+
+} // (4)
+</code></pre>
+
+<p><strong>(1)</strong> The class definition is started with the keyword class. Like many programming languages, Java has a list of special words that have special meaning to its compiler. The class keyword is one of these special words (also known as reserved words)</p>
+
+<p><strong>(2)</strong> A class must have a name or an identifier. This name is something that you, the programmer, should come up with. This class was given the name &ldquo;Hello&rdquo;</p>
+
+<p><strong>(3)</strong> Right after the class name, follows an opening french brace (some people call it a curly brace, which is fine too). This marks the opening of the class definition</p>
+
+<p><strong>(4)</strong> Lastly, is the closing french brace. This marks the end of the class definition. It is important to remember that all curly braces comes in pairs. Where there is an opening brace, there should be a corresponding closing brace</p>
+
+<p>To print out the string &ldquo;Hello World&rdquo; into the screen, we need to use a statement that can actually do the printing to the screen. There are quite a few statements that can accomplish this task, but the simplest would be the println statement. In code, it looks like this</p>
+
+<pre><code>System.out.println(&quot;Hello World&quot;);
+</code></pre>
+
+<p>It is quite tempting to try and understand the structure of this innocently looking statement, but that will lead us to discussions of the standard Java library, the System class and its nested classes — we&rsquo;re not yet ready for that.  The only things we want to take away from the example are the following;</p>
+
+<ul>
+<li>statements causes things to happen e.g. printing some strings on the screen</li>
+<li>they are terminated by semicolons, much like English statements are punctuated by periods</li>
+</ul>
+
+<p>The last hoop we need to jump before we can put this small example together is the business of Java functions . An executable statement, like println, cannot be simply written inside a class — not just anywhere at least. In the following code example, the println statement is in the wrong place. So, that code won&rsquo;t work</p>
+
+<pre><code class="language-java">class Hello {
+  // THIS WILL NOT WORK
+  System.out.println(&quot;Hello World&quot;);
+}
+</code></pre>
+
+<p>A statement like println, has to be written inside a function. A function is a named collection of statements and it looks something like this</p>
+
+<pre><code>int doSomething() { // (1) (2) (3)
+  // STATEMENT
+  // STATEMENT n ...
+} // (4)
+</code></pre>
+
+<p><strong>(1)</strong> The word int in this line is a return type. A function has to return something, in this case it is returning an int (integer)</p>
+
+<p><strong>(2)</strong> A function, like a class, needs a name. The programmer has to come up with this name, in this example, the name is doSomething. Unlike a class name, a function name has to be appended by open and close parens</p>
+
+<p><strong>(3)</strong> Right after the parens, comes the beginning of the block which is marked by an opening french brace</p>
+
+<p><strong>(4)</strong> Remember that braces comes in pairs</p>
+
+<blockquote>
+<p>Java folks don&rsquo;t use the term &ldquo;functions&rdquo;,  they call it &ldquo;methods&rdquo;. You should get into the habit of calling them that as well</p>
+</blockquote>
+
+<p>Okay. Finally, we can put the example together. Listing 4-1 shows the full code for the Hello example.</p>
+
+<p>Listing 4-1 Hello.java</p>
+
+<pre><code class="language-java">class Hello { 
+  public static void main(String []args) {
+    System.out.println(&quot;Hello World);
+  }
+}
+</code></pre>
+
+<p>In listing 4-1, the println statement is inside a method called main. For now, ignore the other words you see in this method e.g.t public, static and void, you can even ignore the words inside the parens (String []args). We will discuss their details soon enough. What&rsquo;s important to know are the following;</p>
+
+<ul>
+<li>A statement like println needs to be written inside a method</li>
+<li>We have written a method called main, but in this example, it is not just any other method, it is a special one. All programs need an entry point. When they execute, all the statements inside this entry point will be executed first</li>
+</ul>
+
+<p>In order for you to follow this exercise, you will need to do the following</p>
+
+<ol>
+<li>Create the source file and name it &ldquo;Hello.java&rdquo;</li>
+<li>Open the source file using a programmer&rsquo;s editor and copy the contents of listing 4-1 into it</li>
+<li>Compile the source file using the Java compiler</li>
+<li>Run the resulting byte code by passing it as an argument to the JRE</li>
+</ol>
+
+<p>To compile the source file, run the following command</p>
+
+<pre><code>javac Hello.java
+</code></pre>
+
+<p>To run the resulting byte code, use the following command</p>
+
+<pre><code>java Hello
+</code></pre>
+
+<p>If you followed everything to the letter, you should see the &ldquo;Hello World&rdquo; message printed on the screen.</p>
+
+<hr />
+
+<h1 id="program-elements">Program Elements</h1>
+
+<p>When you are learning a foreign language, you probably started the parts of its speech, what kinds rules governs them, how you can put things together and how are they punctuated etc. When learning a programming language, we will have similar concerns. We need to learn what are the parts, how they are organized and put together.</p>
+
+<p><strong>Statements</strong></p>
+
+<p>They are the equivalent of sentences in the English language. These are executable statements in Java. Statements are terminated by a semicolon. In our earlier example, you have seen System.out.println(&ldquo;Hello World&rdquo;); - such is an example of a statement. Not all statements are as simple as that, some statements may contain multiple expressions joined by multiple operators</p>
+
+<p><strong>Comments</strong></p>
+
+<p>Comments are ignored by the compiler. It&rsquo;s a good way to document program code and it can benefit other people who reads your code. It can even benefit you. Comments allows us to dump our thought processes and intentions at the time of writing the code. There are three ways to comment codes</p>
+
+<pre><code class="language-java">// THIS IS A COMMENT
+</code></pre>
+
+<p>A single line comment, sometimes called an inline comment. The compiler will ignore everything to the right of the two forward slashes until the end of the line</p>
+
+<p>/*<br />
+   Statement here
+   Another statement
+*/
+This is the C-style comment. It is called that because it came primarily from the C language. You can use this multi-line style to comment multiple lines of statements</p>
+
+<pre><code class="language-java">/**
+   Statement here
+   Another statement
+*/
+</code></pre>
+
+<p>This is almost the same as the C-style multiline comment. This type of comment though, can be used to generate Java API style documentation</p>
+
+<p><strong>White space</strong></p>
+
+<p>Java is tokenized language, it doesn&rsquo;t care about white or blank space, you can write your code like this</p>
+
+<pre><code class="language-java">class Hello { public static void main (String [] args) { System.out.println(&quot;Hello\n&quot;);}}
+</code></pre>
+
+<p>Or like this</p>
+
+<pre><code>class Hello { 
+public static void main (String [] args) {
+System.out.println(&quot;Hello\n&quot;);
+}
+}
+</code></pre>
+
+<p>The compiler doesn&rsquo;t care. So, write your codes for the benefit of humans who may be unlucky enough to maintain our programs. Forget the compiler, it doesn&rsquo;t care anyway about spaces anyway. Use white spaces to beautify the code and make it extremely readable, something like this</p>
+
+<pre><code class="language-java">class Hello { 
+  public static void main (String [] args) {
+    System.out.println(&quot;Hello\n&quot;);
+  }
+}
+</code></pre>
+
+<p><strong>Blocks</strong></p>
+
+<p>Oftentimes, you may need to write a bunch of statements and you will need to group them together. Blocks allow us to do just that. The lexical symbol for blocks are a pair of curly braces. Blocks are used by <em>classes, interfaces</em> and <em>methods</em>. Occasionally, they are also used to define static and instance blocks, these last two are as common in use as the first three, but you may need them from time to time.</p>
+
+<p><strong>Variables</strong></p>
+
+<p>A variable is something that we use to manipulate data, or more precisely a value. Values are things that you can store, manipulate, print or push or pull from the network. For us to be able to work with values, we need to put them inside variables.</p>
+
+<pre><code>String name;
+</code></pre>
+
+<p>The above statement declares a variable named &ldquo;name&rdquo;, supposedly to hold the value of a person&rsquo;s name. In Java, when we declare a variable we must tell the compiler what kind of value it is expected to hold. In this case, it&rsquo;s a String value.</p>
+
+<pre><code>name = &quot;John Doe&quot;;
+</code></pre>
+
+<p>The statement above defines the &ldquo;name&rdquo; variable, we assigned it the literal String value &ldquo;John Doe&rdquo;. The assignment of value was facilitated by the equal sign (assignment operator). The declaration and definition of variables could be done as a two-step process, as you have seen above, but it doesn&rsquo;t have to be. The declaration and definition can be written in a single statement.</p>
+
+<pre><code class="language-java">String name = &quot;John Doe&quot;;
+int age = 35;
+String email = &quot;jdoe@gmail.com&quot;
+</code></pre>
+
+<p>The concept of variable as they relate to values might be easier to grasp if you visualize the variables as some sort of a named location and the location is a box, the contents of which, holds the value</p>
+
+<p><img src="/images/variable-representation.png" alt="variable rep" /></p>
+
+<p><strong>Operators</strong></p>
+
+<p>Operators are easy to grasp because what they do will look immediately obvious. They behave like how you would expect them to. There are various kinds of operators in Java, some you can use for arithmetic, some are used for testing equalities (or inequalities) and some are even used for low level data manipulation</p>
+
+<p>assignment
+arithmetic
+unary
+equality and relational
+conditional
+bitwise and bit shift</p>
+
+<p><strong>Methods</strong></p>
+
+<p>Methods aka functions are a collection of executable statements. Java programmers don&rsquo;t refer to these as functions so you better get used to calling them methods. Anyway, these collections of statements are packaged as one unit and whenever you need to execute those collection statements, you only need to invoke the name of the method. Methods may or may not return values, they may or may not also accept arguments.</p>
+
+<p>Listing 12Listing 12-3.1</p>
+
+<pre><code class="language-java">public static void main (String []args) {
+}
+</code></pre>
+
+<p>The method as shown in Listing 12Listing 12-3-1 accepts arguments, an array of Strings to be specific</p>
+
+<p>Listing 12-3.2</p>
+
+<pre><code class="language-java">int getSum(int a, int b) {
+    int result = a + b;
+    return result;
+}
+</code></pre>
+
+<p>The method shown in Listing 12-3-2 accepts two integer arguments and returns an integer result</p>
+
+<p><strong>Classes</strong></p>
+
+<p>The class is top level structure in Java, there is no higher organizing entity . It is a collection of variable and method declarations. When classes are instantiated, objects are created as a result, this is the reason why classes are sometimes called object factories</p>
+
+<p>Listing</p>
+
+<pre><code class="language-java">class Person {
+   String fname;
+   String lname;
+}
+
+Person p1 = new Person()  ;
+</code></pre>
+
+<p>Listing 12-3.2 defines a new data structure called Person by declaring a class with the same name. It has two properties, &ldquo;lname&rdquo; and &ldquo;fname&rdquo;, for last name and first name respectively. An object named &ldquo;p1&rdquo; is created from the definition of the Person class</p>
+
+<p><strong>Keywords</strong></p>
+
+<p>These are special words, they have specific meaning to the compiler and as such, you will not be able to use them as an identifier. There are several reserved words in the Java language. You cannot use these words in your program because they have been, well, reserved. They mean something special when the compiler sees them in your program.  Best not to use them as class, method or variable name.</p>
+
+<table>
+<thead>
+<tr>
+<th>keywords</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>byte, short, int, long, float, double, char, boolean, void</em></td>
+<td>These are primitive types of Java. Though void is not listed as one of the primitive types, it is actually part of the Java type system</td>
+</tr>
+
+<tr>
+<td><em>while, do, for if, else, switch, case, default, break, continue</em></td>
+<td>These words are used to alter program flow, some of them are used for branching and some are use for looping</td>
+</tr>
+
+<tr>
+<td><em>class, interface, enum</em></td>
+<td>these are used to create custom data types or user defined typed</td>
+</tr>
+
+<tr>
+<td><em>public, private, protected, package, import</em></td>
+<td>access modifiers and package management</td>
+</tr>
+
+<tr>
+<td><em>extends, implements</em></td>
+<td>use for class and interface extensions — inheritance</td>
+</tr>
+
+<tr>
+<td><em>try, catch, finally, throw, throws</em></td>
+<td>Java&rsquo;s exception handling keywords</td>
+</tr>
+
+<tr>
+<td><em>this, super</em></td>
+<td>keywords to manage object instances from within objects</td>
+</tr>
+
+<tr>
+<td><em>new</em></td>
+<td>used to create objects (instances of a class)</td>
+</tr>
+
+<tr>
+<td>return</td>
+<td>used from within methods to return a value to the caller</td>
+</tr>
+
+<tr>
+<td><em>abstract, final</em></td>
+<td>affects polymorphism</td>
+</tr>
+
+<tr>
+<td><em>transient, volatile, synchronized</em></td>
+<td>affects threading codes in Java</td>
+</tr>
+
+<tr>
+<td><em>native</em></td>
+<td>used in methods, when a method is marked as native it means it will be implemented using JNI (Java Native Interface)</td>
+</tr>
+
+<tr>
+<td><em>static</em></td>
+<td>used for memory management. When methods or variables are marked as static, it means it belongs to the type (class) rather than the instance (object). Classes can also be declared static</td>
+</tr>
+
+<tr>
+<td>instanceof</td>
+<td>used for testing an object if it of a specified type</td>
+</tr>
+
+<tr>
+<td><em>assert</em></td>
+<td>used to declare an expected boolean condition in a program. This is used for testing pathways in your code</td>
+</tr>
+
+<tr>
+<td><em>strictfp</em></td>
+<td>restricts floating-point calculations to ensure portability</td>
+</tr>
+
+<tr>
+<td><em>var</em></td>
+<td>a new type keyword  which was introduced in Java 10. You can use this to declare local variables. When <code>var</code> is used, there is no more need for any other type information. This is Java&rsquo;s attempt for type inference</td>
+</tr>
+</tbody>
+</table>
+
+<p>It&rsquo;s not important for you to remember all the keywords, but in time, for sure, you will commit quite a few of them in memory. What&rsquo;s important to remember is that you cannot use keywords as identifiers. We&rsquo;ll discuss identifiers in the next section.</p>
+
+<p><strong>Identifiers</strong></p>
+
+<p>Identifiers are programmer defined names. There are a couple of things we need to name in Java e.g. classes, variables, methods, interfaces and enums. There are some rules we need to keep in mind when naming identifiers. These are</p>
+
+<ol>
+<li>It can&rsquo;t be a reserved word</li>
+<li>It can&rsquo;t start with a number, it&rsquo;s alphanumeric but the first character can&rsquo;t be a number</li>
+<li>It can&rsquo;t contain special characters, but you can use the dollar symbol and the underscore. It&rsquo;s best to stay away from the dollar symbol though, Java uses that to name generated byte codes from inner classes</li>
+</ol>
+
+<p>These are the hard rules, the soft rules are entirely up to your (or your company&rsquo;s) coding guidelines. Some examples of these soft rules are</p>
+
+<ol>
+<li>if you&rsquo;re going to follow Hungarian notation, be consistent with it. If you will follow Pascal casing, be consistent with it, don&rsquo;t mix and match</li>
+<li>make the names of the identifiers descriptive</li>
+<li>keep the length of the identifier reasonable, you really don&rsquo;t want to type (and read) a 100-char variable name</li>
+</ol>
+
+<hr />
+
+<h1 id="variables-and-data-types">Variables and Data types</h1>
+
+<p>A programming language like Java relies on its ability to create, store and edit values, these values needs to be manipulated arithmetically or by some other means.  Java allows us to work these values by storing them in variables, so put simply, a variable is a named storage for values or data.   A variable is created using a twostep process, first, you need to declare a variable, like so</p>
+
+<pre><code>int num;
+</code></pre>
+
+<p>In the statement above, &ldquo;num&rdquo; is the variable and &ldquo;int&rdquo; is what we call a type. A type determines the variable&rsquo;s size in memory and what kinds of operations you can do with them.  In our example above, you can add, multiply, divide or subtract from &ldquo;num&rdquo; because Java defined the arithmetic operators to work numeric types like &ldquo;int&rdquo;.</p>
+
+<p>The next step after declaring a variable is to define it. Defining a variable assigns a value to it.</p>
+
+<pre><code>num = 10;
+</code></pre>
+
+<p>In the statement above, the integer literal &ldquo;10&rdquo; is on the right-hand side of the equal sign which effectively assigns its value to the variable &ldquo;num&rdquo;.</p>
+
+<p>Alternatively, we can declare and define a variable on the same line, like so.</p>
+
+<pre><code>int num = 10;
+</code></pre>
+
+<p>After a variable has been declared and defined, you can change its value at any later time.</p>
+
+<pre><code>int num = 10;
+num = 20;
+</code></pre>
+
+<h2 id="primitive-types">Primitive Types</h2>
+
+<p>Java has 2 kinds of data types, primitive and Reference. The primitive types are the ones that are built into the language, Java has 8 of those.</p>
+
+<p>What you cannot do however, is to assign a value to &ldquo;num&rdquo; that isn&rsquo;t an &ldquo;int&rdquo;, like so.</p>
+
+<pre><code>int num = 10;
+num = &quot;Hello&quot;;
+</code></pre>
+
+<p>We cannot assign the String &ldquo;Hello&rdquo; to num, because we&rsquo;ve already declared it as an &ldquo;int&rdquo; type. Java, being a strongly typed language, does not allow type coercions like this.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Size in bits</th>
+<th align="left">Sample literal values</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">byte</td>
+<td align="left">8</td>
+<td align="left">-128 to 127</td>
+</tr>
+
+<tr>
+<td align="left">short</td>
+<td align="left">16</td>
+<td align="left">-32,768 to 32,767</td>
+</tr>
+
+<tr>
+<td align="left">int</td>
+<td align="left">32</td>
+<td align="left">2,147,483,648 to 2,147,483,647</td>
+</tr>
+
+<tr>
+<td align="left">long</td>
+<td align="left">64</td>
+<td align="left">-9,223,372,036,854,775,808 to 9,223,372,036,854,807</td>
+</tr>
+
+<tr>
+<td align="left">float</td>
+<td align="left">32</td>
+<td align="left">1.23e100f, -1.23e-100f, .3f, 3.14F</td>
+</tr>
+
+<tr>
+<td align="left">double</td>
+<td align="left">64</td>
+<td align="left">1.23456e300d, -1.23456e-300d, 1e1d</td>
+</tr>
+
+<tr>
+<td align="left">char</td>
+<td align="left">16</td>
+<td align="left">0 - 65535 or \u0000 - \uFFFF</td>
+</tr>
+
+<tr>
+<td align="left">boolean</td>
+<td align="left">1</td>
+<td align="left">true, false</td>
+</tr>
+</tbody>
+</table>
+
+<p>Java is a statically typed language; this is why we need to declare the types of variables before we can use them in our program.</p>
+
+<h2 id="reference-types">Reference Types</h2>
+
+<p>A reference type value is anything that is not a primitive. Reference types values are created by instantiating classes, which means, reference type values are objects. Some examples of reference types are String and java.util.Date. When you create a class or an interface, you are creating a new reference type.</p>
+
+<p>Creating a reference type value is not that much different from creating a primitive type value, it also involves the two-step process of declaring the variable and then defining it, for example.</p>
+
+<pre><code>Date date;
+date = new Date\(\); 
+</code></pre>
+
+<p>In the statement above, the variable name is &ldquo;date&rdquo; and the type is &ldquo;Date&rdquo;, more specifically, it&rsquo;s &ldquo;java.util.Date&rdquo; which is one of the classes in the Java platform that comes with the installation of the JDK.  The date object is created by using the &ldquo;new&rdquo; keyword plus the name of the class (Date) with parens. The name of the class plus parens is called a constructor method. This will be discussed in the section titled &ldquo;Classes and Objects&rdquo;.  When this statement finishes, the &ldquo;date&rdquo; variable will contain a reference to the location of a newly created Date object.</p>
+
+<p>Constructors are not always empty, sometimes, you can pass values inside the parens, see the example below.</p>
+
+<p>String hello = new String(&ldquo;Hello&rdquo;);</p>
+
+<p>The statement above creates a new String by passing a series of characters enclosed in double quotes to the String constructor.  Strings values are very common in programming and are quite indispensable, but despite that, Java did not make it a part of the primitive types -  String is a reference type. Another way to create String objects is shown below.</p>
+
+<p>String world = &ldquo;World&rdquo;;</p>
+
+<p>In the statement above, we did not need to call the constructor of String to create a new object, we simply assigned a String literal the char variables &ldquo;World&rdquo;.</p>
+
+<p>Revision history</p>
+
+<table>
+<thead>
+<tr>
+<th>version</th>
+<th>date</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>19.July.2012</td>
+<td>First draft. It was encoded in Latex, and released as PDF</td>
+</tr>
+
+<tr>
+<td>1.1</td>
+<td>7.April.2013</td>
+<td>Moved to markeddown format</td>
+</tr>
+
+<tr>
+<td>1.3</td>
+<td>2.May.2015</td>
+<td>Used as material for LeanPub, Java Lessons</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>1.October.2018</td>
+<td>Revised for use in Apress book (Learn Android Studio 3)</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>4.June.2018</td>
+<td>Rewritten. Removed the detailed discussions, it will now follow the format of Cliff&rsquo;s notes</td>
+</tr>
+</tbody>
+</table>
+
+    </article>
+
+    
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/posts/android-activities-layouts/" data-toggle="tooltip" data-placement="top" title="Activities and Layouts">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/posts/send-receive-sms-usb-modem/" data-toggle="tooltip" data-placement="top" title="SMS messages using USB Modem">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">&copy; Copyright Ted Hagos</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-"><a href="" title=""></a></li>
+  </ul>
+  
+</div>
+<script src="/js/script.js"></script>
+<script src="/js/custom.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Toracking ID', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

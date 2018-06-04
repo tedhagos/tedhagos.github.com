@@ -53,6 +53,17 @@ Exer 3. Print a triangle of asterisk, see the output below
     </item>
     
     <item>
+      <title>Nodejs</title>
+      <link>http://tedhagos.com/posts/nodejs/</link>
+      <pubDate>Tue, 21 Apr 2015 15:55:09 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/nodejs/</guid>
+      <description>Node scripts are not that different from the other JS scripts you&amp;rsquo;ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that&amp;rsquo;s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;
+Listing 1 - hellonode.js
+setTimeout(()=&amp;gt; { console.log(&amp;quot;Hello&amp;quot;); }, 3000); console.</description>
+    </item>
+    
+    <item>
       <title>macOS Cheatsheet</title>
       <link>http://tedhagos.com/posts/macos-cheatsheet/</link>
       <pubDate>Mon, 20 Oct 2014 21:24:36 +0800</pubDate>
@@ -79,6 +90,16 @@ You copied something in an X window (browser or editor etc), you want to paste t
       
       <guid>http://tedhagos.com/posts/android-activities-layouts/</guid>
       <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://tedhagos.com/posts/java/</link>
+      <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/java/</guid>
+      <description>Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&amp;rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.
+The Language The Java language is not so old, as far as programming languages go.</description>
     </item>
     
     <item>

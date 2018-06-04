@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/posts/nodejs/</loc>
+    <lastmod>2015-04-21T15:55:09+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/posts/macos-cheatsheet/</loc>
     <lastmod>2014-10-20T21:24:36+08:00</lastmod>
   </url>
@@ -43,6 +48,11 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/posts/java/</loc>
+    <lastmod>2012-07-19T14:54:40+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/posts/send-receive-sms-usb-modem/</loc>
     <lastmod>2011-10-04T08:10:54+08:00</lastmod>
   </url>
@@ -58,14 +68,14 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/tags/android-studio/</loc>
-    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
+    <loc>http://tedhagos.com/categories/android-studio/</loc>
+    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/categories/android-studio/</loc>
-    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
+    <loc>http://tedhagos.com/tags/android-studio/</loc>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -82,8 +92,26 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/categories/java/</loc>
+    <lastmod>2012-07-19T14:54:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/tags/javascript/</loc>
+    <lastmod>2015-04-21T15:55:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/categories/kotlin/</loc>
     <lastmod>2018-05-07T13:22:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/categories/linux/</loc>
+    <lastmod>2011-10-04T08:10:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,8 +122,8 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/categories/linux/</loc>
-    <lastmod>2011-10-04T08:10:54+08:00</lastmod>
+    <loc>http://tedhagos.com/categories/nodejs/</loc>
+    <lastmod>2015-04-21T15:55:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
