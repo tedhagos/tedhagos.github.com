@@ -67,7 +67,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#how-is-it-different">How is it different</a></li>
+<li><a href="#same-difference">Same difference</a></li>
 <li><a href="#what-does-it-look-like">What does it look like</a></li>
 <li><a href="#why-are-we-bothering">Why are we bothering</a></li>
 <li><a href="#does-kotlin-itself-use-functionals">Does Kotlin itself use functionals</a></li>
@@ -87,11 +87,11 @@
 
 <p>So, if we can’t use “lower order functions” or first order functions to refer to our regular functions, we’ll just call them, well, functions.</p>
 
-<h2 id="how-is-it-different">How is it different</h2>
+<h2 id="same-difference">Same difference</h2>
 
 <p>Java, C/C++ and Visual Basic and some other languages, don’t have higher order functions. At least at the time of this writing. The functions or methods or whatever it they may be called in those languages, cannot take in functions as parameters nor can they return functions. But hang on, of course those languages can take in functions as parameters, what about this code example</p>
 
-<p><em>Listing 1-1. foo() and bar() example</em></p>
+<p><strong>Listing 1-1. foo() and bar() example</strong></p>
 
 <pre><code class="language-java">public static void main(String []args) {
   bar(foo(2));
@@ -108,7 +108,7 @@ static int foo(int x) {
 
 <p>Didn’t we just pass <code>foo()</code> to <code>bar()</code>? isn’t that passing a function to another function? That’s a no. Passing <code>foo()</code> to another function like <code>bar()</code> isn’t what we mean by a “function taking in another function as parameter”. Maybe if there was a way to pass <code>foo</code> without the parentheses, and then somewhere in the body of function <code>bar</code> (the receiving function), we get to invoke it like this</p>
 
-<p><em>Listing 1-2. foo() and bar() examples, again</em></p>
+<p><strong>Listing 1-2. foo() and bar() examples, again</strong></p>
 
 <pre><code class="language-java">public static void main(String []args) {
   bar(foo);
@@ -126,7 +126,7 @@ static void bar(func val) {
 
 <p>In a language that has support for higher order functions, like Kotlin, the <em>foo and bar</em> examples would have looked like this</p>
 
-<p><em>Listing 1-3. foo() and bar() in functional style</em></p>
+<p><strong>Listing 1-3. foo() and bar() in functional style</strong></p>
 
 <pre><code class="language-kotlin">fun foo(arg:Int): Int {              &lt;1&gt;
   return arg * arg

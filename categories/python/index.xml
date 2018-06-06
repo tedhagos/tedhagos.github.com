@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright Ted Hagos</copyright>
-    <lastBuildDate>Tue, 10 May 2016 13:46:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 12:52:17 +0800</lastBuildDate>
     
 	<atom:link href="http://tedhagos.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>http://tedhagos.com/posts/python-lang/</link>
+      <pubDate>Tue, 05 Jun 2018 12:52:17 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/python-lang/</guid>
+      <description>Photo credit: xckd.com/353
+Preface material Who is this for? It&amp;rsquo;s for a beginning programmer, but I&amp;rsquo;m assuming this isn&amp;rsquo;t your first programming language — HTML doesn&amp;rsquo;t count, but if you coded a bit of JavaScript, then that counts.
+The very fundamentals of coding won&amp;rsquo;t be tackled in here. I&amp;rsquo;m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an if, or a looping construct like a do; or variables can hold data, they have a memory address and we can replace that data whenever we like — stuff like that.</description>
+    </item>
     
     <item>
       <title>Python Exercises</title>
@@ -18,7 +29,8 @@
       <pubDate>Tue, 10 May 2016 13:46:41 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/python-exercises/</guid>
-      <description>Exer 1. Ask the user for input, then greet the user. Store the user&amp;rsquo;s response in a variable and print it out.
+      <description>Photo credit xckd.com/189
+Exer 1. Ask the user for input, then greet the user. Store the user&amp;rsquo;s response in a variable and print it out.
 Exer 2. Ask the user the year he was born, then print out his age.
 Exer 3. Print a triangle of asterisk, see the output below
 * ** *** **** ***** ****** ******* ******** *********  There are 10 asterisk on the last line of the printed output</description>

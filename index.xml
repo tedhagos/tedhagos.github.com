@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright Ted Hagos</copyright>
-    <lastBuildDate>Sun, 03 Jun 2018 21:27:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 12:52:17 +0800</lastBuildDate>
     
 	<atom:link href="http://tedhagos.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>http://tedhagos.com/posts/python-lang/</link>
+      <pubDate>Tue, 05 Jun 2018 12:52:17 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/python-lang/</guid>
+      <description>Photo credit: xckd.com/353
+Preface material Who is this for? It&amp;rsquo;s for a beginning programmer, but I&amp;rsquo;m assuming this isn&amp;rsquo;t your first programming language — HTML doesn&amp;rsquo;t count, but if you coded a bit of JavaScript, then that counts.
+The very fundamentals of coding won&amp;rsquo;t be tackled in here. I&amp;rsquo;m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an if, or a looping construct like a do; or variables can hold data, they have a memory address and we can replace that data whenever we like — stuff like that.</description>
+    </item>
     
     <item>
       <title>Android Studio</title>
@@ -46,7 +57,7 @@
       <pubDate>Sun, 15 Oct 2017 21:07:12 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/kotlin-getting-started/</guid>
-      <description>It&amp;rsquo;s new(est) kid on the the JVM block.
+      <description>It&amp;rsquo;s the new(est) kid on the the JVM block.
 It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. They&amp;rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&amp;rsquo;m not sure, I&amp;rsquo;m too lazy to research). The &amp;ldquo;hooray&amp;rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.</description>
     </item>
     
@@ -56,7 +67,8 @@ It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. Th
       <pubDate>Tue, 10 May 2016 13:46:41 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/python-exercises/</guid>
-      <description>Exer 1. Ask the user for input, then greet the user. Store the user&amp;rsquo;s response in a variable and print it out.
+      <description>Photo credit xckd.com/189
+Exer 1. Ask the user for input, then greet the user. Store the user&amp;rsquo;s response in a variable and print it out.
 Exer 2. Ask the user the year he was born, then print out his age.
 Exer 3. Print a triangle of asterisk, see the output below
 * ** *** **** ***** ****** ******* ******** *********  There are 10 asterisk on the last line of the printed output</description>
@@ -99,7 +111,8 @@ You copied something in an X window (browser or editor etc), you want to paste t
       <pubDate>Sat, 20 Oct 2012 18:40:33 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/android-activities-layouts/</guid>
-      <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.</description>
+      <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
+Android&amp;rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&amp;rsquo;s components and resources together — all Android programs require this manifest file.</description>
     </item>
     
     <item>
@@ -120,6 +133,15 @@ The Language The Java language is not so old, as far as programming languages go
       <guid>http://tedhagos.com/posts/send-receive-sms-usb-modem/</guid>
       <description>This guide uses gnokii-sms to send and receive SMS messages using Linux PC. The project I was working on did not require industrial grade throughput. That is the reason I cannot justify the cost of WaveComm iTegra type equipment. The SMS project was ran on a Debian Linux. If you are using a different distro, use the packaging mechanism of your distro.
 There were a couple of other solution approaches but I went for gnokii-sms.</description>
+    </item>
+    
+    <item>
+      <title>Linux Command Line</title>
+      <link>http://tedhagos.com/posts/linux-command-line/</link>
+      <pubDate>Sun, 05 Jun 2011 16:01:22 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/linux-command-line/</guid>
+      <description> Environment  Vagrant Raspberry Pi; or An Actual Linux machine  cmd Line Text Files File Management cmd Line Streams and Pipes Processes Regular Expressions Vim </description>
     </item>
     
   </channel>

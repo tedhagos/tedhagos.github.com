@@ -91,7 +91,7 @@ setTimeout(()=&gt; { console.log(&quot;Hello&quot;); }, 3000); console.">
 
 <p>Node scripts are not that different from the other JS scripts you&rsquo;ve written in the past. You also need to put them on a filename with a <code>.js</code> extension. While nodeJS programs can be constructed in the REPL, that&rsquo;s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing  like the following;</p>
 
-<p><code>Listing 1 - hellonode.js</code></p>
+<p><strong>Listing 1 - hellonode.js</strong></p>
 
 <pre><code class="language-javascript">setTimeout(()=&gt; {
 console.log(&quot;Hello&quot;);
@@ -109,11 +109,11 @@ console.log(&quot;World&quot;);
 <p>By the way, regarding Listing 1, this is an example of an asynchronous code written in nodeJS. There are two take-aways here, they are;</p>
 
 <ol>
-<li>Your code will not execute in the sequence your wrote them in the source code</li>
-<li>nor will they execute in the sequence and order you intended</li>
+<li>Your code may not execute in the sequence your wrote them</li>
+<li>Sometimes, they might not execute in the sequence and order you intended</li>
 </ol>
 
-<p>Many of the codes you will encounter in Node will be asynchronous, not unlike the timed-out Hello world example above.</p>
+<p>Many of the codes you will encounter in Node will be asynchronous, not unlike the timed-out Hello world example in Listing 1.</p>
 
 <hr />
 
@@ -187,14 +187,8 @@ while (rs.next()) {
          console.log(rs.getString(&quot;lastname&quot;));
            console.log(rs.getString(&quot;firstname&quot;)); 
       }
-
-
-      rs.on('rowdata', (err, data) =&gt; {
-
-
+       rs.on('rowdata', (err, data) =&gt; {
       });
-
-
     });
   });
 });

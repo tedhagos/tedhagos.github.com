@@ -6,8 +6,10 @@
   <title>Activities and Layouts - Ted&#39;s notes</title>
   <meta property="og:title" content="Activities and Layouts - Ted&#39;s notes" />
   <meta name="twitter:title" content="Activities and Layouts - Ted&#39;s notes" />
-  <meta name="description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.">
-  <meta property="og:description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.">
+  <meta name="description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
+Android&rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&rsquo;s components and resources together — all Android programs require this manifest file.">
+  <meta property="og:description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
+Android&rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&rsquo;s components and resources together — all Android programs require this manifest file.">
   <meta name="twitter:description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs …">
   <meta name="author" content="Ted Hagos"/>
   <meta property="og:site_name" content="Ted&#39;s notes" />
@@ -80,15 +82,15 @@
 </aside>
       
 
-<p>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a <code>static void main</code> as an entry point. Android programs are the same, it also needs it’s own version of the “function main”.  But the entry point of an Android program isn’t a literal function, and its also not called “main”, —  it’s a bit more complicated than that.</p>
+<p>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a <code>static void main</code> as an entry point. Android programs are the same, it also needs it’s own version of the “function main”.  But the entry point of an Android program isn’t just a function called “main”, —  it’s a bit more involved than that.</p>
 
 <h1 id="android-s-trinity-of-main">Android&rsquo;s Trinity of Main</h1>
 
 <p>A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file,  which ties all the project&rsquo;s components and resources together — all Android programs require this manifest file. If you still remember working with JavaBean&rsquo;s manifest file, this is sort of like that. It describes the contents of the project.</p>
 
-<p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It&rsquo;s looking for a specific value of the <code>intent-filter</code> node, the runtime is trying to determine if this application has defined a &ldquo;main function&rdquo; in it. Listing 1 shows an excerpt from an a manifest file, this one has a &ldquo;main function&rdquo; defined in it.  An <code>intent-filter</code> that has a value of <code>android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There&rsquo;s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code>activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is &ldquo;MainActivity&rdquo;</p>
+<p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It&rsquo;s looking for a specific value of the <code>intent-filter</code> node, the runtime is trying to determine if this application has defined a &ldquo;main function&rdquo; in it. Listing 1 shows an excerpt from an a manifest file, this one has a &ldquo;main function&rdquo; defined in it.</p>
 
-<p>Listing 1. Excerpt from AndroidManifest.xml</p>
+<p><strong>Listing 1. Excerpt from AndroidManifest.xml</strong></p>
 
 <pre><code class="language-xml">&lt;activity android:name=&quot;.MainActivity&quot;&gt;
   &lt;intent-filter&gt;
@@ -98,6 +100,8 @@
   &lt;/intent-filter&gt;
 &lt;/activity&gt;
 </code></pre>
+
+<p>An <code>intent-filter</code> that has a value of <code>android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There&rsquo;s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code>activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is &ldquo;MainActivity&rdquo;</p>
 
 <h2 id="main-program-file">Main Program file</h2>
 
@@ -120,6 +124,10 @@
 <li>Contains pre-built codes that we can use to show UI elements to the user</li>
 <li>A focused thing that a user can do e.g. read a single email, type an SMS message etc.</li>
 </ul>
+
+<hr />
+
+<p>Photo credit: developer.android.com</p>
 
     </article>
 

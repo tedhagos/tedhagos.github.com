@@ -6,12 +6,12 @@
   <title>Kotlin - Ted&#39;s notes</title>
   <meta property="og:title" content="Kotlin - Ted&#39;s notes" />
   <meta name="twitter:title" content="Kotlin - Ted&#39;s notes" />
-  <meta name="description" content="It&rsquo;s new(est) kid on the the JVM block.
+  <meta name="description" content="It&rsquo;s the new(est) kid on the the JVM block.
 It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&rsquo;m not sure, I&rsquo;m too lazy to research). The &ldquo;hooray&rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.">
-  <meta property="og:description" content="It&rsquo;s new(est) kid on the the JVM block.
+  <meta property="og:description" content="It&rsquo;s the new(est) kid on the the JVM block.
 It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&rsquo;m not sure, I&rsquo;m too lazy to research). The &ldquo;hooray&rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.">
-  <meta name="twitter:description" content="It&rsquo;s new(est) kid on the the JVM block.
-It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo;ve been around for quite some time, so chances are you already know them. …">
+  <meta name="twitter:description" content="It&rsquo;s the new(est) kid on the the JVM block.
+It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo;ve been around for quite some time, so chances are you already know …">
   <meta name="author" content="Ted Hagos"/>
   <meta property="og:site_name" content="Ted&#39;s notes" />
   <meta property="og:url" content="/posts/kotlin-getting-started/" />
@@ -67,7 +67,12 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
   <nav id="TableOfContents">
 <ul>
 <li><a href="#compilation">Compilation</a></li>
+<li><a href="#project-setup-in-intellij">Project setup in IntelliJ</a></li>
 <li><a href="#hello-world">Hello World</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#types">Types</a></li>
+<li><a href="#branching">Branching</a></li>
+<li><a href="#looping">Looping</a></li>
 <li><a href="#functions">Functions</a>
 <ul>
 <li><a href="#default-params">Default params</a></li>
@@ -76,7 +81,6 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <li><a href="#extension-functions">Extension functions</a></li>
 <li><a href="#infix-functions">Infix functions</a></li>
 </ul></li>
-<li><a href="#variables-and-basic-types">Variables and Basic Types</a></li>
 <li><a href="#classes-and-objects">Classes and Objects</a></li>
 <li><a href="#access-modifiers">Access Modifiers</a></li>
 <li><a href="#companion-objects">Companion Objects</a></li>
@@ -88,7 +92,7 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 </aside>
       
 
-<p>It&rsquo;s new(est) kid on the the JVM  block.</p>
+<p>It&rsquo;s the new(est) kid on the the JVM  block.</p>
 
 <p>It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&rsquo;m not sure, I&rsquo;m too lazy to research).  The &ldquo;hooray&rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming. This was the same time that Android Studio 3 was about to be released, and AS3 already has an out-of-the-box support for Kotlin. You don&rsquo;t even have to add the plugin anymore.</p>
 
@@ -113,6 +117,8 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <li>treats all variables as <em>non-Nullable</em> by default. It means, when you declare a variable in Kotlin, without any decoration, modifier or annotation, the variable can never be assigned a <em>null</em> value</li>
 </ul>
 
+<hr />
+
 <h1 id="compilation">Compilation</h1>
 
 <p>It&rsquo;s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (<code>kotlinc</code>).</p>
@@ -125,7 +131,228 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 
 <hr />
 
+<h1 id="project-setup-in-intellij">Project setup in IntelliJ</h1>
+
+<p>Launch IntelliJ if it isn&rsquo;t opened yet. On the &ldquo;Welcome&rdquo; screen, click &ldquo;Create new Project&rdquo;. Next, you should see a screen like Figure 1.</p>
+
+<p><img src="/images/new-project-intellij.png" alt="newprojectidea" /></p>
+
+<p><strong>Figure 1. New Project</strong></p>
+
+<p>Choose &ldquo;Kotlin/JVM&rdquo;, as shown in Figure 1, and try to see if IntelliJ has detected your installed JDK. As you can see, it detected my JDK 9.</p>
+
+<p>Next, fill out the &ldquo;Project name&rdquo; information, name the project &ldquo;kotlinproject&rdquo; for example.  After that, the project should be created and opened in IntellIJ.</p>
+
+<p>Now we can add a Kotlin file to the project. Use the context menu (right click) on the &ldquo;src&rdquo; folder, as shown in Figure 2.</p>
+
+<p><img src="/images/new-kotlin-file.png" alt="new file" /></p>
+
+<p><strong>Figure 2. Add a Kotlin file to the project</strong></p>
+
+<p>Choose &ldquo;Kotlin/File&rdquo;. Name the file, and you should be good to go.</p>
+
+<hr />
+
 <h1 id="hello-world">Hello World</h1>
+
+<p>The simplest program we&rsquo;ll create in Kotlin could look like the following;</p>
+
+<p><strong>Listing 1. hello.Kt</strong></p>
+
+<pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;) {
+  println(&quot;Hello&quot;)
+}
+</code></pre>
+
+<p>Kotlin programs don&rsquo;t need classes in order to run. You can get by with top level functions only.</p>
+
+<p>To run this code in IntelliJ, from the main menu bar, click <strong>Run</strong> →  <strong>Run</strong>. You will notice that there are two Run options on the menu. The first Run is greyed out. That&rsquo;s because we haven&rsquo;t defined any runtime configuration yet. Choose the second Run option. You should see a popup dialog, as shown in Figure 3</p>
+
+<p><img src="/images/kotlin-run-context.png" alt="new file" /></p>
+
+<p><strong>Figure 3. Running Hello.Kt</strong></p>
+
+<hr />
+
+<h1 id="variables">Variables</h1>
+
+<p>Variables are declared either as <code>val</code> or as <code>var</code>.  Listing 2 shows some example usage</p>
+
+<p><strong>Listing 2. Variable declarations</strong></p>
+
+<pre><code>var someStr: String = &quot;Hello&quot; // (1) 
+someStr = &quot;World&quot;             // (2)
+
+val someInt = 1               // (3)
+val anotherInt = 1            // (4)
+</code></pre>
+
+<p><strong>(1)</strong> <code>someString</code> is the variable name (identifier)  and <code>String</code> is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It&rsquo;s  quite the reverse in Java where the type is written to the left of the identifier.</p>
+
+<p><strong>(2)</strong> We can re-assign values to variables that were declared as <code>var</code>. No surprises here.</p>
+
+<p><strong>(3)</strong> Same as the first statement, except that were using the <code>val</code> instead of <code>var</code>, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of <code>someInt</code> from the assignment. It will see that <code>1</code> is an Integer literal, hence, it can make the necessary type assignment</p>
+
+<p><strong>(4)</strong> This statement won&rsquo;t work because variables declared as <code>val</code> are effectively constants. They become immutable. The Java equivalent is when you declare a variable as <em>final</em></p>
+
+<hr />
+
+<h1 id="types">Types</h1>
+
+<p>There are no primitive types in Kotlin, everything is an object. So, if you need to work with numbers, the types youl&rsquo;ll work with are the following; Double, Float, Long, Int, Short and Byte, their bit widths are 64, 32, 64, 32, 16 and 8, respectively — that might be easier to look at in table form, so here you go.</p>
+
+<p><strong>Table 1. built-in number types</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Bit width</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Double</td>
+<td>64</td>
+</tr>
+
+<tr>
+<td>Float</td>
+<td>32</td>
+</tr>
+
+<tr>
+<td>Long</td>
+<td>64</td>
+</tr>
+
+<tr>
+<td>Int</td>
+<td>32</td>
+</tr>
+
+<tr>
+<td>Short</td>
+<td>16</td>
+</tr>
+
+<tr>
+<td>Byte</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the most part, operations on number types works the way you expect them, by that I mean, the way you expect them to work in Java. What&rsquo;s different in Kotlin is that we don&rsquo;t have implicit casting anymore. You can&rsquo;t assign an Int to a Long, while this would have worked in Java, it doesn&rsquo;t in Kotlin. If you want to convert from one type to another, you&rsquo;d have to do that explicitly</p>
+
+<p><strong>Listing 3.  No implict casting</strong></p>
+
+<pre><code>var a = 10L // a is a Long literal, note the L postfix
+var b = 20
+
+var a = b // this won’t work
+var a = b.toLong() // this will work
+
+</code></pre>
+
+<p><strong>Characters</strong></p>
+
+<p>You might remember from Java that <code>char</code> was treated as a number, that&rsquo;s not the case in Kotlin. You can&rsquo;t write code&rsquo;s like this</p>
+
+<pre><code>fun checkForKey(keyCode:Char) {
+  if (keyCode == 97) { // won’t work, keyCode is not a number
+  }
+}
+</code></pre>
+
+<p>Character literals are created by using single quotes, like so</p>
+
+<pre><code>var enterKey = ‘a’
+</code></pre>
+
+<p>Like in Java, you can use escape sequences such as \t, \b, \n, \r, \’, \”, \ and \$ and if you need to encode any other character, you can use the Unicode syntax e.g. \uFF00.</p>
+
+<p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code>true</code> or <code>false</code></p>
+
+<hr />
+
+<h1 id="branching">Branching</h1>
+
+<p>The  <code>if</code> construct work almost the same as in Java.</p>
+
+<p><strong>Listing 4. Branching with If</strong></p>
+
+<pre><code>var bigNum = firstNum
+if (secondNum &gt; firstNum) {
+  bigNum = secondNum
+}
+</code></pre>
+
+<p>The second form, with the <code>else</code> is written as follows.</p>
+
+<p><strong>Listing 5. If Else construct</strong></p>
+
+<pre><code>var bigNum: Int
+if (secondNum &gt; firstNum) {
+  bigNum = secondNum
+}
+else {
+  bigNum = firstNum
+}
+</code></pre>
+
+<p>The difference in Kotlin is, the <code>if</code> construct is not a statement, it&rsquo;s an expression. Which means we can do things like this</p>
+
+<p><strong>Listing 6. As an expression</strong></p>
+
+<pre><code>val bigNum = if (firstNum &gt; secondNum) firstNum else secondNum
+</code></pre>
+
+<p>Kotlin doesn&rsquo;t have a switch statement, what it has is a <em>when</em> construct.  It’s form and structure is strikingly similar to the <em>switch</em> statement. In its simplest form, it can be implemented like this (Listing 7)</p>
+
+<p><strong>Listing 7. Branching with When</strong></p>
+
+<pre><code>val d = Date()
+ val c = Calendar.getInstance()
+ val day = c.get(Calendar.DAY_OF_WEEK)
+
+ when (day) {
+   1 -&gt; println(&quot;Sunday&quot;)
+   2 -&gt; println(&quot;Monday&quot;)
+   3 -&gt; println(&quot;Tuesday&quot;)
+   4 -&gt; println(&quot;Wednesday&quot;)
+ }
+</code></pre>
+
+<p><em>When</em> matches the argument (the variable day) against all branches sequentially until it encounters a match; note that unlike in <em>switch</em> statements, when a match is found, it doesn’t flow through or cascade to the next branch, hence we don’t need to put a <em>break</em> statement.</p>
+
+<h1 id="looping">Looping</h1>
+
+<p>Kotlin also has a <em>while</em> loop, it works exactly the same in Kotlin as it does in Java.</p>
+
+<p><strong>Listing 8. while loop</strong></p>
+
+<pre><code>fun main(args: Array&lt;String&gt;) {
+  var count = 0
+  val finish = 5
+
+  while (count++ &lt; finish) {
+    println(&quot;counter = $count&quot;)
+  }
+}
+</code></pre>
+
+<p>Kotlin doesn&rsquo;t have a <em>for</em> loop, at least not the one with the counter and incrementing variables inside. The <em>for</em> loop of Kotlin works with Iterable objects. Listing 9 shows a basic usage of the for loop.</p>
+
+<p><strong>Listing 9. Kotlin&rsquo;s for loop</strong></p>
+
+<pre><code>val words = &quot;The quick brown fox&quot;.split(&quot; &quot;)  
+
+for(word in words) {  
+  println(word)  
+}
+</code></pre>
 
 <hr />
 
@@ -145,13 +372,11 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <li>println is translated (under the hood) to a call to Java&rsquo;s <code>System.out.println()</code>. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well</li>
 </ul>
 
-<p>Other functions are also written like thi</p>
-
 <h2 id="default-params">Default params</h2>
 
 <p>Function params can be assigned a default value, like this</p>
 
-<p>Listing 3-1. connectDb function</p>
+<p><strong>Listing 3-1. connectDb function</strong></p>
 
 <pre><code class="language-kotlin">fun connectDb(host: String = &quot;localhost&quot;,
               user: String = &quot;root&quot;,
@@ -178,8 +403,6 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
 
 <hr />
 
-<h1 id="variables-and-basic-types">Variables and Basic Types</h1>
-
 <h1 id="classes-and-objects">Classes and Objects</h1>
 
 <h1 id="access-modifiers">Access Modifiers</h1>
@@ -195,6 +418,8 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
 <ol>
 <li>Each of the Java collection is represented in Kotin in two ways.</li>
 </ol>
+
+<hr />
 
 <h1 id="generics">Generics</h1>
 

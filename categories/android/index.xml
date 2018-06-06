@@ -18,7 +18,8 @@
       <pubDate>Sat, 20 Oct 2012 18:40:33 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/android-activities-layouts/</guid>
-      <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t a literal function, and its also not called “main”, — it’s a bit more complicated than that.</description>
+      <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
+Android&amp;rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&amp;rsquo;s components and resources together — all Android programs require this manifest file.</description>
     </item>
     
   </channel>
