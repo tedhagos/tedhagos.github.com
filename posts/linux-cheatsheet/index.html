@@ -52,11 +52,20 @@ You copied something in an X window (browser or editor etc), you want to paste t
       
       
       <ul class="article-meta">
+        <li>
+          by <a rel="author" href="https://plus.google.com/u/0/+TedHagos">Ted Hagos</a>
+        </li>
         <li class="article-meta-date"><time>July 21, 2014</time></li>
         <li class="article-meta-categories">
           <a href="/categories/linux/">
             <i class="fas fa-folder"></i>
             linux
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/cheatsheet/">
+            <i class="fas fa-tag"></i>
+            cheatsheet
           </a>&nbsp;
         </li>
       </ul>
@@ -65,13 +74,15 @@ You copied something in an X window (browser or editor etc), you want to paste t
 <aside class="toc">
   <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#copy-pasting-clipboard-to-from-terminal">Copy pasting clipboard to/from terminal</a></li>
 <li><a href="#find-the-version-name">Find the version name</a></li>
 <li><a href="#is-my-linux-64-or-32-bit">Is my Linux 64 or 32 bit</a></li>
 <li><a href="#find-out-how-much-disk-space-is-left">Find out how much disk space is left</a></li>
 <li><a href="#change-the-password-for-root">Change the password for root</a></li>
 <li><a href="#divide-your-terminal-screen-and-multiplex">Divide your terminal screen and multiplex</a></li>
-<li><a href="#secure-copy-file-from-one-machine-to-another">Secure Copy file from one machine to another*</a></li>
+<li><a href="#secure-copy-file-from-one-machine-to-another">Secure Copy file from one machine to another</a></li>
 <li><a href="#see-if-there-is-a-cups-configured-printer">See if there is a CUPS configured printer</a></li>
 <li><a href="#find-out-ram-and-cpu-info">Find out RAM and CPU info</a></li>
 <li><a href="#mess-around-with-network-interfaces">Mess around with network interfaces</a></li>
@@ -98,12 +109,13 @@ You copied something in an X window (browser or editor etc), you want to paste t
 <li><a href="#hash-sum-mismatch-error">Hash Sum Mismatch Error</a></li>
 <li><a href="#nvpy">nvPY</a></li>
 <li><a href="#cmd-line-printing">cmd Line printing</a></li>
+</ul></li>
 </ul>
 </nav>
 </aside>
       
 
-<h1 id="copy-pasting-clipboard-to-from-terminal">Copy pasting clipboard to/from terminal</h1>
+<h2 id="copy-pasting-clipboard-to-from-terminal">Copy pasting clipboard to/from terminal</h2>
 
 <p>Can be done either via <em>xsel</em> or <em>xclip</em>. Xclip is part of most modern installations, so you it may be there in your installation already. The common usages are:</p>
 
@@ -134,36 +146,37 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 <p><code>echo `pbpaste` &gt;&gt; somefile.txt</code><br />
 <code>cat somefile.txt | pbcopy</code></p>
 
-<h1 id="find-the-version-name">Find the version name</h1>
+<h2 id="find-the-version-name">Find the version name</h2>
 
 <p>Find version name &#x2014; the wonky names, not the kernel number &#x2014; of Ubuntu, Lubuntu, Mint or any of its many derivatives.</p>
 
 <p><code>lsb_release -a</code></p>
 
-<h1 id="is-my-linux-64-or-32-bit">Is my Linux 64 or 32 bit</h1>
+<h2 id="is-my-linux-64-or-32-bit">Is my Linux 64 or 32 bit</h2>
 
 <p><code>uname -a</code></p>
 
 <p>Does it contain <em>X86_64</em>? If it does, it is 64 bit</p>
 
-<h1 id="find-out-how-much-disk-space-is-left">Find out how much disk space is left</h1>
+<h2 id="find-out-how-much-disk-space-is-left">Find out how much disk space is left</h2>
 
-<p><code>df -h</code></p>
+<pre><code>df -h
+</code></pre>
 
-<h1 id="change-the-password-for-root">Change the password for root</h1>
+<h2 id="change-the-password-for-root">Change the password for root</h2>
 
 <p><code>sudo passwd root</code></p>
 
 <p>If you have an admin, ask for permission first if it is okay to do this. If it is just your own machine, go ahead and knock yourself off. You don&rsquo;t need to do things as root &#x2014; always. For that there is <em>sudo</em></p>
 
-<h1 id="divide-your-terminal-screen-and-multiplex">Divide your terminal screen and multiplex</h1>
+<h2 id="divide-your-terminal-screen-and-multiplex">Divide your terminal screen and multiplex</h2>
 
 <p><code>sudo apt-get install tmux</code></p>
 
 <p>You still need to configure tmux, but the basic idea is to launch tmux and do all your windowing there
 <code>tmux new -s &lt;session-name&gt;</code></p>
 
-<h1 id="secure-copy-file-from-one-machine-to-another">Secure Copy file from one machine to another*</h1>
+<h2 id="secure-copy-file-from-one-machine-to-another">Secure Copy file from one machine to another</h2>
 
 <p><code>scp username@remotemachine:somefile.txt ~/somefile.txt</code></p>
 
@@ -173,27 +186,27 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 
 <p>It will copy <em>somefile.txt</em> from the local machine to <em>remotemachine</em></p>
 
-<h1 id="see-if-there-is-a-cups-configured-printer">See if there is a CUPS configured printer</h1>
+<h2 id="see-if-there-is-a-cups-configured-printer">See if there is a CUPS configured printer</h2>
 
 <p><code>lynx http://localhost:631</code></p>
 
 <p>You can use Chrome or Firefox if it better suits you</p>
 
-<h1 id="find-out-ram-and-cpu-info">Find out RAM and CPU info</h1>
+<h2 id="find-out-ram-and-cpu-info">Find out RAM and CPU info</h2>
 
 <p><code>cat /proc/meminfo</code> to find out how much RAM<br />
 <code>cat /proc/cpuinfo</code> to find out CPU information</p>
 
-<h1 id="mess-around-with-network-interfaces">Mess around with network interfaces</h1>
+<h2 id="mess-around-with-network-interfaces">Mess around with network interfaces</h2>
 
 <p>The file you want is in <code>/etc/network/interfaces/</code></p>
 
-<h1 id="cli-browsing">CLI browsing</h1>
+<h2 id="cli-browsing">CLI browsing</h2>
 
 <p><code>sudo apt-get install lynx</code><br />
 <code>lynx http://tldp.org</code></p>
 
-<h1 id="display-calendar">Display calendar</h1>
+<h2 id="display-calendar">Display calendar</h2>
 
 <p>With week numbers etc
 -   <strong>cal     :</strong> displays the current month
@@ -201,7 +214,7 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 -   <strong>ncal -w :</strong> shows the week numbers
 -   <strong>ncal -e:</strong> shows when Easter is</p>
 
-<h1 id="rip-youtube-videos">Rip YouTube videos</h1>
+<h2 id="rip-youtube-videos">Rip YouTube videos</h2>
 
 <p><code>sudo apt-get install youtube-dl ffmpeg lame</code><br />
 <code>cd ~/Videos</code><br />
@@ -215,7 +228,7 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 
 <p><code>lame filename.wav filename.mp3</code></p>
 
-<h1 id="rdp-from-windows-to-linux">RDP from Windows to Linux</h1>
+<h2 id="rdp-from-windows-to-linux">RDP from Windows to Linux</h2>
 
 <p><code>sudo apt-get install xnest</code></p>
 
@@ -235,7 +248,7 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 
 <p>The int value of <em>-n</em> means the number of threads it will use to pull the file. Go easy on this one, don&rsquo;t try to punish the web server by setting a very high number. 10 seems a bit excessive already.</p>
 
-<h1 id="backup-a-mysql-database">Backup a MySQL database</h1>
+<h2 id="backup-a-mysql-database">Backup a MySQL database</h2>
 
 <p><code>sudo mysqldump -u YourUserName -p --all-databases &gt; /path/to/dump/file.backup</code></p>
 
@@ -247,7 +260,7 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 <code>mysql&gt; use nameOfNewDatabase</code><br />
 <code>mysql&gt; .\file.backup</code></p>
 
-<h1 id="manage-the-run-level-configuration">Manage the run level configuration</h1>
+<h2 id="manage-the-run-level-configuration">Manage the run level configuration</h2>
 
 <p>If you don&rsquo;t want to always type <code>/etc/init.d/processname restart</code> get the run level config manager</p>
 
@@ -256,7 +269,7 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 
 <p>Use the minus sign(-) to stop processes and plus(+) sign to restart them.</p>
 
-<h1 id="ssh-to-your-linux-box">SSH to your Linux box</h1>
+<h2 id="ssh-to-your-linux-box">SSH to your Linux box</h2>
 
 <p>First, you need to make it an SSH server</p>
 
@@ -279,20 +292,20 @@ alias pbcopy=&quot;xclip -selection clipboard&quot;
 <li>Select a driver for the printer, most Windows <sup>7</sup>&frasl;<sub>8</sub> boxes can simply pull this from the internet</li>
 </ol>
 
-<h1 id="install-a-print-server">Install a print server</h1>
+<h2 id="install-a-print-server">Install a print server</h2>
 
 <p><code>sudo apt-get install cupsys</code></p>
 
 <p>Configure /etc/cups/cupsd.conf</p>
 
-<h1 id="install-java-re-and-sdk-from-oracle">Install Java RE and SDK from Oracle</h1>
+<h2 id="install-java-re-and-sdk-from-oracle">Install Java RE and SDK from Oracle</h2>
 
 <p><code>sudo add-apt-repository ppa:webupd8team/java</code><br />
 <code>sudo apt-get update</code><br />
 <code>sudo apt-get install oracle-java8-installer</code><br />
 <code>sudo update-alternatives --config java</code></p>
 
-<h1 id="screen-capture">Screen capture</h1>
+<h2 id="screen-capture">Screen capture</h2>
 
 <p>{% highlight bash %}
 sudo apt-get install imagemagick<br />
@@ -308,7 +321,7 @@ cd ~/Pictures
 <dd>Just like the command above but this one captures the frame of the window region</dd>
 </dl>
 
-<h2 id="other-options">Other options</h2>
+<h3 id="other-options">Other options</h3>
 
 <ol>
 <li><code>sudo apt-get install shutter</code></li>
@@ -319,11 +332,11 @@ cd ~/Pictures
 <li><code>scrot</code> This will silently take a screenshot of the whole screen, and will create a file on the current directory</li>
 </ol>
 
-<h1 id="view-an-image">View an image</h1>
+<h2 id="view-an-image">View an image</h2>
 
 <p><code>gpicview Image01.png</code></p>
 
-<h1 id="mount-an-smb-or-cifs-share">Mount an SMB or CIFS share</h1>
+<h2 id="mount-an-smb-or-cifs-share">Mount an SMB or CIFS share</h2>
 
 <p><code>sudo apt-get install smbclient</code><br />
 <code>sudo apt-get install cifs-utils</code><br />
@@ -343,7 +356,7 @@ cd ~/Pictures
 
 <p>Ping the whole network, try to see if you can recognize some servers in there</p>
 
-<h1 id="system-time-is-wrong-all-the-time">System time is wrong all the time</h1>
+<h2 id="system-time-is-wrong-all-the-time">System time is wrong all the time</h2>
 
 <p>Edit <code>/etc/default/rcS</code></p>
 
@@ -354,7 +367,7 @@ cd ~/Pictures
 
 <p>Reboot</p>
 
-<h1 id="check-battery">Check battery</h1>
+<h2 id="check-battery">Check battery</h2>
 
 <p>The <code>ibam</code> doesn&rsquo;t seem to be applicable anymore. But instead there are two commands that might do the trick</p>
 
@@ -365,7 +378,7 @@ cd ~/Pictures
 
 <p><code>upower -i `upower -e`</code></p>
 
-<h1 id="terminal-color">Terminal color</h1>
+<h2 id="terminal-color">Terminal color</h2>
 
 <p>Find out first how many colors does the terminal already have. The <code>tput colors</code> command will tell you the current number of colors</p>
 
@@ -378,7 +391,7 @@ export TERM=&quot;xterm-256color&quot;
 
 <p>If you do this, remove any setting from any tool e.g. tmux, emacs that will interfer with setting the TERM color.</p>
 
-<h1 id="hp-laserjet-p1102w">HP LaserJet P1102W</h1>
+<h2 id="hp-laserjet-p1102w">HP LaserJet P1102W</h2>
 
 <p>You will need quite a couple of things. This printer requires the hplip package. That is not all, it also requires a proprietary plugin from HP for it to function properly.</p>
 
@@ -390,7 +403,7 @@ export TERM=&quot;xterm-256color&quot;
 
 <p>You need to set a default printer. This can be done using <code>lpoptions -d PrinterName</code>. If the LinuxMachine is equipped with GUI, it can also be done there. In Lubuntu it&rsquo;s under <strong>System tools</strong> - <strong>Printers</strong>. If you don&rsquo;t set a default printer, you might not be able to use commands such as <code>lpstat, lpr, lprm</code> etc.</p>
 
-<h1 id="format-external-drive-to-fat32">Format external drive to FAT32</h1>
+<h2 id="format-external-drive-to-fat32">Format external drive to FAT32</h2>
 
 <p><code>sudo apt-install dosfstools</code></p>
 
@@ -406,7 +419,7 @@ export TERM=&quot;xterm-256color&quot;
 
 <p>You can use <strong>fdisk</strong> or <strong>cfdisk</strong> to created partitions. There are GUI tools to do this as well like <strong>gparted</strong>. Actually, it&rsquo;s a lot easier to use gparted, so just go use that.</p>
 
-<h1 id="hash-sum-mismatch-error">Hash Sum Mismatch Error</h1>
+<h2 id="hash-sum-mismatch-error">Hash Sum Mismatch Error</h2>
 
 <p>During a software update, you might encounter this error. Just remove the contents of <strong>apt/lists</strong></p>
 
@@ -414,7 +427,7 @@ export TERM=&quot;xterm-256color&quot;
 <code>sudo apt-get update</code><br />
 <code>sudo apt-get upgrade</code></p>
 
-<h1 id="nvpy">nvPY</h1>
+<h2 id="nvpy">nvPY</h2>
 
 <p><code>sudo apt-get install nvpy</code></p>
 
@@ -437,7 +450,7 @@ sort_mode = 1
 
 <p>There is a detailed example and explanation of the cfg file in <a href="https://github.com/cpbotha/nvpy">https://github.com/cpbotha/nvpy</a></p>
 
-<h1 id="cmd-line-printing">cmd Line printing</h1>
+<h2 id="cmd-line-printing">cmd Line printing</h2>
 
 <table>
 <thead>
@@ -500,7 +513,7 @@ sort_mode = 1
 </tbody>
 </table>
 
-<p>Either the <code>lpr</code> and <code>lp</code> command will send contents of a file to the configured printer. But before you can print, you need a properly configured printer. Use either <code>lpadmin</code> for that, or configure the printer via the web gui admin at <em><a href="http://printserverNameOrIpAddress:631">http://printserverNameOrIpAddress:631</a></em> .</p>
+<p>Either the <code>lpr</code> and <code>lp</code> command will send contents of a file to the configured printer. But before you can print, you need a properly configured printer. Use either <code>lpadmin</code> for that, or configure the printer via the web gui admin at <a href="http://printserverNameOrIpAddress:631">http://printserverNameOrIpAddress:631</a>.</p>
 
 <p>The most basic usage is to send the contents of a file to the configured printer, like so</p>
 
@@ -520,7 +533,7 @@ sort_mode = 1
 
 <hr />
 
-<p>Revision history</p>
+<p><strong><em>Revision history</em></strong></p>
 
 <table>
 <thead>

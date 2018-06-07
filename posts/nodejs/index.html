@@ -54,6 +54,9 @@ setTimeout(()=&gt; { console.log(&quot;Hello&quot;); }, 3000); console.">
       
       
       <ul class="article-meta">
+        <li>
+          by <a rel="author" href="https://plus.google.com/u/0/+TedHagos">Ted Hagos</a>
+        </li>
         <li class="article-meta-date"><time>April 21, 2015</time></li>
         <li class="article-meta-categories">
           <a href="/categories/nodejs/">
@@ -77,7 +80,8 @@ setTimeout(()=&gt; { console.log(&quot;Hello&quot;); }, 3000); console.">
 <li><a href="#displaying-strings-etc">Displaying Strings etc.</a></li>
 <li><a href="#async-codes">Async Codes</a></li>
 <li><a href="#event-loop">Event Loop</a></li>
-<li><a href="#callback">Callback</a>
+<li><a href="#callback">Callback</a></li>
+<li><a href="#module-require-and-exports">Module, Require and Exports</a>
 <ul>
 <li><a href="#module">Module</a></li>
 </ul></li>
@@ -115,8 +119,6 @@ console.log(&quot;World&quot;);
 
 <p>Many of the codes you will encounter in Node will be asynchronous, not unlike the timed-out Hello world example in Listing 1.</p>
 
-<hr />
-
 <h1 id="cmd-line-arguments">cmd Line arguments</h1>
 
 <p>Node captures arguments that were passed on the command line using the &ldquo;process&rdquo; object. This object is automatically included in all running node applications, so, we can reference this directly in our code. Edit the &ldquo;hellonode.js&rdquo; to include the following code.</p>
@@ -125,8 +127,6 @@ console.log(&quot;World&quot;);
   console.log(process.argv[2]); // print the first arg 
 }
 </code></pre>
-
-<hr />
 
 <h1 id="displaying-strings-etc">Displaying Strings etc.</h1>
 
@@ -160,8 +160,6 @@ console.log(str); // Hi Joe
 <li>Enclose the whole string to be composed in a pair of back ticks. The back tick character is found on the same key as the tilde (beside the numeric 1 key on top of your keyboard)</li>
 <li>Enclose the variable inside the template construct &ldquo;${ var name}&rdquo;</li>
 </ol>
-
-<hr />
 
 <h1 id="async-codes">Async Codes</h1>
 
@@ -237,13 +235,9 @@ console.log(&quot;This line may or may not execute before readFromSomewhere fini
 <li>How the LHS is mapped as the second argument of the callback function</li>
 </ol>
 
-<hr />
-
 <h1 id="event-loop">Event Loop</h1>
 
 <p>[TODO]</p>
-
-<hr />
 
 <h1 id="callback">Callback</h1>
 
@@ -291,9 +285,7 @@ console.log(&quot;global space -&gt; end&quot;);
 
 <p>[TODO]</p>
 
-<hr />
-
-<p>Module, Require and Exports</p>
+<h1 id="module-require-and-exports">Module, Require and Exports</h1>
 
 <p>Javascript didn&rsquo;t (still doesn&rsquo;t) have a standard way of managing code libraries. If you need functionalities that are external to your source file, you need to import or include it in your project using the script tag</p>
 
@@ -308,8 +300,6 @@ console.log(&quot;global space -&gt; end&quot;);
 <p>A module is a file (mostly), but sometimes can also be a folder. If it is a folder, that folder needs to have a &ldquo;index.js&rdquo; file inside it. If it doesn&rsquo;t have an index.js file inside it, it must have a &ldquo;package.json&rdquo; file which will specify what file will be loaded when the name of the module is required. The simplest scenario is that the name of the module is the name of a JS file.</p>
 
 <p>[TODO]</p>
-
-<hr />
 
 <h1 id="hello-web-server">Hello Web Server</h1>
 
@@ -382,8 +372,6 @@ server.listen(3000);
 </blockquote>
 
 <p>If you’ve written web apps before in PHP, Java or .NET, what we just did in the previous section might seem a bit primitive and quite off putting. In other web platforms, we didn’t have to create a web server, we would just create the html document or something that would transpile to html and leave the servicing of the documents to the web server. But don’t walk away just yet, programming in node is a low level enterprise but that is not a weakness, that is a strength. That hello world sample code above is just a bad sample, you’re not supposed to develop web applications like that. We’ll explore some more use cases and features of node in the up coming sections.</p>
-
-<hr />
 
 <h1 id="middleware">Middleware</h1>
 
@@ -586,8 +574,6 @@ http.createServer(app).listen(port, ()=&gt; {
   console.log(&quot;connect started on port %d&quot;, port);
 });
 </code></pre>
-
-<hr />
 
 <h1 id="async-patterns">Async Patterns</h1>
 

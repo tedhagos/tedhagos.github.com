@@ -101,6 +101,12 @@
   </url>
   
   <url>
+    <loc>http://tedhagos.com/tags/cheatsheet/</loc>
+    <lastmod>2014-10-20T21:24:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tedhagos.com/categories/exercises/</loc>
     <lastmod>2016-05-10T13:46:41+08:00</lastmod>
     <priority>0</priority>
@@ -127,6 +133,12 @@
   <url>
     <loc>http://tedhagos.com/categories/linux/</loc>
     <lastmod>2014-07-21T19:18:23+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tedhagos.com/categories/macos/</loc>
+    <lastmod>2014-10-20T21:24:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   

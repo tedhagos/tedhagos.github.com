@@ -53,12 +53,29 @@ Show/Hide hidden files Finder The OSX Finder …">
       
       
       <ul class="article-meta">
+        <li>
+          by <a rel="author" href="https://plus.google.com/u/0/+TedHagos">Ted Hagos</a>
+        </li>
         <li class="article-meta-date"><time>October 20, 2014</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/macos/">
+            <i class="fas fa-folder"></i>
+            macos
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/cheatsheet/">
+            <i class="fas fa-tag"></i>
+            cheatsheet
+          </a>&nbsp;
+        </li>
       </ul>
       
       
 <aside class="toc">
   <nav id="TableOfContents">
+<ul>
+<li>
 <ul>
 <li><a href="#routing-table">Routing table</a></li>
 <li><a href="#show-hide-hidden-files-finder">Show/Hide hidden files Finder</a></li>
@@ -93,16 +110,17 @@ Show/Hide hidden files Finder The OSX Finder …">
 <li><a href="#fixing-homebrew-after-upgrade-to-10-9">Fixing homebrew after upgrade to 10.9</a></li>
 <li><a href="#screen-shooting">Screen shooting</a></li>
 <li><a href="#icloud-drive-access-from-cmd-line">iCloud drive access from cmd line</a></li>
+</ul></li>
 </ul>
 </nav>
 </aside>
       
 
-<h1 id="routing-table">Routing table</h1>
+<h2 id="routing-table">Routing table</h2>
 
 <p>The routing table does not show using <code>route print</code> in OSX, this may have worked in Linux but not here. Use the command <code>netstat -nr</code> instead</p>
 
-<h1 id="show-hide-hidden-files-finder">Show/Hide hidden files Finder</h1>
+<h2 id="show-hide-hidden-files-finder">Show/Hide hidden files Finder</h2>
 
 <p>The OSX Finder does not show hidden files by default. A file is hidden if the name starts with a dot or period e.g. <em>.bash_profile</em>, <em>.emacs.d</em> etc. If you want to see these kinds of files in the Finder, execute this commands using the Terminal.app</p>
 
@@ -118,11 +136,11 @@ $ killall Finder
 $ killall Finder
 </code></pre>
 
-<h1 id="setting-the-hostname">Setting the hostname</h1>
+<h2 id="setting-the-hostname">Setting the hostname</h2>
 
 <p>The <code>hostname</code> command, when executed on a terminal window will give you, well, the hostname, which is the name of your machine. On a networked environment, this hostname gets affected by DHCP; it overrides the hostname of your machine. If you want to set the hostname, execute <code>sudo scutil --set HostName anyname_you_want</code> on a terminal window</p>
 
-<h1 id="anti-alias">Anti alias</h1>
+<h2 id="anti-alias">Anti alias</h2>
 
 <p>On the terminal, type</p>
 
@@ -131,7 +149,7 @@ $ killall Finder
 
 <p>The value 1 in <code>-int 1</code> means light anti aliasing, a value of <em>2</em> will set anti aliasing to medium and and <em>3</em> will be for strong anti aliasing</p>
 
-<h1 id="homebrew-package-management">Homebrew package management</h1>
+<h2 id="homebrew-package-management">Homebrew package management</h2>
 
 <p>You need XCode before you can install homebrew. Make sure you have downloaded it from the AppStore and that you have also installed it&rsquo;s command line utilities. After that, get a terminal window and type</p>
 
@@ -146,41 +164,41 @@ $ brew install curl
 $ brew install axel # wget in steroids
 </code></pre>
 
-<h1 id="colored-terminal-window">Colored terminal window</h1>
+<h2 id="colored-terminal-window">Colored terminal window</h2>
 
 <p>Open up <code>~/.bash_profile</code> and add the following line</p>
 
 <pre><code>alias ls=&quot;ls -G&quot;
 </code></pre>
 
-<h1 id="picture-file-location-of-photobooth">Picture file location of Photobooth</h1>
+<h2 id="picture-file-location-of-photobooth">Picture file location of Photobooth</h2>
 
 <p>They are in <em>~/Pictures/Photo Booth Library Pictures</em></p>
 
-<h1 id="cli-copy-paste">CLI Copy Paste</h1>
+<h2 id="cli-copy-paste">CLI Copy Paste</h2>
 
 <p>To copy content of files while on a terminal, use <code>pbcopy</code> e.g. <code>cat somefile | pbcopy</code>. The contents of somefile are now on the clipboard. You can paste it with the usual <code>CTRL v</code> if you are using any GUI editor. If you need to perform a paste on the terminal, use <code>pbpaste</code> e.g. <code>echo pbpaste</code>, the contents of the clipboard will be echoed to the terminal.</p>
 
-<h1 id="assistive-technology-in-10-9-mavericks">Assistive Technology in 10.9 (mavericks)</h1>
+<h2 id="assistive-technology-in-10-9-mavericks">Assistive Technology in 10.9 (mavericks)</h2>
 
 <p>Not anymore in its usual place. This is now in <code>System Preferences -&gt; Security and Privacy -&gt; Privacy</code>. TextExpander will not work as soon as you upgrade to 10.9. But if you quickly visit and reenable TextExpander in Assistive technology dialog window, all will be well again</p>
 
-<h1 id="scanning">Scanning</h1>
+<h2 id="scanning">Scanning</h2>
 
 <p>Use <em>Image capture</em>, the <em>Scaner and Printer Queue</em> or <em>Preview</em>. All of these built-in software in have capabilities for image capture</p>
 
-<h1 id="turn-off-iphoto-when-an-ios-device-connects">Turn off iPhoto when an iOS device connects</h1>
+<h2 id="turn-off-iphoto-when-an-ios-device-connects">Turn off iPhoto when an iOS device connects</h2>
 
 <p>When you plug an iOS device, iPhoto quickly springs into action offering to sync Photos. You can turn it off
 1.  Launch <em>Image Capture</em>, <code>cmd + space</code> then type Image Capture in Spotlight
 2.  On the lower left region of <em>Image Capture</em> window, look for <strong>Connecting this iPad opens iPhoto</strong>
 3.  Click the dropdown. Choose <strong>No Application</strong></p>
 
-<h1 id="external-usb-drives">External USB drives</h1>
+<h2 id="external-usb-drives">External USB drives</h2>
 
 <p>You can <code>cd</code> to the external drive in <code>~/Volumes</code></p>
 
-<h1 id="back-up-mail-app">Back up Mail.app</h1>
+<h2 id="back-up-mail-app">Back up Mail.app</h2>
 
 <ol>
 <li><code>mkdir ~/MailBackup</code></li>
@@ -188,7 +206,7 @@ $ brew install axel # wget in steroids
 <li><code>cp -r ~/Library/Mail/V2</code></li>
 </ol>
 
-<h1 id="convert-matroska-mkv-files-to-mp4">Convert matroska (mkv) files to mp4</h1>
+<h2 id="convert-matroska-mkv-files-to-mp4">Convert matroska (mkv) files to mp4</h2>
 
 <p><code>ffmpeg i movietitle.mkv -vcodec copy -acodec copy movietitle.mp4</code></p>
 
@@ -200,28 +218,28 @@ $ brew install axel # wget in steroids
 <p><code>chmod u+x convert.sh</code><br />
 <code>convert.sh</code></p>
 
-<h1 id="share-internet">Share internet</h1>
+<h2 id="share-internet">Share internet</h2>
 
 <p>If you don&rsquo;t mind OSX changing changing the subnet when <em>Internet Sharing</em> is activated, you don&rsquo;t have to do this. If on the other hand, you have other devices that needs a fixed subnet e.g. file servers, other PCs that have statically defined IPs, then you need to control OSX&rsquo;s behavior on NAT</p>
 
 <p><code>sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict-add SharingNetworkNumberStart 192.168.3.0</code></p>
 
-<h1 id="simple-music-player">Simple music player</h1>
+<h2 id="simple-music-player">Simple music player</h2>
 
 <p>Get Cogx, head over to <a href="http://cogx.org">cogx.org</a></p>
 
-<h1 id="squeaky-clean-hard-drive">Squeaky clean hard drive</h1>
+<h2 id="squeaky-clean-hard-drive">Squeaky clean hard drive</h2>
 
 <p>Removing apps is simple, just go the <em>Applications folder and remove it. But there are residual files left when doing this. Also those language files take up hard drive. If you are using an SSD with limited drive space, then every Gig counts. Get a commercial app. /Clean My Mac</em> is decent and cheap enough</p>
 
-<h1 id="download-accelerator">Download accelerator</h1>
+<h2 id="download-accelerator">Download accelerator</h2>
 
 <p><code>brew install axel</code><br />
 <code>axel -n 10 http://wordpress.org/latest.zip</code></p>
 
 <p>The int value <em>10</em> means it will use 10 threads to pull the file simultaneously. It&rsquo;s similar to <em>wget</em>, only this time, there are 10 wget running at the same time</p>
 
-<h1 id="rip-audio-cds-to-mp3">Rip audio cds to mp3</h1>
+<h2 id="rip-audio-cds-to-mp3">Rip audio cds to mp3</h2>
 
 <p>Get <a href="http://sbooth.org/Max/">MAX</a> from SBooth. Work on the archive files and put it in /Applications folder or where you want them. It&rsquo;s a GUI tool, so it&rsquo;s easy to work with.</p>
 
@@ -236,7 +254,7 @@ $ brew install axel # wget in steroids
 
 <p>This solution needs both iTunes and MAX running at the same time. When iTunes grabs the metadata from Gracenotes, the script grabs the metadata from iTunes</p>
 
-<h1 id="rip-audio-cds-to-flac-format">Rip audio cds to flac format</h1>
+<h2 id="rip-audio-cds-to-flac-format">Rip audio cds to flac format</h2>
 
 <p><code>brew install cdparanoia</code><br />
 <code>brew install abcde</code><br />
@@ -265,7 +283,7 @@ mungefilename ()
 
 <p>The unmounting is necessary because abcde works with raw block devices and cannot function when the CD is mounted. I shamlessly ripped most of this guide from <a href="http://hints.macworld.com/article.php?story=2005101620055677">extempore, MacWorld</a></p>
 
-<h1 id="php-pear">PHP pear</h1>
+<h2 id="php-pear">PHP pear</h2>
 
 <p>This is no longer included in 10.8, maybe it did not even make it in Leopard, I&rsquo;m not sure. Just curl it</p>
 
@@ -276,7 +294,7 @@ mungefilename ()
 
 <p><code>echo &quot;export PATH=$PATH:~/pear/bin:.&quot; &gt;&gt; ~/.bash_profile</code></p>
 
-<h1 id="phar-php-composer">PHAR &amp; PHP composer</h1>
+<h2 id="phar-php-composer">PHAR &amp; PHP composer</h2>
 
 <p>Create a php.ini file first. OSX does have it at <em>private/etc. Don&rsquo;t copy the ini file somewhere else, it needs to be at /private/etc</em>. Make sure that php.ini is actually in that directory</p>
 
@@ -298,7 +316,7 @@ date.timezone = YourCountry/YourCity
 
 <p><code>php composer.phar</code></p>
 
-<h1 id="write-markdown-files-export-latex-html-etc">Write markdown files, export LaTex, HTML etc</h1>
+<h2 id="write-markdown-files-export-latex-html-etc">Write markdown files, export LaTex, HTML etc</h2>
 
 <p>Get Pandoc, there are installation instructions on the <a href="http://johnmacfarlane.net/pandoc/installing.html">johnmacfarlane/pandoc</a> page. If you don&rsquo;t want to monkey around with Haskell, get the binary distributions. If you prefer the Haskell route on the other hand
 1.  Get Haskell, either via brew, macport or fink
@@ -306,7 +324,7 @@ date.timezone = YourCountry/YourCity
 3.  <code>sudo cabal update</code>
 4.  <code>sudo cabal install pandoc</code></p>
 
-<h1 id="show-the-week-number-in-cal">Show the week number in cal</h1>
+<h2 id="show-the-week-number-in-cal">Show the week number in cal</h2>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -330,7 +348,7 @@ date.timezone = YourCountry/YourCity
 </tbody>
 </table>
 
-<h1 id="keyboard-shortcut-for-full-screen">Keyboard shortcut for Full Screen</h1>
+<h2 id="keyboard-shortcut-for-full-screen">Keyboard shortcut for Full Screen</h2>
 
 <p>There is no built-in or standard shortcut for entering fullscreen. You have to define it. It isn&rsquo;t like Lubuntu where F10 gets any app into full screen mode. Fortunately, it&rsquo;s quite easy to add a keyboard shortcut for it.
 1.  Go to <strong>System Preferences</strong> &rarr; <strong>Keyboard</strong> &rarr; <strong>App Shortcuts</strong>
@@ -339,11 +357,9 @@ date.timezone = YourCountry/YourCity
 
 <p>Though most applications have the <code>Enter Full Screen</code> menu title, some applications don&rsquo;t follow this convention e.g. iTerm2. So you need to verify what is the exact text that an application uses to enter full screen and use what&rsquo;s appropriate</p>
 
-<p><img src="../images/fullscreen.png" alt="img" /></p>
+<h2 id="cli-music-player">CLI music player</h2>
 
-<h1 id="cli-music-player">CLI music player</h1>
-
-<h2 id="using-the-built-in-cli-player">Using the built in CLI player</h2>
+<h3 id="using-the-built-in-cli-player">Using the built in CLI player</h3>
 
 <p><code>afplay MusicFileName.ext</code></p>
 
@@ -351,7 +367,7 @@ date.timezone = YourCountry/YourCity
 
 <p><code>afplay</code> comes with OSX, it is already there</p>
 
-<h2 id="music-on-console-moc">Music On Console (moc)</h2>
+<h3 id="music-on-console-moc">Music On Console (moc)</h3>
 
 <p><code>brew update</code><br />
 <code>brew install moc</code></p>
@@ -364,7 +380,7 @@ date.timezone = YourCountry/YourCity
 
 <p><code>mocp Folder/</code> will launch a console UI, you can navigate the tracks using the arrow keys. Press ENTER to play a track. Press <strong>p</strong> to pause/play. <strong>q</strong> will exit</p>
 
-<h1 id="fixing-homebrew-after-upgrade-to-10-9">Fixing homebrew after upgrade to 10.9</h1>
+<h2 id="fixing-homebrew-after-upgrade-to-10-9">Fixing homebrew after upgrade to 10.9</h2>
 
 <p>The <code>brew update</code> command stopped working after upgrading to Mavericks. Fix it with</p>
 
@@ -374,7 +390,7 @@ $ sudo git reset --hard origin/master
 $ brew update
 </code></pre>
 
-<h1 id="screen-shooting">Screen shooting</h1>
+<h2 id="screen-shooting">Screen shooting</h2>
 
 <p><strong>shift+cmd+4</strong> will turn the cursor to a cross hair. You can now click and drag the cross-hair to cover the region of the screen that you want to capture.</p>
 
@@ -384,7 +400,7 @@ $ brew update
 $ killall SystemUIServer
 </code></pre>
 
-<h1 id="icloud-drive-access-from-cmd-line">iCloud drive access from cmd line</h1>
+<h2 id="icloud-drive-access-from-cmd-line">iCloud drive access from cmd line</h2>
 
 <p>Create a command line shortcut to it, of course</p>
 
@@ -397,7 +413,7 @@ $ killall SystemUIServer
 
 <hr />
 
-<p><strong>Revision history</strong></p>
+<p><em>Revision history</em></p>
 
 <table>
 <thead>

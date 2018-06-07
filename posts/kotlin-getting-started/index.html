@@ -53,6 +53,9 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
       
       
       <ul class="article-meta">
+        <li>
+          by <a rel="author" href="https://plus.google.com/u/0/+TedHagos">Ted Hagos</a>
+        </li>
         <li class="article-meta-date"><time>October 15, 2017</time></li>
         <li class="article-meta-categories">
           <a href="/categories/kotlin/">
@@ -117,8 +120,6 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <li>treats all variables as <em>non-Nullable</em> by default. It means, when you declare a variable in Kotlin, without any decoration, modifier or annotation, the variable can never be assigned a <em>null</em> value</li>
 </ul>
 
-<hr />
-
 <h1 id="compilation">Compilation</h1>
 
 <p>It&rsquo;s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (<code>kotlinc</code>).</p>
@@ -128,8 +129,6 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <p>The Kotlin compiler outputs <code>.class</code> files, just like <code>javac</code>. But, you cannot run Kotlin bytecodes the same way you would run Java bytecodes. You&rsquo;ll need to combine the resulting  Kotlin byte code with the Kotlin runtime and package it into a jar file. Only then will you be able to run the program.</p>
 
 <p>This detail is probably important for you if you will work with Kotlin on the command line. These compilation and execution details are typically handled for you by an IDE.  I can think of three IDEs that should be usable with Kotlin; Eclipse, NetBeans and IntelliJ — the last one is a commercial IDE but it does have a community edition. IntelliJ CE is able to run Kotlin.  Anyone of these 3 IDEs should suffice. In case you choose to use IDEA, you might want to refer to the <a href="http://bit.ly/intellijguide">IntelliJ minimal survival guide</a>.</p>
-
-<hr />
 
 <h1 id="project-setup-in-intellij">Project setup in IntelliJ</h1>
 
@@ -151,8 +150,6 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 
 <p>Choose &ldquo;Kotlin/File&rdquo;. Name the file, and you should be good to go.</p>
 
-<hr />
-
 <h1 id="hello-world">Hello World</h1>
 
 <p>The simplest program we&rsquo;ll create in Kotlin could look like the following;</p>
@@ -171,8 +168,6 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <p><img src="/images/kotlin-run-context.png" alt="new file" /></p>
 
 <p><strong>Figure 3. Running Hello.Kt</strong></p>
-
-<hr />
 
 <h1 id="variables">Variables</h1>
 
@@ -194,8 +189,6 @@ val anotherInt = 1            // (4)
 <p><strong>(3)</strong> Same as the first statement, except that were using the <code>val</code> instead of <code>var</code>, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of <code>someInt</code> from the assignment. It will see that <code>1</code> is an Integer literal, hence, it can make the necessary type assignment</p>
 
 <p><strong>(4)</strong> This statement won&rsquo;t work because variables declared as <code>val</code> are effectively constants. They become immutable. The Java equivalent is when you declare a variable as <em>final</em></p>
-
-<hr />
 
 <h1 id="types">Types</h1>
 
@@ -275,8 +268,6 @@ var a = b.toLong() // this will work
 
 <p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code>true</code> or <code>false</code></p>
 
-<hr />
-
 <h1 id="branching">Branching</h1>
 
 <p>The  <code>if</code> construct work almost the same as in Java.</p>
@@ -354,8 +345,6 @@ for(word in words) {
 }
 </code></pre>
 
-<hr />
-
 <h1 id="functions">Functions</h1>
 
 <p>The <em>main</em> function in Kotlin is written as follows</p>
@@ -401,8 +390,6 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
 
 <h2 id="infix-functions">Infix functions</h2>
 
-<hr />
-
 <h1 id="classes-and-objects">Classes and Objects</h1>
 
 <h1 id="access-modifiers">Access Modifiers</h1>
@@ -418,8 +405,6 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
 <ol>
 <li>Each of the Java collection is represented in Kotin in two ways.</li>
 </ol>
-
-<hr />
 
 <h1 id="generics">Generics</h1>
 
