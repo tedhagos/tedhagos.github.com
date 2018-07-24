@@ -11,7 +11,7 @@
   <meta property="og:url" content="/posts/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="generator" content="Hugo 0.36" />
+  <meta name="generator" content="Hugo 0.42.2" />
   <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Ted&#39;s notes" />
   <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Ted&#39;s notes" />
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
@@ -154,6 +154,34 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
       <div class="article-floatclear"></div>
     </article>
     <article class="article">
+      <a href="/posts/die-empty/" class="article-titles">
+        <h2 class="article-title">Die Empty</h2>
+        
+      </a>
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>October 10, 2017</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/books/">
+            <svg class="icon"><use xlink:href="/images/fa-solid.svg#folder"></use></svg>
+            books
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/notes/">
+            <svg class="icon"><use xlink:href="/images/fa-solid.svg#tag"></use></svg>
+            notes
+          </a>&nbsp;
+        </li>
+      </ul>
+      <a href="/posts/die-empty/"><img src="/images/fuelgauge.jpg" class="article-image" /></a>
+      <div class="article-content">
+        There are 3 kinds of work
+ Mapping - Prioritizing, planning and setting of objectives Meshing - Sharpening the saw. This is an important determinant of long-term sucess. I&rsquo;ts difficult to justify this because it&rsquo;s not tied directly to results Making - Performing work that actually crosses out the items in your todo list. This is &ldquo;doing the work&rdquo;. You have a work product. Producing something of value  You need to be purposeful in engaging these three kinds of work.
+      </div>
+      <div class="article-readmore"><a href="/posts/die-empty/">Read more...</a></div>
+      <div class="article-floatclear"></div>
+    </article>
+    <article class="article">
       <a href="/posts/python-exercises/" class="article-titles">
         <h2 class="article-title">Python Exercises</h2>
         
@@ -269,34 +297,6 @@ You copied something in an X window (browser or editor etc), you want to paste t
       <div class="article-readmore"><a href="/posts/linux-cheatsheet/">Read more...</a></div>
       <div class="article-floatclear"></div>
     </article>
-    <article class="article">
-      <a href="/posts/android-activities-layouts/" class="article-titles">
-        <h2 class="article-title">Activities and Layouts</h2>
-        
-      </a>
-      <ul class="article-meta">
-        <li class="article-meta-date"><time>October 20, 2012</time></li>
-        <li class="article-meta-categories">
-          <a href="/categories/android/">
-            <svg class="icon"><use xlink:href="/images/fa-solid.svg#folder"></use></svg>
-            android
-          </a>&nbsp;
-        </li>
-        <li class="article-meta-tags">
-          <a href="/tags/android-studio/">
-            <svg class="icon"><use xlink:href="/images/fa-solid.svg#tag"></use></svg>
-            android studio
-          </a>&nbsp;
-        </li>
-      </ul>
-      <a href="/posts/android-activities-layouts/"><img src="/images/android-lifecycle.png" class="article-image" /></a>
-      <div class="article-content">
-        Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
-Android&rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&rsquo;s components and resources together — all Android programs require this manifest file.
-      </div>
-      <div class="article-readmore"><a href="/posts/android-activities-layouts/">Read more...</a></div>
-      <div class="article-floatclear"></div>
-    </article>
   </section>
   
 
@@ -367,13 +367,16 @@ Android&rsquo;s Trinity of Main A simple app in Android that will show a single 
 <script src="/js/custom.js"></script>
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', '423977771', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', '423977771', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 

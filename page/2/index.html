@@ -12,7 +12,7 @@
   <meta property="og:url" content="/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="generator" content="Hugo 0.36" />
+  <meta name="generator" content="Hugo 0.42.2" />
   <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Ted&#39;s notes" />
   <link href="/index.xml" rel="feed" type="application/rss+xml" title="Ted&#39;s notes" />
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
@@ -41,6 +41,34 @@
 
 <div class="main" role="main">
   <section class="list home-list">
+    <article class="article">
+      <a href="/posts/android-activities-layouts/" class="article-titles">
+        <h2 class="article-title">Activities and Layouts</h2>
+        
+      </a>
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>October 20, 2012</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/android/">
+            <svg class="icon"><use xlink:href="/images/fa-solid.svg#folder"></use></svg>
+            android
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/android-studio/">
+            <svg class="icon"><use xlink:href="/images/fa-solid.svg#tag"></use></svg>
+            android studio
+          </a>&nbsp;
+        </li>
+      </ul>
+      <a href="/posts/android-activities-layouts/"><img src="/images/android-lifecycle.png" class="article-image" /></a>
+      <div class="article-content">
+        Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &ldquo;Hello World&rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
+Android&rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&rsquo;s components and resources together — all Android programs require this manifest file.
+      </div>
+      <div class="article-readmore"><a href="/posts/android-activities-layouts/">Read more...</a></div>
+      <div class="article-floatclear"></div>
+    </article>
     <article class="article">
       <a href="/posts/java/" class="article-titles">
         <h2 class="article-title">Java</h2>
@@ -201,13 +229,16 @@ There were a couple of other solution approaches but I went for gnokii-sms.
 <script src="/js/custom.js"></script>
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', '423977771', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', '423977771', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 

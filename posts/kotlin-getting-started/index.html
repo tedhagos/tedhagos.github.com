@@ -19,7 +19,7 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
   <meta property="og:image" content="/images/kotlin-logo.png" />
   <meta name="twitter:image" content="/images/kotlin-logo.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="generator" content="Hugo 0.36" />
+  <meta name="generator" content="Hugo 0.42.2" />
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />  
   <link rel="stylesheet" href="/css/style.css" media="all" />
@@ -417,7 +417,7 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
           <a href="/posts/kotlin-higher-order-functions/" data-toggle="tooltip" data-placement="top" title="Higher Order Functions">&lt; Newer</a>
       </li>
       <li class="pager-older">
-        <a href="/posts/python-exercises/" data-toggle="tooltip" data-placement="top" title="Python Exercises">Older &gt;</a>
+        <a href="/posts/die-empty/" data-toggle="tooltip" data-placement="top" title="Die Empty">Older &gt;</a>
       </li>
     </ul>
   </div>
@@ -434,13 +434,16 @@ connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all 
 <script src="/js/custom.js"></script>
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', '423977771', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', '423977771', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
