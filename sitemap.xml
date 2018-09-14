@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tedhagos.com/posts/python-lang/</loc>
-    <lastmod>2018-06-05T12:52:17+08:00</lastmod>
+    <loc>http://tedhagos.com/posts/kotlin-getting-started/</loc>
+    <lastmod>2018-08-15T21:07:12+08:00</lastmod>
   </url>
   
   <url>
@@ -23,13 +23,13 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/posts/kotlin-getting-started/</loc>
-    <lastmod>2017-10-15T21:07:12+08:00</lastmod>
+    <loc>http://tedhagos.com/posts/die-empty/</loc>
+    <lastmod>2017-10-10T19:48:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/posts/die-empty/</loc>
-    <lastmod>2017-10-10T19:48:42+08:00</lastmod>
+    <loc>http://tedhagos.com/posts/python-lang/</loc>
+    <lastmod>2017-06-05T12:52:17+08:00</lastmod>
   </url>
   
   <url>
@@ -88,14 +88,14 @@
   </url>
   
   <url>
-    <loc>http://tedhagos.com/categories/android-studio/</loc>
-    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
+    <loc>http://tedhagos.com/tags/android-studio/</loc>
+    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tedhagos.com/tags/android-studio/</loc>
-    <lastmod>2012-10-20T18:40:33+08:00</lastmod>
+    <loc>http://tedhagos.com/categories/android-studio/</loc>
+    <lastmod>2018-06-03T21:27:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +137,7 @@
   
   <url>
     <loc>http://tedhagos.com/categories/kotlin/</loc>
-    <lastmod>2018-05-07T13:22:10+08:00</lastmod>
+    <lastmod>2018-08-15T21:07:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,13 +167,13 @@
   
   <url>
     <loc>http://tedhagos.com/posts/</loc>
-    <lastmod>2018-06-05T12:52:17+08:00</lastmod>
+    <lastmod>2018-08-15T21:07:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tedhagos.com/categories/python/</loc>
-    <lastmod>2018-06-05T12:52:17+08:00</lastmod>
+    <lastmod>2017-06-05T12:52:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -190,7 +190,7 @@
   
   <url>
     <loc>http://tedhagos.com/</loc>
-    <lastmod>2018-06-05T12:52:17+08:00</lastmod>
+    <lastmod>2018-08-15T21:07:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,21 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright Ted Hagos</copyright>
-    <lastBuildDate>Tue, 05 Jun 2018 12:52:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2018 21:07:12 +0800</lastBuildDate>
     
 	<atom:link href="http://tedhagos.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Python</title>
-      <link>http://tedhagos.com/posts/python-lang/</link>
-      <pubDate>Tue, 05 Jun 2018 12:52:17 +0800</pubDate>
+      <title>Kotlin</title>
+      <link>http://tedhagos.com/posts/kotlin-getting-started/</link>
+      <pubDate>Wed, 15 Aug 2018 21:07:12 +0800</pubDate>
       
-      <guid>http://tedhagos.com/posts/python-lang/</guid>
-      <description>Photo credit: xckd.com/353
-Preface material
-Who is this for? It&amp;rsquo;s for a beginning programmer, but I&amp;rsquo;m assuming this isn&amp;rsquo;t your first programming language — HTML doesn&amp;rsquo;t count, but if you coded a bit of JavaScript, then that counts.
-The very fundamentals of coding won&amp;rsquo;t be tackled in here. I&amp;rsquo;m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an if, or a looping construct like a do; or variables can hold data, they have a memory address and we can replace that data whenever we like — stuff like that.</description>
+      <guid>http://tedhagos.com/posts/kotlin-getting-started/</guid>
+      <description>It&amp;rsquo;s the new(est) kid on the the JVM block.
+It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. They&amp;rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&amp;rsquo;m not sure, I&amp;rsquo;m too lazy to research). The &amp;ldquo;hooray&amp;rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.</description>
     </item>
     
     <item>
@@ -53,16 +51,6 @@ The very fundamentals of coding won&amp;rsquo;t be tackled in here. I&amp;rsquo;
     </item>
     
     <item>
-      <title>Kotlin</title>
-      <link>http://tedhagos.com/posts/kotlin-getting-started/</link>
-      <pubDate>Sun, 15 Oct 2017 21:07:12 +0800</pubDate>
-      
-      <guid>http://tedhagos.com/posts/kotlin-getting-started/</guid>
-      <description>It&amp;rsquo;s the new(est) kid on the the JVM block.
-It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. They&amp;rsquo;ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I&amp;rsquo;m not sure, I&amp;rsquo;m too lazy to research). The &amp;ldquo;hooray&amp;rdquo; moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming.</description>
-    </item>
-    
-    <item>
       <title>Die Empty</title>
       <link>http://tedhagos.com/posts/die-empty/</link>
       <pubDate>Tue, 10 Oct 2017 19:48:42 +0800</pubDate>
@@ -70,6 +58,17 @@ It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. Th
       <guid>http://tedhagos.com/posts/die-empty/</guid>
       <description>There are 3 kinds of work
  Mapping - Prioritizing, planning and setting of objectives Meshing - Sharpening the saw. This is an important determinant of long-term sucess. I&amp;rsquo;ts difficult to justify this because it&amp;rsquo;s not tied directly to results Making - Performing work that actually crosses out the items in your todo list. This is &amp;ldquo;doing the work&amp;rdquo;. You have a work product. Producing something of value  You need to be purposeful in engaging these three kinds of work.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://tedhagos.com/posts/python-lang/</link>
+      <pubDate>Mon, 05 Jun 2017 12:52:17 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/python-lang/</guid>
+      <description>Preface material
+Who is this for? It&amp;rsquo;s for a beginning programmer, but I&amp;rsquo;m assuming this isn&amp;rsquo;t your first programming language — HTML doesn&amp;rsquo;t count, but if you coded a bit of JavaScript, then that counts.
+The very fundamentals of coding won&amp;rsquo;t be tackled in here. I&amp;rsquo;m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an if, or a looping construct like a do; or variables can hold data, they have a memory address and we can replace that data whenever we like — stuff like that.</description>
     </item>
     
     <item>
