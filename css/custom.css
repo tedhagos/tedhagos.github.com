@@ -127,7 +127,7 @@ a {
   color: #000;
 }
 
-a:hover, .widget-content a:hover {
+a:hover  {
   background: #14cee5;
   text-decoration: none;
 }
@@ -139,6 +139,10 @@ a:hover, .widget-content a:hover {
 
 .toc a {
   border-bottom: 0px
+}
+
+.toc a:hover {
+  color:#fff;
 }
 
 /* a:link, a:visited , 
