@@ -6,8 +6,8 @@ body  {
   /* font-family: serif; */
   font-family: 'Times', serif;
   font-size: 1.05em;
-  width: 70%;
-  max-width: 650px;
+  width: 75%;
+  max-width: 780px;
   margin: auto;
   color: #000;
   background: #fff;
@@ -169,14 +169,17 @@ blockquote p {
 a {
   text-decoration: none;
   /* border-bottom: 5px solid #14cee5; */
-  color: #fff;
 }
 
-a:hover  {
+a:hover, a h2.article-title:hover {
+  color :#fff;
   background: #14cee5;
   color: #000;
   text-decoration: none;
 }
+
+
+
 
 .toc {
   font-family: sans-serif;
