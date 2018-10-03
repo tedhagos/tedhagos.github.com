@@ -46,8 +46,9 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 
 
   <div class="main" role="main">
-    <article class="article">
       <img src="/images/kotlin-android.png" class="article-image" />
+    <article class="article">
+      
       
       <h1 class="article-title">Kotlin</h1>
       
@@ -59,7 +60,7 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
         <li class="article-meta-date"><time>August 15, 2018</time></li>
         <li class="article-meta-categories">
           <a href="/categories/kotlin/">
-            <i class="fas fa-folder"></i>
+            <i class="fas fa-hashtag"></i>
             kotlin
           </a>&nbsp;
         </li>
@@ -155,12 +156,9 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <p>The simplest program we&rsquo;ll create in Kotlin could look like the following;</p>
 
 <p><strong>Listing 1. hello.Kt</strong></p>
-
-<pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;) {
-  println(&quot;Hello&quot;)
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+  println(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+}</code></pre></div>
 <p>Kotlin programs don&rsquo;t need classes in order to run. You can get by with top level functions only.</p>
 
 <p>To run this code in IntelliJ, from the main menu bar, click <strong>Run</strong> →  <strong>Run</strong>. You will notice that there are two Run options on the menu. The first Run is greyed out. That&rsquo;s because we haven&rsquo;t defined any runtime configuration yet. Choose the second Run option. You should see a popup dialog, as shown in Figure 3</p>
@@ -174,14 +172,11 @@ It&rsquo;s from JetBrains, they&rsquo;re the guys who built IntelliJ. They&rsquo
 <p>Variables are declared either as <code>val</code> or as <code>var</code>.  Listing 2 shows some example usage</p>
 
 <p><strong>Listing 2. Variable declarations</strong></p>
-
-<pre><code>var someStr: String = &quot;Hello&quot; // (1) 
-someStr = &quot;World&quot;             // (2)
-
-val someInt = 1               // (3)
-val anotherInt = 1            // (4)
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> someStr: String = <span style="color:#e6db74">&#34;Hello&#34;</span> <span style="color:#75715e">// (1) 
+</span><span style="color:#75715e"></span>someStr = <span style="color:#e6db74">&#34;World&#34;</span>             <span style="color:#75715e">// (2)
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">val</span> someInt = <span style="color:#ae81ff">1</span>               <span style="color:#75715e">// (3)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> anotherInt = <span style="color:#ae81ff">1</span>            <span style="color:#75715e">// (4)</span></code></pre></div>
 <p><strong>(1)</strong> <code>someString</code> is the variable name (identifier)  and <code>String</code> is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It&rsquo;s  quite the reverse in Java where the type is written to the left of the identifier.</p>
 
 <p><strong>(2)</strong> We can re-assign values to variables that were declared as <code>var</code>. No surprises here.</p>
@@ -240,30 +235,20 @@ val anotherInt = 1            // (4)
 <p>For the most part, operations on number types works the way you expect them, by that I mean, the way you expect them to work in Java. What&rsquo;s different in Kotlin is that we don&rsquo;t have implicit casting anymore. You can&rsquo;t assign an Int to a Long, while this would have worked in Java, it doesn&rsquo;t in Kotlin. If you want to convert from one type to another, you&rsquo;d have to do that explicitly</p>
 
 <p><strong>Listing 3.  No implict casting</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">10L</span> <span style="color:#75715e">// a is a Long literal, note the L postfix
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> b = <span style="color:#ae81ff">20</span>
 
-<pre><code>var a = 10L // a is a Long literal, note the L postfix
-var b = 20
-
-var a = b // this won’t work
-var a = b.toLong() // this will work
-
-</code></pre>
-
+<span style="color:#66d9ef">var</span> a = b <span style="color:#75715e">// this won’t work
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> a = b.toLong() <span style="color:#75715e">// this will work</span></code></pre></div>
 <p><strong>Characters</strong></p>
 
 <p>You might remember from Java that <code>char</code> was treated as a number, that&rsquo;s not the case in Kotlin. You can&rsquo;t write code&rsquo;s like this</p>
-
-<pre><code>fun checkForKey(keyCode:Char) {
-  if (keyCode == 97) { // won’t work, keyCode is not a number
-  }
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">checkForKey</span>(keyCode:Char) {
+  <span style="color:#66d9ef">if</span> (keyCode == <span style="color:#ae81ff">97</span>) { <span style="color:#75715e">// won’t work, keyCode is not a number
+</span><span style="color:#75715e"></span>  }
+}</code></pre></div>
 <p>Character literals are created by using single quotes, like so</p>
-
-<pre><code>var enterKey = ‘a’
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> enterKey = <span style="color:#960050;background-color:#1e0010">‘</span>a<span style="color:#960050;background-color:#1e0010">’</span></code></pre></div>
 <p>Like in Java, you can use escape sequences such as \t, \b, \n, \r, \’, \”, \ and \$ and if you need to encode any other character, you can use the Unicode syntax e.g. \uFF00.</p>
 
 <p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code>true</code> or <code>false</code></p>
@@ -273,49 +258,37 @@ var a = b.toLong() // this will work
 <p>The  <code>if</code> construct work almost the same as in Java.</p>
 
 <p><strong>Listing 4. Branching with If</strong></p>
-
-<pre><code>var bigNum = firstNum
-if (secondNum &gt; firstNum) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> bigNum = firstNum
+<span style="color:#66d9ef">if</span> (secondNum &gt; firstNum) {
   bigNum = secondNum
-}
-</code></pre>
-
+}</code></pre></div>
 <p>The second form, with the <code>else</code> is written as follows.</p>
 
 <p><strong>Listing 5. If Else construct</strong></p>
-
-<pre><code>var bigNum: Int
-if (secondNum &gt; firstNum) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> bigNum: Int
+<span style="color:#66d9ef">if</span> (secondNum &gt; firstNum) {
   bigNum = secondNum
 }
-else {
+<span style="color:#66d9ef">else</span> {
   bigNum = firstNum
-}
-</code></pre>
-
+}</code></pre></div>
 <p>The difference in Kotlin is, the <code>if</code> construct is not a statement, it&rsquo;s an expression. Which means we can do things like this</p>
 
 <p><strong>Listing 6. As an expression</strong></p>
-
-<pre><code>val bigNum = if (firstNum &gt; secondNum) firstNum else secondNum
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> bigNum = <span style="color:#66d9ef">if</span> (firstNum &gt; secondNum) firstNum <span style="color:#66d9ef">else</span> secondNum</code></pre></div>
 <p>Kotlin doesn&rsquo;t have a switch statement, what it has is a <em>when</em> construct.  It’s form and structure is strikingly similar to the <em>switch</em> statement. In its simplest form, it can be implemented like this (Listing 7)</p>
 
 <p><strong>Listing 7. Branching with When</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> d = Date()
+ <span style="color:#66d9ef">val</span> c = Calendar.getInstance()
+ <span style="color:#66d9ef">val</span> day = c.<span style="color:#66d9ef">get</span>(Calendar.DAY_OF_WEEK)
 
-<pre><code>val d = Date()
- val c = Calendar.getInstance()
- val day = c.get(Calendar.DAY_OF_WEEK)
-
- when (day) {
-   1 -&gt; println(&quot;Sunday&quot;)
-   2 -&gt; println(&quot;Monday&quot;)
-   3 -&gt; println(&quot;Tuesday&quot;)
-   4 -&gt; println(&quot;Wednesday&quot;)
- }
-</code></pre>
-
+ <span style="color:#66d9ef">when</span> (day) {
+   <span style="color:#ae81ff">1</span> -&gt; println(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+   <span style="color:#ae81ff">2</span> -&gt; println(<span style="color:#e6db74">&#34;Monday&#34;</span>)
+   <span style="color:#ae81ff">3</span> -&gt; println(<span style="color:#e6db74">&#34;Tuesday&#34;</span>)
+   <span style="color:#ae81ff">4</span> -&gt; println(<span style="color:#e6db74">&#34;Wednesday&#34;</span>)
+ }</code></pre></div>
 <p><em>When</em> matches the argument (the variable day) against all branches sequentially until it encounters a match; note that unlike in <em>switch</em> statements, when a match is found, it doesn’t flow through or cascade to the next branch, hence we don’t need to put a <em>break</em> statement.</p>
 
 <h1 id="looping">Looping</h1>
@@ -323,37 +296,28 @@ else {
 <p>Kotlin also has a <em>while</em> loop, it works exactly the same in Kotlin as it does in Java.</p>
 
 <p><strong>Listing 8. while loop</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+  <span style="color:#66d9ef">var</span> count = <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">val</span> finish = <span style="color:#ae81ff">5</span>
 
-<pre><code>fun main(args: Array&lt;String&gt;) {
-  var count = 0
-  val finish = 5
-
-  while (count++ &lt; finish) {
-    println(&quot;counter = $count&quot;)
+  <span style="color:#66d9ef">while</span> (count++ &lt; finish) {
+    println(<span style="color:#e6db74">&#34;counter = $count&#34;</span>)
   }
-}
-</code></pre>
-
+}</code></pre></div>
 <p>Kotlin doesn&rsquo;t have a <em>for</em> loop, at least not the one with the counter and incrementing variables inside. The <em>for</em> loop of Kotlin works with Iterable objects. Listing 9 shows a basic usage of the for loop.</p>
 
 <p><strong>Listing 9. Kotlin&rsquo;s for loop</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> words = <span style="color:#e6db74">&#34;The quick brown fox&#34;</span>.split(<span style="color:#e6db74">&#34; &#34;</span>)  
 
-<pre><code>val words = &quot;The quick brown fox&quot;.split(&quot; &quot;)  
-
-for(word in words) {  
+<span style="color:#66d9ef">for</span>(word <span style="color:#66d9ef">in</span> words) {  
   println(word)  
-}
-</code></pre>
-
+}</code></pre></div>
 <h1 id="functions">Functions</h1>
 
 <p>The <em>main</em> function in Kotlin is written as follows</p>
-
-<pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;) { 
-  println(&quot;Hello&quot;)
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) { 
+  println(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+}</code></pre></div>
 <ul>
 <li>The keyword <code>fun</code> is used to declare that the block is a function</li>
 <li>Functions names are identifiers, just like in Java. The function name <code>main</code> is special, it denotes the entry point of the program, much like the <code>public static void main</code> in Java</li>
@@ -366,20 +330,14 @@ for(word in words) {
 <p>Function params can be assigned a default value, like this</p>
 
 <p><strong>Listing 3-1. connectDb function</strong></p>
-
-<pre><code class="language-kotlin">fun connectDb(host: String = &quot;localhost&quot;,
-              user: String = &quot;root&quot;,
-              password: String = &quot;password&quot;)
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">connectDb</span>(host: String = <span style="color:#e6db74">&#34;localhost&#34;</span>,
+              user: String = <span style="color:#e6db74">&#34;root&#34;</span>,
+              password: String = <span style="color:#e6db74">&#34;password&#34;</span>)</code></pre></div>
 <p>All the params of <code>connectDb()</code> have default values, so we can call this function like this</p>
-
-<pre><code class="language-kotlin">connectDb() // no arguments passed
-connectDb(&quot;jupiter&quot;) // just the 1st param
-connectDb(&quot;jupiter&quot;, &quot;neptune&quot;) // 1st and 2nd params
-connectDb(&quot;jupiter&quot;,&quot;neptune&quot;,&quot;saturn&quot;) // or all three
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">connectDb() <span style="color:#75715e">// no arguments passed
+</span><span style="color:#75715e"></span>connectDb(<span style="color:#e6db74">&#34;jupiter&#34;</span>) <span style="color:#75715e">// just the 1st param
+</span><span style="color:#75715e"></span>connectDb(<span style="color:#e6db74">&#34;jupiter&#34;</span>, <span style="color:#e6db74">&#34;neptune&#34;</span>) <span style="color:#75715e">// 1st and 2nd params
+</span><span style="color:#75715e"></span>connectDb(<span style="color:#e6db74">&#34;jupiter&#34;</span>,<span style="color:#e6db74">&#34;neptune&#34;</span>,<span style="color:#e6db74">&#34;saturn&#34;</span>) <span style="color:#75715e">// or all three</span></code></pre></div>
 <h2 id="named-params">Named params</h2>
 
 <p>Calling functions in your code can be further improved using named parameters.</p>

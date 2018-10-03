@@ -45,8 +45,9 @@ The Language The Java language is not so old, as far as programming languages go
 
 
   <div class="main" role="main">
-    <article class="article">
       <img src="/images/java-10-jdk.png" class="article-image" />
+    <article class="article">
+      
       
       <h1 class="article-title">Java</h1>
       
@@ -58,7 +59,7 @@ The Language The Java language is not so old, as far as programming languages go
         <li class="article-meta-date"><time>July 19, 2012</time></li>
         <li class="article-meta-categories">
           <a href="/categories/java/">
-            <i class="fas fa-folder"></i>
+            <i class="fas fa-hashtag"></i>
             java
           </a>&nbsp;
         </li>
@@ -210,20 +211,18 @@ The Language The Java language is not so old, as far as programming languages go
 
 <p>If you are on <strong>Linux</strong>, specifically Ubuntu, you may have installed your JDK in the past using a <em>PPA</em> from the webupd8 team; well, at the time of this writing, the webupd8 team hasn&rsquo;t released anything for JDK 11, in fact, even the JDK 10 isn&rsquo;t out yet. So, for the time being, you may have to install the new JDK using either tarballs or RPM.  The following example shows the terminal command on how to install Java 9 on the Ubuntu, or any of its derivatives.</p>
 
-<pre><code>sudo add-apt-repository ppa:webupd8team/java
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java9-installer
-sudo update-alternatives --config java
-</code></pre>
+sudo update-alternatives --config java</code></pre></div>
 
 <h1 id="hello-world">Hello World</h1>
 
 <p>All programs in Java have to be written inside a class construct, there&rsquo;s a long-winded, but good explanation for that, however, I don&rsquo;t think it&rsquo;s best to deal with that reason this early because it will get in the way and it&rsquo;s not that important — at least for now. So, let&rsquo;s accept it that it&rsquo;s just the way it is and we need to get used to it early on. A class construct looks something like this</p>
 
-<pre><code class="language-java">class Hello { // (1) (2) (3)
-
-} // (4)
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// (1) (2) (3)
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">}</span> <span style="color:#f92672">//</span> <span style="color:#f92672">(</span>4<span style="color:#f92672">)</span></code></pre></div>
 
 <p><strong>(1)</strong> The class definition is started with the keyword class. Like many programming languages, Java has a list of special words that have special meaning to its compiler. The class keyword is one of these special words (also known as reserved words)</p>
 
@@ -234,10 +233,7 @@ sudo update-alternatives --config java
 <p><strong>(4)</strong> Lastly, is the closing curly brace. This marks the end of the class definition. It is important to remember that all curly braces comes in pairs. Where there is an opening brace, there should be a corresponding closing brace</p>
 
 <p>To print out the string &ldquo;Hello World&rdquo; into the screen, we need to use a statement that can actually do the printing to the screen. There are quite a few statements that can accomplish this task, but the simplest would be the println statement. In code, it looks like this</p>
-
-<pre><code>System.out.println(&quot;Hello World&quot;);
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">System.out.println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">)</span>;</code></pre></div>
 <p>It is quite tempting to try and understand the structure of this innocently looking statement, but that will lead us to discussions of the standard Java library, the System class and its nested classes — we&rsquo;re not yet ready for that.  The only things we want to take away from the example are the following;</p>
 
 <ul>
@@ -246,13 +242,10 @@ sudo update-alternatives --config java
 </ul>
 
 <p>The last hoop we need to jump before we can put this small example together is the business of Java functions . An executable statement, like println, cannot be simply written inside a class — not just anywhere at least. In the following code example, the println statement is in the wrong place. So, that code won&rsquo;t work</p>
-
-<pre><code class="language-java">class Hello {
-  // THIS WILL NOT WORK
-  System.out.println(&quot;Hello World&quot;);
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">// THIS WILL NOT WORK
+</span><span style="color:#75715e"></span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>A statement like println, has to be written inside a function. A function is a named collection of statements and it looks something like this</p>
 
 <pre><code>int doSomething() { // (1) (2) (3)
@@ -276,14 +269,11 @@ sudo update-alternatives --config java
 <p>Okay. Finally, we can put the example together. Listing 4-1 shows the full code for the Hello example.</p>
 
 <p>Listing 4-1 Hello.java</p>
-
-<pre><code class="language-java">class Hello { 
-  public static void main(String []args) {
-    System.out.println(&quot;Hello World);
-  }
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span> 
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">&#34;</span>Hello World<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>In listing 4-1, the println statement is inside a method called main. For now, ignore the other words you see in this method e.g.t public, static and void, you can even ignore the words inside the parens (String []args). We will discuss their details soon enough. What&rsquo;s important to know are the following;</p>
 
 <ul>
@@ -323,10 +313,7 @@ sudo update-alternatives --config java
 <p><strong>Comments</strong></p>
 
 <p>Comments are ignored by the compiler. It&rsquo;s a good way to document program code and it can benefit other people who reads your code. It can even benefit you. Comments allows us to dump our thought processes and intentions at the time of writing the code. There are three ways to comment codes</p>
-
-<pre><code class="language-java">// THIS IS A COMMENT
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">//</span> THIS IS A COMMENT</code></pre></div>
 <p>A single line comment, sometimes called an inline comment. The compiler will ignore everything to the right of the two forward slashes until the end of the line</p>
 
 <p>/*<br />
@@ -334,22 +321,16 @@ sudo update-alternatives --config java
    Another statement
 */
 This is the C-style comment. It is called that because it came primarily from the C language. You can use this multi-line style to comment multiple lines of statements</p>
-
-<pre><code class="language-java">/**
-   Statement here
-   Another statement
-*/
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e">   Statement here
+</span><span style="color:#75715e">   Another statement
+</span><span style="color:#75715e">*/</span></code></pre></div>
 <p>This is almost the same as the C-style multiline comment. This type of comment though, can be used to generate Java API style documentation</p>
 
 <p><strong>White space</strong></p>
 
 <p>Java is tokenized language, it doesn&rsquo;t care about white or blank space, you can write your code like this</p>
-
-<pre><code class="language-java">class Hello { public static void main (String [] args) { System.out.println(&quot;Hello\n&quot;);}}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello\n&#34;</span><span style="color:#f92672">);}}</span></code></pre></div>
 <p>Or like this</p>
 
 <pre><code>class Hello { 
@@ -360,14 +341,11 @@ System.out.println(&quot;Hello\n&quot;);
 </code></pre>
 
 <p>The compiler doesn&rsquo;t care. So, write your codes for the benefit of humans who may be unlucky enough to maintain our programs. Forget the compiler, it doesn&rsquo;t care anyway about spaces anyway. Use white spaces to beautify the code and make it extremely readable, something like this</p>
-
-<pre><code class="language-java">class Hello { 
-  public static void main (String [] args) {
-    System.out.println(&quot;Hello\n&quot;);
-  }
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span> 
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello\n&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p><strong>Blocks</strong></p>
 
 <p>Oftentimes, you may need to write a bunch of statements and you will need to group them together. Blocks allow us to do just that. The lexical symbol for blocks are a pair of curly braces. Blocks are used by <em>classes, interfaces</em> and <em>methods</em>. Occasionally, they are also used to define static and instance blocks, these last two are as common in use as the first three, but you may need them from time to time.</p>
@@ -385,12 +363,9 @@ System.out.println(&quot;Hello\n&quot;);
 </code></pre>
 
 <p>The statement above defines the &ldquo;name&rdquo; variable, we assigned it the literal String value &ldquo;John Doe&rdquo;. The assignment of value was facilitated by the equal sign (assignment operator). The declaration and definition of variables could be done as a two-step process, as you have seen above, but it doesn&rsquo;t have to be. The declaration and definition can be written in a single statement.</p>
-
-<pre><code class="language-java">String name = &quot;John Doe&quot;;
-int age = 35;
-String email = &quot;jdoe@gmail.com&quot;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John Doe&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> 35<span style="color:#f92672">;</span>
+String email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdoe@gmail.com&#34;</span></code></pre></div>
 <p>The concept of variable as they relate to values might be easier to grasp if you visualize the variables as some sort of a named location and the location is a box, the contents of which, holds the value</p>
 
 <p><img src="/images/variable-representation.png" alt="variable rep" /></p>
@@ -411,21 +386,15 @@ bitwise and bit shift</p>
 <p>Methods aka functions are a collection of executable statements. Java programmers don&rsquo;t refer to these as functions so you better get used to calling them methods. Anyway, these collections of statements are packaged as one unit and whenever you need to execute those collection statements, you only need to invoke the name of the method. Methods may or may not return values, they may or may not also accept arguments.</p>
 
 <p>Listing 12Listing 12-3.1</p>
-
-<pre><code class="language-java">public static void main (String []args) {
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>The method as shown in Listing 12Listing 12-3-1 accepts arguments, an array of Strings to be specific</p>
 
 <p>Listing 12-3.2</p>
-
-<pre><code class="language-java">int getSum(int a, int b) {
-    int result = a + b;
-    return result;
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getSum</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>The method shown in Listing 12-3-2 accepts two integer arguments and returns an integer result</p>
 
 <p><strong>Classes</strong></p>
@@ -433,15 +402,12 @@ bitwise and bit shift</p>
 <p>The class is top level structure in Java, there is no higher organizing entity . It is a collection of variable and method declarations. When classes are instantiated, objects are created as a result, this is the reason why classes are sometimes called object factories</p>
 
 <p>Listing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+   String fname<span style="color:#f92672">;</span>
+   String lname<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Person {
-   String fname;
-   String lname;
-}
-
-Person p1 = new Person()  ;
-</code></pre>
-
+Person p1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">()</span>  <span style="color:#f92672">;</span></code></pre></div>
 <p>Listing 12-3.2 defines a new data structure called Person by declaring a class with the same name. It has two properties, &ldquo;lname&rdquo; and &ldquo;fname&rdquo;, for last name and first name respectively. An object named &ldquo;p1&rdquo; is created from the definition of the Person class</p>
 
 <p><strong>Keywords</strong></p>

@@ -123,6 +123,8 @@ blockquote blockquote blockquote blockquote {
   padding: 0;
 }
 
+.highlight {padding: 0px;}
+
 /* Main contents */
 .main {
   max-width: 900px;

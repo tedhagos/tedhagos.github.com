@@ -45,8 +45,9 @@
 
 
   <div class="main" role="main">
-    <article class="article">
       <img src="/images/kotlin-lambda.png" class="article-image" />
+    <article class="article">
+      
       
       <h1 class="article-title">Higher Order Functions</h1>
       
@@ -58,7 +59,7 @@
         <li class="article-meta-date"><time>May 5, 2018</time></li>
         <li class="article-meta-categories">
           <a href="/categories/kotlin/">
-            <i class="fas fa-folder"></i>
+            <i class="fas fa-hashtag"></i>
             kotlin
           </a>&nbsp;
         </li>
@@ -95,32 +96,26 @@
 <p>Java, C/C++ and Visual Basic and some other languages, don’t have higher order functions. At least at the time of this writing. The functions or methods or whatever it they may be called in those languages, cannot take in functions as parameters nor can they return functions. But hang on, of course those languages can take in functions as parameters, what about this code example</p>
 
 <p><strong>Listing 1-1. foo() and bar() example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  bar<span style="color:#f92672">(</span>foo<span style="color:#f92672">(</span>2<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
 
-<pre><code class="language-java">public static void main(String []args) {
-  bar(foo(2));
-}
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> val<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>val<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
 
-static void bar(int val) {
-  System.out.println(val);
-}
-
-static int foo(int x) {
-  return x * x;
-}
-</code></pre>
-
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">foo</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">return</span> x <span style="color:#f92672">*</span> x<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Didn’t we just pass <code>foo()</code> to <code>bar()</code>? isn’t that passing a function to another function? That’s a no. Passing <code>foo()</code> to another function like <code>bar()</code> isn’t what we mean by a “function taking in another function as parameter”. Maybe if there was a way to pass <code>foo</code> without the parentheses, and then somewhere in the body of function <code>bar</code> (the receiving function), we get to invoke it like this</p>
 
 <p><strong>Listing 1-2. foo() and bar() examples, again</strong></p>
-
-<pre><code class="language-java">public static void main(String []args) {
-  bar(foo);
-}
-static void bar(func val) {
-  val(2)
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  bar<span style="color:#f92672">(</span>foo<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">(</span>func val<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  val<span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>But this isn’t doable in Java, nor is it doable in a language that doesn’t support higher order functions.</p>
 
 <p>The code <code>bar(foo(2))</code> means we are calling <code>foo(2)</code>, it will be resolved to 4 and it’s type is <code>int</code> , then we get to call <code>bar()</code>, what’s being passed to to <code>bar()</code> isn’t the function definition of <code>foo</code>, but whatever value <code>foo</code> resolves to — which is 4 in our example, which is of type <code>int</code>. We’re not passing a <em>function type</em> because Java doesn’t have a <em>function type</em>, nor does C/C++ nor VB.</p>
@@ -130,20 +125,17 @@ static void bar(func val) {
 <p>In a language that has support for higher order functions, like Kotlin, the <em>foo and bar</em> examples would have looked like this</p>
 
 <p><strong>Listing 1-3. foo() and bar() in functional style</strong></p>
-
-<pre><code class="language-kotlin">fun foo(arg:Int): Int {              &lt;1&gt;
-  return arg * arg
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">foo</span>(arg:Int): Int {              &lt;<span style="color:#ae81ff">1</span>&gt;
+  <span style="color:#66d9ef">return</span> arg * arg
 }
 
-fun bar(fu:(arg:Int) -&gt; Int) : Int { &lt;2&gt;
-  return fu(2)                       &lt;3&gt;
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">bar</span>(fu:(arg:Int) -&gt; Int) : Int { &lt;<span style="color:#ae81ff">2</span>&gt;
+  <span style="color:#66d9ef">return</span> fu(<span style="color:#ae81ff">2</span>)                       &lt;<span style="color:#ae81ff">3</span>&gt;
 }
 
-fun main(args: Array&lt;String&gt;) {
-  println(bar(::foo))                &lt;4&gt;
-}
-</code></pre>
-
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+  println(bar(<span style="color:#f92672">::</span>foo))                &lt;<span style="color:#ae81ff">4</span>&gt;
+}</code></pre></div>
 <p><strong><1></strong> This is a simple <em>named function</em> in Kotlin. It takes an <em>Int</em> and the function returns an <em>Int</em> as well. The function simply squares whatever Int you throw at it. We’re going to pass this function to another function (<code>bar()</code>)</p>
 
 <p><strong><2></strong> Function <code>bar()</code> takes one input as parameter, this input is named <code>fu</code> but  take note of how it’s type is declared; <code>(arg:Int) -&gt; Int</code> — this is how a <em>function type</em> is declared in Kotlin. A function type has 3 parts, (1) the parameter list, if it doesn’t take any, it would just be a pair of parentheses, but in our case it takes on an <em>Int</em> (2) the arrow operator, it’s written as a dash or minus sign immediately followed by the greater than sign, some people call it the chevron symbol. This operator separates the parameter list and the return type. And finally (3) the return type of the <em>function type</em>. We intend to pass function <code>foo()</code> to function <code>bar()</code> and <code>foo()</code> returns an <em>Int</em>, hence, our function type in <code>bar()</code> should also return <em>Int</em></p>

@@ -20,7 +20,7 @@
       <guid>http://tedhagos.com/posts/nodejs/</guid>
       <description>Node scripts are not that different from the other JS scripts you&amp;rsquo;ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that&amp;rsquo;s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;
 Listing 1 - hellonode.js
-setTimeout(()=&amp;gt; { console.log(&amp;quot;Hello&amp;quot;); }, 3000); console.</description>
+setTimeout(()=&amp;gt; { console.log(&amp;#34;Hello&amp;#34;); }, 3000); console.</description>
     </item>
     
   </channel>

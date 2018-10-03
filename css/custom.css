@@ -2,15 +2,35 @@
 /* @import url('https://fonts.googleapis.com/css?family=Inconsolata'); */
 /* @import url('https://fonts.googleapis.com/css?family=Merriweather'); */
 
+.main {
+  background: #fff;
+  padding: 0px;
+  border: 1px solid hsl(0, 0%, 87%);
+}
+
+.article { padding: 0px; margin:0;}
+
+.list, .home-list {padding: 1em;}
+
+h1 ,h2, h3, .article-title, ul .article-meta, .article-readmore  {
+  margin-left: 30px;
+}
+
+
+p, table {
+  margin-left: 30px; margin-right:30px;
+}
+
 body  {
   /* font-family: serif; */
-  font-family: 'Times', serif;
-  font-size: 1.05em;
+  font-family: 'Georgia', 'Times', serif;
+  font-size: 1.1em;
   width: 75%;
   max-width: 780px;
-  margin: auto;
+  margin:auto;
+  padding:0;
   color: #000;
-  background: #fff;
+  background: #f5f5f5;
 }
 
 /* .article-meta {
@@ -22,44 +42,38 @@ body  {
 }
 em {font-family: serif;}
 
-/* .article-meta {
+.article-meta {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: .8em;
-} */
+  margin-left: 30px !important;
+}
 
-.article > .article-title {font-size: 2.5em; border-bottom: 0px; }
+.article > .article-title {
+  font-size: 3em; border-bottom: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .home-list h1 .article-title { font-size: 1em; font-weight: normal;}
 h1.site-title {border-bottom: 0px;}
+
 h1.site-title, .site-navi-items {
-  /* color: #949494; */
-  margin-bottom: 2em;
-  font-family: sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  margin-bottom: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .site-footer {
   font-size: 1em;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 hr {
-  border-top: 4px dashed #cacaca;
+  border-top: 2px dashed #cacaca;
 }
 
-
-/* h1.site-title, h1.article-title {
-  border-bottom: 0px solid #fff;
-} */
-
-/* h1 {
-  margin-top: 2em;
-  border-bottom: 2px dashed #cacaca;
-  padding-bottom: .5em;
-} */
-
 .toc {
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-size: .9em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  border-right: 0px;
+  background: lightyellow;
 }
 
 
@@ -67,27 +81,44 @@ hr {
 h1, h2, h3, h4 { 
   color: #000;
   text-shadow: none;
-  font-weight: 500;
-  /* font-family: 'Georgia', serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
 }
 
+pre, code {
+  font: .93em 'Ubuntu Mono'; 
+  /* background: lightyellow; */
+}
 
-pre code { 
-  font: 1em 'Ubuntu Mono'; 
-  background: #fdfdf7;
-  color: #000;
+.highlight {padding:0 !important;}
+.highlight pre  {
+  margin:0px;
+  padding: 1em;
+  font-weight:normal;
+}
+
+pre {
+  padding-left:0px;
 }
 
 code {
-  /* color: #f1f1f1;
-  background: #707070; */
+  border-radius: 10px;
+}
+
+
+
+/* this is from workingdev.net */
+/* pre code { 
+  font: 1em 'Ubuntu Mono'; 
+  background: #fdfdf7;
+  color: #000;
+  padding-left: 0px; 
+}
+
+code {
   background: #ffffb1;
   border-radius: 10px;
   padding:4px;
-  /* padding-right: 3px;
-  padding-left: 3px; */
 }
 
 pre { 
@@ -100,17 +131,18 @@ pre {
   border: 2px solid #dedede;
   padding: 10px;
 
-  /*background: #fafafa; */
- background: #fdfdf7; /*  cream */
- /*   background: #eef7fa; */
- /*  background: #f8fffe; light green */
+  background: #fdfdf7; 
+
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
-}
+} */
 
 
 
+
+
+/* this is the original CSS for pre, code and precode */
 /* pre {
   line-height: normal;
 
@@ -138,6 +170,8 @@ pre, code {
   letter-spacing: -.5px;
 } */
 
+
+
 .highlight {
   padding:5px;
 }
@@ -146,21 +180,17 @@ table {
   margin-bottom: 1em;
 }
 blockquote {
-  /* border: 1px solid #dedede;   */
   
   border-left: 2px solid #dedede;
   margin: 1em;
   color: gray;
   padding: 5px;
-  /* font-family: 'Arial Narrow', 'Ubuntu Condensed', sans-serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif */
+
 }
 blockquote p {
   -webkit-margin-before: 2px;
   -webkit-margin-after: 2px;
 }
-
-
 
 .about {
   text-align: left;
@@ -168,17 +198,14 @@ blockquote p {
 
 a {
   text-decoration: none;
-  /* border-bottom: 5px solid #14cee5; */
 }
 
 a:hover, a h2.article-title:hover {
-  color :#fff;
-  background: #14cee5;
-  color: #000;
+  color :#fff !important;
+  background: gray;
   text-decoration: none;
+  border-radius: 15px;
 }
-
-
 
 
 .toc {
@@ -193,25 +220,12 @@ a:hover, a h2.article-title:hover {
 
 .toc a:hover {
   color:#fff;
+  background: gray;
 }
 
-/* a:link, a:visited , 
-.archives .archives-item > a:visited,  
-.archives .archives-item > a ,
-.archives .archives-item .taxonomies .taxonomies-item > a {
-  color: #858585;    
-}
-a:hover {text-decoration: underline;}
-
-.archives ul.taxonomies li a {
-  font-family: sans-serif;
-  font-size:.9em;
-} */
-
-/* .archives-item > a:link, .archives-item > a:visited  {
-  color: red;
+.archives, .terms {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 1em;
 }
 
-.archives .archives-item > a:visited {
-  color:blue;
-} */
+.archives-item, .terms ul>li {border-bottom: 0px !important;}

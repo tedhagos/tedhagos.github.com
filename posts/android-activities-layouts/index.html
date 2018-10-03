@@ -45,8 +45,9 @@ Android&rsquo;s Trinity of Main A simple app in Android that will show a single 
 
 
   <div class="main" role="main">
-    <article class="article">
       <img src="/images/android-lifecycle.png" class="article-image" />
+    <article class="article">
+      
       
       <h1 class="article-title">Activities and Layouts</h1>
       
@@ -58,7 +59,7 @@ Android&rsquo;s Trinity of Main A simple app in Android that will show a single 
         <li class="article-meta-date"><time>October 20, 2012</time></li>
         <li class="article-meta-categories">
           <a href="/categories/android/">
-            <i class="fas fa-folder"></i>
+            <i class="fas fa-hashtag"></i>
             android
           </a>&nbsp;
         </li>
@@ -94,16 +95,13 @@ Android&rsquo;s Trinity of Main A simple app in Android that will show a single 
 <p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It&rsquo;s looking for a specific value of the <code>intent-filter</code> node, the runtime is trying to determine if this application has defined a &ldquo;main function&rdquo; in it. Listing 1 shows an excerpt from an a manifest file, this one has a &ldquo;main function&rdquo; defined in it.</p>
 
 <p><strong>Listing 1. Excerpt from AndroidManifest.xml</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;activity</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;.MainActivity&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;intent-filter&gt;</span>
+    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.MAIN&#34;</span> <span style="color:#f92672">/&gt;</span>
 
-<pre><code class="language-xml">&lt;activity android:name=&quot;.MainActivity&quot;&gt;
-  &lt;intent-filter&gt;
-    &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
-
-    &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
-  &lt;/intent-filter&gt;
-&lt;/activity&gt;
-</code></pre>
-
+    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.LAUNCHER&#34;</span> <span style="color:#f92672">/&gt;</span>
+  <span style="color:#f92672">&lt;/intent-filter&gt;</span>
+<span style="color:#f92672">&lt;/activity&gt;</span></code></pre></div>
 <p>An <code>intent-filter</code> that has a value of <code>android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There&rsquo;s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code>activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is &ldquo;MainActivity&rdquo;</p>
 
 <h2 id="main-program-file">Main Program file</h2>
