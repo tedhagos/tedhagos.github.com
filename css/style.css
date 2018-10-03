@@ -303,7 +303,7 @@ blockquote blockquote blockquote blockquote {
 
 /* About */
 .about {
-  text-align: center;
+  text-align: left;
 }
 .author {
 }
@@ -359,8 +359,8 @@ blockquote blockquote blockquote blockquote {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-align-items: left;
+  align-items: left;
   padding: 0;
 }
 
