@@ -126,13 +126,13 @@ Android&amp;rsquo;s Trinity of Main A simple app in Android that will show a sin
     </item>
     
     <item>
-      <title>Java</title>
+      <title>No fluff introduction to Java</title>
       <link>http://tedhagos.com/posts/java/</link>
       <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
       
       <guid>http://tedhagos.com/posts/java/</guid>
-      <description>Introduction Two basic questions to begin the discussion, (1) What is Java and (2) where is it used? Java is a platform, it has a (1) programming language (2) set of built-in libraries and (3) a virtual runtime environment or JVM; it&amp;rsquo;s short for Java Virtual Machine, some people also call it JRE which is short for Java Runtime Environment.
-The Language The Java language is not so old, as far as programming languages go.</description>
+      <description>About Java Generally, Java refers to these 3 things;
+ A programming language A set of built-in libraries and technology frameworks A virtual machine. Developers affectionately refer to this as the runtime environment. You may hear some people call this by another name like JRE (Java Runtime Environment) or JVM (Java Virtual Machine). It&amp;rsquo;s all the same. In this book, I may refer to it as simply &amp;ldquo;runtime&amp;rdquo;  Some tidbits of info about Java;</description>
     </item>
     
     <item>

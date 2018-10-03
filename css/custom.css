@@ -93,12 +93,14 @@ pre, code {
 }
 
 pre {
-  padding-left:0px;
+  padding-left:0px;  
 }
 
 code {
   border-radius: 10px;
 }
+
+
 
 
 
@@ -225,6 +227,37 @@ a:hover, a h2.article-title:hover {
 }
 
 .archives-item, .terms ul>li {border-bottom: 0px !important;}
-.about {
-  text-align:left;
+
+.button {
+  background-color: Crimson;  
+  border-radius: 15px;
+  color: White;
+  padding: .5em;
+  text-decoration: none;
+  margin-bottom: 4em;
+  font-family: sans-serif;
 }
+
+.button:focus,
+.button:hover {
+  background-color: firebrick;
+  color: White;
+}
+
+/* 
+#main .button {
+  background-color: Crimson;  
+  border-radius: 15px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  margin-bottom: 4em;
+  font-family: sans-serif;
+  border-bottom: 0px;
+}
+
+#main .button:focus,
+#main .button:hover {
+  background-color: FireBrick;
+  color: White;
+} */
