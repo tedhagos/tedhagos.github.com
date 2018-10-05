@@ -7,17 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright Ted Hagos</copyright>
-    <lastBuildDate>Thu, 04 Oct 2018 22:50:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Oct 2018 12:26:39 +0800</lastBuildDate>
     
 	<atom:link href="http://tedhagos.com/categories/career/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>If I Knew Then What I Know Now</title>
-      <link>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</link>
-      <pubDate>Thu, 04 Oct 2018 22:50:52 +0800</pubDate>
+      <title>If I Have a Delorean</title>
+      <link>http://tedhagos.com/posts/if-i-have-a-delorean/</link>
+      <pubDate>Fri, 05 Oct 2018 12:26:39 +0800</pubDate>
       
-      <guid>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</guid>
+      <guid>http://tedhagos.com/posts/if-i-have-a-delorean/</guid>
       <description>There was discussion post in dev.to what is your best advise for a junior software developer. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;
 If I have Doc Brown&amp;rsquo;s DeLorean, this is what I would advise my younger self;
  Keep your head down during code reviews. Humility goes a long way. They&amp;rsquo;re not criticizing you, it&amp;rsquo;s your code they&amp;rsquo;re after. It&amp;rsquo;s not personal Do the required reading before you get knee-deep in the code.</description>
