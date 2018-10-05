@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev on Ted&#39;s notes</title>
+    <link>http://tedhagos.com/categories/dev/</link>
+    <description>Recent content in Dev on Ted&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright Ted Hagos</copyright>
+    <lastBuildDate>Thu, 04 Oct 2018 22:50:52 +0800</lastBuildDate>
+    
+	<atom:link href="http://tedhagos.com/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>If I Knew Then What I Know Now</title>
+      <link>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</link>
+      <pubDate>Thu, 04 Oct 2018 22:50:52 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</guid>
+      <description>There was discussion post in dev.to what is your best advise for a junior software developer. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;
+If I have Doc Brown&amp;rsquo;s DeLorean, this is what I would advise my younger self;
+ Keep your head down during code reviews. Humility goes a long way. They&amp;rsquo;re not criticizing you, it&amp;rsquo;s your code they&amp;rsquo;re after. It&amp;rsquo;s not personal Do the required reading before you get knee-deep in the code.</description>
+    </item>
+    
+  </channel>
+</rss>

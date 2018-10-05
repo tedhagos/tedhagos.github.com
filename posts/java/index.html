@@ -6,9 +6,9 @@
   <title>No fluff introduction to Java - Ted&#39;s notes</title>
   <meta property="og:title" content="No fluff introduction to Java - Ted&#39;s notes" />
   <meta name="twitter:title" content="No fluff introduction to Java - Ted&#39;s notes" />
-  <meta name="description" content="A no fluff, no scruff super quick introduction to the Java language">
-  <meta property="og:description" content="A no fluff, no scruff super quick introduction to the Java language">
-  <meta name="twitter:description" content="A no fluff, no scruff super quick introduction to the Java language">
+  <meta name="description" content="A no fluff super quick introduction to the Java language">
+  <meta property="og:description" content="A no fluff super quick introduction to the Java language">
+  <meta name="twitter:description" content="A no fluff super quick introduction to the Java language">
   <meta name="author" content="Ted Hagos"/>
   <meta property="og:site_name" content="Ted&#39;s notes" />
   <meta property="og:url" content="/posts/java/" />
@@ -96,6 +96,9 @@
 <li><a href="#runtime-errors">Runtime errors</a></li>
 <li><a href="#logic-errors">Logic errors</a></li>
 </ul></li>
+<li><a href="#getting-input">Getting input</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#exercises">Exercises</a></li>
 <li><a href="#end-of-part-1">End of Part 1</a></li>
 </ul>
 </nav>
@@ -119,7 +122,7 @@
 <li>Released by Sun Microsystems in 1995, so its&rsquo; quite long in the tooth now, but still growing strong</li>
 <li>Has nothing to do with JavaScript. It&rsquo;s not a derivative nor a related language. Java is to JavaScript as car is to carpet. They only have common letters in their names</li>
 <li>In 2010, Oracle Corp.  acquired Sun Microsystems,so, Java is now in the stewardship of Oracle</li>
-<li>The&rsquo;re are implementions of the JDK and JVM other than the one from Oracle, OpenJDK is such as example; but in this book, I used Oracle JDK 10 for all the examples. You can see all the other JVMs in here <a href="https://bit.ly/jvmlist">WikiPedia&rsquo;s JVM list</a></li>
+<li>The&rsquo;re are implementions of the JDK and JVM other than the one from Oracle, OpenJDK is such as example; but in this book, I used Oracle JDK for all the examples. You can see all the other JVMs in here <a href="https://bit.ly/jvmlist">WikiPedia&rsquo;s JVM list</a></li>
 <li>There are various certifications for the Java technology. If you want to know more about certifications, you can go  to <a href="https://bit.ly/oraclecertification">education.oracle.com</a></li>
 </ul>
 
@@ -231,7 +234,7 @@
 
 <p>The JDK has everything you need to write Java SE programs. All you need is a program editor or an IDE (integrated development environment). There are plenty of choices but I won&rsquo;t list them here. My advice is to use whatever editor you are already using. Use the one you&rsquo;re more comfortable with. Having said that, the most well-known IDEs are probably Eclipse, Netbeans and IntelliJ.</p>
 
-<p>I&rsquo;ve coded all the examples in the book using IntelliJ IDEA 2018 community edition. You don&rsquo;t have to follow this setup, but if you want to use this, you can get it at <a href="https://bit.ly/downloadintellij">JetBrain&rsquo;s download page</a> . It&rsquo;s not difficult to install this IDE, in fact, it&rsquo;s very straightforward. Download it, double-click and follow the prompts. You get to install it just like how you install your other software. It will also try to detect your JDK installation during the setup.</p>
+<p>I&rsquo;ve coded all the examples in the book using IntelliJ IDEA community edition. You don&rsquo;t have to follow this setup, but if you want to use this, you can get it at <a href="https://bit.ly/downloadintellij">JetBrain&rsquo;s download page</a> . It&rsquo;s not difficult to install this IDE, in fact, it&rsquo;s very straightforward. Download it, double-click and follow the prompts. You get to install it just like how you install your other software. It will also try to detect your JDK installation during the setup.</p>
 
 <h1 id="basic-workflow">Basic workflow</h1>
 
@@ -260,6 +263,10 @@
 <li>Compile it with <code>javac Hello.java</code>, this step produces the file <em>Hello.class</em> (this is the bytecode)</li>
 <li>Run the program on the JRE <code>java Hello</code></li>
 </ol>
+
+<p>Depending on what toolchain you select, you will either be in the driver seat when these things happen or you&rsquo;ll be in the passenger seat.</p>
+
+<p>If you don&rsquo;t use an IDE, that means you chose to work with the command line tools and and a program editor; you&rsquo;ll be in the driver seat. You need to manage the compilation and execution steps by hand. If on the other hand, you chose to work with an IDE, these things are hidden from you. All you need to do is to click &ldquo;Run&rdquo;.</p>
 
 <p>In the next section, we&rsquo;ll build the actual &ldquo;Hello.java&rdquo; program.</p>
 
@@ -941,6 +948,12 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 logic. When your code is not doing what you thought it should be doing, that’s
 logic error. The only way to solve this is if you walk through your code slowly and see what&rsquo;s happening. Many programmers use <code>System.out.println</code> in strategic places in their codes to confirm whether certain things are happening or  if their expected program flow is being followed. You can use your IDE&rsquo;s debugging capabilities to inspect your code. The popular IDEs will let you put <em>breakpoints</em> in your code, these breakpoints will let you run your program in debug mode and then halt execution when it reaches the breakpoint. It lets you pause and continue the execution of your program at strategic points. It&rsquo;s a good idea to  invest some time to discover the debugging capabilities of your IDE</p>
 
+<h1 id="getting-input">Getting input</h1>
+
+<h1 id="glossary">Glossary</h1>
+
+<h1 id="exercises">Exercises</h1>
+
 <h1 id="end-of-part-1">End of Part 1</h1>
 
 <p>I hope you were able to get something from this really quick introduction to the Java language. In Part 2, we&rsquo;ll look at the following;</p>
@@ -952,7 +965,7 @@ logic error. The only way to solve this is if you walk through your code slowly 
 <li>Some of the most common Java classes e.g. String, Data, Calendar, Math</li>
 </ul>
 
-<p>This article is lifted from the book &ldquo;Java Lessons&rdquo;.  If you want to support the book, you might want to consider buying it at LeanPub. You&rsquo;ll get the nicely formatted DRM-Free PDF, Mobi and EPub version of the book.</p>
+<p>This tutorial is lifted from the book &ldquo;Java Lessons&rdquo;.  If you want to support the book, you might want to consider buying it at <a href="https://leanpub.com/javalessons">LeanPub</a>. You&rsquo;ll get the nicely formatted DRM-Free PDF, Mobi and EPub version of the book.</p>
 
 <p><img src="/images/javalessons3d.jpg" alt="" /></p>
 
@@ -1038,10 +1051,10 @@ logic error. The only way to solve this is if you walk through your code slowly 
 
     <ul class="pager article-pager">
       <li class="pager-newer">
-          <a href="/posts/android-activities-layouts/" data-toggle="tooltip" data-placement="top" title="Activities and Layouts">&lt; Newer</a>
+          <a href="/posts/kotlin-getting-started/" data-toggle="tooltip" data-placement="top" title="Kotlin">&lt; Newer</a>
       </li>
       <li class="pager-older">
-        <a href="/posts/send-receive-sms-usb-modem/" data-toggle="tooltip" data-placement="top" title="SMS messages using USB Modem">Older &gt;</a>
+        <a href="/posts/if-i-knew-then-what-i-know-now/" data-toggle="tooltip" data-placement="top" title="If I Knew Then What I Know Now">Older &gt;</a>
       </li>
     </ul>
   </div>

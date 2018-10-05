@@ -23,6 +23,27 @@ It&amp;rsquo;s from JetBrains, they&amp;rsquo;re the guys who built IntelliJ. Th
     </item>
     
     <item>
+      <title>No fluff introduction to Java</title>
+      <link>http://tedhagos.com/posts/java/</link>
+      <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/java/</guid>
+      <description>About Java Generally, Java refers to these 3 things;
+ A programming language A set of built-in libraries and technology frameworks A virtual machine. Developers affectionately refer to this as the runtime environment. You may hear some people call this by another name like JRE (Java Runtime Environment) or JVM (Java Virtual Machine). It&amp;rsquo;s all the same. In this book, I may refer to it as simply &amp;ldquo;runtime&amp;rdquo;  Some tidbits of info about Java;</description>
+    </item>
+    
+    <item>
+      <title>If I Knew Then What I Know Now</title>
+      <link>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</link>
+      <pubDate>Thu, 04 Oct 2018 22:50:52 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/if-i-knew-then-what-i-know-now/</guid>
+      <description>There was discussion post in dev.to what is your best advise for a junior software developer. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;
+If I have Doc Brown&amp;rsquo;s DeLorean, this is what I would advise my younger self;
+ Keep your head down during code reviews. Humility goes a long way. They&amp;rsquo;re not criticizing you, it&amp;rsquo;s your code they&amp;rsquo;re after. It&amp;rsquo;s not personal Do the required reading before you get knee-deep in the code.</description>
+    </item>
+    
+    <item>
       <title>Android Studio</title>
       <link>http://tedhagos.com/posts/android-studio/</link>
       <pubDate>Sun, 03 Jun 2018 21:27:54 +0800</pubDate>
@@ -123,16 +144,6 @@ You copied something in an X window (browser or editor etc), you want to paste t
       <guid>http://tedhagos.com/posts/android-activities-layouts/</guid>
       <description>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly &amp;ldquo;Hello World&amp;rdquo; in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that.
 Android&amp;rsquo;s Trinity of Main A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file, which ties all the project&amp;rsquo;s components and resources together — all Android programs require this manifest file.</description>
-    </item>
-    
-    <item>
-      <title>No fluff introduction to Java</title>
-      <link>http://tedhagos.com/posts/java/</link>
-      <pubDate>Thu, 19 Jul 2012 14:54:40 +0800</pubDate>
-      
-      <guid>http://tedhagos.com/posts/java/</guid>
-      <description>About Java Generally, Java refers to these 3 things;
- A programming language A set of built-in libraries and technology frameworks A virtual machine. Developers affectionately refer to this as the runtime environment. You may hear some people call this by another name like JRE (Java Runtime Environment) or JVM (Java Virtual Machine). It&amp;rsquo;s all the same. In this book, I may refer to it as simply &amp;ldquo;runtime&amp;rdquo;  Some tidbits of info about Java;</description>
     </item>
     
     <item>
