@@ -22,5 +22,16 @@
  A programming language A set of built-in libraries and technology frameworks A virtual machine. Developers affectionately refer to this as the runtime environment. You may hear some people call this by another name like JRE (Java Runtime Environment) or JVM (Java Virtual Machine). It&amp;rsquo;s all the same. In this book, I may refer to it as simply &amp;ldquo;runtime&amp;rdquo;  Some tidbits of info about Java;</description>
     </item>
     
+    <item>
+      <title>Learn Android Studio3</title>
+      <link>http://tedhagos.com/posts/learn-android-studio3/</link>
+      <pubDate>Mon, 04 Dec 2017 11:57:14 +0800</pubDate>
+      
+      <guid>http://tedhagos.com/posts/learn-android-studio3/</guid>
+      <description>Learn Android Studio 3 is out. You can get it in print or electronic download the Apress website and from Amazon.
+What&amp;rsquo;s inside It&amp;rsquo;s a beginner&amp;rsquo;s book, it&amp;rsquo;s for you if you are;
+ new to Android programming new to Android Studio If you&amp;rsquo;re also new to Java, I&amp;rsquo;ve included a really really short introduction to the Java language (it&amp;rsquo;s in the Appendix). The book doesn&amp;rsquo;t assume you&amp;rsquo;re a Java expert, but it would be great if you&amp;rsquo;ve done some Java programming before.</description>
+    </item>
+    
   </channel>
 </rss>
