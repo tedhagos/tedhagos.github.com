@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-21T18:34:14+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>From the notes of Ted Hagos</subtitle><entry><title type="html">Kotlin Collections</title><link href="http://localhost:4000/posts/working-with-kotlin-collections/" rel="alternate" type="text/html" title="Kotlin Collections" /><published>2018-10-17T00:00:00+08:00</published><updated>2018-10-17T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-collections</id><content type="html" xml:base="http://localhost:4000/posts/working-with-kotlin-collections/">&lt;p&gt;The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-21T20:22:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>From the notes of Ted Hagos</subtitle><entry><title type="html">Kotlin Collections</title><link href="http://localhost:4000/posts/working-with-kotlin-collections/" rel="alternate" type="text/html" title="Kotlin Collections" /><published>2018-10-17T00:00:00+08:00</published><updated>2018-10-17T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-collections</id><content type="html" xml:base="http://localhost:4000/posts/working-with-kotlin-collections/">&lt;p&gt;The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.&lt;/p&gt;
 
 &lt;p&gt;Before we go to the code examples and more details, something needs to be said why it is called a collections framework. The reason it’s called a framework is because the data structures are very diverse, in and of themselves. Some of them puts constraints on how we go through the collection, they impose certain order of traversal. Some of the collections constrains the uniqueness of the data elements, they won’t allow you to put duplicates. And some of them lets us work with the collections in pairs, like in a dictionary entry, you’ll have a key with a corresponding value.&lt;/p&gt;
 
@@ -681,7 +681,147 @@ It makes me wonder if there a thing such as &quot;lower order functions&quot;,  
 
 &lt;p&gt;I don’t know that personally, but by reading through some of literature produced by that team and a quick look at some of Kotlin’s standard library e.g. “Standard.Kt” and some of the operations we can do on collections objects, I think the answer is “yes”.&lt;/p&gt;
 
-&lt;p&gt;If you’ve gone through any tutorial of the Kotlin language, there is a fair chance you’ve encountered some constructs that involved &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;filter&lt;/code&gt;,  &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; to name a few. These things are higher order functions.&lt;/p&gt;</content><author><name></name></author><summary type="html">The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</summary></entry><entry><title type="html">Die Empty</title><link href="http://localhost:4000/book-notes/2017/10/10/die-empty.html" rel="alternate" type="text/html" title="Die Empty" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/book-notes/2017/10/10/die-empty</id><content type="html" xml:base="http://localhost:4000/book-notes/2017/10/10/die-empty.html">&lt;p&gt;There are 3 kinds of work&lt;/p&gt;
+&lt;p&gt;If you’ve gone through any tutorial of the Kotlin language, there is a fair chance you’ve encountered some constructs that involved &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;filter&lt;/code&gt;,  &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; to name a few. These things are higher order functions.&lt;/p&gt;</content><author><name></name></author><summary type="html">The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</summary></entry><entry><title type="html">Learn Android Studio 3</title><link href="http://localhost:4000/posts/learn-android-studio3/" rel="alternate" type="text/html" title="Learn Android Studio 3" /><published>2017-12-04T00:00:00+08:00</published><updated>2017-12-04T00:00:00+08:00</updated><id>http://localhost:4000/posts/learn-android-studio-3-java</id><content type="html" xml:base="http://localhost:4000/posts/learn-android-studio3/">&lt;p&gt;Learn Android Studio 3 is out. You can get it in print or electronic download  from  the &lt;a href=&quot;https://www.apress.com/gp/book/9781484231555&quot;&gt;Apress website&lt;/a&gt; or from &lt;a href=&quot;https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539173743&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3&quot;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-inside&quot;&gt;What’s inside&lt;/h2&gt;
+
+&lt;p&gt;It’s a beginner’s book, it’s for you if you are;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;new to Android programming&lt;/li&gt;
+  &lt;li&gt;new to Android Studio&lt;/li&gt;
+  &lt;li&gt;If you’re also new to Java, I’ve included a really really short introduction to the Java language (it’s in the Appendix). The book doesn’t assume you’re a Java expert, but  it would be great if you’ve done some Java programming before.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following sections shows some highlights of what you can learn from the book.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-makes-up-an-application&quot;&gt;What makes up an application&lt;/h3&gt;
+
+&lt;p&gt;An Android app isn’t the same as a monolithic desktop app with a single executable file. You’ll learn tthe&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// (1)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// your code here&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; Android prefers to use XML to define the UI. This statement is glue-ing the Activity class to a UI layout defined in XML.  This relationship and other concepts  such as “inflating” are explained in the book&lt;/p&gt;
+
+&lt;h3 id=&quot;intents-and-event-handling&quot;&gt;Intents and Event handling&lt;/h3&gt;
+
+&lt;p&gt;Android apps are made up of loosely coupled &lt;em&gt;“components”&lt;/em&gt;. They’re not just a bunch of objects you can activate by instantation.  Android has a mechanism for component activation; and &lt;em&gt;Intents&lt;/em&gt; are smacked right in the middle of it. This component activation is deeply ingrained in Android’s architecture. You’ll work with detailed project demos touching on this topic&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EXTRA_MESSAGE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.example.myfirstapp.MESSAGE&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/** Called when the user taps the Send button */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DisplayMessageActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;EditText&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EditText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;editText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EXTRA_MESSAGE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;implicit-intents&quot;&gt;Implicit Intents&lt;/h3&gt;
+
+&lt;p&gt;Intents aren’t good only for activating other Activities. There are also &lt;em&gt;implicit Intents&lt;/em&gt;. This is one of the gems of the Android platform, implicit intents lets your code use other people’s codes.  In the book, you’ll work wih project demos that use implicit Intents.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnwebaddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.apress.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;geo:40.7113399,-74.0263469&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnphonenumber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tel:639285083333&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_DIAL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Cannot resolve button click&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-the-appbar&quot;&gt;Using the AppBar&lt;/h3&gt;
+
+&lt;p&gt;Learn how to add menus to your application, and also how to handle the events&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreateOptionsMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Menu&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;MenuInflater&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inflater&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getMenuInflater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;inflater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;main_menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onOptionsItemSelected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MenuItem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;File&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuEdit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Edit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuHelp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Help&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuExit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Default&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;run-in-the-background&quot;&gt;Run in the background&lt;/h3&gt;
+
+&lt;p&gt;By the default all codes run on the UI thread (main thread). There will be times when you need to run some codes in the background thread.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ls3java-asynctask.png&quot; alt=&quot; asynctask&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.os.AsyncTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Worker&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AsyncTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (1)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doInBackground&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textViews&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (2)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onProgressUpdate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (3)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; The AsyncTask is parameterized, it’s a generic type so we need to pass arguments to it. These parameters are &amp;lt;Params,Progress, Result&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(2)&lt;/strong&gt; This is the only method we are obliged to override. Inside this is where we should put the program logic which may take some time to complete&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(3)&lt;/strong&gt; Use this method to communicate progress to the user&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-author&quot;&gt;About the author&lt;/h2&gt;
+
+&lt;p&gt;Ted has been in software development for 20+ years. He’s a developer by trade, at the moment he’s the CTO and DPO of RenditionDigital International, a software development company based out of Dublin. He wrote a couple of books for Apress.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/las3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can get it from the &lt;a class=&quot;inline-button&quot; href=&quot;https://www.apress.com/gp/book/9781484231555&quot; target=&quot;_blank&quot;&gt;Apress website&lt;/a&gt; or from &lt;a class=&quot;inline-button&quot; href=&quot;https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539173743&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3&quot; target=&quot;_blank&quot;&gt;Amazon&lt;/a&gt;. Don’t forget to leave a review. Thanks!&lt;/p&gt;</content><author><name></name></author><summary type="html">Learn Android Studio 3 is out. You can get it in print or electronic download from the Apress website or from Amazon.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/las3cover.jpg" /></entry><entry><title type="html">Die Empty</title><link href="http://localhost:4000/book-notes/2017/10/10/die-empty.html" rel="alternate" type="text/html" title="Die Empty" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/book-notes/2017/10/10/die-empty</id><content type="html" xml:base="http://localhost:4000/book-notes/2017/10/10/die-empty.html">&lt;p&gt;There are 3 kinds of work&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Mapping&lt;/strong&gt; - Prioritizing, planning and setting of objectives&lt;/li&gt;
@@ -967,493 +1107,4 @@ Enter a number: 10 [enter]
   &lt;li&gt;Now, you can sum all the items in listC&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Show the solution using both list comprehension and imperative code (for loops)&lt;/p&gt;</content><author><name></name></author><summary type="html">Photo credit xckd.com/189</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/exercise.png" /></entry><entry><title type="html">node.js</title><link href="http://localhost:4000/posts/nodejs/" rel="alternate" type="text/html" title="node.js" /><published>2015-04-21T00:00:00+08:00</published><updated>2015-04-21T00:00:00+08:00</updated><id>http://localhost:4000/posts/nodejs</id><content type="html" xml:base="http://localhost:4000/posts/nodejs/">&lt;p&gt;Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a &lt;code class=&quot;highlighter-rouge&quot;&gt;.js&lt;/code&gt; extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing  like the following;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Listing 1 - hellonode.js&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// OUTPUT&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;seconds&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It means the script needs to be saved in a file. Most of the time, the filename is specified as part of the Listing label, like Listing 1 above.&lt;/p&gt;
-
-&lt;p&gt;By the way, regarding Listing 1, this is an example of an asynchronous code written in nodeJS. There are two take-aways here, they are;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Your code may not execute in the sequence your wrote them&lt;/li&gt;
-  &lt;li&gt;Sometimes, they might not execute in the sequence and order you intended&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Many of the codes you will encounter in Node will be asynchronous, not unlike the timed-out Hello world example in Listing 1.&lt;/p&gt;
-
-&lt;h1 id=&quot;cmd-line-arguments&quot;&gt;cmd Line arguments&lt;/h1&gt;
-
-&lt;p&gt;Node captures arguments that were passed on the command line using the “process” object. This object is automatically included in all running node applications, so, we can reference this directly in our code. Edit the “hellonode.js” to include the following code.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (process.argv.length &amp;gt; 2) {
-  console.log(process.argv[2]); // print the first arg 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;displaying-strings-etc&quot;&gt;Displaying Strings etc.&lt;/h1&gt;
-
-&lt;p&gt;You can print pretty much display everything to the STDOUT using &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log()&lt;/code&gt;, thats why this is the go to function for simple log messages.This function can handle formatted strings pretty much like the C-Style &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(&quot;This will display the number %d&quot;, 10); // This will display the number 10
-console.log(&quot;I will count %d,%d,%d and %d&quot;, 1,2,3,4); // I will count 1,2,3 and 4
-
-
-var name = &quot;Joe&quot;;
-console.log(&quot;Hi %s&quot;, name); // Hi Joe
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you need to work with formatted strings and don’t really need to display it in the console. You can use the util.format function.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &quot;Joe&quot;;
-var str = util.format(&quot;Hi %s&quot;, name);
-console.log(str); // Hi Joe
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If your version of nodeJS is 6.x, you should be able to use the template string syntax of ES6. Like the following&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &quot;Joe&quot;;
-var str = `Hi ${name}`;  // these backticks, not single quotes
-console.log(str); // Hi Joe
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To create template strings&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Enclose the whole string to be composed in a pair of back ticks. The back tick character is found on the same key as the tilde (beside the numeric 1 key on top of your keyboard)&lt;/li&gt;
-  &lt;li&gt;Enclose the variable inside the template construct “${ var name}”&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;async-codes&quot;&gt;Async Codes&lt;/h1&gt;
-
-&lt;p&gt;A typical (pseudo)code for accessing databases might look like this.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var cn = getConnection(cnString);
-var stmt = conn.createStatement();
-var rs = stmt.executeQuery(sqlStatement);
-
-
-while (rs.next()) {
-  console.log(rs.getString(&quot;lastname&quot;));
-  console.log(rs.getString(&quot;firstname&quot;));
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If we were to do this in Node, it will look very different&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;getConnection(cnString, (err, cn)=&amp;gt; {
-  cn.createStatement((err, stmt)=&amp;gt; {
-    stmt.executeQuery(sqlStatement,(err, rs)=&amp;gt; {
-      while(rs.next()) {
-         console.log(rs.getString(&quot;lastname&quot;));
-           console.log(rs.getString(&quot;firstname&quot;)); 
-      }
-       rs.on('rowdata', (err, data) =&amp;gt; {
-      });
-    });
-  });
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Some things to remember when using callbacks&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;First parameter is always an error object&lt;/li&gt;
-  &lt;li&gt;Next parameter is the result&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The following sample code shows how a function is invoked using a callback&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var fs=require('fs');
-
-
-function router() {
-  readFromSomewhere(function(err, data){
-    console.log(data);
-  });
-}
-
-
-function readFromSomewhere(cb) {
-  var returnval = &quot;&quot;;
-  return fs.readFile('myfile.txt', 'utf-8', function(err, d){
-    if(!err){
-      cb(null,d);
-    }
-    else {
-      cb(err,null);
-    }
-  });
-}
-
-
-router();
-console.log(&quot;This line may or may not execute before readFromSomewhere finishes&quot;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;TODO. Point out the following&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;LHS and RHS&lt;/li&gt;
-  &lt;li&gt;How the LHS is mapped as the second argument of the callback function&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;event-loop&quot;&gt;Event Loop&lt;/h1&gt;
-
-&lt;p&gt;[TODO]&lt;/p&gt;
-
-&lt;h1 id=&quot;callback&quot;&gt;Callback&lt;/h1&gt;
-
-&lt;p&gt;The simplest callback&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let foo = (arg) =&amp;gt; {
-
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;[TODO]&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(&quot;global space -&amp;gt; started&quot;);
-
-
-//// CLIENT 
-let client = () =&amp;gt; {
-
-
-  let serverarg = 10;
-  server(serverarg, (err,response)=&amp;gt; {
-    console.log(&quot;client -&amp;gt; serverResponse : %d&quot;, response);
-  });
-  console.log(&quot;client -&amp;gt; started, server is called&quot;);
-}
-
-
-//// SERVER
-let server = (arg, callback) =&amp;gt; {
-
-
-  let err = null;
-  setTimeout(()=&amp;gt; {
-    callback(err, arg * arg );
-  },100);
-  console.log(&quot;server -&amp;gt; started&quot;);  
-  console.log(`server -&amp;gt; arg ${arg}`);
-}
-
-
-client();
-console.log(&quot;global space -&amp;gt; end&quot;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;[TODO]&lt;/p&gt;
-
-&lt;h1 id=&quot;module-require-and-exports&quot;&gt;Module, Require and Exports&lt;/h1&gt;
-
-&lt;p&gt;Javascript didn’t (still doesn’t) have a standard way of managing code libraries. If you need functionalities that are external to your source file, you need to import or include it in your project using the script tag&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script src = &quot;name of external file.js&quot;&amp;gt;
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Many libraries tried to address this void in the JS ecosystem but eventually, only two competing libraries were left standing. These were AMD (Asynchronous Module Definition) and CommonJS. During the the early days of node up until 2013, Node used CommonJS but eventually moved away from it and used it’s own module and require system.&lt;/p&gt;
-
-&lt;h2 id=&quot;module&quot;&gt;Module&lt;/h2&gt;
-
-&lt;p&gt;A module is a file (mostly), but sometimes can also be a folder. If it is a folder, that folder needs to have a “index.js” file inside it. If it doesn’t have an index.js file inside it, it must have a “package.json” file which will specify what file will be loaded when the name of the module is required. The simplest scenario is that the name of the module is the name of a JS file.&lt;/p&gt;
-
-&lt;p&gt;[TODO]&lt;/p&gt;
-
-&lt;h1 id=&quot;hello-web-server&quot;&gt;Hello Web Server&lt;/h1&gt;
-
-&lt;p&gt;Create a file named “server.js” and put the following codes in it.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var h = require('http');                            // &amp;lt;1&amp;gt;
-
-
-var server = h.createServer(callmeBack);            // &amp;lt;2&amp;gt;
-
-
-function callMeBack(req, res) {                     // &amp;lt;3&amp;gt;
-  res.writeHead(200, {&quot;Content-Type&quot;:&quot;text/html&quot;});
-  res.write(&quot;&amp;lt;h1&amp;gt;Hello Node&amp;lt;/h1&amp;gt;&quot;);
-  res.end();
-}
-
-
-server.listen(3000);                                 // &amp;lt;4&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; pulls a library called “http” from the standard node library. When node was installed, the http library, together with a bunch of other libraries was also installed. The &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; method knows the location of these libraries&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;2&amp;gt;&lt;/strong&gt; The createServer method returns an http server object, the argument is a function which node will “call back” in the event that somebody tries to connect this server using any of the HTTP methods e.g. GET, POST, PUT, DELETE etc. This callback function, which we named “callMeBack” in our example, is typically known as a request handler because it is called once for every request the server gets&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;3&amp;gt;&lt;/strong&gt; The createServer will pass two objects to the callback function, these objects are the (1) http.ClientRequest and (2) http.ServerResponse — in that order. Both of these objects are created internally by the HTTP server and passed to the request handler (the “callMeBack” function) so we can deal with whatever data is inside the request object, and at the same time, so we can push whatever data we want to the requesting http agent (usually a browser).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;4&amp;gt;&lt;/strong&gt; Finally, we start the server, in this example, we chose to open it at port 3000. The choice for port number is arbitrary, you can choose any integer from 1025 up to 65535 — port numbers 1024 and below are off limits by the OS because these are well known ports. If you are on a production environment, of course, you can choose port 80, but for purposes of practice and example, it’s best to stay away from 1024 and below.&lt;/p&gt;
-
-&lt;p&gt;To run the web server use the command&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node server.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To test if the web server is working, you can use the command&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl http://localhost:3000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Alternatively, you can open a web browser and navigate to &lt;a href=&quot;#&quot;&gt;http://localhost:3000&lt;/a&gt;. You should be able to see the output of our sample code.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Refactoring the sample code&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var h = require('http');                          
-
-
-var server = h.createServer(function(req, res) {    // &amp;lt;1&amp;gt;
-  res.writeHead(200, {&quot;Content-Type&quot;:&quot;text/html&quot;});
-  res.write(&quot;&amp;lt;h1&amp;gt;Hello Node&amp;lt;/h1&amp;gt;&quot;);
-  res.end();
-});            
-
-
-server.listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; The “callmeBack” function was called only once in the code, so there is no advantage to be gained by making it a named function, except that it’s more readable and obvious to beginning programmers, thus making it a bit more approachable, and maybe for that reason it’s worth bothering to write it that way. But if not that, we extract the “callMeBack” function and plunk it right smack into “createServer” as an anonymous function. I have no strong opinion between this shorter version or our previous verbose version, but best get used to the shorter version because most code example of node code, looks a lot like this&lt;/p&gt;
-
-&lt;p&gt;If node is still running, you have to stop it (press CTRL + C twice) and start it again in order to reflect the changes in the source file. The starting and stopping of the server will be bothersome if you’re going to do it with such frequency. If you don’t want to be bothered by restart requirement every time the source file changes, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;nodemon&lt;/code&gt; (short for node monitor) instead of node. You can get via npm like so&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g nodemon
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The “-g” flag means we’re telling npm to install nodemon globally instead of just the local folder (where you ran the command”. This way, we can use nodemon from any directory&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;NOTE&lt;/p&gt;
-
-  &lt;p&gt;If you’re coming from a previous background of web programming, say, .NET, Java or PHP, the Hello Web server example in here is not the equivalent of ASP pages, Servlets/JSP or or PHP web pages. Node is a low level API for creating performant web servers — actually it can do more than that, but thats for another discussion. Think of Node, at least in this example, in terms of IIS, Tomcat and Apache webserver. The Hello Web Server example, is an example on how to create a web server, and not web pages&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you’ve written web apps before in PHP, Java or .NET, what we just did in the previous section might seem a bit primitive and quite off putting. In other web platforms, we didn’t have to create a web server, we would just create the html document or something that would transpile to html and leave the servicing of the documents to the web server. But don’t walk away just yet, programming in node is a low level enterprise but that is not a weakness, that is a strength. That hello world sample code above is just a bad sample, you’re not supposed to develop web applications like that. We’ll explore some more use cases and features of node in the up coming sections.&lt;/p&gt;
-
-&lt;h1 id=&quot;middleware&quot;&gt;Middleware&lt;/h1&gt;
-
-&lt;p&gt;It’s a piece of code that you put somewhere between &lt;strong&gt;createServer()&lt;/strong&gt; call and before you do something with the actual request/response objects. It’s useful when you use it to filter, add or modify data as it comes through the http.ClientRequest before you reach the core business logic of your app.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Listing middleware-1 pseudo code, where a middleware might reside&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-
-
-const app = http.createServer((req, res)=&amp;gt; {
-
-
-  switch(req.url) {
-    /*
-      A middle ware would insert itself
-      right about in this place. It sits right after
-      the request and response objects have been created
-      internally by createServer() call, and right before
-      you get you get to do anything with the actual 
-      request
-    */
-    case '/':
-    case '/some/path':
-    default:
-  }
-
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Fig middleware-1 where a middle ware resides&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/nodejs-middleware.png&quot; alt=&quot;middleware&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;S&lt;/p&gt;
-
-&lt;p&gt;ome reasons for using middleware&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Gives you a chance to do something with the request object before the request hits your core business logic&lt;/li&gt;
-  &lt;li&gt;Useful for logging&lt;/li&gt;
-  &lt;li&gt;Also useful for authentication&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;What is it, how do we create it and how do we use it?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A middleware is a function&lt;/li&gt;
-  &lt;li&gt;You need to inject it in your code right after http.ClientResponse and http.ServerResponse objects have been created. While it is possible to write your own code that will do all this injection, there are plenty out there that can already do this, one of the more popular packages is the &lt;strong&gt;connect&lt;/strong&gt; framework&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Example of a middleware&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The following listing shows a typical code for a node webserver. What&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-
-
-const app = http.createServer((req, res)=&amp;gt; {
-  // http handlers
-});
-
-
-app.listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The connect middleware is a good example of a very basic middleware. Connect is inspired by some other frameworks that came before it e.g. Sinatra (Ruby) and NancyFX (.NET) . The connect middleware is not part of the core libraries. It’s an npm package. Before we can use it, we have to get it from the repository.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install connect --save
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;aaa&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-const connect = require('connect');  // &amp;lt;1&amp;gt;
-
-
-const app = connect();               // &amp;lt;2&amp;gt;
-
-
-http.createServer(app).listen(3000); // &amp;lt;3&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; Like most modules that we want to use in the app, we need to require it&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;2&amp;gt;&lt;/strong&gt; We call the connect function and assign it to a variable&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;3&amp;gt;&lt;/strong&gt; The connect object now effectively takes over the handling of the &lt;strong&gt;http.ClientRequest&lt;/strong&gt; and &lt;strong&gt;http.ServerResponse.&lt;/strong&gt; Naturally, createServer method will pass these two objects to the middleware.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-const connect = require('connect');  
-
-
-const app = connect();               
-
-
-app.use((req, res) =&amp;gt; {   // &amp;lt;1&amp;gt;
-  res.writeHead(200, {'Content-Type':'text/plain'}); // &amp;lt;2&amp;gt;
-  res.end(&quot;Hello connect&quot;);
-});
-
-
-http.createServer(app).listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; The connect object still receives the request and response objects created by createServer method&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;2&amp;gt;&lt;/strong&gt; This code is a typical way to handle incoming requests and sending a basic response&lt;/p&gt;
-
-&lt;p&gt;If we were to use a middleware this way, there’s not much to be gained because we didn’t do anything differently, we just added an indirection in handling the request. Fortunately, this indirection allows us to do things like this.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-const connect = require('connect');  
-
-
-const app = connect();               
-
-
-app.use((req, res, next) =&amp;gt; {        // &amp;lt;1&amp;gt;
-  req.username = authenticateUser(); // &amp;lt;2&amp;gt;
-  next();                            // &amp;lt;3&amp;gt;
-});
-
-
-app.use((req, res, next) =&amp;gt; {
-  // do something else here          // &amp;lt;4&amp;gt;
-  next();                            // &amp;lt;5&amp;gt;
-});
-
-
-app.use((req, res) =&amp;gt; {              // &amp;lt;6&amp;gt;
-  res.writeHead(200, {'Content-Type':'text/plain'}); 
-  res.end(&quot;Hello connect&quot;);
-});
-
-
-http.createServer(app).listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; We already know that our connect object receives the request and response objects from the createServer, in addition to these two objects, connect creates a third one called &lt;strong&gt;next&lt;/strong&gt;. This is where the real power (and utility) of a middleware comes in. The &lt;strong&gt;next&lt;/strong&gt; object allows us to chain calls to other middlewares, if there are any. To inject a middleware, we use the “&lt;strong&gt;connect.use&lt;/strong&gt;” function and pass the middleware as the argument&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;2&amp;gt;&lt;/strong&gt; We can do lots of things in this middleware, but in this code, we are simply adding an attribute to the request object (JS objects are malleable, you can attach arbitrary properties or attributes to any object).This is just pseudocode, obviously we don’t have an implementation of the “authenticateUser” function. This code is only meant to illustrate the the possibility of things we can do inside a middleware&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;3&amp;gt;&lt;/strong&gt; Calling the next function, allows the chaining effect of middlewares to happen, it allow the control to flow to the next (available) middleware&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;4&amp;gt;&lt;/strong&gt; This is just another middleware in the chain, you can do something else in here e.g. parse the http.ClientRequest object, log something etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;5&amp;gt;&lt;/strong&gt; We want the processing of request/response to continue on to the next middleware in the chain, sowe need to call &lt;strong&gt;next&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;6&amp;gt;&lt;/strong&gt; This is the end of the chain, technically, this block of code is still a middleware but it doesn’t call the next function anymore, so the request and response will finally be handled here and a response will be given to the user&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;IMPORTANT&lt;/p&gt;
-
-  &lt;p&gt;The order in which you write the middleware is material. The middleware(s) will be executed in the order they appear in the code.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Complete listing of a sample code&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const http = require('http');
-const connect = require('connect');
-
-
-const port = process.env.PORT || 3000;
-const app = connect();
-
-
-
-
-let logger = (req, res, next) =&amp;gt; {
-  console.log(`req.url : ${req.url} | method : ${req.method}`);
-  next();
-}
-
-
-
-
-app.use((req, res, next)=&amp;gt; {
-  req.username = &quot;hagos,ted&quot;;
-  next();
-});
-app.use(logger);
-app.use((req, res)=&amp;gt;{
-  if(req.url === '/') {
-    res.writeHead(200, {'Content-Type':'text/plain'});
-    res.end(`Hello connect | username : ${req.username}`);
-  }
-  else {
-    res.writeHead(404, {'Content-Type':'text/plain'});
-    res.end('You are lost');
-  }
-});
-
-
-
-http.createServer(app).listen(port, ()=&amp;gt; {
-  console.log(&quot;connect started on port %d&quot;, port);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;async-patterns&quot;&gt;Async Patterns&lt;/h1&gt;
-
-&lt;p&gt;[TODO]&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Callbacks&lt;/li&gt;
-  &lt;li&gt;Events&lt;/li&gt;
-  &lt;li&gt;Promises&lt;/li&gt;
-  &lt;li&gt;Async Await&lt;/li&gt;
-  &lt;li&gt;Continuation patterns&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;</summary></entry></feed>
+&lt;p&gt;Show the solution using both list comprehension and imperative code (for loops)&lt;/p&gt;</content><author><name></name></author><summary type="html">Photo credit xckd.com/189</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/exercise.png" /></entry></feed>
