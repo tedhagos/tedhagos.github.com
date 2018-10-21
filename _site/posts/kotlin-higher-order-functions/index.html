@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Kotlin’s higher order functions | Ted Hagos</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Kotlin’s higher order functions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks." />
+<meta property="og:description" content="The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks." />
+<link rel="canonical" href="http://localhost:4000/posts/kotlin-higher-order-functions/" />
+<meta property="og:url" content="http://localhost:4000/posts/kotlin-higher-order-functions/" />
+<meta property="og:site_name" content="Ted Hagos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-05T00:00:00+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/posts/kotlin-higher-order-functions/","headline":"Kotlin’s higher order functions","dateModified":"2018-05-05T00:00:00+08:00","datePublished":"2018-05-05T00:00:00+08:00","description":"The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/kotlin-higher-order-functions/"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ted Hagos" /><!-- Twitter cards -->
+    <meta name= "twitter:site"    content = "@lovescaffeine" />
+    <meta name= "twitter:creator" content = "@lovescaffeine" />
+    <meta name= "twitter:title"   content = "Kotlin's higher order functions" />
+  
+    
+    <meta name= "twitter:description" content = "From the notes of Ted Hagos" />
+    
+  
+    
+    <meta name= "twitter:card"  content = "summary_large_image" />
+    <meta name= "twitter:image" content = "https://tedhagos.com" />
+    
+    <!-- end of Twitter cards -->
+
+</head>
+<body>
+
+    <!--<header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ted Hagos</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/privacy/">Privacy Policy</a></div>
+      </nav></div>
+</header>
+-->
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kotlin&#39;s higher order functions</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-05-05T00:00:00+08:00" itemprop="datePublished">May 5, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The name <em>higher order functions</em>  come from the world of Mathematics, in there, a higher order function is also called <em>functional</em>, <em>functional form</em> or <em>functor</em>, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</p>
+
+<aside><strong>NOTE</strong>
+It makes me wonder if there a thing such as "lower order functions",  I don't think this term was ever used, neither in programming nor in the world of Math. At least in Math, anything that isn’t a higher order function is referred to as “first order function”. I haven’t really heard any coder use the term “lower order function”— or maybe I just didn’t “Google” deep enough. 
+</aside>
+
+<p>Another name that was given to higher order functions is <em>first class functions</em>. A very clever guy named Christopher Strachey coined the term sometime in the mid 60s.</p>
+
+<p>So, if we can’t use “lower order functions” or first order functions to refer to our regular functions, we’ll just call them, well, functions.</p>
+
+<h2 id="same-difference">Same difference</h2>
+
+<p>Java, C/C++ and Visual Basic and some other languages, don’t have higher order functions. At least at the time of this writing. The functions or methods or whatever it they may be called in those languages, cannot take in functions as parameters nor can they return functions. But hang on, of course those languages can take in functions as parameters, what about this code example</p>
+
+<p><strong>Listing 1-1. foo() and bar() example</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">bar</span><span class="o">(</span><span class="n">foo</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span>
+<span class="o">}</span>
+
+<span class="kd">static</span> <span class="kt">void</span> <span class="nf">bar</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">static</span> <span class="kt">int</span> <span class="nf">foo</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Didn’t we just pass <code class="highlighter-rouge">foo()</code> to <code class="highlighter-rouge">bar()</code>? isn’t that passing a function to another function? That’s a no. Passing <code class="highlighter-rouge">foo()</code> to another function like <code class="highlighter-rouge">bar()</code> isn’t what we mean by a “function taking in another function as parameter”. Maybe if there was a way to pass <code class="highlighter-rouge">foo</code> without the parentheses, and then somewhere in the body of function <code class="highlighter-rouge">bar</code> (the receiving function), we get to invoke it like this</p>
+
+<p><strong>Listing 1-2. foo() and bar() examples, again</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">bar</span><span class="o">(</span><span class="n">foo</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">static</span> <span class="kt">void</span> <span class="nf">bar</span><span class="o">(</span><span class="n">func</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">val</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>But this isn’t doable in Java, nor is it doable in a language that doesn’t support higher order functions.</p>
+
+<p>The code <code class="highlighter-rouge">bar(foo(2))</code> means we are calling <code class="highlighter-rouge">foo(2)</code>, it will be resolved to 4 and it’s type is <code class="highlighter-rouge">int</code> , then we get to call <code class="highlighter-rouge">bar()</code>, what’s being passed to to <code class="highlighter-rouge">bar()</code> isn’t the function definition of <code class="highlighter-rouge">foo</code>, but whatever value <code class="highlighter-rouge">foo</code> resolves to — which is 4 in our example, which is of type <code class="highlighter-rouge">int</code>. We’re not passing a <em>function type</em> because Java doesn’t have a <em>function type</em>, nor does C/C++ nor VB.</p>
+
+<h2 id="what-does-it-look-like">What does it look like</h2>
+
+<p>In a language that has support for higher order functions, like Kotlin, the <em>foo and bar</em> examples would have looked like this</p>
+
+<p><strong>Listing 1-3. foo() and bar() in functional style</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">foo</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span><span class="n">Int</span><span class="p">):</span> <span class="nc">Int</span> <span class="p">{</span>              <span class="p">&lt;</span><span class="m">1</span><span class="p">&gt;</span>
+  <span class="k">return</span> <span class="n">arg</span> <span class="p">*</span> <span class="n">arg</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">bar</span><span class="p">(</span><span class="n">fu</span><span class="p">:(</span><span class="n">arg</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nc">Int</span> <span class="p">{</span> <span class="p">&lt;</span><span class="m">2</span><span class="p">&gt;</span>
+  <span class="k">return</span> <span class="n">fu</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>                       <span class="p">&lt;</span><span class="m">3</span><span class="p">&gt;</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+  <span class="n">println</span><span class="p">(</span><span class="n">bar</span><span class="p">(</span><span class="o">::</span><span class="n">foo</span><span class="p">))</span>                <span class="p">&lt;</span><span class="m">4</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> This is a simple <em>named function</em> in Kotlin. It takes an <em>Int</em> and the function returns an <em>Int</em> as well. The function simply squares whatever Int you throw at it. We’re going to pass this function to another function (<code class="highlighter-rouge">bar()</code>)</p>
+
+<p><strong>&lt;2&gt;</strong> Function <code class="highlighter-rouge">bar()</code> takes one input as parameter, this input is named <code class="highlighter-rouge">fu</code> but  take note of how it’s type is declared; <code class="highlighter-rouge">(arg:Int) -&gt; Int</code> — this is how a <em>function type</em> is declared in Kotlin. A function type has 3 parts, (1) the parameter list, if it doesn’t take any, it would just be a pair of parentheses, but in our case it takes on an <em>Int</em> (2) the arrow operator, it’s written as a dash or minus sign immediately followed by the greater than sign, some people call it the chevron symbol. This operator separates the parameter list and the return type. And finally (3) the return type of the <em>function type</em>. We intend to pass function <code class="highlighter-rouge">foo()</code> to function <code class="highlighter-rouge">bar()</code> and <code class="highlighter-rouge">foo()</code> returns an <em>Int</em>, hence, our function type in <code class="highlighter-rouge">bar()</code> should also return <em>Int</em></p>
+
+<p><strong>&lt;3&gt;</strong>  Now, we invoke <code class="highlighter-rouge">fu</code> and we pass the value 2 to it</p>
+
+<p><strong>&lt;4&gt;</strong>  Now, we pass <code class="highlighter-rouge">foo</code> to <code class="highlighter-rouge">bar()</code>. Notice that we passed the param as <code class="highlighter-rouge">foo</code> and <strong>not</strong> <code class="highlighter-rouge">foo()</code>. We are not resolving the value of <code class="highlighter-rouge">foo()</code> and then passing it to <code class="highlighter-rouge">bar()</code>, were passing <code class="highlighter-rouge">foo</code> as a function definition, so that later on, we can invoke it from within the context of the receiving function</p>
+
+<p>When a function can take in another function as a parameter, in the same vein that it can take in objects or values, it can be said that that language treats functions as <em>first class citizens</em>; in Kotlin, <em>functions</em> supports all the operations that are generally available to other entities like <em>objects</em> or <em>values</em>. It’s not simply a named collection of statements, it’s also a <em>type</em></p>
+
+<h2 id="why-are-we-bothering">Why are we bothering</h2>
+
+<p>Because this gives us the ability to vary the compute process depending on the <em>client</em>. In Listing 1-3 (above) the client is the <code class="highlighter-rouge">println()</code> function, and the server is the <code class="highlighter-rouge">bar()</code> function. We’ve defined <code class="highlighter-rouge">bar()</code> to accept a <em>function type</em> that takes an <em>Int</em> and also returns and <em>Int</em>, we can pass any function to <em>bar</em> that meets this criteria, it may have a different implementation inside but so long as it takes in and returns an <em>Int</em> that should be fine. This  is actually a design pattern called the <em>Strategy Pattern</em>. This pattern is from the gang of four (GoF), they wrote a book called <em>Design Patterns</em>, the Strategy pattern is one of them.</p>
+
+<h2 id="does-kotlin-itself-use-functionals">Does Kotlin itself use functionals</h2>
+
+<p>I don’t know that personally, but by reading through some of literature produced by that team and a quick look at some of Kotlin’s standard library e.g. “Standard.Kt” and some of the operations we can do on collections objects, I think the answer is “yes”.</p>
+
+<p>If you’ve gone through any tutorial of the Kotlin language, there is a fair chance you’ve encountered some constructs that involved <code class="highlighter-rouge">forEach</code>, <code class="highlighter-rouge">filter</code>,  <code class="highlighter-rouge">map</code>, <code class="highlighter-rouge">with</code>, <code class="highlighter-rouge">apply</code> and <code class="highlighter-rouge">let</code> to name a few. These things are higher order functions.</p>
+
+
+  </div><a class="u-url" href="/posts/kotlin-higher-order-functions/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+  <p>
+    <a href="/" class="footer-link">Home</a>
+    <a href="/about/" class="footer-link">About</a>
+    <a href="/blog/" class="footer-link">Blog archives</a>
+    <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
+  </p>
+  copyright Ted Hagos &copy; 
+  <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:inline" class="footer-link"></a> -->
+
+  </div>
+
+</footer>
+</body>
+
+</html>

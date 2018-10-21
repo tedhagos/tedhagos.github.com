@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+
+<h1 class="list-heading">Blog Archive</h1>
+{% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+{% for yearMonth in postsByYearMonth %}
+  <h3 class="list-heading">{{ yearMonth.name }}</h3>
+    <ul class="blog-list">
+      {% for post in yearMonth.items %}
+        <li class="blog-post-item">
+           <a href="{{ post.url }}" class="blog-list">{{ post.title }}</a>
+           <!-- <span class="list-description">
+            {%- if post.description -%}
+              {{ post.description | prepend: " - " }}
+            {%- endif -%}
+           </span> -->
+        {% endfor %}
+        </li>
+    </ul>
+{% endfor %}
