@@ -22,13 +22,15 @@ url: "https://tedhagos.com" # the base hostname & protocol for your site, e.g. h
 twitter_username: lovescaffeine
 github_username:  tedhagos
 
+
+
 # Build settings
 markdown: kramdown
 theme: minima
 
 default_image: /images/gandalf-programmer.jpg
 
-googleAnalytics : "UA-37635397-1"
+google_analytics : "UA-37635397-1"
 
 plugins:
   - jekyll-sitemap
