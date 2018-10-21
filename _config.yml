@@ -16,7 +16,7 @@
 title: Ted Hagos
 email: ted@thelogbox.com
 description: >- # this means to ignore newlines until "baseurl:"
- From the notes of Ted Hagos
+ coder, trainer and author
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tedhagos.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lovescaffeine
@@ -25,6 +25,8 @@ github_username:  tedhagos
 # Build settings
 markdown: kramdown
 theme: minima
+
+default_image: /images/gandalf-programmer.jpg
 
 googleAnalytics : "UA-37635397-1"
 
