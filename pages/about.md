@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Ted. I'm a software developer by trade. I've been at it for more than 20+ years now. If you want to find out more about me, or just to chat, here are my touch points
+Hi, I'm Ted. I'm a software developer. I've been at it for more than 20+ years now. If you want to find out more about me, or just to chat, here are my touch points
 
 * [@lovescaffeine](https://twitter.com/lovescaffeine)
 * [linkedin/ted.hagos](https://www.linkedin.com/in/ted-hagos-55560a16b/)
@@ -19,3 +19,4 @@ You can also find some of my work on the following sites;
 * [medium.com/@tedhagos](https://medium.com/@tedhagos)
 * [workingdev.net](http://workingdev.net). This is almost exclusively a tech journal
 
+If you want to get my writings piped into your inbox, [subscribe for email updates](https://buttondown.email/tedhagos)
