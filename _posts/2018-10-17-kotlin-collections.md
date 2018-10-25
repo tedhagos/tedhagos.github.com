@@ -6,6 +6,7 @@ permalink: /posts/working-with-kotlin-collections/
 comments: false
 image: /images/kotlin-collections-classes.png
 date:   2018-10-17 
+newsletter: true
 ---
 
 

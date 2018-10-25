@@ -423,6 +423,12 @@ h1, h2, h3, h4 {
   padding: 1em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
+.archive h1, .archive h2, .archive h3 {
+  color: #828282; }
+
+.archive li a, .archive li, .archive:visited {
+  color: #424242; }
+
 .highlight table td {
   padding: 5px; }
 

@@ -6,6 +6,7 @@ permalink: posts/learn-android-studio3-kotlin/
 comments: true
 image: /images/las3kotlincover.png
 date:   2018-10-04 
+newsletter: false
 ---
 
 

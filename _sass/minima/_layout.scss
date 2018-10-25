@@ -299,3 +299,11 @@ h1, h2, h3, h4 {font-family: $sans-serif-font; font-weight: 600;}
   padding: 1em;
   font-family: $sans-serif-font;
 }
+
+.archive h1, .archive h2, .archive h3 {
+  color: $grey-color;
+} 
+
+.archive li a, .archive li, .archive:visited {
+  color: $grey-color-dark;
+}
