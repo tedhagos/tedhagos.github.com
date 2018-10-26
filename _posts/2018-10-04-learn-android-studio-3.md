@@ -7,6 +7,7 @@ comments: true
 image: /images/las3kotlincover.png
 date:   2018-10-04 
 newsletter: false
+description: This book has an introduction to Kotlin, Android Programming and of course, Android Studio IDE
 ---
 
 
