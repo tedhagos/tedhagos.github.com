@@ -6,6 +6,7 @@ permalink: /posts/learn-android-studio3/
 comments: false
 image: /images/las3cover.jpg
 date:   2017-12-04 
+description: Learn Android programming fundamentals using Android Studio 3
 ---
  
 
