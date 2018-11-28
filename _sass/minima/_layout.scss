@@ -307,3 +307,13 @@ h1, h2, h3, h4 {font-family: $sans-serif-font; font-weight: 600;}
 .archive li a, .archive li, .archive:visited {
   color: $grey-color-dark;
 }
+
+a.inline-button  {
+  border-bottom: 5px solid orange;
+  color: black !important;
+}
+
+a.inline-button:hover {
+  text-decoration: none;
+  background: orange;
+}

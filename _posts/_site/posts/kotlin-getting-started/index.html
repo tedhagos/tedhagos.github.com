@@ -1,0 +1,305 @@
+<p>It’s the new(est) kid on the the JVM  block.</p>
+
+<p>It’s from JetBrains, they’re the guys who built IntelliJ. They’ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I’m not sure, I’m too lazy to research).  The “hooray” moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming. This was the same time that Android Studio 3 was about to be released, and AS3 already has an out-of-the-box support for Kotlin. You don’t even have to add the plugin anymore.</p>
+
+<p>Like Java, Kotlin is;</p>
+
+<ul>
+  <li>compiled</li>
+  <li>statically typed, but we don’t always have to write the type. Kotlin can infer types on most situations. When Java 10 comes out, it will be able to infer types too, at least for local variables</li>
+  <li>strongly typed</li>
+  <li>object oriented</li>
+</ul>
+
+<p>Unlike Java, it;</p>
+
+<ul>
+  <li>treats functions as first class citizens and it supports functional programming. We also can write functions as top-level constructs, it doesn’t have to be inside a class anymore. Kotlin refers functions inside a class as member functions, not member methods</li>
+  <li>treats exceptions differently. All exceptions are unchecked exceptions, you may (or may not) handle exceptions, it’s up to you and not the compiler. try-catch blocks are optional</li>
+  <li>doesn’t have primitive types, everything truly is, an object</li>
+  <li>doesn’t have static members</li>
+  <li>treats everything as public by default, classes, variables and functions. If you want to restrict accessibility, you’ll have to specify it</li>
+  <li>treats expressions and statements differently, e.g. assignment is a statement in Kotlin (it is an expression in Java), the decision making constructs like <em>if</em> and <em>when</em> are expressions, not statements</li>
+  <li>treats all variables as <em>non-Nullable</em> by default. It means, when you declare a variable in Kotlin, without any decoration, modifier or annotation, the variable can never be assigned a <em>null</em> value</li>
+</ul>
+
+<h1 id="compilation">Compilation</h1>
+
+<p>It’s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (<code class="highlighter-rouge">kotlinc</code>).</p>
+
+<p><img src="/images/kotlin-compilation-process.png" alt="compilation process" /></p>
+
+<p>The Kotlin compiler outputs <code class="highlighter-rouge">.class</code> files, just like <code class="highlighter-rouge">javac</code>. But, you cannot run Kotlin bytecodes the same way you would run Java bytecodes. You’ll need to combine the resulting  Kotlin byte code with the Kotlin runtime and package it into a jar file. Only then will you be able to run the program.</p>
+
+<p>This detail is probably important for you if you will work with Kotlin on the command line. These compilation and execution details are typically handled for you by an IDE.  I can think of three IDEs that should be usable with Kotlin; Eclipse, NetBeans and IntelliJ — the last one is a commercial IDE but it does have a community edition. IntelliJ CE is able to run Kotlin.  Anyone of these 3 IDEs should suffice. In case you choose to use IDEA, you might want to refer to the <a href="http://bit.ly/intellijguide">IntelliJ minimal survival guide</a>.</p>
+
+<h1 id="project-setup-in-intellij">Project setup in IntelliJ</h1>
+
+<p>Launch IntelliJ if it isn’t opened yet. On the “Welcome” screen, click “Create new Project”. Next, you should see a screen like Figure 1.</p>
+
+<p><img src="/images/new-project-intellij.png" alt="newprojectidea" /></p>
+
+<p><strong>Figure 1. New Project</strong></p>
+
+<p>Choose “Kotlin/JVM”, as shown in Figure 1, and try to see if IntelliJ has detected your installed JDK. As you can see, it detected my JDK 9.</p>
+
+<p>Next, fill out the “Project name” information, name the project “kotlinproject” for example.  After that, the project should be created and opened in IntellIJ.</p>
+
+<p>Now we can add a Kotlin file to the project. Use the context menu (right click) on the “src” folder, as shown in Figure 2.</p>
+
+<p><img src="/images/new-kotlin-file.png" alt="new file" /></p>
+
+<p><strong>Figure 2. Add a Kotlin file to the project</strong></p>
+
+<p>Choose “Kotlin/File”. Name the file, and you should be good to go.</p>
+
+<h1 id="hello-world">Hello World</h1>
+
+<p>The simplest program we’ll create in Kotlin could look like the following;</p>
+
+<p><strong>Listing 1. hello.Kt</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+  <span class="n">println</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kotlin programs don’t need classes in order to run. You can get by with top level functions only.</p>
+
+<p>To run this code in IntelliJ, from the main menu bar, click <strong>Run</strong> →  <strong>Run</strong>. You will notice that there are two Run options on the menu. The first Run is greyed out. That’s because we haven’t defined any runtime configuration yet. Choose the second Run option. You should see a popup dialog, as shown in Figure 3</p>
+
+<p><img src="/images/kotlin-run-context.png" alt="new file" /></p>
+
+<p><strong>Figure 3. Running Hello.Kt</strong></p>
+
+<h1 id="variables">Variables</h1>
+
+<p>Variables are declared either as <code class="highlighter-rouge">val</code> or as <code class="highlighter-rouge">var</code>.  Listing 2 shows some example usage</p>
+
+<p><strong>Listing 2. Variable declarations</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">someStr</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"Hello"</span> <span class="c1">// (1) </span>
+<span class="n">someStr</span> <span class="p">=</span> <span class="s">"World"</span>             <span class="c1">// (2)</span>
+
+<span class="kd">val</span> <span class="py">someInt</span> <span class="p">=</span> <span class="m">1</span>               <span class="c1">// (3)</span>
+<span class="kd">val</span> <span class="py">anotherInt</span> <span class="p">=</span> <span class="m">1</span>            <span class="c1">// (4)</span>
+</code></pre></div></div>
+
+<p><strong>(1)</strong> <code class="highlighter-rouge">someString</code> is the variable name (identifier)  and <code class="highlighter-rouge">String</code> is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It’s  quite the reverse in Java where the type is written to the left of the identifier.</p>
+
+<p><strong>(2)</strong> We can re-assign values to variables that were declared as <code class="highlighter-rouge">var</code>. No surprises here.</p>
+
+<p><strong>(3)</strong> Same as the first statement, except that were using the <code class="highlighter-rouge">val</code> instead of <code class="highlighter-rouge">var</code>, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of <code class="highlighter-rouge">someInt</code> from the assignment. It will see that <code class="highlighter-rouge">1</code> is an Integer literal, hence, it can make the necessary type assignment</p>
+
+<p><strong>(4)</strong> This statement won’t work because variables declared as <code class="highlighter-rouge">val</code> are effectively constants. They become immutable. The Java equivalent is when you declare a variable as <em>final</em></p>
+
+<h1 id="types">Types</h1>
+
+<p>There are no primitive types in Kotlin, everything is an object. So, if you need to work with numbers, the types youl’ll work with are the following; Double, Float, Long, Int, Short and Byte, their bit widths are 64, 32, 64, 32, 16 and 8, respectively — that might be easier to look at in table form, so here you go.</p>
+
+<p><strong>Table 1. built-in number types</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Bit width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Double</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>Float</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Long</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>Int</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Short</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Byte</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For the most part, operations on number types works the way you expect them, by that I mean, the way you expect them to work in Java. What’s different in Kotlin is that we don’t have implicit casting anymore. You can’t assign an Int to a Long, while this would have worked in Java, it doesn’t in Kotlin. If you want to convert from one type to another, you’d have to do that explicitly</p>
+
+<p><strong>Listing 3.  No implict casting</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="m">10L</span> <span class="c1">// a is a Long literal, note the L postfix</span>
+<span class="kd">var</span> <span class="py">b</span> <span class="p">=</span> <span class="m">20</span>
+
+<span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="n">b</span> <span class="c1">// this won’t work</span>
+<span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="n">b</span><span class="p">.</span><span class="n">toLong</span><span class="p">()</span> <span class="c1">// this will work</span>
+
+</code></pre></div></div>
+
+<p><strong>Characters</strong></p>
+
+<p>You might remember from Java that <code class="highlighter-rouge">char</code> was treated as a number, that’s not the case in Kotlin. You can’t write code’s like this</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">checkForKey</span><span class="p">(</span><span class="n">keyCode</span><span class="p">:</span><span class="n">Char</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">keyCode</span> <span class="p">==</span> <span class="m">97</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// won’t work, keyCode is not a number</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Character literals are created by using single quotes, like so</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">enterKey</span> <span class="p">=</span> <span class="err">‘</span><span class="n">a</span><span class="err">’</span>
+</code></pre></div></div>
+
+<p>Like in Java, you can use escape sequences such as \t, \b, \n, \r, \’, \”, \ and $ and if you need to encode any other character, you can use the Unicode syntax e.g. \uFF00.</p>
+
+<p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code></p>
+
+<h1 id="branching">Branching</h1>
+
+<p>The  <code class="highlighter-rouge">if</code> construct work almost the same as in Java.</p>
+
+<p><strong>Listing 4. Branching with If</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">bigNum</span> <span class="p">=</span> <span class="n">firstNum</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">secondNum</span> <span class="p">&gt;</span> <span class="n">firstNum</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">bigNum</span> <span class="p">=</span> <span class="n">secondNum</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The second form, with the <code class="highlighter-rouge">else</code> is written as follows.</p>
+
+<p><strong>Listing 5. If Else construct</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">bigNum</span><span class="p">:</span> <span class="n">Int</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">secondNum</span> <span class="p">&gt;</span> <span class="n">firstNum</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">bigNum</span> <span class="p">=</span> <span class="n">secondNum</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+  <span class="n">bigNum</span> <span class="p">=</span> <span class="n">firstNum</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The difference in Kotlin is, the <code class="highlighter-rouge">if</code> construct is not a statement, it’s an expression. Which means we can do things like this</p>
+
+<p><strong>Listing 6. As an expression</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">bigNum</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">firstNum</span> <span class="p">&gt;</span> <span class="n">secondNum</span><span class="p">)</span> <span class="n">firstNum</span> <span class="k">else</span> <span class="n">secondNum</span>
+</code></pre></div></div>
+
+<p>Kotlin doesn’t have a switch statement, what it has is a <em>when</em> construct.  It’s form and structure is strikingly similar to the <em>switch</em> statement. In its simplest form, it can be implemented like this (Listing 7)</p>
+
+<p><strong>Listing 7. Branching with When</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">d</span> <span class="p">=</span> <span class="n">Date</span><span class="p">()</span>
+ <span class="kd">val</span> <span class="py">c</span> <span class="p">=</span> <span class="n">Calendar</span><span class="p">.</span><span class="n">getInstance</span><span class="p">()</span>
+ <span class="kd">val</span> <span class="py">day</span> <span class="p">=</span> <span class="n">c</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="n">DAY_OF_WEEK</span><span class="p">)</span>
+
+ <span class="k">when</span> <span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="p">{</span>
+   <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"Sunday"</span><span class="p">)</span>
+   <span class="m">2</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"Monday"</span><span class="p">)</span>
+   <span class="m">3</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"Tuesday"</span><span class="p">)</span>
+   <span class="m">4</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"Wednesday"</span><span class="p">)</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<p><em>When</em> matches the argument (the variable day) against all branches sequentially until it encounters a match; note that unlike in <em>switch</em> statements, when a match is found, it doesn’t flow through or cascade to the next branch, hence we don’t need to put a <em>break</em> statement.</p>
+
+<h1 id="looping">Looping</h1>
+
+<p>Kotlin also has a <em>while</em> loop, it works exactly the same in Kotlin as it does in Java.</p>
+
+<p><strong>Listing 8. while loop</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="m">0</span>
+  <span class="kd">val</span> <span class="py">finish</span> <span class="p">=</span> <span class="m">5</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">count</span><span class="p">++</span> <span class="p">&lt;</span> <span class="n">finish</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"counter = $count"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kotlin doesn’t have a <em>for</em> loop, at least not the one with the counter and incrementing variables inside. The <em>for</em> loop of Kotlin works with Iterable objects. Listing 9 shows a basic usage of the for loop.</p>
+
+<p><strong>Listing 9. Kotlin’s for loop</strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>  
+
+<span class="k">for</span><span class="p">(</span><span class="n">word</span> <span class="k">in</span> <span class="n">words</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="n">println</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="functions">Functions</h1>
+
+<p>The <em>main</em> function in Kotlin is written as follows</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span> 
+  <span class="n">println</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>The keyword <code class="highlighter-rouge">fun</code> is used to declare that the block is a function</li>
+  <li>Functions names are identifiers, just like in Java. The function name <code class="highlighter-rouge">main</code> is special, it denotes the entry point of the program, much like the <code class="highlighter-rouge">public static void main</code> in Java</li>
+  <li>The <code class="highlighter-rouge">args</code> argument of <code class="highlighter-rouge">main</code> is an <em>Array</em> of <em>String</em>. Kotlin doesn’t have a syntax to create arrays using the <code class="highlighter-rouge">[]</code> notation. The Kotlin <em>Array</em> is a generic class, it accepts a typed parameter, it’s <em>String</em> in this case. So, the <code class="highlighter-rouge">main</code> function accepts an array of <em>String</em></li>
+  <li>println is translated (under the hood) to a call to Java’s <code class="highlighter-rouge">System.out.println()</code>. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well</li>
+</ul>
+
+<h2 id="default-params">Default params</h2>
+
+<p>Function params can be assigned a default value, like this</p>
+
+<p><strong>Listing 3-1. connectDb function</strong></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">connectDb</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"localhost"</span><span class="p">,</span>
+              <span class="nv">user</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"root"</span><span class="p">,</span>
+              <span class="nv">password</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"password"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>All the params of <code class="highlighter-rouge">connectDb()</code> have default values, so we can call this function like this</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">connectDb</span><span class="p">()</span> <span class="c1">// no arguments passed</span>
+<span class="n">connectDb</span><span class="p">(</span><span class="s">"jupiter"</span><span class="p">)</span> <span class="c1">// just the 1st param</span>
+<span class="n">connectDb</span><span class="p">(</span><span class="s">"jupiter"</span><span class="p">,</span> <span class="s">"neptune"</span><span class="p">)</span> <span class="c1">// 1st and 2nd params</span>
+<span class="n">connectDb</span><span class="p">(</span><span class="s">"jupiter"</span><span class="p">,</span><span class="s">"neptune"</span><span class="p">,</span><span class="s">"saturn"</span><span class="p">)</span> <span class="c1">// or all three</span>
+</code></pre></div></div>
+
+<h2 id="named-params">Named params</h2>
+
+<p>Calling functions in your code can be further improved using named parameters.</p>
+
+<h2 id="variable-args">Variable args</h2>
+
+<h2 id="extension-functions">Extension functions</h2>
+
+<h2 id="infix-functions">Infix functions</h2>
+
+<h1 id="classes-and-objects">Classes and Objects</h1>
+
+<h1 id="access-modifiers">Access Modifiers</h1>
+
+<h1 id="companion-objects">Companion Objects</h1>
+
+<h1 id="higher-order-functions">Higher Order Functions</h1>
+
+<h1 id="collections">Collections</h1>
+
+<p>Kotlin did not build its collections framework from scratch. It actually used the existing Java Collection framework. So, Kotlin lists, sets or maps are actually the exact same list, sets and maps of Java. It’s not wrapped nor  transmogrified in any way.  But there are a couple of things we need to remember.</p>
+
+<ol>
+  <li>Each of the Java collection is represented in Kotin in two ways.</li>
+</ol>
+
+<h1 id="generics">Generics</h1>
+

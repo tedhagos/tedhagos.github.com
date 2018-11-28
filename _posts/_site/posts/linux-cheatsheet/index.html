@@ -1,0 +1,437 @@
+<h2 id="copy-pasting-clipboard-tofrom-terminal">Copy pasting clipboard to/from terminal</h2>
+
+<p>Can be done either via <em>xsel</em> or <em>xclip</em>. Xclip is part of most modern installations, so you it may be there in your installation already. The common usages are:</p>
+
+<p>You copied something in an X window (browser or editor etc), you want to paste the content to the terminal. Unfortunately the terminal doesn’t have access to the clipboard. But you can do this on the terminal using</p>
+
+<p><code class="highlighter-rouge">echo `xclip -selection clipboard -o`</code></p>
+
+<p>That command will echo the contents of clipboard to the console. If you wanted to append the clipboard contents to a file, you can do</p>
+
+<p><code class="highlighter-rouge">echo `xclip -selection clipboard -o` &gt;&gt; somefile.txt</code></p>
+
+<p>and that will do the trick</p>
+
+<p>If you  need to copy the <strong>contents of a text file to the clipboard</strong>. This can be done by</p>
+
+<p><code class="highlighter-rouge">cat somefile.txt | xclip -selection clipboard</code></p>
+
+<p>Now you can paste that content using <em>CTRL V</em></p>
+
+<p>Typing <code class="highlighter-rouge">xclip -selection clipboard</code> is just way too many keystrokes. Put an alias to it. In ~/.bashrc, add the following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias pbpaste="xclip -selection clipboard -o"
+alias pbcopy="xclip -selection clipboard"
+</code></pre></div></div>
+
+<p>Now you can</p>
+
+<p><code class="highlighter-rouge">echo `pbpaste` &gt;&gt; somefile.txt</code><br />
+<code class="highlighter-rouge">cat somefile.txt | pbcopy</code></p>
+
+<h2 id="find-the-version-name">Find the version name</h2>
+
+<p>Find version name — the wonky names, not the kernel number — of Ubuntu, Lubuntu, Mint or any of its many derivatives.</p>
+
+<p><code class="highlighter-rouge">lsb_release -a</code></p>
+
+<h2 id="is-my-linux-64-or-32-bit">Is my Linux 64 or 32 bit</h2>
+
+<p><code class="highlighter-rouge">uname -a</code></p>
+
+<p>Does it contain <em>X86_64</em>? If it does, it is 64 bit</p>
+
+<h2 id="find-out-how-much-disk-space-is-left">Find out how much disk space is left</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+</code></pre></div></div>
+
+<h2 id="change-the-password-for-root">Change the password for root</h2>
+
+<p><code class="highlighter-rouge">sudo passwd root</code></p>
+
+<p>If you have an admin, ask for permission first if it is okay to do this. If it is just your own machine, go ahead and knock yourself off. You don’t need to do things as root — always. For that there is <em>sudo</em></p>
+
+<h2 id="divide-your-terminal-screen-and-multiplex">Divide your terminal screen and multiplex</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install tmux</code></p>
+
+<p>You still need to configure tmux, but the basic idea is to launch tmux and do all your windowing there
+<code class="highlighter-rouge">tmux new -s &lt;session-name&gt;</code></p>
+
+<h2 id="secure-copy-file-from-one-machine-to-another">Secure Copy file from one machine to another</h2>
+
+<p><code class="highlighter-rouge">scp username@remotemachine:somefile.txt ~/somefile.txt</code></p>
+
+<p>This will copy <em>somefile.txt</em> on <em>remotemachine</em> to the local machine</p>
+
+<p><code class="highlighter-rouge">scp somefile.txt username@remotemachine:/somefile.txt</code></p>
+
+<p>It will copy <em>somefile.txt</em> from the local machine to <em>remotemachine</em></p>
+
+<h2 id="see-if-there-is-a-cups-configured-printer">See if there is a CUPS configured printer</h2>
+
+<p><code class="highlighter-rouge">lynx http://localhost:631</code></p>
+
+<p>You can use Chrome or Firefox if it better suits you</p>
+
+<h2 id="find-out-ram-and-cpu-info">Find out RAM and CPU info</h2>
+
+<p><code class="highlighter-rouge">cat /proc/meminfo</code> to find out how much RAM<br />
+<code class="highlighter-rouge">cat /proc/cpuinfo</code> to find out CPU information</p>
+
+<h2 id="mess-around-with-network-interfaces">Mess around with network interfaces</h2>
+
+<p>The file you want is in <code class="highlighter-rouge">/etc/network/interfaces/</code></p>
+
+<h2 id="cli-browsing">CLI browsing</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install lynx</code><br />
+<code class="highlighter-rouge">lynx http://tldp.org</code></p>
+
+<h2 id="display-calendar">Display calendar</h2>
+
+<p>With week numbers etc</p>
+<ul>
+  <li><strong>cal     :</strong> displays the current month</li>
+  <li><strong>cal 2014:</strong> displays the whole year</li>
+  <li><strong>ncal -w :</strong> shows the week numbers</li>
+  <li><strong>ncal -e:</strong> shows when Easter is</li>
+</ul>
+
+<h2 id="rip-youtube-videos">Rip YouTube videos</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install youtube-dl ffmpeg lame</code><br />
+<code class="highlighter-rouge">cd ~/Videos</code><br />
+<code class="highlighter-rouge">youtube-dl http:/youtubevideoaddress</code></p>
+
+<p>The downloaded video is in <em>.webm</em> format, to convert to wav, do this</p>
+
+<p><code class="highlighter-rouge">ffmpeg -i filename.webm filename.wav</code></p>
+
+<p>To convert to mp3, do this further</p>
+
+<p><code class="highlighter-rouge">lame filename.wav filename.mp3</code></p>
+
+<h2 id="rdp-from-windows-to-linux">RDP from Windows to Linux</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install xnest</code></p>
+
+<p>Edit <em>etc/gdm/gdm.conf</em> then uncomment <em>RemoteGreeter</em> in the daemon section. Just delete the pound sign. Next, find the <em>xdmcp</em> section and change the value of the <em>Enable Key</em>, set it to <em>true</em>.</p>
+
+<p>Log out so you can restart the GDM or you can execute this command</p>
+
+<p><code class="highlighter-rouge">sudo /etc/init.d/gdm restart</code></p>
+
+<p>After that, the box is ready to accept remote desktop connections from Windows clients</p>
+
+<p><strong>Get a download accelerator</strong></p>
+
+<p><code class="highlighter-rouge">sudo apt-get install axel</code><br />
+<code class="highlighter-rouge">cd ~/Downloads</code><br />
+<code class="highlighter-rouge">axel -n 10 http://wordpress.org/latest.zip</code></p>
+
+<p>The int value of <em>-n</em> means the number of threads it will use to pull the file. Go easy on this one, don’t try to punish the web server by setting a very high number. 10 seems a bit excessive already.</p>
+
+<h2 id="backup-a-mysql-database">Backup a MySQL database</h2>
+
+<p><code class="highlighter-rouge">sudo mysqldump -u YourUserName -p --all-databases &gt; /path/to/dump/file.backup</code></p>
+
+<p>The dumped file is basically text. They are SQL commands that has both structure and data of the dumped database. To restore the db from the dumped file, do this</p>
+
+<p><code class="highlighter-rouge">mysql -u YourUserName -p</code></p>
+
+<p><code class="highlighter-rouge">mysql&gt; create database nameOfNewDatabase</code><br />
+<code class="highlighter-rouge">mysql&gt; use nameOfNewDatabase</code><br />
+<code class="highlighter-rouge">mysql&gt; .\file.backup</code></p>
+
+<h2 id="manage-the-run-level-configuration">Manage the run level configuration</h2>
+
+<p>If you don’t want to always type <code class="highlighter-rouge">/etc/init.d/processname restart</code> get the run level config manager</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install sysv-rc-conf</code><br />
+<code class="highlighter-rouge">sysv-rc-conf</code></p>
+
+<p>Use the minus sign(-) to stop processes and plus(+) sign to restart them.</p>
+
+<h2 id="ssh-to-your-linux-box">SSH to your Linux box</h2>
+
+<p>First, you need to make it an SSH server</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install ssh</code></p>
+
+<p>Then from a remote host, connect to it</p>
+
+<p><code class="highlighter-rouge">ssh yourusername@remotehost</code></p>
+
+<p><em>yourusername</em> has to be a defined account in the remotehost computer. You will be asked, the first time around, to store an entry inside ~/.ssh/known_hosts, say yes to this question</p>
+
+<p><strong>Connect Windows to a CUPS printer</strong></p>
+
+<ol>
+  <li>Ping the CUPS printer, make sure there are no network connectivity issues</li>
+  <li>Go to <em>Add Printers</em> dialog window</li>
+  <li>Choose <em>Add network printer</em></li>
+  <li>Choose <em>My printer is not listed</em>, because it might not be</li>
+  <li>There will be a box provided, type <code class="highlighter-rouge">http://ipofCUPSprinter:631/nameofQueue</code>. The <em>nameofQueue</em> is something your sys admin would know, so ask him. Or you could simple open up a browser and go to <a href="http://ipofCUPSprinter:631">http://ipofCUPSprinter:631</a>, the name of the queue is usually listed in there under the <em>Printers</em> section</li>
+  <li>Select a driver for the printer, most Windows 7/8 boxes can simply pull this from the internet</li>
+</ol>
+
+<h2 id="install-a-print-server">Install a print server</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install cupsys</code></p>
+
+<p>Configure /etc/cups/cupsd.conf</p>
+
+<h2 id="install-java-re-and-sdk-from-oracle">Install Java RE and SDK from Oracle</h2>
+
+<p><code class="highlighter-rouge">sudo add-apt-repository ppa:webupd8team/java</code><br />
+<code class="highlighter-rouge">sudo apt-get update</code><br />
+<code class="highlighter-rouge">sudo apt-get install oracle-java8-installer</code><br />
+<code class="highlighter-rouge">sudo update-alternatives --config java</code></p>
+
+<h2 id="screen-capture">Screen capture</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>imagemagick  
+<span class="nb">cd</span> ~/Pictures</code></pre></figure>
+
+<dl>
+  <dt>import -window root Image1.png`</dt>
+  <dd>Take the screenshot of the whole screen</dd>
+  <dt>import Image2.png</dt>
+  <dd>The mouse pointer will turn to a crosshair, click and drag the screen region you want to capture</dd>
+  <dt>import -frame Image3.png</dt>
+  <dd>Just like the command above but this one captures the frame of the window region</dd>
+</dl>
+
+<h3 id="other-options">Other options</h3>
+
+<ol>
+  <li><code class="highlighter-rouge">sudo apt-get install shutter</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get install gimp</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get install gnome-screenshot</code> if you don’t mind using gnome</li>
+  <li>Just press PRT SC to get the whole screen</li>
+  <li>Shift PRT SC to get just a portion of the screen</li>
+  <li><code class="highlighter-rouge">scrot</code> This will silently take a screenshot of the whole screen, and will create a file on the current directory</li>
+</ol>
+
+<h2 id="view-an-image">View an image</h2>
+
+<p><code class="highlighter-rouge">gpicview Image01.png</code></p>
+
+<h2 id="mount-an-smb-or-cifs-share">Mount an SMB or CIFS share</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install smbclient</code><br />
+<code class="highlighter-rouge">sudo apt-get install cifs-utils</code><br />
+<code class="highlighter-rouge">sudo mount -t cifs //servername/folder ~/mountFolder</code></p>
+
+<p>If you don’t know the name of the folder that is shared, use the smbclient to discover it</p>
+
+<p><code class="highlighter-rouge">sudo smbclient -L servername</code></p>
+
+<p>If you don’t know the name of the server, although, you should, try to</p>
+
+<p><code class="highlighter-rouge">arp -n</code></p>
+
+<p>It should give you the list of servers that your machine already talked to. The problem is, what if you haven’t talked to that machine yet? You could try to</p>
+
+<p><code class="highlighter-rouge">ping 255.255.255.255</code></p>
+
+<p>Ping the whole network, try to see if you can recognize some servers in there</p>
+
+<h2 id="system-time-is-wrong-all-the-time">System time is wrong all the time</h2>
+
+<p>Edit <code class="highlighter-rouge">/etc/default/rcS</code></p>
+
+<p>UTC is enabled by default, set it to no</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UTC=no
+</code></pre></div></div>
+
+<p>Reboot</p>
+
+<h2 id="check-battery">Check battery</h2>
+
+<p>The <code class="highlighter-rouge">ibam</code> doesn’t seem to be applicable anymore. But instead there are two commands that might do the trick</p>
+
+<p><code class="highlighter-rouge">upower -e</code><br />
+<code class="highlighter-rouge">upower -i &lt;power source&gt;</code></p>
+
+<p>The -e option gives only the power sources, namely the battery and plugged power. The -i option gives a detailed info about the power source. So use the commands like this</p>
+
+<p><code class="highlighter-rouge">upower -i `upower -e`</code></p>
+
+<h2 id="terminal-color">Terminal color</h2>
+
+<p>Find out first how many colors does the terminal already have. The <code class="highlighter-rouge">tput colors</code> command will tell you the current number of colors</p>
+
+<p>On the <strong>~/.bashrc</strong> file, set the number of colors to 256</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.bashrc
+
+export TERM="xterm-256color"
+</code></pre></div></div>
+
+<p>If you do this, remove any setting from any tool e.g. tmux, emacs that will interfer with setting the TERM color.</p>
+
+<h2 id="hp-laserjet-p1102w">HP LaserJet P1102W</h2>
+
+<p>You will need quite a couple of things. This printer requires the hplip package. That is not all, it also requires a proprietary plugin from HP for it to function properly.</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install hplip hplip-gui</code></p>
+
+<p>Launch the HPLip Toolbox. If you are using Lubuntu with the default LXDE, it will be in the <strong>Preferences</strong> menu. If you are using <strong>gnome-do</strong>, it is so much easier to find, press the superkey + spacebar</p>
+
+<p>After installation, if you have configured the P1102W properly, your workstation is on the same subnet as the printer, the HPLip Toolbox should have installed it already. In fact, if you check the line printer status, <code class="highlighter-rouge">lpstat</code>, you should be able to see the printer installed already.</p>
+
+<p>You need to set a default printer. This can be done using <code class="highlighter-rouge">lpoptions -d PrinterName</code>. If the LinuxMachine is equipped with GUI, it can also be done there. In Lubuntu it’s under <strong>System tools</strong> - <strong>Printers</strong>. If you don’t set a default printer, you might not be able to use commands such as <code class="highlighter-rouge">lpstat, lpr, lprm</code> etc.</p>
+
+<h2 id="format-external-drive-to-fat32">Format external drive to FAT32</h2>
+
+<p><code class="highlighter-rouge">sudo apt-install dosfstools</code></p>
+
+<p>Find out the name of the actual device</p>
+
+<p><code class="highlighter-rouge">sudo fdisk -l</code></p>
+
+<p>If you simpy use fdisk without the sudo, you might not see all the disk</p>
+
+<p><code class="highlighter-rouge">sudo mkdosfs -F -I /dev/sdb1</code></p>
+
+<p>Substitute the actual device name to <strong>sdb1</strong>. The primary disk will be sda — sda1 is the first partition on the primary disk, sda2 is the second partition etc. If you have a second disk it will be <strong>sdb</strong>. If you have a USB external disk attached, it could be <strong>sdc</strong>. The disk has to be properly partitioned before you format it to FAT32.</p>
+
+<p>You can use <strong>fdisk</strong> or <strong>cfdisk</strong> to created partitions. There are GUI tools to do this as well like <strong>gparted</strong>. Actually, it’s a lot easier to use gparted, so just go use that.</p>
+
+<h2 id="hash-sum-mismatch-error">Hash Sum Mismatch Error</h2>
+
+<p>During a software update, you might encounter this error. Just remove the contents of <strong>apt/lists</strong></p>
+
+<p><code class="highlighter-rouge">sudo rm -fr /var/lib/apt/lists/*</code><br />
+<code class="highlighter-rouge">sudo apt-get update</code><br />
+<code class="highlighter-rouge">sudo apt-get upgrade</code></p>
+
+<h2 id="nvpy">nvPY</h2>
+
+<p><code class="highlighter-rouge">sudo apt-get install nvpy</code></p>
+
+<p>Create a config file for nvpy</p>
+
+<p><code class="highlighter-rouge">sudo touch ~/.nvpy.cfg</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># .nvpy.cfg
+
+[nvpy]
+notes_as_txt = 1
+txt_path = /home/thagos/Dropbox/notes
+
+#disable simplenote syncing, use 1 to enable it
+simplenote_sync = 0
+
+# 0 value will sort in alphanumeric mode
+sort_mode = 1
+</code></pre></div></div>
+
+<p>There is a detailed example and explanation of the cfg file in <a href="https://github.com/cpbotha/nvpy">https://github.com/cpbotha/nvpy</a></p>
+
+<h2 id="cmd-line-printing">cmd Line printing</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>cmd</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">lpstat -d</code></td>
+      <td>Find out if there is default printer configured</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpstat -p</code></td>
+      <td>See all the printers configured</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpstat -p -d</code></td>
+      <td>See all of the printers and the default printer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpr &lt;filename&gt;</code></td>
+      <td>Send file to the default printer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cat &lt;filename\&gt;  | lpr</code></td>
+      <td>does the same thing as <code class="highlighter-rouge">lpr \&lt;filename\&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpadmin</code></td>
+      <td>CLI command to configure cups printers, but it is really much easier to use the web interface. Use the browser and go to <code class="highlighter-rouge">http://localhost:631</code>. You can pretty much do everything there and without memorizing all the command line flags needed by lpadmin. If you have no choice but to do the admin on the command line, the</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpoptions -d printername</code></td>
+      <td>Set a default printer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpq</code></td>
+      <td>See what print jobs are in progress and if there are ones on the queue</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lprm \&lt;job id&gt;</code></td>
+      <td>Cancel a print job. You need to know the job id, that is why you need to <code class="highlighter-rouge">lpq</code> first</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lpoptions -p &lt;printername&gt;</code></td>
+      <td>Show the settings of the printer</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Either the <code class="highlighter-rouge">lpr</code> and <code class="highlighter-rouge">lp</code> command will send contents of a file to the configured printer. But before you can print, you need a properly configured printer. Use either <code class="highlighter-rouge">lpadmin</code> for that, or configure the printer via the web gui admin at http://printserverNameOrIpAddress:631.</p>
+
+<p>The most basic usage is to send the contents of a file to the configured printer, like so</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lpr filename.ext
+</code></pre></div></div>
+
+<p>Some options of the <code class="highlighter-rouge">lpr</code> command</p>
+
+<ul>
+  <li>**lpr -o landscape <filename>:** Print in landscape mode</filename></li>
+  <li>**lpr -o fit-to-page <filename>:** Fit everything in 1 page</filename></li>
+  <li>**lpr -o media=A4 <filename>:** Use A4 as paper</filename></li>
+  <li>**lpr -o media=Letter <filename>:** Use letter size</filename></li>
+  <li>**lpr -n 2 <filename>:** Print 2 copies</filename></li>
+  <li><strong>lpr -n 2 Collate=True:</strong> Print 2 copies and collate</li>
+</ul>
+
+<hr />
+
+<p><strong><em>Revision history</em></strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>version</th>
+      <th>date revised</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>21.April.2014</td>
+      <td>First draft</td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>20.October.2015</td>
+      <td>Rewrote some content, added some</td>
+    </tr>
+    <tr>
+      <td>1.2</td>
+      <td>15.December.2016</td>
+      <td>nvPY and printer notes</td>
+    </tr>
+  </tbody>
+</table>

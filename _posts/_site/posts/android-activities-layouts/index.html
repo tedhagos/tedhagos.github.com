@@ -1,0 +1,47 @@
+<p>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly “Hello World” in Java requires a <code class="highlighter-rouge">static void main</code> as an entry point. Android programs are the same, it also needs it’s own version of the “function main”.  But the entry point of an Android program isn’t just a function called “main”, —  it’s a bit more involved than that.</p>
+
+<h1 id="androids-trinity-of-main">Android’s Trinity of Main</h1>
+
+<p>A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file,  which ties all the project’s components and resources together — all Android programs require this manifest file. If you still remember working with JavaBean’s manifest file, this is sort of like that. It describes the contents of the project.</p>
+
+<p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It’s looking for a specific value of the <code class="highlighter-rouge">intent-filter</code> node, the runtime is trying to determine if this application has defined a “main function” in it. Listing 1 shows an excerpt from an a manifest file, this one has a “main function” defined in it.</p>
+
+<p><strong>Listing 1. Excerpt from AndroidManifest.xml</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">".MainActivity"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;intent-filter&gt;</span>
+    <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
+</code></pre></div></div>
+
+<p>An <code class="highlighter-rouge">intent-filter</code> that has a value of <code class="highlighter-rouge">android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There’s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code class="highlighter-rouge">activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is “MainActivity”</p>
+
+<h2 id="main-program-file">Main Program file</h2>
+
+<p>The main program of a project is an Activity class. When you use a tool like Android Studio to create your project, whatever name you use for your Activity class is automatically added to the manifest file, so you won’t have to worry about adding it to the manifest anymore.</p>
+
+<p>An Activity is single screen that a user sees in your application. They are the primary ways for your application to communicate to the user. You will capture inputs with them and you will show outputs using them. If you  built Java applications for the desktop before, you might think of them as AWT Frames.</p>
+
+<p>This class has to inherit from the <code class="highlighter-rouge">android.app.Activity</code> class or any one of its children.</p>
+
+<h2 id="layout-file">Layout file</h2>
+
+<h1 id="life-cycle-of-an-activity">Life Cycle of an Activity</h1>
+
+<p>The manifest, main program and main layout file are the bare minimum files we need to make a simple application. We need all three to create an entry point to our app, we will compose our “function main” using these three.</p>
+
+<p>An Activity is;</p>
+
+<ul>
+  <li>One of the four components of Android</li>
+  <li>Contains pre-built codes that we can use to show UI elements to the user</li>
+  <li>A focused thing that a user can do e.g. read a single email, type an SMS message etc.</li>
+</ul>
+
+<hr />
+
+<p>Photo credit: developer.android.com</p>
+

@@ -1,0 +1,164 @@
+<p>Photo credit <a href="https://xkcd.com/189/">xckd.com/189</a></p>
+
+<hr />
+
+<p><strong>Exer 1</strong>. Ask the user for input, then greet the user.  Store the user’s response in a variable and print it out.</p>
+
+<hr />
+
+<p><strong>Exer 2</strong>. Ask the user the year he was born, then print out his age.</p>
+
+<hr />
+
+<p><strong>Exer 3</strong>. Print a triangle of asterisk, see the output below</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+</code></pre></div></div>
+
+<p>There are 10 asterisk on the last line of the printed output</p>
+
+<hr />
+
+<p><strong>Exer 4</strong>. Print a triangle of asterisk, just like how you did it in Exer 3, but this time, ask the user how many layers of asterisk he wants to print.</p>
+
+<p>For additional difficulty, you may also ask the user what character to print, use that instead of the asterisk. If the user doesn’t input any character, then use the asterisk</p>
+
+<hr />
+
+<p><strong>Exer 5</strong>. FizzBuzz</p>
+
+<p>Loop through the numbers 1 through 100. If the number is odd, print “Fizz”. If it’s even, print “Buzz”. If the number is a multiple of 10, print “FizzBuzz”</p>
+
+<hr />
+
+<p><strong>Exer 6</strong> Create a module  with three functions in it. These functions are named as follows</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum_to(end)
+sum_of_even(end)
+sum_of_odd(end)
+</code></pre></div></div>
+
+<p>The module should be loadable from the <strong>REPL</strong>, sample usage is as follows</p>
+
+<p><img src="/images/python-exer-sums.png" alt="python-exer-sum_to" /></p>
+
+<p>You should also be able to run the module as a script, like so</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python sums.py 100
+Sum of numbers from 1 to 100 is 4950
+</code></pre></div></div>
+
+<p>Since there are 3 functions in the module, make the default function to run from <code class="highlighter-rouge">__main__</code> to be “sum_to”. It should be able to read the argument that was passed from the command line.</p>
+
+<p>For this exercise, you need the following skills and knowledge</p>
+
+<ol>
+  <li>loop constructs</li>
+  <li>work with functions and parameters</li>
+  <li>use of basic math operators, specifically the modulo</li>
+  <li>how to work with Python basic types, specifically converting from <code class="highlighter-rouge">str</code> to <code class="highlighter-rouge">int</code></li>
+  <li>knowledge of Python execution model, know when a module is run as a script and when it’s loaded from the REPL</li>
+</ol>
+
+<hr />
+
+<p><strong>Exer 7</strong>. Find the divisors of a number.</p>
+
+<p>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (A divisor is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python exer2.py
+
+Enter a number: 10 [enter]
+
+[1,2,5,10]
+</code></pre></div></div>
+
+<p>You don’t have to find an efficient algorithm like constant time, O(1), you can solve it by brute force methods or O(n). You can solve this this way</p>
+
+<ol>
+  <li>Get a number input from the user, convert it to a Number using the int() function, save it to a variable named num</li>
+  <li>Generate a range; you may or may not convert it to a list, it doesn’t matter</li>
+  <li>Create an empty list</li>
+  <li>Go through each item in the range, get the quotient of num and the current item (in the range) —  in remainder form, so modulo). If the remainder is == 0, add the current item in the list</li>
+  <li>Rinse and repeat, until all the items in the range is processed</li>
+</ol>
+
+<p>Remember that ranges are half-closed, meaning, it will exclude the last item in the range</p>
+
+<hr />
+
+<p><strong>Exer 8</strong> Greatest Common Factor</p>
+
+<p>Given two non-negative integers <em>firstNum</em> and <em>secondNum</em>, find the greatest common factor. There are many solutions to this problem, but for the purpose of our exercise, we’ll use the Euclidean algorithm. The steps are as follows;</p>
+
+<ol>
+  <li>Find the bigger (<em>bigNum</em>) and smaller (<em>smallNum</em>)</li>
+  <li>Get the quotient (in remainder form) of <em>bigNum</em> and <em>smallNum</em></li>
+  <li>If the remainder (<em>rem</em>) is <code class="highlighter-rouge">== 0</code>, then were done, the GCF is <em>smallNum</em></li>
+  <li>However, if <code class="highlighter-rouge">rem != 0</code>, then we do the following
+    <ol>
+      <li><code class="highlighter-rouge">bigNum = smallNum</code></li>
+      <li><code class="highlighter-rouge">smallNum = rem</code></li>
+      <li>Go back to step number 2 (Get the quotient of <em>bigNum</em> and <em>smallNum</em> … )</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Pass the numbers as argument to the command line. This module needs to be ran as a script.</p>
+
+<p>This is an exercise on the following areas</p>
+
+<ol>
+  <li>Use of Math operators</li>
+  <li>Python loop constructs</li>
+  <li>How to use built-in Python modules</li>
+  <li>Knowledge of Python data types and basic conversions</li>
+  <li>Knowledge of some data structures like <em>tuples</em> and <em>dereferencing</em> operations (if you use them for finding the bigger and smaller number, it’s entirely optional to use <em>tuples</em> though)</li>
+</ol>
+
+<hr />
+
+<p><strong>Exer 9</strong>. Guessing game</p>
+
+<p>Create a script that will do the following;</p>
+
+<ol>
+  <li>Generate a random integer (whole number), the range is 1 to 1000</li>
+  <li>Ask the user for input, ask him to guess a number from 1 to 1000</li>
+  <li>Compare your (random) number, from step 1, to the user input</li>
+  <li>If the user’s guess is lower that the random number, tell the user, by printing it on the screen “your guess is lower than the number”; otherwise, print “your guess is higher than the number</li>
+  <li>On the other hand, if the user has guessed it correctly, then print “you are right, the number is (print the number here)”</li>
+</ol>
+
+<hr />
+
+<p><strong>Exer 10</strong>. Multiples of 3 and 5</p>
+
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+
+<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+
+<p><em>Hint</em> 1: Answer is 233, 168  →  The hint is provided so that you can check your algorithm.  It’s the solution we need. (This is Project Euler problem # 1)</p>
+
+<p><em>Hint</em> 2: You can solve it this way</p>
+
+<ol>
+  <li>Generate a list or range from 1 to 1001 (remember that ranges are exclusive, so if you want to include 1000, you need to terminate the range at 1001)</li>
+  <li>Create two lists, call it listA and listB</li>
+  <li>Iterate through the range, for each item in it, see if it’s divisible by 3, if it is, add it to listA</li>
+  <li>Iterate through the range again, this time, for each item in it, see if it’s divisible by 5, if it is, add it to listB</li>
+  <li>listA and listB will have common items in it, because some numbers will be divisible by either 3 or 5</li>
+  <li>Combine listA and listB into a single list (listC) but you need to make sure to eliminate the duplicates (try looking into Python sets or using list comprehensions) — you’ll need to do a bit of research in here, visiting stackoverflow isn’t a bad idea</li>
+  <li>Now, you can sum all the items in listC</li>
+</ol>
+
+<p>Show the solution using both list comprehension and imperative code (for loops)</p>
+

@@ -1,0 +1,142 @@
+<p>Learn Android Studio 3 is out. You can get it in print or electronic download  from  the <a href="https://www.apress.com/gp/book/9781484231555">Apress website</a> or from <a href="https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;qid=1539173743&amp;sr=8-1&amp;keywords=learn+android+studio+3">Amazon</a>.</p>
+
+<h2 id="whats-inside">What’s inside</h2>
+
+<p>It’s a beginner’s book, it’s for you if you are;</p>
+
+<ul>
+  <li>new to Android programming</li>
+  <li>new to Android Studio</li>
+  <li>If you’re also new to Java, I’ve included a really really short introduction to the Java language (it’s in the Appendix). The book doesn’t assume you’re a Java expert, but  it would be great if you’ve done some Java programming before.</li>
+</ul>
+
+<p>The following sections shows some highlights of what you can learn from the book.</p>
+
+<h3 id="what-makes-up-an-application">What makes up an application</h3>
+
+<p>An Android app isn’t the same as a monolithic desktop app with a single executable file. You’ll learn tthe</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span> <span class="c1">// (1)</span>
+    <span class="c1">// your code here</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>(1)</strong> Android prefers to use XML to define the UI. This statement is glue-ing the Activity class to a UI layout defined in XML.  This relationship and other concepts  such as “inflating” are explained in the book</p>
+
+<h3 id="intents-and-event-handling">Intents and Event handling</h3>
+
+<p>Android apps are made up of loosely coupled <em>“components”</em>. They’re not just a bunch of objects you can activate by instantation.  Android has a mechanism for component activation; and <em>Intents</em> are smacked right in the middle of it. This component activation is deeply ingrained in Android’s architecture. You’ll work with detailed project demos touching on this topic</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTRA_MESSAGE</span> <span class="o">=</span> <span class="s">"com.example.myfirstapp.MESSAGE"</span><span class="o">;</span>
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="cm">/** Called when the user taps the Send button */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendMessage</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">DisplayMessageActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">editText</span><span class="o">.</span><span class="na">getText</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
+        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">EXTRA_MESSAGE</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+        <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="implicit-intents">Implicit Intents</h3>
+
+<p>Intents aren’t good only for activating other Activities. There are also <em>implicit Intents</em>. This is one of the gems of the Android platform, implicit intents lets your code use other people’s codes.  In the book, you’ll work wih project demos that use implicit Intents.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">switch</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">getId</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnwebaddress</span><span class="o">:</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"http://www.apress.com"</span><span class="o">);</span>
+      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_VIEW</span><span class="o">,</span><span class="n">uri</span><span class="o">);</span>
+      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnmap</span><span class="o">:</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"geo:40.7113399,-74.0263469"</span><span class="o">);</span>
+      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_VIEW</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
+      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnphonenumber</span><span class="o">:</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"tel:639285083333"</span><span class="o">);</span>
+      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_DIAL</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
+      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="n">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">(),</span> <span class="s">"Cannot resolve button click"</span><span class="o">);</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="using-the-appbar">Using the AppBar</h3>
+
+<p>Learn how to add menus to your application, and also how to handle the events</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="n">MenuInflater</span> <span class="n">inflater</span> <span class="o">=</span> <span class="n">getMenuInflater</span><span class="o">();</span> 
+  <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">main_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span> 
+  <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onOptionsItemSelected</span><span class="o">(</span><span class="n">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="k">switch</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">()){</span> 
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuFile</span><span class="o">:</span>
+      <span class="n">showMessage</span><span class="o">(</span><span class="s">"File"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuEdit</span><span class="o">:</span>
+      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Edit"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuHelp</span><span class="o">:</span>
+      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Help"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuExit</span><span class="o">:</span>
+      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Exit"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Default"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="run-in-the-background">Run in the background</h3>
+
+<p>By the default all codes run on the UI thread (main thread). There will be times when you need to run some codes in the background thread.</p>
+
+<p><img src="/images/ls3java-asynctask.png" alt=" asynctask" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">android.os.AsyncTask</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">extends</span> <span class="n">AsyncTask</span><span class="o">&lt;</span><span class="n">TextView</span><span class="o">,</span> <span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>  <span class="c1">// (1)</span>
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">Boolean</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="n">TextView</span><span class="o">...</span> <span class="n">textViews</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>  <span class="c1">// (2)</span>
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onProgressUpdate</span><span class="o">(</span><span class="n">String</span><span class="o">...</span> <span class="n">values</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>  <span class="c1">// (3)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>(1)</strong> The AsyncTask is parameterized, it’s a generic type so we need to pass arguments to it. These parameters are &lt;Params,Progress, Result&gt;</p>
+
+<p><strong>(2)</strong> This is the only method we are obliged to override. Inside this is where we should put the program logic which may take some time to complete</p>
+
+<p><strong>(3)</strong> Use this method to communicate progress to the user</p>
+
+<h2 id="about-the-author">About the author</h2>
+
+<p>Ted has been in software development for 20+ years. He’s a developer by trade, at the moment he’s the CTO and DPO of RenditionDigital International, a software development company based out of Dublin. He wrote a couple of books for Apress.</p>
+
+<p><img src="/images/las3.png" alt="" /></p>
+
+<p>You can get it from the <a class="inline-button" href="https://www.apress.com/gp/book/9781484231555" target="_blank">Apress website</a> or from <a class="inline-button" href="https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;qid=1539173743&amp;sr=8-1&amp;keywords=learn+android+studio+3" target="_blank">Amazon</a>. Don’t forget to leave a review. Thanks!</p>
+
