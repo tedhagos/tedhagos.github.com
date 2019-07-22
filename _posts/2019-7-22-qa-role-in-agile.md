@@ -1,5 +1,5 @@
 ---
-title: The changing role of QA Role in an Agile environment
+title: The changing role of QA in an Agile environment
 layout: post
 categories: sdlc
 comments: true
