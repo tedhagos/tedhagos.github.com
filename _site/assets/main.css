@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 1.1em/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 0.9em/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #000;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -57,7 +57,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 0.9625em; }
+  font-size: 0.7875em; }
 
 /**
  * Lists
@@ -99,7 +99,7 @@ blockquote {
   color: #828282;
   font-family: "Georgia", "Times New Roman", serif;
   padding-left: 15px;
-  font-size: 1.2375em;
+  font-size: 1.0125em;
   letter-spacing: -1px;
   font-style: normal; }
   blockquote > :last-child {
@@ -140,16 +140,16 @@ pre {
  */
 .wrapper {
   margin-top: 2em;
-  max-width: -webkit-calc(650px - (30px * 2));
-  max-width: calc(650px - (30px * 2));
+  max-width: -webkit-calc(700px - (30px * 2));
+  max-width: calc(700px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px; }
   @media screen and (max-width: 650px) {
     .wrapper {
-      max-width: -webkit-calc(650px - (30px));
-      max-width: calc(650px - (30px));
+      max-width: -webkit-calc(700px - (30px));
+      max-width: calc(700px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -204,9 +204,9 @@ table {
   position: relative; }
 
 .site-title {
-  font-size: 1.7875em;
+  font-size: 1.4625em;
   font-weight: 300;
-  line-height: 3.96em;
+  line-height: 3.24em;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
@@ -215,7 +215,7 @@ table {
 
 .site-nav {
   float: right;
-  line-height: 3.96em; }
+  line-height: 3.24em; }
   .site-nav .nav-trigger {
     display: none; }
   .site-nav .menu-icon {
@@ -274,7 +274,7 @@ footer {
   padding: 30px 0; }
 
 .footer-heading {
-  font-size: 1.2375em;
+  font-size: 1.0125em;
   margin-bottom: 15px; }
 
 .contact-list,
@@ -283,7 +283,7 @@ footer {
   margin-left: 0; }
 
 .footer-col-wrapper {
-  font-size: 1.03125em;
+  font-size: 0.84375em;
   color: #828282;
   margin-left: -15px; }
 
@@ -326,10 +326,10 @@ footer {
   flex: 1; }
 
 .page-heading {
-  font-size: 2.2em; }
+  font-size: 1.8em; }
 
 .post-list-heading {
-  font-size: 1.925em; }
+  font-size: 1.575em; }
 
 .post-list {
   margin-left: 0;
@@ -338,13 +338,13 @@ footer {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 0.9625em;
+  font-size: 0.7875em;
   color: #828282;
   text-align: center; }
 
 .post-link {
   display: block;
-  font-size: 1.65em; }
+  font-size: 1.35em; }
 
 /**
  * Posts
@@ -354,31 +354,31 @@ footer {
 
 .post-title {
   font-weight: 600;
-  font-size: 2.64em;
+  font-size: 2.16em;
   letter-spacing: -1px;
   line-height: 1;
   text-align: center; }
   @media screen and (max-width: 650px) {
     .post-title {
-      font-size: 2.475em; } }
+      font-size: 2.025em; } }
 
 .post-content {
   margin-bottom: 30px; }
   .post-content h2 {
-    font-size: 2.2em; }
+    font-size: 1.8em; }
     @media screen and (max-width: 650px) {
       .post-content h2 {
-        font-size: 1.925em; } }
+        font-size: 1.575em; } }
   .post-content h3 {
-    font-size: 1.7875em; }
+    font-size: 1.4625em; }
     @media screen and (max-width: 650px) {
       .post-content h3 {
-        font-size: 1.5125em; } }
+        font-size: 1.2375em; } }
   .post-content h4 {
-    font-size: 1.375em; }
+    font-size: 1.125em; }
     @media screen and (max-width: 650px) {
       .post-content h4 {
-        font-size: 1.2375em; } }
+        font-size: 1.0125em; } }
 
 h1, h2, h3, h4 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
