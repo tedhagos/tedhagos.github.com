@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>node.js | Ted Hagos</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="node.js" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;" />
+<meta property="og:description" content="Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;" />
+<link rel="canonical" href="http://localhost:4000/posts/nodejs/" />
+<meta property="og:url" content="http://localhost:4000/posts/nodejs/" />
+<meta property="og:site_name" content="Ted Hagos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-04-21T00:00:00+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/posts/nodejs/","headline":"node.js","dateModified":"2015-04-21T00:00:00+08:00","datePublished":"2015-04-21T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/nodejs/"},"description":"Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a .js extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing like the following;","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ted Hagos" /><!-- Twitter cards -->
+    <meta name= "twitter:site"    content = "@lovescaffeine" />
+    <meta name= "twitter:creator" content = "@lovescaffeine" />
+    <meta name= "twitter:title"   content = "node.js" />
+  
+    
+    <meta name= "twitter:description" content = "coder, trainer and author" />
+    
+  
+    
+    <meta name= "twitter:card"  content = "summary_large_image" />
+    <meta name= "twitter:image" content = "https://tedhagos.com/images/gandalf-programmer.jpg" />
+    
+    <!-- end of Twitter cards -->
+
+</head>
+<body>
+
+    <!--<header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ted Hagos</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/privacy/">Privacy Policy</a></div>
+      </nav></div>
+</header>
+-->
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">node.js</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-04-21T00:00:00+08:00" itemprop="datePublished">Apr 21, 2015
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Node scripts are not that different from the other JS scripts you’ve written in the past. You also need to put them on a filename with a <code class="highlighter-rouge">.js</code> extension. While nodeJS programs can be constructed in the REPL, that’s not how we will run the example scripts in this notes. Unless I specify otherwise, when you see a listing  like the following;</p>
+
+<p><strong>Listing 1 - hellonode.js</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">);</span>
+<span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"World"</span><span class="p">);</span>
+
+<span class="c1">// OUTPUT</span>
+<span class="s2">"World"</span><span class="p">,</span> <span class="nx">then</span> <span class="nx">after</span> <span class="mi">3</span> <span class="nx">seconds</span>
+<span class="s2">"Hello"</span>
+</code></pre></div></div>
+
+<p>It means the script needs to be saved in a file. Most of the time, the filename is specified as part of the Listing label, like Listing 1 above.</p>
+
+<p>By the way, regarding Listing 1, this is an example of an asynchronous code written in nodeJS. There are two take-aways here, they are;</p>
+
+<ol>
+  <li>Your code may not execute in the sequence your wrote them</li>
+  <li>Sometimes, they might not execute in the sequence and order you intended</li>
+</ol>
+
+<p>Many of the codes you will encounter in Node will be asynchronous, not unlike the timed-out Hello world example in Listing 1.</p>
+
+<h1 id="cmd-line-arguments">cmd Line arguments</h1>
+
+<p>Node captures arguments that were passed on the command line using the “process” object. This object is automatically included in all running node applications, so, we can reference this directly in our code. Edit the “hellonode.js” to include the following code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (process.argv.length &gt; 2) {
+  console.log(process.argv[2]); // print the first arg 
+}
+</code></pre></div></div>
+
+<h1 id="displaying-strings-etc">Displaying Strings etc.</h1>
+
+<p>You can print pretty much display everything to the STDOUT using <code class="highlighter-rouge">console.log()</code>, thats why this is the go to function for simple log messages.This function can handle formatted strings pretty much like the C-Style <code class="highlighter-rouge">printf</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log("This will display the number %d", 10); // This will display the number 10
+console.log("I will count %d,%d,%d and %d", 1,2,3,4); // I will count 1,2,3 and 4
+
+
+var name = "Joe";
+console.log("Hi %s", name); // Hi Joe
+</code></pre></div></div>
+
+<p>If you need to work with formatted strings and don’t really need to display it in the console. You can use the util.format function.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var name = "Joe";
+var str = util.format("Hi %s", name);
+console.log(str); // Hi Joe
+</code></pre></div></div>
+
+<p>If your version of nodeJS is 6.x, you should be able to use the template string syntax of ES6. Like the following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var name = "Joe";
+var str = `Hi ${name}`;  // these backticks, not single quotes
+console.log(str); // Hi Joe
+</code></pre></div></div>
+
+<p>To create template strings</p>
+
+<ol>
+  <li>Enclose the whole string to be composed in a pair of back ticks. The back tick character is found on the same key as the tilde (beside the numeric 1 key on top of your keyboard)</li>
+  <li>Enclose the variable inside the template construct “${ var name}”</li>
+</ol>
+
+<h1 id="async-codes">Async Codes</h1>
+
+<p>A typical (pseudo)code for accessing databases might look like this.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var cn = getConnection(cnString);
+var stmt = conn.createStatement();
+var rs = stmt.executeQuery(sqlStatement);
+
+
+while (rs.next()) {
+  console.log(rs.getString("lastname"));
+  console.log(rs.getString("firstname"));
+}
+</code></pre></div></div>
+
+<p>If we were to do this in Node, it will look very different</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>getConnection(cnString, (err, cn)=&gt; {
+  cn.createStatement((err, stmt)=&gt; {
+    stmt.executeQuery(sqlStatement,(err, rs)=&gt; {
+      while(rs.next()) {
+         console.log(rs.getString("lastname"));
+           console.log(rs.getString("firstname")); 
+      }
+       rs.on('rowdata', (err, data) =&gt; {
+      });
+    });
+  });
+});
+</code></pre></div></div>
+
+<p><strong>Some things to remember when using callbacks</strong></p>
+
+<ol>
+  <li>First parameter is always an error object</li>
+  <li>Next parameter is the result</li>
+</ol>
+
+<p>The following sample code shows how a function is invoked using a callback</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var fs=require('fs');
+
+
+function router() {
+  readFromSomewhere(function(err, data){
+    console.log(data);
+  });
+}
+
+
+function readFromSomewhere(cb) {
+  var returnval = "";
+  return fs.readFile('myfile.txt', 'utf-8', function(err, d){
+    if(!err){
+      cb(null,d);
+    }
+    else {
+      cb(err,null);
+    }
+  });
+}
+
+
+router();
+console.log("This line may or may not execute before readFromSomewhere finishes");
+</code></pre></div></div>
+
+<p>TODO. Point out the following</p>
+
+<ol>
+  <li>LHS and RHS</li>
+  <li>How the LHS is mapped as the second argument of the callback function</li>
+</ol>
+
+<h1 id="event-loop">Event Loop</h1>
+
+<p>[TODO]</p>
+
+<h1 id="callback">Callback</h1>
+
+<p>The simplest callback</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let foo = (arg) =&gt; {
+
+
+}
+</code></pre></div></div>
+
+<p>[TODO]
+Write the explanation text here.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log("global space -&gt; started");
+
+
+//// CLIENT 
+let client = () =&gt; {
+
+
+  let serverarg = 10;
+  server(serverarg, (err,response)=&gt; {
+    console.log("client -&gt; serverResponse : %d", response);
+  });
+  console.log("client -&gt; started, server is called");
+}
+
+
+//// SERVER
+let server = (arg, callback) =&gt; {
+
+
+  let err = null;
+  setTimeout(()=&gt; {
+    callback(err, arg * arg );
+  },100);
+  console.log("server -&gt; started");  
+  console.log(`server -&gt; arg ${arg}`);
+}
+
+
+client();
+console.log("global space -&gt; end");
+</code></pre></div></div>
+
+<p>[TODO]</p>
+
+<h1 id="module-require-and-exports">Module, Require and Exports</h1>
+
+<p>Javascript didn’t (still doesn’t) have a standard way of managing code libraries. If you need functionalities that are external to your source file, you need to import or include it in your project using the script tag</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src = "name of external file.js"&gt;
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>Many libraries tried to address this void in the JS ecosystem but eventually, only two competing libraries were left standing. These were AMD (Asynchronous Module Definition) and CommonJS. During the the early days of node up until 2013, Node used CommonJS but eventually moved away from it and used it’s own module and require system.</p>
+
+<h2 id="module">Module</h2>
+
+<p>A module is a file (mostly), but sometimes can also be a folder. If it is a folder, that folder needs to have a “index.js” file inside it. If it doesn’t have an index.js file inside it, it must have a “package.json” file which will specify what file will be loaded when the name of the module is required. The simplest scenario is that the name of the module is the name of a JS file.</p>
+
+<p>[TODO]</p>
+
+<h1 id="hello-web-server">Hello Web Server</h1>
+
+<p>Create a file named “server.js” and put the following codes in it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var h = require('http');                            // &lt;1&gt;
+
+
+var server = h.createServer(callmeBack);            // &lt;2&gt;
+
+
+function callMeBack(req, res) {                     // &lt;3&gt;
+  res.writeHead(200, {"Content-Type":"text/html"});
+  res.write("&lt;h1&gt;Hello Node&lt;/h1&gt;");
+  res.end();
+}
+
+
+server.listen(3000);                                 // &lt;4&gt;
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> pulls a library called “http” from the standard node library. When node was installed, the http library, together with a bunch of other libraries was also installed. The <code class="highlighter-rouge">require</code> method knows the location of these libraries</p>
+
+<p><strong>&lt;2&gt;</strong> The createServer method returns an http server object, the argument is a function which node will “call back” in the event that somebody tries to connect this server using any of the HTTP methods e.g. GET, POST, PUT, DELETE etc. This callback function, which we named “callMeBack” in our example, is typically known as a request handler because it is called once for every request the server gets</p>
+
+<p><strong>&lt;3&gt;</strong> The createServer will pass two objects to the callback function, these objects are the (1) http.ClientRequest and (2) http.ServerResponse — in that order. Both of these objects are created internally by the HTTP server and passed to the request handler (the “callMeBack” function) so we can deal with whatever data is inside the request object, and at the same time, so we can push whatever data we want to the requesting http agent (usually a browser).</p>
+
+<p><strong>&lt;4&gt;</strong> Finally, we start the server, in this example, we chose to open it at port 3000. The choice for port number is arbitrary, you can choose any integer from 1025 up to 65535 — port numbers 1024 and below are off limits by the OS because these are well known ports. If you are on a production environment, of course, you can choose port 80, but for purposes of practice and example, it’s best to stay away from 1024 and below.</p>
+
+<p>To run the web server use the command</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node server.js
+</code></pre></div></div>
+
+<p>To test if the web server is working, you can use the command</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://localhost:3000
+</code></pre></div></div>
+
+<p>Alternatively, you can open a web browser and navigate to <a href="#">http://localhost:3000</a>. You should be able to see the output of our sample code.</p>
+
+<p><strong>Refactoring the sample code</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var h = require('http');                          
+
+
+var server = h.createServer(function(req, res) {    // &lt;1&gt;
+  res.writeHead(200, {"Content-Type":"text/html"});
+  res.write("&lt;h1&gt;Hello Node&lt;/h1&gt;");
+  res.end();
+});            
+
+
+server.listen(3000);
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> The “callmeBack” function was called only once in the code, so there is no advantage to be gained by making it a named function, except that it’s more readable and obvious to beginning programmers, thus making it a bit more approachable, and maybe for that reason it’s worth bothering to write it that way. But if not that, we extract the “callMeBack” function and plunk it right smack into “createServer” as an anonymous function. I have no strong opinion between this shorter version or our previous verbose version, but best get used to the shorter version because most code example of node code, looks a lot like this</p>
+
+<p>If node is still running, you have to stop it (press CTRL + C twice) and start it again in order to reflect the changes in the source file. The starting and stopping of the server will be bothersome if you’re going to do it with such frequency. If you don’t want to be bothered by restart requirement every time the source file changes, you can use <code class="highlighter-rouge">nodemon</code> (short for node monitor) instead of node. You can get via npm like so</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g nodemon
+</code></pre></div></div>
+
+<p>The “-g” flag means we’re telling npm to install nodemon globally instead of just the local folder (where you ran the command”. This way, we can use nodemon from any directory</p>
+
+<blockquote>
+  <p>NOTE</p>
+
+  <p>If you’re coming from a previous background of web programming, say, .NET, Java or PHP, the Hello Web server example in here is not the equivalent of ASP pages, Servlets/JSP or or PHP web pages. Node is a low level API for creating performant web servers — actually it can do more than that, but thats for another discussion. Think of Node, at least in this example, in terms of IIS, Tomcat and Apache webserver. The Hello Web Server example, is an example on how to create a web server, and not web pages</p>
+</blockquote>
+
+<p>If you’ve written web apps before in PHP, Java or .NET, what we just did in the previous section might seem a bit primitive and quite off putting. In other web platforms, we didn’t have to create a web server, we would just create the html document or something that would transpile to html and leave the servicing of the documents to the web server. But don’t walk away just yet, programming in node is a low level enterprise but that is not a weakness, that is a strength. That hello world sample code above is just a bad sample, you’re not supposed to develop web applications like that. We’ll explore some more use cases and features of node in the up coming sections.</p>
+
+<h1 id="middleware">Middleware</h1>
+
+<p>It’s a piece of code that you put somewhere between <strong>createServer()</strong> call and before you do something with the actual request/response objects. It’s useful when you use it to filter, add or modify data as it comes through the http.ClientRequest before you reach the core business logic of your app.</p>
+
+<p><em>Listing middleware-1 pseudo code, where a middleware might reside</em></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+
+
+const app = http.createServer((req, res)=&gt; {
+
+
+  switch(req.url) {
+    /*
+      A middle ware would insert itself
+      right about in this place. It sits right after
+      the request and response objects have been created
+      internally by createServer() call, and right before
+      you get you get to do anything with the actual 
+      request
+    */
+    case '/':
+    case '/some/path':
+    default:
+  }
+
+});
+</code></pre></div></div>
+
+<p><em>Fig middleware-1 where a middle ware resides</em></p>
+
+<p><img src="/images/nodejs-middleware.png" alt="middleware" /></p>
+
+<p>S</p>
+
+<p>ome reasons for using middleware</p>
+
+<ul>
+  <li>Gives you a chance to do something with the request object before the request hits your core business logic</li>
+  <li>Useful for logging</li>
+  <li>Also useful for authentication</li>
+</ul>
+
+<p><strong>What is it, how do we create it and how do we use it?</strong></p>
+
+<ul>
+  <li>A middleware is a function</li>
+  <li>You need to inject it in your code right after http.ClientResponse and http.ServerResponse objects have been created. While it is possible to write your own code that will do all this injection, there are plenty out there that can already do this, one of the more popular packages is the <strong>connect</strong> framework</li>
+</ul>
+
+<p><strong>Example of a middleware</strong></p>
+
+<p>The following listing shows a typical code for a node webserver. What</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+
+
+const app = http.createServer((req, res)=&gt; {
+  // http handlers
+});
+
+
+app.listen(3000);
+</code></pre></div></div>
+
+<p>The connect middleware is a good example of a very basic middleware. Connect is inspired by some other frameworks that came before it e.g. Sinatra (Ruby) and NancyFX (.NET) . The connect middleware is not part of the core libraries. It’s an npm package. Before we can use it, we have to get it from the repository.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install connect --save
+</code></pre></div></div>
+
+<p>aaa</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+const connect = require('connect');  // &lt;1&gt;
+
+
+const app = connect();               // &lt;2&gt;
+
+
+http.createServer(app).listen(3000); // &lt;3&gt;
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> Like most modules that we want to use in the app, we need to require it</p>
+
+<p><strong>&lt;2&gt;</strong> We call the connect function and assign it to a variable</p>
+
+<p><strong>&lt;3&gt;</strong> The connect object now effectively takes over the handling of the <strong>http.ClientRequest</strong> and <strong>http.ServerResponse.</strong> Naturally, createServer method will pass these two objects to the middleware.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+const connect = require('connect');  
+
+
+const app = connect();               
+
+
+app.use((req, res) =&gt; {   // &lt;1&gt;
+  res.writeHead(200, {'Content-Type':'text/plain'}); // &lt;2&gt;
+  res.end("Hello connect");
+});
+
+
+http.createServer(app).listen(3000);
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> The connect object still receives the request and response objects created by createServer method</p>
+
+<p><strong>&lt;2&gt;</strong> This code is a typical way to handle incoming requests and sending a basic response</p>
+
+<p>If we were to use a middleware this way, there’s not much to be gained because we didn’t do anything differently, we just added an indirection in handling the request. Fortunately, this indirection allows us to do things like this.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+const connect = require('connect');  
+
+
+const app = connect();               
+
+
+app.use((req, res, next) =&gt; {        // &lt;1&gt;
+  req.username = authenticateUser(); // &lt;2&gt;
+  next();                            // &lt;3&gt;
+});
+
+
+app.use((req, res, next) =&gt; {
+  // do something else here          // &lt;4&gt;
+  next();                            // &lt;5&gt;
+});
+
+
+app.use((req, res) =&gt; {              // &lt;6&gt;
+  res.writeHead(200, {'Content-Type':'text/plain'}); 
+  res.end("Hello connect");
+});
+
+
+http.createServer(app).listen(3000);
+</code></pre></div></div>
+
+<p><strong>&lt;1&gt;</strong> We already know that our connect object receives the request and response objects from the createServer, in addition to these two objects, connect creates a third one called <strong>next</strong>. This is where the real power (and utility) of a middleware comes in. The <strong>next</strong> object allows us to chain calls to other middlewares, if there are any. To inject a middleware, we use the “<strong>connect.use</strong>” function and pass the middleware as the argument</p>
+
+<p><strong>&lt;2&gt;</strong> We can do lots of things in this middleware, but in this code, we are simply adding an attribute to the request object (JS objects are malleable, you can attach arbitrary properties or attributes to any object).This is just pseudocode, obviously we don’t have an implementation of the “authenticateUser” function. This code is only meant to illustrate the the possibility of things we can do inside a middleware</p>
+
+<p><strong>&lt;3&gt;</strong> Calling the next function, allows the chaining effect of middlewares to happen, it allow the control to flow to the next (available) middleware</p>
+
+<p><strong>&lt;4&gt;</strong> This is just another middleware in the chain, you can do something else in here e.g. parse the http.ClientRequest object, log something etc.</p>
+
+<p><strong>&lt;5&gt;</strong> We want the processing of request/response to continue on to the next middleware in the chain, sowe need to call <strong>next</strong></p>
+
+<p><strong>&lt;6&gt;</strong> This is the end of the chain, technically, this block of code is still a middleware but it doesn’t call the next function anymore, so the request and response will finally be handled here and a response will be given to the user</p>
+
+<blockquote>
+  <p>IMPORTANT</p>
+
+  <p>The order in which you write the middleware is material. The middleware(s) will be executed in the order they appear in the code.</p>
+</blockquote>
+
+<p><em>Complete listing of a sample code</em></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const http = require('http');
+const connect = require('connect');
+
+
+const port = process.env.PORT || 3000;
+const app = connect();
+
+
+
+
+let logger = (req, res, next) =&gt; {
+  console.log(`req.url : ${req.url} | method : ${req.method}`);
+  next();
+}
+
+
+
+
+app.use((req, res, next)=&gt; {
+  req.username = "hagos,ted";
+  next();
+});
+app.use(logger);
+app.use((req, res)=&gt;{
+  if(req.url === '/') {
+    res.writeHead(200, {'Content-Type':'text/plain'});
+    res.end(`Hello connect | username : ${req.username}`);
+  }
+  else {
+    res.writeHead(404, {'Content-Type':'text/plain'});
+    res.end('You are lost');
+  }
+});
+
+
+
+http.createServer(app).listen(port, ()=&gt; {
+  console.log("connect started on port %d", port);
+});
+</code></pre></div></div>
+
+<h1 id="async-patterns">Async Patterns</h1>
+
+<p>[TODO]</p>
+
+<ul>
+  <li>Callbacks</li>
+  <li>Events</li>
+  <li>Promises</li>
+  <li>Async Await</li>
+  <li>Continuation patterns</li>
+</ul>
+
+
+  </div>
+
+  
+    <div class="newsletter-box">
+      I hope the article was helpful, if you'd like to get more like these piped into your email, you can <a href="https://buttondown.email/tedhagos" target="_blank">subscribe to the newsletter</a>.
+    </div>
+  <a class="u-url" href="/posts/nodejs/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+  <p>
+    <a href="/" class="footer-link">Home</a>
+    <a href="/about/" class="footer-link">About</a>
+    <a href="/blog/" class="footer-link">Blog archives</a>
+    <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
+  </p>
+  copyright Ted Hagos &copy; 2020
+  <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:intline" class="footer-link"></a> -->
+
+  </div>
+
+</footer>
+</body>
+
+</html>

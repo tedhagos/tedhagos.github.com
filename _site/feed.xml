@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-22T17:40:15+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The changing role of QA in an Agile environment</title><link href="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html" rel="alternate" type="text/html" title="The changing role of QA in an Agile environment" /><published>2019-07-22T00:00:00+08:00</published><updated>2019-07-22T00:00:00+08:00</updated><id>http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile</id><content type="html" xml:base="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html">&lt;p&gt;Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.&lt;/p&gt;
+
+&lt;p&gt;It has been two decades since the Agile manifesto was published, and we spent the good part of it trying to figure out how testers fit into this new paradigm; we are still figuring it out, but we have gotten better. Part of the reason we got better is because the tools have gotten better. The proliferation of automated testing techniques has immensely helped us transition from waterfall to the highly iterative Agile practice.&lt;/p&gt;
+
+&lt;p&gt;A key reason why high-performing teams have succeeded in adopting Agile practices is because the roles within the development team have shifted. Nowadays, everyone tests.&lt;/p&gt;
+
+&lt;p&gt;A typical Agile team is composed of 3-6 developers, a product owner, a SCRUM master and a QA engineer. We no longer use an army of testers to bookend the development process. As the team matures, everyone becomes more and more cross-functional. Everybody becomes a tester. Functional testing is no longer the exclusive province the QA engineer; this has become the task of the developer. The advancement of testing frameworks and the team being more cross-functional, makes it possible for functional testing to occur at a point very close to requirements definition.&lt;/p&gt;
+
+&lt;p&gt;The role of the QA engineer also has shifted. Now that QA is no longer saddled with functional testing, they can focus on more value-added testing like looking for edge cases, exploratory and integration testing. Together with the shift of responsibilities, is the shift on core skills of the QA; now, they can also code. The ability to speak the same language with the development team is a big time saver.&lt;/p&gt;
+
+&lt;p&gt;The traditional QA task of manual testing has not gone away. It is still as important today as it was then. While we took great strides in automated testing, it cannot tell us the whole story. Automated testing cannot tell us if we built the right thing; it can only tell us that we built the thing right; this is why we still bookend the sprints with manual and usability testing.&lt;/p&gt;
+
+&lt;p&gt;It is good to include Product Owners in the manual testing phase, in fact, it should be part of their responsibilities. This phase of testing is an excellent time to focus on what matters most to the biggest stakeholders (the users). In the absence of a Product Owner, the QA engineer can step into this role.&lt;/p&gt;
+
+&lt;p&gt;The Agile practices has resulted to tremendous benefits in code delivery. It made the development team nimbler and more responsive to changing business needs. The QA and development teams will continually evolve, up until the point where their responsibilities  are combined; clearly, that is where we are headed now.&lt;/p&gt;</content><author><name></name></author><summary type="html">Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/agile.png" /></entry><entry><title type="html">Android Jetpack UI Navigation</title><link href="http://localhost:4000/android/2018/11/24/android-navigation.html" rel="alternate" type="text/html" title="Android Jetpack UI Navigation" /><published>2018-11-24T00:00:00+08:00</published><updated>2018-11-24T00:00:00+08:00</updated><id>http://localhost:4000/android/2018/11/24/android-navigation</id><content type="html" xml:base="http://localhost:4000/android/2018/11/24/android-navigation.html">&lt;p&gt;This is a test&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a test</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/android/images/uinavigation.png" /></entry><entry><title type="html">Kotlin Collections</title><link href="http://localhost:4000/posts/working-with-kotlin-collections/" rel="alternate" type="text/html" title="Kotlin Collections" /><published>2018-10-17T00:00:00+08:00</published><updated>2018-10-17T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-collections</id><content type="html" xml:base="http://localhost:4000/posts/working-with-kotlin-collections/">&lt;p&gt;The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.&lt;/p&gt;
+
+&lt;p&gt;Before we go to the code examples and more details, something needs to be said why it is called a collections framework. The reason it’s called a framework is because the data structures are very diverse, in and of themselves. Some of them puts constraints on how we go through the collection, they impose certain order of traversal. Some of the collections constrains the uniqueness of the data elements, they won’t allow you to put duplicates. And some of them lets us work with the collections in pairs, like in a dictionary entry, you’ll have a key with a corresponding value.&lt;/p&gt;
+
+&lt;p&gt;.At the top of the hierarchy are the interfaces &lt;em&gt;Iterable&lt;/em&gt; and &lt;em&gt;MutableIterable&lt;/em&gt; —  refer to the big image at the beginning of this article. They are the parents of all the collection classes we will work with. As you may have noticed in the diagram, each Java collection has two representations in Kotlin; a read-only one and a mutable one. The mutable interfaces map directly to the Java interfaces while the immutable interfaces lack all of the mutator methods of their mutable counterparts.&lt;/p&gt;
+
+&lt;p&gt;Kotlin doesn’t have a dedicated syntax for creating lists or sets, but it does provide us with library functions to facilitate creation. Table 1 lists some of them.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Table 1. creation functions for collections&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Collection&lt;/th&gt;
+      &lt;th&gt;read only&lt;/th&gt;
+      &lt;th&gt;read-write&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;list&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;listOf&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mutableListOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;arrayListOf&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;set&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;setOf&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mutableSetOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;hashSetOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;linkedSetOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sortedSetOf&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;map&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mapOf&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mutableMapOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;hashMapOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;linkedMapOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sortedMapOf&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; Although the map class doesn’t inherit from either Iterable or MutableIterable (Figure 6-1), it’s still represented in Kotlin as two distinct versions, a mutable and an immutable one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;list&quot;&gt;List&lt;/h1&gt;
+
+&lt;p&gt;A list is a type of collection that has a specific iteration order.  It means that if we added a couple of elements to the list, and then we step through it, the elements would come out in a very specific order — it’s the order by which they were added or inserted.  They won’t come out in a random order or reverse chronology, but precisely in the sequence they were added.  It implies that each element in the list has a placement order, an index number that indicates its ordinal position. The first element to be added will have its index at 0, the second will be 1, the third will be 2, so on and so forth. So, just like an array, it is zero-based&lt;/p&gt;
+
+&lt;h1 id=&quot;set&quot;&gt;Set&lt;/h1&gt;
+
+&lt;p&gt;Sets are very similar to lists, both in operation and in structure, so, all of the things we’ve learned about lists applies to sets as well. Sets differ from lists in the way it puts constraints on the uniqueness of elements.  It doesn’t allow duplicate elements or the same elements within a set. It may seem obvious to many what the “same” means, but Kotlin, like Java has a specific meaning for “sameness”.  When we say that two objects are the same, it means that we’ve subjected the objects to a test for structural equality. Both Java and Kotlin defines a method called equals() which allows us to determine equivalence relationships between objects.  This is generally what we mean by “sameness”. &lt;/p&gt;
+
+&lt;h1 id=&quot;map&quot;&gt;Map&lt;/h1&gt;
+
+&lt;p&gt;Unlike lists or sets, maps aren’t a collection of individual values, but rather, they are a collection of pairs of values. Think of a map like a dictionary or a phone book, its contents are organized using a key-value pair. For each key in a map, there is one and only one corresponding value.  In a dictionary example, the key would be the &lt;em&gt;term&lt;/em&gt;, and its value would be the &lt;em&gt;meaning&lt;/em&gt; or the &lt;em&gt;definition&lt;/em&gt; of the term.&lt;/p&gt;
+
+&lt;p&gt;The keys in a map is unique. Like sets, maps do not allow duplicate keys. However, the values in a map are not subjected to the same uniqueness constraints , two or more pairs in map may have the same value&lt;/p&gt;
+
+&lt;h1 id=&quot;collection-protocols&quot;&gt;Collection Protocols&lt;/h1&gt;
+
+&lt;p&gt;The Kotlin team probably didn’t refer to the set of actions you can do on collections as “collections protocol”, I just thought it would be cool to borrow the term from Python . Anyhoo, one of the benefits of working with the collections framework is that, your knowledge and skill on lists, for example, commutes nicely to sets and maps. This way, you learn a set of skills for one kind of collection and you can use it on the other two. This is one of the reasons it’s called a framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Table 2. Common things you can find or do in the collection classes&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;function or property&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;tells you how many elements are in the collection.  Works with lists, sets and maps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;isEmpty()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;returns True if the collection is empty, False if it’s not.  Works with lists, sets and maps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;contains(arg)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;returns True if arg is within the collection. Works with lists, sets and maps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;add(arg)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;add arg to the collection. This function returns true if arg was added — in the case of a list,  arg will always be added. In the case of a set, arg will be added and return true the first time, but if the same arg is added the second time, it will return False. This member function is not found on maps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;remove(arg)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;returns True if arg was removed from the collection, returns False is the collection is unmodified&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;iterator()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;returns an iterator over the elements of the object. This was inherited from the Iterable interface. Works with lists, sets and maps&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;traversing-collections&quot;&gt;Traversing collections&lt;/h1&gt;
+
+&lt;p&gt;The Collections class inherits from the Iterable interface. That means all Collections classes is also an Iterable object. What that means is, we can get an iterator object from a Collections class.   An iterator lets us step through the elements of an object. In each step, the value of the element is exposed to us, we can use in whatever way we want e.g. assign it to a variable, transform it or store it somewhere else, etc.&lt;/p&gt;
+
+&lt;p&gt;Sample code below shows how to create an immutable list of Strings and walk through each of  its elements.  You’ve probably done quite a lot of these when you wer coding in Java&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;basket&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;iter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasNext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;basket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The sample code below is another way of traversing the same list of Strings, but this example uses the &lt;em&gt;forEach&lt;/em&gt; function. This is a lot shorter, and is the preferred way, some people would even say, idiomatic way, of working with Kotlin collections.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fruits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forEach&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;filter-function&quot;&gt;Filter function&lt;/h1&gt;
+
+&lt;p&gt;Filter and&lt;/p&gt;
+
+&lt;h1 id=&quot;map-function&quot;&gt;Map function&lt;/h1&gt;</content><author><name></name></author><summary type="html">The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now. Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/kotlin-collections-classes.png" /></entry><entry><title type="html">If I have a Delorean</title><link href="http://localhost:4000/posts/if-i-have-a-delorean/" rel="alternate" type="text/html" title="If I have a Delorean" /><published>2018-10-05T00:00:00+08:00</published><updated>2018-10-05T00:00:00+08:00</updated><id>http://localhost:4000/posts/if-i-have-a-delorean</id><content type="html" xml:base="http://localhost:4000/posts/if-i-have-a-delorean/">&lt;p&gt;There was discussion post in &lt;strong&gt;dev.to&lt;/strong&gt; &lt;a href=&quot;https://dev.to/sergiotapia/what-is-your-best-advice-for-a-junior-software-developer-32gn&quot;&gt;what is your best advise for a junior software developer&lt;/a&gt;. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;&lt;/p&gt;
+
+&lt;p&gt;If I have Doc Brown’s DeLorean, this is what I would advise my younger self;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Keep your head down during code reviews. Humility goes a long way. They’re not criticizing you, it’s your code they’re after. It’s not personal&lt;/li&gt;
+  &lt;li&gt;Do the required reading before you get knee-deep in the code. You have a propensity to shoot from the hip, curb that enthusiasm. Don’t read the manual only when you’re in trouble&lt;/li&gt;
+  &lt;li&gt;Design patterns are nice, but you don’t have to use all of them, all the time in every code you write&lt;/li&gt;
+  &lt;li&gt;Learn Python early. Get to the Python REPL and type &lt;code class=&quot;highlighter-rouge&quot;&gt;import this&lt;/code&gt;. Learn it by heart, then read no. 3 (above) again&lt;/li&gt;
+  &lt;li&gt;Coffee, pizza and chips are nice now, but 20 years from now, you’re gonna wish you didn’t eat those&lt;/li&gt;
+  &lt;li&gt;In a couple of years, social media is gonna be big. Stay out of it&lt;/li&gt;
+  &lt;li&gt;Those math subjects you hated, better get more comfortable with them. There’s gonna be a thing called “machine learning”, it’s gonna be big, you’re gonna need them maths&lt;/li&gt;
+  &lt;li&gt;Stop wondering when you will graduate from being a junior, you’ll know it when you’re out of it. When you start making technical choices and you recognize that there are choices to be made; then you’re not so junior anymore&lt;/li&gt;
+  &lt;li&gt;Be polite when asking questions. If you don’t want to get the RTFM response (a lot), read Eric Raymond’s guide on &lt;a href=&quot;http://www.catb.org/esr/faqs/smart-questions.html&quot;&gt;how to ask smart questions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;When you’re tech lead or any of your bosses calls you for a meeting, always bring a pen and paper. Write your notes&lt;/li&gt;
+  &lt;li&gt;If it’s taking you more than 3 hours to figure out something, ask for help, tell your tech lead what’s eating you up (but make sure that before you do this, you’ve read no. 9 above)&lt;/li&gt;
+  &lt;li&gt;If you promised your tech lead (client, coworker or boss) you will deliver the thing on Friday, and you’re not gonna make it, tell them early. Don’t tell them on Friday&lt;/li&gt;
+  &lt;li&gt;Exercise. You’re brain (and your blood pressure) will love you for it&lt;/li&gt;
+  &lt;li&gt;When the book “Pragmatic programmer, journeyman to master” comes out. Read it&lt;/li&gt;
+  &lt;li&gt;From time to time, write a program in LOLCODE, don’t lose your humor&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">There was discussion post in dev.to what is your best advise for a junior software developer. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/backtothefuture.jpg" /></entry><entry><title type="html">Learn Android Studio 3 Kotlin</title><link href="http://localhost:4000/posts/learn-android-studio3-kotlin/" rel="alternate" type="text/html" title="Learn Android Studio 3 Kotlin" /><published>2018-10-04T00:00:00+08:00</published><updated>2018-10-04T00:00:00+08:00</updated><id>http://localhost:4000/posts/learn-android-studio-3</id><content type="html" xml:base="http://localhost:4000/posts/learn-android-studio3-kotlin/">&lt;p&gt;It’s finally here. Learn Android Studio 3 with Kotlin is available. You can get it from &lt;a class=&quot;inline-button&quot; href=&quot;https://www.apress.com/gp/book/9781484239063&quot; target=&quot;_blank&quot;&gt;Apress website&lt;/a&gt; or from &lt;a class=&quot;inline-button&quot; href=&quot;https://www.amazon.com/Learn-Android-Studio-Kotlin-Development/dp/1484239067/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539340099&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3+with+kotlin&quot; target=&quot;_blank&quot;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Kotlin edition is roughly 100+ pages thicker than the Java edition. It has more worked examples than the previous edition. BTW, it isn’t (just) about Android Studio; the book has 3 learning curves, 1) Android SDK 2) Kotlin and 3) Android Studio. Chapters 1-7 are about Kotlin and chapters 8-20 are about Android programming (SDK). So, it’s a good introductory book if you’re new to Kotlin or Android programming.&lt;/p&gt;
+
+&lt;h2 id=&quot;chapter-overviews&quot;&gt;Chapter overviews&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 1&lt;/strong&gt; “Getting into Kotlin” introduces the language. It tells you how to setup Kotlin in various ways on the 3 major platforms macOS, Linux and Windows.  It also contains instructions on how to create, configure and run a project in IntelliJ — this is the IDE I used to create all the Kotlin code samples for chapters 1-7.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 2&lt;/strong&gt; “Kotlin Basics” dives into the language fundamentals of Kotlin. You’ll learn the basic building blocks of a Kotlin program e.g. Strings, control structures, exception handling, basic data types. You’ll also see some of Kotlin’s features that are very different from Java, like it’s treatment of nullable and non-nullable types.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 3&lt;/strong&gt; “Functions”. There’s a whole chapter dedicated to functions because Kotlin’s functions have something new up its sleeves. It has all the trimmings of a modern language like default and named parameters, infix functions and operators; and with Kotlin, we can also create extension functions. Extension functions lets you add behavior to and existing class, without inheriting from it and without changing its source&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 4&lt;/strong&gt; “Working with Types”. This chapter deals with object-oriented topics. You’ll learn how Kotlin treats interfaces, classes and access modifiers. We’ll also learn about the new &lt;em&gt;data classes&lt;/em&gt; in Kotlin. It also talks about &lt;em&gt;object declarations&lt;/em&gt; — it’s the replacement for Java’s &lt;em&gt;static&lt;/em&gt; keyword.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 5&lt;/strong&gt; “Lambdas and Higher Order Functions”.  Now we go to Kotlins’s functional programming capabilities. It discusses how to create and use higher-order functions, lambdas and closures.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 6&lt;/strong&gt; “Collections” walks through the classic collection classes of Java and how to use them in Kotlin.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 7&lt;/strong&gt; “Generics”. Using generics in Kotlin isn’t that much different in Java. If generics is old hat for you, then most of this chapter will be a review. But try to read through it still because it talks about &lt;em&gt;reified generics&lt;/em&gt;, which Java doesn’t have.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 8&lt;/strong&gt; “Android Studio Introduction and Setup”.  Talks a bit about Android’s history, its technical make-up and the OS. It also walks you through the installation and setup of Android Studio.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 9&lt;/strong&gt; “Getting Started” gets you grounded on the fundamental concepts about Android programming. It talks about components, what they are, how they are organized and come together in an Android app. In this chapter, you’ll learn how the basic workflow of an Android project — how to create a project and run it on an emulator&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 10&lt;/strong&gt; “Activities and Layouts”. Here, we’ll learn how to build a UI. Activity, Layout and View objects are the building blocks for an Android UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 11&lt;/strong&gt; “Event Handling”. You’ll learn how to react to user-generated events like clicks and longclicks. We’ll use some concepts that we learned in Chapter 4 and 5 (inner objects and lambdas) to help us write more compact and succinct event-handling code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 12&lt;/strong&gt; “Intents”.  This chapter reviews some fundamental concepts on Android programming, specifically the concept of components; which dovetails to the topic of Intents. You’ll learn how to use Intents to launch another Activity and pass data in-and-around Activities&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 13&lt;/strong&gt; “Themes and Menus”. This is a short chapter. You’ll learn how to add styles/themes to your app. We’ll also work with some menus and the ActionBar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 14&lt;/strong&gt; “Fragments”.  You’ll learn how to use Android Fragments as a more granular composition unit for UI. We’ll also see how to use Fragments to address changes in device orientation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 15&lt;/strong&gt; “Running in the background”. Any non-trivial app will do something substantial like read from a file, write to a file, download something from the network. These activities will likely take more than 16ms to execute (you’ll learn why 16ms should be the upper limit and why you should not exceed it). When that happens, the user will see and feel “jank”.  This chapter discusses the various ways on how to run our code in a background thread.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 16&lt;/strong&gt; “Debugging” shows some of the things you can do to debug your apps in Android Studio 3. It goes through a list of the kinds of errors you might encounter while coding and what you can do in Android Studio to respond them&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 17&lt;/strong&gt; “SharedPreferences”. When you need to save simple data, you can use the SharedPreferences API. This chapter walks you through detailed examples on how to do that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 18&lt;/strong&gt; “Internal Storage”. Just like in SharedPreferences, you can also store data using the Internal Storage API of Android. This chapter discusses internal and external storage&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 19&lt;/strong&gt; “BroadcastReceivers”. Android has a way to make highly-decoupled components talk to each other. This chapter talks about how BroadcastReceivers can facilitate messaging for Android components.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chapter 20&lt;/strong&gt; “App Distribution”. When you’re ready to distribute your app, you’ll need to sign it and list it in a marketplace like Google Play. This chapter walks you through the steps on how to do it&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-author&quot;&gt;About the author&lt;/h2&gt;
+
+&lt;p&gt;Ted has been in software development for 20+ years. He’s a developer by trade, at the moment he’s the CTO and DPO of RenditionDigital International, a software development company based out of Dublin. He wrote a couple of books for Apress.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/las3kotlinwhite.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get it from the &lt;a class=&quot;inline-button&quot; href=&quot;https://www.apress.com/gp/book/9781484239063&quot; target=&quot;_blank&quot;&gt;Apress website&lt;/a&gt; or from &lt;a class=&quot;inline-button&quot; href=&quot;https://www.amazon.com/Learn-Android-Studio-Kotlin-Development/dp/1484239067/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539340099&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3+with+kotlin&quot; target=&quot;_blank&quot;&gt;Amazon&lt;/a&gt;. Thanks!&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s finally here. Learn Android Studio 3 with Kotlin is available. You can get it from Apress website or from Amazon.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/las3kotlincover.png" /></entry><entry><title type="html">Getting Started in Kotlin</title><link href="http://localhost:4000/posts/kotlin-getting-started/" rel="alternate" type="text/html" title="Getting Started in Kotlin" /><published>2018-08-15T00:00:00+08:00</published><updated>2018-08-15T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-getting-started</id><content type="html" xml:base="http://localhost:4000/posts/kotlin-getting-started/">&lt;p&gt;It’s the new(est) kid on the the JVM  block.&lt;/p&gt;
+
+&lt;p&gt;It’s from JetBrains, they’re the guys who built IntelliJ. They’ve been around for quite some time, so chances are you already know them. Kotlin has also been around for quite sometime, since 2011 in fact — it gained a lot of traction and attention probably 2016 or 2017 (I’m not sure, I’m too lazy to research).  The “hooray” moment for Kotlin was probably during Google I/O 2017, because they (Google) announced that it can now be used for Android programming. This was the same time that Android Studio 3 was about to be released, and AS3 already has an out-of-the-box support for Kotlin. You don’t even have to add the plugin anymore.&lt;/p&gt;
+
+&lt;p&gt;Like Java, Kotlin is;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;compiled&lt;/li&gt;
+  &lt;li&gt;statically typed, but we don’t always have to write the type. Kotlin can infer types on most situations. When Java 10 comes out, it will be able to infer types too, at least for local variables&lt;/li&gt;
+  &lt;li&gt;strongly typed&lt;/li&gt;
+  &lt;li&gt;object oriented&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unlike Java, it;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;treats functions as first class citizens and it supports functional programming. We also can write functions as top-level constructs, it doesn’t have to be inside a class anymore. Kotlin refers functions inside a class as member functions, not member methods&lt;/li&gt;
+  &lt;li&gt;treats exceptions differently. All exceptions are unchecked exceptions, you may (or may not) handle exceptions, it’s up to you and not the compiler. try-catch blocks are optional&lt;/li&gt;
+  &lt;li&gt;doesn’t have primitive types, everything truly is, an object&lt;/li&gt;
+  &lt;li&gt;doesn’t have static members&lt;/li&gt;
+  &lt;li&gt;treats everything as public by default, classes, variables and functions. If you want to restrict accessibility, you’ll have to specify it&lt;/li&gt;
+  &lt;li&gt;treats expressions and statements differently, e.g. assignment is a statement in Kotlin (it is an expression in Java), the decision making constructs like &lt;em&gt;if&lt;/em&gt; and &lt;em&gt;when&lt;/em&gt; are expressions, not statements&lt;/li&gt;
+  &lt;li&gt;treats all variables as &lt;em&gt;non-Nullable&lt;/em&gt; by default. It means, when you declare a variable in Kotlin, without any decoration, modifier or annotation, the variable can never be assigned a &lt;em&gt;null&lt;/em&gt; value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;compilation&quot;&gt;Compilation&lt;/h1&gt;
+
+&lt;p&gt;It’s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (&lt;code class=&quot;highlighter-rouge&quot;&gt;kotlinc&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/kotlin-compilation-process.png&quot; alt=&quot;compilation process&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Kotlin compiler outputs &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files, just like &lt;code class=&quot;highlighter-rouge&quot;&gt;javac&lt;/code&gt;. But, you cannot run Kotlin bytecodes the same way you would run Java bytecodes. You’ll need to combine the resulting  Kotlin byte code with the Kotlin runtime and package it into a jar file. Only then will you be able to run the program.&lt;/p&gt;
+
+&lt;p&gt;This detail is probably important for you if you will work with Kotlin on the command line. These compilation and execution details are typically handled for you by an IDE.  I can think of three IDEs that should be usable with Kotlin; Eclipse, NetBeans and IntelliJ — the last one is a commercial IDE but it does have a community edition. IntelliJ CE is able to run Kotlin.  Anyone of these 3 IDEs should suffice. In case you choose to use IDEA, you might want to refer to the &lt;a href=&quot;http://bit.ly/intellijguide&quot;&gt;IntelliJ minimal survival guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;project-setup-in-intellij&quot;&gt;Project setup in IntelliJ&lt;/h1&gt;
+
+&lt;p&gt;Launch IntelliJ if it isn’t opened yet. On the “Welcome” screen, click “Create new Project”. Next, you should see a screen like Figure 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/new-project-intellij.png&quot; alt=&quot;newprojectidea&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 1. New Project&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Choose “Kotlin/JVM”, as shown in Figure 1, and try to see if IntelliJ has detected your installed JDK. As you can see, it detected my JDK 9.&lt;/p&gt;
+
+&lt;p&gt;Next, fill out the “Project name” information, name the project “kotlinproject” for example.  After that, the project should be created and opened in IntellIJ.&lt;/p&gt;
+
+&lt;p&gt;Now we can add a Kotlin file to the project. Use the context menu (right click) on the “src” folder, as shown in Figure 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/new-kotlin-file.png&quot; alt=&quot;new file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 2. Add a Kotlin file to the project&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Choose “Kotlin/File”. Name the file, and you should be good to go.&lt;/p&gt;
+
+&lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;
+
+&lt;p&gt;The simplest program we’ll create in Kotlin could look like the following;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 1. hello.Kt&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kotlin programs don’t need classes in order to run. You can get by with top level functions only.&lt;/p&gt;
+
+&lt;p&gt;To run this code in IntelliJ, from the main menu bar, click &lt;strong&gt;Run&lt;/strong&gt; →  &lt;strong&gt;Run&lt;/strong&gt;. You will notice that there are two Run options on the menu. The first Run is greyed out. That’s because we haven’t defined any runtime configuration yet. Choose the second Run option. You should see a popup dialog, as shown in Figure 3&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/kotlin-run-context.png&quot; alt=&quot;new file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 3. Running Hello.Kt&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;variables&quot;&gt;Variables&lt;/h1&gt;
+
+&lt;p&gt;Variables are declared either as &lt;code class=&quot;highlighter-rouge&quot;&gt;val&lt;/code&gt; or as &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;.  Listing 2 shows some example usage&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 2. Variable declarations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;someStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// (1) &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;someStr&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;World&quot;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;// (2)&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;someInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;// (3)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;anotherInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// (4)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;someString&lt;/code&gt; is the variable name (identifier)  and &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It’s  quite the reverse in Java where the type is written to the left of the identifier.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(2)&lt;/strong&gt; We can re-assign values to variables that were declared as &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;. No surprises here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(3)&lt;/strong&gt; Same as the first statement, except that were using the &lt;code class=&quot;highlighter-rouge&quot;&gt;val&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of &lt;code class=&quot;highlighter-rouge&quot;&gt;someInt&lt;/code&gt; from the assignment. It will see that &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; is an Integer literal, hence, it can make the necessary type assignment&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(4)&lt;/strong&gt; This statement won’t work because variables declared as &lt;code class=&quot;highlighter-rouge&quot;&gt;val&lt;/code&gt; are effectively constants. They become immutable. The Java equivalent is when you declare a variable as &lt;em&gt;final&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;types&quot;&gt;Types&lt;/h1&gt;
+
+&lt;p&gt;There are no primitive types in Kotlin, everything is an object. So, if you need to work with numbers, the types youl’ll work with are the following; Double, Float, Long, Int, Short and Byte, their bit widths are 64, 32, 64, 32, 16 and 8, respectively — that might be easier to look at in table form, so here you go.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Table 1. built-in number types&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Bit width&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Double&lt;/td&gt;
+      &lt;td&gt;64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Float&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Long&lt;/td&gt;
+      &lt;td&gt;64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Int&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Short&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Byte&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the most part, operations on number types works the way you expect them, by that I mean, the way you expect them to work in Java. What’s different in Kotlin is that we don’t have implicit casting anymore. You can’t assign an Int to a Long, while this would have worked in Java, it doesn’t in Kotlin. If you want to convert from one type to another, you’d have to do that explicitly&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 3.  No implict casting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10L&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// a is a Long literal, note the L postfix&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// this won’t work&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toLong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// this will work&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Characters&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You might remember from Java that &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; was treated as a number, that’s not the case in Kotlin. You can’t write code’s like this&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;checkForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keyCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keyCode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// won’t work, keyCode is not a number&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Character literals are created by using single quotes, like so&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;enterKey&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Like in Java, you can use escape sequences such as \t, \b, \n, \r, \’, \”, \ and $ and if you need to encode any other character, you can use the Unicode syntax e.g. \uFF00.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Booleans&lt;/strong&gt; work and behave exactly as they do in Java. Even the literals are exactly the same — &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;branching&quot;&gt;Branching&lt;/h1&gt;
+
+&lt;p&gt;The  &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; construct work almost the same as in Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 4. Branching with If&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;bigNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bigNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The second form, with the &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; is written as follows.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 5. If Else construct&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;bigNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bigNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bigNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The difference in Kotlin is, the &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; construct is not a statement, it’s an expression. Which means we can do things like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 6. As an expression&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;bigNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kotlin doesn’t have a switch statement, what it has is a &lt;em&gt;when&lt;/em&gt; construct.  It’s form and structure is strikingly similar to the &lt;em&gt;switch&lt;/em&gt; statement. In its simplest form, it can be implemented like this (Listing 7)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 7. Branching with When&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+ &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Calendar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+ &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Calendar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DAY_OF_WEEK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+ &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sunday&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Monday&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tuesday&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wednesday&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;When&lt;/em&gt; matches the argument (the variable day) against all branches sequentially until it encounters a match; note that unlike in &lt;em&gt;switch&lt;/em&gt; statements, when a match is found, it doesn’t flow through or cascade to the next branch, hence we don’t need to put a &lt;em&gt;break&lt;/em&gt; statement.&lt;/p&gt;
+
+&lt;h1 id=&quot;looping&quot;&gt;Looping&lt;/h1&gt;
+
+&lt;p&gt;Kotlin also has a &lt;em&gt;while&lt;/em&gt; loop, it works exactly the same in Kotlin as it does in Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 8. while loop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;counter = $count&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kotlin doesn’t have a &lt;em&gt;for&lt;/em&gt; loop, at least not the one with the counter and incrementing variables inside. The &lt;em&gt;for&lt;/em&gt; loop of Kotlin works with Iterable objects. Listing 9 shows a basic usage of the for loop.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 9. Kotlin’s for loop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;The quick brown fox&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;functions&quot;&gt;Functions&lt;/h1&gt;
+
+&lt;p&gt;The &lt;em&gt;main&lt;/em&gt; function in Kotlin is written as follows&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;fun&lt;/code&gt; is used to declare that the block is a function&lt;/li&gt;
+  &lt;li&gt;Functions names are identifiers, just like in Java. The function name &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; is special, it denotes the entry point of the program, much like the &lt;code class=&quot;highlighter-rouge&quot;&gt;public static void main&lt;/code&gt; in Java&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;args&lt;/code&gt; argument of &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; is an &lt;em&gt;Array&lt;/em&gt; of &lt;em&gt;String&lt;/em&gt;. Kotlin doesn’t have a syntax to create arrays using the &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; notation. The Kotlin &lt;em&gt;Array&lt;/em&gt; is a generic class, it accepts a typed parameter, it’s &lt;em&gt;String&lt;/em&gt; in this case. So, the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function accepts an array of &lt;em&gt;String&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;println is translated (under the hood) to a call to Java’s &lt;code class=&quot;highlighter-rouge&quot;&gt;System.out.println()&lt;/code&gt;. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;default-params&quot;&gt;Default params&lt;/h2&gt;
+
+&lt;p&gt;Function params can be assigned a default value, like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 3-1. connectDb function&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;connectDb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nv&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;All the params of &lt;code class=&quot;highlighter-rouge&quot;&gt;connectDb()&lt;/code&gt; have default values, so we can call this function like this&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;connectDb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// no arguments passed&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;connectDb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jupiter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// just the 1st param&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;connectDb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jupiter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;neptune&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1st and 2nd params&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;connectDb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jupiter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;neptune&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;saturn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// or all three&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;named-params&quot;&gt;Named params&lt;/h2&gt;
+
+&lt;p&gt;Calling functions in your code can be further improved using named parameters.&lt;/p&gt;
+
+&lt;h2 id=&quot;variable-args&quot;&gt;Variable args&lt;/h2&gt;
+
+&lt;h2 id=&quot;extension-functions&quot;&gt;Extension functions&lt;/h2&gt;
+
+&lt;h2 id=&quot;infix-functions&quot;&gt;Infix functions&lt;/h2&gt;
+
+&lt;h1 id=&quot;classes-and-objects&quot;&gt;Classes and Objects&lt;/h1&gt;
+
+&lt;h1 id=&quot;access-modifiers&quot;&gt;Access Modifiers&lt;/h1&gt;
+
+&lt;h1 id=&quot;companion-objects&quot;&gt;Companion Objects&lt;/h1&gt;
+
+&lt;h1 id=&quot;higher-order-functions&quot;&gt;Higher Order Functions&lt;/h1&gt;
+
+&lt;h1 id=&quot;collections&quot;&gt;Collections&lt;/h1&gt;
+
+&lt;p&gt;Kotlin did not build its collections framework from scratch. It actually used the existing Java Collection framework. So, Kotlin lists, sets or maps are actually the exact same list, sets and maps of Java. It’s not wrapped nor  transmogrified in any way.  But there are a couple of things we need to remember.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Each of the Java collection is represented in Kotin in two ways.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;generics&quot;&gt;Generics&lt;/h1&gt;</content><author><name></name></author><summary type="html">It’s the new(est) kid on the the JVM block.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/kotlinheader.jpg" /></entry><entry><title type="html">Android Studio</title><link href="http://localhost:4000/posts/android-studio/" rel="alternate" type="text/html" title="Android Studio" /><published>2018-06-03T00:00:00+08:00</published><updated>2018-06-03T00:00:00+08:00</updated><id>http://localhost:4000/posts/android-studio-3</id><content type="html" xml:base="http://localhost:4000/posts/android-studio/">&lt;ol&gt;
+  &lt;li&gt;What to configure - this is part of the book&lt;/li&gt;
+  &lt;li&gt;Coding preferences - no need for this&lt;/li&gt;
+  &lt;li&gt;Common shortcuts - yes&lt;/li&gt;
+  &lt;li&gt;Common task you need to perform - I will do this, I will add this as part of the book
+    &lt;ol&gt;
+      &lt;li&gt;refactor&lt;/li&gt;
+      &lt;li&gt;find some thing across projects&lt;/li&gt;
+      &lt;li&gt;TODO lists&lt;/li&gt;
+      &lt;li&gt;marking blocks of code for commenting&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Project organization - yes&lt;/li&gt;
+  &lt;li&gt;Project settings - yes&lt;/li&gt;
+  &lt;li&gt;Java 10 - A small clause. yes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Table 1. Common keyboard shortcuts&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Task&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Linux and Windows&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;macOS&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Search within a file&lt;/td&gt;
+      &lt;td&gt;CTRL + F&lt;/td&gt;
+      &lt;td&gt;⌘   + F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Search everywhere&lt;/td&gt;
+      &lt;td&gt;CTRL +   Shift + F&lt;/td&gt;
+      &lt;td&gt;CTRL + ⌘ + F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Save all&lt;/td&gt;
+      &lt;td&gt;CTLR + S&lt;/td&gt;
+      &lt;td&gt;⌘ + S&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Override methods&lt;/td&gt;
+      &lt;td&gt;CTRL + O&lt;/td&gt;
+      &lt;td&gt;CTRL + O&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Implement methods&lt;/td&gt;
+      &lt;td&gt;CTRL + I&lt;/td&gt;
+      &lt;td&gt;CTRL + I&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Basic code completion&lt;/td&gt;
+      &lt;td&gt;CTRL +   Space&lt;/td&gt;
+      &lt;td&gt;CTRL +   Space&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Build&lt;/td&gt;
+      &lt;td&gt;CTRL + F9&lt;/td&gt;
+      &lt;td&gt;⌘ + F9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Build and Run&lt;/td&gt;
+      &lt;td&gt;Shift + F10&lt;/td&gt;
+      &lt;td&gt;CTRL + R&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Apply changes (with Instant Run)&lt;/td&gt;
+      &lt;td&gt;CTRL + F10&lt;/td&gt;
+      &lt;td&gt;CTRL + ⌘ + R&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There are certain actions or option in AS3’s Main Menu that doesn’t have a default mapping to the keyboard e.g. entering a full screen view. In such cases,  you may map a keyboard shortcut of your own choosing to a menu action. You can do this in the &lt;em&gt;keymap settings&lt;/em&gt; for AS3. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/as3-keymap.png&quot; alt=&quot;android studio 3 keymap&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Keymaps dropdown&lt;/strong&gt; lets you select the desired keymap, it switches between the preset keymaps&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Actions list&lt;/strong&gt;. Right click on an action to modify it. You can add additional keyboard shortcuts for the action, add mouse shortcuts to associate an action with a mouse click, or remove current shortcuts. If you are using a preset keymap, modifying an action’s shortcuts will automatically create a copy of the keymap and add your modifications to the copy&lt;/li&gt;
+  &lt;li&gt;You can use the &lt;strong&gt;Search Box&lt;/strong&gt; to search for a keyboard shortcut using the &lt;em&gt;action name&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Search by shortcut&lt;/strong&gt; . You can type the keyboard short cut in this search window to find the action name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Revision history&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;version&lt;/th&gt;
+      &lt;th&gt;date&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;June 4, 2018&lt;/td&gt;
+      &lt;td&gt;First draft&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">What to configure - this is part of the book Coding preferences - no need for this Common shortcuts - yes Common task you need to perform - I will do this, I will add this as part of the book refactor find some thing across projects TODO lists marking blocks of code for commenting Project organization - yes Project settings - yes Java 10 - A small clause. yes</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/android-studio-3.png" /></entry><entry><title type="html">Kotlin’s higher order functions</title><link href="http://localhost:4000/posts/kotlin-higher-order-functions/" rel="alternate" type="text/html" title="Kotlin's higher order functions" /><published>2018-05-05T00:00:00+08:00</published><updated>2018-05-05T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-higher-order-functions</id><content type="html" xml:base="http://localhost:4000/posts/kotlin-higher-order-functions/">&lt;p&gt;The name &lt;em&gt;higher order functions&lt;/em&gt;  come from the world of Mathematics, in there, a higher order function is also called &lt;em&gt;functional&lt;/em&gt;, &lt;em&gt;functional form&lt;/em&gt; or &lt;em&gt;functor&lt;/em&gt;, and apparently, they take the difference between function and values, a bit more seriously than programming folks.&lt;/p&gt;
+
+&lt;aside&gt;&lt;strong&gt;NOTE&lt;/strong&gt;
+It makes me wonder if there a thing such as &quot;lower order functions&quot;,  I don't think this term was ever used, neither in programming nor in the world of Math. At least in Math, anything that isn’t a higher order function is referred to as “first order function”. I haven’t really heard any coder use the term “lower order function”— or maybe I just didn’t “Google” deep enough. 
+&lt;/aside&gt;
+
+&lt;p&gt;Another name that was given to higher order functions is &lt;em&gt;first class functions&lt;/em&gt;. A very clever guy named Christopher Strachey coined the term sometime in the mid 60s.&lt;/p&gt;
+
+&lt;p&gt;So, if we can’t use “lower order functions” or first order functions to refer to our regular functions, we’ll just call them, well, functions.&lt;/p&gt;
+
+&lt;h2 id=&quot;same-difference&quot;&gt;Same difference&lt;/h2&gt;
+
+&lt;p&gt;Java, C/C++ and Visual Basic and some other languages, don’t have higher order functions. At least at the time of this writing. The functions or methods or whatever it they may be called in those languages, cannot take in functions as parameters nor can they return functions. But hang on, of course those languages can take in functions as parameters, what about this code example&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 1-1. foo() and bar() example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Didn’t we just pass &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt;? isn’t that passing a function to another function? That’s a no. Passing &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt; to another function like &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; isn’t what we mean by a “function taking in another function as parameter”. Maybe if there was a way to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; without the parentheses, and then somewhere in the body of function &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; (the receiving function), we get to invoke it like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 1-2. foo() and bar() examples, again&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But this isn’t doable in Java, nor is it doable in a language that doesn’t support higher order functions.&lt;/p&gt;
+
+&lt;p&gt;The code &lt;code class=&quot;highlighter-rouge&quot;&gt;bar(foo(2))&lt;/code&gt; means we are calling &lt;code class=&quot;highlighter-rouge&quot;&gt;foo(2)&lt;/code&gt;, it will be resolved to 4 and it’s type is &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; , then we get to call &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt;, what’s being passed to to &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; isn’t the function definition of &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt;, but whatever value &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; resolves to — which is 4 in our example, which is of type &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;. We’re not passing a &lt;em&gt;function type&lt;/em&gt; because Java doesn’t have a &lt;em&gt;function type&lt;/em&gt;, nor does C/C++ nor VB.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-does-it-look-like&quot;&gt;What does it look like&lt;/h2&gt;
+
+&lt;p&gt;In a language that has support for higher order functions, like Kotlin, the &lt;em&gt;foo and bar&lt;/em&gt; examples would have looked like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 1-3. foo() and bar() in functional style&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;              &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                       &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;                &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;1&amp;gt;&lt;/strong&gt; This is a simple &lt;em&gt;named function&lt;/em&gt; in Kotlin. It takes an &lt;em&gt;Int&lt;/em&gt; and the function returns an &lt;em&gt;Int&lt;/em&gt; as well. The function simply squares whatever Int you throw at it. We’re going to pass this function to another function (&lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;2&amp;gt;&lt;/strong&gt; Function &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; takes one input as parameter, this input is named &lt;code class=&quot;highlighter-rouge&quot;&gt;fu&lt;/code&gt; but  take note of how it’s type is declared; &lt;code class=&quot;highlighter-rouge&quot;&gt;(arg:Int) -&amp;gt; Int&lt;/code&gt; — this is how a &lt;em&gt;function type&lt;/em&gt; is declared in Kotlin. A function type has 3 parts, (1) the parameter list, if it doesn’t take any, it would just be a pair of parentheses, but in our case it takes on an &lt;em&gt;Int&lt;/em&gt; (2) the arrow operator, it’s written as a dash or minus sign immediately followed by the greater than sign, some people call it the chevron symbol. This operator separates the parameter list and the return type. And finally (3) the return type of the &lt;em&gt;function type&lt;/em&gt;. We intend to pass function &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt; to function &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt; returns an &lt;em&gt;Int&lt;/em&gt;, hence, our function type in &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; should also return &lt;em&gt;Int&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;3&amp;gt;&lt;/strong&gt;  Now, we invoke &lt;code class=&quot;highlighter-rouge&quot;&gt;fu&lt;/code&gt; and we pass the value 2 to it&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;4&amp;gt;&lt;/strong&gt;  Now, we pass &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt;. Notice that we passed the param as &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; and &lt;strong&gt;not&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt;. We are not resolving the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;foo()&lt;/code&gt; and then passing it to &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt;, were passing &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; as a function definition, so that later on, we can invoke it from within the context of the receiving function&lt;/p&gt;
+
+&lt;p&gt;When a function can take in another function as a parameter, in the same vein that it can take in objects or values, it can be said that that language treats functions as &lt;em&gt;first class citizens&lt;/em&gt;; in Kotlin, &lt;em&gt;functions&lt;/em&gt; supports all the operations that are generally available to other entities like &lt;em&gt;objects&lt;/em&gt; or &lt;em&gt;values&lt;/em&gt;. It’s not simply a named collection of statements, it’s also a &lt;em&gt;type&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;why-are-we-bothering&quot;&gt;Why are we bothering&lt;/h2&gt;
+
+&lt;p&gt;Because this gives us the ability to vary the compute process depending on the &lt;em&gt;client&lt;/em&gt;. In Listing 1-3 (above) the client is the &lt;code class=&quot;highlighter-rouge&quot;&gt;println()&lt;/code&gt; function, and the server is the &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; function. We’ve defined &lt;code class=&quot;highlighter-rouge&quot;&gt;bar()&lt;/code&gt; to accept a &lt;em&gt;function type&lt;/em&gt; that takes an &lt;em&gt;Int&lt;/em&gt; and also returns and &lt;em&gt;Int&lt;/em&gt;, we can pass any function to &lt;em&gt;bar&lt;/em&gt; that meets this criteria, it may have a different implementation inside but so long as it takes in and returns an &lt;em&gt;Int&lt;/em&gt; that should be fine. This  is actually a design pattern called the &lt;em&gt;Strategy Pattern&lt;/em&gt;. This pattern is from the gang of four (GoF), they wrote a book called &lt;em&gt;Design Patterns&lt;/em&gt;, the Strategy pattern is one of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;does-kotlin-itself-use-functionals&quot;&gt;Does Kotlin itself use functionals&lt;/h2&gt;
+
+&lt;p&gt;I don’t know that personally, but by reading through some of literature produced by that team and a quick look at some of Kotlin’s standard library e.g. “Standard.Kt” and some of the operations we can do on collections objects, I think the answer is “yes”.&lt;/p&gt;
+
+&lt;p&gt;If you’ve gone through any tutorial of the Kotlin language, there is a fair chance you’ve encountered some constructs that involved &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;filter&lt;/code&gt;,  &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; to name a few. These things are higher order functions.&lt;/p&gt;</content><author><name></name></author><summary type="html">The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</summary></entry><entry><title type="html">Learn Android Studio 3</title><link href="http://localhost:4000/posts/learn-android-studio3/" rel="alternate" type="text/html" title="Learn Android Studio 3" /><published>2017-12-04T00:00:00+08:00</published><updated>2017-12-04T00:00:00+08:00</updated><id>http://localhost:4000/posts/learn-android-studio-3-java</id><content type="html" xml:base="http://localhost:4000/posts/learn-android-studio3/">&lt;p&gt;Learn Android Studio 3 is out. You can get it in print or electronic download  from  the &lt;a href=&quot;https://www.apress.com/gp/book/9781484231555&quot;&gt;Apress website&lt;/a&gt; or from &lt;a href=&quot;https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539173743&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3&quot;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-inside&quot;&gt;What’s inside&lt;/h2&gt;
+
+&lt;p&gt;It’s a beginner’s book, it’s for you if you are;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;new to Android programming&lt;/li&gt;
+  &lt;li&gt;new to Android Studio&lt;/li&gt;
+  &lt;li&gt;If you’re also new to Java, I’ve included a really really short introduction to the Java language (it’s in the Appendix). The book doesn’t assume you’re a Java expert, but  it would be great if you’ve done some Java programming before.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following sections shows some highlights of what you can learn from the book.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-makes-up-an-application&quot;&gt;What makes up an application&lt;/h3&gt;
+
+&lt;p&gt;An Android app isn’t the same as a monolithic desktop app with a single executable file. You’ll learn tthe&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// (1)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// your code here&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; Android prefers to use XML to define the UI. This statement is glue-ing the Activity class to a UI layout defined in XML.  This relationship and other concepts  such as “inflating” are explained in the book&lt;/p&gt;
+
+&lt;h3 id=&quot;intents-and-event-handling&quot;&gt;Intents and Event handling&lt;/h3&gt;
+
+&lt;p&gt;Android apps are made up of loosely coupled &lt;em&gt;“components”&lt;/em&gt;. They’re not just a bunch of objects you can activate by instantation.  Android has a mechanism for component activation; and &lt;em&gt;Intents&lt;/em&gt; are smacked right in the middle of it. This component activation is deeply ingrained in Android’s architecture. You’ll work with detailed project demos touching on this topic&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EXTRA_MESSAGE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.example.myfirstapp.MESSAGE&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/** Called when the user taps the Send button */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DisplayMessageActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;EditText&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EditText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;editText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EXTRA_MESSAGE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;implicit-intents&quot;&gt;Implicit Intents&lt;/h3&gt;
+
+&lt;p&gt;Intents aren’t good only for activating other Activities. There are also &lt;em&gt;implicit Intents&lt;/em&gt;. This is one of the gems of the Android platform, implicit intents lets your code use other people’s codes.  In the book, you’ll work wih project demos that use implicit Intents.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnwebaddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.apress.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;geo:40.7113399,-74.0263469&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;btnphonenumber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tel:639285083333&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_DIAL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Cannot resolve button click&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-the-appbar&quot;&gt;Using the AppBar&lt;/h3&gt;
+
+&lt;p&gt;Learn how to add menus to your application, and also how to handle the events&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreateOptionsMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Menu&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;MenuInflater&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inflater&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getMenuInflater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;inflater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;main_menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onOptionsItemSelected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MenuItem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;File&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuEdit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Edit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuHelp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Help&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;menuExit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;showMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Default&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;run-in-the-background&quot;&gt;Run in the background&lt;/h3&gt;
+
+&lt;p&gt;By the default all codes run on the UI thread (main thread). There will be times when you need to run some codes in the background thread.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ls3java-asynctask.png&quot; alt=&quot; asynctask&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.os.AsyncTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Worker&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AsyncTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (1)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doInBackground&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textViews&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (2)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onProgressUpdate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// (3)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; The AsyncTask is parameterized, it’s a generic type so we need to pass arguments to it. These parameters are &amp;lt;Params,Progress, Result&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(2)&lt;/strong&gt; This is the only method we are obliged to override. Inside this is where we should put the program logic which may take some time to complete&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(3)&lt;/strong&gt; Use this method to communicate progress to the user&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-author&quot;&gt;About the author&lt;/h2&gt;
+
+&lt;p&gt;Ted has been in software development for 20+ years. He’s a developer by trade, at the moment he’s the CTO and DPO of RenditionDigital International, a software development company based out of Dublin. He wrote a couple of books for Apress.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/las3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can get it from the &lt;a class=&quot;inline-button&quot; href=&quot;https://www.apress.com/gp/book/9781484231555&quot; target=&quot;_blank&quot;&gt;Apress website&lt;/a&gt; or from &lt;a class=&quot;inline-button&quot; href=&quot;https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;amp;qid=1539173743&amp;amp;sr=8-1&amp;amp;keywords=learn+android+studio+3&quot; target=&quot;_blank&quot;&gt;Amazon&lt;/a&gt;. Don’t forget to leave a review. Thanks!&lt;/p&gt;</content><author><name></name></author><summary type="html">Learn Android Studio 3 is out. You can get it in print or electronic download from the Apress website or from Amazon.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/las3cover.jpg" /></entry><entry><title type="html">My notes on Python</title><link href="http://localhost:4000/posts/python-lang/" rel="alternate" type="text/html" title="My notes on Python" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/posts/python-lang</id><content type="html" xml:base="http://localhost:4000/posts/python-lang/">&lt;p&gt;&lt;strong&gt;Preface material&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Who is this for? It’s for a beginning programmer, but I’m assuming this isn’t your first programming language — HTML doesn’t count, but if you coded a bit of JavaScript, then that counts.&lt;/p&gt;
+
+&lt;p&gt;The very fundamentals of coding won’t be tackled in here. I’m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, or a looping construct like a &lt;code class=&quot;highlighter-rouge&quot;&gt;do&lt;/code&gt;; or variables can hold data,  they have a memory address and we can replace that data whenever we like — stuff like that. There are plenty of places in the web where you can an introduction to programming, e.g. &lt;a href=&quot;bit.ly/introprogrammingcsera&quot;&gt;Coursera’s introduction to programming&lt;/a&gt;. Having said that, I tried to stay away from computer science jargon as much as I can. So, it may be possible after all for a beginner to make use of these materials.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Style guide and other stuff&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I use lots of code examples. These materials are peppered with. So, when you see something like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1. How to start the REPL&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python3&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;this&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’re supposed to launch a terminal application and type what you see. If you will work with Python, you need to be comfortable working on the cmd line. I’m assuming that you can manage to find the terminal application in your OS — like &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd&lt;/code&gt; in Windows, Terminal.app in macOS or an xTerm in Linux, or whatever terminal you prefer.&lt;/p&gt;
+
+&lt;p&gt;When you see something like this&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Listing 1. age.py&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from datetime import datetime as d
+
+birthYear = int(input(&quot;When year of birth &quot;))
+
+if 1946 &amp;lt;= birthYear &amp;lt;= 2012:
+    print(d.now().year - birthYear)
+else:
+    print(&quot;no logic for that&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’re supposed create a file named “age.py” as specified in the Listing header and type the contents into it.&lt;/p&gt;
+
+&lt;h1 id=&quot;getting-python&quot;&gt;Getting Python&lt;/h1&gt;
+
+&lt;p&gt;Linux and macOS users already have Python installed, but chances are they have Python 2. We’ll be using Python 3, so you need to get it.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;platform&lt;/th&gt;
+      &lt;th&gt;how to install Python&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Linux&lt;/td&gt;
+      &lt;td&gt;If you’re using a modern Debian or Ubuntu system, chances are you already have Python3. To see if you really have it, type &lt;code class=&quot;highlighter-rouge&quot;&gt;python --version&lt;/code&gt; on a terminal&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;macOS&lt;/td&gt;
+      &lt;td&gt;I’m assuming you already have the HomeBrew package manager. If you don’t have it, you can install by following the instructions on the &lt;a href=&quot;http://brew.sh/#install&quot;&gt;homebrew install page&lt;/a&gt;. Then, on a terminal, type &lt;code class=&quot;highlighter-rouge&quot;&gt;brew install python&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt;You can use the chocolatey package manager. To install it, you can follow the instruction in &lt;a href=&quot;https://chocolatey.org/install&quot;&gt;chocolatey/installation&lt;/a&gt;. After that, you can do this on the the command line &lt;code class=&quot;highlighter-rouge&quot;&gt;choco install python&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Another way to get Python is via the Anaconda installer. You can find the instructions &lt;a href=&quot;http://bit.ly/anaconda_installer&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;repl&quot;&gt;REPL&lt;/h1&gt;
+
+&lt;p&gt;REPL is short for Read Eval Print Loop. It’s an interactive environment for Python.  Try it out.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2. Try the REPL&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python
+&amp;gt;&amp;gt;&amp;gt; 1 + 1
+2
+&amp;gt;&amp;gt;&amp;gt; print(&quot;Hello World&quot;)
+Hello World
+help(str)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can type any valid expression or statement in this environment. This is a good way to learn the language. You can try out some expressions in here before you put them in your script.&lt;/p&gt;
+
+&lt;p&gt;It’s also an excellent way to learn about the Python library. The last line in Example 2 shows how to get help about the String library.&lt;/p&gt;
+
+&lt;h1 id=&quot;editor&quot;&gt;Editor&lt;/h1&gt;
+
+&lt;h1 id=&quot;basics&quot;&gt;Basics&lt;/h1&gt;
+
+&lt;h1 id=&quot;strings-and-collection&quot;&gt;Strings and collection&lt;/h1&gt;
+
+&lt;h1 id=&quot;modules&quot;&gt;Modules&lt;/h1&gt;
+
+&lt;p&gt;Modules make our lives a lot easier. This is how we take advantage Python’s built-in library and other people’s codes.&lt;/p&gt;
+
+&lt;p&gt;This is just Python source file that can expose classes or functions.&lt;/p&gt;
+
+&lt;p&gt;3 forms of import&lt;/p&gt;
+
+&lt;h1 id=&quot;objects&quot;&gt;Objects&lt;/h1&gt;
+
+&lt;h1 id=&quot;collections-again&quot;&gt;Collections again&lt;/h1&gt;
+
+&lt;h1 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h1&gt;
+
+&lt;h1 id=&quot;iterables&quot;&gt;Iterables&lt;/h1&gt;
+
+&lt;h1 id=&quot;classes&quot;&gt;Classes&lt;/h1&gt;
+
+&lt;h1 id=&quot;io&quot;&gt;I/O&lt;/h1&gt;</content><author><name></name></author><summary type="html">Preface material</summary></entry></feed>
