@@ -7,6 +7,7 @@ comments: false
 date:   2018-08-15 
 image: /images/kotlinheader.jpg
 description: Do you want to learn Kotlin in a day? Read this.
+author: Ted Hagos
 ---
 
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Ubuntu+Mono:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Alike&display=swap");
 /**
  * Reset some basic elements
  */
@@ -12,9 +13,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 0.9em/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #000;
-  background-color: #fdfdfd;
+  font: 400 1.1em/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #5c5c5c;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -57,7 +58,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 0.7875em; }
+  font-size: 0.9625em; }
 
 /**
  * Lists
@@ -85,7 +86,7 @@ a {
   a:visited {
     color: #1756a9; }
   a:hover {
-    color: #000;
+    color: #5c5c5c;
     text-decoration: underline; }
   .social-media-list a:hover {
     text-decoration: none; }
@@ -99,7 +100,7 @@ blockquote {
   color: #828282;
   font-family: "Georgia", "Times New Roman", serif;
   padding-left: 15px;
-  font-size: 1.0125em;
+  font-size: 1.2375em;
   letter-spacing: -1px;
   font-style: normal; }
   blockquote > :last-child {
@@ -140,16 +141,16 @@ pre {
  */
 .wrapper {
   margin-top: 2em;
-  max-width: -webkit-calc(700px - (30px * 2));
-  max-width: calc(700px - (30px * 2));
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 700px) {
     .wrapper {
-      max-width: -webkit-calc(700px - (30px));
-      max-width: calc(700px - (30px));
+      max-width: -webkit-calc(800px - (30px));
+      max-width: calc(800px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -182,7 +183,7 @@ table {
   margin-bottom: 30px;
   width: 100%;
   text-align: left;
-  color: #2e2e2e;
+  color: #8a8a8a;
   border-collapse: collapse;
   border: 1px solid #e8e8e8; }
   table tr:nth-child(even) {
@@ -204,9 +205,9 @@ table {
   position: relative; }
 
 .site-title {
-  font-size: 1.4625em;
+  font-size: 1.7875em;
   font-weight: 300;
-  line-height: 3.24em;
+  line-height: 3.96em;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
@@ -215,13 +216,13 @@ table {
 
 .site-nav {
   float: right;
-  line-height: 3.24em; }
+  line-height: 3.96em; }
   .site-nav .nav-trigger {
     display: none; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #000;
+    color: #5c5c5c;
     line-height: 1.6; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -230,7 +231,7 @@ table {
       position: absolute;
       top: 9px;
       right: 15px;
-      background-color: #fdfdfd;
+      background-color: #fff;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
@@ -274,7 +275,7 @@ footer {
   padding: 30px 0; }
 
 .footer-heading {
-  font-size: 1.0125em;
+  font-size: 1.2375em;
   margin-bottom: 15px; }
 
 .contact-list,
@@ -283,7 +284,7 @@ footer {
   margin-left: 0; }
 
 .footer-col-wrapper {
-  font-size: 0.84375em;
+  font-size: 1.03125em;
   color: #828282;
   margin-left: -15px; }
 
@@ -304,7 +305,7 @@ footer {
   width: -webkit-calc(45% - (30px / 2));
   width: calc(45% - (30px / 2)); }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (30px / 2));
@@ -326,10 +327,10 @@ footer {
   flex: 1; }
 
 .page-heading {
-  font-size: 1.8em; }
+  font-size: 2.2em; }
 
 .post-list-heading {
-  font-size: 1.575em; }
+  font-size: 1.925em; }
 
 .post-list {
   margin-left: 0;
@@ -338,13 +339,13 @@ footer {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 0.7875em;
+  font-size: 0.9625em;
   color: #828282;
   text-align: center; }
 
 .post-link {
   display: block;
-  font-size: 1.35em; }
+  font-size: 1.65em; }
 
 /**
  * Posts
@@ -353,36 +354,38 @@ footer {
   margin-bottom: 30px; }
 
 .post-title {
-  font-weight: 600;
-  font-size: 2.16em;
+  font-family: 'Alike';
+  font-weight: 400;
+  color: #3d3d3d;
+  font-size: 2.64em;
   letter-spacing: -1px;
   line-height: 1;
   text-align: center; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 700px) {
     .post-title {
-      font-size: 2.025em; } }
+      font-size: 2.475em; } }
 
 .post-content {
   margin-bottom: 30px; }
   .post-content h2 {
-    font-size: 1.8em; }
-    @media screen and (max-width: 650px) {
+    font-size: 2.2em; }
+    @media screen and (max-width: 700px) {
       .post-content h2 {
-        font-size: 1.575em; } }
+        font-size: 1.925em; } }
   .post-content h3 {
-    font-size: 1.4625em; }
-    @media screen and (max-width: 650px) {
+    font-size: 1.7875em; }
+    @media screen and (max-width: 700px) {
       .post-content h3 {
-        font-size: 1.2375em; } }
+        font-size: 1.5125em; } }
   .post-content h4 {
-    font-size: 1.125em; }
-    @media screen and (max-width: 650px) {
+    font-size: 1.375em; }
+    @media screen and (max-width: 700px) {
       .post-content h4 {
-        font-size: 1.0125em; } }
+        font-size: 1.2375em; } }
 
 h1, h2, h3, h4 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 600; }
+  font-weight: 400; }
 
 .footer-link {
   margin-right: 1em; }

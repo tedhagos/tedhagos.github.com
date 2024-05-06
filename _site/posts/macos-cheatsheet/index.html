@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>macOS cheatsheet | Ted Hagos</title>
-<meta name="generator" content="Jekyll v3.8.4" />
+<meta name="generator" content="Jekyll v3.8.7" />
 <meta property="og:title" content="macOS cheatsheet" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Routing table" />
@@ -15,8 +15,11 @@
 <meta property="og:image" content="http://localhost:4000/images/snow-leopard.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2014-10-20T00:00:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/snow-leopard.jpg" />
+<meta property="twitter:title" content="macOS cheatsheet" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/macos-cheatsheet/","headline":"macOS cheatsheet","dateModified":"2014-10-20T00:00:00+08:00","datePublished":"2014-10-20T00:00:00+08:00","image":"http://localhost:4000/images/snow-leopard.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/macos-cheatsheet/"},"description":"Routing table","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2014-10-20T00:00:00+08:00","datePublished":"2014-10-20T00:00:00+08:00","description":"Routing table","headline":"macOS cheatsheet","image":"http://localhost:4000/images/snow-leopard.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/macos-cheatsheet/"},"url":"http://localhost:4000/posts/macos-cheatsheet/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ted Hagos" /><!-- Twitter cards -->
     <meta name= "twitter:site"    content = "@lovescaffeine" />
@@ -106,7 +109,7 @@
 
 <p>You need XCode before you can install homebrew. Make sure you have downloaded it from the AppStore and that you have also installed it’s command line utilities. After that, get a terminal window and type</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/Homebrew/homebrew/go/install<span class="k">)</span><span class="s2">"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/Homebrew/homebrew/go/install<span class="si">)</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>Ruby comes packaged with OSX so this command will work. Now test it out.</p>
@@ -167,7 +170,7 @@
 
 <p>This only involves changing of containers. No encoding or conversion will happen. If you have a lot of mkv files to convert, a script file is a better approach. On the same folder where the mkv files are located, create a script file, say <em>convert.sh</em>, type the following script inside the script</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span><span class="nb">ls</span> <span class="k">*</span>mkv<span class="k">)</span><span class="p">;</span> <span class="k">do </span>ffmpeg <span class="nt">-i</span> <span class="nt">-vcodec</span> copy <span class="nt">-acodec</span> copy <span class="nv">$i</span>.mp4<span class="p">;</span> <span class="k">done</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">ls</span> <span class="k">*</span>mkv<span class="si">)</span><span class="p">;</span> <span class="k">do </span>ffmpeg <span class="nt">-i</span> <span class="nt">-vcodec</span> copy <span class="nt">-acodec</span> copy <span class="nv">$i</span>.mp4<span class="p">;</span> <span class="k">done</span>
 </code></pre></div></div>
 
 <p>Save the script, then run this on the cmd line</p>
@@ -423,14 +426,17 @@ brew <span class="nb">install </span>moc
 
   <div class="wrapper">
 
-  <p>
-    <a href="/" class="footer-link">Home</a>
-    <a href="/about/" class="footer-link">About</a>
-    <a href="/blog/" class="footer-link">Blog archives</a>
-    <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
-  </p>
-  copyright Ted Hagos &copy; 2020
-  <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:intline" class="footer-link"></a> -->
+    <div style="background: #fbf2e9;padding:10px;">
+      <p>
+        <a href="/" class="footer-link">Home</a>
+        <a href="/about/" class="footer-link">About</a>
+        <a href="/blog/" class="footer-link">Blog archives</a>
+        <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
+      </p>
+      copyright Ted Hagos &copy; 2024
+      <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:intline" class="footer-link"></a> -->
+    
+    </div>
 
   </div>
 

@@ -221,7 +221,9 @@
 
 .post-title {
   // font-family: $sans-serif-font;
-  font-weight: 600;
+  font-family: 'Alike';
+  font-weight: 400;
+  color: #3d3d3d;
   @include relative-font-size(2.4);
   letter-spacing: -1px;
   line-height: 1;
@@ -260,8 +262,8 @@
   }
 }
 
-h1, h2, h3, h4 {font-family: $sans-serif-font; font-weight: 600;}
-
+// h1, h2, h3, h4 {font-family: $sans-serif-font; font-weight: 600;}
+h1, h2, h3, h4 {font-family: $sans-serif-font; font-weight: 400;}
 // em {font-family: $other-font;}
 
 .footer-link {
