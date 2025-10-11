@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-06T23:09:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The changing role of QA in an Agile environment</title><link href="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html" rel="alternate" type="text/html" title="The changing role of QA in an Agile environment" /><published>2019-07-22T00:00:00+08:00</published><updated>2019-07-22T00:00:00+08:00</updated><id>http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile</id><content type="html" xml:base="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html"><![CDATA[<p>Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-10-11T00:53:38+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The changing role of QA in an Agile environment</title><link href="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html" rel="alternate" type="text/html" title="The changing role of QA in an Agile environment" /><published>2019-07-22T00:00:00+08:00</published><updated>2019-07-22T00:00:00+08:00</updated><id>http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile</id><content type="html" xml:base="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html"><![CDATA[<p>Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.</p>
 
 <p>It has been two decades since the Agile manifesto was published, and we spent the good part of it trying to figure out how testers fit into this new paradigm; we are still figuring it out, but we have gotten better. Part of the reason we got better is because the tools have gotten better. The proliferation of automated testing techniques has immensely helped us transition from waterfall to the highly iterative Agile practice.</p>
 
@@ -12,7 +12,179 @@
 
 <p>It is good to include Product Owners in the manual testing phase, in fact, it should be part of their responsibilities. This phase of testing is an excellent time to focus on what matters most to the biggest stakeholders (the users). In the absence of a Product Owner, the QA engineer can step into this role.</p>
 
-<p>The Agile practices has resulted to tremendous benefits in code delivery. It made the development team nimbler and more responsive to changing business needs. The QA and development teams will continually evolve, up until the point where their responsibilities  are combined; clearly, that is where we are headed now.</p>]]></content><author><name></name></author><category term="sdlc" /><summary type="html"><![CDATA[Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/agile.png" /><media:content medium="image" url="http://localhost:4000/images/agile.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Android Jetpack UI Navigation</title><link href="http://localhost:4000/android/2018/11/24/android-navigation.html" rel="alternate" type="text/html" title="Android Jetpack UI Navigation" /><published>2018-11-24T00:00:00+08:00</published><updated>2018-11-24T00:00:00+08:00</updated><id>http://localhost:4000/android/2018/11/24/android-navigation</id><content type="html" xml:base="http://localhost:4000/android/2018/11/24/android-navigation.html"><![CDATA[<p>This is a test</p>]]></content><author><name></name></author><category term="android" /><summary type="html"><![CDATA[This is a test]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/android/images/uinavigation.png" /><media:content medium="image" url="http://localhost:4000/android/images/uinavigation.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Kotlin Collections</title><link href="http://localhost:4000/posts/working-with-kotlin-collections/" rel="alternate" type="text/html" title="Kotlin Collections" /><published>2018-10-17T00:00:00+08:00</published><updated>2018-10-17T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-collections</id><content type="html" xml:base="http://localhost:4000/posts/working-with-kotlin-collections/"><![CDATA[<p>The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</p>
+<p>The Agile practices has resulted to tremendous benefits in code delivery. It made the development team nimbler and more responsive to changing business needs. The QA and development teams will continually evolve, up until the point where their responsibilities  are combined; clearly, that is where we are headed now.</p>]]></content><author><name></name></author><category term="sdlc" /><summary type="html"><![CDATA[Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/agile.png" /><media:content medium="image" url="http://localhost:4000/images/agile.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Android Jetpack UI Navigation</title><link href="http://localhost:4000/android/2018/11/24/android-navigation.html" rel="alternate" type="text/html" title="Android Jetpack UI Navigation" /><published>2018-11-24T00:00:00+08:00</published><updated>2018-11-24T00:00:00+08:00</updated><id>http://localhost:4000/android/2018/11/24/android-navigation</id><content type="html" xml:base="http://localhost:4000/android/2018/11/24/android-navigation.html"><![CDATA[<h2 id="how-android-jetpack-navigation-saved-us-from-our-own-fragments">How Android Jetpack Navigation Saved Us From Our Own Fragments</h2>
+
+<p>Imagine you’re planning a road trip across a small country. You’ve got a car, a map, and a playlist. Everything’s fine—until someone tells you that every time you stop for gas, you need to rebuild the car from scratch, and remember exactly how to reattach the doors in the right order.</p>
+
+<p>That, roughly, was Android navigation before Jetpack came along.</p>
+
+<h2 id="once-upon-a-fragment-transaction">Once Upon a Fragment Transaction</h2>
+
+<p>In the old days, navigation in Android apps was like juggling plates while debugging a relationship. Every screen was a Fragment, and every transition between screens involved a delicate ritual called a fragment transaction.</p>
+
+<p>You’d write something like:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">supportFragmentManager</span><span class="p">.</span><span class="nf">beginTransaction</span><span class="p">()</span>
+    <span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">container</span><span class="p">,</span> <span class="nc">DetailsFragment</span><span class="p">())</span>
+    <span class="p">.</span><span class="nf">addToBackStack</span><span class="p">(</span><span class="k">null</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">commit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>You might not know what this code does, but that’s fine — sometimes we weren’t entirely sure either.</p>
+
+<p>It worked, mostly. But the more screens you added, the more your app started to feel like a Jenga tower built entirely out of NullPointerExceptions. You’d tap “Back,” and suddenly the app would teleport you to a screen you swore you’d deleted last week.</p>
+
+<p>We had conventions to survive the chaos — “always call commitNow() here,” or “never use replace, only hide and show,” or “just rewrite it, it’s faster.” Entire Stack Overflow threads were written in the tone of war diaries.</p>
+
+<h2 id="enter-jetpack-the-gps-for-our-app">Enter Jetpack: The GPS for Our App</h2>
+
+<p>Google looked at this situation and said, “What if we just gave developers a map?”</p>
+
+<p>That’s where Jetpack Navigation came from. It’s a system that says, “Instead of manually wiring your app like a Christmas tree, just tell me what the destinations are and how they connect. I’ll handle the wiring.”</p>
+
+<p>It introduced three simple ideas:</p>
+
+<p>A navigation graph — like a subway map of your app’s screens.</p>
+
+<p>A NavHost — the thing that actually shows one “station” at a time.</p>
+
+<p>A NavController — the conductor that knows where you are and where you’re going.</p>
+
+<p>In short, Jetpack Navigation turns the spaghetti of fragment transactions into a clean flowchart. You focus on the journey, not the junction boxes.</p>
+
+<h2 id="so-what-problem-does-it-actually-solve">So What Problem Does It Actually Solve?</h2>
+
+<p>Let’s be honest: building apps with multiple screens sounds simple in theory.</p>
+
+<p>Home screen</p>
+
+<p>Details screen</p>
+
+<p>Settings screen</p>
+
+<p>You’d think connecting them is just a matter of “open this when that button is pressed.”
+But Android navigation has state. When the screen rotates, or the user presses Back, or the system reclaims memory, your app is expected to gracefully pick up where it left off.</p>
+
+<p>Before Jetpack Navigation, you handled all that yourself — the back stack, fragment lifecycles, argument passing, deep links, and whatever magic makes the “Up” button behave differently from “Back.”</p>
+
+<p>Jetpack Navigation said, “Stop. I’ll take it from here.”
+It keeps track of your screens, remembers where you’ve been, and helps your app not collapse in existential confusion when the user rotates the phone mid-transition.</p>
+
+<h2 id="the-new-way-navigating-without-losing-your-mind">The New Way: Navigating Without Losing Your Mind</h2>
+
+<p>Here’s what it looks like now, using Kotlin and Jetpack Compose (the modern Android UI toolkit).</p>
+
+<p>You start with a navigation graph — but instead of drawing it on a whiteboard and forgetting about it, you define it in code:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">MyApp</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">navController</span> <span class="p">=</span> <span class="nf">rememberNavController</span><span class="p">()</span>
+
+    <span class="nc">NavHost</span><span class="p">(</span><span class="n">navController</span><span class="p">,</span> <span class="n">startDestination</span> <span class="p">=</span> <span class="s">"home"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">composable</span><span class="p">(</span><span class="s">"home"</span><span class="p">)</span> <span class="p">{</span> <span class="nc">HomeScreen</span><span class="p">(</span><span class="n">navController</span><span class="p">)</span> <span class="p">}</span>
+        <span class="nf">composable</span><span class="p">(</span><span class="s">"details/{userId}"</span><span class="p">)</span> <span class="p">{</span> <span class="n">backStack</span> <span class="p">-&gt;</span>
+            <span class="kd">val</span> <span class="py">userId</span> <span class="p">=</span> <span class="n">backStack</span><span class="p">.</span><span class="n">arguments</span><span class="o">?.</span><span class="nf">getString</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span>
+            <span class="nc">DetailsScreen</span><span class="p">(</span><span class="n">userId</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>That’s it. One host, a few routes, and you’re good to go.
+When you want to move from one screen to another:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">navController</span><span class="p">.</span><span class="nf">navigate</span><span class="p">(</span><span class="s">"details/42"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>That’s literally it. No more opening ceremonies with fragment managers.</p>
+
+<h2 id="but-waitwe-used-to-do-all-this-by-hand">But Wait—We Used to Do All This by Hand!</h2>
+
+<p>Yes, and we were proud of it.</p>
+
+<p>Before Jetpack Navigation, if you wanted to open a details screen and pass a user ID, you had to:</p>
+
+<p>Create a new Fragment.</p>
+
+<p>Manually bundle your arguments.</p>
+
+<p>Begin a transaction.</p>
+
+<p>Replace the current fragment.</p>
+
+<p>Add it to the back stack.</p>
+
+<p>Pray to the gods of IllegalStateException.</p>
+
+<p>And when the user pressed back? You’d have to make sure your back stack made sense, that your toolbar’s “up” button did something logical, and that your fragments weren’t secretly nesting fragments inside fragments (which, if you’ve ever tried, is like storing a cat inside another cat).</p>
+
+<p>Jetpack Navigation replaced all that with a clear flow. You say what should happen (“go to details”), not how it should happen (“remove current fragment, commit transaction, etc.”).</p>
+
+<p>It’s the difference between telling your car “drive to the store” versus personally managing the engine timing and air-fuel ratio.</p>
+
+<p>Arguments, But Without the Arguing</p>
+
+<p>Passing data between screens used to be a small act of ceremony. You’d bundle arguments, unpack them on the other side, and discover at runtime that you misspelled the key.</p>
+
+<p>With Jetpack Navigation, arguments are part of the route:</p>
+
+<p>composable(“details/{userId}”) { backStack -&gt;
+    val userId = backStack.arguments?.getString(“userId”)
+    DetailsScreen(userId)
+}</p>
+
+<p>Now your navigation graph doubles as documentation. You can see at a glance that “details” expects a userId. No magic strings, no guesswork, no debugging at 2 a.m. because “userID” (capital D) didn’t match “userId” (lowercase d).</p>
+
+<h2 id="the-back-stack-tamed-at-last">The Back Stack, Tamed at Last</h2>
+
+<p>Back navigation used to be… unpredictable.
+Press back too many times and you’d exit the app. Press it once and—surprise—you’re on a screen from three screens ago.</p>
+
+<p>Jetpack Navigation keeps track of where you’ve been. It automatically pops the right screen when you go back, like a polite doorman who remembers where you came from.</p>
+
+<p>You can even control it precisely:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">navController</span><span class="p">.</span><span class="nf">navigate</span><span class="p">(</span><span class="s">"home"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">popUpTo</span><span class="p">(</span><span class="s">"login"</span><span class="p">)</span> <span class="p">{</span> <span class="n">inclusive</span> <span class="p">=</span> <span class="k">true</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This says, “Go to home, but remove everything up to and including login.” Perfect for finishing an onboarding flow without letting the user accidentally backtrack into the signup page from 20 minutes ago.</p>
+
+<h2 id="and-because-its-2025-deep-links-too">And Because It’s 2025: Deep Links Too</h2>
+
+<p>Jetpack Navigation also understands URLs.
+If you define a deep link like myapp://details/42, the system can open the app right at that screen, skipping the rest. It’s like having a cheat code for navigation.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">composable</span><span class="p">(</span>
+    <span class="s">"details/{userId}"</span><span class="p">,</span>
+    <span class="n">deepLinks</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="nf">navDeepLink</span> <span class="p">{</span> <span class="n">uriPattern</span> <span class="p">=</span> <span class="s">"myapp://details/{userId}"</span> <span class="p">})</span>
+<span class="p">)</span> <span class="p">{</span> <span class="n">backStack</span> <span class="p">-&gt;</span>
+    <span class="kd">val</span> <span class="py">userId</span> <span class="p">=</span> <span class="n">backStack</span><span class="p">.</span><span class="n">arguments</span><span class="o">?.</span><span class="nf">getString</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span>
+    <span class="nc">DetailsScreen</span><span class="p">(</span><span class="n">userId</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Suddenly, “open from notification” or “open from web link” just works.
+No more launching the wrong screen because your Intent forgot an extra.</p>
+
+<h2 id="why-it-matters">Why It Matters</h2>
+
+<p>You could build an app without Jetpack Navigation. Many people still do, and that’s fine.
+But if you’ve ever tried to fix a bug in an app with five fragments and no consistent back stack rules, you’ll know why Navigation exists.</p>
+
+<p>It’s not about saving time (though it does that too). It’s about having a system that thinks about your app the same way you do — as a flow, not a pile of screens.</p>
+
+<p>The code looks cleaner. The logic reads like a story. And when your teammate opens your project six months later, they won’t have to summon ancient Stack Overflow posts to understand how back navigation works.</p>
+
+<h2 id="the-moral-of-the-story">The Moral of the Story</h2>
+
+<p>Jetpack Navigation didn’t invent navigation. It just made it human.</p>
+
+<p>It took a task that used to involve arcane rituals and replaced it with a simple idea:
+tell Android where you want to go, not how to drive there.</p>
+
+<p>And that’s how a small library quietly rescued thousands of developers from their own fragments.</p>]]></content><author><name></name></author><category term="android" /><summary type="html"><![CDATA[How Android Jetpack Navigation Saved Us From Our Own Fragments]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/android/images/uinavigation.png" /><media:content medium="image" url="http://localhost:4000/android/images/uinavigation.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Kotlin Collections</title><link href="http://localhost:4000/posts/working-with-kotlin-collections/" rel="alternate" type="text/html" title="Kotlin Collections" /><published>2018-10-17T00:00:00+08:00</published><updated>2018-10-17T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-collections</id><content type="html" xml:base="http://localhost:4000/posts/working-with-kotlin-collections/"><![CDATA[<p>The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</p>
 
 <p>Before we go to the code examples and more details, something needs to be said why it is called a collections framework. The reason it’s called a framework is because the data structures are very diverse, in and of themselves. Some of them puts constraints on how we go through the collection, they impose certain order of traversal. Some of the collections constrains the uniqueness of the data elements, they won’t allow you to put duplicates. And some of them lets us work with the collections in pairs, like in a dictionary entry, you’ll have a key with a corresponding value.</p>
 
