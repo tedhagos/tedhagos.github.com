@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: "Moving Past Junior: How to Stop Stressing and Start Growing" 
-date: 2026-01-20 
+date: 2026-01-19 
 categories: [career-growth]
 author: Ted Hagos
 tags: [Career Advice]

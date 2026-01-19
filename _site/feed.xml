@@ -1,49 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-20T01:28:38+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">Moving Past Junior: How to Stop Stressing and Start Growing</title><link href="http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing.html" rel="alternate" type="text/html" title="Moving Past Junior: How to Stop Stressing and Start Growing" /><published>2026-01-20T00:00:00+08:00</published><updated>2026-01-20T00:00:00+08:00</updated><id>http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing</id><content type="html" xml:base="http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing.html"><![CDATA[<p>If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.</p>
-
-<p>First, take a breath: We all feel like that. I’ve written tech books for Apress, and I still have moments where I stare at a CSS bug and wonder if I should have just been a carpenter.</p>
-
-<p>The difference between a Junior and a Mid-level dev isn’t that the Mid-level knows everything—it’s just that they have a system for when things go sideways. Moving to that “Mid-level” spot isn’t about suddenly becoming a genius; it’s about being reliable. It’s about your lead knowing that if they give you a task, they don’t have to stay up late double-checking your work.</p>
-
-<p>Here is how you actually make that jump without burning yourself out.</p>
-
-<h2 id="1-dont-just-throw-the-error-over-the-fence">1. Don’t Just Throw the Error Over the Fence</h2>
-<p>We’ve all been there. You hit a bug, you’ve been staring at it for an hour, and you’re stuck. A Junior dev usually just says: “Hey, this isn’t working. Can you help?”. When you do that, you’re basically asking the Senior dev to do your job for you.</p>
-
-<p>If you want to move up, you need to change how you ask for help. Show them the map of where you’ve already walked. Try this instead:</p>
-
-<p>“Hey, I’m stuck on this API call. I’ve checked the logs, I tested the endpoint in Postman, and I tried changing the header, but I’m still getting a 403. I think it’s an auth issue. What am I missing?”</p>
-
-<p>Now, you aren’t just a “task-taker”. You’re a collaborator. You’ve done the legwork, and you’re just asking for a nudge in the right direction. That’s what Mid-level devs do.</p>
-
-<h2 id="2-the-dont-make-me-think-pull-request">2. The “Don’t Make Me Think” Pull Request</h2>
-<p>If I’m your Senior dev and I open your Pull Request, I should be able to understand what you did in about thirty seconds. If your PR is a giant mess of 50 changed files with a description that just says “fixed stuff,” you’re making me do extra work. And if I have to do extra work, I’m going to think you aren’t ready for more responsibility.</p>
-
-<p>Mid-level devs make life easy for their reviewers:</p>
-
-<p>They write a few bullet points explaining why they changed what they changed.</p>
-
-<p>They leave a comment on their own code if something looks a bit weird, explaining the trade-off they made.</p>
-
-<p>Basically, you’re trying to prevent me from having to ask “Why did you do this?”.</p>
-
-<p>If I don’t have to ask that, you’ve passed the test.</p>
-
-<h2 id="3-stop-chasing-the-perfect-code">3. Stop Chasing the “Perfect” Code</h2>
-<p>Juniors tend to fall into two camps: they either write “spaghetti” just to make it work, or they spend three days trying to make one function “perfect” and “elegant”. Real-world coding is about balance. You need to ship.</p>
-
-<p>Mid-level devs understand that “Good and Shipped” is better than “Perfect and Never Done”. They know that the code they write today might need to be changed in six months, so they focus on making it easy to delete. If your code is simple and modular, it doesn’t have to be a masterpiece. It just has to be clear enough that the next person can fix it without needing a map and a flashlight.</p>
-
-<h2 id="4-own-your-mistakes-theyre-going-to-happen">4. Own Your Mistakes (They’re Going to Happen)</h2>
-<p>You will break the build. You will accidentally delete a row in a dev database. You will ship a typo to production.</p>
-
-<p>A Junior dev tries to hide it or hopes nobody notices. A Mid-level dev is the first person in the Slack channel saying: “Hey, I think I just broke the staging environment. I’m looking into it now, here’s what happened”. I would much rather work with a developer who breaks things and owns it than a “genius” who hides their tracks. Reliability isn’t about being perfect; it’s about being the person who stays to help clean up the mess.</p>
-
-<h2 id="5-start-asking-why">5. Start Asking “Why?”</h2>
-<p>When you get a ticket that says “Add a checkbox here,” don’t just add the checkbox. Ask: “Wait, why are we adding this? Is it for a specific user request?”. Sometimes, you’ll realize that the checkbox doesn’t actually solve the user’s problem.</p>
-
-<p>When you start thinking about the product and not just the code, you’ve officially stopped being a “Junior”. You’re starting to see the big picture. That’s the exact moment people start treating you like a Senior-in-training.</p>
-
-<p>I’ve spent a long time helping devs get out of the “Junior” rut. It’s not about learning a new framework every weekend. It’s about building the right habits so you can go home at 5:00 PM without worrying about your code falling apart.</p>]]></content><author><name>Ted Hagos</name></author><category term="career-growth" /><category term="Career Advice" /><summary type="html"><![CDATA[If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.]]></summary></entry><entry><title type="html">The Case for Boring Tech: Why Stability is a Feature</title><link href="http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature.html" rel="alternate" type="text/html" title="The Case for Boring Tech: Why Stability is a Feature" /><published>2026-01-19T00:00:00+08:00</published><updated>2026-01-19T00:00:00+08:00</updated><id>http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature</id><content type="html" xml:base="http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature.html"><![CDATA[<p>We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-20T01:31:58+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The Case for Boring Tech: Why Stability is a Feature</title><link href="http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature.html" rel="alternate" type="text/html" title="The Case for Boring Tech: Why Stability is a Feature" /><published>2026-01-19T00:00:00+08:00</published><updated>2026-01-19T00:00:00+08:00</updated><id>http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature</id><content type="html" xml:base="http://localhost:4000/engineering/strategy/2026/01/19/the-boring-tech-why-stability-is-a-feature.html"><![CDATA[<p>We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.</p>
 
 <p>However, if you are building a product that needs to function reliably three years from now, “interesting” technology is a liability. In this context, <strong>“boring” technology is a significant competitive advantage.</strong></p>
 
@@ -96,7 +51,52 @@
 
 <p>I spent a long time in software development watching frameworks come and go. The systems we built ten years ago that are still running today all have one thing in common: they were built on boring foundations. They don’t require weekly babysitting or constant rewrites to stay compatible with the latest “hot” library. They just work.</p>
 
-<p>Build for the long haul. Spend your innovation tokens on your customers, not on your database. Keep your foundation boring, so your results can be extraordinary.</p>]]></content><author><name>Ted Hagos</name></author><category term="Engineering" /><category term="Strategy" /><category term="Software Engineering" /><category term="System Architecture" /><category term="Web Development" /><category term="DevOps" /><category term="Postgres" /><category term="Java" /><category term="Career Advice" /><category term="Scalability" /><category term="Risk Management" /><summary type="html"><![CDATA[We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.]]></summary></entry><entry><title type="html">The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster</title><link href="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html" rel="alternate" type="text/html" title="The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster" /><published>2026-01-16T00:00:00+08:00</published><updated>2026-01-16T00:00:00+08:00</updated><id>http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost</id><content type="html" xml:base="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html"><![CDATA[<p>Engineering teams often reach the same conclusion: “We should move this to Kubernetes.” It sounds like progress. Usually, it’s just a debt trap.</p>
+<p>Build for the long haul. Spend your innovation tokens on your customers, not on your database. Keep your foundation boring, so your results can be extraordinary.</p>]]></content><author><name>Ted Hagos</name></author><category term="Engineering" /><category term="Strategy" /><category term="Software Engineering" /><category term="System Architecture" /><category term="Web Development" /><category term="DevOps" /><category term="Postgres" /><category term="Java" /><category term="Career Advice" /><category term="Scalability" /><category term="Risk Management" /><summary type="html"><![CDATA[We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.]]></summary></entry><entry><title type="html">Moving Past Junior: How to Stop Stressing and Start Growing</title><link href="http://localhost:4000/career-growth/2026/01/19/moving-past-junior-how-to-stop-stressing-and-start-growing.html" rel="alternate" type="text/html" title="Moving Past Junior: How to Stop Stressing and Start Growing" /><published>2026-01-19T00:00:00+08:00</published><updated>2026-01-19T00:00:00+08:00</updated><id>http://localhost:4000/career-growth/2026/01/19/moving-past-junior-how-to-stop-stressing-and-start-growing</id><content type="html" xml:base="http://localhost:4000/career-growth/2026/01/19/moving-past-junior-how-to-stop-stressing-and-start-growing.html"><![CDATA[<p>If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.</p>
+
+<p>First, take a breath: We all feel like that. I’ve written tech books for Apress, and I still have moments where I stare at a CSS bug and wonder if I should have just been a carpenter.</p>
+
+<p>The difference between a Junior and a Mid-level dev isn’t that the Mid-level knows everything—it’s just that they have a system for when things go sideways. Moving to that “Mid-level” spot isn’t about suddenly becoming a genius; it’s about being reliable. It’s about your lead knowing that if they give you a task, they don’t have to stay up late double-checking your work.</p>
+
+<p>Here is how you actually make that jump without burning yourself out.</p>
+
+<h2 id="1-dont-just-throw-the-error-over-the-fence">1. Don’t Just Throw the Error Over the Fence</h2>
+<p>We’ve all been there. You hit a bug, you’ve been staring at it for an hour, and you’re stuck. A Junior dev usually just says: “Hey, this isn’t working. Can you help?”. When you do that, you’re basically asking the Senior dev to do your job for you.</p>
+
+<p>If you want to move up, you need to change how you ask for help. Show them the map of where you’ve already walked. Try this instead:</p>
+
+<p>“Hey, I’m stuck on this API call. I’ve checked the logs, I tested the endpoint in Postman, and I tried changing the header, but I’m still getting a 403. I think it’s an auth issue. What am I missing?”</p>
+
+<p>Now, you aren’t just a “task-taker”. You’re a collaborator. You’ve done the legwork, and you’re just asking for a nudge in the right direction. That’s what Mid-level devs do.</p>
+
+<h2 id="2-the-dont-make-me-think-pull-request">2. The “Don’t Make Me Think” Pull Request</h2>
+<p>If I’m your Senior dev and I open your Pull Request, I should be able to understand what you did in about thirty seconds. If your PR is a giant mess of 50 changed files with a description that just says “fixed stuff,” you’re making me do extra work. And if I have to do extra work, I’m going to think you aren’t ready for more responsibility.</p>
+
+<p>Mid-level devs make life easy for their reviewers:</p>
+
+<p>They write a few bullet points explaining why they changed what they changed.</p>
+
+<p>They leave a comment on their own code if something looks a bit weird, explaining the trade-off they made.</p>
+
+<p>Basically, you’re trying to prevent me from having to ask “Why did you do this?”.</p>
+
+<p>If I don’t have to ask that, you’ve passed the test.</p>
+
+<h2 id="3-stop-chasing-the-perfect-code">3. Stop Chasing the “Perfect” Code</h2>
+<p>Juniors tend to fall into two camps: they either write “spaghetti” just to make it work, or they spend three days trying to make one function “perfect” and “elegant”. Real-world coding is about balance. You need to ship.</p>
+
+<p>Mid-level devs understand that “Good and Shipped” is better than “Perfect and Never Done”. They know that the code they write today might need to be changed in six months, so they focus on making it easy to delete. If your code is simple and modular, it doesn’t have to be a masterpiece. It just has to be clear enough that the next person can fix it without needing a map and a flashlight.</p>
+
+<h2 id="4-own-your-mistakes-theyre-going-to-happen">4. Own Your Mistakes (They’re Going to Happen)</h2>
+<p>You will break the build. You will accidentally delete a row in a dev database. You will ship a typo to production.</p>
+
+<p>A Junior dev tries to hide it or hopes nobody notices. A Mid-level dev is the first person in the Slack channel saying: “Hey, I think I just broke the staging environment. I’m looking into it now, here’s what happened”. I would much rather work with a developer who breaks things and owns it than a “genius” who hides their tracks. Reliability isn’t about being perfect; it’s about being the person who stays to help clean up the mess.</p>
+
+<h2 id="5-start-asking-why">5. Start Asking “Why?”</h2>
+<p>When you get a ticket that says “Add a checkbox here,” don’t just add the checkbox. Ask: “Wait, why are we adding this? Is it for a specific user request?”. Sometimes, you’ll realize that the checkbox doesn’t actually solve the user’s problem.</p>
+
+<p>When you start thinking about the product and not just the code, you’ve officially stopped being a “Junior”. You’re starting to see the big picture. That’s the exact moment people start treating you like a Senior-in-training.</p>
+
+<p>I’ve spent a long time helping devs get out of the “Junior” rut. It’s not about learning a new framework every weekend. It’s about building the right habits so you can go home at 5:00 PM without worrying about your code falling apart.</p>]]></content><author><name>Ted Hagos</name></author><category term="career-growth" /><category term="Career Advice" /><summary type="html"><![CDATA[If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.]]></summary></entry><entry><title type="html">The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster</title><link href="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html" rel="alternate" type="text/html" title="The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster" /><published>2026-01-16T00:00:00+08:00</published><updated>2026-01-16T00:00:00+08:00</updated><id>http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost</id><content type="html" xml:base="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html"><![CDATA[<p>Engineering teams often reach the same conclusion: “We should move this to Kubernetes.” It sounds like progress. Usually, it’s just a debt trap.</p>
 
 <p>Maturity in software isn’t about using the most powerful tools. It’s about realizing that every choice carries a cost you keep paying long after the excitement of the “new toy” fades. Kubernetes solves real problems, but it charges a <strong>Complexity Tax</strong> that doesn’t appear on your cloud bill.</p>
 
