@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Case for Boring Tech: Why Stability is a Feature"
-date: 2026-01-20
+date: 2026-01-19
 author: Ted Hagos
 categories: [Engineering, Strategy]
 tags: [Software Engineering, System Architecture, Web Development, DevOps, Postgres, Java, Career Advice, Scalability, Risk Management]
