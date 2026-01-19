@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-10-11T00:53:38+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The changing role of QA in an Agile environment</title><link href="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html" rel="alternate" type="text/html" title="The changing role of QA in an Agile environment" /><published>2019-07-22T00:00:00+08:00</published><updated>2019-07-22T00:00:00+08:00</updated><id>http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile</id><content type="html" xml:base="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html"><![CDATA[<p>Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-20T01:18:18+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ted Hagos</title><subtitle>coder, trainer and author</subtitle><entry><title type="html">The Case for Boring Tech: Why Stability is a Feature</title><link href="http://localhost:4000/engineering/strategy/2026/01/20/the-boring-tech-why-stability-is-a-feature.html" rel="alternate" type="text/html" title="The Case for Boring Tech: Why Stability is a Feature" /><published>2026-01-20T00:00:00+08:00</published><updated>2026-01-20T00:00:00+08:00</updated><id>http://localhost:4000/engineering/strategy/2026/01/20/the-boring-tech-why-stability-is-a-feature</id><content type="html" xml:base="http://localhost:4000/engineering/strategy/2026/01/20/the-boring-tech-why-stability-is-a-feature.html"><![CDATA[<p>We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.</p>
+
+<p>However, if you are building a product that needs to function reliably three years from now, “interesting” technology is a liability. In this context, <strong>“boring” technology is a significant competitive advantage.</strong></p>
+
+<h2 id="the-innovation-token-system">The Innovation Token System</h2>
+
+<p>Think of your project as having a strictly limited budget of <strong>three Innovation Tokens.</strong> This isn’t just a metaphor; it is a mental model for managing the total amount of complexity your team can handle before the system becomes unmanageable.</p>
+
+<p>Every time you choose a database that is only two years old, or a programming language that has not yet reached a stable version 1.0, you spend a token. If you spend all three tokens on your infrastructure—the foundation of your app—you have zero tokens left to spend on the actual problem you are trying to solve for your users.</p>
+
+<p>Boring technology consists of things like Postgres, Java, or Linux. These are “solved” problems. They do not require innovation tokens because their behavior is well-documented, and their “surprises” have already been discovered by someone else. When you use Postgres, you aren’t innovating on how data is stored; you are using a tool that has survived thirty years of edge cases. This leaves your tokens available for the things that actually matter: your unique business logic and your user experience.</p>
+
+<h2 id="the-mathematics-of-the-bus-factor">The Mathematics of the Bus Factor</h2>
+
+<p>In engineering, we use a risk metric called the <strong>Bus Factor.</strong> This is the minimum number of team members who would have to be hit by a bus (or suddenly quit) before a project stalls because nobody else knows how the system works.</p>
+
+<p>When you use a niche, experimental functional language or a brand-new “serverless” framework that only two people on Earth truly understand, your Bus Factor is effectively one. If that person leaves, the project enters a state of “archaeological maintenance,” where the remaining team spends more time deciphering the intent of the code than actually shipping features.</p>
+
+<h3 id="knowledge-distribution-vs-syntax-specialization">Knowledge Distribution vs. Syntax Specialization</h3>
+
+<p>When you choose a “boring” stack, you are choosing a massive, global talent pool. Skills like SQL or REST are “commodity knowledge.” You can hire a replacement on a Tuesday, and they can be making meaningful contributions by Thursday because the patterns are universal.</p>
+
+<p>Experimental tech requires “bespoke knowledge.” You must first find the rare candidate who knows the tech, then wait months as they learn your specific implementation of its unpolished quirks. High novelty tech creates high friction for hiring; boring tech creates a low-friction environment where new people can become productive almost immediately.</p>
+
+<h2 id="the-unholy-hour-test">The Unholy Hour Test</h2>
+
+<p>Everything breaks eventually. The primary advantage of boring technology is that we have a very good idea of exactly <em>how</em> it breaks. We understand its memory leaks, its scaling limits, and its specific quirks.</p>
+
+<h3 id="1-the-search-engine-advantage">1. The Search Engine Advantage</h3>
+<p>When boring tech breaks during “unholy hours”—those inconvenient times in the middle of the night—someone else has almost certainly already found the fix and posted it online. If your database stops responding at 3:00 AM, you want to find a Stack Overflow thread from 2014 that explains exactly which configuration flag to flip.</p>
+
+<h3 id="2-researcher-vs-developer">2. Researcher vs. Developer</h3>
+<p>When “cutting-edge” technology breaks, you are no longer just a developer; you are a primary researcher. You aren’t just fixing a bug; you are discovering a new property of an unstable system. Discovery is great for science, but it is terrible for a production environment that needs to be online 24/7. In production, “discovery” is just a fancy word for “unplanned downtime.”</p>
+
+<h3 id="3-predictable-failure">3. Predictable Failure</h3>
+<p>A mature system like the Linux kernel or the Java Virtual Machine (JVM) has been tested by millions of users across billions of hours of runtime. Its failure modes are documented. A new framework, however, might fail in a way the creators never even imagined. In software, “unpredictable” is a synonym for “expensive.”</p>
+
+<h2 id="the-hype-cycle-trap">The Hype Cycle Trap</h2>
+
+<p>Most new technologies follow what we call the <strong>Hype Cycle.</strong> There is a “Peak of Inflated Expectations,” followed by a “Trough of Disillusionment” when developers realize the new tool doesn’t actually solve everything.</p>
+
+<p>Boring tech has already made it through this cycle. It has reached the “Plateau of Productivity.” When you choose a tool at the peak of its hype, you are essentially gambling that the tool will mature faster than your project needs to scale. This is rarely a winning bet. Boring tech optimizes for the “staying in business” phase rather than the “getting started” phase.</p>
+
+<h2 id="choosing-your-battles">Choosing Your Battles</h2>
+
+<p>Choosing boring technology does not mean being a “dinosaur” or refusing to learn. It means being strategic with your energy. Your users do not care if you used a revolutionary, experimental graph database. They care that the checkout page works every single time they click the button.</p>
+
+<p>As a Senior Engineer, your primary job is to <strong>manage risk.</strong> The greatest risk to a project is often the “exciting” technology you chose at the very beginning when you were feeling optimistic. If you want to innovate, innovate on your product. Keep the foundation boring.</p>
+
+<h2 id="build-something-that-lasts">Build Something That Lasts</h2>
+
+<p>I spent a long time in software development watching frameworks come and go. The systems we built ten years ago that are still running today all have one thing in common: they were built on boring foundations. They don’t require weekly babysitting or constant rewrites to stay compatible with the latest “hot” library. They just work.</p>
+
+<p>Build for the long haul. Spend your innovation tokens on your customers, not on your database. Keep your foundation boring, so your results can be extraordinary.</p>]]></content><author><name>Ted Hagos</name></author><category term="Engineering" /><category term="Strategy" /><category term="Software Engineering" /><category term="System Architecture" /><category term="Web Development" /><category term="DevOps" /><category term="Postgres" /><category term="Java" /><category term="Career Advice" /><category term="Scalability" /><category term="Risk Management" /><summary type="html"><![CDATA[We have a persistent problem in software engineering: we frequently confuse “novelty” with “value.” Every six months, a new framework arrives that promises to solve all the problems of the previous framework—which was itself considered the “solution” just a year ago. It is tempting to think that staying on the cutting edge is the only way to remain relevant in this industry.]]></summary></entry><entry><title type="html">Moving Past Junior: How to Stop Stressing and Start Growing</title><link href="http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing.html" rel="alternate" type="text/html" title="Moving Past Junior: How to Stop Stressing and Start Growing" /><published>2026-01-20T00:00:00+08:00</published><updated>2026-01-20T00:00:00+08:00</updated><id>http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing</id><content type="html" xml:base="http://localhost:4000/career-growth/2026/01/20/moving-past-junior-how-to-stop-stressing-and-start-growing.html"><![CDATA[<p>If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.</p>
+
+<p>First, take a breath: We all feel like that. I’ve written tech books for Apress, and I still have moments where I stare at a CSS bug and wonder if I should have just been a carpenter.</p>
+
+<p>The difference between a Junior and a Mid-level dev isn’t that the Mid-level knows everything—it’s just that they have a system for when things go sideways. Moving to that “Mid-level” spot isn’t about suddenly becoming a genius; it’s about being reliable. It’s about your lead knowing that if they give you a task, they don’t have to stay up late double-checking your work.</p>
+
+<p>Here is how you actually make that jump without burning yourself out.</p>
+
+<h2 id="1-dont-just-throw-the-error-over-the-fence">1. Don’t Just Throw the Error Over the Fence</h2>
+<p>We’ve all been there. You hit a bug, you’ve been staring at it for an hour, and you’re stuck. A Junior dev usually just says: “Hey, this isn’t working. Can you help?”. When you do that, you’re basically asking the Senior dev to do your job for you.</p>
+
+<p>If you want to move up, you need to change how you ask for help. Show them the map of where you’ve already walked. Try this instead:</p>
+
+<p>“Hey, I’m stuck on this API call. I’ve checked the logs, I tested the endpoint in Postman, and I tried changing the header, but I’m still getting a 403. I think it’s an auth issue. What am I missing?”</p>
+
+<p>Now, you aren’t just a “task-taker”. You’re a collaborator. You’ve done the legwork, and you’re just asking for a nudge in the right direction. That’s what Mid-level devs do.</p>
+
+<h2 id="2-the-dont-make-me-think-pull-request">2. The “Don’t Make Me Think” Pull Request</h2>
+<p>If I’m your Senior dev and I open your Pull Request, I should be able to understand what you did in about thirty seconds. If your PR is a giant mess of 50 changed files with a description that just says “fixed stuff,” you’re making me do extra work. And if I have to do extra work, I’m going to think you aren’t ready for more responsibility.</p>
+
+<p>Mid-level devs make life easy for their reviewers:</p>
+
+<p>They write a few bullet points explaining why they changed what they changed.</p>
+
+<p>They leave a comment on their own code if something looks a bit weird, explaining the trade-off they made.</p>
+
+<p>Basically, you’re trying to prevent me from having to ask “Why did you do this?”.</p>
+
+<p>If I don’t have to ask that, you’ve passed the test.</p>
+
+<h2 id="3-stop-chasing-the-perfect-code">3. Stop Chasing the “Perfect” Code</h2>
+<p>Juniors tend to fall into two camps: they either write “spaghetti” just to make it work, or they spend three days trying to make one function “perfect” and “elegant”. Real-world coding is about balance. You need to ship.</p>
+
+<p>Mid-level devs understand that “Good and Shipped” is better than “Perfect and Never Done”. They know that the code they write today might need to be changed in six months, so they focus on making it easy to delete. If your code is simple and modular, it doesn’t have to be a masterpiece. It just has to be clear enough that the next person can fix it without needing a map and a flashlight.</p>
+
+<h2 id="4-own-your-mistakes-theyre-going-to-happen">4. Own Your Mistakes (They’re Going to Happen)</h2>
+<p>You will break the build. You will accidentally delete a row in a dev database. You will ship a typo to production.</p>
+
+<p>A Junior dev tries to hide it or hopes nobody notices. A Mid-level dev is the first person in the Slack channel saying: “Hey, I think I just broke the staging environment. I’m looking into it now, here’s what happened”. I would much rather work with a developer who breaks things and owns it than a “genius” who hides their tracks. Reliability isn’t about being perfect; it’s about being the person who stays to help clean up the mess.</p>
+
+<h2 id="5-start-asking-why">5. Start Asking “Why?”</h2>
+<p>When you get a ticket that says “Add a checkbox here,” don’t just add the checkbox. Ask: “Wait, why are we adding this? Is it for a specific user request?”. Sometimes, you’ll realize that the checkbox doesn’t actually solve the user’s problem.</p>
+
+<p>When you start thinking about the product and not just the code, you’ve officially stopped being a “Junior”. You’re starting to see the big picture. That’s the exact moment people start treating you like a Senior-in-training.</p>
+
+<p>I’ve spent a long time helping devs get out of the “Junior” rut. It’s not about learning a new framework every weekend. It’s about building the right habits so you can go home at 5:00 PM without worrying about your code falling apart.</p>]]></content><author><name>Ted Hagos</name></author><category term="career-growth" /><category term="Career Advice" /><summary type="html"><![CDATA[If you’re a Junior dev, you’re probably living in a constant state of “I hope I don’t break the entire company today”. You’re the one staring at a Pull Request for forty minutes before hitting “Submit,” wondering if your variable names are stupid or if you missed something obvious that’s going to make the Senior devs sigh.]]></summary></entry><entry><title type="html">The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster</title><link href="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html" rel="alternate" type="text/html" title="The Complexity Tax: Calculating the True Cost of Your Kubernetes Cluster" /><published>2026-01-16T00:00:00+08:00</published><updated>2026-01-16T00:00:00+08:00</updated><id>http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost</id><content type="html" xml:base="http://localhost:4000/devops/architecture/2026/01/16/the-complexity-tax-kubernetes-cost.html"><![CDATA[<p>Engineering teams often reach the same conclusion: “We should move this to Kubernetes.” It sounds like progress. Usually, it’s just a debt trap.</p>
+
+<p>Maturity in software isn’t about using the most powerful tools. It’s about realizing that every choice carries a cost you keep paying long after the excitement of the “new toy” fades. Kubernetes solves real problems, but it charges a <strong>Complexity Tax</strong> that doesn’t appear on your cloud bill.</p>
+
+<h3 id="the-hidden-bill">The Hidden Bill</h3>
+<p>Your cloud provider gives you a tidy invoice for virtual machines, load balancers, and storage. You look at the total and think it’s affordable.</p>
+
+<p>The real costs are hidden in <strong>Cognitive Load</strong>. They appear in:</p>
+<ul>
+  <li><strong>Slack threads</strong> that last four hours because a network rule changed and six senior engineers are trying to figure out which of the three overlapping policies is currently lying to them.</li>
+  <li><strong>Onboarding sessions</strong> where new hires realize they need to learn five new abstractions just to deploy a “Hello World” app.</li>
+  <li><strong>The “Maintenance Black Hole”:</strong> Time spent fixing the platform instead of building features for customers.</li>
+</ul>
+
+<h3 id="1-operational-labor-the-maintenance-sinkhole">1. Operational Labor: The Maintenance Sinkhole</h3>
+<p>Kubernetes doesn’t remove the need for maintenance; it just shifts it. Instead of updating a server, you are now managing “version skew”—ensuring your cluster version matches your tool version—and “Helm charts,” which are massive, nested configuration files that are easy to break and hard to read.</p>
+
+<p>The result is that you didn’t eliminate operations work; you just turned every developer into a part-time systems administrator. You are now paying senior developer salaries for people to spend 30% of their week arguing with a container orchestrator.</p>
+
+<h3 id="2-the-abstraction-wall">2. The Abstraction Wall</h3>
+<p>Every system has a “mental model”—the amount of information an engineer has to hold in their head to understand how a request gets from a user to the database.</p>
+
+<p>In a simple setup, you have a Server and your App. In Kubernetes, you have Pods, Nodes, Deployments, Services, Ingress, and ConfigMaps. To a user, your app is a website. To Kubernetes, your app is a sprawling legal dispute between twelve different configuration files.</p>
+
+<p>When a bug appears, engineers stop debugging the actual code. They start debugging the <em>layers around</em> the code. Nothing “crashes” with a clear error; it just fails to connect, and you have to check six different places to find out why.</p>
+
+<h3 id="3-yaml-archaeology-and-the-local-dev-tax">3. YAML Archaeology and the Local Dev Tax</h3>
+<p>As the system grows, the configuration files (YAML) become historical artifacts. No one remembers why a specific resource limit or affinity rule was set in 2023, but everyone is too afraid to delete it because the last person who tried broke the production staging environment for a week. We have reached the era of <strong>YAML Archaeology</strong>, where we treat infrastructure code like ancient runes that shouldn’t be disturbed.</p>
+
+<p>Furthermore, there is the <strong>Local Development Tax</strong>. To work on the app, developers now need to run a “mini-cluster” on their laptops. If your development environment requires 16GB of RAM just to sit idle while it simulates a cloud environment, you haven’t built a tool; you’ve built a space heater that occasionally compiles code.</p>
+
+<h3 id="4-distributed-failure">4. Distributed Failure</h3>
+<p>Simple systems fail in obvious ways. Complex systems fail in “quiet” ways. If a single server dies, the site is down, and you fix the server.</p>
+
+<p>In Kubernetes, a service might look “healthy” in the dashboard while being unable to talk to the database because of a tiny error in a network policy. It takes much longer to fix things—not because the engineers aren’t smart, but because there are too many layers for a bug to hide in. We have traded “Down Time” for “Ghost Time”—periods where the system is technically running but functionally broken in ways that are nearly impossible to trace.</p>
+
+<h3 id="a-boring-tco-model">A Boring TCO Model</h3>
+<p><strong>Total Cost = Cloud Invoice + Engineering Salaries + Lost Velocity.</strong></p>
+
+<p>If Kubernetes requires you to hire one extra senior engineer just to keep the lights on, or if it eats 20% of your team’s focus every week, it isn’t “efficient”. You are simply spending your salary budget on infrastructure management instead of product growth.</p>
+
+<h3 id="the-reality-check">The Reality Check</h3>
+<p>Before migrating, answer these without using the words “eventually” or “industry standard”:</p>
+<ul>
+  <li><strong>Scale:</strong> Do we have 5 services or 500? If it’s 5, you don’t need a cluster.</li>
+  <li><strong>Ownership:</strong> When the site lags, who is the <em>one</em> person who can trace the traffic through the mesh? Do they ever get to take a vacation?</li>
+  <li><strong>Growth:</strong> Are we expecting 10x more users, or just 10x more features? Kubernetes helps with users; it often slows down features.</li>
+</ul>
+
+<h3 id="the-alternative-the-boring-stack">The Alternative: The “Boring” Stack</h3>
+<p>The goal isn’t to have the most “modern” system; it’s to have the cheapest system that solves today’s problems.</p>
+
+<ul>
+  <li><strong>The Small Setup:</strong> Use a virtual machine (VM) and a simple system service to restart your app if it crashes. It’s boring, it’s cheap, and any junior dev can understand it in ten minutes.</li>
+  <li><strong>The Middle Ground:</strong> Use “Managed Container” services like AWS Fargate or Google Cloud Run. You get the benefits of containers without the tax of managing the “engine” yourself.</li>
+</ul>
+
+<h3 id="the-bottom-line">The Bottom Line</h3>
+<p>The “boring stack” wins because it’s easy to understand and cheap to fix. The best system is the one your team can explain on a whiteboard from memory, without needing to open six browser tabs to remember how the networking works.</p>
+
+<p>If your infrastructure requires a <strong>permanent life-support team</strong> just to keep it breathing, you haven’t built a tool; you’ve built a liability. Build something that can survive a weekend without you. Build something boring instead.</p>]]></content><author><name>Ted Hagos</name></author><category term="DevOps" /><category term="Architecture" /><category term="Kubernetes" /><category term="Cloud Computing" /><category term="Software Engineering" /><category term="Productivity" /><summary type="html"><![CDATA[Kubernetes is a powerful tool, but it comes with a hidden bill. Learn why the 'Complexity Tax' might be costing your team more than your cloud invoice.]]></summary></entry><entry><title type="html">The changing role of QA in an Agile environment</title><link href="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html" rel="alternate" type="text/html" title="The changing role of QA in an Agile environment" /><published>2019-07-22T00:00:00+08:00</published><updated>2019-07-22T00:00:00+08:00</updated><id>http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile</id><content type="html" xml:base="http://localhost:4000/sdlc/2019/07/22/qa-role-in-agile.html"><![CDATA[<p>Software testing remains a very important and integral part of software development. Before the advent of Agile practices, software testing was, an afterthought; it’s something that we do right after coding finishes. We’ve come a long way from that. Some teams even write the tests first, before writing the actual codes. The tests not only serve as a gatekeeper for releases, but more importantly, they also serve as an important documentation for the code.</p>
 
 <p>It has been two decades since the Agile manifesto was published, and we spent the good part of it trying to figure out how testers fit into this new paradigm; we are still figuring it out, but we have gotten better. Part of the reason we got better is because the tools have gotten better. The proliferation of automated testing techniques has immensely helped us transition from waterfall to the highly iterative Agile practice.</p>
 
@@ -205,18 +363,18 @@ tell Android where you want to go, not how to drive there.</p>
   <tbody>
     <tr>
       <td>list</td>
-      <td><code class="highlighter-rouge">listOf</code></td>
-      <td><code class="highlighter-rouge">mutableListOf</code>, <code class="highlighter-rouge">arrayListOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">listOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableListOf</code>, <code class="language-plaintext highlighter-rouge">arrayListOf</code></td>
     </tr>
     <tr>
       <td>set</td>
-      <td><code class="highlighter-rouge">setOf</code></td>
-      <td><code class="highlighter-rouge">mutableSetOf</code>, <code class="highlighter-rouge">hashSetOf</code>, <code class="highlighter-rouge">linkedSetOf</code>, <code class="highlighter-rouge">sortedSetOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">setOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableSetOf</code>, <code class="language-plaintext highlighter-rouge">hashSetOf</code>, <code class="language-plaintext highlighter-rouge">linkedSetOf</code>, <code class="language-plaintext highlighter-rouge">sortedSetOf</code></td>
     </tr>
     <tr>
       <td>map</td>
-      <td><code class="highlighter-rouge">mapOf</code></td>
-      <td><code class="highlighter-rouge">mutableMapOf</code>, <code class="highlighter-rouge">hashMapOf</code>, <code class="highlighter-rouge">linkedMapOf</code>, <code class="highlighter-rouge">sortedMapOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mapOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableMapOf</code>, <code class="language-plaintext highlighter-rouge">hashMapOf</code>, <code class="language-plaintext highlighter-rouge">linkedMapOf</code>, <code class="language-plaintext highlighter-rouge">sortedMapOf</code></td>
     </tr>
   </tbody>
 </table>
@@ -254,27 +412,27 @@ tell Android where you want to go, not how to drive there.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">size</code></td>
       <td>tells you how many elements are in the collection.  Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">isEmpty()</code></td>
+      <td><code class="language-plaintext highlighter-rouge">isEmpty()</code></td>
       <td>returns True if the collection is empty, False if it’s not.  Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">contains(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">contains(arg)</code></td>
       <td>returns True if arg is within the collection. Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">add(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">add(arg)</code></td>
       <td>add arg to the collection. This function returns true if arg was added — in the case of a list,  arg will always be added. In the case of a set, arg will be added and return true the first time, but if the same arg is added the second time, it will return False. This member function is not found on maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">remove(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">remove(arg)</code></td>
       <td>returns True if arg was removed from the collection, returns False is the collection is unmodified</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">iterator()</code></td>
+      <td><code class="language-plaintext highlighter-rouge">iterator()</code></td>
       <td>returns an iterator over the elements of the object. This was inherited from the Iterable interface. Works with lists, sets and maps</td>
     </tr>
   </tbody>
@@ -304,9 +462,131 @@ tell Android where you want to go, not how to drive there.</p>
 
 <h1 id="filter-function">Filter function</h1>
 
-<p>Filter and</p>
+<p>Kotlin’s filter function is a super handy tool for dealing with groups of things (like lists). It lets you easily pick out only the items you want, based on some simple rule. It’s basically an easy way to sort the good stuff from the rest.</p>
 
-<h1 id="map-function">Map function</h1>]]></content><author><name></name></author><category term="kotlin" /><summary type="html"><![CDATA[The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now. Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/kotlin-collections-classes.png" /><media:content medium="image" url="http://localhost:4000/images/kotlin-collections-classes.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">If I have a Delorean</title><link href="http://localhost:4000/posts/if-i-have-a-delorean/" rel="alternate" type="text/html" title="If I have a Delorean" /><published>2018-10-05T00:00:00+08:00</published><updated>2018-10-05T00:00:00+08:00</updated><id>http://localhost:4000/posts/if-i-have-a-delorean</id><content type="html" xml:base="http://localhost:4000/posts/if-i-have-a-delorean/"><![CDATA[<p>There was discussion post in <strong>dev.to</strong> <a href="https://dev.to/sergiotapia/what-is-your-best-advice-for-a-junior-software-developer-32gn">what is your best advise for a junior software developer</a>. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;</p>
+<p>How filter Works
+You start with a list of things. You use .filter on it and tell it your rule.</p>
+
+<pre><code class="language-kotline">val newList = oldList.filter { item -&gt; your_rule }
+</code></pre>
+
+<p>It checks every single item in the old list against your rule:</p>
+
+<ul>
+  <li>If the rule says true (Yes, keep it!), the item goes into the new list.</li>
+  <li>If the rule says false (Nope, toss it!), the item is left behind.</li>
+</ul>
+
+<p>The big thing to remember: filter never changes the first list. It always makes a brand new list with just the keepers.</p>
+
+<h2 id="a-quick-how-to">A Quick How-To</h2>
+
+<p>Let’s say you have a list of numbers.</p>
+
+<p><strong>1. Start with a List</strong>
+Kotlin</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>2. Make Your Rule</strong></p>
+
+<p>Say you only want numbers that are bigger than 7.</p>
+
+<p><strong>3. Use filter</strong></p>
+
+<p>We use the simple word it inside the curly braces to mean “the current item being checked.”</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">bigNumbers</span> <span class="p">=</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span> <span class="p">&gt;</span> <span class="mi">7</span> <span class="p">}</span>
+<span class="c1">// The rule 'it &gt; 7' is true for 12, 8, and 21.</span>
+</code></pre></div></div>
+
+<p><strong>4. Check the Result</strong>
+The bigNumbers list now only has those three:</p>
+
+<pre><code class="language-Kotlin">println(bigNumbers) // Output: [12, 8, 21]
+</code></pre>
+
+<p><strong>Fun with People</strong></p>
+
+<p>You can do this with more than just numbers. Imagine you have a list of people, each with an age.</p>
+
+<pre><code class="language-Kotlin">data class Person(val name: String, val age: Int)
+val friends = listOf(Person("Alice", 25), Person("Bob", 35), Person("Charlie", 28))
+
+// Find friends who are under 30 years old.
+val youngFriends = friends.filter { it.age &lt; 30 }
+// Result: Alice and Charlie
+</code></pre>
+
+<p>It’s a clean way to keep your code easy to read and simple to use! There are also simple versions like <code class="language-plaintext highlighter-rouge">filterNotNull</code> if you just need to drop the items that are null (nothing).</p>
+
+<h1 id="map-function">Map function</h1>
+
+<p>There will be times when, you don’t just want to filter a list and keep some stuff; you want to change everything in the list and get a brand-new list back. That’s where Kotlin’s map function comes in handy. It’s the perfect tool for taking a list of one thing and turning it into a list of something totally different. 🔄</p>
+
+<p><strong>What <code class="language-plaintext highlighter-rouge">map</code> Does</strong></p>
+
+<p>Think of map like an assembly line. You start with a list of items on one end, and you tell the “machine” (the map function) exactly what to do to each item as it passes by. It takes the result of that change and puts it on a new list on the other end.</p>
+
+<p>It follows a simple pattern:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">newList</span> <span class="p">=</span> <span class="n">oldList</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="n">item</span> <span class="p">-&gt;</span> <span class="n">the_change_you_make_to_it</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>It checks every single item in the old list, makes a change, and then puts the changed result into the new list. Just like filter, it never changes the first list; it only ever makes a new one.</p>
+
+<p><strong>Step-by-Step with an Example</strong></p>
+
+<p>Let’s say you have a list of numbers, and you want to know what each number would be if you doubled it.</p>
+
+<p><strong>1. Start with a List</strong></p>
+
+<pre><code class="language-Kotlin">val scores = listOf(5, 10, 4, 8)
+</code></pre>
+
+<p><strong>2. Define the Change</strong></p>
+
+<p>The rule is: take the current item and multiply it by two.</p>
+
+<p><strong>3. Use map</strong></p>
+
+<p>We use the simple word it inside the curly braces to mean “the current item being looked at.”</p>
+
+<pre><code class="language-Kotlin">val doubleScores = scores.map { it * 2 }
+</code></pre>
+
+<p>Kotlin does this for every item:</p>
+
+<ul>
+  <li>5 becomes 10</li>
+  <li>10 becomes 20</li>
+  <li>4 becomes 8</li>
+  <li>8 becomes 16</li>
+</ul>
+
+<p><strong>4. Check the Result</strong></p>
+
+<p>The doubleScores list is a brand-new list with the results of your change:</p>
+
+<pre><code class="language-Kotlin">println(doubleScores) // Output: [10, 20, 8, 16]
+</code></pre>
+
+<p><strong>Changing Types of Things</strong></p>
+
+<p>The cool part is you can change the type of thing you have. Say you have a list of Person objects with names and you just want a list of their names as strings:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">data class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">friends</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="nc">Person</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="mi">35</span><span class="p">))</span>
+
+<span class="c1">// We turn the list of Person objects into a list of just their names (Strings).</span>
+<span class="kd">val</span> <span class="py">names</span> <span class="p">=</span> <span class="n">friends</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">name</span> <span class="p">}</span>
+
+<span class="nf">println</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="c1">// Output: [Alice, Bob]</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">map</code> keeps your code clean and simple, helping you quickly change whole lists of data without writing tons of extra steps. Neat!</p>]]></content><author><name></name></author><category term="kotlin" /><summary type="html"><![CDATA[The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now. Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/kotlin-collections-classes.png" /><media:content medium="image" url="http://localhost:4000/images/kotlin-collections-classes.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">If I have a Delorean</title><link href="http://localhost:4000/posts/if-i-have-a-delorean/" rel="alternate" type="text/html" title="If I have a Delorean" /><published>2018-10-05T00:00:00+08:00</published><updated>2018-10-05T00:00:00+08:00</updated><id>http://localhost:4000/posts/if-i-have-a-delorean</id><content type="html" xml:base="http://localhost:4000/posts/if-i-have-a-delorean/"><![CDATA[<p>There was discussion post in <strong>dev.to</strong> <a href="https://dev.to/sergiotapia/what-is-your-best-advice-for-a-junior-software-developer-32gn">what is your best advise for a junior software developer</a>. I ended up responding with a 15-item, somewhat tongue-in-cheek, advise. Here they are;</p>
 
 <p>If I have Doc Brown’s DeLorean, this is what I would advise my younger self;</p>
 
@@ -314,7 +594,7 @@ tell Android where you want to go, not how to drive there.</p>
   <li>Keep your head down during code reviews. Humility goes a long way. They’re not criticizing you, it’s your code they’re after. It’s not personal</li>
   <li>Do the required reading before you get knee-deep in the code. You have a propensity to shoot from the hip, curb that enthusiasm. Don’t read the manual only when you’re in trouble</li>
   <li>Design patterns are nice, but you don’t have to use all of them, all the time in every code you write</li>
-  <li>Learn Python early. Get to the Python REPL and type <code class="highlighter-rouge">import this</code>. Learn it by heart, then read no. 3 (above) again</li>
+  <li>Learn Python early. Get to the Python REPL and type <code class="language-plaintext highlighter-rouge">import this</code>. Learn it by heart, then read no. 3 (above) again</li>
   <li>Coffee, pizza and chips are nice now, but 20 years from now, you’re gonna wish you didn’t eat those</li>
   <li>In a couple of years, social media is gonna be big. Stay out of it</li>
   <li>Those math subjects you hated, better get more comfortable with them. There’s gonna be a thing called “machine learning”, it’s gonna be big, you’re gonna need them maths</li>
@@ -405,11 +685,11 @@ tell Android where you want to go, not how to drive there.</p>
 
 <h1 id="compilation">Compilation</h1>
 
-<p>It’s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (<code class="highlighter-rouge">kotlinc</code>).</p>
+<p>It’s a JVM language, so, naturally, you still need the JDK. KT files are compiled using the kotlin compiler (<code class="language-plaintext highlighter-rouge">kotlinc</code>).</p>
 
 <p><img src="/images/kotlin-compilation-process.png" alt="compilation process" /></p>
 
-<p>The Kotlin compiler outputs <code class="highlighter-rouge">.class</code> files, just like <code class="highlighter-rouge">javac</code>. But, you cannot run Kotlin bytecodes the same way you would run Java bytecodes. You’ll need to combine the resulting  Kotlin byte code with the Kotlin runtime and package it into a jar file. Only then will you be able to run the program.</p>
+<p>The Kotlin compiler outputs <code class="language-plaintext highlighter-rouge">.class</code> files, just like <code class="language-plaintext highlighter-rouge">javac</code>. But, you cannot run Kotlin bytecodes the same way you would run Java bytecodes. You’ll need to combine the resulting  Kotlin byte code with the Kotlin runtime and package it into a jar file. Only then will you be able to run the program.</p>
 
 <p>This detail is probably important for you if you will work with Kotlin on the command line. These compilation and execution details are typically handled for you by an IDE.  I can think of three IDEs that should be usable with Kotlin; Eclipse, NetBeans and IntelliJ — the last one is a commercial IDE but it does have a community edition. IntelliJ CE is able to run Kotlin.  Anyone of these 3 IDEs should suffice. In case you choose to use IDEA, you might want to refer to the <a href="http://bit.ly/intellijguide">IntelliJ minimal survival guide</a>.</p>
 
@@ -454,7 +734,7 @@ tell Android where you want to go, not how to drive there.</p>
 
 <h1 id="variables">Variables</h1>
 
-<p>Variables are declared either as <code class="highlighter-rouge">val</code> or as <code class="highlighter-rouge">var</code>.  Listing 2 shows some example usage</p>
+<p>Variables are declared either as <code class="language-plaintext highlighter-rouge">val</code> or as <code class="language-plaintext highlighter-rouge">var</code>.  Listing 2 shows some example usage</p>
 
 <p><strong>Listing 2. Variable declarations</strong></p>
 
@@ -465,13 +745,13 @@ tell Android where you want to go, not how to drive there.</p>
 <span class="kd">val</span> <span class="py">anotherInt</span> <span class="p">=</span> <span class="mi">1</span>            <span class="c1">// (4)</span>
 </code></pre></div></div>
 
-<p><strong>(1)</strong> <code class="highlighter-rouge">someString</code> is the variable name (identifier)  and <code class="highlighter-rouge">String</code> is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It’s  quite the reverse in Java where the type is written to the left of the identifier.</p>
+<p><strong>(1)</strong> <code class="language-plaintext highlighter-rouge">someString</code> is the variable name (identifier)  and <code class="language-plaintext highlighter-rouge">String</code> is the type of variable. The type is written to the right of the identifier, and they are separated by a colon. It’s  quite the reverse in Java where the type is written to the left of the identifier.</p>
 
-<p><strong>(2)</strong> We can re-assign values to variables that were declared as <code class="highlighter-rouge">var</code>. No surprises here.</p>
+<p><strong>(2)</strong> We can re-assign values to variables that were declared as <code class="language-plaintext highlighter-rouge">var</code>. No surprises here.</p>
 
-<p><strong>(3)</strong> Same as the first statement, except that were using the <code class="highlighter-rouge">val</code> instead of <code class="highlighter-rouge">var</code>, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of <code class="highlighter-rouge">someInt</code> from the assignment. It will see that <code class="highlighter-rouge">1</code> is an Integer literal, hence, it can make the necessary type assignment</p>
+<p><strong>(3)</strong> Same as the first statement, except that were using the <code class="language-plaintext highlighter-rouge">val</code> instead of <code class="language-plaintext highlighter-rouge">var</code>, and were not specifying the type anymore. There are many situations in Kotlin where you can skip type declaration. This case is one of those. The c0mpiler can infer the type of <code class="language-plaintext highlighter-rouge">someInt</code> from the assignment. It will see that <code class="language-plaintext highlighter-rouge">1</code> is an Integer literal, hence, it can make the necessary type assignment</p>
 
-<p><strong>(4)</strong> This statement won’t work because variables declared as <code class="highlighter-rouge">val</code> are effectively constants. They become immutable. The Java equivalent is when you declare a variable as <em>final</em></p>
+<p><strong>(4)</strong> This statement won’t work because variables declared as <code class="language-plaintext highlighter-rouge">val</code> are effectively constants. They become immutable. The Java equivalent is when you declare a variable as <em>final</em></p>
 
 <h1 id="types">Types</h1>
 
@@ -528,7 +808,7 @@ tell Android where you want to go, not how to drive there.</p>
 
 <p><strong>Characters</strong></p>
 
-<p>You might remember from Java that <code class="highlighter-rouge">char</code> was treated as a number, that’s not the case in Kotlin. You can’t write code’s like this</p>
+<p>You might remember from Java that <code class="language-plaintext highlighter-rouge">char</code> was treated as a number, that’s not the case in Kotlin. You can’t write code’s like this</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">checkForKey</span><span class="p">(</span><span class="n">keyCode</span><span class="p">:</span><span class="nc">Char</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">keyCode</span> <span class="p">==</span> <span class="mi">97</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// won’t work, keyCode is not a number</span>
@@ -543,11 +823,11 @@ tell Android where you want to go, not how to drive there.</p>
 
 <p>Like in Java, you can use escape sequences such as \t, \b, \n, \r, \’, \”, \ and $ and if you need to encode any other character, you can use the Unicode syntax e.g. \uFF00.</p>
 
-<p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code></p>
+<p><strong>Booleans</strong> work and behave exactly as they do in Java. Even the literals are exactly the same — <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code></p>
 
 <h1 id="branching">Branching</h1>
 
-<p>The  <code class="highlighter-rouge">if</code> construct work almost the same as in Java.</p>
+<p>The  <code class="language-plaintext highlighter-rouge">if</code> construct work almost the same as in Java.</p>
 
 <p><strong>Listing 4. Branching with If</strong></p>
 
@@ -557,7 +837,7 @@ tell Android where you want to go, not how to drive there.</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>The second form, with the <code class="highlighter-rouge">else</code> is written as follows.</p>
+<p>The second form, with the <code class="language-plaintext highlighter-rouge">else</code> is written as follows.</p>
 
 <p><strong>Listing 5. If Else construct</strong></p>
 
@@ -570,7 +850,7 @@ tell Android where you want to go, not how to drive there.</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>The difference in Kotlin is, the <code class="highlighter-rouge">if</code> construct is not a statement, it’s an expression. Which means we can do things like this</p>
+<p>The difference in Kotlin is, the <code class="language-plaintext highlighter-rouge">if</code> construct is not a statement, it’s an expression. Which means we can do things like this</p>
 
 <p><strong>Listing 6. As an expression</strong></p>
 
@@ -632,10 +912,10 @@ tell Android where you want to go, not how to drive there.</p>
 </code></pre></div></div>
 
 <ul>
-  <li>The keyword <code class="highlighter-rouge">fun</code> is used to declare that the block is a function</li>
-  <li>Functions names are identifiers, just like in Java. The function name <code class="highlighter-rouge">main</code> is special, it denotes the entry point of the program, much like the <code class="highlighter-rouge">public static void main</code> in Java</li>
-  <li>The <code class="highlighter-rouge">args</code> argument of <code class="highlighter-rouge">main</code> is an <em>Array</em> of <em>String</em>. Kotlin doesn’t have a syntax to create arrays using the <code class="highlighter-rouge">[]</code> notation. The Kotlin <em>Array</em> is a generic class, it accepts a typed parameter, it’s <em>String</em> in this case. So, the <code class="highlighter-rouge">main</code> function accepts an array of <em>String</em></li>
-  <li>println is translated (under the hood) to a call to Java’s <code class="highlighter-rouge">System.out.println()</code>. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well</li>
+  <li>The keyword <code class="language-plaintext highlighter-rouge">fun</code> is used to declare that the block is a function</li>
+  <li>Functions names are identifiers, just like in Java. The function name <code class="language-plaintext highlighter-rouge">main</code> is special, it denotes the entry point of the program, much like the <code class="language-plaintext highlighter-rouge">public static void main</code> in Java</li>
+  <li>The <code class="language-plaintext highlighter-rouge">args</code> argument of <code class="language-plaintext highlighter-rouge">main</code> is an <em>Array</em> of <em>String</em>. Kotlin doesn’t have a syntax to create arrays using the <code class="language-plaintext highlighter-rouge">[]</code> notation. The Kotlin <em>Array</em> is a generic class, it accepts a typed parameter, it’s <em>String</em> in this case. So, the <code class="language-plaintext highlighter-rouge">main</code> function accepts an array of <em>String</em></li>
+  <li>println is translated (under the hood) to a call to Java’s <code class="language-plaintext highlighter-rouge">System.out.println()</code>. Kotlin can Java codes, including the Java standard library. And likewise, Java can use codes written in Kotlin. After all, Kotlin codes translates to byte codes as well</li>
 </ul>
 
 <h2 id="default-params">Default params</h2>
@@ -647,7 +927,7 @@ tell Android where you want to go, not how to drive there.</p>
               <span class="n">user</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"root"</span><span class="p">,</span>
               <span class="n">password</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"password"</span><span class="p">)</span>
 </code></pre></div></div>
-<p>All the params of <code class="highlighter-rouge">connectDb()</code> have default values, so we can call this function like this</p>
+<p>All the params of <code class="language-plaintext highlighter-rouge">connectDb()</code> have default values, so we can call this function like this</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">connectDb</span><span class="p">()</span> <span class="c1">// no arguments passed</span>
 <span class="nf">connectDb</span><span class="p">(</span><span class="s">"jupiter"</span><span class="p">)</span> <span class="c1">// just the 1st param</span>
@@ -787,331 +1067,4 @@ tell Android where you want to go, not how to drive there.</p>
       <td>First draft</td>
     </tr>
   </tbody>
-</table>]]></content><author><name></name></author><category term="android" /><summary type="html"><![CDATA[What to configure - this is part of the book Coding preferences - no need for this Common shortcuts - yes Common task you need to perform - I will do this, I will add this as part of the book refactor find some thing across projects TODO lists marking blocks of code for commenting Project organization - yes Project settings - yes Java 10 - A small clause. yes]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/android-studio-3.png" /><media:content medium="image" url="http://localhost:4000/images/android-studio-3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Kotlin’s higher order functions</title><link href="http://localhost:4000/posts/kotlin-higher-order-functions/" rel="alternate" type="text/html" title="Kotlin’s higher order functions" /><published>2018-05-05T00:00:00+08:00</published><updated>2018-05-05T00:00:00+08:00</updated><id>http://localhost:4000/posts/kotlin-higher-order-functions</id><content type="html" xml:base="http://localhost:4000/posts/kotlin-higher-order-functions/"><![CDATA[<p>The name <em>higher order functions</em>  come from the world of Mathematics, in there, a higher order function is also called <em>functional</em>, <em>functional form</em> or <em>functor</em>, and apparently, they take the difference between function and values, a bit more seriously than programming folks.</p>
-
-<aside><strong>NOTE</strong>
-It makes me wonder if there a thing such as "lower order functions",  I don't think this term was ever used, neither in programming nor in the world of Math. At least in Math, anything that isn’t a higher order function is referred to as “first order function”. I haven’t really heard any coder use the term “lower order function”— or maybe I just didn’t “Google” deep enough. 
-</aside>
-
-<p>Another name that was given to higher order functions is <em>first class functions</em>. A very clever guy named Christopher Strachey coined the term sometime in the mid 60s.</p>
-
-<p>So, if we can’t use “lower order functions” or first order functions to refer to our regular functions, we’ll just call them, well, functions.</p>
-
-<h2 id="same-difference">Same difference</h2>
-
-<p>Java, C/C++ and Visual Basic and some other languages, don’t have higher order functions. At least at the time of this writing. The functions or methods or whatever it they may be called in those languages, cannot take in functions as parameters nor can they return functions. But hang on, of course those languages can take in functions as parameters, what about this code example</p>
-
-<p><strong>Listing 1-1. foo() and bar() example</strong></p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">bar</span><span class="o">(</span><span class="n">foo</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span>
-<span class="o">}</span>
-
-<span class="kd">static</span> <span class="kt">void</span> <span class="nf">bar</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="kd">static</span> <span class="kt">int</span> <span class="nf">foo</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Didn’t we just pass <code class="highlighter-rouge">foo()</code> to <code class="highlighter-rouge">bar()</code>? isn’t that passing a function to another function? That’s a no. Passing <code class="highlighter-rouge">foo()</code> to another function like <code class="highlighter-rouge">bar()</code> isn’t what we mean by a “function taking in another function as parameter”. Maybe if there was a way to pass <code class="highlighter-rouge">foo</code> without the parentheses, and then somewhere in the body of function <code class="highlighter-rouge">bar</code> (the receiving function), we get to invoke it like this</p>
-
-<p><strong>Listing 1-2. foo() and bar() examples, again</strong></p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">bar</span><span class="o">(</span><span class="n">foo</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kd">static</span> <span class="kt">void</span> <span class="nf">bar</span><span class="o">(</span><span class="n">func</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">val</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>But this isn’t doable in Java, nor is it doable in a language that doesn’t support higher order functions.</p>
-
-<p>The code <code class="highlighter-rouge">bar(foo(2))</code> means we are calling <code class="highlighter-rouge">foo(2)</code>, it will be resolved to 4 and it’s type is <code class="highlighter-rouge">int</code> , then we get to call <code class="highlighter-rouge">bar()</code>, what’s being passed to to <code class="highlighter-rouge">bar()</code> isn’t the function definition of <code class="highlighter-rouge">foo</code>, but whatever value <code class="highlighter-rouge">foo</code> resolves to — which is 4 in our example, which is of type <code class="highlighter-rouge">int</code>. We’re not passing a <em>function type</em> because Java doesn’t have a <em>function type</em>, nor does C/C++ nor VB.</p>
-
-<h2 id="what-does-it-look-like">What does it look like</h2>
-
-<p>In a language that has support for higher order functions, like Kotlin, the <em>foo and bar</em> examples would have looked like this</p>
-
-<p><strong>Listing 1-3. foo() and bar() in functional style</strong></p>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">foo</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span><span class="nc">Int</span><span class="p">):</span> <span class="nc">Int</span> <span class="p">{</span>              <span class="p">&lt;</span><span class="mi">1</span><span class="p">&gt;</span>
-  <span class="k">return</span> <span class="n">arg</span> <span class="p">*</span> <span class="n">arg</span>
-<span class="p">}</span>
-
-<span class="k">fun</span> <span class="nf">bar</span><span class="p">(</span><span class="n">fu</span><span class="p">:(</span><span class="n">arg</span><span class="p">:</span><span class="nc">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nc">Int</span> <span class="p">{</span> <span class="p">&lt;</span><span class="mi">2</span><span class="p">&gt;</span>
-  <span class="k">return</span> <span class="nf">fu</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                       <span class="p">&lt;</span><span class="mi">3</span><span class="p">&gt;</span>
-<span class="p">}</span>
-
-<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
-  <span class="nf">println</span><span class="p">(</span><span class="nf">bar</span><span class="p">(</span><span class="o">::</span><span class="n">foo</span><span class="p">))</span>                <span class="p">&lt;</span><span class="mi">4</span><span class="p">&gt;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><strong>&lt;1&gt;</strong> This is a simple <em>named function</em> in Kotlin. It takes an <em>Int</em> and the function returns an <em>Int</em> as well. The function simply squares whatever Int you throw at it. We’re going to pass this function to another function (<code class="highlighter-rouge">bar()</code>)</p>
-
-<p><strong>&lt;2&gt;</strong> Function <code class="highlighter-rouge">bar()</code> takes one input as parameter, this input is named <code class="highlighter-rouge">fu</code> but  take note of how it’s type is declared; <code class="highlighter-rouge">(arg:Int) -&gt; Int</code> — this is how a <em>function type</em> is declared in Kotlin. A function type has 3 parts, (1) the parameter list, if it doesn’t take any, it would just be a pair of parentheses, but in our case it takes on an <em>Int</em> (2) the arrow operator, it’s written as a dash or minus sign immediately followed by the greater than sign, some people call it the chevron symbol. This operator separates the parameter list and the return type. And finally (3) the return type of the <em>function type</em>. We intend to pass function <code class="highlighter-rouge">foo()</code> to function <code class="highlighter-rouge">bar()</code> and <code class="highlighter-rouge">foo()</code> returns an <em>Int</em>, hence, our function type in <code class="highlighter-rouge">bar()</code> should also return <em>Int</em></p>
-
-<p><strong>&lt;3&gt;</strong>  Now, we invoke <code class="highlighter-rouge">fu</code> and we pass the value 2 to it</p>
-
-<p><strong>&lt;4&gt;</strong>  Now, we pass <code class="highlighter-rouge">foo</code> to <code class="highlighter-rouge">bar()</code>. Notice that we passed the param as <code class="highlighter-rouge">foo</code> and <strong>not</strong> <code class="highlighter-rouge">foo()</code>. We are not resolving the value of <code class="highlighter-rouge">foo()</code> and then passing it to <code class="highlighter-rouge">bar()</code>, were passing <code class="highlighter-rouge">foo</code> as a function definition, so that later on, we can invoke it from within the context of the receiving function</p>
-
-<p>When a function can take in another function as a parameter, in the same vein that it can take in objects or values, it can be said that that language treats functions as <em>first class citizens</em>; in Kotlin, <em>functions</em> supports all the operations that are generally available to other entities like <em>objects</em> or <em>values</em>. It’s not simply a named collection of statements, it’s also a <em>type</em></p>
-
-<h2 id="why-are-we-bothering">Why are we bothering</h2>
-
-<p>Because this gives us the ability to vary the compute process depending on the <em>client</em>. In Listing 1-3 (above) the client is the <code class="highlighter-rouge">println()</code> function, and the server is the <code class="highlighter-rouge">bar()</code> function. We’ve defined <code class="highlighter-rouge">bar()</code> to accept a <em>function type</em> that takes an <em>Int</em> and also returns and <em>Int</em>, we can pass any function to <em>bar</em> that meets this criteria, it may have a different implementation inside but so long as it takes in and returns an <em>Int</em> that should be fine. This  is actually a design pattern called the <em>Strategy Pattern</em>. This pattern is from the gang of four (GoF), they wrote a book called <em>Design Patterns</em>, the Strategy pattern is one of them.</p>
-
-<h2 id="does-kotlin-itself-use-functionals">Does Kotlin itself use functionals</h2>
-
-<p>I don’t know that personally, but by reading through some of literature produced by that team and a quick look at some of Kotlin’s standard library e.g. “Standard.Kt” and some of the operations we can do on collections objects, I think the answer is “yes”.</p>
-
-<p>If you’ve gone through any tutorial of the Kotlin language, there is a fair chance you’ve encountered some constructs that involved <code class="highlighter-rouge">forEach</code>, <code class="highlighter-rouge">filter</code>,  <code class="highlighter-rouge">map</code>, <code class="highlighter-rouge">with</code>, <code class="highlighter-rouge">apply</code> and <code class="highlighter-rouge">let</code> to name a few. These things are higher order functions.</p>]]></content><author><name></name></author><category term="kotlin" /><summary type="html"><![CDATA[The name higher order functions come from the world of Mathematics, in there, a higher order function is also called functional, functional form or functor, and apparently, they take the difference between function and values, a bit more seriously than programming folks.]]></summary></entry><entry><title type="html">Learn Android Studio 3</title><link href="http://localhost:4000/posts/learn-android-studio3/" rel="alternate" type="text/html" title="Learn Android Studio 3" /><published>2017-12-04T00:00:00+08:00</published><updated>2017-12-04T00:00:00+08:00</updated><id>http://localhost:4000/posts/learn-android-studio-3-java</id><content type="html" xml:base="http://localhost:4000/posts/learn-android-studio3/"><![CDATA[<p>Learn Android Studio 3 is out. You can get it in print or electronic download  from  the <a href="https://www.apress.com/gp/book/9781484231555">Apress website</a> or from <a href="https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;qid=1539173743&amp;sr=8-1&amp;keywords=learn+android+studio+3">Amazon</a>.</p>
-
-<h2 id="whats-inside">What’s inside</h2>
-
-<p>It’s a beginner’s book, it’s for you if you are;</p>
-
-<ul>
-  <li>new to Android programming</li>
-  <li>new to Android Studio</li>
-  <li>If you’re also new to Java, I’ve included a really really short introduction to the Java language (it’s in the Appendix). The book doesn’t assume you’re a Java expert, but  it would be great if you’ve done some Java programming before.</li>
-</ul>
-
-<p>The following sections shows some highlights of what you can learn from the book.</p>
-
-<h3 id="what-makes-up-an-application">What makes up an application</h3>
-
-<p>An Android app isn’t the same as a monolithic desktop app with a single executable file. You’ll learn tthe</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span> <span class="c1">// (1)</span>
-    <span class="c1">// your code here</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p><strong>(1)</strong> Android prefers to use XML to define the UI. This statement is glue-ing the Activity class to a UI layout defined in XML.  This relationship and other concepts  such as “inflating” are explained in the book</p>
-
-<h3 id="intents-and-event-handling">Intents and Event handling</h3>
-
-<p>Android apps are made up of loosely coupled <em>“components”</em>. They’re not just a bunch of objects you can activate by instantation.  Android has a mechanism for component activation; and <em>Intents</em> are smacked right in the middle of it. This component activation is deeply ingrained in Android’s architecture. You’ll work with detailed project demos touching on this topic</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">EXTRA_MESSAGE</span> <span class="o">=</span> <span class="s">"com.example.myfirstapp.MESSAGE"</span><span class="o">;</span>
-    <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="cm">/** Called when the user taps the Send button */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendMessage</span><span class="o">(</span><span class="nc">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-        <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="nc">DisplayMessageActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-        <span class="nc">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="nc">EditText</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
-        <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">editText</span><span class="o">.</span><span class="na">getText</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
-        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="no">EXTRA_MESSAGE</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
-        <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="implicit-intents">Implicit Intents</h3>
-
-<p>Intents aren’t good only for activating other Activities. There are also <em>implicit Intents</em>. This is one of the gems of the Android platform, implicit intents lets your code use other people’s codes.  In the book, you’ll work wih project demos that use implicit Intents.</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">switch</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">getId</span><span class="o">())</span> <span class="o">{</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnwebaddress</span><span class="o">:</span>
-      <span class="n">uri</span> <span class="o">=</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"http://www.apress.com"</span><span class="o">);</span>
-      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_VIEW</span><span class="o">,</span><span class="n">uri</span><span class="o">);</span>
-      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnmap</span><span class="o">:</span>
-      <span class="n">uri</span> <span class="o">=</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"geo:40.7113399,-74.0263469"</span><span class="o">);</span>
-      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_VIEW</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
-      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnphonenumber</span><span class="o">:</span>
-      <span class="n">uri</span> <span class="o">=</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"tel:639285083333"</span><span class="o">);</span>
-      <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_DIAL</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
-      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="nc">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="n">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">(),</span> <span class="s">"Cannot resolve button click"</span><span class="o">);</span>
-  <span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="using-the-appbar">Using the AppBar</h3>
-
-<p>Learn how to add menus to your application, and also how to handle the events</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="nc">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
-
-  <span class="nc">MenuInflater</span> <span class="n">inflater</span> <span class="o">=</span> <span class="n">getMenuInflater</span><span class="o">();</span> 
-  <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">main_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span> 
-  <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="o">}</span>
-
-<span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onOptionsItemSelected</span><span class="o">(</span><span class="nc">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
-
-  <span class="k">switch</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">()){</span> 
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuFile</span><span class="o">:</span>
-      <span class="n">showMessage</span><span class="o">(</span><span class="s">"File"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuEdit</span><span class="o">:</span>
-      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Edit"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuHelp</span><span class="o">:</span>
-      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Help"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">case</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">menuExit</span><span class="o">:</span>
-      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Exit"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="n">showMessage</span><span class="o">(</span><span class="s">"Default"</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="run-in-the-background">Run in the background</h3>
-
-<p>By the default all codes run on the UI thread (main thread). There will be times when you need to run some codes in the background thread.</p>
-
-<p><img src="/images/ls3java-asynctask.png" alt=" asynctask" /></p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">android.os.AsyncTask</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">extends</span> <span class="nc">AsyncTask</span><span class="o">&lt;</span><span class="nc">TextView</span><span class="o">,</span> <span class="nc">String</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>  <span class="c1">// (1)</span>
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="nc">Boolean</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="nc">TextView</span><span class="o">...</span> <span class="n">textViews</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>  <span class="c1">// (2)</span>
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onProgressUpdate</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">values</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>  <span class="c1">// (3)</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p><strong>(1)</strong> The AsyncTask is parameterized, it’s a generic type so we need to pass arguments to it. These parameters are &lt;Params,Progress, Result&gt;</p>
-
-<p><strong>(2)</strong> This is the only method we are obliged to override. Inside this is where we should put the program logic which may take some time to complete</p>
-
-<p><strong>(3)</strong> Use this method to communicate progress to the user</p>
-
-<h2 id="about-the-author">About the author</h2>
-
-<p>Ted has been in software development for 20+ years. He’s a developer by trade, at the moment he’s the CTO and DPO of RenditionDigital International, a software development company based out of Dublin. He wrote a couple of books for Apress.</p>
-
-<p><img src="/images/las3.png" alt="" /></p>
-
-<p>You can get it from the <a class="inline-button" href="https://www.apress.com/gp/book/9781484231555" target="_blank">Apress website</a> or from <a class="inline-button" href="https://www.amazon.com/Learn-Android-Studio-Efficient-Development-ebook/dp/B079N58V2H/ref=sr_1_1?ie=UTF8&amp;qid=1539173743&amp;sr=8-1&amp;keywords=learn+android+studio+3" target="_blank">Amazon</a>. Don’t forget to leave a review. Thanks!</p>]]></content><author><name></name></author><category term="android," /><category term="java" /><summary type="html"><![CDATA[Learn Android programming fundamentals using Android Studio 3]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/las3cover.jpg" /><media:content medium="image" url="http://localhost:4000/images/las3cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My notes on Python</title><link href="http://localhost:4000/posts/python-lang/" rel="alternate" type="text/html" title="My notes on Python" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/posts/python-lang</id><content type="html" xml:base="http://localhost:4000/posts/python-lang/"><![CDATA[<p><strong>Preface material</strong></p>
-
-<p>Who is this for? It’s for a beginning programmer, but I’m assuming this isn’t your first programming language — HTML doesn’t count, but if you coded a bit of JavaScript, then that counts.</p>
-
-<p>The very fundamentals of coding won’t be tackled in here. I’m already assuming that your quite familiar with some of the tenets of imperative programming, like, statements are arranged in sequence, they execute one after another unless redirected by a branching construct like an <code class="highlighter-rouge">if</code>, or a looping construct like a <code class="highlighter-rouge">do</code>; or variables can hold data,  they have a memory address and we can replace that data whenever we like — stuff like that. There are plenty of places in the web where you can an introduction to programming, e.g. <a href="bit.ly/introprogrammingcsera">Coursera’s introduction to programming</a>. Having said that, I tried to stay away from computer science jargon as much as I can. So, it may be possible after all for a beginner to make use of these materials.</p>
-
-<p><strong>Style guide and other stuff</strong></p>
-
-<p>I use lots of code examples. These materials are peppered with. So, when you see something like this</p>
-
-<p><strong>Example 1. How to start the REPL</strong></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">python3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
-</code></pre></div></div>
-
-<p>You’re supposed to launch a terminal application and type what you see. If you will work with Python, you need to be comfortable working on the cmd line. I’m assuming that you can manage to find the terminal application in your OS — like <code class="highlighter-rouge">cmd</code> in Windows, Terminal.app in macOS or an xTerm in Linux, or whatever terminal you prefer.</p>
-
-<p>When you see something like this</p>
-
-<p><strong>Listing 1. age.py</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from datetime import datetime as d
-
-birthYear = int(input("When year of birth "))
-
-if 1946 &lt;= birthYear &lt;= 2012:
-    print(d.now().year - birthYear)
-else:
-    print("no logic for that")
-</code></pre></div></div>
-
-<p>You’re supposed create a file named “age.py” as specified in the Listing header and type the contents into it.</p>
-
-<h1 id="getting-python">Getting Python</h1>
-
-<p>Linux and macOS users already have Python installed, but chances are they have Python 2. We’ll be using Python 3, so you need to get it.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>platform</th>
-      <th>how to install Python</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Linux</td>
-      <td>If you’re using a modern Debian or Ubuntu system, chances are you already have Python3. To see if you really have it, type <code class="highlighter-rouge">python --version</code> on a terminal</td>
-    </tr>
-    <tr>
-      <td>macOS</td>
-      <td>I’m assuming you already have the HomeBrew package manager. If you don’t have it, you can install by following the instructions on the <a href="http://brew.sh/#install">homebrew install page</a>. Then, on a terminal, type <code class="highlighter-rouge">brew install python</code></td>
-    </tr>
-    <tr>
-      <td>Windows</td>
-      <td>You can use the chocolatey package manager. To install it, you can follow the instruction in <a href="https://chocolatey.org/install">chocolatey/installation</a>. After that, you can do this on the the command line <code class="highlighter-rouge">choco install python</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Another way to get Python is via the Anaconda installer. You can find the instructions <a href="http://bit.ly/anaconda_installer">here</a></p>
-
-<h1 id="repl">REPL</h1>
-
-<p>REPL is short for Read Eval Print Loop. It’s an interactive environment for Python.  Try it out.</p>
-
-<p><strong>Example 2. Try the REPL</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python
-&gt;&gt;&gt; 1 + 1
-2
-&gt;&gt;&gt; print("Hello World")
-Hello World
-help(str)
-</code></pre></div></div>
-
-<p>You can type any valid expression or statement in this environment. This is a good way to learn the language. You can try out some expressions in here before you put them in your script.</p>
-
-<p>It’s also an excellent way to learn about the Python library. The last line in Example 2 shows how to get help about the String library.</p>
-
-<h1 id="editor">Editor</h1>
-
-<h1 id="basics">Basics</h1>
-
-<h1 id="strings-and-collection">Strings and collection</h1>
-
-<h1 id="modules">Modules</h1>
-
-<p>Modules make our lives a lot easier. This is how we take advantage Python’s built-in library and other people’s codes.</p>
-
-<p>This is just Python source file that can expose classes or functions.</p>
-
-<p>3 forms of import</p>
-
-<h1 id="objects">Objects</h1>
-
-<h1 id="collections-again">Collections again</h1>
-
-<h1 id="exceptions">Exceptions</h1>
-
-<h1 id="iterables">Iterables</h1>
-
-<h1 id="classes">Classes</h1>
-
-<h1 id="io">I/O</h1>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[Preface material]]></summary></entry></feed>
+</table>]]></content><author><name></name></author><category term="android" /><summary type="html"><![CDATA[What to configure - this is part of the book Coding preferences - no need for this Common shortcuts - yes Common task you need to perform - I will do this, I will add this as part of the book refactor find some thing across projects TODO lists marking blocks of code for commenting Project organization - yes Project settings - yes Java 10 - A small clause. yes]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/android-studio-3.png" /><media:content medium="image" url="http://localhost:4000/images/android-studio-3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

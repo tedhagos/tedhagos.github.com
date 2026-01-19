@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Android Activities and layouts | Ted Hagos</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Android Activities and layouts" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Most programs need an entry point or a beginning routine where all execution begins. Even the lowly “Hello World” in Java requires a static void main as an entry point. Android programs are the same, it also needs it’s own version of the “function main”. But the entry point of an Android program isn’t just a function called “main”, — it’s a bit more involved than that." />
@@ -59,26 +59,75 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         
-  <img src="/images/android-lifecycle.png" class="cover-image">
+<img src="/images/android-lifecycle.png" class="cover-image" />
 
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article
+    class="post h-entry"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+>
+    <!--
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">
+            Android Activities and layouts
+        </h1>
+        <p class="post-meta">
+            <time
+                class="dt-published"
+                datetime="2012-10-20T00:00:00+08:00"
+                itemprop="datePublished"
+            >Oct
+                20, 2012
+            </time></p>
+    </header>
+    -->
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Android Activities and layouts</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2012-10-20T00:00:00+08:00" itemprop="datePublished">Oct 20, 2012
-      </time></p>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">
+            Android Activities and layouts
+        </h1>
+        <p class="post-meta">
+            <time
+                class="dt-published"
+                datetime="2012-10-20T00:00:00+08:00"
+                itemprop="datePublished"
+            >Oct
+                20, 2012
+            </time>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <p>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly “Hello World” in Java requires a <code class="highlighter-rouge">static void main</code> as an entry point. Android programs are the same, it also needs it’s own version of the “function main”.  But the entry point of an Android program isn’t just a function called “main”, —  it’s a bit more involved than that.</p>
+            •
+            <span
+                itemprop="author"
+                itemscope
+                itemtype="http://schema.org/Person"
+            >
+                <span class="p-author h-card" itemprop="name">
+                    by
+                    <a
+                        href="https://tedhagos.com"
+                        style="
+                            text-decoration: none;
+                            color: inherit;
+                            font-weight: bold;
+                        "
+                    >
+                        Ted
+                        Hagos
+                    </a>
+                </span>
+            </span>
+        </p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+        <p>Most programs need an entry point or a beginning routine where all execution begins. Even the lowly “Hello World” in Java requires a <code class="language-plaintext highlighter-rouge">static void main</code> as an entry point. Android programs are the same, it also needs it’s own version of the “function main”.  But the entry point of an Android program isn’t just a function called “main”, —  it’s a bit more involved than that.</p>
 
 <h1 id="androids-trinity-of-main">Android’s Trinity of Main</h1>
 
 <p>A simple app in Android that will show a single screen to the user requires three things, (1) an Activity class which acts as the main program file (2) a layout file which contains all UI definitions, and (3) a Manifest file,  which ties all the project’s components and resources together — all Android programs require this manifest file. If you still remember working with JavaBean’s manifest file, this is sort of like that. It describes the contents of the project.</p>
 
-<p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It’s looking for a specific value of the <code class="highlighter-rouge">intent-filter</code> node, the runtime is trying to determine if this application has defined a “main function” in it. Listing 1 shows an excerpt from an a manifest file, this one has a “main function” defined in it.</p>
+<p>When an application is launched by a user, the Android runtime creates an Intent object and inspects the contents of the manifest file. It’s looking for a specific value of the <code class="language-plaintext highlighter-rouge">intent-filter</code> node, the runtime is trying to determine if this application has defined a “main function” in it. Listing 1 shows an excerpt from an a manifest file, this one has a “main function” defined in it.</p>
 
 <p><strong>Listing 1. Excerpt from AndroidManifest.xml</strong></p>
 
@@ -91,7 +140,7 @@
 <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div></div>
 
-<p>An <code class="highlighter-rouge">intent-filter</code> that has a value of <code class="highlighter-rouge">android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There’s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code class="highlighter-rouge">activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is “MainActivity”</p>
+<p>An <code class="language-plaintext highlighter-rouge">intent-filter</code> that has a value of <code class="language-plaintext highlighter-rouge">android.intent.action.MAIN</code> means that this Activity has indeed, an entry point. There’s one more thing we can reckon from Listing 1, not only do we know that the app has an entry point, we also the name of the entry point, the value of the <code class="language-plaintext highlighter-rouge">activity</code> attribute denotes the name of the class which will run first when the app is launched. In our example manifest shown in Listing 1, the class name is “MainActivity”</p>
 
 <h2 id="main-program-file">Main Program file</h2>
 
@@ -99,7 +148,7 @@
 
 <p>An Activity is single screen that a user sees in your application. They are the primary ways for your application to communicate to the user. You will capture inputs with them and you will show outputs using them. If you  built Java applications for the desktop before, you might think of them as AWT Frames.</p>
 
-<p>This class has to inherit from the <code class="highlighter-rouge">android.app.Activity</code> class or any one of its children.</p>
+<p>This class has to inherit from the <code class="language-plaintext highlighter-rouge">android.app.Activity</code> class or any one of its children.</p>
 
 <h2 id="layout-file">Layout file</h2>
 
@@ -120,34 +169,106 @@
 <p>Photo credit: developer.android.com</p>
 
 
-  </div>
-
-  
-    <div class="newsletter-box">
-      I hope the article was helpful, if you'd like to get more like these piped into your email, you can <a href="https://buttondown.email/tedhagos" target="_blank">subscribe to the newsletter</a>.
     </div>
-  <a class="u-url" href="/posts/android-activities-layouts/" hidden></a>
+
+    
+
+    <div
+        class="card"
+        style="
+            width: 24rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            font-family: sans-serif;
+        "
+    >
+        <div class="card-body" style="padding: 2rem">
+            <h2
+                class="card-title"
+                style="
+                    margin-top: 0;
+                    font-weight: 900;
+                    font-size: 1.8rem;
+                    letter-spacing: -0.5px;
+                    color: #111;
+                "
+            >
+                Get the newsletter
+            </h2>
+            <p
+                class="card-text"
+                style="
+                    font-size: 1.1rem;
+                    color: #444;
+                    line-height: 1.5;
+                    margin-bottom: 1.5rem;
+                "
+            >
+                I write short essays on software development and programming
+                careers, delivered a few times a week[cite: 23].
+            </p>
+            <a
+                target="_blank"
+                href="https://tedhagos.kit.com/ab4b864482"
+                style="
+                    display: inline-block;
+                    background-color: #0070f3;
+                    color: white;
+                    padding: 14px 28px;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    transition: background-color 0.2s;
+                    text-align: center;
+                "
+            >
+                Join the list
+            </a>
+        </div>
+    </div>
+
+    <a class="u-url" href="/posts/android-activities-layouts/" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
+  <!--
   <div class="wrapper">
 
     <div style="background: #fbf2e9;padding:10px;">
       <p>
         <a href="/" class="footer-link">Home</a>
         <a href="/about/" class="footer-link">About</a>
-        <a href="/blog/" class="footer-link">Blog archives</a>
+        <a href="/blog/" class="footer-link">Blog</a>
         <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
       </p>
-      copyright Ted Hagos &copy; 2025
-      <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:intline" class="footer-link"></a> -->
-    
     </div>
-
+    <div>
+      copyright Ted Hagos &copy; 2026 - Notes from a lifelong 
+      coder exploring security, AI, and the future of software
+    </div>
   </div>
+  -->
+  <div class="wrapper" style="text-align: center;">
+
+    <div style="background: #fbf2e9;padding:10px;">
+      <p>
+        <a href="/" class="footer-link" style="color: #008B8B;">Home</a>
+        <a href="/about/" class="footer-link" style="color: #008B8B;">About</a>
+        <a href="/blog/" class="footer-link" style="color: #008B8B;">Blog</a>
+      </p>
+    </div>
+    <div>
+      copyright Ted Hagos &copy; 2026 - Notes from a lifelong 
+      coder exploring security, AI, and the future of software
+    </div>
+  </div>
+
 
 </footer>
 </body>

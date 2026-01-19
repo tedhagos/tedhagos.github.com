@@ -187,3 +187,5 @@ It took a task that used to involve arcane rituals and replaced it with a simple
 tell Android where you want to go, not how to drive there.
 
 And that’s how a small library quietly rescued thousands of developers from their own fragments. 
+
+

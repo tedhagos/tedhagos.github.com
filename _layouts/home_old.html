@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+Hi, I'm <a href="/about">Ted</a>. I'm a dev, trainer and author (not necessarily in that order). You found my blog. Here's the last 5 things I wrote.
+<p/>
+
+{%- if site.posts.size > 0 -%}
+<ul>
+  {%- for post in site.posts limit: 5 -%}
+  <li>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
+
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+
+    {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+  {%- endif -%}
+</ul>
+
+The rest of the articles are in the <a href="/blog/">blog archives</a>, you
+can also <a href="https://buttondown.email/tedhagos" target="_blank">subscribe for email updates</a>. We send very infrequent updates. 
+We have a very simple privacy policy <em>"we won't share your
+personal data with anyone else, and we won't use it for anything other that its 
+intended purpose, which is to send you only awesome goodness"</em>; 
+for the serious types, you  can read the <a href="/privacy/">privacy policy</a>. 
+
+<!-- {%- include las3kotlin.html -%} -->
+
+

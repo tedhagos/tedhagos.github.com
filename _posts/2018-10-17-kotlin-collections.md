@@ -100,10 +100,142 @@ fruits.forEach { println(it) }
 
 # Filter function
 
-Filter and 
+Kotlin's filter function is a super handy tool for dealing with groups of things (like lists). It lets you easily pick out only the items you want, based on some simple rule. It's basically an easy way to sort the good stuff from the rest.
+
+How filter Works
+You start with a list of things. You use .filter on it and tell it your rule.
+
+
+```kotline
+val newList = oldList.filter { item -> your_rule }
+```
+
+It checks every single item in the old list against your rule:
+
+- If the rule says true (Yes, keep it!), the item goes into the new list.
+- If the rule says false (Nope, toss it!), the item is left behind.
+
+The big thing to remember: filter never changes the first list. It always makes a brand new list with just the keepers.
+
+## A Quick How-To
+
+Let's say you have a list of numbers.
+
+**1. Start with a List**
+Kotlin
+
+```kotlin
+val numbers = listOf(5, 12, 4, 8, 21, 10)
+``` 
+
+**2. Make Your Rule** 
+
+Say you only want numbers that are bigger than 7.
+
+**3. Use filter**
+
+We use the simple word it inside the curly braces to mean "the current item being checked."
+
+```kotlin
+val bigNumbers = numbers.filter { it > 7 }
+// The rule 'it > 7' is true for 12, 8, and 21.
+```
+
+**4. Check the Result**
+The bigNumbers list now only has those three:
+
+```Kotlin
+println(bigNumbers) // Output: [12, 8, 21]
+```
+
+**Fun with People** 
+
+You can do this with more than just numbers. Imagine you have a list of people, each with an age.
+
+```Kotlin
+data class Person(val name: String, val age: Int)
+val friends = listOf(Person("Alice", 25), Person("Bob", 35), Person("Charlie", 28))
+
+// Find friends who are under 30 years old.
+val youngFriends = friends.filter { it.age < 30 }
+// Result: Alice and Charlie
+```
+
+It's a clean way to keep your code easy to read and simple to use! There are also simple versions like `filterNotNull` if you just need to drop the items that are null (nothing).
 
 
 
 # Map function
 
+
+There will be times when, you don't just want to filter a list and keep some stuff; you want to change everything in the list and get a brand-new list back. That's where Kotlin's map function comes in handy. It's the perfect tool for taking a list of one thing and turning it into a list of something totally different. 🔄
+
+**What `map` Does**
+
+Think of map like an assembly line. You start with a list of items on one end, and you tell the "machine" (the map function) exactly what to do to each item as it passes by. It takes the result of that change and puts it on a new list on the other end.
+
+It follows a simple pattern:
+
+
+```kotlin
+val newList = oldList.map { item -> the_change_you_make_to_it }
+```
+
+It checks every single item in the old list, makes a change, and then puts the changed result into the new list. Just like filter, it never changes the first list; it only ever makes a new one.
+
+**Step-by-Step with an Example** 
+
+Let's say you have a list of numbers, and you want to know what each number would be if you doubled it.
+
+**1. Start with a List** 
+
+
+```Kotlin
+val scores = listOf(5, 10, 4, 8)
+```
+
+**2. Define the Change**
+
+The rule is: take the current item and multiply it by two.
+
+**3. Use map**
+
+We use the simple word it inside the curly braces to mean "the current item being looked at."
+
+```Kotlin
+val doubleScores = scores.map { it * 2 }
+```
+
+Kotlin does this for every item:
+
+* 5 becomes 10
+* 10 becomes 20
+* 4 becomes 8
+* 8 becomes 16
+
+**4. Check the Result** 
+
+The doubleScores list is a brand-new list with the results of your change:
+
+```Kotlin
+println(doubleScores) // Output: [10, 20, 8, 16]
+```
+
+**Changing Types of Things**
+
+The cool part is you can change the type of thing you have. Say you have a list of Person objects with names and you just want a list of their names as strings:
+
+```kotlin
+
+data class Person(val name: String, val age: Int)
+val friends = listOf(Person("Alice", 25), Person("Bob", 35))
+
+// We turn the list of Person objects into a list of just their names (Strings).
+val names = friends.map { it.name }
+
+println(names) // Output: [Alice, Bob]
+```
+
+
+Using `map` keeps your code clean and simple, helping you quickly change whole lists of data without writing tons of extra steps. Neat!
 

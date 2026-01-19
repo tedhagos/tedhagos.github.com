@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Kotlin Collections | Ted Hagos</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Kotlin Collections" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now. Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with." />
@@ -59,20 +59,69 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         
-  <img src="/images/kotlin-collections-classes.png" class="cover-image">
+<img src="/images/kotlin-collections-classes.png" class="cover-image" />
 
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article
+    class="post h-entry"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+>
+    <!--
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">
+            Kotlin Collections
+        </h1>
+        <p class="post-meta">
+            <time
+                class="dt-published"
+                datetime="2018-10-17T00:00:00+08:00"
+                itemprop="datePublished"
+            >Oct
+                17, 2018
+            </time></p>
+    </header>
+    -->
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Kotlin Collections</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2018-10-17T00:00:00+08:00" itemprop="datePublished">Oct 17, 2018
-      </time></p>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">
+            Kotlin Collections
+        </h1>
+        <p class="post-meta">
+            <time
+                class="dt-published"
+                datetime="2018-10-17T00:00:00+08:00"
+                itemprop="datePublished"
+            >Oct
+                17, 2018
+            </time>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <p>The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</p>
+            •
+            <span
+                itemprop="author"
+                itemscope
+                itemtype="http://schema.org/Person"
+            >
+                <span class="p-author h-card" itemprop="name">
+                    by
+                    <a
+                        href="https://tedhagos.com"
+                        style="
+                            text-decoration: none;
+                            color: inherit;
+                            font-weight: bold;
+                        "
+                    >
+                        Ted
+                        Hagos
+                    </a>
+                </span>
+            </span>
+        </p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+        <p>The Kotlin collections are actually direct instances of the collections in the JDK. There’s no conversion of wrapping involved. So, if you didn’t skimp on your study of collections while you were in Java, that will certainly come in handy now.  Although Kotlin didn’t define its own collections code, it did add quite a few convenience functions to the framework, which is a welcome addition because it makes the collections easier to work with.</p>
 
 <p>Before we go to the code examples and more details, something needs to be said why it is called a collections framework. The reason it’s called a framework is because the data structures are very diverse, in and of themselves. Some of them puts constraints on how we go through the collection, they impose certain order of traversal. Some of the collections constrains the uniqueness of the data elements, they won’t allow you to put duplicates. And some of them lets us work with the collections in pairs, like in a dictionary entry, you’ll have a key with a corresponding value.</p>
 
@@ -93,18 +142,18 @@
   <tbody>
     <tr>
       <td>list</td>
-      <td><code class="highlighter-rouge">listOf</code></td>
-      <td><code class="highlighter-rouge">mutableListOf</code>, <code class="highlighter-rouge">arrayListOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">listOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableListOf</code>, <code class="language-plaintext highlighter-rouge">arrayListOf</code></td>
     </tr>
     <tr>
       <td>set</td>
-      <td><code class="highlighter-rouge">setOf</code></td>
-      <td><code class="highlighter-rouge">mutableSetOf</code>, <code class="highlighter-rouge">hashSetOf</code>, <code class="highlighter-rouge">linkedSetOf</code>, <code class="highlighter-rouge">sortedSetOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">setOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableSetOf</code>, <code class="language-plaintext highlighter-rouge">hashSetOf</code>, <code class="language-plaintext highlighter-rouge">linkedSetOf</code>, <code class="language-plaintext highlighter-rouge">sortedSetOf</code></td>
     </tr>
     <tr>
       <td>map</td>
-      <td><code class="highlighter-rouge">mapOf</code></td>
-      <td><code class="highlighter-rouge">mutableMapOf</code>, <code class="highlighter-rouge">hashMapOf</code>, <code class="highlighter-rouge">linkedMapOf</code>, <code class="highlighter-rouge">sortedMapOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mapOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mutableMapOf</code>, <code class="language-plaintext highlighter-rouge">hashMapOf</code>, <code class="language-plaintext highlighter-rouge">linkedMapOf</code>, <code class="language-plaintext highlighter-rouge">sortedMapOf</code></td>
     </tr>
   </tbody>
 </table>
@@ -142,27 +191,27 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">size</code></td>
       <td>tells you how many elements are in the collection.  Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">isEmpty()</code></td>
+      <td><code class="language-plaintext highlighter-rouge">isEmpty()</code></td>
       <td>returns True if the collection is empty, False if it’s not.  Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">contains(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">contains(arg)</code></td>
       <td>returns True if arg is within the collection. Works with lists, sets and maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">add(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">add(arg)</code></td>
       <td>add arg to the collection. This function returns true if arg was added — in the case of a list,  arg will always be added. In the case of a set, arg will be added and return true the first time, but if the same arg is added the second time, it will return False. This member function is not found on maps</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">remove(arg)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">remove(arg)</code></td>
       <td>returns True if arg was removed from the collection, returns False is the collection is unmodified</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">iterator()</code></td>
+      <td><code class="language-plaintext highlighter-rouge">iterator()</code></td>
       <td>returns an iterator over the elements of the object. This was inherited from the Iterable interface. Works with lists, sets and maps</td>
     </tr>
   </tbody>
@@ -192,39 +241,233 @@
 
 <h1 id="filter-function">Filter function</h1>
 
-<p>Filter and</p>
+<p>Kotlin’s filter function is a super handy tool for dealing with groups of things (like lists). It lets you easily pick out only the items you want, based on some simple rule. It’s basically an easy way to sort the good stuff from the rest.</p>
+
+<p>How filter Works
+You start with a list of things. You use .filter on it and tell it your rule.</p>
+
+<pre><code class="language-kotline">val newList = oldList.filter { item -&gt; your_rule }
+</code></pre>
+
+<p>It checks every single item in the old list against your rule:</p>
+
+<ul>
+  <li>If the rule says true (Yes, keep it!), the item goes into the new list.</li>
+  <li>If the rule says false (Nope, toss it!), the item is left behind.</li>
+</ul>
+
+<p>The big thing to remember: filter never changes the first list. It always makes a brand new list with just the keepers.</p>
+
+<h2 id="a-quick-how-to">A Quick How-To</h2>
+
+<p>Let’s say you have a list of numbers.</p>
+
+<p><strong>1. Start with a List</strong>
+Kotlin</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>2. Make Your Rule</strong></p>
+
+<p>Say you only want numbers that are bigger than 7.</p>
+
+<p><strong>3. Use filter</strong></p>
+
+<p>We use the simple word it inside the curly braces to mean “the current item being checked.”</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">bigNumbers</span> <span class="p">=</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span> <span class="p">&gt;</span> <span class="mi">7</span> <span class="p">}</span>
+<span class="c1">// The rule 'it &gt; 7' is true for 12, 8, and 21.</span>
+</code></pre></div></div>
+
+<p><strong>4. Check the Result</strong>
+The bigNumbers list now only has those three:</p>
+
+<pre><code class="language-Kotlin">println(bigNumbers) // Output: [12, 8, 21]
+</code></pre>
+
+<p><strong>Fun with People</strong></p>
+
+<p>You can do this with more than just numbers. Imagine you have a list of people, each with an age.</p>
+
+<pre><code class="language-Kotlin">data class Person(val name: String, val age: Int)
+val friends = listOf(Person("Alice", 25), Person("Bob", 35), Person("Charlie", 28))
+
+// Find friends who are under 30 years old.
+val youngFriends = friends.filter { it.age &lt; 30 }
+// Result: Alice and Charlie
+</code></pre>
+
+<p>It’s a clean way to keep your code easy to read and simple to use! There are also simple versions like <code class="language-plaintext highlighter-rouge">filterNotNull</code> if you just need to drop the items that are null (nothing).</p>
 
 <h1 id="map-function">Map function</h1>
 
+<p>There will be times when, you don’t just want to filter a list and keep some stuff; you want to change everything in the list and get a brand-new list back. That’s where Kotlin’s map function comes in handy. It’s the perfect tool for taking a list of one thing and turning it into a list of something totally different. 🔄</p>
 
-  </div>
+<p><strong>What <code class="language-plaintext highlighter-rouge">map</code> Does</strong></p>
 
-  
-    <div class="newsletter-box">
-      I hope the article was helpful, if you'd like to get more like these piped into your email, you can <a href="https://buttondown.email/tedhagos" target="_blank">subscribe to the newsletter</a>.
+<p>Think of map like an assembly line. You start with a list of items on one end, and you tell the “machine” (the map function) exactly what to do to each item as it passes by. It takes the result of that change and puts it on a new list on the other end.</p>
+
+<p>It follows a simple pattern:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">newList</span> <span class="p">=</span> <span class="n">oldList</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="n">item</span> <span class="p">-&gt;</span> <span class="n">the_change_you_make_to_it</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>It checks every single item in the old list, makes a change, and then puts the changed result into the new list. Just like filter, it never changes the first list; it only ever makes a new one.</p>
+
+<p><strong>Step-by-Step with an Example</strong></p>
+
+<p>Let’s say you have a list of numbers, and you want to know what each number would be if you doubled it.</p>
+
+<p><strong>1. Start with a List</strong></p>
+
+<pre><code class="language-Kotlin">val scores = listOf(5, 10, 4, 8)
+</code></pre>
+
+<p><strong>2. Define the Change</strong></p>
+
+<p>The rule is: take the current item and multiply it by two.</p>
+
+<p><strong>3. Use map</strong></p>
+
+<p>We use the simple word it inside the curly braces to mean “the current item being looked at.”</p>
+
+<pre><code class="language-Kotlin">val doubleScores = scores.map { it * 2 }
+</code></pre>
+
+<p>Kotlin does this for every item:</p>
+
+<ul>
+  <li>5 becomes 10</li>
+  <li>10 becomes 20</li>
+  <li>4 becomes 8</li>
+  <li>8 becomes 16</li>
+</ul>
+
+<p><strong>4. Check the Result</strong></p>
+
+<p>The doubleScores list is a brand-new list with the results of your change:</p>
+
+<pre><code class="language-Kotlin">println(doubleScores) // Output: [10, 20, 8, 16]
+</code></pre>
+
+<p><strong>Changing Types of Things</strong></p>
+
+<p>The cool part is you can change the type of thing you have. Say you have a list of Person objects with names and you just want a list of their names as strings:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">data class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">friends</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="nc">Person</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="mi">35</span><span class="p">))</span>
+
+<span class="c1">// We turn the list of Person objects into a list of just their names (Strings).</span>
+<span class="kd">val</span> <span class="py">names</span> <span class="p">=</span> <span class="n">friends</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">name</span> <span class="p">}</span>
+
+<span class="nf">println</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="c1">// Output: [Alice, Bob]</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">map</code> keeps your code clean and simple, helping you quickly change whole lists of data without writing tons of extra steps. Neat!</p>
+
+
     </div>
-  <a class="u-url" href="/posts/working-with-kotlin-collections/" hidden></a>
+
+    
+
+    <div
+        class="card"
+        style="
+            width: 24rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            font-family: sans-serif;
+        "
+    >
+        <div class="card-body" style="padding: 2rem">
+            <h2
+                class="card-title"
+                style="
+                    margin-top: 0;
+                    font-weight: 900;
+                    font-size: 1.8rem;
+                    letter-spacing: -0.5px;
+                    color: #111;
+                "
+            >
+                Get the newsletter
+            </h2>
+            <p
+                class="card-text"
+                style="
+                    font-size: 1.1rem;
+                    color: #444;
+                    line-height: 1.5;
+                    margin-bottom: 1.5rem;
+                "
+            >
+                I write short essays on software development and programming
+                careers, delivered a few times a week[cite: 23].
+            </p>
+            <a
+                target="_blank"
+                href="https://tedhagos.kit.com/ab4b864482"
+                style="
+                    display: inline-block;
+                    background-color: #0070f3;
+                    color: white;
+                    padding: 14px 28px;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    transition: background-color 0.2s;
+                    text-align: center;
+                "
+            >
+                Join the list
+            </a>
+        </div>
+    </div>
+
+    <a class="u-url" href="/posts/working-with-kotlin-collections/" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
+  <!--
   <div class="wrapper">
 
     <div style="background: #fbf2e9;padding:10px;">
       <p>
         <a href="/" class="footer-link">Home</a>
         <a href="/about/" class="footer-link">About</a>
-        <a href="/blog/" class="footer-link">Blog archives</a>
+        <a href="/blog/" class="footer-link">Blog</a>
         <a href="https://twitter.com/@lovescaffeine" target="_blank" class="footer-link">@lovescaffeine</a>
       </p>
-      copyright Ted Hagos &copy; 2025
-      <!-- <a href="/atom.xml"><img src="/images/rss24.png" style="display:intline" class="footer-link"></a> -->
-    
     </div>
-
+    <div>
+      copyright Ted Hagos &copy; 2026 - Notes from a lifelong 
+      coder exploring security, AI, and the future of software
+    </div>
   </div>
+  -->
+  <div class="wrapper" style="text-align: center;">
+
+    <div style="background: #fbf2e9;padding:10px;">
+      <p>
+        <a href="/" class="footer-link" style="color: #008B8B;">Home</a>
+        <a href="/about/" class="footer-link" style="color: #008B8B;">About</a>
+        <a href="/blog/" class="footer-link" style="color: #008B8B;">Blog</a>
+      </p>
+    </div>
+    <div>
+      copyright Ted Hagos &copy; 2026 - Notes from a lifelong 
+      coder exploring security, AI, and the future of software
+    </div>
+  </div>
+
 
 </footer>
 </body>
