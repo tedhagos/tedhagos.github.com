@@ -19,4 +19,24 @@ You can also find some of my work on the following sites;
 * [medium.com/@tedhagos](https://medium.com/@tedhagos)
 * [workingdev.net](http://workingdev.net). This is almost exclusively a tech journal
 
-If you want to get my writings piped into your inbox, [subscribe for email updates](https://buttondown.email/tedhagos)
+<h2>The Newsletter</h2>
+<p>
+    A few times a week, I send out an essay on software careers and engineering
+    maturity. No fluff, just observations from 30+ years of looking at screens.
+</p>
+
+<p>
+<div style="margin: 30px 0;">
+    <a href="https://tedhagos.kit.com/ab4b864482"
+       style="background-color: #0070f3;
+              color: white;
+              padding: 12px 24px;
+              text-decoration: none;
+              border-radius: 50px;
+              font-weight: bold;
+              display: inline-block;
+              font-family: sans-serif;
+              transition: background-color 0.2s;">
+       Get the newsletter
+    </a>
+</div>
