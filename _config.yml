@@ -29,25 +29,9 @@ theme: minima
 
 default_image: /images/gandalf-programmer.jpg
 
-google_analytics : "UA-37635397-1"
-
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
 
 
-# feed:
-#   -path: atom.xml
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
